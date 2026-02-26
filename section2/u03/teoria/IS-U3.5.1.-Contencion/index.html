@@ -9222,44 +9222,78 @@
 <h3 id="4-flujo-de-decision-que-contengo-y-como">4. Flujo de decisión: ¿qué contengo y cómo?<a class="headerlink" href="#4-flujo-de-decision-que-contengo-y-como" title="Permanent link">&para;</a></h3>
 <p>“¿Qué hago primero?”. La respuesta correcta es: depende, pero con un flujo claro.</p>
 <pre class="mermaid"><code>flowchart TD
-    A[Detectáis comportamiento anómalo] --&gt; B{¿Hay daño activo?}
-    B -- Sí: cifrado/exfiltración/propagación --&gt; C[Contención táctica inmediata]
-    B -- No: sospecha/incertidumbre --&gt; D[Preservar evidencia mínima]
-    D --&gt; E[Contención selectiva]
-    C --&gt; F{¿Evidencia volátil crítica?}
-    F -- Sí --&gt; D
-    F -- No --&gt; G[Reducir superficie: bloquear IoC / aislar]
-    E --&gt; H[Investigar: alcance y vector]
-    G --&gt; H
-    H --&gt; I{¿Hay compromiso de identidad?}
-    I -- Sí --&gt; J[Cortar acceso: cuentas, tokens, MFA]
-    I -- No --&gt; K[Contención por capa: red/endpoint/servicio]
-    J --&gt; L[Plan de contención a largo plazo]
-    K --&gt; L</code></pre>
-<p>La explicación del flujo es la siguiente, bajo un punto inicial en el que se detecta un comportamiento anómalo que puede ser un incidente:</p>
+    A[Detectáis comportamiento anómalo] --&gt; B{¿Hay daño activo?\n(cifrado/exfiltración/propagación)}
+
+    B -- Sí --&gt; C{¿Evidencia volátil crítica\n(memoria/conexiones) y captura rápida?}
+    C -- Sí --&gt; D[Capturar mínimo viable\n(memoria, conexiones, procesos)]
+    C -- No --&gt; E[Ir a contención ya]
+    D --&gt; E
+    E --&gt; F[Contención táctica inmediata\n(aislar host, cortar salida,\nbloquear IoC)]
+
+    B -- No --&gt; G[Preservar evidencia mínima\n(logs, instantánea, línea temporal)]
+    G --&gt; H[Contención selectiva\n(lo mínimo que reduzca riesgo)]
+
+    F --&gt; I[Investigar: alcance y vector\n(búsqueda con IoC)]
+    H --&gt; I
+
+    I --&gt; J{¿Compromiso de identidad probable?}
+    J -- Sí --&gt; K[Contener identidad\n(revocar sesiones/tokens,\nreset credenciales, MFA)]
+    J -- No --&gt; L[Contención por capa\n(red/endpoint/servicio)]
+
+    K --&gt; M[Validar efecto y monitorizar]
+    L --&gt; M
+    M --&gt; N[Contención a largo plazo\n(hardening, segmentación,\nrotación de secretos)]
+    N --&gt; O[Documentar y coordinar\ncon negocio/recuperación]</code></pre>
+<p>La explicación del flujo (siguiendo el diagrama) es la siguiente. Partimos de un comportamiento anómalo que puede ser un incidente:</p>
 <ol>
 <li>
-<p>Si hay daño activo (por ejemplo, cifrado o exfiltración en marcha), la prioridad es <strong>contener ya</strong> para frenar el impacto.</p>
+<p><strong>Primero decides si hay daño activo</strong>.</p>
+<p>Ejemplos de daño activo: cifrado en curso, exfiltración confirmada, propagación a otros equipos, creación masiva de cuentas/tareas, etc.</p>
 </li>
 <li>
-<p>Si no hay daño activo, pero hay sospecha, lo primero es <strong>preservar evidencia</strong> para entender qué está pasando.</p>
+<p><strong>Si hay daño activo</strong>, la prioridad es frenar el impacto, pero con un matiz importante:</p>
+<ul>
+<li>Si hay <strong>evidencia volátil crítica</strong> (por ejemplo, memoria, conexiones de red, procesos) y podéis capturar un <strong>mínimo viable</strong> sin retrasar la contención, se captura primero (rápido y con método).</li>
+<li>Si capturar evidencia implica perder tiempo mientras el daño sigue ocurriendo, se prioriza la contención inmediata.</li>
+</ul>
 </li>
 <li>
-<p>Si hay evidencia volátil crítica, hay que capturarla antes de aislar o apagar.</p>
+<p><strong>Contención táctica inmediata (cuando hay daño activo)</strong>.</p>
+<p>Acciones típicas (según el caso) son:</p>
+<ul>
+<li>aislar el host desde <abbr title="Respuesta y Detección de Endpoints. Es un sistema de seguridad que monitoriza y analiza el comportamiento de los endpoints, como los ordenadores, los servidores, los dispositivos móviles, etc., en busca de actividades sospechosas o maliciosas. El EDR puede detectar y responder a los ataques en tiempo real.">EDR</abbr> o a nivel de red,</li>
+<li>cortar salida a Internet (egress) si hay exfiltración,</li>
+<li>bloquear <abbr title="Indicador de Compromiso. Es una pista o evidencia que indica la presencia de un incidente de seguridad en un sistema. Los IoCs pueden incluir direcciones IP, nombres de dominio, hashes de archivos, patrones de tráfico, literales de malware, correos electrónicos, etc.">IoC</abbr> (dominios/URLs/IPs/hashes) en <abbr title="Sistema de Nombres de Dominio. Es un sistema que se utiliza para traducir los nombres de dominio en direcciones IP. El DNS permite a los usuarios acceder a los sitios web utilizando nombres de dominio en lugar de direcciones IP.">DNS</abbr>, proxy o <abbr title="Dispositivo de seguridad que se utiliza para proteger una red de comunicaciones. El firewall controla el tráfico de red y decide qué paquetes de datos pueden entrar o salir de la red.">firewall</abbr>.</li>
+</ul>
 </li>
 <li>
-<p>Luego, se reduce la superficie de ataque bloqueando <abbr title="Indicador de Compromiso. Es una pista o evidencia que indica la presencia de un incidente de seguridad en un sistema. Los IoCs pueden incluir direcciones IP, nombres de dominio, hashes de archivos, patrones de tráfico, literales de malware, correos electrónicos, etc.">IoC</abbr> o aislando el equipo.</p>
+<p><strong>Si no hay daño activo</strong>, pero hay sospecha razonable, la secuencia cambia:</p>
+<ul>
+<li>primero preservas evidencia mínima (logs relevantes, instantánea (snapshot) si aplica, línea temporal),</li>
+<li>y luego aplicas una contención selectiva (lo mínimo que reduzca el riesgo sin tirar servicios innecesariamente).</li>
+</ul>
 </li>
 <li>
-<p>Después, se investiga el alcance y vector para entender qué más está afectado y cómo se ha movido el atacante.</p>
+<p><strong>Después de la primera contención (táctica o selectiva), investigas alcance y vector</strong>.</p>
+<p>Aquí el objetivo es no quedarte en el “síntoma”: usas <abbr title="Indicador de Compromiso. Es una pista o evidencia que indica la presencia de un incidente de seguridad en un sistema. Los IoCs pueden incluir direcciones IP, nombres de dominio, hashes de archivos, patrones de tráfico, literales de malware, correos electrónicos, etc.">IoC</abbr> para buscar otros equipos/usuarios/servicios afectados y entender por dónde entró y cómo se movió el atacante.</p>
 </li>
 <li>
-<p>Si hay compromiso de identidad, se corta el acceso (cuentas, tokens, <abbr title="Autenticación Multifactor. Es un sistema de seguridad que requiere múltiples factores de autenticación para verificar la identidad de los usuarios. Los factores de autenticación pueden incluir contraseñas, códigos de un solo uso, huellas dactilares, etc.">MFA</abbr>). Si no, se aplican medidas de contención por capa (red, endpoint, servicios).</p>
+<p><strong>Decides si hay compromiso de identidad probable</strong>.</p>
+<p>Si lo hay, contienes identidad (revocar sesiones/tokens, reset de credenciales, imponer <abbr title="Autenticación Multifactor. Es un sistema de seguridad que requiere múltiples factores de autenticación para verificar la identidad de los usuarios. Los factores de autenticación pueden incluir contraseñas, códigos de un solo uso, huellas dactilares, etc.">MFA</abbr> o endurecer políticas). Si no lo hay, sigues con contención “por capas” (red, endpoint, servicio) según dónde esté el problema.</p>
 </li>
 <li>
-<p>Finalmente, se planifica la contención a largo plazo para evitar recaídas y mejorar la postura de seguridad.</p>
+<p><strong>Validas efecto y monitorizas</strong>.</p>
+<p>Contener también es comprobar que el daño se ha parado y que no hay rutas alternativas (por ejemplo, que no se siguen viendo conexiones a <abbr title="Indicador de Compromiso. Es una pista o evidencia que indica la presencia de un incidente de seguridad en un sistema. Los IoCs pueden incluir direcciones IP, nombres de dominio, hashes de archivos, patrones de tráfico, literales de malware, correos electrónicos, etc.">IoC</abbr> o nuevos endpoints afectados).</p>
+</li>
+<li>
+<p><strong>Planificas contención a largo plazo y documentas</strong>.</p>
+<p>Aquí entran medidas de días/semanas (hardening, segmentación, rotación de secretos, reglas duraderas, etc.) y el trabajo de coordinación con negocio para la recuperación.</p>
 </li>
 </ol>
+<div class="admonition tip">
+<p class="admonition-title">Idea clave</p>
+<p>Este flujo no es una autopista de sentido único: es habitual volver atrás (por ejemplo, descubrir un <abbr title="Indicador de Compromiso. Es una pista o evidencia que indica la presencia de un incidente de seguridad en un sistema. Los IoCs pueden incluir direcciones IP, nombres de dominio, hashes de archivos, patrones de tráfico, literales de malware, correos electrónicos, etc.">IoC</abbr> nuevo y reforzar la contención).</p>
+</div>
 <p>En cada paso, la comunicación con negocio y dirección es clave para gestionar expectativas y explicar decisiones. Y, por supuesto, todo debe quedar registrado: qué se hizo, cuándo, por qué y quién lo hizo.</p>
 <p>Este flujo es una guía general, pero cada incidente es único. A partir de aquí vamos a aterrizarlo en tres ideas prácticas: <abbr title="Indicador de Compromiso. Es una pista o evidencia que indica la presencia de un incidente de seguridad en un sistema. Los IoCs pueden incluir direcciones IP, nombres de dominio, hashes de archivos, patrones de tráfico, literales de malware, correos electrónicos, etc.">IoC</abbr> y alcance (4.1), estrategia (4.2) y secuencia iterativa (4.3).</p>
 <h4 id="41-indicadores-alcance-y-cuarentena-lo-que-suele-marcar-la-diferencia">4.1. Indicadores, alcance y cuarentena (lo que suele marcar la diferencia)<a class="headerlink" href="#41-indicadores-alcance-y-cuarentena-lo-que-suele-marcar-la-diferencia" title="Permanent link">&para;</a></h4>

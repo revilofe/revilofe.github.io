@@ -146,14 +146,13 @@ flowchart TD
 
     B -->|Sí| C{"¿Evidencia volátil crítica (memoria/conexiones) y captura rápida?"}
     C -->|Sí| D["Capturar mínimo viable (memoria, conexiones, procesos)"]
-    C -->|No| E["Ir a contención ya"]
+    C -->|No| E["Contención táctica inmediata (aislar host, cortar salida, bloquear IoC)"]
     D --> E
-    E --> F["Contención táctica inmediata (aislar host, cortar salida, bloquear IoC)"]
-
+    
     B -->|No| G["Preservar evidencia mínima (logs, instantánea, línea temporal)"]
     G --> H["Contención selectiva (lo mínimo que reduzca riesgo)"]
 
-    F --> I["Investigar: alcance y vector (búsqueda con IoC)"]
+    E --> I["Investigar: alcance y vector (búsqueda con IoC)"]
     H --> I
 
     I --> J{"¿Compromiso de identidad probable?"}

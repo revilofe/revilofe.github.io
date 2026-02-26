@@ -9223,28 +9223,28 @@
 <p>“¿Qué hago primero?”. La respuesta correcta es: depende, pero con un flujo claro.</p>
 <pre class="mermaid"><code>flowchart TD
 
-    A[Detectáis comportamiento anómalo] --&gt; B{¿Hay daño activo? (cifrado/exfiltración/propagación)}
+    A["Detectáis comportamiento anómalo"] --&gt; B{"¿Hay daño activo? (cifrado/exfiltración/propagación)"}
 
-    B -- Sí --&gt; C{¿Evidencia volátil crítica (memoria/conexiones) y captura rápida?}
-    C -- Sí --&gt; D[Capturar mínimo viable (memoria, conexiones, procesos)]
-    C -- No --&gt; E[Ir a contención ya]
+    B --&gt;|Sí| C{"¿Evidencia volátil crítica (memoria/conexiones) y captura rápida?"}
+    C --&gt;|Sí| D["Capturar mínimo viable (memoria, conexiones, procesos)"]
+    C --&gt;|No| E["Ir a contención ya"]
     D --&gt; E
-    E --&gt; F[Contención táctica inmediata (aislar host, cortar salida, bloquear IoC)]
+    E --&gt; F["Contención táctica inmediata (aislar host, cortar salida, bloquear IoC)"]
 
-    B -- No --&gt; G[Preservar evidencia mínima (logs, instantánea, línea temporal)]
-    G --&gt; H[Contención selectiva (lo mínimo que reduzca riesgo)]
+    B --&gt;|No| G["Preservar evidencia mínima (logs, instantánea, línea temporal)"]
+    G --&gt; H["Contención selectiva (lo mínimo que reduzca riesgo)"]
 
-    F --&gt; I[Investigar: alcance y vector (búsqueda con IoC)]
+    F --&gt; I["Investigar: alcance y vector (búsqueda con IoC)"]
     H --&gt; I
 
-    I --&gt; J{¿Compromiso de identidad probable?}
-    J -- Sí --&gt; K[Contener identidad (revocar sesiones/tokens, reset credenciales, MFA)]
-    J -- No --&gt; L[Contención por capa (red/endpoint/servicio)]
+    I --&gt; J{"¿Compromiso de identidad probable?"}
+    J --&gt;|Sí| K["Contener identidad (revocar sesiones/tokens, reset credenciales, MFA)"]
+    J --&gt;|No| L["Contención por capa (red/endpoint/servicio)"]
 
-    K --&gt; M[Validar efecto y monitorizar]
+    K --&gt; M["Validar efecto y monitorizar"]
     L --&gt; M
-    M --&gt; N[Contención a largo plazo (hardening, segmentación, rotación de secretos)]
-    N --&gt; O[Documentar y coordinar con negocio/recuperación]</code></pre>
+    M --&gt; N["Contención a largo plazo (hardening, segmentación, rotación de secretos)"]
+    N --&gt; O["Documentar y coordinar con negocio/recuperación"]</code></pre>
 <p>La explicación del flujo (siguiendo el diagrama) es la siguiente. Partimos de un comportamiento anómalo que puede ser un incidente:</p>
 <ol>
 <li>
@@ -9379,11 +9379,11 @@ En presencia de daño activo, la prioridad es detener el impacto.    Solo se rea
 <li>Buscar esos nuevos <abbr title="Indicador de Compromiso. Es una pista o evidencia que indica la presencia de un incidente de seguridad en un sistema. Los IoCs pueden incluir direcciones IP, nombres de dominio, hashes de archivos, patrones de tráfico, literales de malware, correos electrónicos, etc.">IoC</abbr> en el resto del entorno para descubrir más equipos afectados.</li>
 </ol>
 <pre class="mermaid"><code>flowchart TD
-    A[Síntoma inicial] --&gt; B[IoC iniciales]
-    B --&gt; C[Cuarentena del equipo afectado]
-    C --&gt; D[Captura de imágenes\npara investigación]
-    D --&gt; E[Análisis de imágenes\ny extracción de IoC \nadicionales]
-    E --&gt; F[Búsqueda de nuevos\nIoC en el entorno para\ndelimitar alcance]</code></pre>
+    A["Síntoma inicial"] --&gt; B["IoC iniciales"]
+    B --&gt; C["Cuarentena del equipo afectado"]
+    C --&gt; D["Captura de imágenes&lt;br/&gt;para investigación"]
+    D --&gt; E["Análisis de imágenes&lt;br/&gt;y extracción de IoC&lt;br/&gt;adicionales"]
+    E --&gt; F["Búsqueda de nuevos IoC&lt;br/&gt;en el entorno para&lt;br/&gt;delimitar alcance"]</code></pre>
 <p>Si dispones de <abbr title="Respuesta y Detección de Endpoints. Es un sistema de seguridad que monitoriza y analiza el comportamiento de los endpoints, como los ordenadores, los servidores, los dispositivos móviles, etc., en busca de actividades sospechosas o maliciosas. El EDR puede detectar y responder a los ataques en tiempo real.">EDR</abbr>, <abbr title="Sistema de Gestión de Eventos e Información de Seguridad. Es un sistema de seguridad que recopila, correlaciona y analiza los eventos de seguridad de una red para detectar y responder a las amenazas de seguridad. Los SIEM pueden integrar información de múltiples fuentes, como firewalls, IDS, IPS, antivirus, etc.">SIEM</abbr> y/o capturas de tráfico, se suelen usar como “aceleradores” para inventariar dispositivos afectados y detectar patrones (por ejemplo, máquinas que llaman al mismo dominio o que ejecutan el mismo proceso).</p>
 <p>A medida que se ponen más sistemas fuera de línea, aparecen problemas de productividad. Por eso, la comunicación con el negocio es parte del trabajo: hay que explicar impacto, alternativas y siguientes pasos.</p>
 <p>Una vez que ya sabes “qué está afectado” (o al menos tienes una primera lista razonable), pasas a aplicar medidas de contención <strong>por capas</strong>: red, identidad, endpoint y servicios.</p>

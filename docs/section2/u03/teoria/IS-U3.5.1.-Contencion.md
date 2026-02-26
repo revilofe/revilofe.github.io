@@ -76,6 +76,14 @@ Una forma muy práctica (y realista) de explicarlo es separar dos estrategias:
 | Corto plazo (táctica)     | Parar el daño inmediatamente       | Minutos-horas | Cortar demasiado y tumbar servicios         | Aislar host, bloquear IoC, deshabilitar cuenta     |
 | Largo plazo (estratégica) | Evitar reentrada y mejorar postura |  Días-semanas | Ser demasiado lenta y permitir persistencia | Segmentación, MFA, rotación de secretos, hardening |
 
+!!! note "Aclaración importante: tiempo vs. capas"
+    En esta unidad vamos a usar dos formas de “ordenar” la contención:
+    
+    - **Por tiempo (táctica vs. estratégica)**: responde a *cuándo* y *con qué urgencia* actúas.
+    - **Por capas (red, identidad, endpoint, servicios, etc.)**: responde a *dónde* aplicas controles.
+    
+    Es decir: **la contención por capas no compite con corto/largo plazo**. Lo normal es hacer contención **táctica por capas** (para frenar ya) y, después, contención **estratégica por capas** (para sostener el control).
+
 !!! example "Ejemplo rápido"
     Si detectas un equipo que hace conexiones a un dominio malicioso:
     
@@ -149,12 +157,12 @@ flowchart TD
     H --> I
 
     I --> J{"¿Compromiso de identidad probable?"}
-    J -->|Sí| K["Priorizar contención de identidad (revocar sesiones/tokens, reset, MFA)"]
-    J -->|No| L["Contención por capas: red, identidad, endpoint, servicio"]
+    J -->|Sí| K["Contención de identidad (táctica): revocar sesiones/tokens, reset, MFA"]
+    J -->|No| L["Contención por capas (táctica): red, endpoint, servicios"]
     K --> L
 
     L --> M["Validar efecto y monitorizar"]
-    M --> N["Contención a largo plazo (hardening, segmentación, rotación de secretos)"]
+    M --> N["Contención por capas (largo plazo): hardening, segmentación, rotación de secretos"]
     N --> O["Documentar y coordinar con negocio/recuperación"]
 ```
 
@@ -190,12 +198,12 @@ La explicación del flujo (siguiendo el diagrama) es la siguiente. Partimos de u
 
     Si lo hay, se suele **priorizar identidad** (revocar sesiones/tokens, reset de credenciales, imponer MFA o endurecer políticas) porque es un multiplicador del incidente: con identidad comprometida, el atacante puede moverse y reentrar aunque aisléis máquinas.
 
-    En cualquier caso, después (o en paralelo, si tenéis equipo y capacidad), completáis la contención **por capas**.
+    En cualquier caso, después (o en paralelo, si tenéis equipo y capacidad), completáis la contención **por capas**, empezando por medidas **tácticas** (las que frenan ya) y preparando las **estratégicas** (las que sostienen el control).
 
     - red (segmentación, bloqueo de IoC, corte de rutas, salida a Internet),
     - identidad (cuentas, tokens, sesiones, MFA, privilegios),
     - endpoint (aislamiento, bloqueo de ejecución, cuarentena),
-    - servicios (correo, VPN, repositorios, cloud, etc.).
+    - servicios (correo, VPN, repositorios, cloud, etc.). 
 
 !!! note "Aclaración"
     **Identidad es una “capa” de contención**, igual que red o endpoint. En el flujo se destaca aparte porque, cuando está comprometida, suele ser lo más urgente para evitar reentrada y movimiento lateral.
@@ -210,6 +218,7 @@ La explicación del flujo (siguiendo el diagrama) es la siguiente. Partimos de u
 
 !!! tip "Ideas claves"
     Este flujo no es una autopista de sentido único: es habitual volver atrás (por ejemplo, descubrir un IoC nuevo y reforzar la contención).
+    
     En presencia de daño activo, la prioridad es detener el impacto.    Solo se realiza una captura previa de evidencias volátiles cuando pueda ejecutarse en un tiempo mínimo (minutos), sin retrasar la contención, y cuando dichas evidencias sean irrepetibles (memoria, conexiones, procesos). En caso contrario, se aplica contención inmediata y se preservan evidencias persistentes (logs en disco, imágenes de sistema) en una segunda fase.
 
 En cada paso, la comunicación con negocio y dirección es clave para gestionar expectativas y explicar decisiones. Y, por supuesto, todo debe quedar registrado: qué se hizo, cuándo, por qué y quién lo hizo.
@@ -316,12 +325,25 @@ Una vez que ya sabes “qué está afectado” (o al menos tienes una primera li
 
 Para que os resulte aplicable en laboratorio, agrupamos por capas: red, identidad, endpoint y servicios.
 
+La idea es que, en cada capa, distingáis entre:
+
+- **Medidas tácticas (minutos-horas)**: frenan el incidente *ya*.
+- **Medidas estratégicas (días-semanas)**: reducen reentrada y elevan la postura de seguridad.
+
 #### 5.1. Red
 
-* **Segmentación / cuarentena** (VLAN, ACL, microsegmentación).
+**Táctica (minutos-horas):**
+
+* **Cuarentena rápida** (VLAN de aislamiento, ACL temporales, microsegmentación).
 * **Bloqueo de IoC** en firewall/proxy/DNS (IPs, dominios, URLs).
-* **Corte de rutas** entre segmentos para limitar movimiento lateral.
+* **Corte de rutas** puntuales entre segmentos para limitar movimiento lateral.
 * **Limitación de egress** (salida a Internet) a lo estrictamente necesario.
+
+**Estratégica (días-semanas):**
+
+* Rediseño de **segmentación** (zonas, flujos permitidos, “deny by default” donde se pueda).
+* Reglas de **egress** duraderas (listas permitidas, proxy obligatorio, inspección).
+* Mejora de **monitorización** (NetFlow, logs de firewall/proxy/DNS, alertas por C2).
 
 La capa de red suele ser la más rápida para **frenar propagación** y **cortar C2** (comando y control). Si el atacante necesita hablar con fuera (dominios/IP maliciosos) o moverse lateralmente, una buena contención en red puede romperle el plan.
 
@@ -335,19 +357,36 @@ MITRE define la segmentación como control para limitar flujo y restringir movim
 
 #### 5.2. Identidad
 
+**Táctica (minutos-horas):**
+
 * **Deshabilitar cuentas comprometidas** y cortar sesiones activas.
-* **Reset forzado de contraseñas** y rotación de credenciales privilegiadas.
-* **Revocar tokens** (SSO/OAuth), claves API y secretos de servicios.
-* **Aplicar MFA** (especialmente en cuentas de administración).
+* **Reset forzado de contraseñas** (usuarios afectados y, si procede, admins).
+* **Revocar tokens** (SSO/OAuth), sesiones y credenciales de acceso remoto.
+* **Rotar secretos expuestos** (claves API, credenciales de servicio, llaves SSH) si hay indicios.
+
+**Estratégica (días-semanas):**
+
+* Implantar o endurecer **MFA** (especialmente admins, VPN, correo y SSO).
+* Aplicar **mínimo privilegio** y revisión de roles/grupos (incluye cuentas de servicio).
+* Controles de **acceso condicional** (origen, dispositivo, riesgo, horario) si existen.
+* Preparar **PAM** / cuentas “just-in-time” para administración, si aplica al entorno.
 
 La identidad es la “llave maestra” del entorno. Si el atacante tiene credenciales (o tokens), puede volver aunque hayas aislado un equipo. Por eso, en muchos incidentes la contención real se consigue cuando se controla **qué identidades pueden autenticarse** y **desde qué ubicaciones**.
 
 #### 5.3. Endpoint (equipos)
 
+**Táctica (minutos-horas):**
+
 * **Aislamiento desde EDR** o cuarentena por red.
-* **Bloqueo por hash** / firma / regla (si se dispone).
+* **Cuarentena/bloqueo** por hash, firma o regla (si se dispone).
 * **Detención controlada de procesos** maliciosos (si no compromete evidencia).
-* **Deshabilitar ejecución** de macros o binarios sospechosos temporalmente.
+* **Deshabilitar temporalmente** macros o ejecución de binarios sospechosos si el vector apunta ahí.
+
+**Estratégica (días-semanas):**
+
+* Endurecer **políticas de ejecución** (allowlisting, reglas anti-macro, control de scripts).
+* Mejorar **parcheo** y hardening de SO/aplicaciones (vector inicial y escalado).
+* Ajustar **políticas EDR** (aislamiento, tamper protection, exclusiones revisadas).
 
 En endpoint, lo habitual es aislar el equipo para que deje de comunicarse con el resto y, a la vez, conservarlo para análisis. Un detalle importante:
 
@@ -356,10 +395,18 @@ En endpoint, lo habitual es aislar el equipo para que deje de comunicarse con el
 
 #### 5.4. Servicios y aplicaciones
 
+**Táctica (minutos-horas):**
+
 * Poner un servicio en **modo mantenimiento** (siempre coordinado).
-* **Rotación de secretos** de despliegue y acceso a base de datos.
+* **Rotación urgente de secretos** de despliegue y acceso a base de datos, si hay sospecha.
 * Activación temporal de **reglas WAF** o rate-limiting.
-* Deshabilitar funcionalidades expuestas hasta parcheo.
+* Deshabilitar funcionalidades expuestas hasta parcheo (feature flag, bloqueo de rutas).
+
+**Estratégica (días-semanas):**
+
+* Corregir **causa raíz** (parcheo, hardening, configuración segura por defecto).
+* Refuerzo del **pipeline** (control de cambios, escaneo, despliegue seguro, firmas).
+* Gestión de **secretos** (vault, rotación periódica, mínimos permisos, auditoría).
 
 En aplicaciones, muchas medidas de contención son “parches temporales” para ganar tiempo: deshabilitar una funcionalidad vulnerable, endurecer el WAF o limitar peticiones. La clave es coordinarlo con negocio para no romper lo que es crítico sin avisar.
 

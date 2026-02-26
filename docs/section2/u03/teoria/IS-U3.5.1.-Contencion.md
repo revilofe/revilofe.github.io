@@ -133,37 +133,72 @@ Con estos principios claros, el siguiente paso es decidir **qué** contienes pri
 
 ```mermaid
 flowchart TD
-    A[Detectáis comportamiento anómalo] --> B{¿Hay daño activo?}
-    B -- Sí: cifrado/exfiltración/propagación --> C[Contención táctica inmediata]
-    B -- No: sospecha/incertidumbre --> D[Preservar evidencia mínima]
-    D --> E[Contención selectiva]
-    C --> F{¿Evidencia volátil crítica?}
-    F -- Sí --> D
-    F -- No --> G[Reducir superficie: bloquear IoC / aislar]
-    E --> H[Investigar: alcance y vector]
-    G --> H
-    H --> I{¿Hay compromiso de identidad?}
-    I -- Sí --> J[Cortar acceso: cuentas, tokens, MFA]
-    I -- No --> K[Contención por capa: red/endpoint/servicio]
-    J --> L[Plan de contención a largo plazo]
-    K --> L
+    A[Detectáis comportamiento anómalo] --> B{¿Hay daño activo?\n(cifrado/exfiltración/propagación)}
+
+    B -- Sí --> C{¿Evidencia volátil crítica\n(memoria/conexiones) y captura rápida?}
+    C -- Sí --> D[Capturar mínimo viable\n(memoria, conexiones, procesos)]
+    C -- No --> E[Ir a contención ya]
+    D --> E
+    E --> F[Contención táctica inmediata\n(aislar host, cortar salida,\nbloquear IoC)]
+
+    B -- No --> G[Preservar evidencia mínima\n(logs, instantánea, línea temporal)]
+    G --> H[Contención selectiva\n(lo mínimo que reduzca riesgo)]
+
+    F --> I[Investigar: alcance y vector\n(búsqueda con IoC)]
+    H --> I
+
+    I --> J{¿Compromiso de identidad probable?}
+    J -- Sí --> K[Contener identidad\n(revocar sesiones/tokens,\nreset credenciales, MFA)]
+    J -- No --> L[Contención por capa\n(red/endpoint/servicio)]
+
+    K --> M[Validar efecto y monitorizar]
+    L --> M
+    M --> N[Contención a largo plazo\n(hardening, segmentación,\nrotación de secretos)]
+    N --> O[Documentar y coordinar\ncon negocio/recuperación]
 ```
 
-La explicación del flujo es la siguiente, bajo un punto inicial en el que se detecta un comportamiento anómalo que puede ser un incidente:
+La explicación del flujo (siguiendo el diagrama) es la siguiente. Partimos de un comportamiento anómalo que puede ser un incidente:
 
-1. Si hay daño activo (por ejemplo, cifrado o exfiltración en marcha), la prioridad es **contener ya** para frenar el impacto.
+1. **Primero decides si hay daño activo**.
 
-2. Si no hay daño activo, pero hay sospecha, lo primero es **preservar evidencia** para entender qué está pasando.
+    Ejemplos de daño activo: cifrado en curso, exfiltración confirmada, propagación a otros equipos, creación masiva de cuentas/tareas, etc.
 
-3. Si hay evidencia volátil crítica, hay que capturarla antes de aislar o apagar.
+2. **Si hay daño activo**, la prioridad es frenar el impacto, pero con un matiz importante:
 
-4. Luego, se reduce la superficie de ataque bloqueando IoC o aislando el equipo.
+    - Si hay **evidencia volátil crítica** (por ejemplo, memoria, conexiones de red, procesos) y podéis capturar un **mínimo viable** sin retrasar la contención, se captura primero (rápido y con método).
+    - Si capturar evidencia implica perder tiempo mientras el daño sigue ocurriendo, se prioriza la contención inmediata.
 
-5. Después, se investiga el alcance y vector para entender qué más está afectado y cómo se ha movido el atacante.
+3. **Contención táctica inmediata (cuando hay daño activo)**.
 
-6. Si hay compromiso de identidad, se corta el acceso (cuentas, tokens, MFA). Si no, se aplican medidas de contención por capa (red, endpoint, servicios).
+    Acciones típicas (según el caso) son:
 
-7. Finalmente, se planifica la contención a largo plazo para evitar recaídas y mejorar la postura de seguridad.
+    - aislar el host desde EDR o a nivel de red,
+    - cortar salida a Internet (egress) si hay exfiltración,
+    - bloquear IoC (dominios/URLs/IPs/hashes) en DNS, proxy o firewall.
+
+4. **Si no hay daño activo**, pero hay sospecha razonable, la secuencia cambia:
+
+    - primero preservas evidencia mínima (logs relevantes, instantánea (snapshot) si aplica, línea temporal),
+    - y luego aplicas una contención selectiva (lo mínimo que reduzca el riesgo sin tirar servicios innecesariamente).
+
+5. **Después de la primera contención (táctica o selectiva), investigas alcance y vector**.
+
+    Aquí el objetivo es no quedarte en el “síntoma”: usas IoC para buscar otros equipos/usuarios/servicios afectados y entender por dónde entró y cómo se movió el atacante.
+
+6. **Decides si hay compromiso de identidad probable**.
+
+    Si lo hay, contienes identidad (revocar sesiones/tokens, reset de credenciales, imponer MFA o endurecer políticas). Si no lo hay, sigues con contención “por capas” (red, endpoint, servicio) según dónde esté el problema.
+
+7. **Validas efecto y monitorizas**.
+
+    Contener también es comprobar que el daño se ha parado y que no hay rutas alternativas (por ejemplo, que no se siguen viendo conexiones a IoC o nuevos endpoints afectados).
+
+8. **Planificas contención a largo plazo y documentas**.
+
+    Aquí entran medidas de días/semanas (hardening, segmentación, rotación de secretos, reglas duraderas, etc.) y el trabajo de coordinación con negocio para la recuperación.
+
+!!! tip "Idea clave"
+    Este flujo no es una autopista de sentido único: es habitual volver atrás (por ejemplo, descubrir un IoC nuevo y reforzar la contención).
 
 En cada paso, la comunicación con negocio y dirección es clave para gestionar expectativas y explicar decisiones. Y, por supuesto, todo debe quedar registrado: qué se hizo, cuándo, por qué y quién lo hizo.
 

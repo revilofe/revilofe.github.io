@@ -9236,14 +9236,13 @@
 
     B --&gt;|Sí| C{"¿Evidencia volátil crítica (memoria/conexiones) y captura rápida?"}
     C --&gt;|Sí| D["Capturar mínimo viable (memoria, conexiones, procesos)"]
-    C --&gt;|No| E["Ir a contención ya"]
+    C --&gt;|No| E["Contención táctica inmediata (aislar host, cortar salida, bloquear IoC)"]
     D --&gt; E
-    E --&gt; F["Contención táctica inmediata (aislar host, cortar salida, bloquear IoC)"]
 
     B --&gt;|No| G["Preservar evidencia mínima (logs, instantánea, línea temporal)"]
     G --&gt; H["Contención selectiva (lo mínimo que reduzca riesgo)"]
 
-    F --&gt; I["Investigar: alcance y vector (búsqueda con IoC)"]
+    E --&gt; I["Investigar: alcance y vector (búsqueda con IoC)"]
     H --&gt; I
 
     I --&gt; J{"¿Compromiso de identidad probable?"}

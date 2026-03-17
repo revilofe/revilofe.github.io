@@ -37,6 +37,9 @@ Tecnologías para despliegue y DevOps.
 - **U1**: Documentación y Control de versiones
 - **U2**: Contenedores Docker
 
+Estos módulos, junto con Programación, usan diagramas UML y diagramas
+explicativos con Mermaid para reforzar conceptos, ejemplos y documentación.
+
 ## 📁 Estructura del Repositorio
 
 ```
@@ -145,6 +148,8 @@ Tecnologías para despliegue y DevOps.
 - **Código**: Incluir ejemplos funcionales
 - **Enlaces**: Verificar que funcionen
 - **Imágenes**: Optimizar tamaño y formato
+- **Diagramas Mermaid/UML**: Usar la skill `mermaid-diagram-creator`
+- **Workflow de skills**: Ver `skills/README.md`
 
 ### Contacto
 

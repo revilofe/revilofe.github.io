@@ -28,7 +28,7 @@ La contención suele venir **después de identificar un evento** y concluir que 
 - identificar la población de sistemas y usuarios afectados,
 - y poner en cuarentena lo afectado hasta que la situación se resuelva y el negocio vuelva a la normalidad.
 
-> Este tema está directamente alineado con el RA 3:
+> Este tema está directamente alineado con el RA 3:     
 >    - e) Iniciar las primeras medidas de contención para limitar daños.
 
 !!! definition "Definición"

@@ -2,9 +2,9 @@
 
 __Análisis de evidencias e investigación de incidente__
 
-> __RA3__   
-> b) Se ha realizado un análisis de evidencias.   
-> c) Se ha realizado la investigación de incidentes de ciberseguridad.
+> Este tema está directamente alineado con el RA3:     
+>     - b) Se ha realizado un análisis de evidencias.   
+>     - c) Se ha realizado la investigación de incidentes de ciberseguridad.
 
 #### Análisis de evidencias
 

@@ -62,6 +62,7 @@ Mapa rápido de uso: `skills/README.md`
 
 ## Reglas globales
 
+- Intentan asociar los temas a un RAZ, y sus criterios de evaluación (a,b,c,..), según normativa que puedes encontrar en la carpeta `docs/sectionX/recursos/YYY Normativa.txt` haciendo referencia al RA y a los identificadores y descriptores de los CE.
 - Mantener la estructura ya existente del repositorio.
 - Si hay una inconsistencia histórica entre carpetas o prefijos, seguir la
   convención que ya use la carpeta afectada y no forzar migraciones implícitas.

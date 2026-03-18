@@ -7,3 +7,6 @@ slides/node_modules/*
 /.serena/*
 /.gemini/*
 site/
+.codex/
+.codex/*
+.codex

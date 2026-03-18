@@ -1,152 +1,367 @@
 ---
-Matrixtitle: "UD 3 - 1.1 Recopilación y almacenamiento de evidencias"
-description: Recopilación y almacenamiento de evidencias
-summary: Recopilación y almacenamiento de evidencias
+title: "UD 3 - 3.3.1 MITRE ATT&CK y RE&CT para investigar y responder a incidentes"
+description: "Apuntes didácticos sobre MITRE ATT&CK y RE&CT: qué son, cómo se usan en investigación de incidentes y cómo ayudan a organizar la respuesta."
+summary: "Guía para entender ATT&CK y RE&CT, diferenciar tácticas y técnicas, usar ATT&CK Navigator y combinar ambos marcos en la investigación y respuesta a incidentes."
 authors:
     - Eduardo Fdez
-date: 2024-02-13
+date: 2026-03-19
 icon: "material/file-document-outline"
-permalink: /is/unidad3/3.1
+permalink: /is/unidad-3/3.3.1-mitre-attack-y-react
 categories:
-    - IS
+    - "Incidentes de seguridad"
 tags:
-    - IS
-    - Seguridad
-    - Evidencias
-    - Recopilación
-    - Almacenamiento
+    - "Incidentes"
+    - "MITRE ATT&CK"
+    - "RE&CT"
+    - "Threat Intelligence"
+    - "DFIR"
+    - "Respuesta a incidentes"
 ---
 
-![](assets/IS-U311-RecopilacionDeEvidencias0.png)
+## 3.3.1. MITRE ATT&CK y RE&CT para investigar y responder a incidentes
 
-## 3.3 ATT&CK y RE&CT!
+Cuando se investiga un incidente no basta con mirar logs y alarmas sueltas. Hace
+falta un lenguaje común para describir **qué está haciendo el adversario** y,
+además, una forma ordenada de decidir **cómo debe responder el equipo**.
 
-> **RA3**
-> c) Se ha realizado la investigación de incidentes de ciberseguridad.
+Ahí es donde entran dos marcos muy útiles:
 
-### 1. ¿Qué es esto?
+- **MITRE ATT&CK**, que ayuda a describir el comportamiento del atacante.
+- **RE&CT**, que ayuda a organizar la respuesta ante el incidente.
 
-Tanto ATT&CK como RE&CT son marcos de trabajo que ayudan a cualquier persona en la industria de la seguridad, sin importar el color de su sombrero, a comprender más sobre cómo proteger o penetrar una infraestructura. Ambos marcos proporcionan un conocimiento colectivo que ayuda a ver de forma general la __ciber kill chain__ desde varios ángulos, tanto en el punto de vista de los atacantes como en el de los defensores, por tanto nos puede ayudar de igual forma a investigar un incidente de seguridad.
+> Este tema está directamente alineado con el RA3:
+>   - c) se ha realizado la investigación de incidentes de ciberseguridad.
 
-![](assets/IS_U3.3.1.-ciberkillchain.png)
+!!! definition "Idea base"
+    **ATT&CK** sirve para entender y clasificar las tácticas y técnicas del
+    adversario. **RE&CT** sirve para decidir qué acciones de respuesta e
+    investigación conviene aplicar en cada fase del incidente.
 
-Fuente [https://www.exabeam.com/information-security/cyber-kill-chain/](https://www.exabeam.com/information-security/cyber-kill-chain/)
+### 1. Por qué estos marcos importan en esta unidad
 
-Básicamente, se trata de una base de datos de __tácticas, técnicas y procedimientos (TTP)__, que está en constante evolución y que se puede utilizar de innumerables formas según el rol del usuario.
+En una investigación real suelen aparecer preguntas como estas:
 
-Los marcos **ATT&CK** y **RE&CT** se pueden explicar con gran detalle durante cientos de páginas, pero el enfoque que se pretente aqui es llevarlo de 0 a 1 y darle un "por qué" para familiarizarse con estos marcos, dejando la parte de la especializacion en ellos en una decision personal/profesional.
+- ¿lo que estoy viendo encaja con una técnica conocida?;
+- ¿qué puede intentar hacer el atacante después?;
+- ¿qué controles o búsquedas conviene activar ahora?;
+- ¿cómo organizo la respuesta sin improvisar?;
+- ¿qué acciones debo tener preparadas antes de que ocurra el incidente?
 
-### 2. Más, Mitre ATT&CK
+ATT&CK y RE&CT ayudan precisamente a responder a esas preguntas.
 
-Mitre attack se inició en 2013 y este marco es el origen de las colecciones TTP. Hay algunas características básicas del marco Mitre ATT&CK:
+En términos sencillos:
 
-* **Tácticas**: Son los métodos o fases para alcanzar un objetivo específico, como por ejemplo, la fase de ejecución, la fase de persistencia, la fase de exfiltración, etc.
-* **Técnicas**: Son las formas en que se pueden llevar a cabo las tácticas para alcanzar los objetivos definidos en estas últimas, por ejemplo, la técnica para la fase de persistencia puede ser la creación de un servicio de Windows.
-* **Mitigación**: Son las formas en que se pueden mitigar las técnicas, como la mitigación de ejecución, la mitigación de persistencia, la mitigación de exfiltración, etc. Por ejemplo, la mitigación para la técnica de persistencia puede ser el uso de una herramienta de detección de amenazas que detecte la creación de un servicio de Windows.
-* **Grupos APT**: Son los grupos de actores de amenazas que utilizan las tácticas y técnicas, como APT28, APT29, APT30, etc. Son grupos de ciberdelincuentes que se dedican a realizar ciberataques de forma organizada y con un objetivo concreto. APT es el acrónimo de Advanced Persistent Threat, que en español se traduce como Amenaza Persistente Avanzada. Los ataques APT suelen ser muy complejos y se caracterizan por ser muy difíciles de detectar y de eliminar.
-* **Software**: Son los programas maliciosos que utilizan las tácticas y técnicas, como el malware de APT28, el malware de APT29, el malware de APT30, etc.
+- **ATT&CK** mira el incidente desde el punto de vista del comportamiento del
+  adversario.
+- **RE&CT** lo mira desde el punto de vista de la respuesta del equipo
+  defensor.
 
-Aunque estas son 5 categorías diferentes, estas se interconectan creando una malla, lo que hace que ATT&CK sea un arma formidable contra los grupos APT. Como ejemplo, un threat hunter (profesional de la ciberseguridad que se dedica a encontrar amenazas que hayan pasado desapercibidas para los sistemas de seguridad de la organización. Para ello, el threat hunter utiliza herramientas de análisis de tráfico, de análisis de logs, de análisis de malware, etc.) puede usar este marco de trabajo para formular una metodología para guiar su trabajo aplicando esto al modelo de diamante.
+<figure markdown>
+  ![Relación entre fases del ataque y análisis defensivo](assets/IS_U3.3.1.-ciberkillchain.png)
+  <figcaption>Los marcos de análisis ayudan a situar las acciones del atacante y a responder con más criterio.</figcaption>
+</figure>
 
-![](assets/IS-U3.3.1.-ATTCKMatrix.png)
+### 2. Qué es MITRE ATT&CK
 
-Fuente: [https://attack.mitre.org/matrices/enterprise/](https://attack.mitre.org/matrices/enterprise/)
+**MITRE ATT&CK** es una base de conocimiento que recopila **tácticas,
+técnicas y sub-técnicas** observadas en ataques reales. Su valor no está en
+“poner nombres bonitos”, sino en ofrecer una forma común de describir el
+comportamiento del adversario.
 
-Algo que no podemos olvidar sobre el marco es el [navegador Mitre ATT&CK](https://mitre-attack.github.io/attack-navigator/), una hoja técnica interactiva que ayuda a enfocar y priorizar ciertos TTP que son aplicables a una determinada infraestructura en lugar de todo el marco. No termina ahí, y el potencial del navegador depende de la imaginación del analista. Por ejemplo, si está investigando una infracción de seguridad de una institución financiera o tratando de asegurar una, sería mucho más fácil centrarse en los grupos APT FinX.
+Esto es importante porque permite que analistas, equipos SOC, CSIRT, personal
+de sistemas y responsables de seguridad hablen del incidente con el mismo
+vocabulario.
 
-![](assets/IS-U3.3.1.-MITRE-layer.png)
+#### 2.1. Tácticas, técnicas y sub-técnicas
 
-Fuente [https://mitre-attack.github.io/attack-navigator/enterprise/#](https://mitre-attack.github.io/attack-navigator/enterprise/#)
+Una de las primeras cosas que hay que entender bien es la diferencia entre
+estos conceptos:
 
-Algunos de los sectores donde ATT&CK es útil:
+| Concepto | Qué representa | Ejemplo sencillo |
+| --- | --- | --- |
+| **Táctica** | El objetivo inmediato del atacante | Persistencia, movimiento lateral, exfiltración |
+| **Técnica** | La forma general de alcanzar ese objetivo | Crear una tarea programada, usar credenciales robadas |
+| **Sub-técnica** | Una variante más concreta de la técnica | Crear una tarea concreta en Windows, usar un tipo específico de acceso remoto |
 
-* Inteligencia de amenazas: Permite a los analistas de inteligencia de amenazas comprender mejor las tácticas, técnicas y procedimientos utilizados por los actores de amenazas, y compartir esta información con otros analistas de inteligencia de amenazas y con los equipos de seguridad.
-* Detección y análisis de ataques: Permite a los analistas de seguridad y a los equipos de respuesta a incidentes comprender mejor las tácticas, técnicas y procedimientos utilizados por los actores de amenazas e investigar y responder a los incidentes.
-* Emulación del adversario y formación de red team: Permite a los equipos de red team emular a los actores de amenazas y a los equipos de blue team defenderse contra los actores de amenazas, facilitando la formación y el desarrollo de habilidades.
-* Evaluaciones e ingeniería: Permite a los equipos de evaluación y a los ingenieros de seguridad comprender mejor las tácticas, técnicas y procedimientos utilizados por los actores de amenazas, y utilizar esta información para evaluar y mejorar la seguridad de las organizaciones.
+!!! tip "Cómo recordarlo"
+    Una forma fácil de memorizarlo es esta: la **táctica** responde al
+    **para qué**, mientras que la **técnica** responde al **cómo**.
 
-### 3. ¿Qué es este RE&CT?
+#### 2.2. Qué información aporta ATT&CK
 
-Si ATT&CK se centra en la Ciber Kill Chain, RE&CT deriva de ATT&CK, y se centra completamente en la respuesta a incidentes y sus etapas: Preparación, Identificación, Contención, Erradicación, Recuperación y Lecciones aprendidas. Esto se puede utilizar para:
+ATT&CK no se limita a listar técnicas. También relaciona:
 
-* Identificación de brechas de seguridad: ya que permitirá identificar qué tácticas, técnicas y procedimientos utilizados por los actores de amenazas son más probables en su entorno, y qué medidas de seguridad son más eficaces para mitigar estas tácticas, técnicas y procedimientos y no están cubiertas por las medidas de seguridad actuales.
-* Mejores capacidades de respuesta a incidentes: ya que permitirá a los equipos de respuesta a incidentes comprender mejor las tácticas, técnicas y procedimientos utilizados por los actores de amenazas, y utilizar esta información para mejorar sus capacidades de respuesta a incidentes, incluyendo la detección, la investigación y la respuesta a incidentes, identificando que acciones se deben tomar en cada una de las fases del proceso de respuesta a incidentes.
+- grupos o actores que usan esas técnicas;
+- software o herramientas asociadas;
+- mitigaciones recomendadas;
+- detecciones posibles;
+- y referencias cruzadas útiles para investigación e inteligencia.
 
-Al igual que ATT&CK, RE&CT también viene con un navegador que se puede utilizar para una mejor priorización de aquello que importa durante el análisis.
+Esto convierte ATT&CK en una herramienta muy útil para:
 
-![](assets/IS-U3.3.1.-RECT-Navigator.png)
+- **investigar incidentes**;
+- **crear detecciones**;
+- **hacer threat hunting**;
+- **priorizar controles defensivos**;
+- y **explicar mejor un incidente**.
 
-Fuente: [https://atc-project.github.io/react-navigator/](https://atc-project.github.io/react-navigator/)
+<figure markdown>
+  ![Matriz MITRE ATT&CK](assets/IS-U3.3.1.-ATTCKMatrix.png)
+  <figcaption>La matriz MITRE ATT&CK organiza tácticas y técnicas para describir comportamientos observados en ataques reales.</figcaption>
+</figure>
 
-### 4. Profundizando en RE&CT
+### 3. Cómo se usa ATT&CK en investigación de incidentes
 
-Con [RE@CT](https://atc-project.github.io/atc-react/), el concepto es similar, una matriz en la que podemos identificar las técnicas empleadas en la respuesta a incidentes. Pero no te quedes con el DFIR, vamos a darle nuestra “visión”.
+En una investigación, ATT&CK ayuda a traducir hechos técnicos en una secuencia
+de comportamiento del atacante.
 
-![](assets/IS-3.3.1.-REACT-Matrix.png)
+Por ejemplo, imagina este caso:
 
-Por cierto, DFIR (acrónimo en inglés de Digital Forensics Incident Response) integra dos disciplinas diferenciadas de ciberseguridad: el __análisis forense digital__, es decir, la investigación de ciberamenazas, centrada especialmente en recopilar material digital probatorio que se pueda utilizar luego en los procesos contra ciberdelincuentes, y la __respuesta ante incidentes__, que abarca la detección y la mitigación de los ciberataques en curso. Mediante la combinación de ambas disciplinas, los servicios DFIR ayudan a los equipos de seguridad a detener las amenazas más rápido, así como a preservar el material probatorio que se puede perder cuando la prioridad es mitigar una amenaza lo antes posible)
+- un correo sospechoso llega a un buzón;
+- la persona usuaria abre el adjunto;
+- aparece un proceso de `powershell.exe`;
+- después hay una conexión a un dominio no habitual;
+- y más tarde se detecta persistencia.
 
+Sin un marco de análisis, esto puede quedarse en una lista de eventos. Con
+ATT&CK, el equipo puede empezar a describir lo ocurrido con más contexto:
 
-La matriz identifica las distintas fases en:
+- **phishing** o entrega por correo;
+- **ejecución** de *scripts* o comandos;
+- **persistencia**;
+- **mando y control**;
+- posible **robo de credenciales** o **movimiento lateral**.
 
-* Preparación.
-* Identificación.
-* Contención.
-* Erradicación.
-* Recuperación
-* Lecciones aprendidas.
+Eso no sustituye a la evidencia, pero ayuda a:
 
-En DFIR tendrás definidas estas fases en tus procesos, con estos u otros nombres.
+- estructurar la investigación;
+- anticipar pasos siguientes del adversario;
+- buscar otros equipos afectados;
+- y comunicar mejor el caso.
 
-Por ejemplo, durante la fase de preparación te encargarás de preparar todo lo necesario para poder realizar un proceso de respuesta a incidentes de forma adecuada, por ejemplo: si no tienes “cámaras de video” luego no me pidas que revise el video…
+!!! example "Ejemplo didáctico"
+    Si en un host observas un cambio de registro para persistencia, ATT&CK te
+    permite clasificar ese comportamiento dentro de una técnica concreta. A
+    partir de ahí, puedes preguntarte qué otras técnicas suelen aparecer junto
+    a esa y qué controles o búsquedas defensivas conviene activar.
 
-Las acciones de respuesta que nos enumera la matriz por cada una de las fases, son una guía fenomenal para nuestros departamentos de administración de sistemas, de seguridad, nuestro blue team puedan cumplir con las fases de respuesta a incidentes.  
+#### 3.1. Qué aporta ATT&CK Navigator
 
-Por ejemplo, en `Preparation`: nos plantará un conjunto de acciones a tomar que debemos tener resueltas antes de tener un incidente, como por ejemplo:
+Además de la matriz general, ATT&CK dispone de una herramienta muy práctica:
+**ATT&CK Navigator**.
 
-- `RA1006: Set up a centralized long-term log storage`. El framework nos está diciendo que tenemos que tener un almacenamiento longevo para nuestros logs. No el que usamos en el SIEM en el mejor de los casos… uno más barato, lento, poco inteligente, pero que nos permita tirar de eventos pasados.
+El Navigator permite trabajar con capas (*layers*) para:
 
-- `RA1103 y RA1104: acceso a los logs http`. Nos plantea la pregunta de si tenemos los logs del server que hosteamos en nuestra empresa y si tenemos los de la web que tenemos en el proveedor. Si estos últimos no los tenemos, ¿qué pasa si nos hacen un defacement en la web pública? nos quedamos sin poder investigar nada… porque claro… estaba “fuera”….
+- marcar técnicas observadas en un incidente;
+- priorizar técnicas relevantes para una organización;
+- reflejar cobertura defensiva;
+- comparar qué ve un equipo y qué no ve;
+- y documentar el grado de madurez del entorno.
 
-- `RA1108: Logs de DHCP`, En cuanto a los logs DHCP, posiblemente ya los guardas y los exportas desde su ubicación por defecto… pero por si acaso, sirva esta guía para tener un control de cuáles son estas medidas.
+<figure markdown>
+  ![ATT&CK Navigator](assets/IS-U3.3.1.-MITRE-layer.png)
+  <figcaption>ATT&CK Navigator permite resaltar técnicas, priorizarlas y visualizar cobertura o huecos de detección.</figcaption>
+</figure>
 
-Además se plantearán un montón de ideas como: ¿eres capaz de detectar un fichero borrado? ¿Modificado? Una clave del registro? y que como hemos comentado, tendremos que resolver antes de tener un incidente.
+En clase o en una organización real, esto puede usarse de varias formas:
 
-Si seguimos con la fase de `Identification`, se encuentrán acciones a emprender que nos ayudarán a iniciar esta fase, como listar ficheros borrados, listar ficheros modificados, listar claves del registro, etc.
+- para marcar técnicas vistas en un incidente concreto;
+- para representar qué tácticas detecta bien el SOC;
+- para identificar lagunas de visibilidad;
+- o para preparar simulaciones de red team y blue team.
 
-En cuanto a la `Containment`, es de las fases a la que más valor se le suele dar, pero ¿estás preparado? ¿puedes bloquear un puerto interno?, ¿puedes cambiar una ACL en un Switch para una Vlan? Todas estas reflexiones las debes hacer antes de tener un incidente, o al menos, tener claro el procedimiento. Suele pasar en muchas empresas que, aunque se puede, ésta delega a “otra empresa” estos trabajos, y se pierde el control… se pierde tiempo, que en la contención es primordial.
+### 4. Qué es RE&CT
 
-No creo que haga falta seguir con la enumeración. Lo que si es interesante es que igual que ocurre con MITRE, que tenemos un proyecto de la matriz navegable, con RE@CT tenemos lo mismo, [un mapa en el que podemos trabajar los ítems](https://atc-project.github.io/react-navigator/), dándole el enfoque que queramos.
+Si ATT&CK describe al adversario, **RE&CT** describe mejor la parte defensiva y
+de respuesta.
 
-En este caso, tenemos una categorización por colores de las técnicas enumeradas, en referencia a si son elementos generales, de red, correo, ficheros, procesos, etc… pero lo bueno de la matriz es que podemos configurarla de la manera que queramos. Un ejemplo de uso podría ser para reflejar el grado de madurez de nuestra organización, imagina un semáforo, y pintamos para cada técnica, si lo tenemos bien (verde), si lo tenemos en el radar o pendiente (amarillo) o si no tenemos cobertura ninguna de la técnica (rojo). Me parece muy interesante a la hora de documentar a clientes su estado de madurez ante una respuesta a incidentes.
+RE&CT es un marco orientado a **respuesta a incidentes y DFIR** (*Digital
+Forensics and Incident Response*). Organiza acciones y técnicas relacionadas con
+las fases habituales de la respuesta, por ejemplo:
 
-![](assets/IS-U3.3.1.-REACT-EnterpriseMatrix.png)
+- **preparación**;
+- **identificación**;
+- **contención**;
+- **erradicación**;
+- **recuperación**;
+- **lecciones aprendidas**.
 
-El proyecto es mucho más ambicioso, ya que contempla la recopilación de playbooks (guía estratégica que detalla las acciones a seguir en respuesta a eventos específicos, como incidentes de ciberseguridad), una comunidad donde podamos crear elementos “accionables” que además, podemos importar en nuestro The Hive/Cortex &MISP como elementos de automatización de tareas…
+Su valor práctico está en que ayuda a responder preguntas como estas:
 
-Pero por si fuera poco, es una pata del proyecto  [Atomic Threat Coverage](https://github.com/atc-project/atomic-threat-coverage), lo que pretende ser el punto de unión de “todo esto” que hablamos de MITRE, reglas Sigma de detección, playbooks para automatizar, lenguaje de marcas para poder documentar mitigaciones, procesos de red team para generar el “ruido”, un proyecto BRUTAL que pone nombre y apellidos a toda la cadena de valor desde la nomenclatura del ataque, la detección, hasta lecciones aprendidas, fortificación…
+- ¿qué información debería estar recogiendo ya?;
+- ¿qué controles necesito tener preparados antes del incidente?;
+- ¿qué acciones de contención puedo aplicar en esta fase?;
+- ¿qué evidencias debo conservar para no perder contexto?;
+- ¿qué playbooks conviene tener definidos?
 
-![](assets/IS-U3.3.1.-AtomicThreatCoverage.png)
+<figure markdown>
+  ![Matriz RE&CT](assets/IS-3.3.1.-REACT-Matrix.png)
+  <figcaption>RE&CT organiza técnicas y acciones defensivas alrededor de las fases de la respuesta a incidentes.</figcaption>
+</figure>
 
-Si bien esto es un proyecto ambicioso, orientado a la respuesta a incidentes, nos lo podemos llevar a nuestro terreno defensivo.
+#### 4.1. RE&CT no sustituye a ATT&CK
 
-### 5. ¿ATT&CK o RE&CT?
+Este punto es importante: **RE&CT no compite con ATT&CK**.
 
-Y ¿por qué no ambos? Estos dos marcos se crean con diferentes perspectivas de enfoque, según el rol de uso del marco. Por lo tanto, familiarizarse con estos marcos y utilizarlos te dará una ventaja adicional sobre los adversarios, así como también te ayudará a ser proactivo para poder prevenir los incidentes por completo.
+Ambos marcos responden a preguntas distintas:
 
-## Fuente:
+- ATT&CK ayuda a entender **qué hace el atacante**.
+- RE&CT ayuda a decidir **cómo debe responder el equipo**.
 
-* [Should I RE&CT or ATT&CK](https://vidura-supun.github.io/2020/06/08/should-i-rect-or-attck/)
-* [No es matrix, es la matriz RE@CT de respuesta a incidentes](https://blogvisionarios.com/articulos-ciberseguridad/no-es-matrix-es-la-matriz-react-respuesta-incidentes/)
+Por eso RE&CT resulta especialmente útil para:
 
-## Recursos:
+- definir playbooks;
+- revisar preparación técnica y organizativa;
+- comprobar qué datos y logs hacen falta;
+- valorar si un equipo está realmente preparado para contener e investigar;
+- y mejorar la madurez de la respuesta.
 
-* Mitre ATT&CK: [https://attack.mitre.org/](https://attack.mitre.org/)
-* RE&CT: [https://atc-project.github.io/atc-react/](https://atc-project.github.io/atc-react/)
-* RE&CT navigator: [https://atc-project.github.io/react-navigator/](https://atc-project.github.io/react-navigator/)
-* Charlas: [https://github.com/aboutsecurity/Talks-and-Presentations](https://github.com/aboutsecurity/Talks-and-Presentations) (hay video tb)
-* eBook: [https://github.com/Incidentes/Incident-Response-with-Threat-Intelligence](https://github.com/Incidentes/Incident-Response-with-Threat-Intelligence)
+#### 4.2. RE&CT Navigator
 
-**
+Igual que ATT&CK tiene su Navigator, RE&CT también cuenta con herramientas para
+trabajar visualmente la cobertura de respuesta.
 
-![](assets/IS-U311-RecopilacionDeEvidencias2.png)
+<figure markdown>
+  ![RE&CT Navigator](assets/IS-U3.3.1.-RECT-Navigator.png)
+  <figcaption>El navegador de RE&CT permite priorizar acciones de respuesta y visualizar cobertura por fases.</figcaption>
+</figure>
+
+Esto puede ser útil, por ejemplo, para marcar:
+
+- acciones que ya están cubiertas;
+- acciones que el equipo puede ejecutar parcialmente;
+- acciones que todavía no están preparadas;
+- o medidas que dependen de terceros y deberían revisarse antes de un incidente.
+
+### 5. Cómo se complementan ATT&CK y RE&CT
+
+La combinación de ambos marcos es especialmente útil en investigación y
+respuesta a incidentes.
+
+| Si necesitas... | Te ayuda más... |
+| --- | --- |
+| Describir técnicas del atacante | **ATT&CK** |
+| Entender el comportamiento observado | **ATT&CK** |
+| Construir reglas de detección o *hunting* | **ATT&CK** |
+| Organizar acciones de respuesta | **RE&CT** |
+| Revisar preparación y playbooks | **RE&CT** |
+| Coordinar investigación y respuesta | **ATT&CK + RE&CT** |
+
+#### 5.1. Un ejemplo práctico de uso combinado
+
+Supongamos un incidente de *phishing*:
+
+1. Llega un correo con un enlace malicioso.
+2. La persona usuaria pulsa el enlace.
+3. El equipo descarga una carga adicional.
+4. Se detecta persistencia y tráfico hacia un dominio externo.
+
+Con **ATT&CK**, el equipo puede describir:
+
+- el vector de entrada;
+- la ejecución;
+- la persistencia;
+- y el mando y control.
+
+Con **RE&CT**, el equipo puede decidir:
+
+- qué evidencias recoger primero;
+- qué cuentas o equipos aislar;
+- qué bloqueos aplicar en DNS, proxy o firewall;
+- y qué playbook seguir para contener sin perder evidencia.
+
+!!! note "Idea importante"
+    ATT&CK ayuda a **leer el ataque**. RE&CT ayuda a **organizar la respuesta**.
+    Usados juntos, mejoran tanto la investigación como la toma de decisiones.
+
+### 6. Ejemplos de uso didácticos en clase o en un SOC
+
+Estos marcos no son solo teoría. Se pueden aplicar de forma muy práctica.
+
+#### 6.1. Uso didáctico de ATT&CK
+
+ATT&CK puede utilizarse en clase para:
+
+- clasificar comportamientos observados en un caso;
+- relacionar indicadores con tácticas y técnicas;
+- comparar campañas distintas;
+- o justificar por qué cierta evidencia es relevante en una investigación.
+
+Por ejemplo, si el alumnado analiza un incidente y detecta:
+
+- un adjunto malicioso;
+- ejecución de macros o *scripts*;
+- cambios de persistencia;
+- y tráfico a un dominio extraño;
+
+puede usar ATT&CK para ordenar la investigación y expresarla con un lenguaje
+común.
+
+#### 6.2. Uso didáctico de RE&CT
+
+RE&CT puede utilizarse para:
+
+- comprobar si el equipo sabría responder;
+- diseñar un playbook mínimo;
+- revisar qué logs hacen falta;
+- o detectar carencias de preparación antes de que ocurra el incidente real.
+
+Un ejercicio sencillo podría consistir en preguntar:
+
+- ¿tenemos acceso a logs de correo?;
+- ¿podemos aislar un endpoint rápidamente?;
+- ¿sabemos revocar sesiones o tokens?;
+- ¿tenemos forma de conservar evidencias críticas?;
+- ¿quién decide qué hacer si el servicio afectado es crítico?
+
+Estas preguntas conectan muy bien con la práctica real, porque muestran que la
+respuesta a incidentes no depende solo de herramientas, sino también de
+procedimientos y preparación previa.
+
+<figure markdown>
+  ![Cobertura empresarial en RE&CT](assets/IS-U3.3.1.-REACT-EnterpriseMatrix.png)
+  <figcaption>RE&CT también puede emplearse para representar el nivel de madurez o cobertura defensiva de una organización.</figcaption>
+</figure>
+
+### 7. Cuándo usar ATT&CK, cuándo usar RE&CT y cuándo usar ambos
+
+La respuesta corta es esta:
+
+- usa **ATT&CK** cuando necesites describir y entender el comportamiento del
+  atacante;
+- usa **RE&CT** cuando necesites organizar la respuesta y comprobar si el
+  equipo está preparado;
+- usa **ambos** cuando estés investigando un incidente real y necesites tanto
+  entender el ataque como responder con orden.
+
+En la práctica, lo más habitual es combinarlos:
+
+- **ATT&CK** para interpretar el incidente;
+- **RE&CT** para convertir esa interpretación en acciones de respuesta.
+
+### 8. Qué debe recordar el alumnado
+
+- **MITRE ATT&CK** es una base de conocimiento sobre tácticas y técnicas
+  observadas en ataques reales.
+- La diferencia clave es que la **táctica** indica el objetivo del atacante y
+  la **técnica** indica cómo intenta conseguirlo.
+- **ATT&CK Navigator** ayuda a visualizar técnicas observadas, priorizarlas y
+  medir cobertura.
+- **RE&CT** está orientado a la respuesta a incidentes y a la preparación del
+  equipo defensor.
+- ATT&CK y RE&CT **no compiten**: se complementan.
+- En una investigación real, ATT&CK ayuda a entender el ataque y RE&CT ayuda a
+  organizar la respuesta.
+
+!!! success "Idea final"
+    Si ATT&CK te ayuda a responder **qué está haciendo el adversario**, RE&CT
+    te ayuda a responder **qué debe hacer tu equipo ahora**. Ese es el valor de
+    usar ambos marcos juntos.
+
+## Recursos y referencias
+
+- MITRE ATT&CK: [https://attack.mitre.org/](https://attack.mitre.org/)
+- ATT&CK Navigator: [https://mitre-attack.github.io/attack-navigator/](https://mitre-attack.github.io/attack-navigator/)
+- RE&CT: [https://atc-project.github.io/atc-react/](https://atc-project.github.io/atc-react/)
+- RE&CT Navigator: [https://atc-project.github.io/react-navigator/](https://atc-project.github.io/react-navigator/)
+- Atomic Threat Coverage: [https://github.com/atc-project/atomic-threat-coverage](https://github.com/atc-project/atomic-threat-coverage)

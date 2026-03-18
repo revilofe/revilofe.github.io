@@ -29,10 +29,8 @@ En esta parte del tema vamos a centrarnos en cómo se organiza esa investigació
 La idea principal es sencilla: **no se investiga “a ver qué sale”, sino para
 confirmar o descartar una hipótesis a partir de evidencias**.
 
-Este contenido se alinea con:
-
-- **RA3 (CE 3.c)**: se ha realizado la investigación de incidentes de
-  ciberseguridad.
+> Este tema está directamente alineado con el RA 3:
+>    - c) se ha realizado la investigación de incidentes de ciberseguridad.
 
 !!! definition "Definición"
     La investigación de incidentes es el proceso ordenado mediante el cual se

@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Cadenas">
+        <meta name="description" content="Fundamentos del sistema de archivos, las rutas y los flujos de entrada/salida">
       
       
         <meta name="author" content="Eduardo Fdez">
@@ -25,7 +25,7 @@
       
       
       <link rel="icon" href="../../../../assets/favicon-96x96.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.3">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.5">
     
     
       
@@ -105,7 +105,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#71-sistema-de-archivos" class="md-skip">
+        <a href="#71-sistemas-de-archivos" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -3168,34 +3168,22 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#71-sistema-de-archivos" class="md-nav__link">
+  <a href="#71-sistemas-de-archivos" class="md-nav__link">
     <span class="md-ellipsis">
       
-        7.1 Sistema de archivos
+        7.1 Sistemas de archivos
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="7.1 Sistema de archivos">
+    <nav class="md-nav" aria-label="7.1 Sistemas de archivos">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#1-gestion-de-archivos" class="md-nav__link">
+  <a href="#1-por-que-necesitamos-almacenar-datos" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1. Gestión de archivos
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="1. Gestión de archivos">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#11-flujos" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1.1. Flujos
+        1. ¿Por qué necesitamos almacenar datos?
       
     </span>
   </a>
@@ -3203,10 +3191,22 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#12-entradasalida-estandar" class="md-nav__link">
+  <a href="#2-que-es-un-sistema-de-archivos" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1.2. Entrada/Salida estándar
+        2. ¿Qué es un sistema de archivos?
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. ¿Qué es un sistema de archivos?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-conceptos-basicos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1. Conceptos básicos
       
     </span>
   </a>
@@ -3214,10 +3214,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#13-apis-para-el-manejo-de-flujos-de-datos" class="md-nav__link">
+  <a href="#22-rutas-absolutas-y-relativas" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1.3. APIs para el manejo de flujos de datos
+        2.2. Rutas absolutas y relativas
       
     </span>
   </a>
@@ -3226,6 +3226,150 @@
         
       </ul>
     </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-ficheros-directorios-y-tipos-de-acceso" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Ficheros, directorios y tipos de acceso
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Ficheros, directorios y tipos de acceso">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-ficheros-de-texto-y-ficheros-binarios" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1. Ficheros de texto y ficheros binarios
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-acceso-secuencial-y-acceso-aleatorio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2. Acceso secuencial y acceso aleatorio
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-que-es-un-flujo-de-entradasalida" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. ¿Qué es un flujo de entrada/salida?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-entrada-estandar-salida-estandar-y-salida-de-error" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Entrada estándar, salida estándar y salida de error
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-apis-que-usaremos-en-la-unidad" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. APIs que usaremos en la unidad
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. APIs que usaremos en la unidad">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-kotlinio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.1. kotlin.io
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62-javaio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.2. java.io
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#63-javaniofile" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.3. java.nio.file
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-de-la-teoria-a-la-practica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. De la teoría a la práctica
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8-buenas-practicas-iniciales" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Buenas prácticas iniciales
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9-resumen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. Resumen
+      
+    </span>
+  </a>
   
 </li>
         
@@ -3235,10 +3379,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#fuente" class="md-nav__link">
+  <a href="#fuentes-y-referencias" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Fuente
+        Fuentes y referencias
       
     </span>
   </a>
@@ -3384,8 +3528,6 @@
       <a href="../PROG-U7.4.1.-TextFile/" class="md-nav__link">
         
   
-  
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"/></svg>
   
   <span class="md-ellipsis">
     
@@ -6229,11 +6371,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../section2/u02/practicas/IS-U2.-Practica001/" class="md-nav__link">
+      <a href="../../../../section2/u02/practicas/IS-U2.-Practica001.md" class="md-nav__link">
         
   
-  
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2c-1.11 0-2 .89-2 2v16a2 2 0 0 0 2 2h4v-1.91L12.09 18H6v-2h8.09l2-2H6v-2h12.09L20 10.09V8l-6-6zm7 1.5L18.5 9H13zm7.15 9.5a.55.55 0 0 0-.4.16l-1.02 1.02 2.09 2.08 1.02-1.01c.21-.22.21-.58 0-.79l-1.3-1.3a.54.54 0 0 0-.39-.16m-2.01 1.77L12 20.92V23h2.08l6.15-6.15z"/></svg>
   
   <span class="md-ellipsis">
     
@@ -6259,11 +6399,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../section2/u02/practicas/IS-U2.-Practica002/" class="md-nav__link">
+      <a href="../../../../section2/u02/practicas/IS-U2.-Practica002.md" class="md-nav__link">
         
   
-  
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2c-1.11 0-2 .89-2 2v16a2 2 0 0 0 2 2h4v-1.91L12.09 18H6v-2h8.09l2-2H6v-2h12.09L20 10.09V8l-6-6zm7 1.5L18.5 9H13zm7.15 9.5a.55.55 0 0 0-.4.16l-1.02 1.02 2.09 2.08 1.02-1.01c.21-.22.21-.58 0-.79l-1.3-1.3a.54.54 0 0 0-.39-.16m-2.01 1.77L12 20.92V23h2.08l6.15-6.15z"/></svg>
   
   <span class="md-ellipsis">
     
@@ -6301,6 +6439,8 @@
       
         
           
+        
+      
         
       
         
@@ -6444,6 +6584,36 @@
     
   
     3.3.1.-Investigación incidentes:MITRE
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section2/u03/teoria/IS-U3.3.2.-InvestigacionDeIncidentes/" class="md-nav__link">
+        
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"/></svg>
+  
+  <span class="md-ellipsis">
+    
+  
+    3.3.2.-Investigación de incidentes
   
 
     
@@ -8297,34 +8467,22 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#71-sistema-de-archivos" class="md-nav__link">
+  <a href="#71-sistemas-de-archivos" class="md-nav__link">
     <span class="md-ellipsis">
       
-        7.1 Sistema de archivos
+        7.1 Sistemas de archivos
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="7.1 Sistema de archivos">
+    <nav class="md-nav" aria-label="7.1 Sistemas de archivos">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#1-gestion-de-archivos" class="md-nav__link">
+  <a href="#1-por-que-necesitamos-almacenar-datos" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1. Gestión de archivos
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="1. Gestión de archivos">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#11-flujos" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1.1. Flujos
+        1. ¿Por qué necesitamos almacenar datos?
       
     </span>
   </a>
@@ -8332,10 +8490,22 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#12-entradasalida-estandar" class="md-nav__link">
+  <a href="#2-que-es-un-sistema-de-archivos" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1.2. Entrada/Salida estándar
+        2. ¿Qué es un sistema de archivos?
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. ¿Qué es un sistema de archivos?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-conceptos-basicos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1. Conceptos básicos
       
     </span>
   </a>
@@ -8343,10 +8513,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#13-apis-para-el-manejo-de-flujos-de-datos" class="md-nav__link">
+  <a href="#22-rutas-absolutas-y-relativas" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1.3. APIs para el manejo de flujos de datos
+        2.2. Rutas absolutas y relativas
       
     </span>
   </a>
@@ -8355,6 +8525,150 @@
         
       </ul>
     </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-ficheros-directorios-y-tipos-de-acceso" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Ficheros, directorios y tipos de acceso
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Ficheros, directorios y tipos de acceso">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-ficheros-de-texto-y-ficheros-binarios" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1. Ficheros de texto y ficheros binarios
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-acceso-secuencial-y-acceso-aleatorio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2. Acceso secuencial y acceso aleatorio
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-que-es-un-flujo-de-entradasalida" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. ¿Qué es un flujo de entrada/salida?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-entrada-estandar-salida-estandar-y-salida-de-error" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Entrada estándar, salida estándar y salida de error
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-apis-que-usaremos-en-la-unidad" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. APIs que usaremos en la unidad
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. APIs que usaremos en la unidad">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-kotlinio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.1. kotlin.io
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62-javaio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.2. java.io
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#63-javaniofile" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.3. java.nio.file
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-de-la-teoria-a-la-practica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. De la teoría a la práctica
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8-buenas-practicas-iniciales" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Buenas prácticas iniciales
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9-resumen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. Resumen
+      
+    </span>
+  </a>
   
 </li>
         
@@ -8364,10 +8678,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#fuente" class="md-nav__link">
+  <a href="#fuentes-y-referencias" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Fuente
+        Fuentes y referencias
       
     </span>
   </a>
@@ -8398,7 +8712,7 @@
         
       
       
-        <a href="../../../../tags/#tag:cadenas" class="md-tag md-tag-icon">Cadenas</a>
+        <a href="../../../../tags/#tag:entradasalida" class="md-tag md-tag-icon">Entrada/Salida</a>
       
     
       
@@ -8408,7 +8722,27 @@
         
       
       
-        <a href="../../../../tags/#tag:software" class="md-tag md-tag-icon">Software</a>
+        <a href="../../../../tags/#tag:ficheros" class="md-tag md-tag-icon">Ficheros</a>
+      
+    
+      
+      
+      
+        
+        
+      
+      
+        <a href="../../../../tags/#tag:kotlin" class="md-tag md-tag-icon">Kotlin</a>
+      
+    
+      
+      
+      
+        
+        
+      
+      
+        <a href="../../../../tags/#tag:sistema-de-archivos" class="md-tag md-tag-icon">Sistema de archivos</a>
       
     
   </nav>
@@ -8420,51 +8754,223 @@
 
   <h1>7.1.-Sistema archivos:E/S</h1>
 
-<h2 id="71-sistema-de-archivos">7.1 Sistema de archivos<a class="headerlink" href="#71-sistema-de-archivos" title="Permanent link">&para;</a></h2>
-<p>La principal función de una aplicación informática es la manipulación y transformación de datos. Estos datos pueden representar cosas muy diferentes según el contexto del programa: notas de estudiantes, una recopilación de temperaturas, las fechas de un calendario, etc. Las posibilidades son ilimitadas. Todas estas tareas de manipulación y transformación se llevan a cabo normalmente mediante el almacenamiento de los datos en variables, dentro de la memoria del ordenador, por lo que se pueden aplicar operaciones, ya sea mediante operadores o la invocación de métodos.</p>
+<h2 id="71-sistemas-de-archivos">7.1 Sistemas de archivos<a class="headerlink" href="#71-sistemas-de-archivos" title="Permanent link">&para;</a></h2>
+<p>La mayor parte de los programas trabajan con datos: notas, pedidos, usuarios, imágenes, registros de actividad o configuraciones. Mientras el programa se está ejecutando, esos datos suelen vivir en memoria. El problema aparece cuando la aplicación termina: <strong>lo que estaba en memoria se pierde</strong>.</p>
+<p>Por eso, dentro del resultado de aprendizaje 5, este tema es especialmente importante. Nos ayuda a comprender <strong>qué posibilidades de entrada/salida ofrece el lenguaje y qué librerías podemos usar</strong> para leer, escribir y conservar información. Además, sienta la base para los criterios relacionados con el uso de <strong>ficheros</strong> para almacenar y recuperar datos.</p>
+<blockquote>
+<p>El tema está relacionado con el resultado de aprendizaje 5.   </p>
+</blockquote>
+<div class="admonition abstract">
+<p class="admonition-title">Qué vas a aprender en este apartado</p>
+<ul>
+<li>Diferenciar memoria temporal y almacenamiento persistente.</li>
+<li>Identificar ficheros, directorios, rutas y metadatos básicos.</li>
+<li>Entender qué es un flujo de entrada/salida.</li>
+<li>Reconocer las APIs principales de Kotlin y Java para trabajar con E/S.</li>
+</ul>
+</div>
+<figure>
 <p><img alt="" src="../assets/PROG-U7.1.-Programa.png" /></p>
-<p>Desgraciadamente, todas estas variables solo tienen vigencia mientras el programa se está ejecutando. <strong>Una vez el programa finaliza, los datos que contienen desaparecen</strong>. Esto no es problema para programas que siempre tratan los mismos datos, que pueden tomar la forma de literales dentro del programa. O cuando el número de datos a tratar es pequeño y se puede preguntar al usuario. Ahora bien, imagínate tener que introducir las notas de todos los estudiantes cada vez que se ejecuta el programa para gestionarlas. No tiene ningún sentido. Por tanto, en algunos casos, aparece la necesidad de poder registrar los datos en algún soporte de memoria externa, para que se mantengan de manera persistente entre diferentes ejecuciones del programa, o incluso si se apaga el ordenador.</p>
-<p>La manera más sencilla de lograr este objetivo es almacenar la información aprovechando <strong>el sistema de archivos</strong> que ofrece el sistema operativo. Mediante este mecanismo, es posible tener los datos en un formato fácil de manejar e independiente del soporte real, ya sea un soporte magnético como un disco duro, una memoria de estado sólido, como un lápiz de memoria USB, un soporte óptico, cinta, etc.</p>
-<p>En esta unidad se explican distintas clases de <strong>Kotlin</strong> que nos permiten crear, leer, escribir y eliminar desde distintas fuentes, tanto entrada/salida estándar como ficheros y directorios. También se introduce la serialización de objetos como mecanismo de gran utilidad para almacenar objetos en ficheros para luego recuperarlos en tiempo de ejecución.</p>
-<h3 id="1-gestion-de-archivos">1. Gestión de archivos<a class="headerlink" href="#1-gestion-de-archivos" title="Permanent link">&para;</a></h3>
-<p>Entre las funciones de un sistema operativo está la de ofrecer mecanismos genéricos para gestionar sistemas de archivos.
-Normalmente, dentro de un sistema operativo moderno (o ya no tanto moderno), se espera disponer de algún tipo de interfaz o explorador para poder gestionar archivos, ya sea gráficamente o usando una línea de comandos de texto. Si bien la forma en que los datos se guardan realmente en los dispositivos físicos de almacenamiento de datos puede ser muy diferente según cada tipo (magnético, óptico, etc.), la manera de gestionar el sistema de archivos suele ser muy similar en la inmensa mayoría de los casos: una estructura jerárquica con <strong>carpetas</strong> y <strong>ficheros</strong>.</p>
+<figcaption>Un programa procesa datos en memoria, pero necesita mecanismos de entrada/salida para conservarlos o compartirlos.</figcaption>
+</figure>
+<h3 id="1-por-que-necesitamos-almacenar-datos">1. ¿Por qué necesitamos almacenar datos?<a class="headerlink" href="#1-por-que-necesitamos-almacenar-datos" title="Permanent link">&para;</a></h3>
+<p>Una variable permite guardar información mientras el programa está en ejecución, pero no sirve para conservarla de una sesión a otra. Si cerramos la aplicación, los datos desaparecen. Esto no supone un problema cuando:</p>
+<ul>
+<li>los datos son fijos y ya están escritos en el código;</li>
+<li>el programa trabaja con muy poca información;</li>
+<li>o el usuario puede volver a introducirla sin esfuerzo.</li>
+</ul>
+<p>Sin embargo, en la mayoría de aplicaciones reales eso no es suficiente. Imagina cualquiera de estos casos:</p>
+<ul>
+<li>una app que guarda las notas del alumnado;</li>
+<li>un programa que registra incidencias;</li>
+<li>una aplicación que lee una configuración al arrancar;</li>
+<li>un sistema que exporta resultados a un informe de texto.</li>
+</ul>
+<p>En todos esos ejemplos necesitamos <strong>persistencia</strong>, es decir, que la información permanezca disponible aunque el programa termine o incluso aunque el ordenador se apague.</p>
+<div class="admonition note">
+<p class="admonition-title">Idea clave</p>
+<p>La memoria es rápida, pero temporal. Los ficheros permiten conservar la información en un soporte persistente.</p>
+</div>
+<h3 id="2-que-es-un-sistema-de-archivos">2. ¿Qué es un sistema de archivos?<a class="headerlink" href="#2-que-es-un-sistema-de-archivos" title="Permanent link">&para;</a></h3>
+<p>El sistema operativo ofrece un mecanismo para organizar y localizar la información almacenada en discos, memorias SSD, unidades USB y otros soportes. Ese mecanismo es el <strong>sistema de archivos</strong>.</p>
+<p>Desde el punto de vista del usuario y del programador, normalmente se organiza como una estructura jerárquica formada por:</p>
+<ul>
+<li><strong>directorios o carpetas</strong>, que agrupan información;</li>
+<li><strong>ficheros o archivos</strong>, que contienen datos;</li>
+<li><strong>rutas</strong>, que indican dónde está cada elemento.</li>
+</ul>
+<figure>
 <p><img alt="" src="../assets/PROG-U7.1.-carpetasArchivos.png" /></p>
-<p>Ahora bien, en realidad, la capacidad de operar con el sistema de archivos no es exclusiva de la interfaz ofrecida por el sistema operativo. Muchos lenguajes de programación proporcionan bibliotecas que permiten acceder directamente a los mecanismos internos que ofrece el sistema, por lo que es posible crear código fuente desde el que, con las instrucciones adecuadas, se pueden realizar operaciones típicas de un explorador de archivos. De hecho, las interfaces como un explorador de archivos son un programa como cualquier otro, el cual, usando precisamente estas librerías, permite que el usuario gestione archivos fácilmente. Pero es habitual encontrar otras aplicaciones con su propia interfaz para gestionar archivos, aunque solo sea para poder seleccionar qué hay que cargar o guardar en un momento dado: editores de texto, compresores, reproductores de música, etc.</p>
-<h4 id="11-flujos">1.1. Flujos<a class="headerlink" href="#11-flujos" title="Permanent link">&para;</a></h4>
-<p>En Kotlin, heredado de Java, se define la abstracción de stream (flujo) para tratar la comunicación de información entre el programa y el exterior.</p>
+<figcaption>Los sistemas de archivos suelen representarse como una jerarquía de carpetas y ficheros.</figcaption>
+</figure>
+<p>Gracias a esta organización, un programa puede crear, localizar, leer, modificar, copiar o borrar información sin necesitar conocer cómo se almacena físicamente en el dispositivo.</p>
+<h4 id="21-conceptos-basicos">2.1. Conceptos básicos<a class="headerlink" href="#21-conceptos-basicos" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Fichero</strong>: unidad de información almacenada. Puede contener texto, imágenes, audio, datos binarios u objetos serializados.</li>
+<li><strong>Directorio</strong>: contenedor que permite organizar otros directorios y ficheros.</li>
+<li><strong>Ruta</strong>: secuencia que identifica la localización de un fichero o directorio dentro del sistema.</li>
+<li><strong>Directorio de trabajo</strong>: carpeta desde la que se ejecuta el programa o proyecto y que sirve de referencia para muchas rutas relativas.</li>
+<li><strong>Metadatos</strong>: información asociada al fichero, como nombre, tamaño, fecha de modificación o permisos.</li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">Ojo con las extensiones</p>
+<p>La extensión de un fichero, como <code>.txt</code> o <code>.jpg</code>, ayuda a identificarlo, pero no garantiza por sí sola su contenido real. Es una convención útil, no una prueba absoluta.</p>
+</div>
+<h4 id="22-rutas-absolutas-y-relativas">2.2. Rutas absolutas y relativas<a class="headerlink" href="#22-rutas-absolutas-y-relativas" title="Permanent link">&para;</a></h4>
+<p>Una <strong>ruta absoluta</strong> indica la localización completa desde la raíz del sistema de archivos:</p>
+<ul>
+<li>Windows: <code>C:\Usuarios\ana\documentos\notas.txt</code></li>
+<li>Linux/macOS: <code>/home/ana/documentos/notas.txt</code></li>
+</ul>
+<p>Una <strong>ruta relativa</strong> parte del directorio de trabajo actual:</p>
+<ul>
+<li><code>datos/notas.txt</code></li>
+<li><code>./config/app.properties</code></li>
+</ul>
+<p>En proyectos de desarrollo, las rutas relativas suelen ser más cómodas porque hacen el código más portable. Si escribes una ruta absoluta que solo existe en tu ordenador, probablemente fallará en el equipo de otra persona.</p>
+<div class="admonition tip">
+<p class="admonition-title">Buena práctica</p>
+<p>Evita, salvo que sea imprescindible, las rutas absolutas escritas a mano dentro del código fuente.</p>
+</div>
+<h3 id="3-ficheros-directorios-y-tipos-de-acceso">3. Ficheros, directorios y tipos de acceso<a class="headerlink" href="#3-ficheros-directorios-y-tipos-de-acceso" title="Permanent link">&para;</a></h3>
+<p>No todos los datos se tratan igual. Antes de programar operaciones de entrada/salida conviene distinguir varias ideas:</p>
+<h4 id="31-ficheros-de-texto-y-ficheros-binarios">3.1. Ficheros de texto y ficheros binarios<a class="headerlink" href="#31-ficheros-de-texto-y-ficheros-binarios" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Ficheros de texto</strong>: almacenan caracteres y suelen poder abrirse con un editor de texto. Son útiles para configuraciones, CSV, logs o informes.</li>
+<li><strong>Ficheros binarios</strong>: almacenan la información en formato no legible directamente a simple vista. Son habituales en imágenes, audio, vídeo, ejecutables o datos serializados.</li>
+</ul>
+<p>Esta diferencia importa porque cambia la forma de leer y escribir la información. No se trabaja igual con una línea de texto que con una secuencia de bytes.</p>
+<h4 id="32-acceso-secuencial-y-acceso-aleatorio">3.2. Acceso secuencial y acceso aleatorio<a class="headerlink" href="#32-acceso-secuencial-y-acceso-aleatorio" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Acceso secuencial</strong>: los datos se procesan en orden, de principio a fin.</li>
+<li><strong>Acceso aleatorio</strong>: el programa puede ir directamente a una posición concreta del fichero.</li>
+</ul>
+<p>En esta unidad veremos primero los casos más habituales y sencillos, que suelen ser los secuenciales.</p>
+<h3 id="4-que-es-un-flujo-de-entradasalida">4. ¿Qué es un flujo de entrada/salida?<a class="headerlink" href="#4-que-es-un-flujo-de-entradasalida" title="Permanent link">&para;</a></h3>
+<p>Cuando un programa se comunica con el exterior, normalmente lo hace mediante un <strong>flujo</strong> o <em>stream</em>. Un flujo es una abstracción que representa el paso de datos desde una <strong>fuente</strong> hasta un <strong>destino</strong>.</p>
+<figure>
 <p><img alt="" src="../assets/PROG-U7.1.-Flujos.png" /></p>
-<p>Las características principales:    </p>
+<figcaption>Los flujos permiten tratar de forma uniforme la comunicación entre el programa y distintos orígenes o destinos de datos.</figcaption>
+</figure>
+<p>Algunas ideas importantes sobre los flujos:</p>
 <ul>
-<li>Entre una fuente y un destino fluye una secuencia de datos.</li>
-<li>Los flujos actúan como interfaz con el dispositivo o clase asociada. Es decir, todo se trata como un flujo de datos.</li>
-<li>Las operaciones que se realizan son independientes del tipo de datos y del dispositivo: <code>Open, Close, Read, Write</code>.</li>
-<li>El uso de flujos proporciona mayor flexibilidad (p.e. redirección, combinación)</li>
-<li>El uso de flujos proporciona mayor diversidad de dispositivos (ficheros, entrada/salida estándar: teclado y pantalla, sockets en red, …). Todo se maneja como un flujo de datos.</li>
-<li>El uso de flujos proporciona modos de acceso: secuencial, aleatorio.</li>
-<li>El uso de flujos proporciona intercambio de información en diferentes formatos: caracteres de texto, binario, objetos.</li>
+<li>entre una fuente y un destino circula una secuencia de datos;</li>
+<li>el programa no necesita tratar cada dispositivo físico de forma completamente distinta;</li>
+<li>muchas operaciones se repiten: abrir, leer, escribir y cerrar;</li>
+<li>un mismo modelo sirve para teclado, pantalla, ficheros, red o memoria.</li>
 </ul>
-<h4 id="12-entradasalida-estandar">1.2. Entrada/Salida estándar<a class="headerlink" href="#12-entradasalida-estandar" title="Permanent link">&para;</a></h4>
-<p>Como en los sistemas Unix, existen 3 interfaces básicas para leer/escribir información:</p>
+<p>Podemos trabajar con flujos de:</p>
+<ul>
+<li><strong>caracteres</strong>, cuando tratamos texto;</li>
+<li><strong>bytes</strong>, cuando trabajamos con datos binarios;</li>
+<li><strong>objetos</strong>, cuando serializamos y recuperamos estructuras completas.</li>
+</ul>
+<div class="admonition definition">
+<p class="admonition-title">Definición</p>
+<p>Un flujo de entrada/salida es una abstracción que permite leer o escribir datos de forma secuencial entre un programa y una fuente o destino externo.</p>
+</div>
+<h3 id="5-entrada-estandar-salida-estandar-y-salida-de-error">5. Entrada estándar, salida estándar y salida de error<a class="headerlink" href="#5-entrada-estandar-salida-estandar-y-salida-de-error" title="Permanent link">&para;</a></h3>
+<p>Antes de trabajar con ficheros, conviene recordar que un programa también se comunica con la consola. En los sistemas tipo Unix, y también en la mayoría de entornos actuales, existen tres canales básicos:</p>
+<figure>
 <p><img alt="" src="../assets/PROG-U7.1.-FlujosEstandar.png" /></p>
+<figcaption>Canales básicos de entrada/salida que aparecen en programas de consola.</figcaption>
+</figure>
 <ul>
-<li>Entrada estándar - habitualmente el teclado   </li>
-<li>Salida estándar - habitualmente la consola   </li>
-<li>Salida de error - habitualmente la consola   </li>
+<li><strong>Entrada estándar</strong>: normalmente el teclado.</li>
+<li><strong>Salida estándar</strong>: normalmente la consola.</li>
+<li><strong>Salida de error</strong>: canal específico para mensajes de error.</li>
 </ul>
-<p>En Java se accede a la E/S estándar a través de campos estáticos de la clase <code>java.lang.System</code></p>
+<p>En la plataforma <abbr title="Máquina Virtual de Java. Es una máquina virtual que ejecuta el código Java en cualquier plataforma. La JVM convierte el código Java en código de máquina nativo y gestiona la memoria, el rendimiento y la seguridad de las aplicaciones Java.">JVM</abbr> estos canales se representan mediante:</p>
 <ul>
-<li><code>System.in</code> implementa la entrada estándar    </li>
-<li><code>System.out</code> implementa la salida estándar    </li>
-<li><code>System.err</code> implementa la salida de error    </li>
+<li><code>System.in</code></li>
+<li><code>System.out</code></li>
+<li><code>System.err</code></li>
 </ul>
-<h4 id="13-apis-para-el-manejo-de-flujos-de-datos">1.3. APIs para el manejo de flujos de datos<a class="headerlink" href="#13-apis-para-el-manejo-de-flujos-de-datos" title="Permanent link">&para;</a></h4>
-<p>Kotlin no es ninguna excepción, y ofrece este tipo de biblioteca en forma del conjunto de clases dentro del <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.io/"><code>Package kotlin.io</code></a> (IO <abbr title="Interfaz de Programación de Aplicaciones. Conjunto de definiciones y protocolos que se utilizan para desarrollar e integrar el software de las aplicaciones. Las API permiten que diferentes aplicaciones se comuniquen entre sí, compartan datos y funcionalidades.">API</abbr> for working with files and streams). En java, lo podemos encontrar en <em><code>package java.io</code></em>.   </p>
+<p>En Kotlin, además, solemos usar funciones de más alto nivel como <code>print()</code>, <code>println()</code>, <code>readln()</code> o <code>readlnOrNull()</code> para interactuar con la consola de forma más cómoda.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kd">fun</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="n">print</span><span class="p">(</span><span class="s">&quot;Introduce tu nombre: &quot;</span><span class="p">)</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">nombre</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">readln</span><span class="p">()</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Hola, </span><span class="si">$</span><span class="n">nombre</span><span class="s">&quot;</span><span class="p">)</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="p">}</span>
+</code></pre></div>
+<p>Este ejemplo no trabaja todavía con ficheros, pero sí muestra una operación de entrada/salida: el programa <strong>lee</strong> desde teclado y <strong>escribe</strong> en pantalla.</p>
+<h3 id="6-apis-que-usaremos-en-la-unidad">6. APIs que usaremos en la unidad<a class="headerlink" href="#6-apis-que-usaremos-en-la-unidad" title="Permanent link">&para;</a></h3>
+<p>Kotlin, al ejecutarse sobre la <abbr title="Máquina Virtual de Java. Es una máquina virtual que ejecuta el código Java en cualquier plataforma. La JVM convierte el código Java en código de máquina nativo y gestiona la memoria, el rendimiento y la seguridad de las aplicaciones Java.">JVM</abbr>, puede combinar utilidades propias con librerías de Java. En esta unidad nos moveremos principalmente entre estas tres familias:</p>
+<h4 id="61-kotlinio">6.1. <code>kotlin.io</code><a class="headerlink" href="#61-kotlinio" title="Permanent link">&para;</a></h4>
+<p>Incluye funciones y extensiones de alto nivel para tareas frecuentes, por ejemplo:</p>
+<ul>
+<li>lectura desde consola con <code>readln()</code> y <code>readlnOrNull()</code>;</li>
+<li>lectura de texto con <code>readText()</code> o <code>readLines()</code>;</li>
+<li>escritura sencilla con <code>writeText()</code> y <code>appendText()</code>.</li>
+</ul>
+<h4 id="62-javaio">6.2. <code>java.io</code><a class="headerlink" href="#62-javaio" title="Permanent link">&para;</a></h4>
+<p>Es la <abbr title="Interfaz de Programación de Aplicaciones. Conjunto de definiciones y protocolos que se utilizan para desarrollar e integrar el software de las aplicaciones. Las API permiten que diferentes aplicaciones se comuniquen entre sí, compartan datos y funcionalidades.">API</abbr> clásica de Java para trabajar con ficheros y flujos. Aquí aparece, por ejemplo, la clase <code>File</code>, junto con lectores, escritores y flujos de bytes.</p>
+<h4 id="63-javaniofile">6.3. <code>java.nio.file</code><a class="headerlink" href="#63-javaniofile" title="Permanent link">&para;</a></h4>
+<p>Es la <abbr title="Interfaz de Programación de Aplicaciones. Conjunto de definiciones y protocolos que se utilizan para desarrollar e integrar el software de las aplicaciones. Las API permiten que diferentes aplicaciones se comuniquen entre sí, compartan datos y funcionalidades.">API</abbr> más moderna de Java para rutas y operaciones sobre el sistema de archivos. Destacan <code>Path</code> y <code>Files</code>, muy útiles cuando necesitamos trabajar con rutas de forma más robusta.</p>
+<figure>
 <p><img alt="" src="../assets/PROG-U7.1.-BibliotecaKotlin.png" /></p>
-<p>Mediante la invocación de los métodos adecuados definidos en estas clases es posible llevar a cabo prácticamente cualquier tarea sobre el sistema de archivos.</p>
-<h2 id="fuente">Fuente<a class="headerlink" href="#fuente" title="Permanent link">&para;</a></h2>
+<figcaption>Kotlin aporta utilidades de alto nivel y, además, puede aprovechar las APIs de Java para trabajar con E/S.</figcaption>
+</figure>
+<div class="admonition question">
+<p class="admonition-title">¿Qué veremos después?</p>
 <ul>
-<li><a href="https://www.fdi.ucm.es/profesor/jpavon/poo/2.13.EntradaySalida.pdf">Entra y salida</a></li>
+<li>En <code>7.2</code> nos centraremos en la consola y el teclado.</li>
+<li>En <code>7.3</code> estudiaremos la clase <code>File</code>.</li>
+<li>En <code>7.4</code> trabajaremos con lectura y escritura de ficheros.</li>
+</ul>
+</div>
+<h3 id="7-de-la-teoria-a-la-practica">7. De la teoría a la práctica<a class="headerlink" href="#7-de-la-teoria-a-la-practica" title="Permanent link">&para;</a></h3>
+<p>Observa este ejemplo sencillo:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">import</span><span class="w"> </span><span class="nn">java.io.File</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="kd">fun</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">    </span><span class="n">print</span><span class="p">(</span><span class="s">&quot;Escribe una incidencia: &quot;</span><span class="p">)</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">incidencia</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">readln</span><span class="p">()</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">    </span><span class="n">File</span><span class="p">(</span><span class="s">&quot;incidencias.txt&quot;</span><span class="p">).</span><span class="na">appendText</span><span class="p">(</span><span class="s">&quot;</span><span class="si">$</span><span class="n">incidencia</span><span class="s">\n&quot;</span><span class="p">)</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Incidencia guardada&quot;</span><span class="p">)</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="p">}</span>
+</code></pre></div>
+<p>Este programa combina varias ideas del tema:</p>
+<ul>
+<li>usa la <strong>entrada estándar</strong> para leer desde teclado;</li>
+<li>usa la <strong>salida estándar</strong> para informar al usuario;</li>
+<li>utiliza un <strong>fichero</strong> para conservar información;</li>
+<li>y emplea librerías del lenguaje para realizar operaciones de E/S.</li>
+</ul>
+<p>Es justo el tipo de base conceptual que exige el RA5: reconocer posibilidades de entrada/salida y aplicar librerías adecuadas según la necesidad.</p>
+<h3 id="8-buenas-practicas-iniciales">8. Buenas prácticas iniciales<a class="headerlink" href="#8-buenas-practicas-iniciales" title="Permanent link">&para;</a></h3>
+<p>Antes de profundizar en clases y métodos concretos, conviene quedarse con estas recomendaciones:</p>
+<ul>
+<li>utiliza rutas relativas cuando trabajes dentro de un proyecto;</li>
+<li>diferencia claramente texto y binario;</li>
+<li>valida la entrada del usuario antes de guardarla;</li>
+<li>no des por hecho que un fichero existe;</li>
+<li>maneja errores de lectura y escritura con cuidado;</li>
+<li>usa funciones de alto nivel cuando simplifiquen el código sin ocultarte lo importante.</li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Error frecuente</p>
+<p>Confundir “tener una ruta” con “tener el fichero”. Que una ruta exista como texto no significa que el fichero exista realmente en el sistema.</p>
+</div>
+<h3 id="9-resumen">9. Resumen<a class="headerlink" href="#9-resumen" title="Permanent link">&para;</a></h3>
+<p>En este apartado has visto que:</p>
+<ul>
+<li>la memoria del programa no basta cuando necesitamos persistencia;</li>
+<li>el sistema de archivos organiza la información mediante ficheros, carpetas y rutas;</li>
+<li>la entrada/salida se modela mediante flujos;</li>
+<li>consola, teclado y ficheros forman parte del mismo problema general de E/S;</li>
+<li>Kotlin y Java ofrecen librerías específicas para trabajar con estas situaciones.</li>
+</ul>
+<p>Con esta base ya podemos entrar en detalle en las herramientas concretas que usaremos para leer, escribir y gestionar información en nuestros programas.</p>
+<h2 id="fuentes-y-referencias">Fuentes y referencias<a class="headerlink" href="#fuentes-y-referencias" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://kotlinlang.org/docs/read-standard-input.html">Kotlin Docs - Read standard input</a></li>
+<li><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.io/">Kotlin Stdlib - Package <code>kotlin.io</code></a></li>
+<li><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/io/File.html">Oracle Java SE - <code>java.io.File</code></a></li>
+<li><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/nio/file/Path.html">Oracle Java SE - <code>java.nio.file.Path</code></a></li>
+<li><a href="https://www.fdi.ucm.es/profesor/jpavon/poo/2.13.EntradaySalida.pdf">Apuntes de entrada y salida - UCM</a></li>
 </ul>
 
 

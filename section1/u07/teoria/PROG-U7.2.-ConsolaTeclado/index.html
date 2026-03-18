@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Consola y teclado">
+        <meta name="description" content="Lectura y escritura en consola con Kotlin">
       
       
         <meta name="author" content="Eduardo Fdez">
@@ -25,7 +25,7 @@
       
       
       <link rel="icon" href="../../../../assets/favicon-96x96.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.3">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.5">
     
     
       
@@ -105,7 +105,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#72-lectura-y-escritura-en-entrada-y-salida-estandar" class="md-skip">
+        <a href="#72-lectura-y-escritura-en-consola" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -3198,34 +3198,45 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#72-lectura-y-escritura-en-entrada-y-salida-estandar" class="md-nav__link">
+  <a href="#72-lectura-y-escritura-en-consola" class="md-nav__link">
     <span class="md-ellipsis">
       
-        7.2. Lectura y escritura en entrada y salida estándar
+        7.2 Lectura y escritura en consola
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="7.2. Lectura y escritura en entrada y salida estándar">
+    <nav class="md-nav" aria-label="7.2 Lectura y escritura en consola">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#1-entrada-y-salida-estandar" class="md-nav__link">
+  <a href="#1-la-consola-como-canal-de-entrada-y-salida" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1. Entrada y salida estándar
+        1. La consola como canal de entrada y salida
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="1. Entrada y salida estándar">
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-escribir-informacion-en-consola" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Escribir información en consola
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Escribir información en consola">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#11-output-escribir-en-consola" class="md-nav__link">
+  <a href="#21-plantillas-de-cadenas" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1.1 Output: Escribir en consola
+        2.1. Plantillas de cadenas
       
     </span>
   </a>
@@ -3233,122 +3244,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#12-input-lectura-de-datos-en-consola" class="md-nav__link">
+  <a href="#22-salida-de-error" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1.2. Input: Lectura de datos en consola
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#13-mejorando-las-funciones" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1.3. Mejorando las funciones
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#14-aplicando-formato-a-la-salida-estandar" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1.4. Aplicando formato a la salida estándar
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#15-ejemplo" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1.5. Ejemplo
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="1.5. Ejemplo">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#151-formato-para-fecha-y-hora" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1.5.1. Formato para Fecha y Hora
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#152-iteracion-y-formateo-de-registros" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1.5.2. Iteración y Formateo de Registros
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2-otras-bibliotecas" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2. Otras Bibliotecas
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="2. Otras Bibliotecas">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#21-kotlin-console-output-formatting" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2.1. Kotlin Console Output Formatting
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#22-kotlin-command-line-arguments" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2.2. Kotlin Command-Line Arguments
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="2.2. Kotlin Command-Line Arguments">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#221-linea-de-comandos-en-main" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2.2.1. Línea de comandos en Main
+        2.2. Salida de error
       
     </span>
   </a>
@@ -3361,22 +3260,55 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#actividad-1-bibliotecas-para-formateo-de-salida-adaptando-el-codigo-del-15-ejemplo" class="md-nav__link">
+  <a href="#3-leer-datos-desde-teclado" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Actividad 1: Bibliotecas para formateo de salida: Adaptando el código del 1.5. Ejemplo
+        3. Leer datos desde teclado
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Actividad 1: Bibliotecas para formateo de salida: Adaptando el código del 1.5. Ejemplo">
+    <nav class="md-nav" aria-label="3. Leer datos desde teclado">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#222-bibliotecas-para-manejar-argumentos-de-la-linea-de-comandos" class="md-nav__link">
+  <a href="#31-leer-texto" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2.2.2. Bibliotecas para manejar argumentos de la línea de comandos
+        3.1. Leer texto
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-leer-numeros-con-seguridad" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2. Leer números con seguridad
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-evita-al-leer-datos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3. Evita !! al leer datos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-repetir-la-peticion-hasta-obtener-un-dato-valido" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.4. Repetir la petición hasta obtener un dato válido
       
     </span>
   </a>
@@ -3389,10 +3321,44 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#actividad-2-bibliotecas-para-parseo-de-parametros-de-entrada-adaptando-el-codigo-del-15-ejemplo" class="md-nav__link">
+  <a href="#4-formato-de-salida" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Actividad 2: Bibliotecas para parseo de parámetros de entrada: Adaptando el código del 1.5. Ejemplo
+        4. Formato de salida
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Formato de salida">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-cuando-basta-con-interpolacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1. Cuándo basta con interpolación
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-cuando-usar-format" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2. Cuándo usar format
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-ejemplo-de-tabla-sencilla" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3. Ejemplo de tabla sencilla
       
     </span>
   </a>
@@ -3401,6 +3367,39 @@
         
       </ul>
     </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-ejemplo-integrador" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Ejemplo integrador
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-buenas-practicas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Buenas prácticas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-resumen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Resumen
+      
+    </span>
+  </a>
   
 </li>
         
@@ -3410,10 +3409,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#fuente" class="md-nav__link">
+  <a href="#fuentes" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Fuente
+        Fuentes
       
     </span>
   </a>
@@ -3529,8 +3528,6 @@
       <a href="../PROG-U7.4.1.-TextFile/" class="md-nav__link">
         
   
-  
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"/></svg>
   
   <span class="md-ellipsis">
     
@@ -6374,11 +6371,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../section2/u02/practicas/IS-U2.-Practica001/" class="md-nav__link">
+      <a href="../../../../section2/u02/practicas/IS-U2.-Practica001.md" class="md-nav__link">
         
   
-  
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2c-1.11 0-2 .89-2 2v16a2 2 0 0 0 2 2h4v-1.91L12.09 18H6v-2h8.09l2-2H6v-2h12.09L20 10.09V8l-6-6zm7 1.5L18.5 9H13zm7.15 9.5a.55.55 0 0 0-.4.16l-1.02 1.02 2.09 2.08 1.02-1.01c.21-.22.21-.58 0-.79l-1.3-1.3a.54.54 0 0 0-.39-.16m-2.01 1.77L12 20.92V23h2.08l6.15-6.15z"/></svg>
   
   <span class="md-ellipsis">
     
@@ -6404,11 +6399,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../section2/u02/practicas/IS-U2.-Practica002/" class="md-nav__link">
+      <a href="../../../../section2/u02/practicas/IS-U2.-Practica002.md" class="md-nav__link">
         
   
-  
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2c-1.11 0-2 .89-2 2v16a2 2 0 0 0 2 2h4v-1.91L12.09 18H6v-2h8.09l2-2H6v-2h12.09L20 10.09V8l-6-6zm7 1.5L18.5 9H13zm7.15 9.5a.55.55 0 0 0-.4.16l-1.02 1.02 2.09 2.08 1.02-1.01c.21-.22.21-.58 0-.79l-1.3-1.3a.54.54 0 0 0-.39-.16m-2.01 1.77L12 20.92V23h2.08l6.15-6.15z"/></svg>
   
   <span class="md-ellipsis">
     
@@ -6446,6 +6439,8 @@
       
         
           
+        
+      
         
       
         
@@ -6589,6 +6584,36 @@
     
   
     3.3.1.-Investigación incidentes:MITRE
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section2/u03/teoria/IS-U3.3.2.-InvestigacionDeIncidentes/" class="md-nav__link">
+        
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"/></svg>
+  
+  <span class="md-ellipsis">
+    
+  
+    3.3.2.-Investigación de incidentes
   
 
     
@@ -8442,34 +8467,45 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#72-lectura-y-escritura-en-entrada-y-salida-estandar" class="md-nav__link">
+  <a href="#72-lectura-y-escritura-en-consola" class="md-nav__link">
     <span class="md-ellipsis">
       
-        7.2. Lectura y escritura en entrada y salida estándar
+        7.2 Lectura y escritura en consola
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="7.2. Lectura y escritura en entrada y salida estándar">
+    <nav class="md-nav" aria-label="7.2 Lectura y escritura en consola">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#1-entrada-y-salida-estandar" class="md-nav__link">
+  <a href="#1-la-consola-como-canal-de-entrada-y-salida" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1. Entrada y salida estándar
+        1. La consola como canal de entrada y salida
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="1. Entrada y salida estándar">
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-escribir-informacion-en-consola" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Escribir información en consola
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Escribir información en consola">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#11-output-escribir-en-consola" class="md-nav__link">
+  <a href="#21-plantillas-de-cadenas" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1.1 Output: Escribir en consola
+        2.1. Plantillas de cadenas
       
     </span>
   </a>
@@ -8477,122 +8513,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#12-input-lectura-de-datos-en-consola" class="md-nav__link">
+  <a href="#22-salida-de-error" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1.2. Input: Lectura de datos en consola
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#13-mejorando-las-funciones" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1.3. Mejorando las funciones
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#14-aplicando-formato-a-la-salida-estandar" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1.4. Aplicando formato a la salida estándar
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#15-ejemplo" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1.5. Ejemplo
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="1.5. Ejemplo">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#151-formato-para-fecha-y-hora" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1.5.1. Formato para Fecha y Hora
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#152-iteracion-y-formateo-de-registros" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1.5.2. Iteración y Formateo de Registros
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2-otras-bibliotecas" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2. Otras Bibliotecas
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="2. Otras Bibliotecas">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#21-kotlin-console-output-formatting" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2.1. Kotlin Console Output Formatting
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#22-kotlin-command-line-arguments" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2.2. Kotlin Command-Line Arguments
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="2.2. Kotlin Command-Line Arguments">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#221-linea-de-comandos-en-main" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2.2.1. Línea de comandos en Main
+        2.2. Salida de error
       
     </span>
   </a>
@@ -8605,22 +8529,55 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#actividad-1-bibliotecas-para-formateo-de-salida-adaptando-el-codigo-del-15-ejemplo" class="md-nav__link">
+  <a href="#3-leer-datos-desde-teclado" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Actividad 1: Bibliotecas para formateo de salida: Adaptando el código del 1.5. Ejemplo
+        3. Leer datos desde teclado
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Actividad 1: Bibliotecas para formateo de salida: Adaptando el código del 1.5. Ejemplo">
+    <nav class="md-nav" aria-label="3. Leer datos desde teclado">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#222-bibliotecas-para-manejar-argumentos-de-la-linea-de-comandos" class="md-nav__link">
+  <a href="#31-leer-texto" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2.2.2. Bibliotecas para manejar argumentos de la línea de comandos
+        3.1. Leer texto
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-leer-numeros-con-seguridad" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2. Leer números con seguridad
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-evita-al-leer-datos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3. Evita !! al leer datos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-repetir-la-peticion-hasta-obtener-un-dato-valido" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.4. Repetir la petición hasta obtener un dato válido
       
     </span>
   </a>
@@ -8633,10 +8590,44 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#actividad-2-bibliotecas-para-parseo-de-parametros-de-entrada-adaptando-el-codigo-del-15-ejemplo" class="md-nav__link">
+  <a href="#4-formato-de-salida" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Actividad 2: Bibliotecas para parseo de parámetros de entrada: Adaptando el código del 1.5. Ejemplo
+        4. Formato de salida
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Formato de salida">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-cuando-basta-con-interpolacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1. Cuándo basta con interpolación
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-cuando-usar-format" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2. Cuándo usar format
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-ejemplo-de-tabla-sencilla" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3. Ejemplo de tabla sencilla
       
     </span>
   </a>
@@ -8645,6 +8636,39 @@
         
       </ul>
     </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-ejemplo-integrador" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Ejemplo integrador
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-buenas-practicas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Buenas prácticas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-resumen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Resumen
+      
+    </span>
+  </a>
   
 </li>
         
@@ -8654,10 +8678,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#fuente" class="md-nav__link">
+  <a href="#fuentes" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Fuente
+        Fuentes
       
     </span>
   </a>
@@ -8698,7 +8722,17 @@
         
       
       
-        <a href="../../../../tags/#tag:software" class="md-tag md-tag-icon">Software</a>
+        <a href="../../../../tags/#tag:entradasalida" class="md-tag md-tag-icon">Entrada/Salida</a>
+      
+    
+      
+      
+      
+        
+        
+      
+      
+        <a href="../../../../tags/#tag:kotlin" class="md-tag md-tag-icon">Kotlin</a>
       
     
       
@@ -8720,424 +8754,273 @@
 
   <h1>7.2.-Entrada/Salida estandar</h1>
 
-<h2 id="72-lectura-y-escritura-en-entrada-y-salida-estandar">7.2. Lectura y escritura en entrada y salida estándar<a class="headerlink" href="#72-lectura-y-escritura-en-entrada-y-salida-estandar" title="Permanent link">&para;</a></h2>
-<p>Dentro de la biblioteca estándar de Kotlin, el paquete <code>kotlin.io</code> proporciona elementos esenciales para trabajar con los flujos de entrada y salida estándar (Input/Output o I/O). Esta transmisión de información entre la memoria principal y los dispositivos de entrada y salida permite, entre otras cosas, leer y escribir datos.</p>
-<p>Vamos a ver cómo se transfieren datos de entrada y salida en consola (el paquete <code>kotlin.io</code> también proporciona herramientas para trabajar con archivos, como veremos mas adelante), lo que es útil para mostrar una información en <strong>pantalla</strong> y para obtener información aportada por el usuario, habitualmente a través de un dispositivo de entrada como el <strong>teclado</strong>.</p>
-<h3 id="1-entrada-y-salida-estandar">1. Entrada y salida estándar<a class="headerlink" href="#1-entrada-y-salida-estandar" title="Permanent link">&para;</a></h3>
-<p>A continuación se muestra un esquema de las interfaces básicas para leer/escribir información:</p>
-<h4 id="11-output-escribir-en-consola">1.1 Output: Escribir en consola<a class="headerlink" href="#11-output-escribir-en-consola" title="Permanent link">&para;</a></h4>
-<p>Como ya hemos visto en multitud de ejemplos previos durante el curso, para enviar un mensaje a la salida estándar (la pantalla) usamos habitualmente las funciones <code>print()</code> y <code>println()</code>, que se diferencian en que la segunda incluye un salto de línea al final. Este salto de línea es reproducible a través del caracter especial <code>\n</code>, de la siguiente forma <code>print("\n")</code></p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kd">fun</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">args</span><span class="p">:</span><span class="w"> </span><span class="n">Array</span><span class="o">&lt;</span><span class="kt">String</span><span class="o">&gt;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="s">&quot;1. println &quot;</span><span class="p">)</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="s">&quot;2. println &quot;</span><span class="p">)</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">    </span><span class="n">print</span><span class="p">(</span><span class="s">&quot;1. print &quot;</span><span class="p">)</span>
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">    </span><span class="n">print</span><span class="p">(</span><span class="s">&quot;2. print &quot;</span><span class="p">)</span>
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="p">}</span>
+<h2 id="72-lectura-y-escritura-en-consola">7.2 Lectura y escritura en consola<a class="headerlink" href="#72-lectura-y-escritura-en-consola" title="Permanent link">&para;</a></h2>
+<p>Después de comprender en <code>7.1</code> qué es la entrada/salida, ahora toca trabajar con el caso más cercano y habitual: la <strong>consola</strong>. </p>
+<blockquote>
+<p>Este apartado está directamente relacionado con el resultado de aprendizaje 5, especialmente con los criterios que piden:  <br />
+   - a) usar la consola para realizar operaciones de entrada y salida.   <br />
+   - b) aplicar formatos en la visualización de la información.  <br />
+   - c) reconocer posibilidades de E/S del lenguaje y sus librerías.    </p>
+</blockquote>
+<p>La idea es sencilla: un programa de consola <strong>muestra mensajes</strong>, <strong>pide datos</strong> y <strong>responde en función de lo que introduce la persona usuaria</strong>. Aunque parezca básico, aquí se apoyan muchas prácticas posteriores: validación de datos, mensajes claros, formato de salida y separación entre lógica y presentación.</p>
+<div class="admonition abstract">
+<p class="admonition-title">Qué vas a aprender en este tema</p>
+<ul>
+<li>Escribir mensajes en la salida estándar y de error.</li>
+<li>Leer datos desde teclado con Kotlin.</li>
+<li>Validar conversiones básicas de texto a números.</li>
+<li>Aplicar formato a la salida para que sea más clara y útil.</li>
+</ul>
+</div>
+<h3 id="1-la-consola-como-canal-de-entrada-y-salida">1. La consola como canal de entrada y salida<a class="headerlink" href="#1-la-consola-como-canal-de-entrada-y-salida" title="Permanent link">&para;</a></h3>
+<p>En una aplicación de consola trabajamos, como mínimo, con tres canales:</p>
+<ul>
+<li><strong>entrada estándar</strong>, normalmente el teclado;</li>
+<li><strong>salida estándar</strong>, normalmente la consola;</li>
+<li><strong>salida de error</strong>, usada para avisos o mensajes de fallo.</li>
+</ul>
+<p>En la <abbr title="Máquina Virtual de Java. Es una máquina virtual que ejecuta el código Java en cualquier plataforma. La JVM convierte el código Java en código de máquina nativo y gestiona la memoria, el rendimiento y la seguridad de las aplicaciones Java.">JVM</abbr> estos canales se representan mediante:</p>
+<ul>
+<li><code>System.in</code></li>
+<li><code>System.out</code></li>
+<li><code>System.err</code></li>
+</ul>
+<p>En Kotlin no solemos trabajar directamente con ellos todo el tiempo, porque el lenguaje ofrece funciones más cómodas para el caso habitual de consola.</p>
+<div class="admonition note">
+<p class="admonition-title">Idea clave</p>
+<p>En este tema no estamos guardando todavía información en ficheros. Aquí nos centramos en la comunicación inmediata entre la persona usuaria y el programa.</p>
+</div>
+<h3 id="2-escribir-informacion-en-consola">2. Escribir información en consola<a class="headerlink" href="#2-escribir-informacion-en-consola" title="Permanent link">&para;</a></h3>
+<p>Las funciones más habituales para mostrar texto son <code>print()</code> y <code>println()</code>.</p>
+<ul>
+<li><code>print()</code> escribe sin salto de línea final.</li>
+<li><code>println()</code> escribe y añade un salto de línea al final.</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kd">fun</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="n">print</span><span class="p">(</span><span class="s">&quot;Hola&quot;</span><span class="p">)</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="n">print</span><span class="p">(</span><span class="s">&quot; &quot;</span><span class="p">)</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="s">&quot;mundo&quot;</span><span class="p">)</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Segunda línea&quot;</span><span class="p">)</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="p">}</span>
 </code></pre></div>
-<p>El programa anterior obtiene este resultado:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>1. println 
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>2. println 
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>1. print 2. print
+<p>Salida:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>Hola mundo
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>Segunda línea
 </code></pre></div>
-<p>Podemos añadir un salto de línea en la función <code>print</code> (aunque para eso ya tenemos a <code>println</code>):</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">print</span><span class="p">(</span><span class="s">&quot;Función print con salto de línea\n&quot;</span><span class="p">)</span>
+<p>Si necesitas un salto de línea dentro del propio texto, puedes usar <code>\n</code>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">println</span><span class="p">(</span><span class="s">&quot;Línea 1\nLínea 2&quot;</span><span class="p">)</span>
 </code></pre></div>
-<p>Un ejemplo que utiliza la función println para mostrar valores en consola:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kd">val</span><span class="w"> </span><span class="nv">numero</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">12.3</span>
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="n">println</span><span class="p">(</span><span class="s">&quot;numero&quot;</span><span class="p">)</span><span class="w">               </span><span class="c1">// numero</span>
-<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="n">println</span><span class="p">(</span><span class="n">numero</span><span class="p">)</span><span class="w">                 </span><span class="c1">// 12.3</span>
-<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="n">println</span><span class="p">(</span><span class="s">&quot;</span><span class="si">$</span><span class="n">numero</span><span class="s">&quot;</span><span class="p">)</span><span class="w">              </span><span class="c1">// 12.3</span>
-<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="n">println</span><span class="p">(</span><span class="s">&quot;numero = </span><span class="si">$</span><span class="n">numero</span><span class="s">&quot;</span><span class="p">)</span><span class="w">     </span><span class="c1">// numero = 12.3</span>
-<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="n">println</span><span class="p">(</span><span class="s">&quot;</span><span class="si">${</span><span class="n">numero</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">numero</span><span class="si">}</span><span class="s">&quot;</span><span class="p">)</span><span class="w">   </span><span class="c1">// 24.6</span>
-<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="n">println</span><span class="p">(</span><span class="m">12.3</span><span class="p">)</span><span class="w">                   </span><span class="c1">// 12.3</span>
+<h4 id="21-plantillas-de-cadenas">2.1. Plantillas de cadenas<a class="headerlink" href="#21-plantillas-de-cadenas" title="Permanent link">&para;</a></h4>
+<p>En Kotlin, la forma más cómoda de mezclar texto con variables suele ser la interpolación:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kd">val</span><span class="w"> </span><span class="nv">nombre</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Alicia&quot;</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="kd">val</span><span class="w"> </span><span class="nv">nota</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">8.5</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="n">println</span><span class="p">(</span><span class="s">&quot;Alumno: </span><span class="si">$</span><span class="n">nombre</span><span class="s">&quot;</span><span class="p">)</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="n">println</span><span class="p">(</span><span class="s">&quot;Nota final: </span><span class="si">$</span><span class="n">nota</span><span class="s">&quot;</span><span class="p">)</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="n">println</span><span class="p">(</span><span class="s">&quot;El doble de la nota es </span><span class="si">${</span><span class="n">nota</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="m">2</span><span class="si">}</span><span class="s">&quot;</span><span class="p">)</span>
 </code></pre></div>
-<h4 id="12-input-lectura-de-datos-en-consola">1.2. Input: Lectura de datos en consola<a class="headerlink" href="#12-input-lectura-de-datos-en-consola" title="Permanent link">&para;</a></h4>
-<p>Para la lectura de datos por teclado utilizamos la función <code>readLine</code> y <code>readLn</code> (otra opción que no vamos a ver ahora es utilizar la clase <code>Scanner</code> importada desde la librería estándar de Java con <code>import java.util.Scanner</code>):</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kd">fun</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">args</span><span class="p">:</span><span class="w"> </span><span class="n">Array</span><span class="o">&lt;</span><span class="kt">String</span><span class="o">&gt;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">    </span><span class="n">print</span><span class="p">(</span><span class="s">&quot;Tu nombre: &quot;</span><span class="p">)</span>
-<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">nombre</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">readLine</span><span class="p">()</span>
-<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Hola </span><span class="si">$</span><span class="n">nombre</span><span class="s">&quot;</span><span class="p">)</span>
-<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="p">}</span>
+<p>Esta técnica hace el código más legible que concatenar muchas cadenas con <code>+</code>.</p>
+<h4 id="22-salida-de-error">2.2. Salida de error<a class="headerlink" href="#22-salida-de-error" title="Permanent link">&para;</a></h4>
+<p>Cuando quieres diferenciar un mensaje correcto de uno problemático, puedes usar <code>System.err</code>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="n">System</span><span class="p">.</span><span class="na">err</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;No se ha podido leer la edad&quot;</span><span class="p">)</span>
 </code></pre></div>
-<p>La función <code>readLine()</code> convierte la entrada en un <code>String</code> (realmente devuelve un <code>String?</code> puesto que puede ser nulo) aunque es posible tomar la entrada y convertirla a otro tipo explícitamente:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="n">print</span><span class="p">(</span><span class="s">&quot;Nombre: &quot;</span><span class="p">)</span>
-<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="kd">val</span><span class="w"> </span><span class="nv">nombre</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">readLine</span><span class="p">()</span>
-<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="n">print</span><span class="p">(</span><span class="s">&quot;Edad: &quot;</span><span class="p">)</span>
-<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="kd">val</span><span class="w"> </span><span class="nv">edad</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Integer</span><span class="p">.</span><span class="na">valueOf</span><span class="p">(</span><span class="n">readLine</span><span class="p">())</span><span class="w"> </span><span class="c1">// cuidadín!!   </span>
-<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="n">println</span><span class="p">(</span><span class="s">&quot;Tu nombre es </span><span class="si">$</span><span class="n">nombre</span><span class="s"> y tienes </span><span class="si">$</span><span class="n">edad</span><span class="s"> años.&quot;</span><span class="p">)</span>
+<p>No siempre será visible de forma distinta en el terminal, pero conceptualmente es importante porque separa la salida normal de los errores.</p>
+<h3 id="3-leer-datos-desde-teclado">3. Leer datos desde teclado<a class="headerlink" href="#3-leer-datos-desde-teclado" title="Permanent link">&para;</a></h3>
+<p>En Kotlin actual, para leer una línea completa desde teclado es habitual usar <code>readln()</code> o <code>readlnOrNull()</code>.</p>
+<ul>
+<li><code>readln()</code> devuelve un <code>String</code>.</li>
+<li><code>readlnOrNull()</code> devuelve <code>String?</code> y permite contemplar el caso en que no haya datos.</li>
+</ul>
+<h4 id="31-leer-texto">3.1. Leer texto<a class="headerlink" href="#31-leer-texto" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kd">fun</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">    </span><span class="n">print</span><span class="p">(</span><span class="s">&quot;Introduce tu nombre: &quot;</span><span class="p">)</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">nombre</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">readln</span><span class="p">()</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Hola, </span><span class="si">$</span><span class="n">nombre</span><span class="s">&quot;</span><span class="p">)</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="p">}</span>
 </code></pre></div>
-<p>El programa anterior funcionará bien mientras el usuario introduzca un entero como valor de edad, pero en caso contrario saltará un excepción durante la ejecución (<code>NumberFormatException</code>). Una primera solución podría pasar por el uso del manejo de excepciones (que veremos en posteriores entradas) para capturar los casos problemáticos:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="n">print</span><span class="p">(</span><span class="s">&quot;Nombre: &quot;</span><span class="p">)</span>
-<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="kd">val</span><span class="w"> </span><span class="nv">nombre</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">readLine</span><span class="p">()</span>
-<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="n">print</span><span class="p">(</span><span class="s">&quot;Edad: &quot;</span><span class="p">)</span>
-<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="k">try</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">edad</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Integer</span><span class="p">.</span><span class="na">valueOf</span><span class="p">(</span><span class="n">readLine</span><span class="p">())</span>
-<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Tu nombre es </span><span class="si">$</span><span class="n">nombre</span><span class="s"> y tienes </span><span class="si">$</span><span class="n">edad</span><span class="s"> años.&quot;</span><span class="p">)</span>
-<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">ex</span><span class="p">:</span><span class="w"> </span><span class="n">NumberFormatException</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a><span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Edad no válida&quot;</span><span class="p">)</span>
-<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a><span class="p">}</span>
+<p>Este ejemplo es suficiente cuando esperamos una línea de texto y damos por hecho que la entrada estará disponible.</p>
+<h4 id="32-leer-numeros-con-seguridad">3.2. Leer números con seguridad<a class="headerlink" href="#32-leer-numeros-con-seguridad" title="Permanent link">&para;</a></h4>
+<p>El teclado siempre entrega texto. Si queremos obtener un número, primero leemos una cadena y después la convertimos.</p>
+<p>La forma más segura para empezar no es <code>toInt()</code>, sino <code>toIntOrNull()</code>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="kd">fun</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="w">    </span><span class="n">print</span><span class="p">(</span><span class="s">&quot;Introduce tu edad: &quot;</span><span class="p">)</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">edad</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">readln</span><span class="p">().</span><span class="na">toIntOrNull</span><span class="p">()</span>
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">edad</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="w">        </span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Tienes </span><span class="si">$</span><span class="n">edad</span><span class="s"> años&quot;</span><span class="p">)</span>
+<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">err</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;La edad introducida no es válida&quot;</span><span class="p">)</span>
+<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a><span class="p">}</span>
 </code></pre></div>
-<p>A veces se pueden ver ejemplos de código que intentan resolver este problema con el operador de aserción <code>!!</code> (revisar Gestión de tipos nulos en Kotlin), y de esta manera se le avisa al compilador que confíe que la función <code>readLine</code> siempre retornará un <code>String</code>, pero en general no es una buena manera de validar la entrada de datos.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="kd">val</span><span class="w"> </span><span class="nv">num</span><span class="p">:</span><span class="w"> </span><span class="kt">Int</span>
-<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="n">print</span><span class="p">(</span><span class="s">&quot;Introduce un número entero: &quot;</span><span class="p">)</span>
-<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="n">num</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">readLine</span><span class="p">()</span><span class="o">!!</span><span class="p">.</span><span class="na">toInt</span><span class="p">()</span><span class="w"> </span><span class="c1">// prometemos algo que no podemos cumplir</span>
-<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="n">println</span><span class="p">(</span><span class="n">num</span><span class="p">)</span>
+<p>También existen:</p>
+<ul>
+<li><code>toDoubleOrNull()</code></li>
+<li><code>toFloatOrNull()</code></li>
+<li><code>toLongOrNull()</code></li>
+</ul>
+<h4 id="33-evita-al-leer-datos">3.3. Evita <code>!!</code> al leer datos<a class="headerlink" href="#33-evita-al-leer-datos" title="Permanent link">&para;</a></h4>
+<p>Es frecuente encontrar ejemplos como este:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="kd">val</span><span class="w"> </span><span class="nv">numero</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">readln</span><span class="p">().</span><span class="na">toInt</span><span class="p">()</span>
 </code></pre></div>
-<p>A pesar de la pretendida seguridad del operador <code>!!</code>, seguimos sin escapar del <code>NumberFormatException</code>. Recuerda que además de la función <code>toInt()</code> también existen las funciones <code>toFloat()</code>, <code>toDouble()</code>, <code>toLong()</code>, <code>toShort()</code> y <code>toByte()</code> para la conversión de tipos (ver Tipos básicos de datos).</p>
-<p>Existen distintas formas de resolver éste y otros problemas similares respecto a la entrada de datos por parte del usuario. Algunas soluciones pasan por combinar la función <code>readLine</code> con el operador de llamada segura <code>?</code> y con la expresión <code>try</code> para devolver un valor (otras soluciones también utilizan el operador <code>as</code> que vimos en comprobación y conversión de tipos con <code>is</code> y <code>as</code>). Un ejemplo:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="kd">val</span><span class="w"> </span><span class="nv">num</span><span class="p">:</span><span class="w"> </span><span class="kt">Int?</span>
-<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="n">print</span><span class="p">(</span><span class="s">&quot;Introduce un número entero: &quot;</span><span class="p">)</span>
-<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="n">num</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="w">    </span><span class="n">readLine</span><span class="p">()</span><span class="o">?.</span><span class="na">toInt</span><span class="p">()</span>
-<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">ex</span><span class="p">:</span><span class="w"> </span><span class="n">NumberFormatException</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="w">    </span><span class="kc">null</span>
-<a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a><span class="p">}</span>
-<a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">num</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a><span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="s">&quot;El número es: </span><span class="si">$</span><span class="n">num</span><span class="s">&quot;</span><span class="p">)</span>
-<a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a><span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="s">&quot;¡Eso no es un número entero!&quot;</span><span class="p">)</span>
-<a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a><span class="p">}</span>
+<p>o, en ejemplos antiguos:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="kd">val</span><span class="w"> </span><span class="nv">numero</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">readLine</span><span class="p">()</span><span class="o">!!</span><span class="p">.</span><span class="na">toInt</span><span class="p">()</span>
 </code></pre></div>
-<p>En este ejemplo el valor introducido es asignado a la variable anulable <code>num</code>, cuyo valor depende de que se procese el contenido de la expresión <code>try</code> (cuando se ingresa un entero) o de que, en caso contrario, se produzca un <code>NumberFormatException</code> que es capturado por <code>catch</code>, que retorna <code>null</code> que es asignado a la variable <code>num</code>.</p>
-<p>Pero podemos mejorarla prescindiendo de <code>try..catch</code> y sustituyendo la función <code>toInt</code> por la función <code>toIntOrNull</code>:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="kd">val</span><span class="w"> </span><span class="nv">num</span><span class="p">:</span><span class="w"> </span><span class="kt">Int?</span>
-<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="n">print</span><span class="p">(</span><span class="s">&quot;Introduce un número entero: &quot;</span><span class="p">)</span>
-<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="n">num</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">readLine</span><span class="p">()</span><span class="o">?.</span><span class="na">toIntOrNull</span><span class="p">()</span>
-<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">num</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a><span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="s">&quot;El número es: </span><span class="si">$</span><span class="n">num</span><span class="s">&quot;</span><span class="p">)</span>
-<a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a><span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="s">&quot;¡Eso no es un número entero!&quot;</span><span class="p">)</span>
-<a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a><span class="p">}</span>
+<p>Funcionan si la entrada es correcta, pero fallan con facilidad cuando la persona usuaria introduce algo inesperado. Para aplicaciones de aprendizaje y para programas robustos, conviene validar.</p>
+<div class="admonition warning">
+<p class="admonition-title">Error frecuente</p>
+<p>Si conviertes directamente con <code>toInt()</code> y la entrada no es un entero válido, obtendrás una excepción en tiempo de ejecución.</p>
+</div>
+<h4 id="34-repetir-la-peticion-hasta-obtener-un-dato-valido">3.4. Repetir la petición hasta obtener un dato válido<a class="headerlink" href="#34-repetir-la-peticion-hasta-obtener-un-dato-valido" title="Permanent link">&para;</a></h4>
+<p>Una mejora muy habitual consiste en seguir preguntando hasta recibir una entrada correcta:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="kd">fun</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nv">cantidad</span><span class="p">:</span><span class="w"> </span><span class="kt">Int?</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span>
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">cantidad</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a><span class="w">        </span><span class="n">print</span><span class="p">(</span><span class="s">&quot;Introduce una cantidad entera: &quot;</span><span class="p">)</span>
+<a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a><span class="w">        </span><span class="n">cantidad</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">readln</span><span class="p">().</span><span class="na">toIntOrNull</span><span class="p">()</span>
+<a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a>
+<a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">cantidad</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">err</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Dato no válido. Inténtalo de nuevo.&quot;</span><span class="p">)</span>
+<a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-9-12" name="__codelineno-9-12" href="#__codelineno-9-12"></a>
+<a id="__codelineno-9-13" name="__codelineno-9-13" href="#__codelineno-9-13"></a><span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Cantidad aceptada: </span><span class="si">$</span><span class="n">cantidad</span><span class="s">&quot;</span><span class="p">)</span>
+<a id="__codelineno-9-14" name="__codelineno-9-14" href="#__codelineno-9-14"></a><span class="p">}</span>
 </code></pre></div>
-<p>En el ejemplo anterior llamamos a <code>readLine</code> con el operador <code>?</code> para realizar la conversión con <code>toIntOrNul</code> de forma segura. La función <code>toIntOrNull()</code> requiere que la variable sea de tipo anulable (<code>val num: Int?</code>) porque si la conversión a entero falla, se retorna null, que es asignado a <code>num</code>. Igualmente contamos con las funciones <code>toFloatOrNull()</code>, <code>toDoubleOrNull()</code>, <code>toLongOrNull()</code>, <code>toShortOrNull()</code> y <code>toByteOrNull()</code> que en caso de no poder realizar la conversión de tipos devuelven <code>null</code>.</p>
-<h4 id="13-mejorando-las-funciones">1.3. Mejorando las funciones<a class="headerlink" href="#13-mejorando-las-funciones" title="Permanent link">&para;</a></h4>
-<p><a href="https://stackoverflow.com/questions/41283393/reading-console-input-in-kotlin">Aquí</a> hay un grupo extendido (inspirado en el <a href="https://kotlinlang.org/docs/competitive-programming.html#functional-operators-example-long-number-problem">artículo</a>) de funciones de ayuda para leer todos los tipos posibles, listas, arrays, arrays 2D, etc.:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="c1">// private fun readln() = readLine()!! //Ya disponib le en la versión 1.6</span>
-<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="kd">private</span><span class="w"> </span><span class="kd">fun</span><span class="w"> </span><span class="nf">readlnByte</span><span class="p">()</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">readln</span><span class="p">().</span><span class="na">toByte</span><span class="p">()</span>
-<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="kd">private</span><span class="w"> </span><span class="kd">fun</span><span class="w"> </span><span class="nf">readlnShort</span><span class="p">()</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">readln</span><span class="p">().</span><span class="na">toShort</span><span class="p">()</span>
-<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="kd">private</span><span class="w"> </span><span class="kd">fun</span><span class="w"> </span><span class="nf">readlnInt</span><span class="p">()</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">readln</span><span class="p">().</span><span class="na">toInt</span><span class="p">()</span>
-<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="kd">private</span><span class="w"> </span><span class="kd">fun</span><span class="w"> </span><span class="nf">readlnLong</span><span class="p">()</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">readln</span><span class="p">().</span><span class="na">toLong</span><span class="p">()</span>
-<a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a><span class="kd">private</span><span class="w"> </span><span class="kd">fun</span><span class="w"> </span><span class="nf">readlnFloat</span><span class="p">()</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">readln</span><span class="p">().</span><span class="na">toFloat</span><span class="p">()</span>
-<a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a><span class="kd">private</span><span class="w"> </span><span class="kd">fun</span><span class="w"> </span><span class="nf">readlnDouble</span><span class="p">()</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">readln</span><span class="p">().</span><span class="na">toDouble</span><span class="p">()</span>
-<a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a><span class="kd">private</span><span class="w"> </span><span class="kd">fun</span><span class="w"> </span><span class="nf">readlnBigInt</span><span class="p">(</span><span class="n">radix</span><span class="p">:</span><span class="w"> </span><span class="kt">Int</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">10</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">readln</span><span class="p">().</span><span class="na">toBigInteger</span><span class="p">(</span><span class="n">radix</span><span class="p">)</span>
-<a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a><span class="kd">private</span><span class="w"> </span><span class="kd">fun</span><span class="w"> </span><span class="nf">readlnBigDecimal</span><span class="p">()</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">readln</span><span class="p">().</span><span class="na">toBigDecimal</span><span class="p">()</span>
-<a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a>
-<a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a><span class="kd">private</span><span class="w"> </span><span class="kd">fun</span><span class="w"> </span><span class="nf">lineSequence</span><span class="p">(</span><span class="n">limit</span><span class="p">:</span><span class="w"> </span><span class="kt">Int</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kt">Int</span><span class="p">.</span><span class="na">MAX_VALUE</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">generateSequence</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">readLine</span><span class="p">()</span><span class="w"> </span><span class="p">}.</span><span class="na">constrainOnce</span><span class="p">().</span><span class="na">take</span><span class="p">(</span><span class="n">limit</span><span class="p">)</span>
-<a id="__codelineno-10-12" name="__codelineno-10-12" href="#__codelineno-10-12"></a><span class="kd">private</span><span class="w"> </span><span class="kd">fun</span><span class="w"> </span><span class="nf">readlnStrings</span><span class="p">()</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">readln</span><span class="p">().</span><span class="na">split</span><span class="p">(</span><span class="sc">&#39; &#39;</span><span class="p">)</span>
-<a id="__codelineno-10-13" name="__codelineno-10-13" href="#__codelineno-10-13"></a><span class="kd">private</span><span class="w"> </span><span class="kd">fun</span><span class="w"> </span><span class="nf">readlnBytes</span><span class="p">()</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">readlnStrings</span><span class="p">().</span><span class="na">map</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nb">it</span><span class="p">.</span><span class="na">toByte</span><span class="p">()</span><span class="w"> </span><span class="p">}</span>
-<a id="__codelineno-10-14" name="__codelineno-10-14" href="#__codelineno-10-14"></a><span class="kd">private</span><span class="w"> </span><span class="kd">fun</span><span class="w"> </span><span class="nf">readlnShorts</span><span class="p">()</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">readlnStrings</span><span class="p">().</span><span class="na">map</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nb">it</span><span class="p">.</span><span class="na">toShort</span><span class="p">()</span><span class="w"> </span><span class="p">}</span>
-<a id="__codelineno-10-15" name="__codelineno-10-15" href="#__codelineno-10-15"></a><span class="kd">private</span><span class="w"> </span><span class="kd">fun</span><span class="w"> </span><span class="nf">readlnInts</span><span class="p">()</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">readlnStrings</span><span class="p">().</span><span class="na">map</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nb">it</span><span class="p">.</span><span class="na">toInt</span><span class="p">()</span><span class="w"> </span><span class="p">}</span>
-<a id="__codelineno-10-16" name="__codelineno-10-16" href="#__codelineno-10-16"></a><span class="kd">private</span><span class="w"> </span><span class="kd">fun</span><span class="w"> </span><span class="nf">readlnLongs</span><span class="p">()</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">readlnStrings</span><span class="p">().</span><span class="na">map</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nb">it</span><span class="p">.</span><span class="na">toLong</span><span class="p">()</span><span class="w"> </span><span class="p">}</span>
-<a id="__codelineno-10-17" name="__codelineno-10-17" href="#__codelineno-10-17"></a><span class="kd">private</span><span class="w"> </span><span class="kd">fun</span><span class="w"> </span><span class="nf">readlnFloats</span><span class="p">()</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">readlnStrings</span><span class="p">().</span><span class="na">map</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nb">it</span><span class="p">.</span><span class="na">toFloat</span><span class="p">()</span><span class="w"> </span><span class="p">}</span>
-<a id="__codelineno-10-18" name="__codelineno-10-18" href="#__codelineno-10-18"></a><span class="kd">private</span><span class="w"> </span><span class="kd">fun</span><span class="w"> </span><span class="nf">readlnDoubles</span><span class="p">()</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">readlnStrings</span><span class="p">().</span><span class="na">map</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nb">it</span><span class="p">.</span><span class="na">toDouble</span><span class="p">()</span><span class="w"> </span><span class="p">}</span>
-<a id="__codelineno-10-19" name="__codelineno-10-19" href="#__codelineno-10-19"></a>
-<a id="__codelineno-10-20" name="__codelineno-10-20" href="#__codelineno-10-20"></a><span class="kd">private</span><span class="w"> </span><span class="kd">fun</span><span class="w"> </span><span class="nf">readByteArray</span><span class="p">()</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">readlnStrings</span><span class="p">().</span><span class="na">run</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">ByteArray</span><span class="p">(</span><span class="n">size</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">get</span><span class="p">(</span><span class="nb">it</span><span class="p">).</span><span class="na">toByte</span><span class="p">()</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">}</span>
-<a id="__codelineno-10-21" name="__codelineno-10-21" href="#__codelineno-10-21"></a><span class="kd">private</span><span class="w"> </span><span class="kd">fun</span><span class="w"> </span><span class="nf">readShortArray</span><span class="p">()</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">readlnStrings</span><span class="p">().</span><span class="na">run</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">ShortArray</span><span class="p">(</span><span class="n">size</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">get</span><span class="p">(</span><span class="nb">it</span><span class="p">).</span><span class="na">toShort</span><span class="p">()</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">}</span>
-<a id="__codelineno-10-22" name="__codelineno-10-22" href="#__codelineno-10-22"></a><span class="kd">private</span><span class="w"> </span><span class="kd">fun</span><span class="w"> </span><span class="nf">readIntArray</span><span class="p">()</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">readlnStrings</span><span class="p">().</span><span class="na">run</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">IntArray</span><span class="p">(</span><span class="n">size</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">get</span><span class="p">(</span><span class="nb">it</span><span class="p">).</span><span class="na">toInt</span><span class="p">()</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">}</span>
-<a id="__codelineno-10-23" name="__codelineno-10-23" href="#__codelineno-10-23"></a><span class="kd">private</span><span class="w"> </span><span class="kd">fun</span><span class="w"> </span><span class="nf">readLongArray</span><span class="p">()</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">readlnStrings</span><span class="p">().</span><span class="na">run</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">LongArray</span><span class="p">(</span><span class="n">size</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">get</span><span class="p">(</span><span class="nb">it</span><span class="p">).</span><span class="na">toLong</span><span class="p">()</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">}</span>
-<a id="__codelineno-10-24" name="__codelineno-10-24" href="#__codelineno-10-24"></a><span class="kd">private</span><span class="w"> </span><span class="kd">fun</span><span class="w"> </span><span class="nf">readFloatArray</span><span class="p">()</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">readlnStrings</span><span class="p">().</span><span class="na">run</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">FloatArray</span><span class="p">(</span><span class="n">size</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">get</span><span class="p">(</span><span class="nb">it</span><span class="p">).</span><span class="na">toFloat</span><span class="p">()</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">}</span>
-<a id="__codelineno-10-25" name="__codelineno-10-25" href="#__codelineno-10-25"></a><span class="kd">private</span><span class="w"> </span><span class="kd">fun</span><span class="w"> </span><span class="nf">readDoubleArray</span><span class="p">()</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">readlnStrings</span><span class="p">().</span><span class="na">run</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">DoubleArray</span><span class="p">(</span><span class="n">size</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">get</span><span class="p">(</span><span class="nb">it</span><span class="p">).</span><span class="na">toDouble</span><span class="p">()</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">}</span>
-<a id="__codelineno-10-26" name="__codelineno-10-26" href="#__codelineno-10-26"></a>
-<a id="__codelineno-10-27" name="__codelineno-10-27" href="#__codelineno-10-27"></a><span class="kd">private</span><span class="w"> </span><span class="kd">fun</span><span class="w"> </span><span class="nf">readlnByteArray</span><span class="p">(</span><span class="n">n</span><span class="p">:</span><span class="w"> </span><span class="kt">Int</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ByteArray</span><span class="p">(</span><span class="n">n</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">readlnByte</span><span class="p">()</span><span class="w"> </span><span class="p">}</span>
-<a id="__codelineno-10-28" name="__codelineno-10-28" href="#__codelineno-10-28"></a><span class="kd">private</span><span class="w"> </span><span class="kd">fun</span><span class="w"> </span><span class="nf">readlnShortArray</span><span class="p">(</span><span class="n">n</span><span class="p">:</span><span class="w"> </span><span class="kt">Int</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ShortArray</span><span class="p">(</span><span class="n">n</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">readlnShort</span><span class="p">()</span><span class="w"> </span><span class="p">}</span>
-<a id="__codelineno-10-29" name="__codelineno-10-29" href="#__codelineno-10-29"></a><span class="kd">private</span><span class="w"> </span><span class="kd">fun</span><span class="w"> </span><span class="nf">readlnIntArray</span><span class="p">(</span><span class="n">n</span><span class="p">:</span><span class="w"> </span><span class="kt">Int</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">IntArray</span><span class="p">(</span><span class="n">n</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">readlnInt</span><span class="p">()</span><span class="w"> </span><span class="p">}</span>
-<a id="__codelineno-10-30" name="__codelineno-10-30" href="#__codelineno-10-30"></a><span class="kd">private</span><span class="w"> </span><span class="kd">fun</span><span class="w"> </span><span class="nf">readlnLongArray</span><span class="p">(</span><span class="n">n</span><span class="p">:</span><span class="w"> </span><span class="kt">Int</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">LongArray</span><span class="p">(</span><span class="n">n</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">readlnLong</span><span class="p">()</span><span class="w"> </span><span class="p">}</span>
-<a id="__codelineno-10-31" name="__codelineno-10-31" href="#__codelineno-10-31"></a><span class="kd">private</span><span class="w"> </span><span class="kd">fun</span><span class="w"> </span><span class="nf">readlnFloatArray</span><span class="p">(</span><span class="n">n</span><span class="p">:</span><span class="w"> </span><span class="kt">Int</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">FloatArray</span><span class="p">(</span><span class="n">n</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">readlnFloat</span><span class="p">()</span><span class="w"> </span><span class="p">}</span>
-<a id="__codelineno-10-32" name="__codelineno-10-32" href="#__codelineno-10-32"></a><span class="kd">private</span><span class="w"> </span><span class="kd">fun</span><span class="w"> </span><span class="nf">readlnDoubleArray</span><span class="p">(</span><span class="n">n</span><span class="p">:</span><span class="w"> </span><span class="kt">Int</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DoubleArray</span><span class="p">(</span><span class="n">n</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">readlnDouble</span><span class="p">()</span><span class="w"> </span><span class="p">}</span>
-<a id="__codelineno-10-33" name="__codelineno-10-33" href="#__codelineno-10-33"></a>
-<a id="__codelineno-10-34" name="__codelineno-10-34" href="#__codelineno-10-34"></a><span class="kd">private</span><span class="w"> </span><span class="kd">fun</span><span class="w"> </span><span class="nf">readByteArray2d</span><span class="p">(</span><span class="n">rows</span><span class="p">:</span><span class="w"> </span><span class="kt">Int</span><span class="p">,</span><span class="w"> </span><span class="n">cols</span><span class="p">:</span><span class="w"> </span><span class="kt">Int</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Array</span><span class="p">(</span><span class="n">rows</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">readByteArray</span><span class="p">().</span><span class="na">also</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">require</span><span class="p">(</span><span class="nb">it</span><span class="p">.</span><span class="na">size</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">cols</span><span class="p">)</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">}</span>
-<a id="__codelineno-10-35" name="__codelineno-10-35" href="#__codelineno-10-35"></a><span class="kd">private</span><span class="w"> </span><span class="kd">fun</span><span class="w"> </span><span class="nf">readShortArray2d</span><span class="p">(</span><span class="n">rows</span><span class="p">:</span><span class="w"> </span><span class="kt">Int</span><span class="p">,</span><span class="w"> </span><span class="n">cols</span><span class="p">:</span><span class="w"> </span><span class="kt">Int</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Array</span><span class="p">(</span><span class="n">rows</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">readShortArray</span><span class="p">().</span><span class="na">also</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">require</span><span class="p">(</span><span class="nb">it</span><span class="p">.</span><span class="na">size</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">cols</span><span class="p">)</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">}</span>
-<a id="__codelineno-10-36" name="__codelineno-10-36" href="#__codelineno-10-36"></a><span class="kd">private</span><span class="w"> </span><span class="kd">fun</span><span class="w"> </span><span class="nf">readLongArray2d</span><span class="p">(</span><span class="n">rows</span><span class="p">:</span><span class="w"> </span><span class="kt">Int</span><span class="p">,</span><span class="w"> </span><span class="n">cols</span><span class="p">:</span><span class="w"> </span><span class="kt">Int</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Array</span><span class="p">(</span><span class="n">rows</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">readLongArray</span><span class="p">().</span><span class="na">also</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">require</span><span class="p">(</span><span class="nb">it</span><span class="p">.</span><span class="na">size</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">cols</span><span class="p">)</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">}</span>
-<a id="__codelineno-10-37" name="__codelineno-10-37" href="#__codelineno-10-37"></a><span class="kd">private</span><span class="w"> </span><span class="kd">fun</span><span class="w"> </span><span class="nf">readIntArray2d</span><span class="p">(</span><span class="n">rows</span><span class="p">:</span><span class="w"> </span><span class="kt">Int</span><span class="p">,</span><span class="w"> </span><span class="n">cols</span><span class="p">:</span><span class="w"> </span><span class="kt">Int</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Array</span><span class="p">(</span><span class="n">rows</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">readIntArray</span><span class="p">().</span><span class="na">also</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">require</span><span class="p">(</span><span class="nb">it</span><span class="p">.</span><span class="na">size</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">cols</span><span class="p">)</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">}</span>
-<a id="__codelineno-10-38" name="__codelineno-10-38" href="#__codelineno-10-38"></a><span class="kd">private</span><span class="w"> </span><span class="kd">fun</span><span class="w"> </span><span class="nf">readFloatArray2d</span><span class="p">(</span><span class="n">rows</span><span class="p">:</span><span class="w"> </span><span class="kt">Int</span><span class="p">,</span><span class="w"> </span><span class="n">cols</span><span class="p">:</span><span class="w"> </span><span class="kt">Int</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Array</span><span class="p">(</span><span class="n">rows</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">readFloatArray</span><span class="p">().</span><span class="na">also</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">require</span><span class="p">(</span><span class="nb">it</span><span class="p">.</span><span class="na">size</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">cols</span><span class="p">)</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">}</span>
-<a id="__codelineno-10-39" name="__codelineno-10-39" href="#__codelineno-10-39"></a><span class="kd">private</span><span class="w"> </span><span class="kd">fun</span><span class="w"> </span><span class="nf">readDoubleArray2d</span><span class="p">(</span><span class="n">rows</span><span class="p">:</span><span class="w"> </span><span class="kt">Int</span><span class="p">,</span><span class="w"> </span><span class="n">cols</span><span class="p">:</span><span class="w"> </span><span class="kt">Int</span><span class="p">)</span><span class="w"> </span><span class="o">=</span>
-<a id="__codelineno-10-40" name="__codelineno-10-40" href="#__codelineno-10-40"></a><span class="w">    </span><span class="n">Array</span><span class="p">(</span><span class="n">rows</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">readDoubleArray</span><span class="p">().</span><span class="na">also</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">require</span><span class="p">(</span><span class="nb">it</span><span class="p">.</span><span class="na">size</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">cols</span><span class="p">)</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">}</span>
-<a id="__codelineno-10-41" name="__codelineno-10-41" href="#__codelineno-10-41"></a>
-<a id="__codelineno-10-42" name="__codelineno-10-42" href="#__codelineno-10-42"></a><span class="kd">private</span><span class="w"> </span><span class="kd">fun</span><span class="w"> </span><span class="nf">isWhiteSpace</span><span class="p">(</span><span class="n">c</span><span class="p">:</span><span class="w"> </span><span class="kt">Char</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="s">&quot; \r\n\t&quot;</span>
-<a id="__codelineno-10-43" name="__codelineno-10-43" href="#__codelineno-10-43"></a>
-<a id="__codelineno-10-44" name="__codelineno-10-44" href="#__codelineno-10-44"></a><span class="c1">// JVM-only targeting code follows next</span>
-<a id="__codelineno-10-45" name="__codelineno-10-45" href="#__codelineno-10-45"></a>
-<a id="__codelineno-10-46" name="__codelineno-10-46" href="#__codelineno-10-46"></a><span class="c1">// readString() via sequence is still slightly faster than Scanner</span>
-<a id="__codelineno-10-47" name="__codelineno-10-47" href="#__codelineno-10-47"></a><span class="kd">private</span><span class="w"> </span><span class="kd">fun</span><span class="w"> </span><span class="nf">readString</span><span class="p">()</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">generateSequence</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="n">`in`</span><span class="p">.</span><span class="na">read</span><span class="p">().</span><span class="na">toChar</span><span class="p">()</span><span class="w"> </span><span class="p">}</span>
-<a id="__codelineno-10-48" name="__codelineno-10-48" href="#__codelineno-10-48"></a><span class="w">    </span><span class="p">.</span><span class="na">dropWhile</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">isWhiteSpace</span><span class="p">(</span><span class="nb">it</span><span class="p">)</span><span class="w"> </span><span class="p">}.</span><span class="na">takeWhile</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="o">!</span><span class="n">isWhiteSpace</span><span class="p">(</span><span class="nb">it</span><span class="p">)</span><span class="w"> </span><span class="p">}.</span><span class="na">joinToString</span><span class="p">(</span><span class="s">&quot;&quot;</span><span class="p">)</span>
-<a id="__codelineno-10-49" name="__codelineno-10-49" href="#__codelineno-10-49"></a><span class="kd">private</span><span class="w"> </span><span class="kd">fun</span><span class="w"> </span><span class="nf">readByte</span><span class="p">()</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">readString</span><span class="p">().</span><span class="na">toByte</span><span class="p">()</span>
-<a id="__codelineno-10-50" name="__codelineno-10-50" href="#__codelineno-10-50"></a><span class="kd">private</span><span class="w"> </span><span class="kd">fun</span><span class="w"> </span><span class="nf">readShort</span><span class="p">()</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">readString</span><span class="p">().</span><span class="na">toShort</span><span class="p">()</span>
-<a id="__codelineno-10-51" name="__codelineno-10-51" href="#__codelineno-10-51"></a><span class="kd">private</span><span class="w"> </span><span class="kd">fun</span><span class="w"> </span><span class="nf">readInt</span><span class="p">()</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">readString</span><span class="p">().</span><span class="na">toInt</span><span class="p">()</span>
-<a id="__codelineno-10-52" name="__codelineno-10-52" href="#__codelineno-10-52"></a><span class="kd">private</span><span class="w"> </span><span class="kd">fun</span><span class="w"> </span><span class="nf">readLong</span><span class="p">()</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">readString</span><span class="p">().</span><span class="na">toLong</span><span class="p">()</span>
-<a id="__codelineno-10-53" name="__codelineno-10-53" href="#__codelineno-10-53"></a><span class="kd">private</span><span class="w"> </span><span class="kd">fun</span><span class="w"> </span><span class="nf">readFloat</span><span class="p">()</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">readString</span><span class="p">().</span><span class="na">toFloat</span><span class="p">()</span>
-<a id="__codelineno-10-54" name="__codelineno-10-54" href="#__codelineno-10-54"></a><span class="kd">private</span><span class="w"> </span><span class="kd">fun</span><span class="w"> </span><span class="nf">readDouble</span><span class="p">()</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">readString</span><span class="p">().</span><span class="na">toDouble</span><span class="p">()</span>
-<a id="__codelineno-10-55" name="__codelineno-10-55" href="#__codelineno-10-55"></a><span class="kd">private</span><span class="w"> </span><span class="kd">fun</span><span class="w"> </span><span class="nf">readBigInt</span><span class="p">(</span><span class="n">radix</span><span class="p">:</span><span class="w"> </span><span class="kt">Int</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">10</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">readString</span><span class="p">().</span><span class="na">toBigInteger</span><span class="p">(</span><span class="n">radix</span><span class="p">)</span>
-<a id="__codelineno-10-56" name="__codelineno-10-56" href="#__codelineno-10-56"></a><span class="kd">private</span><span class="w"> </span><span class="kd">fun</span><span class="w"> </span><span class="nf">readBigDecimal</span><span class="p">()</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">readString</span><span class="p">().</span><span class="na">toBigDecimal</span><span class="p">()</span>
-<a id="__codelineno-10-57" name="__codelineno-10-57" href="#__codelineno-10-57"></a>
-<a id="__codelineno-10-58" name="__codelineno-10-58" href="#__codelineno-10-58"></a><span class="kd">private</span><span class="w"> </span><span class="kd">fun</span><span class="w"> </span><span class="nf">readBytes</span><span class="p">(</span><span class="n">n</span><span class="p">:</span><span class="w"> </span><span class="kt">Int</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">generateSequence</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">readByte</span><span class="p">()</span><span class="w"> </span><span class="p">}.</span><span class="na">take</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
-<a id="__codelineno-10-59" name="__codelineno-10-59" href="#__codelineno-10-59"></a><span class="kd">private</span><span class="w"> </span><span class="kd">fun</span><span class="w"> </span><span class="nf">readShorts</span><span class="p">(</span><span class="n">n</span><span class="p">:</span><span class="w"> </span><span class="kt">Int</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">generateSequence</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">readShort</span><span class="p">()</span><span class="w"> </span><span class="p">}.</span><span class="na">take</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
-<a id="__codelineno-10-60" name="__codelineno-10-60" href="#__codelineno-10-60"></a><span class="kd">private</span><span class="w"> </span><span class="kd">fun</span><span class="w"> </span><span class="nf">readInts</span><span class="p">(</span><span class="n">n</span><span class="p">:</span><span class="w"> </span><span class="kt">Int</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">generateSequence</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">readInt</span><span class="p">()</span><span class="w"> </span><span class="p">}.</span><span class="na">take</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
-<a id="__codelineno-10-61" name="__codelineno-10-61" href="#__codelineno-10-61"></a><span class="kd">private</span><span class="w"> </span><span class="kd">fun</span><span class="w"> </span><span class="nf">readLongs</span><span class="p">(</span><span class="n">n</span><span class="p">:</span><span class="w"> </span><span class="kt">Int</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">generateSequence</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">readLong</span><span class="p">()</span><span class="w"> </span><span class="p">}.</span><span class="na">take</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
-<a id="__codelineno-10-62" name="__codelineno-10-62" href="#__codelineno-10-62"></a><span class="kd">private</span><span class="w"> </span><span class="kd">fun</span><span class="w"> </span><span class="nf">readFloats</span><span class="p">(</span><span class="n">n</span><span class="p">:</span><span class="w"> </span><span class="kt">Int</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">generateSequence</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">readFloat</span><span class="p">()</span><span class="w"> </span><span class="p">}.</span><span class="na">take</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
-<a id="__codelineno-10-63" name="__codelineno-10-63" href="#__codelineno-10-63"></a><span class="kd">private</span><span class="w"> </span><span class="kd">fun</span><span class="w"> </span><span class="nf">readDoubles</span><span class="p">(</span><span class="n">n</span><span class="p">:</span><span class="w"> </span><span class="kt">Int</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">generateSequence</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">readDouble</span><span class="p">()</span><span class="w"> </span><span class="p">}.</span><span class="na">take</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+<p>Este patrón aparece mucho en programas de consola y en actividades de clase.</p>
+<h3 id="4-formato-de-salida">4. Formato de salida<a class="headerlink" href="#4-formato-de-salida" title="Permanent link">&para;</a></h3>
+<p>Una cosa es que un programa funcione y otra que su salida sea clara. El criterio de evaluación sobre formato no consiste solo en “que imprima algo”, sino en que la información se vea bien y resulte fácil de interpretar.</p>
+<h4 id="41-cuando-basta-con-interpolacion">4.1. Cuándo basta con interpolación<a class="headerlink" href="#41-cuando-basta-con-interpolacion" title="Permanent link">&para;</a></h4>
+<p>Para mensajes sencillos, la interpolación suele ser suficiente:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="kd">val</span><span class="w"> </span><span class="nv">producto</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Teclado&quot;</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="kd">val</span><span class="w"> </span><span class="nv">precio</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">19.95</span>
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>
+<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="n">println</span><span class="p">(</span><span class="s">&quot;Producto: </span><span class="si">$</span><span class="n">producto</span><span class="s">&quot;</span><span class="p">)</span>
+<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="n">println</span><span class="p">(</span><span class="s">&quot;Precio: </span><span class="si">$</span><span class="n">precio</span><span class="s"> €&quot;</span><span class="p">)</span>
 </code></pre></div>
-<h4 id="14-aplicando-formato-a-la-salida-estandar">1.4. Aplicando formato a la salida estándar<a class="headerlink" href="#14-aplicando-formato-a-la-salida-estandar" title="Permanent link">&para;</a></h4>
-<p>A continuación veremos como aplicar formato a las cadenas que se imprimen en salida estandar. La explicación esta hecha en Kotlin pero en Java aplica prácticamente lo mismo.</p>
-<p>En Kotlin (Y la mayoría de los lenguajes de programación) podemos utilizar formatos para reemplazar variables dentro de los String, supongamos que queremos imprimir nuestro nombre, edad y peso, podríamos hacer algo así</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="kd">val</span><span class="w"> </span><span class="nv">name</span><span class="p">:</span><span class="w"> </span><span class="kt">String</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Walter White&quot;</span>
-<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="kd">val</span><span class="w"> </span><span class="nv">age</span><span class="p">:</span><span class="w"> </span><span class="kt">Int</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">50</span>
-<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="kd">val</span><span class="w"> </span><span class="nv">weight</span><span class="p">:</span><span class="w"> </span><span class="kt">Double</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">75.5</span>
-<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>
-<a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a><span class="kd">val</span><span class="w"> </span><span class="nv">description</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Me llamo &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;, tengo &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">age</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; años y peso &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">weight</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; kg.&quot;</span>
-<a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a><span class="n">println</span><span class="p">(</span><span class="n">description</span><span class="p">)</span>
-<a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a>
-<a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a><span class="c1">// O mejor aún, en Kotlin podemos hacer esto</span>
-<a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a><span class="kd">val</span><span class="w"> </span><span class="nv">description</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Me llamo </span><span class="si">$</span><span class="n">name</span><span class="s">, tengo </span><span class="si">$</span><span class="n">age</span><span class="s"> años y peso </span><span class="si">$</span><span class="n">weight</span><span class="s"> kg&quot;</span>
-<a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a><span class="n">println</span><span class="p">(</span><span class="n">description</span><span class="p">)</span>
-<a id="__codelineno-11-11" name="__codelineno-11-11" href="#__codelineno-11-11"></a>
-<a id="__codelineno-11-12" name="__codelineno-11-12" href="#__codelineno-11-12"></a><span class="c1">// Ahora, si usamos el String format</span>
-<a id="__codelineno-11-13" name="__codelineno-11-13" href="#__codelineno-11-13"></a><span class="kd">val</span><span class="w"> </span><span class="nv">description</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kt">String</span><span class="p">.</span><span class="na">format</span><span class="p">(</span><span class="s">&quot;Me llamo %s, tengo %d años y peso %.2f kg&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="n">age</span><span class="p">,</span><span class="w"> </span><span class="n">weight</span><span class="p">)</span>
-<a id="__codelineno-11-14" name="__codelineno-11-14" href="#__codelineno-11-14"></a><span class="n">println</span><span class="p">(</span><span class="n">description</span><span class="p">)</span>
+<h4 id="42-cuando-usar-format">4.2. Cuándo usar <code>format</code><a class="headerlink" href="#42-cuando-usar-format" title="Permanent link">&para;</a></h4>
+<p>Si necesitas controlar decimales, anchos de columna o alineación, es más útil usar <code>format</code>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="kd">val</span><span class="w"> </span><span class="nv">nombre</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Marta&quot;</span>
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="kd">val</span><span class="w"> </span><span class="nv">nota</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">7.456</span>
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>
+<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="n">println</span><span class="p">(</span><span class="s">&quot;Alumno: %s | Nota: %.2f&quot;</span><span class="p">.</span><span class="na">format</span><span class="p">(</span><span class="n">nombre</span><span class="p">,</span><span class="w"> </span><span class="n">nota</span><span class="p">))</span>
 </code></pre></div>
-<p>Las 3 soluciones son correctas e imprimen lo mismo, pero la tercera es la más útil al usar <code>Strings</code> donde tendrás que reemplazar variables porque te ayuda a tener código más limpio y soportar diferentes idiomas.</p>
-<p>Si observas en la última opción, lo que hacemos es poner ciertos formatos dentro del <code>String</code> y luego al final, separados por coma, ponemos las variables que queremos que se reemplacen en el <code>String</code>: <code>%s</code> para otros strings como <code>name</code>, <code>%d</code> para enteros como <code>age</code> y <code>%f</code> para <code>doubles</code> y <code>floats</code>, en el <code>.2</code> que ves en el <code>%f</code> el <code>2</code> es la cantidad de decimales que queremos que se impriman, así por ejemplo en este caso se imprimiría el peso como <code>75.50</code>.</p>
-<p>Aquí te dejo una tabla con los formatos más comunes, también pueden ser usados en Java:</p>
+<p>Salida:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>Alumno: Marta | Nota: 7.46
+</code></pre></div>
+<p>Algunos especificadores habituales son:</p>
 <table>
 <thead>
 <tr>
-<th><strong>Formato</strong></th>
-<th>Tipo de**dato**</th>
+<th>Formato</th>
+<th>Uso habitual</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>%b</td>
-<td>Boolean</td>
+<td><code>%s</code></td>
+<td>texto</td>
 </tr>
 <tr>
-<td>%c</td>
-<td>Char</td>
+<td><code>%d</code></td>
+<td>entero</td>
 </tr>
 <tr>
-<td>%d</td>
-<td>Integer</td>
+<td><code>%.2f</code></td>
+<td>decimal con 2 cifras</td>
 </tr>
 <tr>
-<td>%e</td>
-<td>Float en notación científica</td>
-</tr>
-<tr>
-<td>%f</td>
-<td>Float y Double (Agrega %**.n**f para forzar n decimales)</td>
-</tr>
-<tr>
-<td>%o</td>
-<td>Formato Octal</td>
-</tr>
-<tr>
-<td>%s</td>
-<td>Strings</td>
-</tr>
-<tr>
-<td>%x</td>
-<td>Formato Hexadecimal</td>
+<td><code>%n</code></td>
+<td>salto de línea</td>
 </tr>
 </tbody>
 </table>
-<p>Hay otros 3 o 4 formatos más pero son tan poco usuales que si los necesitas prefiero que los consultes tu en la documentación.</p>
-<p>¿Qué muestra como salida el siguiente código?</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="w"> </span><span class="kd">val</span><span class="w"> </span><span class="nv">str1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kt">String</span><span class="p">.</span><span class="na">format</span><span class="p">(</span><span class="s">&quot;%d&quot;</span><span class="p">,</span><span class="w"> </span><span class="m">404</span><span class="p">)</span><span class="w"> </span><span class="c1">// Integer value  </span>
-<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="kd">val</span><span class="w"> </span><span class="nv">str2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kt">String</span><span class="p">.</span><span class="na">format</span><span class="p">(</span><span class="s">&quot;%s&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Mehmet&quot;</span><span class="p">)</span><span class="w"> </span><span class="c1">// String value  </span>
-<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="kd">val</span><span class="w"> </span><span class="nv">str3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kt">String</span><span class="p">.</span><span class="na">format</span><span class="p">(</span><span class="s">&quot;%f&quot;</span><span class="p">,</span><span class="w"> </span><span class="m">404.00</span><span class="p">)</span><span class="w"> </span><span class="c1">// Float value  </span>
-<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="kd">val</span><span class="w"> </span><span class="nv">str4</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kt">String</span><span class="p">.</span><span class="na">format</span><span class="p">(</span><span class="s">&quot;%x&quot;</span><span class="p">,</span><span class="w"> </span><span class="m">404</span><span class="p">)</span><span class="w"> </span><span class="c1">// Hexadecimal value  </span>
-<a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a><span class="kd">val</span><span class="w"> </span><span class="nv">str5</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kt">String</span><span class="p">.</span><span class="na">format</span><span class="p">(</span><span class="s">&quot;%c&quot;</span><span class="p">,</span><span class="w"> </span><span class="sc">&#39;c&#39;</span><span class="p">)</span><span class="w"> </span><span class="c1">// Char value  </span>
-<a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a><span class="n">println</span><span class="p">(</span><span class="n">str1</span><span class="p">)</span>
-<a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a><span class="n">println</span><span class="p">(</span><span class="n">str2</span><span class="p">)</span>
-<a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a><span class="n">println</span><span class="p">(</span><span class="n">str3</span><span class="p">)</span>
-<a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a><span class="n">println</span><span class="p">(</span><span class="n">str4</span><span class="p">)</span>
-<a id="__codelineno-12-10" name="__codelineno-12-10" href="#__codelineno-12-10"></a><span class="n">println</span><span class="p">(</span><span class="n">str5</span><span class="p">)</span>
+<h4 id="43-ejemplo-de-tabla-sencilla">4.3. Ejemplo de tabla sencilla<a class="headerlink" href="#43-ejemplo-de-tabla-sencilla" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="kd">val</span><span class="w"> </span><span class="nv">articulos</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">listOf</span><span class="p">(</span>
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="w">    </span><span class="s">&quot;Cuaderno&quot;</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="m">2.5</span><span class="p">,</span>
+<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="w">    </span><span class="s">&quot;Bolígrafo&quot;</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="m">1.2</span><span class="p">,</span>
+<a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a><span class="w">    </span><span class="s">&quot;Mochila&quot;</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="m">24.95</span>
+<a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a><span class="p">)</span>
+<a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a>
+<a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a><span class="n">println</span><span class="p">(</span><span class="s">&quot;%-12s | %8s&quot;</span><span class="p">.</span><span class="na">format</span><span class="p">(</span><span class="s">&quot;Artículo&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Precio&quot;</span><span class="p">))</span>
+<a id="__codelineno-13-8" name="__codelineno-13-8" href="#__codelineno-13-8"></a><span class="n">println</span><span class="p">(</span><span class="s">&quot;-----------------------------&quot;</span><span class="p">)</span>
+<a id="__codelineno-13-9" name="__codelineno-13-9" href="#__codelineno-13-9"></a>
+<a id="__codelineno-13-10" name="__codelineno-13-10" href="#__codelineno-13-10"></a><span class="k">for</span><span class="w"> </span><span class="p">((</span><span class="n">articulo</span><span class="p">,</span><span class="w"> </span><span class="n">precio</span><span class="p">)</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">articulos</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-13-11" name="__codelineno-13-11" href="#__codelineno-13-11"></a><span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="s">&quot;%-12s | %8.2f €&quot;</span><span class="p">.</span><span class="na">format</span><span class="p">(</span><span class="n">articulo</span><span class="p">,</span><span class="w"> </span><span class="n">precio</span><span class="p">))</span>
+<a id="__codelineno-13-12" name="__codelineno-13-12" href="#__codelineno-13-12"></a><span class="p">}</span>
 </code></pre></div>
-<h4 id="15-ejemplo">1.5. Ejemplo<a class="headerlink" href="#15-ejemplo" title="Permanent link">&para;</a></h4>
-<p>Para mostrar una salida a consola tabulada que incluya fecha y hora, cantidades con tres decimales y texto, puedes aprovechar las capacidades de formateo de cadenas en Kotlin. Utilizaré el formato de <code>String</code> con la función <code>format</code> para lograr un alineamiento y formato adecuados para cada tipo de dato.</p>
-<p>Aquí tienes un ejemplo en el que definimos una clase <code>Registro</code> para almacenar la información relevante y luego mostramos una lista de estos registros con el formato deseado:</p>
-<p><div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="k">import</span><span class="w"> </span><span class="nn">java.time.LocalDateTime</span>
-<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="k">import</span><span class="w"> </span><span class="nn">java.time.format.DateTimeFormatter</span>
-<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a>
-<a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a><span class="kd">data</span><span class="w"> </span><span class="kd">class</span><span class="w"> </span><span class="nc">Registro</span><span class="p">(</span><span class="kd">val</span><span class="w"> </span><span class="nv">fechaHora</span><span class="p">:</span><span class="w"> </span><span class="n">LocalDateTime</span><span class="p">,</span><span class="w"> </span><span class="kd">val</span><span class="w"> </span><span class="nv">cantidad</span><span class="p">:</span><span class="w"> </span><span class="kt">Double</span><span class="p">,</span><span class="w"> </span><span class="kd">val</span><span class="w"> </span><span class="nv">texto</span><span class="p">:</span><span class="w"> </span><span class="kt">String</span><span class="p">)</span>
-<a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a>
-<a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a><span class="kd">fun</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a><span class="c1">// Lista de registros para el ejemplo</span>
-<a id="__codelineno-13-8" name="__codelineno-13-8" href="#__codelineno-13-8"></a><span class="kd">val</span><span class="w"> </span><span class="nv">registros</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">listOf</span><span class="p">(</span>
-<a id="__codelineno-13-9" name="__codelineno-13-9" href="#__codelineno-13-9"></a><span class="n">Registro</span><span class="p">(</span><span class="n">LocalDateTime</span><span class="p">.</span><span class="na">now</span><span class="p">(),</span><span class="w"> </span><span class="m">1234.567</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Texto de ejemplo 1&quot;</span><span class="p">),</span>
-<a id="__codelineno-13-10" name="__codelineno-13-10" href="#__codelineno-13-10"></a><span class="n">Registro</span><span class="p">(</span><span class="n">LocalDateTime</span><span class="p">.</span><span class="na">now</span><span class="p">().</span><span class="na">minusDays</span><span class="p">(</span><span class="m">1</span><span class="p">),</span><span class="w"> </span><span class="m">89.1011</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Texto de ejemplo 2&quot;</span><span class="p">),</span>
-<a id="__codelineno-13-11" name="__codelineno-13-11" href="#__codelineno-13-11"></a><span class="n">Registro</span><span class="p">(</span><span class="n">LocalDateTime</span><span class="p">.</span><span class="na">now</span><span class="p">().</span><span class="na">minusHours</span><span class="p">(</span><span class="m">5</span><span class="p">),</span><span class="w"> </span><span class="m">12.345</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Otro texto de ejemplo&quot;</span><span class="p">)</span>
-<a id="__codelineno-13-12" name="__codelineno-13-12" href="#__codelineno-13-12"></a><span class="p">)</span>
-<a id="__codelineno-13-13" name="__codelineno-13-13" href="#__codelineno-13-13"></a>
-<a id="__codelineno-13-14" name="__codelineno-13-14" href="#__codelineno-13-14"></a><span class="w">    </span><span class="c1">// Encabezado</span>
-<a id="__codelineno-13-15" name="__codelineno-13-15" href="#__codelineno-13-15"></a><span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Fecha y Hora         |   Cantidad | Texto&quot;</span><span class="p">)</span>
-<a id="__codelineno-13-16" name="__codelineno-13-16" href="#__codelineno-13-16"></a><span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="s">&quot;-------------------------------------------------------------&quot;</span><span class="p">)</span>
-<a id="__codelineno-13-17" name="__codelineno-13-17" href="#__codelineno-13-17"></a>
-<a id="__codelineno-13-18" name="__codelineno-13-18" href="#__codelineno-13-18"></a><span class="w">    </span><span class="c1">// Formato para fecha y hora</span>
-<a id="__codelineno-13-19" name="__codelineno-13-19" href="#__codelineno-13-19"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">formatoFechaHora</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DateTimeFormatter</span><span class="p">.</span><span class="na">ofPattern</span><span class="p">(</span><span class="s">&quot;yyyy-MM-dd HH:mm&quot;</span><span class="p">)</span>
-<a id="__codelineno-13-20" name="__codelineno-13-20" href="#__codelineno-13-20"></a>
-<a id="__codelineno-13-21" name="__codelineno-13-21" href="#__codelineno-13-21"></a><span class="w">    </span><span class="c1">// Imprimir cada registro con formato</span>
-<a id="__codelineno-13-22" name="__codelineno-13-22" href="#__codelineno-13-22"></a><span class="w">    </span><span class="n">registros</span><span class="p">.</span><span class="na">forEach</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">registro</span><span class="w"> </span><span class="o">-&gt;</span>
-<a id="__codelineno-13-23" name="__codelineno-13-23" href="#__codelineno-13-23"></a><span class="w">        </span><span class="kd">val</span><span class="w"> </span><span class="nv">fechaHora</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">registro</span><span class="p">.</span><span class="na">fechaHora</span><span class="p">.</span><span class="na">format</span><span class="p">(</span><span class="n">formatoFechaHora</span><span class="p">)</span>
-<a id="__codelineno-13-24" name="__codelineno-13-24" href="#__codelineno-13-24"></a><span class="w">        </span><span class="c1">// Asegurando que la cantidad esté justificada a la derecha con 10 caracteres de ancho</span>
-<a id="__codelineno-13-25" name="__codelineno-13-25" href="#__codelineno-13-25"></a><span class="w">        </span><span class="kd">val</span><span class="w"> </span><span class="nv">cantidad</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;%10.3f&quot;</span><span class="p">.</span><span class="na">format</span><span class="p">(</span><span class="n">registro</span><span class="p">.</span><span class="na">cantidad</span><span class="p">)</span>
-<a id="__codelineno-13-26" name="__codelineno-13-26" href="#__codelineno-13-26"></a><span class="w">        </span><span class="kd">val</span><span class="w"> </span><span class="nv">texto</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">registro</span><span class="p">.</span><span class="na">texto</span>
-<a id="__codelineno-13-27" name="__codelineno-13-27" href="#__codelineno-13-27"></a><span class="w">        </span><span class="n">println</span><span class="p">(</span><span class="s">&quot;%-20s | %10s | %s&quot;</span><span class="p">.</span><span class="na">format</span><span class="p">(</span><span class="n">fechaHora</span><span class="p">,</span><span class="w"> </span><span class="n">cantidad</span><span class="p">,</span><span class="w"> </span><span class="n">texto</span><span class="p">))</span>
-<a id="__codelineno-13-28" name="__codelineno-13-28" href="#__codelineno-13-28"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-13-29" name="__codelineno-13-29" href="#__codelineno-13-29"></a><span class="p">}</span>
+<p>Salida:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>Artículo     |   Precio
+<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>-----------------------------
+<a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a>Cuaderno     |     2.50 €
+<a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a>Bolígrafo    |     1.20 €
+<a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a>Mochila      |    24.95 €
 </code></pre></div>
-El código anterior está diseñado para trabajar con una lista de registros, cada uno representando datos que incluyen una fecha y hora, una cantidad numérica y un texto. Vamos a desglosar y explicar cada parte relevante del código:</p>
-<h5 id="151-formato-para-fecha-y-hora">1.5.1. Formato para Fecha y Hora<a class="headerlink" href="#151-formato-para-fecha-y-hora" title="Permanent link">&para;</a></h5>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="kd">val</span><span class="w"> </span><span class="nv">formatoFechaHora</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DateTimeFormatter</span><span class="p">.</span><span class="na">ofPattern</span><span class="p">(</span><span class="s">&quot;yyyy-MM-dd HH:mm&quot;</span><span class="p">)</span>
+<h3 id="5-ejemplo-integrador">5. Ejemplo integrador<a class="headerlink" href="#5-ejemplo-integrador" title="Permanent link">&para;</a></h3>
+<p>El siguiente programa combina lectura por teclado, validación y formato de salida:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="kd">fun</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="w">    </span><span class="n">print</span><span class="p">(</span><span class="s">&quot;Nombre del producto: &quot;</span><span class="p">)</span>
+<a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">producto</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">readln</span><span class="p">()</span>
+<a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a>
+<a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a><span class="w">    </span><span class="n">print</span><span class="p">(</span><span class="s">&quot;Unidades: &quot;</span><span class="p">)</span>
+<a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">unidades</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">readln</span><span class="p">().</span><span class="na">toIntOrNull</span><span class="p">()</span>
+<a id="__codelineno-15-7" name="__codelineno-15-7" href="#__codelineno-15-7"></a>
+<a id="__codelineno-15-8" name="__codelineno-15-8" href="#__codelineno-15-8"></a><span class="w">    </span><span class="n">print</span><span class="p">(</span><span class="s">&quot;Precio unitario: &quot;</span><span class="p">)</span>
+<a id="__codelineno-15-9" name="__codelineno-15-9" href="#__codelineno-15-9"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">precio</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">readln</span><span class="p">().</span><span class="na">toDoubleOrNull</span><span class="p">()</span>
+<a id="__codelineno-15-10" name="__codelineno-15-10" href="#__codelineno-15-10"></a>
+<a id="__codelineno-15-11" name="__codelineno-15-11" href="#__codelineno-15-11"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">unidades</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="kc">null</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">precio</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-15-12" name="__codelineno-15-12" href="#__codelineno-15-12"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">err</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;No se puede generar el ticket porque hay datos no válidos.&quot;</span><span class="p">)</span>
+<a id="__codelineno-15-13" name="__codelineno-15-13" href="#__codelineno-15-13"></a><span class="w">        </span><span class="k">return</span>
+<a id="__codelineno-15-14" name="__codelineno-15-14" href="#__codelineno-15-14"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-15-15" name="__codelineno-15-15" href="#__codelineno-15-15"></a>
+<a id="__codelineno-15-16" name="__codelineno-15-16" href="#__codelineno-15-16"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">total</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">unidades</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">precio</span>
+<a id="__codelineno-15-17" name="__codelineno-15-17" href="#__codelineno-15-17"></a>
+<a id="__codelineno-15-18" name="__codelineno-15-18" href="#__codelineno-15-18"></a><span class="w">    </span><span class="n">println</span><span class="p">()</span>
+<a id="__codelineno-15-19" name="__codelineno-15-19" href="#__codelineno-15-19"></a><span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Ticket de compra&quot;</span><span class="p">)</span>
+<a id="__codelineno-15-20" name="__codelineno-15-20" href="#__codelineno-15-20"></a><span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="s">&quot;------------------------------&quot;</span><span class="p">)</span>
+<a id="__codelineno-15-21" name="__codelineno-15-21" href="#__codelineno-15-21"></a><span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Producto: </span><span class="si">$</span><span class="n">producto</span><span class="s">&quot;</span><span class="p">)</span>
+<a id="__codelineno-15-22" name="__codelineno-15-22" href="#__codelineno-15-22"></a><span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Unidades: %d&quot;</span><span class="p">.</span><span class="na">format</span><span class="p">(</span><span class="n">unidades</span><span class="p">))</span>
+<a id="__codelineno-15-23" name="__codelineno-15-23" href="#__codelineno-15-23"></a><span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Precio/u: %.2f €&quot;</span><span class="p">.</span><span class="na">format</span><span class="p">(</span><span class="n">precio</span><span class="p">))</span>
+<a id="__codelineno-15-24" name="__codelineno-15-24" href="#__codelineno-15-24"></a><span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Total: %.2f €&quot;</span><span class="p">.</span><span class="na">format</span><span class="p">(</span><span class="n">total</span><span class="p">))</span>
+<a id="__codelineno-15-25" name="__codelineno-15-25" href="#__codelineno-15-25"></a><span class="p">}</span>
 </code></pre></div>
-<p>Esta línea crea un <code>DateTimeFormatter</code> con un patrón específico. El patrón <code>"yyyy-MM-dd HH:mm"</code> indica cómo se debe formatear la fecha y hora:</p>
+<p>Este ejemplo ya refleja una situación realista de RA5:</p>
 <ul>
-<li><code>yyyy</code>: Año completo.</li>
-<li><code>MM</code>: Mes en número con dos dígitos.</li>
-<li><code>dd</code>: Día del mes con dos dígitos.</li>
-<li><code>HH</code>: Hora del día (formato de 24 horas) con dos dígitos.</li>
-<li><code>mm</code>: Minuto de la hora con dos dígitos.</li>
+<li>se lee información desde teclado;</li>
+<li>se muestra información en consola;</li>
+<li>se valida la entrada;</li>
+<li>y se cuida el formato de salida.</li>
 </ul>
-<p>Este formateador se utilizará para convertir objetos <code>LocalDateTime</code> a <code>String</code>, representando la fecha y hora en el formato especificado.</p>
-<h5 id="152-iteracion-y-formateo-de-registros">1.5.2. Iteración y Formateo de Registros<a class="headerlink" href="#152-iteracion-y-formateo-de-registros" title="Permanent link">&para;</a></h5>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="n">registros</span><span class="p">.</span><span class="na">forEach</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">registro</span><span class="w"> </span><span class="o">-&gt;</span>
-<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">fechaHora</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">registro</span><span class="p">.</span><span class="na">fechaHora</span><span class="p">.</span><span class="na">format</span><span class="p">(</span><span class="n">formatoFechaHora</span><span class="p">)</span>
-<a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">cantidad</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;%10.3f&quot;</span><span class="p">.</span><span class="na">format</span><span class="p">(</span><span class="n">registro</span><span class="p">.</span><span class="na">cantidad</span><span class="p">)</span>
-<a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">texto</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">registro</span><span class="p">.</span><span class="na">texto</span>
-<a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a><span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="s">&quot;%-20s | %10s | %s&quot;</span><span class="p">.</span><span class="na">format</span><span class="p">(</span><span class="n">fechaHora</span><span class="p">,</span><span class="w"> </span><span class="n">cantidad</span><span class="p">,</span><span class="w"> </span><span class="n">texto</span><span class="p">))</span>
-<a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a><span class="p">}</span>
-</code></pre></div>
-<p>Esta sección del código itera sobre cada <code>registro</code> en la lista <code>registros</code> y realiza las siguientes operaciones para cada uno:</p>
-<ol>
-<li>
-<p><strong>Formateo de Fecha y Hora</strong>:
-    <div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="kd">val</span><span class="w"> </span><span class="nv">fechaHora</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">registro</span><span class="p">.</span><span class="na">fechaHora</span><span class="p">.</span><span class="na">format</span><span class="p">(</span><span class="n">formatoFechaHora</span><span class="p">)</span>
-</code></pre></div>
-   Aquí, <code>registro.fechaHora.format(formatoFechaHora)</code> formatea el <code>LocalDateTime</code> de <code>registro</code> usando el <code>DateTimeFormatter</code> creado previamente. El resultado es una cadena (<code>String</code>) que representa la fecha y hora del registro en el formato definido (<code>"yyyy-MM-dd HH:mm"</code>).</p>
-</li>
-<li>
-<p><strong>Formateo de la Cantidad</strong>:
-    <div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="kd">val</span><span class="w"> </span><span class="nv">cantidad</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;%10.3f&quot;</span><span class="p">.</span><span class="na">format</span><span class="p">(</span><span class="n">registro</span><span class="p">.</span><span class="na">cantidad</span><span class="p">)</span>
-</code></pre></div>
-   Se formatea la <code>cantidad</code> numérica del registro a una cadena con tres decimales (<code>%.3f</code>) y se asegura que tenga un ancho total de 10 caracteres, justificando el número a la derecha. Esto significa que si el número no ocupa los 10 caracteres, se añadirán espacios a la izquierda para cumplir con el ancho especificado.</p>
-</li>
-<li>
-<p><strong>Preparación del Texto</strong>:
-    <div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="kd">val</span><span class="w"> </span><span class="nv">texto</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">registro</span><span class="p">.</span><span class="na">texto</span>
-</code></pre></div>
-   Simplemente asigna el texto del registro a la variable <code>texto</code>, sin realizar ninguna transformación o formateo adicional.</p>
-</li>
-<li>
-<p><strong>Impresión con Formato</strong>:
-    <div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="n">println</span><span class="p">(</span><span class="s">&quot;%-20s | %10s | %s&quot;</span><span class="p">.</span><span class="na">format</span><span class="p">(</span><span class="n">fechaHora</span><span class="p">,</span><span class="w"> </span><span class="n">cantidad</span><span class="p">,</span><span class="w"> </span><span class="n">texto</span><span class="p">))</span>
-</code></pre></div>
-   Finalmente, se imprime una línea para el registro actual, combinando <code>fechaHora</code>, <code>cantidad</code> y <code>texto</code> con un formato específico:</p>
+<h3 id="6-buenas-practicas">6. Buenas prácticas<a class="headerlink" href="#6-buenas-practicas" title="Permanent link">&para;</a></h3>
+<p>Cuando trabajes con consola y teclado, intenta seguir estas ideas:</p>
 <ul>
-<li><code>%-20s</code> asegura que <code>fechaHora</code> tenga un ancho de 20 caracteres y esté justificada a la izquierda.</li>
-<li><code>%10s</code> es para <code>cantidad</code>, la cual ya se formateó para tener un ancho de 10 caracteres y justificada a la derecha.</li>
-<li><code>%s</code> para <code>texto</code>, que se imprimirá tal cual sin un ancho fijo.</li>
+<li>muestra mensajes claros antes de pedir cada dato;</li>
+<li>valida los números antes de usarlos;</li>
+<li>no abuses de <code>!!</code>;</li>
+<li>usa <code>System.err</code> para errores o avisos;</li>
+<li>separa, cuando el programa crezca, la lógica del cálculo y la presentación en consola.</li>
 </ul>
-</li>
-</ol>
-<p>Esto resulta en una salida tabulada donde cada columna tiene un ancho fijo y los datos están alineados según lo especificado, facilitando la lectura y la comparación de los registros.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>Fecha y Hora         |   Cantidad | Texto
-<a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a>-------------------------------------------------------------
-<a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a>2024-03-30 00:30     |   1234.567 | Texto de ejemplo 1
-<a id="__codelineno-20-4" name="__codelineno-20-4" href="#__codelineno-20-4"></a>2024-03-29 00:30     |     89.101 | Texto de ejemplo 2
-<a id="__codelineno-20-5" name="__codelineno-20-5" href="#__codelineno-20-5"></a>2024-03-29 19:30     |     12.345 | Otro texto de ejemplo
-</code></pre></div>
-<h3 id="2-otras-bibliotecas">2. Otras Bibliotecas<a class="headerlink" href="#2-otras-bibliotecas" title="Permanent link">&para;</a></h3>
-<p>Existen bibliotecas que intentan solucionar alguna necesidad que han encontrado en sus desarrollos. Algunas de ellas para trabajar con la consola: <br />
-- <a href="https://github.com/marcelmay/kformat">KFormat</a> <br />
-- <a href="https://github.com/ajalt/mordant">Mordant</a>  <br />
-- <a href="https://ajalt.github.io/clikt/">clikt</a> <br />
-- <a href="https://github.com/Kotlin/kotlinx-cli">kotlinx-cli</a>   </p>
-<h4 id="21-kotlin-console-output-formatting">2.1. Kotlin Console Output Formatting<a class="headerlink" href="#21-kotlin-console-output-formatting" title="Permanent link">&para;</a></h4>
-<p><a href="https://github.com/marcelmay/kformat">KFormat</a> es una pequeña biblioteca de Kotlin para la salida de texto con formato, como por ejemplo la impresión de valores en una tabla estructurada. Los casos de uso típicos incluyen el desarrollo de herramientas CLI. (Command Line Interface)</p>
-<p>Un ejemplo: Dar formato a una tabla, incluido el cambio de tamaño de celda:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="n">table</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a><span class="w">    </span><span class="n">header</span><span class="p">(</span><span class="s">&quot;A&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;B&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;C&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Long_Header&quot;</span><span class="p">)</span>
-<a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a>
-<a id="__codelineno-21-4" name="__codelineno-21-4" href="#__codelineno-21-4"></a><span class="w">    </span><span class="n">row</span><span class="p">(</span><span class="m">10</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;b...1&quot;</span><span class="p">,</span><span class="w"> </span><span class="m">2.1f</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;foo&quot;</span><span class="p">)</span>
-<a id="__codelineno-21-5" name="__codelineno-21-5" href="#__codelineno-21-5"></a><span class="w">    </span><span class="n">row</span><span class="p">(</span><span class="m">20</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;b2&quot;</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="m">3f</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;bar&quot;</span><span class="p">)</span>
-<a id="__codelineno-21-6" name="__codelineno-21-6" href="#__codelineno-21-6"></a>
-<a id="__codelineno-21-7" name="__codelineno-21-7" href="#__codelineno-21-7"></a><span class="w">    </span><span class="n">hints</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-21-8" name="__codelineno-21-8" href="#__codelineno-21-8"></a><span class="w">        </span><span class="n">alignment</span><span class="p">(</span><span class="s">&quot;A&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">Hints</span><span class="p">.</span><span class="na">Alignment</span><span class="p">.</span><span class="na">LEFT</span><span class="p">)</span>
-<a id="__codelineno-21-9" name="__codelineno-21-9" href="#__codelineno-21-9"></a><span class="w">        </span><span class="n">precision</span><span class="p">(</span><span class="s">&quot;C&quot;</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">)</span>
-<a id="__codelineno-21-10" name="__codelineno-21-10" href="#__codelineno-21-10"></a><span class="w">        </span><span class="n">postfix</span><span class="p">(</span><span class="s">&quot;C&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;%&quot;</span><span class="p">)</span>
-<a id="__codelineno-21-11" name="__codelineno-21-11" href="#__codelineno-21-11"></a><span class="w">        </span><span class="n">borderStyle</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Table</span><span class="p">.</span><span class="na">BorderStyle</span><span class="p">.</span><span class="na">SINGLE_LINE</span><span class="w"> </span><span class="c1">// or NONE</span>
-<a id="__codelineno-21-12" name="__codelineno-21-12" href="#__codelineno-21-12"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-21-13" name="__codelineno-21-13" href="#__codelineno-21-13"></a><span class="p">}.</span><span class="na">render</span><span class="p">(</span><span class="n">StringBuilder</span><span class="p">())</span>
-</code></pre></div>
-<p>Genera la siguiente salida:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a>A  |     B |     C | Long_Header
-<a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a>---|-------|-------|------------
-<a id="__codelineno-22-3" name="__codelineno-22-3" href="#__codelineno-22-3"></a>10 | b...1 | 2.10% |         foo
-<a id="__codelineno-22-4" name="__codelineno-22-4" href="#__codelineno-22-4"></a>20 |    b2 | 0.33% |         bar
-</code></pre></div>
-<p><a href="https://github.com/ajalt/mordant">Mordant</a> es otra biblioteca que proporciona una <abbr title="Interfaz de Programación de Aplicaciones. Conjunto de definiciones y protocolos que se utilizan para desarrollar e integrar el software de las aplicaciones. Las API permiten que diferentes aplicaciones se comuniquen entre sí, compartan datos y funcionalidades.">API</abbr> para dar formato a la salida de texto en la consola. Permite dar formato a texto en la consola, como colores, negritas, cursivas, subrayados, etc.</p>
-<h4 id="22-kotlin-command-line-arguments">2.2. Kotlin Command-Line Arguments<a class="headerlink" href="#22-kotlin-command-line-arguments" title="Permanent link">&para;</a></h4>
-<p>En Kotlin, los argumentos de la línea de comandos se pasan a través de la función <code>main()</code>. En este apartado veremos cómo leer y procesar los argumentos de la línea de comandos en Kotlin.</p>
-<h5 id="221-linea-de-comandos-en-main">2.2.1. Línea de comandos en <code>Main</code><a class="headerlink" href="#221-linea-de-comandos-en-main" title="Permanent link">&para;</a></h5>
-<p>Al invocar un programa desde la línea de comandos, puedes pasarle un número variable de argumentos. Por ej: <code>&gt; tar -vzf file.tar.gz</code></p>
-<p>Para capturar los argumentos de la línea de comandos, debes proporcionar un parámetro predefinido a <code>main()</code>:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="c1">// MainArgs.kt</span>
-<a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a>
-<a id="__codelineno-23-3" name="__codelineno-23-3" href="#__codelineno-23-3"></a><span class="kd">fun</span><span class="w"> </span><span class="nf">main</span><span class="w"> </span><span class="p">(</span><span class="n">args</span><span class="p">:</span><span class="w"> </span><span class="n">Array</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="kt">String</span><span class="w"> </span><span class="o">&gt;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-23-4" name="__codelineno-23-4" href="#__codelineno-23-4"></a><span class="w">   </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-23-5" name="__codelineno-23-5" href="#__codelineno-23-5"></a><span class="w">    </span><span class="n">imprimir</span><span class="w"> </span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
-<a id="__codelineno-23-6" name="__codelineno-23-6" href="#__codelineno-23-6"></a><span class="w">  </span><span class="p">}</span>
-<a id="__codelineno-23-7" name="__codelineno-23-7" href="#__codelineno-23-7"></a><span class="p">}</span>
-</code></pre></div>
-<p>El parámetro se llama tradicionalmente <code>args</code> aunque puede llamarlo de cualquier manera, y el tipo de <code>args</code> solo puede ser <code>Array&lt;String&gt;</code> (Array of String).</p>
-<p>También se puede usar el compilador kotlinc para crear un programa que se ejecuta desde línea de comandos.</p>
-<p>Una vez que haya creado y guardado y compilado el código para un programa llamado <code>MainArgs.kt</code>, escriba lo siguiente en el símbolo del sistema:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a>&gt;<span class="w"> </span>kotlinc<span class="w"> </span>MainArgsKt
-</code></pre></div>
-<p>Puedes proporcionar los argumentos de la línea de comandos después de la invocación del programa, así:</p>
-<p><div class="highlight"><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a>&gt;<span class="w"> </span>kotlin<span class="w"> </span>MainArgsKt<span class="w"> </span>aaa<span class="w"> </span><span class="m">42</span><span class="w"> </span><span class="m">3</span>.14159.
-</code></pre></div>
-Y por salida estandar, saldrá lo siguiente:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a>aaa
-<a id="__codelineno-26-2" name="__codelineno-26-2" href="#__codelineno-26-2"></a>42
-<a id="__codelineno-26-3" name="__codelineno-26-3" href="#__codelineno-26-3"></a>3.14159
-</code></pre></div>
-<p>Si una vez leídos los parśmetros quieres convertir un parámetro <code>String</code> en un tipo específico, Kotlin proporciona funciones de conversión, como<code>toInt()</code> para convertir a <code>Int</code> y <code>toFloat()</code> para convertir a <code>Float</code>...</p>
-<p>El uso de estos métodos supone que los argumentos de la línea de comandos aparecen en un orden particular.</p>
-<p>Por ejemplo, en el siguiente código, el programa espera un <code>String</code>, seguido de algo convertible a <code>Int</code>, seguido de algo convertible a <code>Float</code>:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a><span class="c1">// MainArgConversion.kt`</span>
-<a id="__codelineno-27-2" name="__codelineno-27-2" href="#__codelineno-27-2"></a>
-<a id="__codelineno-27-3" name="__codelineno-27-3" href="#__codelineno-27-3"></a><span class="kd">fun</span><span class="w"> </span><span class="nf">main</span><span class="w"> </span><span class="p">(</span><span class="n">args</span><span class="p">:</span><span class="w"> </span><span class="n">Array</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="kt">String</span><span class="w"> </span><span class="o">&gt;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-27-4" name="__codelineno-27-4" href="#__codelineno-27-4"></a><span class="w">   </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">args</span><span class="p">.</span><span class="na">size</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="m">3</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span>
-<a id="__codelineno-27-5" name="__codelineno-27-5" href="#__codelineno-27-5"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">primero</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">args</span><span class="o">[</span><span class="m">0</span><span class="o">]</span>
-<a id="__codelineno-27-6" name="__codelineno-27-6" href="#__codelineno-27-6"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">segundo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">args</span><span class="o">[</span><span class="m">1</span><span class="o">]</span><span class="p">.</span><span class="na">toInt</span><span class="w"> </span><span class="p">()</span>
-<a id="__codelineno-27-7" name="__codelineno-27-7" href="#__codelineno-27-7"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">tercero</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">args</span><span class="o">[</span><span class="m">2</span><span class="o">]</span><span class="p">.</span><span class="na">toFloat</span><span class="w"> </span><span class="p">()</span>
-<a id="__codelineno-27-8" name="__codelineno-27-8" href="#__codelineno-27-8"></a><span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="w"> </span><span class="s">&quot;</span><span class="si">$</span><span class="n">primero</span><span class="s"> </span><span class="si">$</span><span class="n">segundo</span><span class="s"> </span><span class="si">$</span><span class="n">tercero</span><span class="s">&quot;</span><span class="w"> </span><span class="p">)</span>
-<a id="__codelineno-27-9" name="__codelineno-27-9" href="#__codelineno-27-9"></a><span class="p">}</span>
-</code></pre></div>
-<p>La primera línea de <code>main()</code> cierra el programa si no hay suficientes argumentos.</p>
-<p>Si no proporciona algo convertible a <code>Int</code> y <code>Float</code> como segundo y tercer argumento de la línea de comandos, verá errores de tiempo de ejecución.</p>
-<p>Si compilas y ejecutas <code>MainArgConversion.kt</code> con los mismos argumentos de línea de comandos que usamos antes, verás la siguiente salida:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a>aaa 42 3.14159
-</code></pre></div>
-<h4 id="actividad-1-bibliotecas-para-formateo-de-salida-adaptando-el-codigo-del-15-ejemplo">Actividad 1: Bibliotecas para formateo de salida: Adaptando el código del 1.5. Ejemplo<a class="headerlink" href="#actividad-1-bibliotecas-para-formateo-de-salida-adaptando-el-codigo-del-15-ejemplo" title="Permanent link">&para;</a></h4>
-<p><strong>Pregunta:</strong> ¿Cómo harias el ejemplo 1.5 utilizando las bibliotecas  <a href="https://github.com/marcelmay/kformat">KFormat</a>
-y <a href="https://github.com/ajalt/mordant">Mordant</a>?</p>
-<p>Visita las paginas web de las bibliotecas y investiga como usarlas para realizar la misma tabla que se muestra en el ejemplo 1.5.</p>
-<h5 id="222-bibliotecas-para-manejar-argumentos-de-la-linea-de-comandos">2.2.2. Bibliotecas para manejar argumentos de la línea de comandos<a class="headerlink" href="#222-bibliotecas-para-manejar-argumentos-de-la-linea-de-comandos" title="Permanent link">&para;</a></h5>
-<p><a href="https://ajalt.github.io/clikt/">clikt</a> y <a href="https://github.com/Kotlin/kotlinx-cli">kotlinx-cli</a> son dos bibliotecas que facilitan el manejo de los argumentos que facilita el parseo y procesado de los argumentos que se le pasan al programa. Aunque podemos realizarlo nosotros mismos.</p>
-<h4 id="actividad-2-bibliotecas-para-parseo-de-parametros-de-entrada-adaptando-el-codigo-del-15-ejemplo">Actividad 2: Bibliotecas para parseo de parámetros de entrada: Adaptando el código del 1.5. Ejemplo<a class="headerlink" href="#actividad-2-bibliotecas-para-parseo-de-parametros-de-entrada-adaptando-el-codigo-del-15-ejemplo" title="Permanent link">&para;</a></h4>
-<p><strong>Pregunta:</strong> Imagínate que quieres poder indicarle a tu programa, que use una de las 3 posibles implementaciones de la tabla ¿Cómo lo harías haciendo uso de - <a href="https://ajalt.github.io/clikt/">clikt</a> o <a href="https://github.com/Kotlin/kotlinx-cli">kotlinx-cli</a>?</p>
-<p>Visita las páginas web de las bibliotecas y investiga como usarlas para poder indicarle a través de línea de comandos que versión de la tabla quieres que se muestre.</p>
-<h2 id="fuente">Fuente<a class="headerlink" href="#fuente" title="Permanent link">&para;</a></h2>
+<div class="admonition tip">
+<p class="admonition-title">Ampliación</p>
+<p>Si necesitas más detalle sobre lectura avanzada, <code>Scanner</code> o variantes históricas como <code>readLine()</code>, consulta <a href="../PROG-U7.2.1.-ConsolaTecladoExpansion/">7.2.1. Consola y teclado: ampliación</a>.</p>
+</div>
+<h3 id="7-resumen">7. Resumen<a class="headerlink" href="#7-resumen" title="Permanent link">&para;</a></h3>
+<p>En este tema has visto que:</p>
 <ul>
-<li><a href="https://hackaprende.com/2020/11/25/formatos-de-string-en-kotlin/">Formatos de String en Kotlin</a>   </li>
-<li><a href="https://stonesoupprogramming.com/2017/11/17/kotlin-string-formatting/">Kotlin String Formatting</a>   </li>
-<li><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.text/format.html">Format</a>   </li>
-<li><a href="https://www.techiedelight.com/add-padding-to-a-string-in-kotlin/">Add padding to a string in Kotlin</a>   </li>
-<li><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.text/pad-start.html">padStart</a>   </li>
-<li><a href="https://kotlindoc.blogspot.com/2019/04/io-entrada-y-salida-de-datos-en-consola.html">IO Entra y salida de datos en consola</a>   </li>
-<li><a href="https://www.demo2s.com/kotlin/kotlin-command-line-arguments.html">Kotlin command line arguments</a>   </li>
+<li>la consola permite interactuar con la persona usuaria de forma inmediata;</li>
+<li><code>print()</code> y <code>println()</code> sirven para mostrar información;</li>
+<li><code>readln()</code> y <code>readlnOrNull()</code> permiten leer desde teclado;</li>
+<li>la validación con <code>toIntOrNull()</code> y similares evita muchos errores;</li>
+<li>el formato de salida mejora la claridad y cumple con el criterio de evaluación asociado.</li>
+</ul>
+<p>Con esta base ya puedes crear programas sencillos de consola que pidan datos, los validen y muestren resultados de forma clara.</p>
+<h2 id="fuentes">Fuentes<a class="headerlink" href="#fuentes" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://kotlinlang.org/docs/read-standard-input.html">Kotlin Docs - Read standard input</a></li>
+<li><a href="https://kotlinlang.org/docs/basic-syntax.html#print-to-the-standard-output">Kotlin Docs - Basic syntax</a></li>
+<li><a href="https://kotlinlang.org/docs/strings.html">Kotlin Docs - Strings</a></li>
+<li><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/Formatter.html">Oracle Java SE - Formatter</a></li>
 </ul>
 
 

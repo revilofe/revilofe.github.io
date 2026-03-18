@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Lectura y escritura de archivos">
+        <meta name="description" content="Fundamentos para leer y escribir información en ficheros de texto y binarios con Kotlin">
       
       
         <meta name="author" content="Eduardo Fdez">
@@ -25,7 +25,7 @@
       
       
       <link rel="icon" href="../../../../assets/favicon-96x96.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.3">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.5">
     
     
       
@@ -3291,43 +3291,19 @@
   <a href="#74-lectura-y-escritura-de-archivos" class="md-nav__link">
     <span class="md-ellipsis">
       
-        7.4. Lectura y escritura de archivos
+        7.4 Lectura y escritura de archivos
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="7.4. Lectura y escritura de archivos">
+    <nav class="md-nav" aria-label="7.4 Lectura y escritura de archivos">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#1-archivos-orientados-a-caracter" class="md-nav__link">
+  <a href="#1-por-que-leer-y-escribir-archivos" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1. Archivos orientados a carácter
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="1. Archivos orientados a carácter">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#11-lectura-de-archivo" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1.1. Lectura de archivo
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="1.1. Lectura de archivo">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#usar-javaiofilebufferedreader-de-java" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Usar java.io.File.bufferedReader() de Java
+        1. ¿Por qué leer y escribir archivos?
       
     </span>
   </a>
@@ -3335,10 +3311,22 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#usar-javaiofileforeachline-de-kotlin" class="md-nav__link">
+  <a href="#2-texto-y-binario" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Usar java.io.File.forEachLine() de Kotlin
+        2. Texto y binario
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Texto y binario">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-ficheros-de-texto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1. Ficheros de texto
       
     </span>
   </a>
@@ -3346,10 +3334,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#oros-metodos-de-lectura" class="md-nav__link">
+  <a href="#22-ficheros-binarios" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Oros métodos de lectura
+        2.2. Ficheros binarios
       
     </span>
   </a>
@@ -3362,22 +3350,33 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#12-escritura-en-archivo" class="md-nav__link">
+  <a href="#3-acceso-secuencial" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1.2. Escritura en archivo
+        3. Acceso secuencial
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="1.2. Escritura en archivo">
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-leer-ficheros-de-texto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Leer ficheros de texto
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Leer ficheros de texto">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#usar-javaiofilebufferedwriter" class="md-nav__link">
+  <a href="#41-leer-todo-el-contenido" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Usar java.io.File.bufferedWriter
+        4.1. Leer todo el contenido
       
     </span>
   </a>
@@ -3385,10 +3384,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#usar-javaiofilewritetext" class="md-nav__link">
+  <a href="#42-leer-linea-a-linea" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Usar java.io.File.writeText()
+        4.2. Leer línea a línea
       
     </span>
   </a>
@@ -3396,32 +3395,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#usar-javaiofileprintwriter" class="md-nav__link">
+  <a href="#43-procesar-de-forma-mas-eficiente" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Usar java.io.File.printWriter
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#usar-javaioprintwriter" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Usar java.io.PrintWriter
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#oros-metodos-de-escritura" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Oros métodos de escritura
+        4.3. Procesar de forma más eficiente
       
     </span>
   </a>
@@ -3433,16 +3410,144 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#5-escribir-ficheros-de-texto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Escribir ficheros de texto
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Escribir ficheros de texto">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-sobrescribir-contenido" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1. Sobrescribir contenido
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-anadir-contenido-al-final" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2. Añadir contenido al final
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53-escritura-con-bufferedwriter" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.3. Escritura con bufferedWriter
+      
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#2-archivos-binarios" class="md-nav__link">
+  <a href="#6-leer-y-escribir-no-es-lo-mismo" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2. Archivos binarios.
+        6. Leer y escribir no es lo mismo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-errores-frecuentes-al-trabajar-con-texto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Errores frecuentes al trabajar con texto
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8-introduccion-a-los-ficheros-binarios" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Introducción a los ficheros binarios
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8. Introducción a los ficheros binarios">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#81-la-regla-clave-del-binario" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.1. La regla clave del binario
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9-ejemplo-integrador-con-fichero-de-texto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. Ejemplo integrador con fichero de texto
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10-relacion-con-u741" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. Relación con U7.4.1
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#11-buenas-practicas-basicas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11. Buenas prácticas básicas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-resumen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12. Resumen
       
     </span>
   </a>
@@ -3455,10 +3560,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#fuente" class="md-nav__link">
+  <a href="#fuentes-y-referencias" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Fuente
+        Fuentes y referencias
       
     </span>
   </a>
@@ -3484,8 +3589,6 @@
       <a href="../PROG-U7.4.1.-TextFile/" class="md-nav__link">
         
   
-  
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"/></svg>
   
   <span class="md-ellipsis">
     
@@ -6329,11 +6432,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../section2/u02/practicas/IS-U2.-Practica001/" class="md-nav__link">
+      <a href="../../../../section2/u02/practicas/IS-U2.-Practica001.md" class="md-nav__link">
         
   
-  
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2c-1.11 0-2 .89-2 2v16a2 2 0 0 0 2 2h4v-1.91L12.09 18H6v-2h8.09l2-2H6v-2h12.09L20 10.09V8l-6-6zm7 1.5L18.5 9H13zm7.15 9.5a.55.55 0 0 0-.4.16l-1.02 1.02 2.09 2.08 1.02-1.01c.21-.22.21-.58 0-.79l-1.3-1.3a.54.54 0 0 0-.39-.16m-2.01 1.77L12 20.92V23h2.08l6.15-6.15z"/></svg>
   
   <span class="md-ellipsis">
     
@@ -6359,11 +6460,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../section2/u02/practicas/IS-U2.-Practica002/" class="md-nav__link">
+      <a href="../../../../section2/u02/practicas/IS-U2.-Practica002.md" class="md-nav__link">
         
   
-  
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2c-1.11 0-2 .89-2 2v16a2 2 0 0 0 2 2h4v-1.91L12.09 18H6v-2h8.09l2-2H6v-2h12.09L20 10.09V8l-6-6zm7 1.5L18.5 9H13zm7.15 9.5a.55.55 0 0 0-.4.16l-1.02 1.02 2.09 2.08 1.02-1.01c.21-.22.21-.58 0-.79l-1.3-1.3a.54.54 0 0 0-.39-.16m-2.01 1.77L12 20.92V23h2.08l6.15-6.15z"/></svg>
   
   <span class="md-ellipsis">
     
@@ -6401,6 +6500,8 @@
       
         
           
+        
+      
         
       
         
@@ -6544,6 +6645,36 @@
     
   
     3.3.1.-Investigación incidentes:MITRE
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section2/u03/teoria/IS-U3.3.2.-InvestigacionDeIncidentes/" class="md-nav__link">
+        
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"/></svg>
+  
+  <span class="md-ellipsis">
+    
+  
+    3.3.2.-Investigación de incidentes
   
 
     
@@ -8400,43 +8531,19 @@
   <a href="#74-lectura-y-escritura-de-archivos" class="md-nav__link">
     <span class="md-ellipsis">
       
-        7.4. Lectura y escritura de archivos
+        7.4 Lectura y escritura de archivos
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="7.4. Lectura y escritura de archivos">
+    <nav class="md-nav" aria-label="7.4 Lectura y escritura de archivos">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#1-archivos-orientados-a-caracter" class="md-nav__link">
+  <a href="#1-por-que-leer-y-escribir-archivos" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1. Archivos orientados a carácter
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="1. Archivos orientados a carácter">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#11-lectura-de-archivo" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1.1. Lectura de archivo
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="1.1. Lectura de archivo">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#usar-javaiofilebufferedreader-de-java" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Usar java.io.File.bufferedReader() de Java
+        1. ¿Por qué leer y escribir archivos?
       
     </span>
   </a>
@@ -8444,10 +8551,22 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#usar-javaiofileforeachline-de-kotlin" class="md-nav__link">
+  <a href="#2-texto-y-binario" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Usar java.io.File.forEachLine() de Kotlin
+        2. Texto y binario
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Texto y binario">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-ficheros-de-texto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1. Ficheros de texto
       
     </span>
   </a>
@@ -8455,10 +8574,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#oros-metodos-de-lectura" class="md-nav__link">
+  <a href="#22-ficheros-binarios" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Oros métodos de lectura
+        2.2. Ficheros binarios
       
     </span>
   </a>
@@ -8471,22 +8590,33 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#12-escritura-en-archivo" class="md-nav__link">
+  <a href="#3-acceso-secuencial" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1.2. Escritura en archivo
+        3. Acceso secuencial
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="1.2. Escritura en archivo">
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-leer-ficheros-de-texto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Leer ficheros de texto
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Leer ficheros de texto">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#usar-javaiofilebufferedwriter" class="md-nav__link">
+  <a href="#41-leer-todo-el-contenido" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Usar java.io.File.bufferedWriter
+        4.1. Leer todo el contenido
       
     </span>
   </a>
@@ -8494,10 +8624,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#usar-javaiofilewritetext" class="md-nav__link">
+  <a href="#42-leer-linea-a-linea" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Usar java.io.File.writeText()
+        4.2. Leer línea a línea
       
     </span>
   </a>
@@ -8505,32 +8635,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#usar-javaiofileprintwriter" class="md-nav__link">
+  <a href="#43-procesar-de-forma-mas-eficiente" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Usar java.io.File.printWriter
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#usar-javaioprintwriter" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Usar java.io.PrintWriter
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#oros-metodos-de-escritura" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Oros métodos de escritura
+        4.3. Procesar de forma más eficiente
       
     </span>
   </a>
@@ -8542,16 +8650,144 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#5-escribir-ficheros-de-texto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Escribir ficheros de texto
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Escribir ficheros de texto">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-sobrescribir-contenido" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1. Sobrescribir contenido
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-anadir-contenido-al-final" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2. Añadir contenido al final
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53-escritura-con-bufferedwriter" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.3. Escritura con bufferedWriter
+      
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#2-archivos-binarios" class="md-nav__link">
+  <a href="#6-leer-y-escribir-no-es-lo-mismo" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2. Archivos binarios.
+        6. Leer y escribir no es lo mismo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-errores-frecuentes-al-trabajar-con-texto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Errores frecuentes al trabajar con texto
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8-introduccion-a-los-ficheros-binarios" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Introducción a los ficheros binarios
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8. Introducción a los ficheros binarios">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#81-la-regla-clave-del-binario" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.1. La regla clave del binario
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9-ejemplo-integrador-con-fichero-de-texto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. Ejemplo integrador con fichero de texto
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10-relacion-con-u741" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. Relación con U7.4.1
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#11-buenas-practicas-basicas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11. Buenas prácticas básicas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-resumen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12. Resumen
       
     </span>
   </a>
@@ -8564,10 +8800,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#fuente" class="md-nav__link">
+  <a href="#fuentes-y-referencias" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Fuente
+        Fuentes y referencias
       
     </span>
   </a>
@@ -8598,7 +8834,7 @@
         
       
       
-        <a href="../../../../tags/#tag:file" class="md-tag md-tag-icon">File</a>
+        <a href="../../../../tags/#tag:escritura" class="md-tag md-tag-icon">Escritura</a>
       
     
       
@@ -8608,7 +8844,27 @@
         
       
       
-        <a href="../../../../tags/#tag:software" class="md-tag md-tag-icon">Software</a>
+        <a href="../../../../tags/#tag:ficheros" class="md-tag md-tag-icon">Ficheros</a>
+      
+    
+      
+      
+      
+        
+        
+      
+      
+        <a href="../../../../tags/#tag:kotlin" class="md-tag md-tag-icon">Kotlin</a>
+      
+    
+      
+      
+      
+        
+        
+      
+      
+        <a href="../../../../tags/#tag:lectura" class="md-tag md-tag-icon">Lectura</a>
       
     
   </nav>
@@ -8620,513 +8876,283 @@
 
   <h1>7.4.-Lectura/Escritura Archivos</h1>
 
-<h2 id="74-lectura-y-escritura-de-archivos">7.4. Lectura y escritura de archivos<a class="headerlink" href="#74-lectura-y-escritura-de-archivos" title="Permanent link">&para;</a></h2>
-<p>Normalmente las aplicaciones que utilizan archivos no están centradas en la gestión del sistema de archivos del ordenador. El objetivo principal de usar archivos es <strong>poder almacenar datos de modo que entre diferentes ejecuciones del programa</strong>, incluso en diferentes equipos, sea posible recuperar los datos almacenados. El caso más típico es un editor de documentos, que mientras se ejecuta se encarga de gestionar los datos relativos al texto que está escribiendo, pero en cualquier momento puede guardarlo en un archivo para poder recuperar este texto cuando se desee, y añadir otros nuevos si fuera necesario. El archivo con los datos del documento lo puede abrir tanto en el editor de su ordenador como en el de otro compañero.</p>
-<p>Para saber cómo tratar los datos de un archivo en un programa, hay que <strong>tener muy claro cómo se estructuran</strong>. Dentro de un archivo se pueden almacenar todo tipo de valores de cualquier tipo de datos. La parte más importante es que estos valores <strong>se almacenan en forma de secuencia</strong>, uno tras otro. Por lo tanto, como pronto veréis, la forma más habitual de tratar archivos es <strong>secuencialmente</strong>, de forma parecida a como se hace para leer los datos desde teclado, mostrarlas por pantalla o recorrer las posiciones de un array.</p>
+<h2 id="74-lectura-y-escritura-de-archivos">7.4 Lectura y escritura de archivos<a class="headerlink" href="#74-lectura-y-escritura-de-archivos" title="Permanent link">&para;</a></h2>
+<p>En <code>7.3</code> aprendimos a representar rutas con <code>File</code> y a consultar información sobre ficheros y carpetas. El siguiente paso natural es <strong>trabajar con el contenido</strong> de esos ficheros: leerlo, procesarlo, modificarlo o guardarlo.</p>
 <blockquote>
-<p><img alt="" src="../assets/book.png" />
-Se denomina <strong>acceso secuencial</strong> al procesamiento de un conjunto de elementos de manera que sólo es posible acceder a ellos de acuerdo a su orden de aparición. Para procesar un elemento es necesario procesar primero todos los elementos anteriores.</p>
+<p>Este tema conecta directamente con los criterios del <code>RA5</code> relacionados con:  <br />
+   - d) usar ficheros para <strong>almacenar y recuperar información</strong>.  <br />
+   - e) crear programas que utilicen <strong>distintos métodos de acceso al contenido de los ficheros</strong>.    </p>
 </blockquote>
-<p>Kotlin, junto con otros lenguajes de programación, diferencia entre dos tipos de archivos según cómo se representan los valores almacenados en un archivo.</p>
-<blockquote>
-<p><img alt="" src="../assets/book.png" />
-En los <strong>archivos orientados a carácter</strong>, los datos se representan como una secuencia de cadenas de texto, donde cada valor se  diferencia del otro usando un delimitador. En cambio, en los <strong>archivos orientados a byte</strong>, los datos se representan directamente de acuerdo a su formato en binario, sin ninguna separación. Estos últimos archivos son no son legibles a simple vista, y son interpretados por programas que entienden su formato. Por ejemplo, pdf, doc, xls.</p>
-</blockquote>
-<p>Nos centraremos principalmente en el procesamiento de archivos orientados a carácter.</p>
-<h3 id="1-archivos-orientados-a-caracter">1. Archivos orientados a carácter<a class="headerlink" href="#1-archivos-orientados-a-caracter" title="Permanent link">&para;</a></h3>
-<p>Un archivo orientado a carácter no es más que un <strong>documento de texto</strong>, como el que podría generar con cualquier editor de texto simple. Los valores están almacenados según su representación en cadena de texto, exactamente en el mismo formato que ha usado hasta ahora para entrar datos desde el teclado. Del mismo modo, los diferentes valores se distinguen al estar separados entre ellos con un delimitador, que por defecto es cualquier conjunto de espacios en blanco o salto de línea. Aunque estos valores se puedan distribuir en líneas de texto diferentes, conceptualmente, se puede considerar que están organizados uno tras otro, secuencialmente, como las palabras en la página de un libro.</p>
-<p>El siguiente podría ser el contenido de un archivo orientado a carácter donde hay diez valores de tipo <code>float</code>, 7 en la primera línea y 3 en la segunda:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>1,5 0,75 −2,35 18,0 9,4 3,1416 −15,785
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>−200,4 2,56 9,3785
+<div class="admonition abstract">
+<p class="admonition-title">Qué vas a aprender en este tema</p>
+<ul>
+<li>Diferenciar lectura y escritura de archivos.</li>
+<li>Entender la diferencia entre ficheros de texto y binarios.</li>
+<li>Reconocer operaciones habituales de lectura y escritura en Kotlin.</li>
+<li>Aplicar buenas prácticas básicas al trabajar con archivos.</li>
+</ul>
+</div>
+<h3 id="1-por-que-leer-y-escribir-archivos">1. ¿Por qué leer y escribir archivos?<a class="headerlink" href="#1-por-que-leer-y-escribir-archivos" title="Permanent link">&para;</a></h3>
+<p>Guardar datos en memoria no basta cuando queremos que la información permanezca entre distintas ejecuciones del programa. Por eso los ficheros son tan importantes: permiten conservar datos, compartirlos con otros programas y recuperarlos más adelante.</p>
+<p>Algunos ejemplos habituales:</p>
+<ul>
+<li>guardar notas del alumnado;</li>
+<li>registrar eventos o errores;</li>
+<li>cargar configuraciones al arrancar;</li>
+<li>exportar resultados a un informe;</li>
+<li>almacenar datos para volver a usarlos en otro momento.</li>
+</ul>
+<p>Cuando trabajamos con archivos, normalmente realizamos dos tipos de operación:</p>
+<ul>
+<li><strong>lectura</strong>: obtener información desde un fichero hacia el programa;</li>
+<li><strong>escritura</strong>: enviar información desde el programa hacia un fichero.</li>
+</ul>
+<h3 id="2-texto-y-binario">2. Texto y binario<a class="headerlink" href="#2-texto-y-binario" title="Permanent link">&para;</a></h3>
+<p>Antes de leer o escribir, conviene distinguir dos grandes formas de almacenar información.</p>
+<h4 id="21-ficheros-de-texto">2.1. Ficheros de texto<a class="headerlink" href="#21-ficheros-de-texto" title="Permanent link">&para;</a></h4>
+<p>En un fichero de texto la información se representa como caracteres. Suelen poder abrirse con un editor de texto y resultan cómodos para:</p>
+<ul>
+<li>configuraciones;</li>
+<li>listados;</li>
+<li>archivos CSV;</li>
+<li>logs;</li>
+<li>informes.</li>
+</ul>
+<p>Ejemplo de contenido textual:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Ana,8.5
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>Luis,7.25
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>Marta,9.0
 </code></pre></div>
-<p>Y este el de un archivo con 3 valores de tipo <code>String</code>: <code>"Había"</code>, <code>"una"</code> y <code>"vez..."</code> en una línea.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>Había una vez...
+<h4 id="22-ficheros-binarios">2.2. Ficheros binarios<a class="headerlink" href="#22-ficheros-binarios" title="Permanent link">&para;</a></h4>
+<p>En un fichero binario la información se almacena como bytes, no como texto legible directamente. Son habituales en:</p>
+<ul>
+<li>imágenes;</li>
+<li>audio y vídeo;</li>
+<li>documentos ofimáticos;</li>
+<li>datos serializados;</li>
+<li>estructuras compactas de datos.</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Idea clave</p>
+<p>Texto y binario no son “mejor” o “peor”. Cada formato responde a necesidades distintas.</p>
+</div>
+<h3 id="3-acceso-secuencial">3. Acceso secuencial<a class="headerlink" href="#3-acceso-secuencial" title="Permanent link">&para;</a></h3>
+<p>En muchos programas, el contenido de un fichero se procesa <strong>en orden</strong>, desde el principio hasta el final. Esto se llama <strong>acceso secuencial</strong>.</p>
+<p>Es el modelo más habitual en esta unidad y se parece bastante a lo que ya hacíamos con la consola:</p>
+<ul>
+<li>leemos una línea;</li>
+<li>o escribimos un dato detrás de otro;</li>
+<li>sin “saltar” constantemente a posiciones intermedias.</li>
+</ul>
+<div class="admonition definition">
+<p class="admonition-title">Acceso secuencial</p>
+<p>Consiste en procesar los datos en el mismo orden en que aparecen almacenados en el fichero.</p>
+</div>
+<h3 id="4-leer-ficheros-de-texto">4. Leer ficheros de texto<a class="headerlink" href="#4-leer-ficheros-de-texto" title="Permanent link">&para;</a></h3>
+<p>Kotlin ofrece varias formas sencillas de leer ficheros de texto a partir de <code>java.io.File</code>.</p>
+<h4 id="41-leer-todo-el-contenido">4.1. Leer todo el contenido<a class="headerlink" href="#41-leer-todo-el-contenido" title="Permanent link">&para;</a></h4>
+<p>Si el fichero no es muy grande, podemos leerlo completo con <code>readText()</code>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">import</span><span class="w"> </span><span class="nn">java.io.File</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="kd">fun</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">contenido</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">File</span><span class="p">(</span><span class="s">&quot;datos/notas.txt&quot;</span><span class="p">).</span><span class="na">readText</span><span class="p">()</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="n">contenido</span><span class="p">)</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="p">}</span>
 </code></pre></div>
-<p>En un archivo orientado a carácter <strong>es posible almacenar cualquier combinación de datos de cualquier tipo</strong> (<code>int</code> , <code>double</code>, <code>boolean</code>, <code>String</code>, etc.).</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>7 10 20,51 6,99
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>Había una vez...
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>true false 2020 0,1234
+<p>Esta opción es cómoda, pero no siempre conviene si el archivo es muy grande.</p>
+<h4 id="42-leer-linea-a-linea">4.2. Leer línea a línea<a class="headerlink" href="#42-leer-linea-a-linea" title="Permanent link">&para;</a></h4>
+<p>Si nos interesa trabajar por líneas, podemos usar <code>readLines()</code>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">import</span><span class="w"> </span><span class="nn">java.io.File</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="kd">fun</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">lineas</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">File</span><span class="p">(</span><span class="s">&quot;datos/notas.txt&quot;</span><span class="p">).</span><span class="na">readLines</span><span class="p">()</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">linea</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">lineas</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="w">        </span><span class="n">println</span><span class="p">(</span><span class="n">linea</span><span class="p">)</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="p">}</span>
 </code></pre></div>
-<p>La principal ventaja de un archivo de este tipo es que resulta muy sencillo inspeccionar su contenido y generarlos de acuerdo a nuestras necesidades.</p>
-<p>Para el caso de los archivos orientados a carácter, hay que usar dos clases diferentes según si lo que se quiere es leer o escribir datos en un archivo. Normalmente esto no es muy problemático, ya que <strong>en un bloque de código dado solo se llevarán a cabo operaciones de lectura o de escritura sobre un mismo archivo, pero no los dos tipos de operaciones a la vez</strong>.</p>
-<p>Una diferencia importante a la hora de tratar con archivos respecto a leer datos del teclado es que las operaciones de lectura no son producto de una interacción directa con el usuario, que es quien escribe los datos. Solo se puede trabajar con los datos que hay en el archivo y nada más. Esto tiene dos efectos sobre el proceso de lectura:</p>
-<ol>
-<li>Por un lado, recuerda que <strong>cuando se lleva a cabo el proceso de lectura de una secuencia de valores, siempre hay que tener cuidado de usar el método adecuado al tipo de valor que se espera que venga a continuación</strong> . Qué tipo de valor se espera es algo que habréis decidido vosotros a la hora de hacer el programa que escribió ese archivo, por lo que es vuestra responsabilidad saber qué hay que leer en cada momento. De todos modos nada garantiza que no se haya cometido algún error o que el archivo haya sido manipulado por otro programa o usuario. Como operamos con archivos y no por el teclado, no existe la opción de pedir al usuario que vuelva a escribir el dato. Por lo tanto, el programa debería decir que se ha producido un error ya que el archivo no tiene el formato correcto y finalizar el proceso de lectura.</li>
-<li>Por otra parte, <strong>también es necesario controlar que nunca se lean más valores de los que hay disponibles para leer</strong>. En el caso de la entrada de datos por el teclado el programa simplemente se bloqueaba y espera a que el usuario escribiera nuevos valores. Pero con archivos esto no sucede. Intentar leer un nuevo valor cuando el apuntador ya ha superado el último disponible se considera erróneo y lanzará una excepción. Para evitarlo, habrá que utilizar algún procedimiento que nos permita saber si se ha llegado al final de archivo en vez de suponer que siguen existiendo datos que leer.</li>
-</ol>
-<h4 id="11-lectura-de-archivo">1.1. Lectura de archivo<a class="headerlink" href="#11-lectura-de-archivo" title="Permanent link">&para;</a></h4>
-<p>En Kotlin demos leer el contenido de un archivo utilizando los métodos estándar de la clase <code>java.io.File</code> o los métodos que proporciona Kotlin como una extensión de <code>java.io.File</code>.</p>
-<p>Examinaremos programas de ejemplo para los métodos de extensión, proporcionados por Kotlin a la clase <code>java.io.File</code> de Java, para leer el contenido de un archivo.</p>
-<h5 id="usar-javaiofilebufferedreader-de-java">Usar <code>java.io.File.bufferedReader()</code> de Java<a class="headerlink" href="#usar-javaiofilebufferedreader-de-java" title="Permanent link">&para;</a></h5>
-<p><a href="https://dcodingames.com/como-usar-la-clase-bufferedreader/"><code>BufferedReader</code></a> lee texto desde un flujo de entrada de caracteres, almacenando los caracteres para proporcionar una lectura eficiente de caracteres, arreglos y líneas.</p>
-<p>Se puede configurar específicamente el tamaño del buffer, o usar el que se otorga por default, el cual es suficientemente grande para la mayoría de los casos.</p>
-<p>Dado que esta clase extiende de <code>Reader</code>, cada petición de lectura causa una petición de lectura del flujo de entrada, por lo que es aconsejable envolverla con la clase <code>InputStreamReader</code> o <code>FileReader</code>, según el propósito de la lectura.</p>
-<p>A continuación podemos ver cómo leer el contenido de un archivo en <code>BufferedReader</code>, El proceso es el siguiente:</p>
-<ol>
-<li>Prepare el objeto <code>File</code> con la ubicación del archivo pasado como argumento al constructor de la clase de <code>File</code>.</li>
-<li><code>File.bufferedReader</code> devuelve un nuevo <code>BufferedReader</code> para leer el contenido del archivo.</li>
-<li>Utilice <code>BufferedReader.readLines()</code> para leer el contenido del archivo.</li>
-</ol>
-<p>Un ejemplo</p>
+<h4 id="43-procesar-de-forma-mas-eficiente">4.3. Procesar de forma más eficiente<a class="headerlink" href="#43-procesar-de-forma-mas-eficiente" title="Permanent link">&para;</a></h4>
+<p>Cuando el fichero crece, resulta útil <code>useLines()</code>, porque permite procesar líneas sin cargar todo el contenido de golpe:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">import</span><span class="w"> </span><span class="nn">java.io.File</span>
 <a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>
-<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="kd">fun</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">args</span><span class="p">:</span><span class="w"> </span><span class="n">Array</span><span class="o">&lt;</span><span class="kt">String</span><span class="o">&gt;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">file</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">File</span><span class="p">(</span><span class="s">&quot;input&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">File</span><span class="p">.</span><span class="na">separator</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;contents.txt&quot;</span><span class="p">)</span>
-<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">bufferedReader</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">file</span><span class="p">.</span><span class="na">bufferedReader</span><span class="p">()</span>
-<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">text</span><span class="p">:</span><span class="w"> </span><span class="n">List</span><span class="o">&lt;</span><span class="kt">String</span><span class="o">&gt;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">bufferedReader</span><span class="p">.</span><span class="na">readLines</span><span class="p">()</span>
-<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">line</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">text</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="w">        </span><span class="n">println</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
-<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="p">}</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="kd">fun</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">    </span><span class="n">File</span><span class="p">(</span><span class="s">&quot;datos/notas.txt&quot;</span><span class="p">).</span><span class="na">useLines</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">lineas</span><span class="w"> </span><span class="o">-&gt;</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">        </span><span class="n">lineas</span><span class="p">.</span><span class="na">forEach</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">println</span><span class="p">(</span><span class="nb">it</span><span class="p">)</span><span class="w"> </span><span class="p">}</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="p">}</span>
 </code></pre></div>
-<p>El contenido del archivo se imprime en la consola.</p>
-<h5 id="usar-javaiofileforeachline-de-kotlin">Usar <code>java.io.File.forEachLine()</code> de Kotlin<a class="headerlink" href="#usar-javaiofileforeachline-de-kotlin" title="Permanent link">&para;</a></h5>
-<p>Lee un archivo línea por línea en Kotlin. El proceso es el siguiente:</p>
-<ol>
-<li>Prepare el objeto <code>File</code> con la ubicación pasada como argumento al constructor de la clase de <code>File</code>.</li>
-<li>Use la función <code>File.forEachLine</code> y lea cada línea del archivo.</li>
-</ol>
-<p>Un ejemplo</p>
+<div class="admonition tip">
+<p class="admonition-title">Cuándo usar cada una</p>
+<ul>
+<li><code>readText()</code> si quieres todo el contenido como una única cadena.</li>
+<li><code>readLines()</code> si quieres una lista de líneas.</li>
+<li><code>useLines()</code> si el archivo puede ser grande o quieres procesarlo de forma más eficiente.</li>
+</ul>
+</div>
+<h3 id="5-escribir-ficheros-de-texto">5. Escribir ficheros de texto<a class="headerlink" href="#5-escribir-ficheros-de-texto" title="Permanent link">&para;</a></h3>
+<p>Kotlin también facilita mucho la escritura en archivos de texto.</p>
+<h4 id="51-sobrescribir-contenido">5.1. Sobrescribir contenido<a class="headerlink" href="#51-sobrescribir-contenido" title="Permanent link">&para;</a></h4>
+<p><code>writeText()</code> escribe el contenido indicado y, si el fichero ya existe, <strong>reemplaza</strong> lo que hubiera antes.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">import</span><span class="w"> </span><span class="nn">java.io.File</span>
 <a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>
-<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="kd">fun</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">args</span><span class="p">:</span><span class="w"> </span><span class="n">Array</span><span class="o">&lt;</span><span class="kt">String</span><span class="o">&gt;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">file</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">File</span><span class="p">(</span><span class="s">&quot;input&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">File</span><span class="p">.</span><span class="na">separator</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;contents.txt&quot;</span><span class="p">)</span>
-<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="w">    </span><span class="n">file</span><span class="p">.</span><span class="na">forEachLine</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">println</span><span class="p">(</span><span class="nb">it</span><span class="p">)</span><span class="w"> </span><span class="p">}</span>
-<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="p">}</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="kd">fun</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">    </span><span class="n">File</span><span class="p">(</span><span class="s">&quot;salida.txt&quot;</span><span class="p">).</span><span class="na">writeText</span><span class="p">(</span><span class="s">&quot;Hola desde Kotlin\n&quot;</span><span class="p">)</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="p">}</span>
 </code></pre></div>
-<p>El contenido del archivo se imprime en la consola.</p>
-<!--
-> ![](./../../resources/img/un7/lu37016xc6sgf_tmp_e5d45b04953e17dd.png)
->
-> ...Para tratar de manera sencilla archivos orientados a carácter, Java
-> proporciona las clases `Scanner` (para lectura) del `package
-> java.util`, y `FileWriter` (para escritura) del `package java.io`
-
-## 3.2. Lectura de archivo (clase Scanner)
-
-**La clase que permite llevar a cabo la lectura de datos desde un archivo orientado a carácter es exactamente la misma
-que permite leer datos desde el teclado: Scanner** . Al fin y al cabo, los valores almacenados en los archivos de este
-tipo se encuentran exactamente en el mismo formato que ha usado hasta ahora para entrar información en sus programas:
-una secuencia de cadenas de texto. La única diferencia es que estos valores no se piden al usuario durante la ejecución,
-sino que se encuentran almacenados en un archivo.
-
-Para procesar datos desde un archivo, **el constructor de la clase Scanner permite como argumento un objeto de tipo
-File** que contenga la ruta a un archivo.
-
-Por ejemplo, para crear un objeto de tipo Scanner de modo que permita leer datos desde el archivo ubicado en la ruta
-"C:\Programas\Unidad11\Documento.txt", habría que hacer:
-
-importjava.io.File;
-
-importjava.util.Scanner;
-
-...
-
-Filef = new File("C:\Programas\Unidad11\Documento.txt");
-
-ScannerlectorArchivo = new Scanner(f);
-
-...
-
-Una vez instanciado el objeto Scanner **podemos utilizar sus métodos exactamente igual que si leyéramos de teclado** :
-hasNext(), next(), nextLine(), nextInt(), nextDouble(), nextBoolean(), etc. La única diferencia es que el objeto Scanner
-leerá secuencialmente el contenido del archivo.
-
-Es importante entender que en el caso de un archivo, **el objeto Scanner gestiona internamente un apuntador que indica
-sobre qué valor actuarán las operaciones de lectura** . Inicialmente el apuntador se encuentra en el primer valor dentro
-del archivo. **Cada vez que se hace una lectura el apuntador avanza automáticamente hasta el siguiente valor dentro del
-archivo y no hay ninguna manera de hacerlo retroceder** . A medida que invocamos métodos de lectura el apuntador sigue
-avanzando hasta que hayamos leído tantos datos como queramos, o hasta que no podamos seguir leyendo porque hemos llegado
-al final del archivo.
-
-A continuación se muestra un pequeño esquema de este proceso, recalcando cómo avanza el apuntador a la hora de realizar
-operaciones de lectura sobre un archivo que contiene valores de tipo entero.
-
-![](file:///tmp/lu37016xc6sfk.tmp/lu37016xc6sgf_tmp_43d276c79f83a115.png)
-
-**Es importante recordar la diferencia entre el método next() y nextLine()** , ya que ambos evalúan una cadena de texto.
-El método
-**next() sólo lee una palabra individual** (conjuntos de caracteres, incluidos dígitos, que no están separados por
-espacios o saltos de línea, como por ejemplo "casa", "hola", "2", "3,14", "1024", etc.). En cambio, **nextLine() lee
-todo el texto que encuentre (espacios incluidos) hasta el siguiente salto de línea** . En tal caso el apuntador se
-posiciona al inicio de la siguiente línea.
-
-**Una vez se ha finalizado la lectura del archivo** , ya sean todas o solo una parte, **es imprescindible ejecutar un
-método especial llamado close()** . Este método indica al sistema operativo que el archivo ya no está siendo utilizado
-por el programa. Esto es muy importante ya que mientras un archivo se considera en uso, su acceso puede verse limitado.
-Si no se utiliza close() el sistema operativo puede tardar un tiempo en darse cuenta de que el archivo ya no está en
-uso.
-
-| ...**Siempre hay que cerrar los archivos con close()**cuando se ha terminado de leer o escribir en
-ellos.![](file:///tmp/lu37016xc6sfk.tmp/lu37016xc6sgf_tmp_4f43f86e4682ec35.png)
-| |
-
-|
-
-Es importante saber que al instanciar el objeto Scanner **se lanzará una excepción de tipo java.io.FileNotFoundException
-si el archivo no existe** . Siempre habrá que manejar dicha excepción mediante un try-catch. Scanner también **puede
-lanzar otras excepciones** , por ejemplo si se intenta leer el tipo de dato incorrecto (llamamos a nextInt() cuando no
-hay un entero, como sucede en la entrada por teclado,) o si hemos llegado al final del archivo e intentamos seguir
-leyendo (podemos comprobarlo mediante el método hasNext() de Scanner, que devuelve true si aún hay algún elemento que
-leer).
-
-El programa siguiente muestra un ejemplo de cómo leer diez valores enteros de un archivo llamado "Enteros.txt" ubicado
-en la carpeta de trabajo (debería ser la carpeta del proyecto Netbeans). Para probarlo, crea el archivo e introduce
-exactamente 10 valores enteros separados por espacios en blanco o saltos de línea.
-
-importjava.io.File;
-
-importjava.util.Scanner;
-
-publicclass Pruebasarchivos {
-
-publicstatic final int NUM_VALORES = 10;
-
-publicstatic void main(String[] args) {
-
-try{
-
-//Intentamos abrir el archivo
-
-Filef = new File("Enteros.txt");
-
-Scannerlector = new Scanner(f);
-
-//Si llega aquí es que ha abierto el archivo :)
-
-for(int i = 0; i < NUM_VALORES; i++) {
-
-intvalor = lector.nextInt();
-
-System.out.println("Elvalor leído es: " + valor); }
-
-//¡Hay que cerrar el archivo!
-
-lector.close(); }catch (Exception e) {
-
-//En caso de excepción mostramos el error
-
-System.out.println("Error:" + e);
-
-e.printStackTrace(); } }
-
-}
--->
-
-<h5 id="oros-metodos-de-lectura">Oros métodos de lectura<a class="headerlink" href="#oros-metodos-de-lectura" title="Permanent link">&para;</a></h5>
-<p>Existen otras formas de leer archivos:</p>
-<ul>
-<li><code>File.inputStream().readBytes()</code>: Lee el contenido del archivo en InputStream</li>
-<li><code>File.readBytes()</code>: devuelve todo el contenido del archivo como ByteArray</li>
-<li><code>File.readLines()</code>: devuelve todo el contenido del archivo como una lista de líneas</li>
-<li><code>File.readText()</code>: devuelve todo el contenido del archivo como una sola cadena</li>
-<li><code>java.util.Scanner</code>: permite leer indicando el tipo de dato a leer.</li>
-</ul>
-<h4 id="12-escritura-en-archivo">1.2. Escritura en archivo<a class="headerlink" href="#12-escritura-en-archivo" title="Permanent link">&para;</a></h4>
-<p>Con en el lenguaje de programación Kotlin tambien se puede escribir en un archivo. Por lo general, en los archivos orientados a caracteres se escriben cadenas de texto.</p>
-<p>Igual que para la lectura, haciendo uso de Kotlin podremos escribir en un archivo usando las funciones de extensión proporcionadas por Kotlin o también puede usar el código Java existente que escribe contenido en un archivo.</p>
-<p>A continuación veremos ejemplos de cómo usar clases de Java como <code>PrintWriter</code> para escribir en un archivo y más ejemplos usando funciones de extensión de Kotlin.</p>
-<h5 id="usar-javaiofilebufferedwriter">Usar <code>java.io.File.bufferedWriter</code><a class="headerlink" href="#usar-javaiofilebufferedwriter" title="Permanent link">&para;</a></h5>
-<p>Podemos usar la función de extensión <code>java.io.File.bufferedWriter()</code> para obtener el objeto de escritura y luego usar la función <code>write()</code> en el objeto de escritura para escribir contenido en el archivo.</p>
-<ol>
-<li>Tenga su contenido como una cadena.</li>
-<li>Pase el nombre del archivo al constructor de archivos (<code>File</code>).</li>
-<li>Luego llame al método <code>bufferedWriter()</code> de la clase <code>File</code>.</li>
-<li>Haciendo uso de la función <code>use()</code> (Veremos que ventajas nos proporciona hacer uso de ella), llama al método <code>writer(content)</code> del bufer escritor devuelto por <code>bufferedWriter()</code>, y que se encarga de escribir el contenido en el archivo.</li>
-</ol>
+<h4 id="52-anadir-contenido-al-final">5.2. Añadir contenido al final<a class="headerlink" href="#52-anadir-contenido-al-final" title="Permanent link">&para;</a></h4>
+<p>Si no quieres borrar lo anterior, puedes usar <code>appendText()</code>:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">import</span><span class="w"> </span><span class="nn">java.io.File</span>
 <a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>
-<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="cm">/**</span>
-<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="cm"> * Example to use File.bufferedWriter() in Kotlin to write content to a text file</span>
-<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="cm"> */</span>
-<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="kd">fun</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">args</span><span class="p">:</span><span class="w"> </span><span class="n">Array</span><span class="o">&lt;</span><span class="kt">String</span><span class="o">&gt;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="w">    </span><span class="c1">// content to be written to file</span>
-<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nv">content</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Hello World. Welcome to Kotlin!!&quot;</span>
-<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>
-<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a><span class="w">    </span><span class="c1">// write content to file</span>
-<a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a><span class="w">    </span><span class="n">File</span><span class="p">(</span><span class="s">&quot;file.txt&quot;</span><span class="p">).</span><span class="na">bufferedWriter</span><span class="p">().</span><span class="na">use</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">out</span><span class="w"> </span><span class="o">-&gt;</span>
-<a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a><span class="w">        </span><span class="k">out</span><span class="p">.</span><span class="na">write</span><span class="p">(</span><span class="n">content</span><span class="p">)</span>
-<a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a><span class="p">}</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="kd">fun</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="w">    </span><span class="n">File</span><span class="p">(</span><span class="s">&quot;log.txt&quot;</span><span class="p">).</span><span class="na">appendText</span><span class="p">(</span><span class="s">&quot;Nueva entrada\n&quot;</span><span class="p">)</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="p">}</span>
 </code></pre></div>
-<blockquote>
-<p><img alt="" src="../assets/rayo.png" />
-Aplicamos la función <code>use()</code> para <strong>garantizar que todos los recursos se liberen correctamente cuando hayamos terminado</strong></p>
-</blockquote>
-<h5 id="usar-javaiofilewritetext">Usar <code>java.io.File.writeText()</code><a class="headerlink" href="#usar-javaiofilewritetext" title="Permanent link">&para;</a></h5>
-<p>Si está escribiendo exclusivamente texto en un archivo, puede usar la función de extensión <code>java.io.File.writeText()</code>.</p>
-<p>En el siguiente ejemplo, hemos usado esta función de extensión de kotlin para escribir texto en un archivo.</p>
+<h4 id="53-escritura-con-bufferedwriter">5.3. Escritura con <code>bufferedWriter</code><a class="headerlink" href="#53-escritura-con-bufferedwriter" title="Permanent link">&para;</a></h4>
+<p>Otra opción es usar un escritor con buffer y <code>use()</code> para asegurar el cierre correcto:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="k">import</span><span class="w"> </span><span class="nn">java.io.File</span>
 <a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>
-<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="cm">/**</span>
-<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="cm"> * Example to use File.writeText in Kotlin to write text to a file</span>
-<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="cm"> */</span>
-<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="kd">fun</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">args</span><span class="p">:</span><span class="w"> </span><span class="n">Array</span><span class="o">&lt;</span><span class="kt">String</span><span class="o">&gt;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="w">    </span><span class="c1">// content to be written to file</span>
-<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nv">content</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Hello World. Welcome to Kotlin!!&quot;</span>
-<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>
-<a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a><span class="w">    </span><span class="c1">// write content to file</span>
-<a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a><span class="w">    </span><span class="n">File</span><span class="p">(</span><span class="s">&quot;file.txt&quot;</span><span class="p">).</span><span class="na">writeText</span><span class="p">(</span><span class="n">content</span><span class="p">)</span>
-<a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a><span class="p">}</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="kd">fun</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="w">    </span><span class="n">File</span><span class="p">(</span><span class="s">&quot;salida.txt&quot;</span><span class="p">).</span><span class="na">bufferedWriter</span><span class="p">().</span><span class="na">use</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">writer</span><span class="w"> </span><span class="o">-&gt;</span>
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="w">        </span><span class="n">writer</span><span class="p">.</span><span class="na">write</span><span class="p">(</span><span class="s">&quot;Primera línea\n&quot;</span><span class="p">)</span>
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="w">        </span><span class="n">writer</span><span class="p">.</span><span class="na">write</span><span class="p">(</span><span class="s">&quot;Segunda línea\n&quot;</span><span class="p">)</span>
+<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a><span class="p">}</span>
 </code></pre></div>
-<h5 id="usar-javaiofileprintwriter">Usar <code>java.io.File.printWriter</code><a class="headerlink" href="#usar-javaiofileprintwriter" title="Permanent link">&para;</a></h5>
-<p>En este ejemplo, usaremos la función de extensión de Kotlin <code>printWriter()</code> para la clase <code>java.io.File</code>. El siguiente es el proceso para escribir en el archivo.</p>
-<ol>
-<li>Tenga su contenido como una cadena.</li>
-<li>Pase el nombre del archivo al constructor de archivos (<code>File</code>).</li>
-<li>Luego llame al método <code>printWriter()</code> de la clase <code>File</code>.</li>
-<li>Haciendo uso de la función <code>use()</code>(Veremos que ventajas nos proporciona hacer uso de ella), llama al método <code>println(content)</code> del escritor devuelto por <code>printWriter()</code>, y que se encarga de escribir el contenido en el archivo.</li>
-</ol>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="k">import</span><span class="w"> </span><span class="nn">java.io.File</span>
-<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>
-<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="cm">/**</span>
-<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="cm"> * Example to use File.printWriter in Kotlin to write content to a text file</span>
-<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="cm"> */</span>
-<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="kd">fun</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">args</span><span class="p">:</span><span class="w"> </span><span class="n">Array</span><span class="o">&lt;</span><span class="kt">String</span><span class="o">&gt;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="w">    </span><span class="c1">// content to be written to file</span>
-<a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nv">content</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Hello World. Welcome to Kotlin!!&quot;</span>
-<a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a>
-<a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a><span class="w">    </span><span class="c1">// write content to file</span>
-<a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a><span class="w">    </span><span class="n">File</span><span class="p">(</span><span class="s">&quot;file.txt&quot;</span><span class="p">).</span><span class="na">printWriter</span><span class="p">().</span><span class="na">use</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">out</span><span class="w"> </span><span class="o">-&gt;</span>
-<a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a><span class="w">        </span><span class="k">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">content</span><span class="p">)</span>
-<a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a><span class="p">}</span>
-</code></pre></div>
-<h5 id="usar-javaioprintwriter">Usar <code>java.io.PrintWriter</code><a class="headerlink" href="#usar-javaioprintwriter" title="Permanent link">&para;</a></h5>
-<p>En este ejemplo, tomamos una cadena y la escribimos en un archivo usando la clase <code>java.io.PrintWriter</code>. Para ello se siguen los siguientes pasos.</p>
-<ol>
-<li>Tenga sus datos listos como una cadena en una variable.</li>
-<li>Inicialice un objeto escritor de la clase <code>PrintWriter</code>.</li>
-<li>Agregue la cadena al archivo usando la función <code>PrintWriter.append()</code>.</li>
-<li>Cerrar el escritor.</li>
-</ol>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="k">import</span><span class="w"> </span><span class="nn">java.io.PrintWriter</span>
-<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>
-<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="cm">/**</span>
-<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="cm"> * Example to use standard Java method in Kotlin to write content to a text file</span>
-<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="cm"> */</span>
-<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="kd">fun</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">args</span><span class="p">:</span><span class="w"> </span><span class="n">Array</span><span class="o">&lt;</span><span class="kt">String</span><span class="o">&gt;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a><span class="w">    </span><span class="c1">// content to be written to file</span>
-<a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nv">content</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Hello World. Welcome to Kotlin!!&quot;</span>
-<a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a>
-<a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a><span class="w">    </span><span class="c1">// using java class java.io.PrintWriter</span>
-<a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">writer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">PrintWriter</span><span class="p">(</span><span class="s">&quot;file.txt&quot;</span><span class="p">)</span>
-<a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a><span class="w">    </span><span class="n">writer</span><span class="p">.</span><span class="na">append</span><span class="p">(</span><span class="n">content</span><span class="p">)</span>
-<a id="__codelineno-8-13" name="__codelineno-8-13" href="#__codelineno-8-13"></a><span class="w">    </span><span class="n">writer</span><span class="p">.</span><span class="na">close</span><span class="p">()</span>
-<a id="__codelineno-8-14" name="__codelineno-8-14" href="#__codelineno-8-14"></a><span class="p">}</span>
-</code></pre></div>
-<p>En los ejemplso, se creará un nuevo archivo con el nombre <code>file.txt</code>, como se especifica para el argumento de <code>PrintWriter()</code>, con el contenido. Si el archivo ya está presente, primero se borra el contenido del archivo y luego se escribe el nuevo contenido en el archivo.</p>
-<h5 id="oros-metodos-de-escritura">Oros métodos de escritura<a class="headerlink" href="#oros-metodos-de-escritura" title="Permanent link">&para;</a></h5>
-<p>Existen otras formas de leer archivos:</p>
+<div class="admonition warning">
+<p class="admonition-title">Muy importante</p>
+<p><code>writeText()</code> sobrescribe el contenido existente. Si necesitas conservar lo anterior, usa <code>appendText()</code> o un modo de escritura equivalente.</p>
+</div>
+<h3 id="6-leer-y-escribir-no-es-lo-mismo">6. Leer y escribir no es lo mismo<a class="headerlink" href="#6-leer-y-escribir-no-es-lo-mismo" title="Permanent link">&para;</a></h3>
+<p>Cuando trabajamos con un fichero, es importante tener claro qué operación estamos realizando en cada momento.</p>
 <ul>
-<li><code>java.io.FileWriter</code>: Escribe en un archivo haciendo uso del método <code>writer()</code>.</li>
+<li><strong>Leer</strong> significa interpretar datos que ya existen.</li>
+<li><strong>Escribir</strong> significa generar o modificar datos dentro del fichero.</li>
 </ul>
-<!--
-Existen muchas formas de acceder a un archivo para escribir en él. Una de las formas más fáciles, es el uso de la clase  `FileWriter`.
-
-### 4.1.2.1. Usar `FileWriter`
-
-Esta clase tiene dos constructores que
-merece la pena conocer:
-
-* public FileWriter(File file)
-* public FileWriter(File file, boolean append)
-
-El primer constructor es muy parecido al del Scanner. Solo hay que pasarle un objeto `File` con la ruta al archivo. Al
-tratarse de escritura la ruta puede indicar un archivo que puede existir o no dentro del sistema. **Si el archivo no
-existe, se creará uno nuevo** . Pero
-**si el archivo ya existe, su contenido se borra por completo, con tamaño igual a 0** . Esto puede ser peligroso ya que
-si no se maneja correctamente puede producir la pérdida de datos valiosos. Hay que estar completamente seguro de que se
-quiere sobreescribir el archivo. importjava.io.File; importjava.io.FileWriter; ... Filef = new File("C:
-\Programas\Unidad11\Documento.txt"); FileWriterwriter= newFileWriter(f); El segundo constructor tiene otro **parámetro
-de tipo booleano llamado “append”** **(añadir) que nos permite indicar si queremos escribir al final del archivo o no**
-. Es decir, si le pasamos “false” hará lo mismo que el contructor anterior (si el archivo ya existe, lo sobreescribirá),
-pero si le pasamos “true” abrirá el archivo para escritura en **modo “append”** , es decir, **escribiremos al final del
-archivo sin borrar los datos ya existentes** . importjava.io.File; importjava.io.FileWriter; ... Filef = new File("C:
-\Programas\Unidad11\Documento.txt"); FileWriterwriter= newFileWriter(f, true); La escritura secuencial de datos en un
-archivo orientado a carácter es muy sencilla. Solo es necesario utilizar el siguiente método
-**void write(String str)** que escribirá la cadena str en el archivo. Si se desea agregar un **final de línea** se puede
-agregar **" \n"** . | ...**Tanto el constructor de FileWriter como el método write() pueden lanzar una excepción
-IOException**si se produce algún error
-inesperado.![](file:///tmp/lu37016xc6sfk.tmp/lu37016xc6sgf_tmp_4f43f86e4682ec35.png)
-| |
-
----
-
-|
-
-Es importante tener en cuenta que **para que el método write() escriba texto correctamente es imprescindible pasarle
-como argumento un String**
-. Está permitido utilizar datos o variables distintas a String, pero se escribirá directamente su valor en bytes, no
-como texto. Veamos dos ejemplos ilustrativos.
-
-writer.write("8"); // Escribe el carácter 8
-
-writer.write(8); // Escribe 8 como byte, es un carácter no imprimible
-
-writer.write("65");// Escribe dos carácteres, el 6 y el 5
-
-writer.write(65); // Escribe 65 como byte, es el carácter A
-
-Por lo tanto cuando queremos escribir el valor de variables que no sean String será necesario pasárselas a write() como
-String. Esto es muy sencillo, solo hay que concatenar un String vacío con la variable (Java siempre convierte a String
-la concatenación de cadenas de texto con cualquier otro elemento): ""+ variable
-
-intedad = 35;
-
-writer.write(""+ edad); // escribe el texto "35"
-
-La escritura de datos en archivo tiene la particularidad de que una vez se ha escrito un dato ya no hay marcha atrás. No
-es posible escribir información antes o en medio de valores que ya están escritos.
-
-Como en el caso de la lectura, la clase FileWriter también gestiona un apuntador que le permite saber a partir de qué
-posición del texto debe ir escribiendo. Cada vez que se invoca uno de sus métodos de escritura, el apuntador avanza
-automáticamente y no es posible hacerlo retroceder. A efectos prácticos este apuntador siempre está al final del
-archivo, de modo que a medida que se van escribiendo datos el archivo va incrementando su tamaño.
-
-A continuación se muestra un esquema del funcionamiento de la escritura en archivo.
-
-![](file:///tmp/lu37016xc6sfk.tmp/lu37016xc6sgf_tmp_78a0f492846799d6.png)
-
-La escritura no genera automáticamente un delimitador entre valores. Los espacios en blanco o saltos de línea que se
-deseen incorporar deben escribirse esplícitamente. De lo contrario los valores quedarán pegados y en una posterior
-lectura se interpretarán como un único valor. Por ejemplo, si se escribe el valor 2 y luego el 4, sin espacio, en el
-archivo se habrá escrito el valor 24. Si se leyera mediante un nextInt()
-nos devolvería un único valor, no dos.
-
-**Al escribir en archivos el cierre con close() es todavía más importante** que en la lectura. Esto se debe a que los
-sistemas operativos a menudo actualizan los datos de forma diferida. Es decir, el hecho de ejecutar una instrucción de
-escritura no significa que inmediatamente se escriba en el archivo. Puede pasar un intervalo de tiempo variable. Solo al
-ejecutar el método close() se fuerza al sistema operativo a escribir los datos pendientes (si los hubiera).
-
-| ...Al terminar la escritura también**es imprescindible invocar el método close()**para cerrarlo y asegurar la correcta
-escritura de datos.![](file:///tmp/lu37016xc6sfk.tmp/lu37016xc6sgf_tmp_4f43f86e4682ec35.png)
-| |
-
-|
-
-El código siguiente sirve como ejemplo de un programa que escribe un archivo llamado "Enteros.txt" dentro de la carpeta
-de trabajo. Se escriben 20 valores enteros, empezando por el 1 y cada vez el doble del anterior. Pruébalo para ver su
-funcionamiento. Ten en cuenta que si ya existía un archivo con ese nombre, quedará totalmente sobrescrito. Después,
-puedes intentar leerlo con el programa del ejemplo anterior para leer 10 valores enteros y mostrarlos por pantalla.
-
-publicstatic void main(String[] args) {
-
-try{
-
-Filef = new File("Enteros.txt");
-
-FileWriterfw = new FileWriter(f);
-
-intvalor = 1;
-
-for(int i = 1; i <= 20; i++) {
-
-fw.write(""+ valor); // escribimos valor
-
-fw.write(""); // escribimos espacio en blanco
-
-valor= valor * 2; // calculamos próximo valor }
-
-fw.write("\n");// escribimos nueva línea
-
-fw.close();// cerramos el FileWriter
-
-System.out.println("archivoescrito correctamente"); }catch (IOException e) {
-
-System.out.println("Error:" + e); }
-
-}
-
-Prueba a ejecutar el código varias veces. Verás que el archivo se sobrescribe y siempre queda igual. Luego, modifica la
-instanciación del FileWriter agregando el segundo argumento (“append”) a true:
-FileWriterfw = new FileWriter(f, true); Pruébalo y verás que ya no se sobreescribe el archivo, sino que se añaden los 20
-números al final. -->
-
-<h3 id="2-archivos-binarios">2. Archivos binarios.<a class="headerlink" href="#2-archivos-binarios" title="Permanent link">&para;</a></h3>
-<p>Los Data Stream (Flujos de datos) se utilizan para escribir datos binarios. <code>DataOutputStream</code> escribe datos binarios de tipos primitivos(<code>Int</code>, <code>Long</code>, <code>String</code>) mientras que <code>DataInputStream</code> lee datos del flujo binario y los convierte en tipos primitivos.</p>
-<p>A continuación veremos un programa de ejemplo que escribe datos en un archivo y luego los vuelve a leer a memoria para finalmente imprimirlos por salida estándar.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="k">import</span><span class="w"> </span><span class="nn">java.io.DataInputStream</span>
-<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="k">import</span><span class="w"> </span><span class="nn">java.io.DataOutputStream</span>
-<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="k">import</span><span class="w"> </span><span class="nn">java.io.FileInputStream</span>
-<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="k">import</span><span class="w"> </span><span class="nn">java.io.FileOutputStream</span>
-<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>
-<a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a><span class="kd">fun</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">args</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">Array</span><span class="o">&lt;</span><span class="kt">String</span><span class="o">&gt;</span><span class="p">){</span>
-<a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">burgers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;data.burgers&quot;</span>
-<a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a>
-<a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a><span class="w">    </span><span class="c1">//Open the file in binary mode</span>
-<a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a><span class="w">    </span><span class="n">DataOutputStream</span><span class="p">(</span><span class="n">FileOutputStream</span><span class="p">(</span><span class="n">burgers</span><span class="p">)).</span><span class="na">use</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">dos</span><span class="w"> </span><span class="o">-&gt;</span>
-<a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a><span class="w">        </span><span class="n">with</span><span class="p">(</span><span class="n">dos</span><span class="p">){</span>
-<a id="__codelineno-9-12" name="__codelineno-9-12" href="#__codelineno-9-12"></a><span class="w">            </span><span class="c1">//Notice we have to write our data types</span>
-<a id="__codelineno-9-13" name="__codelineno-9-13" href="#__codelineno-9-13"></a><span class="w">            </span><span class="n">writeInt</span><span class="p">(</span><span class="s">&quot;Bob is Great\n&quot;</span><span class="p">.</span><span class="na">length</span><span class="p">)</span><span class="w"> </span><span class="c1">//Record length of the array</span>
-<a id="__codelineno-9-14" name="__codelineno-9-14" href="#__codelineno-9-14"></a><span class="w">            </span><span class="n">writeChars</span><span class="p">(</span><span class="s">&quot;Bob is Great\n&quot;</span><span class="p">)</span><span class="w"> </span><span class="c1">//Write the array</span>
-<a id="__codelineno-9-15" name="__codelineno-9-15" href="#__codelineno-9-15"></a><span class="w">            </span><span class="n">writeBoolean</span><span class="p">(</span><span class="kc">true</span><span class="p">)</span><span class="w"> </span><span class="c1">//Write a boolean</span>
-<a id="__codelineno-9-16" name="__codelineno-9-16" href="#__codelineno-9-16"></a>
-<a id="__codelineno-9-17" name="__codelineno-9-17" href="#__codelineno-9-17"></a><span class="w">            </span><span class="n">writeInt</span><span class="p">(</span><span class="s">&quot;How many burgers can Bob cook?\n&quot;</span><span class="p">.</span><span class="na">length</span><span class="p">)</span><span class="w"> </span><span class="c1">//Record length of array</span>
-<a id="__codelineno-9-18" name="__codelineno-9-18" href="#__codelineno-9-18"></a><span class="w">            </span><span class="n">writeBytes</span><span class="p">(</span><span class="s">&quot;How many burgers can Bob cook?\n&quot;</span><span class="p">)</span><span class="w"> </span><span class="c1">//Write the array</span>
-<a id="__codelineno-9-19" name="__codelineno-9-19" href="#__codelineno-9-19"></a><span class="w">            </span><span class="n">writeInt</span><span class="p">(</span><span class="kt">Int</span><span class="p">.</span><span class="na">MAX_VALUE</span><span class="p">)</span><span class="w"> </span><span class="c1">//Write an int</span>
-<a id="__codelineno-9-20" name="__codelineno-9-20" href="#__codelineno-9-20"></a>
-<a id="__codelineno-9-21" name="__codelineno-9-21" href="#__codelineno-9-21"></a><span class="w">            </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="m">0.</span><span class="p">.</span><span class="m">5</span><span class="p">){</span>
-<a id="__codelineno-9-22" name="__codelineno-9-22" href="#__codelineno-9-22"></a><span class="w">                </span><span class="n">writeByte</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="c1">//Write a byte</span>
-<a id="__codelineno-9-23" name="__codelineno-9-23" href="#__codelineno-9-23"></a><span class="w">                </span><span class="n">writeDouble</span><span class="p">(</span><span class="n">i</span><span class="p">.</span><span class="na">toDouble</span><span class="p">())</span><span class="w"> </span><span class="c1">//Write a double</span>
-<a id="__codelineno-9-24" name="__codelineno-9-24" href="#__codelineno-9-24"></a><span class="w">                </span><span class="n">writeFloat</span><span class="p">(</span><span class="n">i</span><span class="p">.</span><span class="na">toFloat</span><span class="p">())</span><span class="w"> </span><span class="c1">//Write a float</span>
-<a id="__codelineno-9-25" name="__codelineno-9-25" href="#__codelineno-9-25"></a><span class="w">                </span><span class="n">writeInt</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="c1">//Write an int</span>
-<a id="__codelineno-9-26" name="__codelineno-9-26" href="#__codelineno-9-26"></a><span class="w">                </span><span class="n">writeLong</span><span class="p">(</span><span class="n">i</span><span class="p">.</span><span class="na">toLong</span><span class="p">())</span><span class="w"> </span><span class="c1">//Write a long</span>
-<a id="__codelineno-9-27" name="__codelineno-9-27" href="#__codelineno-9-27"></a><span class="w">            </span><span class="p">}</span>
-<a id="__codelineno-9-28" name="__codelineno-9-28" href="#__codelineno-9-28"></a><span class="w">        </span><span class="p">}</span>
-<a id="__codelineno-9-29" name="__codelineno-9-29" href="#__codelineno-9-29"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-9-30" name="__codelineno-9-30" href="#__codelineno-9-30"></a>
-<a id="__codelineno-9-31" name="__codelineno-9-31" href="#__codelineno-9-31"></a><span class="w">    </span><span class="c1">//Open a binary file in read mode. It has to be read in the same order</span>
-<a id="__codelineno-9-32" name="__codelineno-9-32" href="#__codelineno-9-32"></a><span class="w">    </span><span class="c1">//in which it was written</span>
-<a id="__codelineno-9-33" name="__codelineno-9-33" href="#__codelineno-9-33"></a><span class="w">    </span><span class="n">DataInputStream</span><span class="p">(</span><span class="n">FileInputStream</span><span class="p">(</span><span class="n">burgers</span><span class="p">)).</span><span class="na">use</span><span class="w"> </span><span class="p">{</span><span class="n">dis</span><span class="w"> </span><span class="o">-&gt;</span>
-<a id="__codelineno-9-34" name="__codelineno-9-34" href="#__codelineno-9-34"></a><span class="w">        </span><span class="n">with</span><span class="w"> </span><span class="p">(</span><span class="n">dis</span><span class="p">){</span>
-<a id="__codelineno-9-35" name="__codelineno-9-35" href="#__codelineno-9-35"></a><span class="w">            </span><span class="kd">val</span><span class="w"> </span><span class="nv">bobSize</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">readInt</span><span class="p">()</span><span class="w"> </span><span class="c1">//Read back the size of the array</span>
-<a id="__codelineno-9-36" name="__codelineno-9-36" href="#__codelineno-9-36"></a><span class="w">            </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="n">until</span><span class="w"> </span><span class="n">bobSize</span><span class="p">){</span>
-<a id="__codelineno-9-37" name="__codelineno-9-37" href="#__codelineno-9-37"></a><span class="w">                </span><span class="n">print</span><span class="p">(</span><span class="n">readChar</span><span class="p">())</span><span class="w"> </span><span class="c1">//Print the array one character at a time</span>
-<a id="__codelineno-9-38" name="__codelineno-9-38" href="#__codelineno-9-38"></a><span class="w">            </span><span class="p">}</span>
-<a id="__codelineno-9-39" name="__codelineno-9-39" href="#__codelineno-9-39"></a><span class="w">            </span><span class="n">println</span><span class="p">(</span><span class="n">readBoolean</span><span class="p">())</span><span class="w"> </span><span class="c1">//Read a boolean</span>
-<a id="__codelineno-9-40" name="__codelineno-9-40" href="#__codelineno-9-40"></a>
-<a id="__codelineno-9-41" name="__codelineno-9-41" href="#__codelineno-9-41"></a><span class="w">            </span><span class="kd">val</span><span class="w"> </span><span class="nv">burgerSize</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">readInt</span><span class="p">()</span><span class="w"> </span><span class="c1">//Length of the next array</span>
-<a id="__codelineno-9-42" name="__codelineno-9-42" href="#__codelineno-9-42"></a><span class="w">            </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="n">until</span><span class="w"> </span><span class="n">burgerSize</span><span class="p">){</span>
-<a id="__codelineno-9-43" name="__codelineno-9-43" href="#__codelineno-9-43"></a><span class="w">                </span><span class="n">print</span><span class="p">(</span><span class="n">readByte</span><span class="p">().</span><span class="na">toChar</span><span class="p">())</span><span class="w"> </span><span class="c1">//Print array one character at a time</span>
-<a id="__codelineno-9-44" name="__codelineno-9-44" href="#__codelineno-9-44"></a><span class="w">            </span><span class="p">}</span>
-<a id="__codelineno-9-45" name="__codelineno-9-45" href="#__codelineno-9-45"></a><span class="w">            </span><span class="n">println</span><span class="p">(</span><span class="n">readInt</span><span class="p">())</span><span class="w"> </span><span class="c1">//Read an int</span>
-<a id="__codelineno-9-46" name="__codelineno-9-46" href="#__codelineno-9-46"></a>
-<a id="__codelineno-9-47" name="__codelineno-9-47" href="#__codelineno-9-47"></a><span class="w">            </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="m">0.</span><span class="p">.</span><span class="m">5</span><span class="p">){</span>
-<a id="__codelineno-9-48" name="__codelineno-9-48" href="#__codelineno-9-48"></a><span class="w">                </span><span class="n">println</span><span class="p">(</span><span class="n">readByte</span><span class="p">())</span><span class="w"> </span><span class="c1">//Read a byte</span>
-<a id="__codelineno-9-49" name="__codelineno-9-49" href="#__codelineno-9-49"></a><span class="w">                </span><span class="n">println</span><span class="p">(</span><span class="n">readDouble</span><span class="p">())</span><span class="w"> </span><span class="c1">//Read a double</span>
-<a id="__codelineno-9-50" name="__codelineno-9-50" href="#__codelineno-9-50"></a><span class="w">                </span><span class="n">println</span><span class="p">(</span><span class="n">readFloat</span><span class="p">())</span><span class="w"> </span><span class="c1">//Read a float</span>
-<a id="__codelineno-9-51" name="__codelineno-9-51" href="#__codelineno-9-51"></a><span class="w">                </span><span class="n">println</span><span class="p">(</span><span class="n">readInt</span><span class="p">())</span><span class="w"> </span><span class="c1">//Read an int</span>
-<a id="__codelineno-9-52" name="__codelineno-9-52" href="#__codelineno-9-52"></a><span class="w">                </span><span class="n">println</span><span class="p">(</span><span class="n">readLong</span><span class="p">())</span><span class="w"> </span><span class="c1">//Read a long</span>
-<a id="__codelineno-9-53" name="__codelineno-9-53" href="#__codelineno-9-53"></a><span class="w">            </span><span class="p">}</span>
-<a id="__codelineno-9-54" name="__codelineno-9-54" href="#__codelineno-9-54"></a><span class="w">        </span><span class="p">}</span>
-<a id="__codelineno-9-55" name="__codelineno-9-55" href="#__codelineno-9-55"></a>
-<a id="__codelineno-9-56" name="__codelineno-9-56" href="#__codelineno-9-56"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-9-57" name="__codelineno-9-57" href="#__codelineno-9-57"></a><span class="p">}</span>
-</code></pre></div>
-<p>El programa crea un objeto <code>FileOutputStream</code>, para ello pasa el nombre del archivo a su constructor. Luego, el objeto <code>FileOutputStream</code> se pasa como parámetro al constructor de <code>DataOutputStream</code>. </p>
-<p>Hacemos uso de la función <code>use()</code> para <strong>garantizar que todos los recursos se liberen correctamente cuando hayamos terminado</strong>. El archivo ahora está abierto para escritura en modo binario.</p>
-<p>Cuando deseamos usar el mismo objeto repetidamente, podemos pasarlo a la función <code>with()</code>. En nuestro caso, tenemos la intención de seguir usando nuestro objeto <code>DataOutputStream</code>, por lo que en la línea 11, lo pasamos a la función <code>with()</code>. Dentro de la función <code>with()</code>, todas las llamadas a métodos apuntarán al objeto <code>dos</code> ya que se proporcionó a <code>with()</code> como parámetro.</p>
-<blockquote>
-<p><img alt="" src="../assets/rayo.png" />
-Cuando deseamos usar un mismo objeto repetidamente, podemos pasarlo a la función <code>with()</code>. Cuando un objeto es pasado a la función <code>with()</code>, dentro de esta, <strong>todas las llamadas a métodos apuntarán al objeto que se le ha pasado por parámetro</strong>.</p>
-</blockquote>
-<p>Siguiendo con el ejemplo, dado que tenemos la intención de escribir un <code>String</code> en el archivo, necesitamos registrar la longitud de la cadena, ya que de otra forma no sabriamos cuantos bytes se han escrito. Hacemos esto usando la función <code>writeInt</code> y pasándole la longitud de nuestra cadena. Luego podemos usar <code>writeChars()</code> para escribir un string, puesto que el argumento <code>String</code> se convierte en una matriz de caracteres. Finalmente, llamamos a <code>writeBoolean()</code> para escribir valores <code>true</code>/<code>false</code> en el archivo.</p>
-<p>La siguiente sección es una repetición de la primera. Tenemos la intención de escribir otro <code>String</code> en el archivo, pero al hacerlo, necesitamos registrar la longitud en el archivo. Una vez más, recurrimos a <code>writeInt()</code> para registrar un valor <code>int</code>. En la siguiente línea, usamos <code>writeBytes()</code> en lugar de <code>writeChars()</code> para demostrar cómo podemos escribir una matriz de bytes en lugar de una cadena. La clase <code>DataOutputStream</code> se ocupa de los detalles de convertir un <code>String</code> en una matriz de bytes. Finalmente, escribimos otro valor int en la secuencia.</p>
-<p>A continuación, se ejecuta un ciclo <code>for</code> en la línea 21. Dentro del ciclo <code>for</code>, demostramos como escribir diferentes tipos primitivos en el archivo. Podemos usar <code>writeByte()</code> para un <code>byte</code>, <code>writeDouble()</code> para un <code>double</code>, y así sucesivamente para cada tipo primitivo. <strong>La clase <code>DataOutputStream</code> conoce el tamaño de cada tipo primitivo y escribe el número correcto de bytes para cada primitivo</strong>.</p>
-<p>Cuando terminamos de escribir el objeto, lo abrimos nuevamente para leerlo. La línea 33 crea un objeto <code>FileInputStream</code> que acepta la ruta al archivo en su constructor. El objeto <code>FileInputStream</code> está encadenado a <code>DataInputStream</code> pasándolo al constructor de <code>DataInputStream</code>. Aplicamos la función <code>use()</code> para garantizar que todos los recursos estén correctamente cerrados.</p>
-<p>La lectura del archivo requiere que el archivo se lea en el mismo orden en que se escribe. Nuestra primera orden por tanto, debería ser tomar el tamaño de la matriz de caracteres que escribimos en el archivo anteriormente. Usamos <code>readInt()</code> en la línea 35 seguido de un ciclo <code>for</code> que termina en el tamaño de la matriz en la línea 36. Cada iteración del ciclo <code>for</code> llama a <code>readChar()</code> y la cadena se imprime en la consola. Cuando terminamos, leemos un booleano en la línea 39.</p>
-<p>Nuestra siguiente matriz fue una matriz de bytes. Una vez más, necesitamos su tamaño final, por lo que llamamos a <code>readInt()</code> en la línea 41. Las líneas 42-44 recorren la matriz y llaman a <code>readByte()</code> hasta que finaliza el bucle. Cada <code>byte</code> se convierte en un objeto de carácter mediante <code>toChar()</code>. En la línea 45, leemos un <code>int</code> usando <code>readInt()</code>.</p>
-<p>La parte final del programa repite el ciclo for encontrado anteriormente. En este caso, se hace uso de un bucle <code>for</code> que termina después de cinco iteraciones (línea 47). Dentro de este, se llama a los métodos <code>readByte()</code>, <code>readDouble()</code>, <code>readFloat()</code>, y así sucesivamente. Después de cada llamada se imprime el valor recuperado en la consola.</p>
-<h2 id="fuente">Fuente<a class="headerlink" href="#fuente" title="Permanent link">&para;</a></h2>
+<p>Esto parece obvio, pero tiene consecuencias didácticas importantes:</p>
 <ul>
-<li>Apuntes de programación de Joan Arnedo Moreno (Institut Obert de Catalunya, IOC)</li>
-<li>Apuntes de programación de Natividad Prieto, Francisco Marqués y Javier Piris (E.T.S. de Informática, Universidad Politécnica de Valencia).</li>
-<li><a href="sitiolibre.com">Apuntes de programación de Jose Luis Comesaña</a>.</li>
-<li><a href="https://www.tutorialkart.com/kotlin/kotlin-create-file/">Create File</a></li>
-<li><a href="https://stonesoupprogramming.com/2017/11/24/kotlin-data-streams">Kotlinn data streams</a></li>
-<li><a href="https://www.baeldung.com/kotlin/read-file">Read File</a></li>
-<li><a href="https://www.baeldung.com/kotlin/inputstream-to-string">Inputstream to String</a></li>
+<li>al leer, debes saber qué formato esperas;</li>
+<li>al escribir, debes decidir cómo vas a organizar la información;</li>
+<li>y ambas partes deben ser coherentes entre sí.</li>
+</ul>
+<p>Por ejemplo, si escribes varias notas separadas por comas, luego tendrás que leerlas respetando ese mismo formato.</p>
+<h3 id="7-errores-frecuentes-al-trabajar-con-texto">7. Errores frecuentes al trabajar con texto<a class="headerlink" href="#7-errores-frecuentes-al-trabajar-con-texto" title="Permanent link">&para;</a></h3>
+<p>Cuando se empieza a trabajar con archivos, aparecen varios errores típicos:</p>
+<ul>
+<li>intentar leer un fichero que no existe;</li>
+<li>no comprobar si la ruta es correcta;</li>
+<li>sobrescribir datos sin querer;</li>
+<li>no respetar el formato esperado del archivo;</li>
+<li>suponer que el contenido siempre será válido;</li>
+<li>cargar en memoria ficheros más grandes de lo necesario.</li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Error muy común</p>
+<p>Si escribes datos en un formato y después intentas leerlos con otra lógica distinta, el programa fallará o interpretará mal la información.</p>
+</div>
+<h3 id="8-introduccion-a-los-ficheros-binarios">8. Introducción a los ficheros binarios<a class="headerlink" href="#8-introduccion-a-los-ficheros-binarios" title="Permanent link">&para;</a></h3>
+<p>Aunque en clase trabajaremos mucho con texto, también existen situaciones en las que interesa usar binario.</p>
+<p>En Java y Kotlin podemos apoyarnos en clases como:</p>
+<ul>
+<li><code>DataOutputStream</code> para escribir datos binarios;</li>
+<li><code>DataInputStream</code> para leerlos.</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="k">import</span><span class="w"> </span><span class="nn">java.io.DataInputStream</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="k">import</span><span class="w"> </span><span class="nn">java.io.DataOutputStream</span>
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="k">import</span><span class="w"> </span><span class="nn">java.io.FileInputStream</span>
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="k">import</span><span class="w"> </span><span class="nn">java.io.FileOutputStream</span>
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>
+<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="kd">fun</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="w">    </span><span class="n">DataOutputStream</span><span class="p">(</span><span class="n">FileOutputStream</span><span class="p">(</span><span class="s">&quot;datos.bin&quot;</span><span class="p">)).</span><span class="na">use</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">salida</span><span class="w"> </span><span class="o">-&gt;</span>
+<a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a><span class="w">        </span><span class="n">salida</span><span class="p">.</span><span class="na">writeInt</span><span class="p">(</span><span class="m">25</span><span class="p">)</span>
+<a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a><span class="w">        </span><span class="n">salida</span><span class="p">.</span><span class="na">writeBoolean</span><span class="p">(</span><span class="kc">true</span><span class="p">)</span>
+<a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a>
+<a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a><span class="w">    </span><span class="n">DataInputStream</span><span class="p">(</span><span class="n">FileInputStream</span><span class="p">(</span><span class="s">&quot;datos.bin&quot;</span><span class="p">)).</span><span class="na">use</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">entrada</span><span class="w"> </span><span class="o">-&gt;</span>
+<a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a><span class="w">        </span><span class="kd">val</span><span class="w"> </span><span class="nv">numero</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">entrada</span><span class="p">.</span><span class="na">readInt</span><span class="p">()</span>
+<a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a><span class="w">        </span><span class="kd">val</span><span class="w"> </span><span class="nv">activo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">entrada</span><span class="p">.</span><span class="na">readBoolean</span><span class="p">()</span>
+<a id="__codelineno-7-15" name="__codelineno-7-15" href="#__codelineno-7-15"></a>
+<a id="__codelineno-7-16" name="__codelineno-7-16" href="#__codelineno-7-16"></a><span class="w">        </span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Número: </span><span class="si">$</span><span class="n">numero</span><span class="s">&quot;</span><span class="p">)</span>
+<a id="__codelineno-7-17" name="__codelineno-7-17" href="#__codelineno-7-17"></a><span class="w">        </span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Activo: </span><span class="si">$</span><span class="n">activo</span><span class="s">&quot;</span><span class="p">)</span>
+<a id="__codelineno-7-18" name="__codelineno-7-18" href="#__codelineno-7-18"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-7-19" name="__codelineno-7-19" href="#__codelineno-7-19"></a><span class="p">}</span>
+</code></pre></div>
+<h4 id="81-la-regla-clave-del-binario">8.1. La regla clave del binario<a class="headerlink" href="#81-la-regla-clave-del-binario" title="Permanent link">&para;</a></h4>
+<p>Cuando se trabaja con binario, los datos deben leerse <strong>en el mismo orden y con los mismos tipos</strong> con los que se escribieron.</p>
+<p>Si escribes:</p>
+<ol>
+<li>un <code>Int</code></li>
+<li>un <code>Boolean</code></li>
+</ol>
+<p>después tendrás que leer:</p>
+<ol>
+<li>un <code>Int</code></li>
+<li>un <code>Boolean</code></li>
+</ol>
+<p>en ese mismo orden.</p>
+<div class="admonition danger">
+<p class="admonition-title">Regla esencial</p>
+<p>En binario, cambiar el orden o el tipo de lectura rompe la interpretación de los datos.</p>
+</div>
+<h3 id="9-ejemplo-integrador-con-fichero-de-texto">9. Ejemplo integrador con fichero de texto<a class="headerlink" href="#9-ejemplo-integrador-con-fichero-de-texto" title="Permanent link">&para;</a></h3>
+<p>El siguiente ejemplo combina varias ideas del tema:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="k">import</span><span class="w"> </span><span class="nn">java.io.File</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="kd">fun</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">fichero</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">File</span><span class="p">(</span><span class="s">&quot;pedidos.txt&quot;</span><span class="p">)</span>
+<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>
+<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="w">    </span><span class="n">fichero</span><span class="p">.</span><span class="na">appendText</span><span class="p">(</span><span class="s">&quot;Portátil,2\n&quot;</span><span class="p">)</span>
+<a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a><span class="w">    </span><span class="n">fichero</span><span class="p">.</span><span class="na">appendText</span><span class="p">(</span><span class="s">&quot;Ratón,5\n&quot;</span><span class="p">)</span>
+<a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a>
+<a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">lineas</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">fichero</span><span class="p">.</span><span class="na">readLines</span><span class="p">()</span>
+<a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a>
+<a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a><span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Contenido del fichero:&quot;</span><span class="p">)</span>
+<a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">linea</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">lineas</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-8-13" name="__codelineno-8-13" href="#__codelineno-8-13"></a><span class="w">        </span><span class="n">println</span><span class="p">(</span><span class="n">linea</span><span class="p">)</span>
+<a id="__codelineno-8-14" name="__codelineno-8-14" href="#__codelineno-8-14"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-8-15" name="__codelineno-8-15" href="#__codelineno-8-15"></a><span class="p">}</span>
+</code></pre></div>
+<p>Este ejemplo:</p>
+<ul>
+<li>escribe datos en un fichero;</li>
+<li>conserva el contenido previo usando <code>appendText()</code>;</li>
+<li>y vuelve a leerlo para mostrarlo por consola.</li>
+</ul>
+<h3 id="10-relacion-con-u741">10. Relación con <code>U7.4.1</code><a class="headerlink" href="#10-relacion-con-u741" title="Permanent link">&para;</a></h3>
+<p>Este tema ofrece la visión general de la lectura y escritura de archivos. En <code>7.4.1</code> profundizaremos en el caso más habitual en el aula: <strong>los ficheros de texto</strong>, con más detalle sobre:</p>
+<ul>
+<li><code>readText()</code>, <code>readLines()</code> y <code>useLines()</code>;</li>
+<li><code>writeText()</code> y <code>appendText()</code>;</li>
+<li>caracteres especiales como el salto de línea;</li>
+<li>y pequeños casos prácticos de uso.</li>
+</ul>
+<h3 id="11-buenas-practicas-basicas">11. Buenas prácticas básicas<a class="headerlink" href="#11-buenas-practicas-basicas" title="Permanent link">&para;</a></h3>
+<p>Cuando trabajes con archivos, intenta seguir estas recomendaciones:</p>
+<ul>
+<li>usa rutas relativas cuando sea posible;</li>
+<li>comprueba si el fichero existe antes de leerlo;</li>
+<li>elige bien entre sobrescribir y añadir contenido;</li>
+<li>usa <code>use()</code> o funciones de alto nivel que gestionen bien los recursos;</li>
+<li>mantén coherencia entre cómo escribes y cómo lees;</li>
+<li>y separa el trabajo con archivos de la lógica principal del programa cuando el proyecto crezca.</li>
+</ul>
+<h3 id="12-resumen">12. Resumen<a class="headerlink" href="#12-resumen" title="Permanent link">&para;</a></h3>
+<p>En este tema has visto que:</p>
+<ul>
+<li>leer y escribir archivos permite conservar información entre ejecuciones;</li>
+<li>los ficheros pueden ser de texto o binarios;</li>
+<li>el acceso secuencial es el modelo más habitual en esta unidad;</li>
+<li>Kotlin facilita la lectura con <code>readText()</code>, <code>readLines()</code> y <code>useLines()</code>;</li>
+<li>y facilita la escritura con <code>writeText()</code>, <code>appendText()</code> y escritores con buffer.</li>
+</ul>
+<p>Con esta base ya puedes empezar a construir programas que no solo procesen datos en memoria, sino que también los guarden y los recuperen de forma persistente.</p>
+<h2 id="fuentes-y-referencias">Fuentes y referencias<a class="headerlink" href="#fuentes-y-referencias" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.io/">Kotlin Stdlib - Kotlin I/O</a></li>
+<li><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/io/DataInputStream.html">Oracle Java SE - <code>DataInputStream</code></a></li>
+<li><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/io/DataOutputStream.html">Oracle Java SE - <code>DataOutputStream</code></a></li>
+<li><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/io/BufferedReader.html">Oracle Java SE - <code>BufferedReader</code></a></li>
+<li><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/io/BufferedWriter.html">Oracle Java SE - <code>BufferedWriter</code></a></li>
 </ul>
 
 

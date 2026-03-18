@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Consola y teclado expansión">
+        <meta name="description" content="Ampliación sobre lectura avanzada en consola, `Scanner` y argumentos de línea de comandos">
       
       
         <meta name="author" content="Eduardo Fdez">
@@ -25,7 +25,7 @@
       
       
       <link rel="icon" href="../../../../assets/favicon-96x96.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.3">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.5">
     
     
       
@@ -105,7 +105,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#721-lectura-de-datos-desde-teclado-en-kotlin" class="md-skip">
+        <a href="#721-consola-y-teclado-ampliacion" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -3228,56 +3228,34 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#721-lectura-de-datos-desde-teclado-en-kotlin" class="md-nav__link">
+  <a href="#721-consola-y-teclado-ampliacion" class="md-nav__link">
     <span class="md-ellipsis">
       
-        7.2.1 Lectura de Datos desde Teclado en Kotlin
+        7.2.1 Consola y teclado: ampliación
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="7.2.1 Lectura de Datos desde Teclado en Kotlin">
+    <nav class="md-nav" aria-label="7.2.1 Consola y teclado: ampliación">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#1-lectura-de-texto-en-kotlin" class="md-nav__link">
+  <a href="#1-readln-readlnornull-y-readline" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1. Lectura de Texto en Kotlin
+        1. readln(), readlnOrNull() y readLine()
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="1. Lectura de Texto en Kotlin">
+    <nav class="md-nav" aria-label="1. readln(), readlnOrNull() y readLine()">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#11-ejemplo-basico-de-lectura-de-texto" class="md-nav__link">
+  <a href="#11-cuando-usar-cada-una" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1.1. Ejemplo Básico de Lectura de Texto:
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#12-consideraciones-de-seguridad-tipo" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1.2. Consideraciones de Seguridad Tipo:
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#13-conversion-segura-de-tipos" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1.3. Conversión Segura de Tipos:
+        1.1. Cuándo usar cada una
       
     </span>
   </a>
@@ -3290,22 +3268,33 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#2-lectura-de-numeros-en-kotlin" class="md-nav__link">
+  <a href="#2-fin-de-entrada-y-eof" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2. Lectura de Números en Kotlin
+        2. Fin de entrada y EOF
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="2. Lectura de Números en Kotlin">
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-uso-de-scanner-desde-kotlin" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Uso de Scanner desde Kotlin
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Uso de Scanner desde Kotlin">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#21-ejemplo-basico-de-lectura-de-un-entero" class="md-nav__link">
+  <a href="#31-el-problema-del-salto-de-linea" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2.1. Ejemplo Básico de Lectura de un Entero
+        3.1. El problema del salto de línea
       
     </span>
   </a>
@@ -3313,21 +3302,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#22-lectura-de-otros-tipos-numericos" class="md-nav__link">
+  <a href="#32-cuando-compensa-usar-scanner" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2.2. Lectura de Otros Tipos Numéricos
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#23-consideraciones-importantes" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2.3. Consideraciones Importantes
+        3.2. ¿Cuándo compensa usar Scanner?
       
     </span>
   </a>
@@ -3340,33 +3318,22 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#3-uso-de-la-clase-scanner-en-kotlin-para-la-lectura-de-datos" class="md-nav__link">
+  <a href="#4-funciones-auxiliares-para-pedir-datos" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3. Uso de la Clase Scanner en Kotlin para la Lectura de Datos
+        4. Funciones auxiliares para pedir datos
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="3. Uso de la Clase Scanner en Kotlin para la Lectura de Datos">
+    <nav class="md-nav" aria-label="4. Funciones auxiliares para pedir datos">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#31-ejemplo-de-uso-de-scanner-en-kotlin" class="md-nav__link">
+  <a href="#41-variante-para-numeros-decimales" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3.1. Ejemplo de Uso de Scanner en Kotlin
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#32-detalles-importantes" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        3.2. Detalles Importantes
+        4.1. Variante para números decimales
       
     </span>
   </a>
@@ -3379,33 +3346,22 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#4-actualizacion" class="md-nav__link">
+  <a href="#5-argumentos-de-linea-de-comandos" class="md-nav__link">
     <span class="md-ellipsis">
       
-        4. Actualización
+        5. Argumentos de línea de comandos
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="4. Actualización">
+    <nav class="md-nav" aria-label="5. Argumentos de línea de comandos">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#41-ejemplo-de-uso-de-readln" class="md-nav__link">
+  <a href="#51-diferencia-entre-teclado-y-argumentos" class="md-nav__link">
     <span class="md-ellipsis">
       
-        4.1. Ejemplo de Uso de readln()
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#42-ejemplo-con-conversion-de-tipo" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        4.2. Ejemplo con Conversión de Tipo
+        5.1. Diferencia entre teclado y argumentos
       
     </span>
   </a>
@@ -3418,22 +3374,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#5-ejercicios-de-lectura-de-datos-en-kotlin" class="md-nav__link">
+  <a href="#6-mini-comparativa-que-mecanismo-elegir" class="md-nav__link">
     <span class="md-ellipsis">
       
-        5. Ejercicios de Lectura de Datos en Kotlin
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="5. Ejercicios de Lectura de Datos en Kotlin">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#51-ejercicio-1-lectura-de-un-numero-y-calculo-de-su-cuadrado" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        5.1. Ejercicio 1: Lectura de un Número y Cálculo de su Cuadrado
+        6. Mini comparativa: qué mecanismo elegir
       
     </span>
   </a>
@@ -3441,10 +3385,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#52-ejercicio-2-lectura-de-datos-personales" class="md-nav__link">
+  <a href="#7-propuestas-de-practica" class="md-nav__link">
     <span class="md-ellipsis">
       
-        5.2. Ejercicio 2: Lectura de Datos Personales
+        7. Propuestas de práctica
       
     </span>
   </a>
@@ -3452,18 +3396,13 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#53-ejercicio-3-calculadora-simple" class="md-nav__link">
+  <a href="#8-idea-final-que-debes-recordar" class="md-nav__link">
     <span class="md-ellipsis">
       
-        5.3. Ejercicio 3: Calculadora Simple
+        8. Idea final que debes recordar
       
     </span>
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
@@ -3473,10 +3412,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#fuente" class="md-nav__link">
+  <a href="#fuentes" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Fuente
+        Fuentes
       
     </span>
   </a>
@@ -3562,8 +3501,6 @@
       <a href="../PROG-U7.4.1.-TextFile/" class="md-nav__link">
         
   
-  
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"/></svg>
   
   <span class="md-ellipsis">
     
@@ -6407,11 +6344,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../section2/u02/practicas/IS-U2.-Practica001/" class="md-nav__link">
+      <a href="../../../../section2/u02/practicas/IS-U2.-Practica001.md" class="md-nav__link">
         
   
-  
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2c-1.11 0-2 .89-2 2v16a2 2 0 0 0 2 2h4v-1.91L12.09 18H6v-2h8.09l2-2H6v-2h12.09L20 10.09V8l-6-6zm7 1.5L18.5 9H13zm7.15 9.5a.55.55 0 0 0-.4.16l-1.02 1.02 2.09 2.08 1.02-1.01c.21-.22.21-.58 0-.79l-1.3-1.3a.54.54 0 0 0-.39-.16m-2.01 1.77L12 20.92V23h2.08l6.15-6.15z"/></svg>
   
   <span class="md-ellipsis">
     
@@ -6437,11 +6372,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../section2/u02/practicas/IS-U2.-Practica002/" class="md-nav__link">
+      <a href="../../../../section2/u02/practicas/IS-U2.-Practica002.md" class="md-nav__link">
         
   
-  
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2c-1.11 0-2 .89-2 2v16a2 2 0 0 0 2 2h4v-1.91L12.09 18H6v-2h8.09l2-2H6v-2h12.09L20 10.09V8l-6-6zm7 1.5L18.5 9H13zm7.15 9.5a.55.55 0 0 0-.4.16l-1.02 1.02 2.09 2.08 1.02-1.01c.21-.22.21-.58 0-.79l-1.3-1.3a.54.54 0 0 0-.39-.16m-2.01 1.77L12 20.92V23h2.08l6.15-6.15z"/></svg>
   
   <span class="md-ellipsis">
     
@@ -6479,6 +6412,8 @@
       
         
           
+        
+      
         
       
         
@@ -6622,6 +6557,36 @@
     
   
     3.3.1.-Investigación incidentes:MITRE
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section2/u03/teoria/IS-U3.3.2.-InvestigacionDeIncidentes/" class="md-nav__link">
+        
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"/></svg>
+  
+  <span class="md-ellipsis">
+    
+  
+    3.3.2.-Investigación de incidentes
   
 
     
@@ -8475,56 +8440,34 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#721-lectura-de-datos-desde-teclado-en-kotlin" class="md-nav__link">
+  <a href="#721-consola-y-teclado-ampliacion" class="md-nav__link">
     <span class="md-ellipsis">
       
-        7.2.1 Lectura de Datos desde Teclado en Kotlin
+        7.2.1 Consola y teclado: ampliación
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="7.2.1 Lectura de Datos desde Teclado en Kotlin">
+    <nav class="md-nav" aria-label="7.2.1 Consola y teclado: ampliación">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#1-lectura-de-texto-en-kotlin" class="md-nav__link">
+  <a href="#1-readln-readlnornull-y-readline" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1. Lectura de Texto en Kotlin
+        1. readln(), readlnOrNull() y readLine()
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="1. Lectura de Texto en Kotlin">
+    <nav class="md-nav" aria-label="1. readln(), readlnOrNull() y readLine()">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#11-ejemplo-basico-de-lectura-de-texto" class="md-nav__link">
+  <a href="#11-cuando-usar-cada-una" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1.1. Ejemplo Básico de Lectura de Texto:
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#12-consideraciones-de-seguridad-tipo" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1.2. Consideraciones de Seguridad Tipo:
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#13-conversion-segura-de-tipos" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1.3. Conversión Segura de Tipos:
+        1.1. Cuándo usar cada una
       
     </span>
   </a>
@@ -8537,22 +8480,33 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#2-lectura-de-numeros-en-kotlin" class="md-nav__link">
+  <a href="#2-fin-de-entrada-y-eof" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2. Lectura de Números en Kotlin
+        2. Fin de entrada y EOF
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="2. Lectura de Números en Kotlin">
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-uso-de-scanner-desde-kotlin" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Uso de Scanner desde Kotlin
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Uso de Scanner desde Kotlin">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#21-ejemplo-basico-de-lectura-de-un-entero" class="md-nav__link">
+  <a href="#31-el-problema-del-salto-de-linea" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2.1. Ejemplo Básico de Lectura de un Entero
+        3.1. El problema del salto de línea
       
     </span>
   </a>
@@ -8560,21 +8514,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#22-lectura-de-otros-tipos-numericos" class="md-nav__link">
+  <a href="#32-cuando-compensa-usar-scanner" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2.2. Lectura de Otros Tipos Numéricos
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#23-consideraciones-importantes" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2.3. Consideraciones Importantes
+        3.2. ¿Cuándo compensa usar Scanner?
       
     </span>
   </a>
@@ -8587,33 +8530,22 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#3-uso-de-la-clase-scanner-en-kotlin-para-la-lectura-de-datos" class="md-nav__link">
+  <a href="#4-funciones-auxiliares-para-pedir-datos" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3. Uso de la Clase Scanner en Kotlin para la Lectura de Datos
+        4. Funciones auxiliares para pedir datos
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="3. Uso de la Clase Scanner en Kotlin para la Lectura de Datos">
+    <nav class="md-nav" aria-label="4. Funciones auxiliares para pedir datos">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#31-ejemplo-de-uso-de-scanner-en-kotlin" class="md-nav__link">
+  <a href="#41-variante-para-numeros-decimales" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3.1. Ejemplo de Uso de Scanner en Kotlin
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#32-detalles-importantes" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        3.2. Detalles Importantes
+        4.1. Variante para números decimales
       
     </span>
   </a>
@@ -8626,33 +8558,22 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#4-actualizacion" class="md-nav__link">
+  <a href="#5-argumentos-de-linea-de-comandos" class="md-nav__link">
     <span class="md-ellipsis">
       
-        4. Actualización
+        5. Argumentos de línea de comandos
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="4. Actualización">
+    <nav class="md-nav" aria-label="5. Argumentos de línea de comandos">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#41-ejemplo-de-uso-de-readln" class="md-nav__link">
+  <a href="#51-diferencia-entre-teclado-y-argumentos" class="md-nav__link">
     <span class="md-ellipsis">
       
-        4.1. Ejemplo de Uso de readln()
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#42-ejemplo-con-conversion-de-tipo" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        4.2. Ejemplo con Conversión de Tipo
+        5.1. Diferencia entre teclado y argumentos
       
     </span>
   </a>
@@ -8665,22 +8586,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#5-ejercicios-de-lectura-de-datos-en-kotlin" class="md-nav__link">
+  <a href="#6-mini-comparativa-que-mecanismo-elegir" class="md-nav__link">
     <span class="md-ellipsis">
       
-        5. Ejercicios de Lectura de Datos en Kotlin
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="5. Ejercicios de Lectura de Datos en Kotlin">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#51-ejercicio-1-lectura-de-un-numero-y-calculo-de-su-cuadrado" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        5.1. Ejercicio 1: Lectura de un Número y Cálculo de su Cuadrado
+        6. Mini comparativa: qué mecanismo elegir
       
     </span>
   </a>
@@ -8688,10 +8597,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#52-ejercicio-2-lectura-de-datos-personales" class="md-nav__link">
+  <a href="#7-propuestas-de-practica" class="md-nav__link">
     <span class="md-ellipsis">
       
-        5.2. Ejercicio 2: Lectura de Datos Personales
+        7. Propuestas de práctica
       
     </span>
   </a>
@@ -8699,18 +8608,13 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#53-ejercicio-3-calculadora-simple" class="md-nav__link">
+  <a href="#8-idea-final-que-debes-recordar" class="md-nav__link">
     <span class="md-ellipsis">
       
-        5.3. Ejercicio 3: Calculadora Simple
+        8. Idea final que debes recordar
       
     </span>
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
@@ -8720,10 +8624,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#fuente" class="md-nav__link">
+  <a href="#fuentes" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Fuente
+        Fuentes
       
     </span>
   </a>
@@ -8764,7 +8668,17 @@
         
       
       
-        <a href="../../../../tags/#tag:software" class="md-tag md-tag-icon">Software</a>
+        <a href="../../../../tags/#tag:entradasalida" class="md-tag md-tag-icon">Entrada/Salida</a>
+      
+    
+      
+      
+      
+        
+        
+      
+      
+        <a href="../../../../tags/#tag:kotlin" class="md-tag md-tag-icon">Kotlin</a>
       
     
       
@@ -8786,217 +8700,236 @@
 
   <h1>7.2.1.-Lectura desde teclado</h1>
 
-<h2 id="721-lectura-de-datos-desde-teclado-en-kotlin">7.2.1  Lectura de Datos desde Teclado en Kotlin<a class="headerlink" href="#721-lectura-de-datos-desde-teclado-en-kotlin" title="Permanent link">&para;</a></h2>
-<p>En Kotlin, la captura y manejo de datos introducidos por el usuario se realiza de manera eficiente y segura. </p>
-<p>A diferencia de Java, Kotlin ofrece un mecanismo simplificado para leer datos del teclado a través de la función <code>readLine()</code>. Esta función es parte de la biblioteca estándar de Kotlin y devuelve un valor de tipo <code>String?</code>, lo que indica que el resultado puede ser una cadena de texto o un valor nulo (<code>null</code>).</p>
-<p>La lectura de datos desde el teclado es una tarea común en aplicaciones de consola, donde se requiere interactuar con el usuario solicitando y procesando su entrada. Kotlin maneja esta tarea de forma concisa, pero poderosa, permitiendo el manejo de diferentes tipos de datos con facilidad y seguridad.</p>
-<p>Para realizar la lectura de datos desde el teclado en Kotlin, se emplea la siguiente sintaxis básica:</p>
+<h2 id="721-consola-y-teclado-ampliacion">7.2.1 Consola y teclado: ampliación<a class="headerlink" href="#721-consola-y-teclado-ampliacion" title="Permanent link">&para;</a></h2>
+<p>Este documento complementa <code>7.2</code>, pero no lo sustituye. Allí vimos lo esencial para trabajar con consola y teclado en Kotlin. Aquí nos centramos en los casos que suelen generar más dudas cuando el programa deja de ser tan simple:</p>
+<ul>
+<li>qué diferencias hay entre <code>readln()</code>, <code>readlnOrNull()</code> y <code>readLine()</code>;</li>
+<li>qué ocurre cuando la entrada se termina;</li>
+<li>cuándo puede tener sentido usar <code>Scanner</code>;</li>
+<li>cómo crear funciones reutilizables para pedir datos;</li>
+<li>y cómo encajan los argumentos de línea de comandos en el trabajo con programas de consola.</li>
+</ul>
+<div class="admonition abstract">
+<p class="admonition-title">Objetivo de esta ampliación</p>
+<p>Profundizar en situaciones reales de entrada por consola que no cabían en el tema principal, manteniendo el foco en el <code>RA5</code>.</p>
+</div>
+<h3 id="1-readln-readlnornull-y-readline">1. <code>readln()</code>, <code>readlnOrNull()</code> y <code>readLine()</code><a class="headerlink" href="#1-readln-readlnornull-y-readline" title="Permanent link">&para;</a></h3>
+<p>En ejemplos actuales de Kotlin suele aparecer <code>readln()</code>, pero todavía es frecuente encontrar <code>readLine()</code> en materiales antiguos o en código heredado. Conviene distinguir bien cuándo usar cada opción.</p>
+<table>
+<thead>
+<tr>
+<th>Función</th>
+<th>Devuelve</th>
+<th>Comportamiento</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>readln()</code></td>
+<td><code>String</code></td>
+<td>Espera una línea. Si no hay entrada disponible, lanza excepción.</td>
+</tr>
+<tr>
+<td><code>readlnOrNull()</code></td>
+<td><code>String?</code></td>
+<td>Devuelve <code>null</code> cuando no hay más datos.</td>
+</tr>
+<tr>
+<td><code>readLine()</code></td>
+<td><code>String?</code></td>
+<td>Variante histórica, todavía válida, pero menos habitual en Kotlin moderno.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="11-cuando-usar-cada-una">1.1. Cuándo usar cada una<a class="headerlink" href="#11-cuando-usar-cada-una" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Usa <code>readln()</code> cuando trabajes con una interacción normal de consola y esperes que la persona usuaria introduzca datos.</li>
+<li>Usa <code>readlnOrNull()</code> cuando la entrada pueda agotarse, por ejemplo si el programa lee desde una redirección o desde un archivo.</li>
+<li>Reconoce <code>readLine()</code> porque sigue apareciendo en mucho código, pero no es la primera opción didáctica para esta unidad.</li>
+</ul>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kd">fun</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Introduce un dato:&quot;</span><span class="p">)</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">dato</span><span class="p">:</span><span class="w"> </span><span class="kt">String?</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">readLine</span><span class="p">()</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Dato introducido: </span><span class="si">$</span><span class="n">dato</span><span class="s">&quot;</span><span class="p">)</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="n">print</span><span class="p">(</span><span class="s">&quot;Nombre: &quot;</span><span class="p">)</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">nombre</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">readln</span><span class="p">()</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Hola, </span><span class="si">$</span><span class="n">nombre</span><span class="s">&quot;</span><span class="p">)</span>
 <a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="p">}</span>
 </code></pre></div>
-<p>Este enfoque básico se puede expandir para leer diferentes tipos de datos, como números enteros, decimales, entre otros, mediante la conversión del texto leído a los tipos de datos deseados. Es importante destacar que, al trabajar con <code>readLine()</code>, siempre debemos considerar la posibilidad de que el resultado sea <code>null</code>, especialmente si se espera realizar conversiones de tipo.</p>
-<p>En los siguientes puntos, exploraremos cómo leer tipos específicos de datos desde el teclado y cómo utilizar <code>readLine()</code> y <code>readln()</code> en conjunción con conversiones de tipo para manejar entradas numéricas y otros tipos de datos de manera segura en Kotlin.</p>
-<p>Este marco general proporciona la base para entender cómo Kotlin facilita la interacción con el usuario a través de la entrada de datos en aplicaciones de consola, manteniendo al mismo tiempo las prácticas de seguridad de tipo que son fundamentales en Kotlin.</p>
-<h3 id="1-lectura-de-texto-en-kotlin">1. Lectura de Texto en Kotlin<a class="headerlink" href="#1-lectura-de-texto-en-kotlin" title="Permanent link">&para;</a></h3>
-<p>La lectura de texto del usuario es una tarea común en muchas aplicaciones de consola. Kotlin simplifica esta operación con el uso de la función <code>readLine()</code>, que lee una línea completa de entrada hasta que se encuentra un salto de línea (por ejemplo, cuando el usuario presiona Enter). Esta función devuelve un <code>String?</code>, lo que significa que el resultado puede ser una cadena de caracteres o un valor nulo (<code>null</code>). Esto último ocurre si se alcanza el final del flujo de entrada sin leer ningún dato.</p>
-<h4 id="11-ejemplo-basico-de-lectura-de-texto">1.1. Ejemplo Básico de Lectura de Texto:<a class="headerlink" href="#11-ejemplo-basico-de-lectura-de-texto" title="Permanent link">&para;</a></h4>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kd">fun</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Por favor, introduce tu nombre:&quot;</span><span class="p">)</span>
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">nombre</span><span class="p">:</span><span class="w"> </span><span class="kt">String?</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">readLine</span><span class="p">()</span>
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">nombre</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">        </span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Hola, </span><span class="si">$</span><span class="n">nombre</span><span class="s">!&quot;</span><span class="p">)</span>
-<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">        </span><span class="n">println</span><span class="p">(</span><span class="s">&quot;No se ha introducido ningún nombre.&quot;</span><span class="p">)</span>
-<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="p">}</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">linea</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">readlnOrNull</span><span class="p">()</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">linea</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">        </span><span class="n">println</span><span class="p">(</span><span class="s">&quot;No quedan más datos&quot;</span><span class="p">)</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">        </span><span class="n">println</span><span class="p">(</span><span class="s">&quot;He leído: </span><span class="si">$</span><span class="n">linea</span><span class="s">&quot;</span><span class="p">)</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="p">}</span>
 </code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Idea práctica</p>
+<p>En ejercicios interactivos de clase, <code>readln()</code> suele ser suficiente. <code>readlnOrNull()</code> empieza a ser útil cuando la entrada no la controla directamente la persona usuaria.</p>
+</div>
+<h3 id="2-fin-de-entrada-y-eof">2. Fin de entrada y <code>EOF</code><a class="headerlink" href="#2-fin-de-entrada-y-eof" title="Permanent link">&para;</a></h3>
+<p>Uno de los matices más importantes de la entrada por consola es entender que el flujo puede terminar. A ese momento se le suele llamar <code>EOF</code> (<em>End Of File</em> o fin de entrada).</p>
+<p>Esto puede pasar, por ejemplo, cuando:</p>
+<ul>
+<li>el programa no lee desde teclado, sino desde un archivo redirigido;</li>
+<li>una tubería ya no tiene más datos que enviar;</li>
+<li>o el entorno cierra la entrada estándar.</li>
+</ul>
+<p>Si usas <code>readln()</code>, el programa lanzará una excepción cuando ya no haya más datos. Si usas <code>readlnOrNull()</code>, podrás detectarlo sin excepción.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kd">fun</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Por favor, introduce tu nombre:&quot;</span><span class="p">)</span>
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">nombre</span><span class="p">:</span><span class="w"> </span><span class="kt">String?</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">readLine</span><span class="p">()</span>
-<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">    </span><span class="n">nombre</span><span class="o">?.</span><span class="na">let</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">unNombre</span><span class="w"> </span><span class="o">-&gt;</span>
-<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">        </span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Hola, </span><span class="si">$</span><span class="n">unNombre</span><span class="s">!&quot;</span><span class="p">)</span>
-<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="o">?:</span><span class="w"> </span><span class="n">println</span><span class="p">(</span><span class="s">&quot;No se ha introducido ningún nombre.&quot;</span><span class="p">)</span>
-<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="p">}</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="kc">true</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">        </span><span class="kd">val</span><span class="w"> </span><span class="nv">linea</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">readlnOrNull</span><span class="p">()</span><span class="w"> </span><span class="o">?:</span><span class="w"> </span><span class="k">break</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">        </span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Procesando: </span><span class="si">$</span><span class="n">linea</span><span class="s">&quot;</span><span class="p">)</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Fin de la entrada&quot;</span><span class="p">)</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="p">}</span>
 </code></pre></div>
-<p>En este ejemplo, se solicita al usuario que introduzca su nombre. Usamos <code>readLine()</code> para leer esta entrada desde el teclado. La comprobación <code>if (nombre != null)</code> es necesaria porque, aunque es raro en aplicaciones interactivas, <code>readLine()</code> puede devolver <code>null</code> si no hay más datos para leer, se llega a <code>EOF</code> (esto podría suceder, por ejemplo, si la entrada se redirige desde un archivo que termina).</p>
-<blockquote>
-<p>EOF: End of File. Fin de archivo. Acrónimo que se usa para indicar que no hay más datos para leer.</p>
-</blockquote>
-<h4 id="12-consideraciones-de-seguridad-tipo">1.2. Consideraciones de Seguridad Tipo:<a class="headerlink" href="#12-consideraciones-de-seguridad-tipo" title="Permanent link">&para;</a></h4>
-<p>Dado que <code>readLine()</code> devuelve un <code>String?</code>, el manejo de <code>null</code> es una parte crucial de la lectura segura de entradas en Kotlin. Kotlin introduce el concepto de seguridad de tipo nulo en el nivel del lenguaje, lo que significa que debemos tratar explícitamente la posibilidad de valores nulos. Esto ayuda a prevenir errores comunes como <code>NullPointerException</code> que son frecuentes en otros lenguajes de programación.</p>
-<h4 id="13-conversion-segura-de-tipos">1.3. Conversión Segura de Tipos:<a class="headerlink" href="#13-conversion-segura-de-tipos" title="Permanent link">&para;</a></h4>
-<p>En ocasiones, además de leer texto, querrás convertir esa entrada a un tipo específico, como un número. Kotlin facilita esto con funciones como <code>toIntOrNull()</code> que se puede usar en cadena con <code>readLine()</code> para una conversión segura:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kd">fun</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Introduce tu edad:&quot;</span><span class="p">)</span>
-<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">edad</span><span class="p">:</span><span class="w"> </span><span class="kt">Int?</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">readLine</span><span class="p">()</span><span class="o">?.</span><span class="na">toIntOrNull</span><span class="p">()</span>
-<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">edad</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">        </span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Tienes </span><span class="si">$</span><span class="n">edad</span><span class="s"> años.&quot;</span><span class="p">)</span>
-<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="w">        </span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Edad no válida.&quot;</span><span class="p">)</span>
-<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="p">}</span>
+<p>Este patrón resulta útil cuando quieres leer varias líneas hasta que la entrada se agote.</p>
+<h3 id="3-uso-de-scanner-desde-kotlin">3. Uso de <code>Scanner</code> desde Kotlin<a class="headerlink" href="#3-uso-de-scanner-desde-kotlin" title="Permanent link">&para;</a></h3>
+<p>Kotlin puede usar sin problema clases de Java. Una de las más conocidas para entrada por consola es <code>Scanner</code>.</p>
+<p>No es imprescindible para esta unidad, pero conviene conocerlo porque aparece con frecuencia en muchos ejemplos y porque en algunos contextos puede resultar cómodo para leer datos token a token.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">import</span><span class="w"> </span><span class="nn">java.util.Scanner</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="kd">fun</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">scanner</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="n">`in`</span><span class="p">)</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w">    </span><span class="n">print</span><span class="p">(</span><span class="s">&quot;Nombre: &quot;</span><span class="p">)</span>
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">nombre</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">scanner</span><span class="p">.</span><span class="na">nextLine</span><span class="p">()</span>
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="w">    </span><span class="n">print</span><span class="p">(</span><span class="s">&quot;Edad: &quot;</span><span class="p">)</span>
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">edad</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">scanner</span><span class="p">.</span><span class="na">nextInt</span><span class="p">()</span>
+<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="w">    </span><span class="n">scanner</span><span class="p">.</span><span class="na">nextLine</span><span class="p">()</span>
+<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>
+<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a><span class="w">    </span><span class="n">print</span><span class="p">(</span><span class="s">&quot;Ciudad: &quot;</span><span class="p">)</span>
+<a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">ciudad</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">scanner</span><span class="p">.</span><span class="na">nextLine</span><span class="p">()</span>
+<a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>
+<a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a><span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Nombre: </span><span class="si">$</span><span class="n">nombre</span><span class="s">, edad: </span><span class="si">$</span><span class="n">edad</span><span class="s">, ciudad: </span><span class="si">$</span><span class="n">ciudad</span><span class="s">&quot;</span><span class="p">)</span>
+<a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a><span class="p">}</span>
 </code></pre></div>
-<p>Este enfoque garantiza que tu programa maneje de manera segura tanto las entradas nulas como las que no son convertibles al tipo deseado, evitando así excepciones en tiempo de ejecución.</p>
-<p>En resumen, la lectura de texto en Kotlin es simple y segura, gracias a la función <code>readLine()</code> y al sistema de tipos de Kotlin que maneja <code>null</code> de forma explícita, evitando errores comunes en la entrada de datos.</p>
-<h3 id="2-lectura-de-numeros-en-kotlin">2. Lectura de Números en Kotlin<a class="headerlink" href="#2-lectura-de-numeros-en-kotlin" title="Permanent link">&para;</a></h3>
-<p>La lectura de datos numéricos desde el teclado es una tarea frecuente en aplicaciones de consola. Kotlin maneja la lectura de números de una manera segura y eficiente, permitiendo la conversión de la entrada de texto a diversos tipos numéricos como <code>Int</code>, <code>Double</code>, <code>Float</code>, etc.</p>
-<h4 id="21-ejemplo-basico-de-lectura-de-un-entero">2.1. Ejemplo Básico de Lectura de un Entero<a class="headerlink" href="#21-ejemplo-basico-de-lectura-de-un-entero" title="Permanent link">&para;</a></h4>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kd">fun</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Introduce un número entero:&quot;</span><span class="p">)</span>
-<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">numero</span><span class="p">:</span><span class="w"> </span><span class="kt">Int?</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">readLine</span><span class="p">()</span><span class="o">?.</span><span class="na">toIntOrNull</span><span class="p">()</span>
-<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>
-<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="w">    </span><span class="n">numero</span><span class="p">.</span><span class="o">?</span><span class="n">let</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">unNumero</span><span class="w"> </span><span class="o">-&gt;</span>
-<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="w">        </span><span class="n">println</span><span class="p">(</span><span class="s">&quot;El número introducido es </span><span class="si">$</span><span class="n">unNumero</span><span class="s">.&quot;</span><span class="p">)</span>
-<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="o">?:</span><span class="w"> </span><span class="n">println</span><span class="p">(</span><span class="s">&quot;No se ha introducido un número entero válido.&quot;</span><span class="p">)</span>
-<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>
-<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="p">}</span>
-</code></pre></div>
-<p>Este ejemplo solicita al usuario que introduzca un número entero. Utiliza <code>readLine()</code> para leer la entrada como texto y luego <code>toIntOrNull()</code> para intentar convertir esa entrada en un <code>Int</code>. Si la conversión falla (por ejemplo, si el usuario introduce texto que no se puede interpretar como un entero), <code>toIntOrNull()</code> devuelve <code>null</code>.</p>
-<p>Seguidamente, <code>let { unNumero -&gt; ... }</code> es una forma de ejecutar un bloque de código si el valor no es nulo. En este caso, si el número no es nulo, se imprime en la consola. De lo contrario, se muestra un mensaje de error.</p>
-<h4 id="22-lectura-de-otros-tipos-numericos">2.2. Lectura de Otros Tipos Numéricos<a class="headerlink" href="#22-lectura-de-otros-tipos-numericos" title="Permanent link">&para;</a></h4>
-<p>De manera similar, se pueden leer otros tipos numéricos usando las funciones de conversión correspondientes, como <code>toDoubleOrNull()</code> para <code>Double</code>, <code>toFloatOrNull()</code> para <code>Float</code>, etc. Estas funciones siguen el mismo patrón que <code>toIntOrNull()</code>, proporcionando una forma segura de intentar convertir la entrada de texto en el tipo numérico deseado.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kd">fun</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Introduce un número decimal:&quot;</span><span class="p">)</span>
-<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">decimal</span><span class="p">:</span><span class="w"> </span><span class="kt">Double?</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">readLine</span><span class="p">()</span><span class="o">?.</span><span class="na">toDoubleOrNull</span><span class="p">()</span>
-<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>
-<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">decimal</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="w">        </span><span class="n">println</span><span class="p">(</span><span class="s">&quot;El número decimal introducido es </span><span class="si">$</span><span class="n">decimal</span><span class="s">.&quot;</span><span class="p">)</span>
-<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="w">        </span><span class="n">println</span><span class="p">(</span><span class="s">&quot;No se ha introducido un número decimal válido.&quot;</span><span class="p">)</span>
-<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a><span class="p">}</span>
-</code></pre></div>
-<h4 id="23-consideraciones-importantes">2.3. Consideraciones Importantes<a class="headerlink" href="#23-consideraciones-importantes" title="Permanent link">&para;</a></h4>
+<h4 id="31-el-problema-del-salto-de-linea">3.1. El problema del salto de línea<a class="headerlink" href="#31-el-problema-del-salto-de-linea" title="Permanent link">&para;</a></h4>
+<p>Cuando mezclas <code>nextInt()</code>, <code>nextDouble()</code> o métodos similares con <code>nextLine()</code>, aparece un error muy común: el salto de línea que queda pendiente puede ser consumido por la siguiente lectura.</p>
+<p>Por eso, después de leer un número, suele hacer falta una llamada adicional a <code>nextLine()</code> para vaciar el final de línea.</p>
+<div class="admonition warning">
+<p class="admonition-title">Error frecuente con <code>Scanner</code></p>
+<p>Si después de <code>nextInt()</code> llamas a <code>nextLine()</code> y esta devuelve una cadena vacía, seguramente se debe a que aún quedaba pendiente el salto de línea anterior.</p>
+</div>
+<h4 id="32-cuando-compensa-usar-scanner">3.2. ¿Cuándo compensa usar <code>Scanner</code>?<a class="headerlink" href="#32-cuando-compensa-usar-scanner" title="Permanent link">&para;</a></h4>
+<p>Puede tener sentido cuando:</p>
 <ul>
-<li><strong>Manejo de <code>null</code></strong>: Es crucial manejar el caso de <code>null</code> al leer números para evitar <code>NullPointerException</code>. La utilización de <code>toIntOrNull()</code>, <code>toDoubleOrNull()</code>, etc., y verificar el resultado antes de usarlo, es una práctica recomendada.</li>
-<li><strong>Validación de Entrada</strong>: Cuando se solicitan datos numéricos específicos, es importante validar la entrada para asegurarse de que cumple con los requisitos esperados (por ejemplo, un número dentro de un rango específico).</li>
-<li><strong>Usabilidad</strong>: Para mejorar la experiencia del usuario, considera proporcionar mensajes de error claros o instrucciones en caso de entradas inválidas.</li>
+<li>ya estás trabajando con materiales Java;</li>
+<li>quieres leer tokens separados por espacios con rapidez;</li>
+<li>o necesitas interoperar con ejemplos ya construidos con esta clase.</li>
 </ul>
-<p>El manejo seguro y eficiente de la entrada numérica en Kotlin ayuda a crear aplicaciones robustas y amigables para el usuario, aprovechando las ventajas del sistema de tipos de Kotlin y su tratamiento de los valores nulos.</p>
-<h3 id="3-uso-de-la-clase-scanner-en-kotlin-para-la-lectura-de-datos">3. Uso de la Clase Scanner en Kotlin para la Lectura de Datos<a class="headerlink" href="#3-uso-de-la-clase-scanner-en-kotlin-para-la-lectura-de-datos" title="Permanent link">&para;</a></h3>
-<p>Aunque Kotlin proporciona <code>readLine()</code> para leer datos del teclado, en ciertos casos, cuando necesitamos leer diferentes tipos de datos de manera secuencial o realizar lecturas más complejas, todavía podemos beneficiarnos del uso de <code>Scanner</code> de Java. Esto demuestra la potente interoperabilidad de Kotlin con Java, permitiéndonos acceder a todo el ecosistema de bibliotecas de Java.</p>
-<h4 id="31-ejemplo-de-uso-de-scanner-en-kotlin">3.1. Ejemplo de Uso de Scanner en Kotlin<a class="headerlink" href="#31-ejemplo-de-uso-de-scanner-en-kotlin" title="Permanent link">&para;</a></h4>
-<p>Para utilizar <code>Scanner</code> en Kotlin, primero debemos importar la clase de Java:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="k">import</span><span class="w"> </span><span class="nn">java.util.Scanner</span>
-<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>
-<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="kd">fun</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">scanner</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="n">`in`</span><span class="p">)</span>
-<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>
-<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Introduce tu nombre:&quot;</span><span class="p">)</span>
-<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">nombre</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">scanner</span><span class="p">.</span><span class="na">nextLine</span><span class="p">()</span>
-<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a><span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Hola, </span><span class="si">$</span><span class="n">nombre</span><span class="s">.&quot;</span><span class="p">)</span>
-<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>
-<a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a><span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Introduce tu edad:&quot;</span><span class="p">)</span>
-<a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">edad</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">scanner</span><span class="p">.</span><span class="na">nextInt</span><span class="p">()</span>
-<a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a><span class="w">    </span><span class="c1">// Consumir la línea restante después de un número entero</span>
-<a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a><span class="w">    </span><span class="n">scanner</span><span class="p">.</span><span class="na">nextLine</span><span class="p">()</span>
-<a id="__codelineno-6-14" name="__codelineno-6-14" href="#__codelineno-6-14"></a>
-<a id="__codelineno-6-15" name="__codelineno-6-15" href="#__codelineno-6-15"></a><span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Introduce tu ciudad:&quot;</span><span class="p">)</span>
-<a id="__codelineno-6-16" name="__codelineno-6-16" href="#__codelineno-6-16"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">ciudad</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">scanner</span><span class="p">.</span><span class="na">nextLine</span><span class="p">()</span>
-<a id="__codelineno-6-17" name="__codelineno-6-17" href="#__codelineno-6-17"></a>
-<a id="__codelineno-6-18" name="__codelineno-6-18" href="#__codelineno-6-18"></a><span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Tu nombre es </span><span class="si">$</span><span class="n">nombre</span><span class="s">, tienes </span><span class="si">$</span><span class="n">edad</span><span class="s"> años y vives en </span><span class="si">$</span><span class="n">ciudad</span><span class="s">.&quot;</span><span class="p">)</span>
-<a id="__codelineno-6-19" name="__codelineno-6-19" href="#__codelineno-6-19"></a><span class="p">}</span>
+<p>En cambio, para los ejercicios básicos e intermedios de esta unidad, <code>readln()</code> y las conversiones seguras suelen ser más claras y más fáciles de explicar.</p>
+<h3 id="4-funciones-auxiliares-para-pedir-datos">4. Funciones auxiliares para pedir datos<a class="headerlink" href="#4-funciones-auxiliares-para-pedir-datos" title="Permanent link">&para;</a></h3>
+<p>Cuando un programa crece, repetir una y otra vez el mismo patrón de “pedir, convertir, validar y volver a pedir” hace que el código se vuelva pesado. Una mejora razonable consiste en crear funciones auxiliares.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kd">fun</span><span class="w"> </span><span class="nf">pedirEntero</span><span class="p">(</span><span class="n">mensaje</span><span class="p">:</span><span class="w"> </span><span class="kt">String</span><span class="p">):</span><span class="w"> </span><span class="kt">Int</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="kc">true</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">        </span><span class="n">print</span><span class="p">(</span><span class="n">mensaje</span><span class="p">)</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">        </span><span class="kd">val</span><span class="w"> </span><span class="nv">numero</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">readln</span><span class="p">().</span><span class="na">toIntOrNull</span><span class="p">()</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">numero</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="n">numero</span>
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>
+<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">err</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Debes escribir un número entero válido.&quot;</span><span class="p">)</span>
+<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a><span class="p">}</span>
+<a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a>
+<a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a><span class="kd">fun</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">edad</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">pedirEntero</span><span class="p">(</span><span class="s">&quot;Edad: &quot;</span><span class="p">)</span>
+<a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">curso</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">pedirEntero</span><span class="p">(</span><span class="s">&quot;Curso: &quot;</span><span class="p">)</span>
+<a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a>
+<a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a><span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Edad: </span><span class="si">$</span><span class="n">edad</span><span class="s"> | Curso: </span><span class="si">$</span><span class="n">curso</span><span class="s">&quot;</span><span class="p">)</span>
+<a id="__codelineno-4-19" name="__codelineno-4-19" href="#__codelineno-4-19"></a><span class="p">}</span>
 </code></pre></div>
-<h4 id="32-detalles-importantes">3.2. Detalles Importantes<a class="headerlink" href="#32-detalles-importantes" title="Permanent link">&para;</a></h4>
+<p>Este enfoque tiene dos ventajas:</p>
 <ul>
-<li><strong>Consumir la Nueva Línea</strong>: Después de leer un dato numérico (como <code>nextInt()</code>), es importante llamar a <code>nextLine()</code> para consumir el resto de la línea (incluido el salto de línea) antes de la próxima llamada a <code>nextLine()</code>. Si no lo hacemos, <code>nextLine()</code> podría no funcionar como se espera, ya que leerá el salto de línea restante en lugar de la próxima entrada del usuario.</li>
-<li><strong>Interoperabilidad con Java</strong>: Este ejemplo muestra cómo Kotlin puede usar sin problemas las clases y métodos disponibles en Java, lo que amplía significativamente las capacidades de Kotlin al proporcionar acceso a una vasta cantidad de bibliotecas existentes.</li>
-<li><strong>Manejo de Excepciones</strong>: Al igual que en Java, al usar <code>Scanner</code> en Kotlin, debemos estar conscientes de las posibles excepciones que pueden ocurrir durante la lectura de datos, especialmente cuando los tipos de datos de entrada no coinciden con lo que esperamos.</li>
+<li>evita duplicar código;</li>
+<li>y separa mejor la lógica de validación del resto del programa.</li>
 </ul>
-<p>La capacidad de utilizar <code>Scanner</code> de Java en Kotlin para leer datos del teclado es un excelente ejemplo de cómo Kotlin no solo simplifica el desarrollo sino que también mantiene la compatibilidad con Java, permitiéndonos elegir la herramienta más adecuada para cada tarea.</p>
-<h3 id="4-actualizacion">4. Actualización<a class="headerlink" href="#4-actualizacion" title="Permanent link">&para;</a></h3>
-<p>En versiones recientes de Kotlin (a partir de Kotlin 1.6), se introdujo la función <code>readln()</code> como una alternativa a <code>readLine()</code>. La principal diferencia entre <code>readln()</code> y <code>readLine()</code> es que <code>readln()</code> nunca devuelve <code>null</code>. Si el flujo de entrada estándar está cerrado o llega a su fin, <code>readln()</code> lanzará una excepción (<code>NoSuchElementException</code>), en lugar de devolver <code>null</code> como lo hace <code>readLine()</code>.</p>
-<p>Esto hace que <code>readln()</code> sea más conveniente para los casos en los que estás seguro de que la entrada estará disponible y prefieres manejar una posible falta de entrada mediante excepciones en lugar de comprobar <code>null</code>. Esta función simplifica el código en muchos casos de uso, eliminando la necesidad de comprobaciones nulas explícitas después de cada llamada a <code>readLine()</code>.</p>
-<h4 id="41-ejemplo-de-uso-de-readln">4.1. Ejemplo de Uso de <code>readln()</code><a class="headerlink" href="#41-ejemplo-de-uso-de-readln" title="Permanent link">&para;</a></h4>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="kd">fun</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Introduce tu nombre:&quot;</span><span class="p">)</span>
-<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">nombre</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">readln</span><span class="p">()</span><span class="w"> </span><span class="c1">// No requiere comprobación de null</span>
-<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>
-<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Hola, </span><span class="si">$</span><span class="n">nombre</span><span class="s">&quot;</span><span class="p">)</span>
-<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="p">}</span>
+<h4 id="41-variante-para-numeros-decimales">4.1. Variante para números decimales<a class="headerlink" href="#41-variante-para-numeros-decimales" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kd">fun</span><span class="w"> </span><span class="nf">pedirDouble</span><span class="p">(</span><span class="n">mensaje</span><span class="p">:</span><span class="w"> </span><span class="kt">String</span><span class="p">):</span><span class="w"> </span><span class="kt">Double</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="kc">true</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">        </span><span class="n">print</span><span class="p">(</span><span class="n">mensaje</span><span class="p">)</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="w">        </span><span class="kd">val</span><span class="w"> </span><span class="nv">numero</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">readln</span><span class="p">().</span><span class="na">toDoubleOrNull</span><span class="p">()</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">numero</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="n">numero</span>
+<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>
+<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">err</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Debes escribir un número decimal válido.&quot;</span><span class="p">)</span>
+<a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a><span class="p">}</span>
 </code></pre></div>
-<h4 id="42-ejemplo-con-conversion-de-tipo">4.2. Ejemplo con Conversión de Tipo<a class="headerlink" href="#42-ejemplo-con-conversion-de-tipo" title="Permanent link">&para;</a></h4>
-<p>Junto con <code>readln()</code>, Kotlin 1.6 también introdujo las funciones <code>readlnOrNull()</code> para casos en los que pueda ser aceptable recibir un <code>null</code> (aunque su uso es menos común que <code>readln()</code>), y funciones de extensión como <code>toIntOrNull()</code> que pueden ser encadenadas directamente después de <code>readln()</code> para la conversión de tipos.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="kd">fun</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Introduce tu edad:&quot;</span><span class="p">)</span>
-<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">edad</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">readln</span><span class="p">().</span><span class="na">toIntOrNull</span><span class="p">()</span><span class="w"> </span><span class="c1">// Convierte la entrada a Int, con manejo seguro de errores</span>
-<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>
-<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">edad</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="w">        </span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Tu edad es </span><span class="si">$</span><span class="n">edad</span><span class="s">&quot;</span><span class="p">)</span>
-<a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a><span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a><span class="w">        </span><span class="n">println</span><span class="p">(</span><span class="s">&quot;No has introducido una edad válida.&quot;</span><span class="p">)</span>
-<a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a><span class="p">}</span>
+<p>Estas funciones no son obligatorias, pero ayudan mucho a escribir programas de consola más limpios.</p>
+<h3 id="5-argumentos-de-linea-de-comandos">5. Argumentos de línea de comandos<a class="headerlink" href="#5-argumentos-de-linea-de-comandos" title="Permanent link">&para;</a></h3>
+<p>No toda la entrada de un programa de consola tiene por qué llegar desde teclado mientras el programa se está ejecutando. También es posible pasar información al arrancarlo mediante argumentos.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="kd">fun</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">args</span><span class="p">:</span><span class="w"> </span><span class="n">Array</span><span class="o">&lt;</span><span class="kt">String</span><span class="o">&gt;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">args</span><span class="p">.</span><span class="na">isEmpty</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="w">        </span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Debes indicar al menos un nombre.&quot;</span><span class="p">)</span>
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="w">        </span><span class="k">return</span>
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>
+<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Hola, </span><span class="si">${</span><span class="n">args</span><span class="o">[</span><span class="m">0</span><span class="o">]</span><span class="si">}</span><span class="s">&quot;</span><span class="p">)</span>
+<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a><span class="p">}</span>
 </code></pre></div>
-<p>Estas adiciones a Kotlin simplifican la lectura y el manejo de la entrada del usuario, permitiendo escribir código más claro y directo para la interacción con el usuario a través de la consola.</p>
-<h3 id="5-ejercicios-de-lectura-de-datos-en-kotlin">5. Ejercicios de Lectura de Datos en Kotlin<a class="headerlink" href="#5-ejercicios-de-lectura-de-datos-en-kotlin" title="Permanent link">&para;</a></h3>
-<p>Los siguientes ejercicios en Kotlin están diseñados para reforzar el aprendizaje sobre la lectura de datos desde el teclado, abarcando desde la lectura de tipos de datos simples hasta el manejo de entrada más compleja.</p>
-<h4 id="51-ejercicio-1-lectura-de-un-numero-y-calculo-de-su-cuadrado">5.1. Ejercicio 1: Lectura de un Número y Cálculo de su Cuadrado<a class="headerlink" href="#51-ejercicio-1-lectura-de-un-numero-y-calculo-de-su-cuadrado" title="Permanent link">&para;</a></h4>
-<p>Este ejercicio pide al usuario que introduzca un número entero y calcula el cuadrado de este número.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="kd">fun</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Introduce un número entero:&quot;</span><span class="p">)</span>
-<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">numero</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">readLine</span><span class="p">()</span><span class="o">?.</span><span class="na">toIntOrNull</span><span class="p">()</span>
-<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>
-<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">numero</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a><span class="w">        </span><span class="kd">val</span><span class="w"> </span><span class="nv">cuadrado</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">numero</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">numero</span>
-<a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a><span class="w">        </span><span class="n">println</span><span class="p">(</span><span class="s">&quot;El cuadrado de </span><span class="si">$</span><span class="n">numero</span><span class="s"> es </span><span class="si">$</span><span class="n">cuadrado</span><span class="s">&quot;</span><span class="p">)</span>
-<a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a><span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a><span class="w">        </span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Entrada no válida&quot;</span><span class="p">)</span>
-<a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a><span class="p">}</span>
-</code></pre></div>
-<h4 id="52-ejercicio-2-lectura-de-datos-personales">5.2. Ejercicio 2: Lectura de Datos Personales<a class="headerlink" href="#52-ejercicio-2-lectura-de-datos-personales" title="Permanent link">&para;</a></h4>
-<p>Solicita al usuario que introduzca su nombre, edad y país de origen, y luego imprime esta información en un formato estructurado.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="kd">fun</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Introduce tu nombre:&quot;</span><span class="p">)</span>
-<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">nombre</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">readLine</span><span class="p">()</span>
-<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Introduce tu edad:&quot;</span><span class="p">)</span>
-<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">edad</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">readLine</span><span class="p">()</span><span class="o">?.</span><span class="na">toIntOrNull</span><span class="p">()</span>
-<a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a><span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Introduce tu país de origen:&quot;</span><span class="p">)</span>
-<a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">pais</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">readLine</span><span class="p">()</span>
-<a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a>
-<a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">nombre</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">null</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">edad</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">null</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">pais</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a><span class="w">        </span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Nombre: </span><span class="si">$</span><span class="n">nombre</span><span class="s">, Edad: </span><span class="si">$</span><span class="n">edad</span><span class="s">, País de origen: </span><span class="si">$</span><span class="n">pais</span><span class="s">&quot;</span><span class="p">)</span>
-<a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a><span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-10-12" name="__codelineno-10-12" href="#__codelineno-10-12"></a><span class="w">        </span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Alguna de las entradas es inválida.&quot;</span><span class="p">)</span>
-<a id="__codelineno-10-13" name="__codelineno-10-13" href="#__codelineno-10-13"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-10-14" name="__codelineno-10-14" href="#__codelineno-10-14"></a><span class="p">}</span>
-</code></pre></div>
-<h4 id="53-ejercicio-3-calculadora-simple">5.3. Ejercicio 3: Calculadora Simple<a class="headerlink" href="#53-ejercicio-3-calculadora-simple" title="Permanent link">&para;</a></h4>
-<p>Implementa una calculadora simple que lee dos números y un operador (+, -, *, /) desde el teclado, y muestra el resultado de la operación.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="k">import</span><span class="w"> </span><span class="nn">java.util.Scanner</span>
-<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>
-<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="kd">fun</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">scanner</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="n">`in`</span><span class="p">)</span>
-<a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a>
-<a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a><span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Introduce el primer número:&quot;</span><span class="p">)</span>
-<a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">numero1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">scanner</span><span class="p">.</span><span class="na">nextDouble</span><span class="p">()</span>
-<a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a><span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Introduce el operador (+, -, *, /):&quot;</span><span class="p">)</span>
-<a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">operador</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">scanner</span><span class="p">.</span><span class="na">next</span><span class="p">()</span><span class="o">[</span><span class="m">0</span><span class="o">]</span>
-<a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a><span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Introduce el segundo número:&quot;</span><span class="p">)</span>
-<a id="__codelineno-11-11" name="__codelineno-11-11" href="#__codelineno-11-11"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">numero2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">scanner</span><span class="p">.</span><span class="na">nextDouble</span><span class="p">()</span>
-<a id="__codelineno-11-12" name="__codelineno-11-12" href="#__codelineno-11-12"></a>
-<a id="__codelineno-11-13" name="__codelineno-11-13" href="#__codelineno-11-13"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">resultado</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">when</span><span class="w"> </span><span class="p">(</span><span class="n">operador</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-11-14" name="__codelineno-11-14" href="#__codelineno-11-14"></a><span class="w">        </span><span class="sc">&#39;+&#39;</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">numero1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">numero2</span>
-<a id="__codelineno-11-15" name="__codelineno-11-15" href="#__codelineno-11-15"></a><span class="w">        </span><span class="sc">&#39;-&#39;</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">numero1</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">numero2</span>
-<a id="__codelineno-11-16" name="__codelineno-11-16" href="#__codelineno-11-16"></a><span class="w">        </span><span class="sc">&#39;*&#39;</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">numero1</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">numero2</span>
-<a id="__codelineno-11-17" name="__codelineno-11-17" href="#__codelineno-11-17"></a><span class="w">        </span><span class="sc">&#39;/&#39;</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">numero1</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">numero2</span>
-<a id="__codelineno-11-18" name="__codelineno-11-18" href="#__codelineno-11-18"></a><span class="w">        </span><span class="k">else</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="s">&quot;Operador no válido&quot;</span>
-<a id="__codelineno-11-19" name="__codelineno-11-19" href="#__codelineno-11-19"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-11-20" name="__codelineno-11-20" href="#__codelineno-11-20"></a>
-<a id="__codelineno-11-21" name="__codelineno-11-21" href="#__codelineno-11-21"></a><span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Resultado: </span><span class="si">$</span><span class="n">resultado</span><span class="s">&quot;</span><span class="p">)</span>
-<a id="__codelineno-11-22" name="__codelineno-11-22" href="#__codelineno-11-22"></a><span class="p">}</span>
-</code></pre></div>
-<p>Estos ejercicios cubren aspectos básicos de la lectura de datos en Kotlin y demuestran cómo manejar diferentes tipos de entrada de manera efectiva. A través de la práctica con estos ejemplos, se puede obtener una comprensión sólida de cómo procesar la entrada del usuario en aplicaciones Kotlin.</p>
-<h2 id="fuente">Fuente<a class="headerlink" href="#fuente" title="Permanent link">&para;</a></h2>
+<p>Si el programa se ejecuta pasando un nombre como argumento, ese valor llegará dentro de <code>args</code>.</p>
+<h4 id="51-diferencia-entre-teclado-y-argumentos">5.1. Diferencia entre teclado y argumentos<a class="headerlink" href="#51-diferencia-entre-teclado-y-argumentos" title="Permanent link">&para;</a></h4>
 <ul>
-<li><a href="https://kotlinlang.org/">Kotlin Programming Language</a></li>
-<li><a href="https://kotlinlang.org/docs/reference/">Kotlin Reference</a></li>
-<li><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Scanner.html">Java Scanner Class</a></li>
-<li><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.io/read-line.html">ReadLine Function in Kotlin</a> </li>
+<li><strong>Teclado</strong>: la entrada se solicita durante la ejecución.</li>
+<li><strong>Argumentos</strong>: la entrada se entrega antes de que el programa empiece a ejecutarse.</li>
+</ul>
+<p>Ambas opciones forman parte del trabajo con programas de consola, pero no resuelven exactamente la misma necesidad.</p>
+<h3 id="6-mini-comparativa-que-mecanismo-elegir">6. Mini comparativa: qué mecanismo elegir<a class="headerlink" href="#6-mini-comparativa-que-mecanismo-elegir" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Situación</th>
+<th>Opción recomendable</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Programa interactivo sencillo</td>
+<td><code>readln()</code></td>
+</tr>
+<tr>
+<td>Entrada que puede agotarse</td>
+<td><code>readlnOrNull()</code></td>
+</tr>
+<tr>
+<td>Código heredado o ejemplos antiguos</td>
+<td><code>readLine()</code></td>
+</tr>
+<tr>
+<td>Interoperabilidad con Java o lectura token a token</td>
+<td><code>Scanner</code></td>
+</tr>
+<tr>
+<td>Parámetros dados al lanzar el programa</td>
+<td><code>args: Array&lt;String&gt;</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="7-propuestas-de-practica">7. Propuestas de práctica<a class="headerlink" href="#7-propuestas-de-practica" title="Permanent link">&para;</a></h3>
+<p>Para aprovechar esta ampliación, puedes probar actividades como estas:</p>
+<ol>
+<li>Reescribir un programa hecho con <code>readln()</code> para que funcione con <code>readlnOrNull()</code>.</li>
+<li>Crear una función <code>pedirEntero()</code> y reutilizarla varias veces en un mismo programa.</li>
+<li>Hacer una versión de calculadora con <code>Scanner</code> y comparar su legibilidad con una versión basada en <code>readln()</code>.</li>
+<li>Ejecutar un programa con argumentos y compararlo con otro que pida los datos por teclado.</li>
+</ol>
+<h3 id="8-idea-final-que-debes-recordar">8. Idea final que debes recordar<a class="headerlink" href="#8-idea-final-que-debes-recordar" title="Permanent link">&para;</a></h3>
+<p>El tema principal <code>7.2</code> te enseña a usar la consola. Esta ampliación te ayuda a tomar mejores decisiones cuando aparecen casos menos simples: entrada que se agota, código Java heredado, validación repetitiva o datos que llegan como argumentos.</p>
+<p>Saber elegir entre <code>readln()</code>, <code>readlnOrNull()</code>, <code>Scanner</code> o <code>args</code> forma parte de reconocer las posibilidades reales de entrada/salida del lenguaje, que es precisamente una de las ideas centrales del <code>RA5</code>.</p>
+<h2 id="fuentes">Fuentes<a class="headerlink" href="#fuentes" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://kotlinlang.org/docs/read-standard-input.html">Kotlin Docs - Read standard input</a></li>
+<li><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.io/readln.html">Kotlin Stdlib - <code>readln</code></a></li>
+<li><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.io/readln-or-null.html">Kotlin Stdlib - <code>readlnOrNull</code></a></li>
+<li><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.io/read-line.html">Kotlin Stdlib - <code>readLine</code></a></li>
+<li><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/Scanner.html">Oracle Java SE - <code>Scanner</code></a></li>
 </ul>
 
 

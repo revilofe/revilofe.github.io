@@ -1,10 +1,10 @@
 ---
 title: "UD 3 - 3.5.1 Contención de incidentes: medidas y estrategias"
-description: "Apuntes didácticos sobre contención en respuesta a incidentes: objetivos, estrategias, playbooks, decisiones y checklist técnico-organizativo para alumnado de ciberseguridad."
-summary: "Guía de contención: qué es, cuándo aplicarla, cómo decidir entre contención a corto/largo plazo y cómo ejecutarla por escenarios y por capas."
+description: "Apuntes didácticos sobre contención en respuesta a incidentes: objetivos, estrategias, decisiones, playbooks y relación con investigación, erradicación y recuperación."
+summary: "Guía de contención para entender qué es, cuándo aplicarla, cómo decidir entre medidas tácticas y estratégicas y cómo coordinarla con la investigación del incidente y la recuperación."
 authors:
     - Eduardo Fdez
-date: 2026-02-23
+date: 2026-03-19
 icon: "material/file-document-outline"
 permalink: /is/unidad-3/3.5.1-contencion-de-incidentes
 categories:
@@ -28,18 +28,26 @@ La contención suele venir **después de identificar un evento** y concluir que 
 - identificar la población de sistemas y usuarios afectados,
 - y poner en cuarentena lo afectado hasta que la situación se resuelva y el negocio vuelva a la normalidad.
 
-Este tema está directamente alineado con:
-
-- **RA3 (CE 3.e)**: iniciar las primeras medidas de contención para limitar daños.
+> Este tema está directamente alineado con el RA 3:
+>    - e) Iniciar las primeras medidas de contención para limitar daños.
 
 !!! definition "Definición"
     La contención es el conjunto de medidas que **limitan el alcance** de un incidente, reducen su propagación y cortan la capacidad del atacante de seguir actuando, **sin perder de vista la evidencia** y el impacto en negocio.
+
+En la secuencia lógica de la unidad, la contención **no sustituye a la investigación** ni cierra por sí sola el incidente. La investigación ayuda a decidir **qué conviene contener y por qué**, mientras que la erradicación y la recuperación llegan después para eliminar la causa y devolver los servicios a la normalidad.
+
+!!! note "Relación con el resto de la unidad"
+    La contención actúa como un puente entre tres momentos del trabajo técnico:
+
+    - **investigar**, para entender alcance, vector de entrada e impacto;
+    - **contener**, para frenar el daño y ganar tiempo;
+    - **erradicar y recuperar**, para eliminar la causa y volver al servicio con seguridad.
 
 ### 1. Objetivos de la contención
 
 La contención persigue objetivos muy concretos (y evaluables):
 
-1. **Parar el “sangrado”**: detener propagación, exfiltración o cifrado.
+1. **Detener el daño activo**: frenar propagación, exfiltración o cifrado.
 
     En la práctica suele ser lo primero: si el incidente sigue “en marcha”, cada minuto puede aumentar el impacto. Un ejemplo claro es el ransomware: si hay cifrado activo, el objetivo es **pararlo ya** para que no afecte a más equipos.
 
@@ -100,11 +108,11 @@ Una forma muy práctica (y realista) de explicarlo es separar dos estrategias:
     
     Aun así, algunos enfoques priorizan identificar rápido todos los sistemas afectados para preparar erradicación. Observar al atacante “para aprender” puede tener sentido en casos concretos, pero el riesgo de observar y no actuar suele ser alto.
     
-    Con esto en mente, pasamos a los principios de oro: los que evitan que una contención “a lo loco” empeore el incidente.
+    Con esto en mente, pasamos a los principios clave: los que evitan que una contención improvisada empeore el incidente.
 
-### 3. Principios de oro antes de “tocar botones”
+### 3. Principios clave antes de actuar
 
-Hay cinco principios que debéis interiorizar (porque son los que evitan desastres):
+Hay cinco principios que conviene interiorizar, porque son los que más ayudan a contener sin perder el control del incidente:
 
 - **Evidencia primero (cuando aplique)**: si vais a perder memoria, conexiones o procesos, hay que valorar la captura rápida antes de aislar o apagar.
 
@@ -224,7 +232,7 @@ En cada paso, la comunicación con negocio y dirección es clave para gestionar 
 
 Este flujo es una guía general, pero cada incidente es único. A partir de aquí vamos a aterrizarlo en tres ideas prácticas: IoC y alcance (4.1), estrategia (4.2) y secuencia iterativa (4.3).
 
-#### 4.1. Indicadores, alcance y cuarentena (lo que suele marcar la diferencia)
+#### 4.1. Indicadores, alcance y cuarentena
 
 En contención hay una idea muy potente: **no basta con “ver el síntoma”**, hay que usarlo para descubrir el resto del incidente. Es decir, conviertes el síntoma en indicadores (IoC) y luego buscas esos indicadores en el entorno para delimitar el alcance.
 
@@ -247,7 +255,7 @@ Esto es lo que marca la diferencia entre “contener un equipo” y “contener 
     !!! tip "Consejo"
         En muchos casos, **la atribución** (quién ha sido) no es lo primero. Lo urgente suele ser: contener, inventariar sistemas afectados y preparar erradicación.
         
-        Si os centráis en “quién” demasiado pronto, podéis perder tiempo mientras el incidente sigue creciendo. En la mayoría de organizaciones, la atribución suele ser lo último que se prioriza.
+        Si el equipo se centra en “quién” demasiado pronto, puede perder tiempo mientras el incidente sigue creciendo. En la mayoría de organizaciones, la atribución suele ser lo último que se prioriza.
 
 2. **Delimitar la población afectada**.
 
@@ -272,7 +280,7 @@ Esto es lo que marca la diferencia entre “contener un equipo” y “contener 
     
     Esto es más fácil cuando hay playbooks y herramientas listas, porque el tiempo durante un incidente es oro.
 
-#### 4.2. Elegir una estrategia de contención (según capacidad y objetivos)
+#### 4.2. Elegir una estrategia de contención según capacidad y objetivos
 
 Si el objetivo es identificar, contener y erradicar lo antes posible antes de que haya daño en datos sensibles, la pregunta es: ¿qué estrategia realista puedo ejecutar con lo que tengo?
 
@@ -322,7 +330,7 @@ Una vez que ya sabes “qué está afectado” (o al menos tienes una primera li
 
 ### 5. Catálogo de medidas de contención por capas
 
-Para que os resulte aplicable en laboratorio, agrupamos por capas: red, identidad, endpoint y servicios.
+Para que resulte aplicable en laboratorio y en casos reales sencillos, agrupamos las medidas por capas: red, identidad, endpoint y servicios.
 
 La idea es que, en cada capa, distingáis entre:
 
@@ -440,7 +448,7 @@ NCSC mantiene guías específicas para mitigar malware y ransomware. ([ncsc.gov.
 5. Registrar acciones y preservar evidencia mínima si es viable.
 
 !!! note "Nota"
-    Antes de bloquear “a lo loco”, confirmad lo básico: que la alerta no sea un falso positivo o un malware antiguo sin impacto. Si tenéis una muestra (hash, fichero, URL), el análisis ayuda a sacar IoC útiles para buscar otros equipos afectados.
+    Antes de bloquear de forma masiva, conviene confirmar lo básico: que la alerta no sea un falso positivo o un malware antiguo sin impacto. Si se dispone de una muestra (hash, fichero o URL), el análisis ayuda a extraer IoC útiles para buscar otros equipos afectados.
     
     Si el análisis revela dominios o IP relacionados, eso puede ayudar a detectar comunicación de mando y control (C2) y a localizar otras máquinas que estén intentando conectar con esos destinos.
 
@@ -603,7 +611,7 @@ Aquí entran casos como abuso de privilegios, creación de cuentas sin permiso o
 * PAM, mínimo privilegio, auditoría de cambios y alertas de cuentas privilegiadas.
 
 
-### 7. Matriz de decisiones: “contener mucho” vs “contener fino”
+### 7. Matriz de decisiones de contención
 
 | Decisión                                   | Ventaja            | Riesgo                           | Cuándo usar                                        |
 |--------------------------------------------|--------------------|----------------------------------|----------------------------------------------------|
@@ -616,7 +624,7 @@ Aquí entran casos como abuso de privilegios, creación de cuentas sin permiso o
     Una organización madura no improvisa: tiene playbooks, segmentación razonable y un flujo de escalado claro.
 
 
-### 8. Errores típicos 
+### 8. Errores frecuentes en contención
 
 Durante contención, es fácil caer en errores que empeoran el incidente. Aquí tenéis los más comunes:
 
@@ -624,7 +632,7 @@ Durante contención, es fácil caer en errores que empeoran el incidente. Aquí 
 
     Es tentador “borrar y empezar de nuevo”, pero si no entendéis qué ha pasado, es fácil que el atacante vuelva a entrar por el mismo agujero o que haya otros sistemas afectados sin contener. Investigar no es solo para “saber quién ha sido”, sino para entender el vector de entrada, la persistencia y el movimiento lateral. Esto te ayuda a cerrar el incidente de forma completa y a mejorar la postura de seguridad para que no vuelva a pasar.
 
-2. **Aislar solo el “paciente 0”** cuando ya hay movimiento lateral.
+2. **Aislar solo el primer sistema detectado** cuando ya hay movimiento lateral.
 
     Si solo aislas el primer equipo detectado, pero el atacante ya se ha movido a otros, es como poner una venda en un brazo roto: no solucionas el problema real. Es fundamental usar los IoC para buscar en el entorno y delimitar el alcance. De lo contrario, puedes dejar otros sistemas comprometidos sin contener, lo que puede llevar a un incidente más grande o a una recaída.
 
@@ -718,10 +726,6 @@ A continuación, actividades pensadas para que alumnos y alumnas practiquéis co
 * CISA #StopRansomware Guide (guía y checklist de respuesta). ([cisa.gov][2])
 * UK NCSC: mitigación de malware y ransomware (guía práctica). ([ncsc.gov.uk][3])
 * MITRE ATT&CK Mitigation M1030: Network Segmentation. ([attack.mitre.org][1])
-
-## Presentación
-
-Por definir.
 
 ## Recursos adicionales
 

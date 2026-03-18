@@ -1,104 +1,247 @@
 ---
-
-title: "UD 7 - 7.4.1 Text File"
-description: Text File
-summary: Text File
+title: "UD 7 - 7.4.1 Ficheros de texto"
+description: Trabajo práctico con lectura y escritura de ficheros de texto en Kotlin
+summary: Detalle técnico de los ficheros de texto en Kotlin: lectura completa, lectura por líneas, escritura, añadido de contenido, caracteres especiales y buenas prácticas.
 authors:
-  - Eduardo Fdez
-date: 2024-03-28
+    - Eduardo Fdez
+date: 2026-03-19
 icon: "material/file-document-outline"
 permalink: /prog/unidad7/7.4.1
 categories:
-  - PROG
+    - PROG
 tags:
-  - Software
-  - File
-
+    - Kotlin
+    - Ficheros
+    - Texto
+    - Entrada/Salida
 ---
-## 7.4.1 Text File
-En esta sección se proporciona una guía detallada sobre cómo trabajar con ficheros de texto en Kotlin, incluyendo cómo escribir y leer ficheros, manejar caracteres especiales y consideraciones importantes al trabajar con ficheros de texto. Se incluyen ejemplos prácticos y recomendaciones para facilitar el manejo eficiente y seguro de ficheros en Kotlin.
 
-### 1. Introducción a Ficheros de Texto en Kotlin
+## 7.4.1 Ficheros de texto
 
-El trabajo con ficheros de texto es una capacidad esencial en la programación que permite a las aplicaciones leer y escribir datos persistentes. Kotlin, gracias a su interoperabilidad con Java y sus propias abstracciones de alto nivel, facilita considerablemente estas tareas, proporcionando un conjunto de herramientas eficaces y sencillas de usar que mejoran tanto la productividad del desarrollador como la seguridad del código.
+En `7.4` vimos la visión general de la lectura y escritura de archivos. En esta ampliación nos centramos en el caso más habitual en el aula: **los ficheros de texto**.
 
-#### 1.1. ¿Por Qué Ficheros de Texto?
+Trabajar con texto es muy común porque permite guardar información de forma sencilla, visible y fácil de depurar. Además, es ideal para practicar cómo leer, escribir y procesar datos persistentes en programas pequeños y medianos.
 
-Los ficheros de texto se utilizan ampliamente para almacenar y transferir datos debido a su simplicidad, interoperabilidad entre diferentes sistemas y facilidad de edición y visualización. Desde la configuración de aplicaciones hasta el almacenamiento de grandes volúmenes de datos, los ficheros de texto ofrecen una forma flexible y accesible de manejar información.
+!!! abstract "Qué vas a aprender en este apartado"    
+    - Cuándo conviene usar un fichero de texto.    
+    - Cómo leer un fichero completo o línea a línea.     
+    - Cómo escribir texto sobrescribiendo o añadiendo contenido.     
+    - Cómo influyen caracteres como `\n`, `\r` y `\t`.
 
-#### 1.2. Ventajas de Kotlin
+### 1. Qué es un fichero de texto
 
-Kotlin se destaca en el manejo de ficheros de texto por varias razones:
+Un fichero de texto almacena la información como caracteres. Eso hace que, en muchos casos, podamos abrirlo con un editor y entender su contenido directamente.
 
-- **Sintaxis Concisa**: Kotlin reduce la verbosidad típica de Java, permitiendo realizar operaciones complejas con ficheros en menos líneas de código y de manera más legible.
-- **Seguridad de Tipos**: Kotlin maneja la nulidad a nivel del sistema de tipos, lo que reduce el riesgo de errores comunes como `NullPointerException`.
-- **Interoperabilidad con Java**: Kotlin puede utilizar todas las bibliotecas de Java para manejar ficheros, incluyendo `java.io.File`, proporcionando una gran cantidad de funcionalidades mientras se añaden mejoras específicas de Kotlin.
+Ejemplos típicos:
 
-#### 1.3. Operaciones Básicas con Ficheros
+- configuraciones;
+- listados de datos;
+- archivos CSV;
+- informes;
+- registros de eventos.
 
-En Kotlin, las operaciones más comunes con ficheros de texto incluyen:
+```text
+Ana,8.5
+Luis,7.25
+Marta,9.0
+```
 
-- **Lectura de ficheros**: Puede realizarse de manera simple con funciones como `readText()` para leer el contenido completo del fichero en una cadena de texto, o `readLines()` para obtener una lista de todas las líneas del fichero.
-- **Escritura en ficheros**: Con `writeText()`, se puede escribir una cadena de texto en un fichero, sobrescribiendo su contenido anterior, o `appendText()` para añadir texto al final del fichero existente.
-- **Manejo de ficheros y directorios**: Kotlin permite crear, borrar, y verificar la existencia de ficheros y directorios con métodos como `createNewFile()`, `delete()`, y `exists()`.
+!!! note "Ventaja principal"
+    Los ficheros de texto son muy cómodos para aprender, porque permiten ver de forma directa qué se ha guardado realmente.
 
-#### 1.4. Ejemplo Introductorio
+### 2. Crear una referencia al fichero
+
+Antes de leer o escribir, necesitamos una referencia al fichero mediante `File`:
+
+```kotlin
+import java.io.File
+
+val fichero = File("datos/notas.txt")
+```
+
+Esto no lee todavía el contenido. Solo prepara la ruta con la que vamos a trabajar.
+
+### 3. Leer ficheros de texto
+
+Kotlin ofrece varias formas de leer ficheros de texto. La elección depende de cuánto contenido quieras leer y de cómo vayas a procesarlo.
+
+#### 3.1. Leer todo con `readText()`
+
+Si el fichero es pequeño o mediano, `readText()` resulta muy cómodo:
 
 ```kotlin
 import java.io.File
 
 fun main() {
-    // Crear o abrir un fichero
-    val miFichero = File("miArchivo.txt")
-
-    // Escribir en el fichero
-    miFichero.writeText("Hola, Kotlin.\n")
-
-    // Leer del fichero
-    val contenido = miFichero.readText()
+    val contenido = File("datos/notas.txt").readText()
     println(contenido)
 }
 ```
 
-Este ejemplo demuestra cómo crear un fichero, escribir un simple mensaje y luego leer el mensaje del fichero, todo ello con pocas líneas de código gracias a las funciones de Kotlin diseñadas para trabajar de forma eficiente con ficheros de texto.
+Úsalo cuando necesites el contenido completo como una única cadena.
 
-### 2. Escribir en un Fichero de Texto en Kotlin
+#### 3.2. Leer todas las líneas con `readLines()`
 
-Escribir en ficheros de texto es una operación fundamental en la mayoría de las aplicaciones, desde el registro de eventos (logging) hasta la generación de reportes. Kotlin ofrece métodos directos y seguros para escribir en ficheros, facilitando esta tarea con su sintaxis concisa y expresiva.
-
-#### 2.1. Abrir o Crear un Fichero para Escritura
-
-Antes de escribir en un fichero, primero debemos tener una referencia a este fichero. En Kotlin, esto se hace instanciando un objeto de la clase `File` del paquete `java.io`, que es totalmente accesible gracias a la interoperabilidad de Kotlin con Java.
+Si te interesa trabajar por líneas, `readLines()` devuelve una lista:
 
 ```kotlin
 import java.io.File
 
-val miFichero = File("miArchivo.txt")
+fun main() {
+    val lineas = File("datos/notas.txt").readLines()
+
+    for (linea in lineas) {
+        println(linea)
+    }
+}
 ```
 
-Si el fichero especificado no existe, se creará uno nuevo al realizar la escritura. Si ya existe, su contenido puede ser sobrescrito o complementado, dependiendo del método que se utilice.
+Esta opción es práctica cuando el fichero no es enorme y quieres recorrerlo después con comodidad.
 
-#### 2.2. Escribir Texto en el Fichero
+#### 3.3. Procesar línea a línea con `useLines()`
 
-Kotlin simplifica la escritura en ficheros con el método `writeText()`, que toma una cadena de caracteres como argumento y la escribe en el fichero, sobrescribiendo cualquier contenido previo.
+Si el fichero puede crecer mucho, `useLines()` permite procesar el contenido de forma más eficiente:
 
 ```kotlin
-miFichero.writeText("Este es un nuevo contenido.\n")
+import java.io.File
+
+fun main() {
+    File("datos/notas.txt").useLines { lineas ->
+        lineas.forEach { println(it) }
+    }
+}
 ```
 
-Para añadir texto a un fichero existente sin sobrescribir su contenido, se puede usar `appendText()`:
+Con `useLines()` no necesitas cargar todo el fichero a memoria a la vez.
+
+!!! tip "Elección rápida"
+    - `readText()` para obtener una sola cadena.
+    - `readLines()` para trabajar con una lista de líneas.
+    - `useLines()` para ficheros grandes o procesamiento secuencial.
+
+### 4. Escribir en ficheros de texto
+
+La escritura también puede hacerse de distintas formas según lo que necesites.
+
+#### 4.1. Sobrescribir con `writeText()`
+
+`writeText()` escribe texto en el fichero y reemplaza el contenido anterior si ya existía:
 
 ```kotlin
-miFichero.appendText("Este texto se añade al final.\n")
+import java.io.File
+
+fun main() {
+    File("salida.txt").writeText("Hola desde Kotlin\n")
+}
 ```
 
-#### 2.3. Cerrar el Fichero
+Es útil cuando quieres generar el fichero desde cero o rehacerlo completamente.
 
-Una de las ventajas de trabajar con ficheros en Kotlin es que no es necesario cerrarlos explícitamente cuando se usan `writeText()` o `appendText()`. Estas funciones se encargan del manejo de recursos automáticamente, asegurando que el fichero se cierre adecuadamente después de la operación.
+#### 4.2. Añadir con `appendText()`
 
-#### 2.4. Ejemplo Práctico: Registro de Eventos
+Si quieres conservar lo anterior y escribir al final, usa `appendText()`:
 
-A continuación, se muestra un ejemplo práctico de cómo podrías usar la escritura en ficheros para implementar un simple sistema de registro de eventos (logging).
+```kotlin
+import java.io.File
+
+fun main() {
+    File("log.txt").appendText("Nueva entrada\n")
+}
+```
+
+Esto es muy útil para historiales, registros o acumulación de resultados.
+
+#### 4.3. Escribir con `bufferedWriter()`
+
+Otra opción es usar un escritor con buffer:
+
+```kotlin
+import java.io.File
+
+fun main() {
+    File("salida.txt").bufferedWriter().use { writer ->
+        writer.write("Primera línea\n")
+        writer.write("Segunda línea\n")
+    }
+}
+```
+
+Aquí aparece `use()`, que garantiza que el recurso se cierre correctamente al terminar.
+
+!!! warning "Muy importante"
+    `writeText()` borra el contenido anterior. Si necesitas conservar lo ya escrito, usa `appendText()`.
+
+### 5. Leer y escribir con el mismo formato
+
+Cuando un programa escribe información en un fichero de texto, debe hacerlo siguiendo un formato claro. Después, al leer ese fichero, hay que respetar ese mismo formato.
+
+Por ejemplo, si decides guardar cada alumno así:
+
+```text
+Ana,8.5
+Luis,7.25
+```
+
+al leer tendrás que tener presente que:
+
+- cada línea representa un alumno;
+- el separador es la coma;
+- el primer dato es el nombre;
+- el segundo dato es la nota.
+
+Si cambias el formato al escribir y no ajustas la lectura, el programa fallará o interpretará mal los datos.
+
+### 6. Caracteres especiales importantes
+
+En los ficheros de texto aparecen caracteres que no siempre se ven de forma explícita, pero que afectan mucho al resultado.
+
+#### 6.1. Salto de línea `\n`
+
+Sirve para empezar una nueva línea:
+
+```kotlin
+val texto = "Primera línea\nSegunda línea"
+println(texto)
+```
+
+#### 6.2. Retorno de carro `\r`
+
+En sistemas Windows suele combinarse con `\n` para formar `\r\n`.
+
+```kotlin
+val textoWindows = "Primera línea\r\nSegunda línea"
+println(textoWindows)
+```
+
+#### 6.3. Tabulador `\t`
+
+Permite alinear texto en columnas sencillas:
+
+```kotlin
+val tabla = "Nombre\tNota\nAna\t8.5"
+println(tabla)
+```
+
+#### 6.4. Fin de fichero
+
+Cuando lees un fichero secuencialmente, llega un momento en que no quedan más datos. A eso se le llama **fin de fichero** o **EOF**.
+
+Por eso, al leer línea a línea, conviene usar mecanismos que sepan detenerse correctamente, como `useLines()` o un bucle que controle el final de lectura.
+
+### 7. Ejemplos prácticos
+
+#### 7.1. Contar líneas
+
+```kotlin
+import java.io.File
+
+fun main() {
+    val numeroDeLineas = File("datos/notas.txt").useLines { it.count() }
+    println("El fichero tiene $numeroDeLineas líneas.")
+}
+```
+
+#### 7.2. Registro de eventos
 
 ```kotlin
 import java.io.File
@@ -106,230 +249,72 @@ import java.time.LocalDateTime
 import java.time.format.DateTimeFormatter
 
 fun registrarEvento(evento: String) {
-    val formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss")
-    val timestamp = LocalDateTime.now().format(formatter)
-    File("registroDeEventos.txt").appendText("[$timestamp] $evento\n")
+    val marcaTiempo = LocalDateTime.now()
+        .format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"))
+
+    File("registro.txt").appendText("[$marcaTiempo] $evento\n")
 }
 
 fun main() {
     registrarEvento("Inicio de la aplicación")
-    // Simular otras operaciones...
-    registrarEvento("Operación realizada correctamente")
+    registrarEvento("Operación completada")
 }
 ```
 
-Este código añade entradas de registro a un fichero, incluyendo una marca de tiempo para cada evento, demostrando cómo `appendText()` puede ser especialmente útil para mantener un historial de eventos sin sobrescribir los registros anteriores.
-
-
-### 3. Leer de un Fichero de Texto en Kotlin
-
-La lectura de ficheros de texto en Kotlin es una operación que se beneficia de la simplicidad y potencia del lenguaje, permitiendo procesar contenidos de archivos de manera eficiente y segura.
-
-#### 3.1. Abrir el Fichero para Lectura
-
-Al igual que para la escritura, la lectura de un fichero comienza por obtener una referencia al archivo deseado mediante la clase `File`. No es necesario abrir explícitamente el fichero en un modo de lectura; el acceso se determina por la función que se utilice para leer el contenido.
+#### 7.3. Leer y mostrar un pequeño informe
 
 ```kotlin
 import java.io.File
-
-val miFichero = File("miArchivo.txt")
-```
-
-#### 3.2. Leer el Contenido Completo del Fichero
-
-Kotlin proporciona el método `readText()` para leer el contenido completo de un fichero de texto en una sola operación, devolviendo todo el texto como una cadena (`String`).
-
-```kotlin
-val contenido = miFichero.readText()
-println(contenido)
-```
-
-Este método es conveniente cuando se necesita trabajar con el texto completo del fichero, pero puede ser ineficiente con archivos muy grandes debido a las limitaciones de memoria.
-
-#### 3.3. Leer el Fichero Línea por Línea
-
-Para ficheros grandes o cuando se necesita procesar el archivo línea por línea, Kotlin ofrece `readLines()`, que devuelve una lista de todas las líneas del fichero como cadenas (`List<String>`).
-
-```kotlin
-val lineas = miFichero.readLines()
-for (linea in lineas) {
-    println(linea)
-}
-```
-
-Leer el fichero de esta manera puede ser más eficiente para procesar archivos grandes, ya que permite iterar sobre las líneas del fichero sin cargar todo el contenido en memoria a la vez.
-
-#### 3.4. Uso de `useLines` para una Gestión de Recursos Eficiente
-
-Kotlin también proporciona una manera eficiente y segura de manejar la lectura de archivos grandes a través del método `useLines`, que abre un flujo de todas las líneas del archivo, permitiendo procesar cada una de ellas de manera secuencial. Este método asegura que el fichero se cierre correctamente una vez que se completa el procesamiento, incluso si ocurre una excepción.
-
-```kotlin
-miFichero.useLines { lineas ->
-    lineas.forEach { linea ->
-        println(linea)
-    }
-}
-```
-
-#### 3.5. Ejemplo Práctico: Contar Líneas de un Fichero
-
-Un caso de uso común es contar el número de líneas de un fichero, lo cual se puede hacer eficientemente de la siguiente manera:
-
-```kotlin
-val numeroDeLineas = miFichero.useLines { it.count() }
-println("El fichero tiene $numeroDeLineas líneas.")
-```
-
-Este ejemplo demuestra cómo se puede usar `useLines` para realizar operaciones más complejas sobre el contenido del fichero de manera eficiente y segura.
-
-
-### 4. Caracteres Especiales en Ficheros de Texto
-
-Al trabajar con ficheros de texto, es crucial entender el papel que juegan ciertos caracteres especiales. Estos caracteres pueden afectar el formato del texto y son esenciales para el procesamiento correcto de los datos.
-
-#### 4.1. EOF (End of File / Fin de Archivo)
-
-- **Nombre en inglés**: End of File (EOF)
-- **Nombre en español**: Fin de Archivo
-- **Descripción**: EOF no es un carácter visible dentro del texto del fichero pero es una condición importante que indica el final del contenido de un fichero.
-- **Ejemplo**:
-    ```kotlin
-    val reader = File("miArchivo.txt").bufferedReader()
-    var linea: String?
-    while (reader.readLine().also { linea = it } != null) {
-        println(linea)
-    }
-    // Al llegar al EOF, la lectura se detiene.
-    ```
-
-#### 4.2. Salto de Línea (\n / LF - Line Feed)
-
-- **Nombre en inglés**: Line Feed (LF)
-- **Nombre en español**: Salto de Línea
-- **Descripción**: Representa el final de una línea de texto y el inicio de otra. Esencial para estructurar el contenido en líneas separadas.
-- **Ejemplo**:
-    ```kotlin
-    val texto = "Primera línea\nSegunda línea"
-    println(texto) // Imprime el texto en dos líneas separadas.
-    ```
-
-#### 4.3. Retorno de Carro (\r / CR - Carriage Return)
-
-- **Nombre en inglés**: Carriage Return (CR)
-- **Nombre en español**: Retorno de Carro
-- **Descripción**: En los sistemas basados en Windows, se utiliza junto con \n para crear un salto de línea (\r\n). Solo o en otros contextos, mueve el cursor al inicio de la línea actual.
-- **Ejemplo**:
-    ```kotlin
-    val textoWindows = "Primera línea\r\nSegunda línea"
-    println(textoWindows) // Funciona como salto de línea en Windows.
-    ```
-
-#### 4.4. Espacio en Blanco (' ' / Space)
-
-- **Nombre en inglés**: Space
-- **Nombre en español**: Espacio
-- **Descripción**: Un carácter que crea una separación horizontal entre caracteres o palabras.
-- **Ejemplo**:
-    ```kotlin
-    val textoConEspacios = "Kotlin es increíble"
-    println(textoConEspacios) // Muestra el texto con espacios entre palabras.
-    ```
-
-#### 4.5. Tabulador (\t / Tab)
-
-- **Nombre en inglés**: Horizontal Tab (HT)
-- **Nombre en español**: Tabulador
-- **Descripción**: Proporciona una separación horizontal más significativa que un espacio, comúnmente utilizado para alinear texto o datos en columnas.
-- **Ejemplo**:
-    ```kotlin
-    val textoConTabs = "Nombre:\tJohn Doe\nEdad:\t30"
-    println(textoConTabs)
-    // Imprime el texto con tabulaciones, alineando las columnas.
-    ```
-
-#### 4.6. Consideraciones Adicionales
-
-El manejo adecuado de estos caracteres especiales es fundamental para la correcta lectura, escritura y presentación de los datos de un fichero de texto. Algunas funciones de Kotlin, como `print()` y `println()`, interpretan estos caracteres automáticamente, mientras que en otras situaciones, puede ser necesario gestionarlos de manera explícita para lograr el formato deseado.
-
-
-### 5. Recomendaciones Finales y Consideraciones al Trabajar con Ficheros de Texto
-
-Manejar ficheros de texto en Kotlin, aunque es una tarea simplificada gracias a las funcionalidades del lenguaje, requiere atención a ciertos detalles para asegurar que el proceso sea eficiente, seguro y acorde a las necesidades de la aplicación.
-
-#### 5.1. Verificar la Existencia del Fichero
-
-Antes de intentar leer o escribir en un fichero, es una buena práctica verificar si el fichero existe para evitar errores en tiempo de ejecución.
-
-```kotlin
-val miFichero = File("miArchivo.txt")
-if (!miFichero.exists()) {
-    println("El fichero no existe.")
-    return
-}
-```
-
-#### 5.2. Manejo Eficiente de Ficheros Grandes
-
-Para ficheros grandes, es recomendable utilizar métodos que lean o escriban de manera secuencial y no carguen todo el contenido en memoria a la vez. Kotlin ofrece varias funciones, como `useLines`, para manejar eficientemente grandes volúmenes de datos.
-
-#### 5.3. Tratamiento de Caracteres Especiales
-
-Ser consciente de cómo los caracteres especiales (\n, \r, \t, etc.) afectan el contenido y formato de tu fichero. Asegúrate de manejarlos adecuadamente según el contexto de tu aplicación.
-
-#### 5.4. Seguridad y Excepciones
-
-Al trabajar con entrada/salida de ficheros, siempre existe el riesgo de enfrentarse a excepciones. Kotlin facilita el manejo de estas a través de bloques `try-catch`.
-
-```kotlin
-try {
-    val contenido = File("miArchivo.txt").readText()
-    println(contenido)
-} catch (e: Exception) {
-    println("Ocurrió un error al leer el fichero: ${e.message}")
-}
-```
-
-#### 5.5. Ejemplo Integrado: Aplicación de Registro de Eventos
-
-A continuación, se presenta un ejemplo que combina la lectura, escritura y manejo de caracteres especiales en una aplicación simple de registro de eventos. Este ejemplo también ilustra cómo verificar la existencia de un fichero y manejar posibles excepciones.
-
-```kotlin
-import java.io.File
-import java.time.LocalDateTime
-import java.time.format.DateTimeFormatter
-
-fun registrarEvento(fichero: File, evento: String) {
-    if (!fichero.exists()) {
-        println("Creando fichero de registro...")
-        fichero.createNewFile()
-    }
-    
-    try {
-        val timestamp = LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"))
-        fichero.appendText("[$timestamp] $evento\n")
-    } catch (e: Exception) {
-        println("Error al registrar evento: ${e.message}")
-    }
-}
 
 fun main() {
-    val miFicheroDeRegistro = File("registroDeEventos.txt")
-    
-    registrarEvento(miFicheroDeRegistro, "Inicio de la aplicación")
-    // Simula más operaciones...
-    registrarEvento(miFicheroDeRegistro, "Operación realizada correctamente")
-    
-    println("Eventos registrados:\n${miFicheroDeRegistro.readText()}")
+    val informe = File("informe.txt")
+
+    if (!informe.exists()) {
+        println("El fichero no existe.")
+        return
+    }
+
+    println("Contenido del informe:")
+    println(informe.readText())
 }
 ```
 
-Este código crea un fichero de registro si no existe, registra eventos con marcas de tiempo y finalmente lee y muestra todos los eventos registrados. Demuestra un manejo efectivo y seguro de ficheros en Kotlin, considerando las prácticas recomendadas y las consideraciones necesarias para trabajar con archivos de texto.
+### 8. Buenas prácticas
 
+Cuando trabajes con ficheros de texto, intenta seguir estas ideas:
 
-## Fuente
+- comprueba si el fichero existe antes de leerlo, cuando tenga sentido hacerlo;
+- usa rutas relativas si el proyecto va a moverse entre equipos;
+- diferencia claramente entre sobrescribir y añadir contenido;
+- usa `use()` cuando trabajes con lectores o escritores explícitos;
+- no cargues en memoria ficheros enormes si puedes procesarlos por líneas;
+- y define un formato claro si luego vas a volver a leer el fichero.
 
-* [Writing to a File in kotlin](https://www.baeldung.com/kotlin/write-file)
-* [Reading from a File in kotlin](https://www.baeldung.com/kotlin/read-file)
-* [Baeldung Kotlin IO](https://www.baeldung.com/kotlin/category/kotlin-io)
-* [Book: The joy of kotlin](https://livebook.manning.com/book/the-joy-of-kotlin)
-* [Kotlin IO](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.io/)
+!!! tip "Consejo didáctico"
+    Si estás empezando, piensa siempre en dos preguntas: “¿cómo voy a guardar esto?” y “¿cómo lo recuperaré después?”.
+
+### 9. Errores frecuentes
+
+- leer un fichero que no existe;
+- usar `writeText()` cuando querías añadir y no sobrescribir;
+- no incluir saltos de línea y dejar todos los datos pegados;
+- suponer que el contenido siempre tendrá el formato esperado;
+- usar `readText()` con ficheros demasiado grandes sin necesidad.
+
+### 10. Resumen
+
+En este apartado has visto que:
+
+- los ficheros de texto son muy útiles para almacenar información legible;
+- Kotlin ofrece varias formas cómodas de leerlos y escribirlos;
+- `readText()`, `readLines()` y `useLines()` responden a necesidades distintas;
+- `writeText()` sobrescribe y `appendText()` añade;
+- y los caracteres especiales como `\n` o `\t` influyen directamente en el formato final.
+
+Con esto queda cerrada la parte de trabajo básico con ficheros de texto de la unidad.
+
+## Fuentes y referencias
+
+- [Kotlin Stdlib - Kotlin I/O](https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.io/)
+- [Oracle Java SE - `BufferedReader`](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/io/BufferedReader.html)
+- [Oracle Java SE - `BufferedWriter`](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/io/BufferedWriter.html)

@@ -1,479 +1,344 @@
 ---
-
-title: "UD 7 - 7.3 Manejo de archivos: File"
-description: Manejo de archivos
-summary: Manejo de archivos
+title: "UD 7 - 7.3 Manejo de archivos con `File`"
+description: Uso de la clase `File` para representar rutas, consultar información y gestionar archivos y directorios
+summary: Introducción práctica a `java.io.File` en Kotlin para trabajar con rutas, comprobar estados y realizar operaciones básicas sobre el sistema de archivos.
 authors:
-  - Eduardo Fdez
-date: 2022-02-24
+    - Eduardo Fdez
+date: 2026-03-19
 icon: "material/file-document-outline"
 permalink: /prog/unidad7/7.3
 categories:
-  - PROG
+    - PROG
 tags:
-  - Software
-  - File
-
+    - Kotlin
+    - File
+    - Ficheros
+    - Directorios
 ---
-## 7.3 Manejo de archivos: File
-La clase `File` de Java y Kotlin permite manipular cualquier aspecto vinculado al sistema de archivos. Su nombre ("archivo", en inglés) es un poco engañoso, ya que no se refiere exactamente a un archivo. Sirve para realizar operaciones tanto sobre rutas al sistema de archivos que ya existan como no existentes. Además, se puede usar tanto para manipular archivos como directorios.
 
+## 7.3 Manejo de archivos con `File`
 
-### 1. La clase `File`
+En `7.1` vimos qué es un sistema de archivos y en `7.2` trabajamos la entrada y salida por consola. Ahora damos un paso más: vamos a aprender a representar rutas del sistema de archivos y a consultar información sobre ellas desde Kotlin.
 
-La pieza más básica para poder operar con archivos, independientemente de su tipo, en un programa Java es la **clase `File`** . Esta clase pertenece al *`package java.io`* de Java. Por lo tanto será necesario importarla antes de poder usarla.
+Este tema está especialmente relacionado con el criterio del `RA5` que pide **reconocer las posibilidades de entrada/salida del lenguaje y de las librerías asociadas**. La clase `File` forma parte de ese conjunto de herramientas básicas que necesitamos antes de leer o escribir contenido de ficheros.
+
+!!! abstract "Qué vas a aprender en este tema"     
+    - Qué representa realmente la clase `File`.    
+    - Cómo crear objetos `File` con rutas absolutas y relativas.    
+    - Cómo consultar información sobre un fichero o directorio.    
+    - Qué operaciones básicas permite realizar sobre el sistema de archivos.    
+
+### 1. Qué es realmente `File`
+
+La clase `File` pertenece al paquete `java.io`:
 
 ```kotlin
 import java.io.File
 ```
 
-Esta clase permite manipular cualquier aspecto vinculado al sistema de archivos. Su nombre ("archivo", en inglés) es un poco engañoso, ya que no se refiere exactamente a un archivo.
+Aunque su nombre parezca indicar que representa un archivo concreto, en realidad `File` representa **una ruta del sistema de archivos**. Esa ruta puede apuntar a:
 
->![](assets/rayo.png) 
-> **La clase `File` representa una ruta dentro del sistema de archivos**
+- un fichero;
+- un directorio;
+- o incluso una ubicación que todavía no existe.
 
-Sirve para realizar operaciones tanto sobre rutas al sistema de archivos que ya existan como no existentes. Además, se puede usar tanto para manipular archivos como directorios.
-
-Como cualquier otra clase **hay que instanciarla para que sea posible invocar sus métodos** . El constructor de `File` recibe como argumento una cadena de texto correspondiente a la ruta sobre la que se quieren llevar a cabo las
-operaciones.
-
-```kotlin
-val ruta = "data.txt"
-val f = File(ruta)
-```
-
-Una ruta, path en inglés, es la forma general de un **nombre de archivo o carpeta** , por lo que identifica únicamente su localización en el sistema de archivos.
-
-Cada uno de **los elementos de la ruta pueden existir realmente o no, pero esto no impide en modo poder inicializar File**. En realidad, su comportamiento es como una declaración de intenciones sobre qué ruta del sistema de archivos se quiere interactuar. No es hasta que se llaman los diferentes métodos definidos en File, o hasta que se escriben o se leen datos, que realmente se accede al sistema de archivos y se procesa la información.
-
-Un aspecto importante a tener presente al inicializar `File` es tener siempre presente que el formato de la cadena de texto que conforma la ruta puede ser diferente según el sistema operativo sobre el que se ejecuta la aplicación. Por ejemplo, el sistema operativo Windows inicia las rutas por un nombre de unidad (C :, D :, etc.), mientras que los sistemas operativos basados en Unix comienzan directamente con una barra ("/"). Además, los diferentes sistemas operativos usan diferentes separadores dentro de las rutas. Por ejemplo, los sistemas Unix usan la barra ("/") mientras que el Windows la inversa ("\\").
-
-* Ejemplo de ruta Unix: `/usr/bin`
-* Ejemplo de ruta Windows: `C:\Windows\System32`
-
-De todos modos Java y Kotlin nos permite utilizar la barra de Unix ("/") para representar rutas en sistemas Windows. Por lo tanto, es posible utilizar siempre este tipo de barra independientemente del sistema, por simplicidad.
-
-Es importante entender que **un objeto representa una única ruta** del sistema de archivos. Para operar con diferentes rutas habrá que crear y manipular varios objetos. Por ejemplo, en el siguiente código se instancian tres objetos `File` diferentes.
+!!! definition "Idea clave"
+    Un objeto `File` no contiene el archivo en memoria ni su contenido. Lo que representa es una ruta sobre la que el programa puede consultar información u operar.
 
 ```kotlin
-var carpetaFotos: File = File("C:/Fotos")
-var unaFoto: File = File("C:/Fotos/Foto1.png")
-var otraFoto: File = File("C:/Fotos/Foto2.png")
+val fichero = File("datos/alumnos.txt")
+val carpeta = File("datos")
 ```
 
-### 2. Rutas absolutas y relativas
+En ambos casos solo estamos creando objetos que representan rutas. No estamos leyendo todavía el contenido del fichero ni creando automáticamente la carpeta.
 
-En los ejemplos empleados hasta el momento para crear objetos de la clase `File` se han usado rutas absolutas, ya que es la manera de dejar más claro a qué elemento dentro del sistema de archivos, ya sea archivo o carpeta, se está haciendo referencia.
+### 2. Crear objetos `File`
 
-> ![](assets/book.png)
-> Una **ruta absoluta** es aquella que **se refiere a un elemento a
-> partir del raíz** del sistema de archivos.
->
-> Por ejemplo `C:/Fotos/Foto1.png`
-
-Las rutas absolutas se distinguen fácilmente, ya que el texto que las representa comienza de una manera muy característica dependiendo del sistema operativo del ordenador. En el caso de los sistemas operativos Windows a su inicio siempre se pone el nombre de la unidad ( "C:", "D:", etc.), mientras que en el caso de los sistemas operativos Unix, estas comienzan siempre por una barra ("/").
-
-Por ejemplo, las cadenas de texto siguientes representan rutas absolutas en un sistema de archivos de Windows:
-
-* `C:\Fotos\Viajes` (ruta a una carpeta)
-* `M:\Documentos\Unitat11\apartado1` (ruta a una carpeta)
-* `N:\Documentos\Unitat11\apartado1\Actividades.txt` (ruta a un archivo)
-
-En cambio, en el caso de una jerarquía de archivos bajo un sistema operativo Unix, un conjunto de rutas podrían estar representadas de la siguiente forma:
-
-* `/Fotos/Viajes` (ruta a una carpeta)
-* `/Documentos/Unidad11/apartado1` (ruta a una carpeta)
-* `/Documentos/Unidad11/Apartado1/Actividades.txt` (ruta a un archivo)
-
-Al instanciar objetos de tipo `File` usando una ruta absoluta siempre hay que usar la representación correcta según el sistema en que se ejecuta el programa.
-
-Si bien el **uso de rutas absolutas resulta útil para indicar con toda claridad qué elemento dentro del sistema de archivos se está manipulando, hay casos que su uso conlleva ciertas complicaciones**. Suponga que ha hecho un programa en el que se llevan a cabo operaciones sobre el sistema de archivos. Una vez funciona, le deja el proyecto Kotlin a un amigo que lo copia en su ordenador dentro de una carpeta cualquiera y la abre con su entorno de trabajo. Para que el programa le funcione perfectamente antes será necesario que en su ordenador haya exactamente las mismas carpetas que usa en su máquina, tal como están escritas en el código fuente de su programa. De lo contrario, no funcionará, ya que las carpetas y archivos esperados no existirán, y por tanto, no se encontrarán. Usar rutas absolutas hace que un programa siempre tenga que trabajar con una estructura del sistema de archivos exactamente igual donde quiera que se ejecute, lo cual no es muy cómodo.
-
-Para resolver este problema, a la hora de inicializar una variable de tipo `File`, también se puede hacer referencia a una ruta relativa.
-
-> ![](./assets/book.png)
-> Una **ruta relativa** es aquella que **no incluye el raíz** y por ello se considera que **parte desde el directorio de trabajo** de la aplicación. Esta carpeta puede ser diferente cada vez que se ejecuta
-> el programa.
-
-**Cuando un programa se ejecuta** por defecto **se le asigna una carpeta de trabajo**. Esta carpeta **suele ser la carpeta desde donde se lanza el programa**. En el caso de un programa en Kotlin ejecutado a través de un IDE (como IntelliJ IDEA), la carpeta de trabajo suele ser la misma carpeta donde se ha elegido guardar los archivos del proyecto.
-
-El formato de una ruta relativa es similar a una ruta absoluta, pero nunca se indica la raíz del sistema de archivos.
-Directamente se empieza por el primer elemento escogido dentro de la ruta. Por ejemplo:
-
-* Viajes
-* Unidad11\apartado1
-* Unidad11\apartado1\Actividades.txt
-
-Una ruta relativa siempre incluye el directorio de trabajo de la aplicación como parte inicial a pesar de no haberse escrito. El rasgo distintivo es que el directorio de trabajo puede variar. Por ejemplo, el elemento al que se refiere el siguiente objeto `File` varía según el directorio de trabajo.
+Para crear un objeto `File`, basta con pasar una ruta al constructor:
 
 ```kotlin
-val f = File("Unidad11/apartado1/Actividades.txt")
+val ruta = File("datos/notas.txt")
 ```
 
-
-| **Directorio de trabajo** | **Ruta real**                                          |
-| :-------------------------- | :------------------------------------------------------- |
-| `C:/Proyectos/Java`       | `C:/Proyectos/Java/Unidad11/apartado1/Actividades.txt` |
-| `X:/Unidades`             | `X:/Unidades/Unidad11/apartado1/Actividades.txt`       |
-| `/Programas`              | `/Programas/Unidad11/apartado1/Actividades.txt`        |
-
-Este mecanismo permite facilitar la portabilidad del software entre distintos ordenadores y sistemas operativos, ya que solo es necesario que los archivos y carpetas permanezcan en la misma ruta relativa al directorio de trabajo. Veámoslo con un ejemplo:
+También podemos construir rutas a partir de un directorio padre y un nombre:
 
 ```kotlin
-val f = File("Activdades.txt")
+val carpeta = File("datos")
+val fichero = File(carpeta, "notas.txt")
 ```
 
-Dada esta ruta relativa, basta garantizar que el archivo `Activdades.txt` esté siempre en el mismo directorio de trabajo de la aplicación, cualquiera que sea éste e independientemente del sistema operativo utilizado (en un ordenador puede ser `C:\Programas` y en otro `/Kotlin`). En cualquiera de todos estos casos, la ruta siempre será correcta. De hecho, aún más. Nótese como **las rutas relativas a Kotlin permiten crear código independiente del sistema operativo**, ya que no es necesario especificar un formato de raíz ligada a un sistema de archivos concreto ( "C:", "D:", "/", etc.).
+Esto puede hacer el código más legible cuando trabajamos con varias rutas relacionadas.
 
-### 3. Métodos de la clase File
+#### 2.1. Rutas absolutas y relativas
 
-`File` ofrece varios métodos para poder manipular el sistema de archivos u obtener información a partir de su ruta.
-Algunos de los más significativos para entender las funcionalidades se muestran a continuación, ordenados por tipo de operación.
+Ya vimos en `7.1` la diferencia entre rutas absolutas y relativas. Aquí la retomamos porque es fundamental al trabajar con `File`.
 
-#### 3.1. Obtención de la ruta
+- **Ruta absoluta**: indica la ruta completa desde la raíz del sistema.
+- **Ruta relativa**: se interpreta a partir del directorio de trabajo del programa.
 
-Una vez se ha instanciado un objeto de tipo `File`, puede ser necesario recuperar la información empleada durante su inicialización y conocer en formato texto a qué ruta se está refiriendo, o al menos parte de ella.
+Ejemplos:
 
-* `fun getParent():String` devuelve la ruta de la carpeta del elemento referido por esta ruta. Básicamente la cadena de texto resultante es idéntica a la ruta original, eliminando el último elemento. Si la ruta tratada se refiere a la carpeta raíz de un sistema de archivos ("C:\",
-  "/", etc.), este método devuelve `null`. En el caso de tratarse de una ruta relativa, este método no incluye la parte de la carpeta de trabajo.
-* `fun getName():String` devuelve el nombre del elemento que representa la ruta, ya sea una carpeta o un archivo. Es el caso inverso del método `getParent()`, ya que el texto resultante es solo el último elemento.
-* `fun getAbsolutePath():String` devuelve la ruta absoluta. Si el objeto `File` se inicializó usando una ruta relativa, el resultado incluye también la carpeta de trabajo.
+- absoluta en Windows: `C:\Usuarios\ana\documentos\notas.txt`
+- absoluta en Linux/macOS: `/home/ana/documentos/notas.txt`
+- relativa: `datos/notas.txt`
 
-Veamos un ejemplo de cómo funcionan estos tres métodos. Obsérvese que las rutas relativas se añaden a la ruta de la carpeta de trabajo (donde se encuentra el proyecto):
+```kotlin
+val absoluta = File("/home/ana/documentos/notas.txt")
+val relativa = File("datos/notas.txt")
+```
 
-```Kotlin
-import kotlin.jvm.JvmStatic
+!!! tip "Buena práctica"
+    En ejemplos y proyectos de aula suelen ser preferibles las rutas relativas, porque hacen el código más portable entre distintos ordenadores.
+
+#### 2.2. Directorio de trabajo
+
+Cuando usas una ruta relativa, Kotlin la interpreta tomando como referencia el **directorio de trabajo**.
+
+```kotlin
+val fichero = File("datos/notas.txt")
+println(fichero.absolutePath)
+```
+
+Este ejemplo no imprime la ruta relativa, sino la ruta completa resultante según dónde se esté ejecutando el programa.
+
+### 3. Consultar información de una ruta
+
+Una vez creado un objeto `File`, podemos consultar distintos datos sobre la ruta que representa.
+
+#### 3.1. Nombre, carpeta padre y ruta absoluta
+
+Algunas propiedades muy útiles son:
+
+- `name`: nombre del fichero o directorio.
+- `parent`: ruta de la carpeta padre.
+- `absolutePath`: ruta completa.
+
+```kotlin
 import java.io.File
 
-object Pruebasarchivos {
-    @JvmStatic
-    fun main(args: Array<String>) {
-        // Dos rutas absolutas
-        val carpetaAbs = File("/home/lionel/fotos")
-        val archivoAbs = File("/home/lionel/fotos/albania1.jpg")
+fun main() {
+    val fichero = File("datos/notas.txt")
 
-        // Dos rutas relativas
-        val carpetaRel = File("trabajos")
-        val fitxerRel = File("trabajos/documento.txt")
+    println("Nombre: ${fichero.name}")
+    println("Carpeta padre: ${fichero.parent}")
+    println("Ruta absoluta: ${fichero.absolutePath}")
+}
+```
 
-        // Mostremos sus rutas
-        mostrarRutas(carpetaAbs)
-        mostrarRutas(archivoAbs)
-        mostrarRutas(carpetaRel)
-        mostrarRutas(fitxerRel)
-    }
+Estas propiedades ayudan mucho a entender qué ruta está manejando realmente el programa.
 
-    fun mostrarRutas(f: File) {
-        println("getParent(): " + f.parent)
-        println("getName(): " + f.name)
-        println("getAbsolutePath(): " + f.absolutePath)
+#### 3.2. Comprobar si existe
+
+Antes de intentar trabajar con un fichero o directorio, conviene comprobar si existe:
+
+```kotlin
+val ruta = File("datos/notas.txt")
+
+if (ruta.exists()) {
+    println("La ruta existe")
+} else {
+    println("La ruta no existe")
+}
+```
+
+#### 3.3. Saber si es fichero o directorio
+
+No basta con saber que una ruta existe. A veces necesitamos distinguir si se trata de un fichero o de una carpeta:
+
+```kotlin
+val ruta = File("datos")
+
+println("¿Existe? ${ruta.exists()}")
+println("¿Es fichero? ${ruta.isFile}")
+println("¿Es directorio? ${ruta.isDirectory}")
+```
+
+!!! info "Ojo"
+    Que una ruta termine en algo como `.txt` no garantiza por sí sola que sea un fichero real. Para saberlo de verdad, hay que consultar el sistema de archivos.
+
+#### 3.4. Tamaño y fecha de modificación
+
+Si la ruta representa un fichero existente, también podemos consultar metadatos:
+
+- `length()`: tamaño en bytes.
+- `lastModified()`: instante de la última modificación, expresado en milisegundos.
+
+```kotlin
+import java.io.File
+import java.util.Date
+
+fun main() {
+    val fichero = File("datos/notas.txt")
+
+    if (fichero.exists() && fichero.isFile) {
+        println("Tamaño: ${fichero.length()} bytes")
+        println("Última modificación: ${Date(fichero.lastModified())}")
     }
 }
 ```
 
-Este programa produce la salida:
+Este tipo de información es útil, por ejemplo, para saber si un fichero está vacío o cuándo se actualizó por última vez.
 
-```
-getParent()     :   /home/lionel
-getName()       :   fotos
-getAbsolutePath():  /home/lionel/fotos
+### 4. Operaciones básicas con directorios y rutas
 
-getParent()     :   /home/lionel/fotos
-getName()       :   albania1.jpg
-getAbsolutePath():  /home/lionel/fotos/albania1.jpg
+La clase `File` no sirve solo para consultar información. También permite realizar operaciones sencillas sobre archivos y directorios.
 
-getParent()     :   null
-getName()       :   trabajos
-getAbsolutePath():  /home/lionel/NetBeans/archivos/trabajos
+#### 4.1. Crear directorios
 
-getParent()     :   trabajos
-getName()       :   documento.txt
-getAbsolutePath():  /home/lionel/NetBeans/archivos/trabajos/documento.txt
+Para crear una carpeta se puede usar `mkdir()`:
+
+```kotlin
+val carpeta = File("salidas")
+val creada = carpeta.mkdir()
+
+println("¿Carpeta creada? $creada")
 ```
 
-#### 3.2. Comprobaciones de estado
+Si necesitas crear varias carpetas anidadas de una vez, suele ser más práctico `mkdirs()`:
 
-Dada la ruta empleada para inicializar una variable de tipo File, esta puede que realmente exista dentro del sistema de archivos o no, ya sea en forma de archivo o carpeta. La clase `File` ofrece un conjunto de métodos que permiten hacer comprobaciones sobre su estado y saber si es así.
+```kotlin
+val carpetas = File("salidas/2026/marzo")
+carpetas.mkdirs()
+```
 
-* `fun exists(): Boolean` comprueba si la ruta existe dentro del sistema de archivos. Devolverá `true` si existe   y `false` en caso contrario. Normalmente los archivos incorporan en su nombre una extensión (.txt, .jpg, .mp4, etc.).
-  Aún así, hay que tener en cuenta que la extensión no es un elemento obligatorio en el nombre de un archivo, sólo se usa como mecanismo para que tanto el usuario como algunos programas puedan discriminar más fácilmente el tipo de archivos. Por lo tanto, solo con el texto de una ruta no se puede estar 100% seguro de si esta se refiere a un archivo   o una carpeta. Para poder estar realmente seguros se pueden usar los métodos siguientes:
-* `fun isFile(): Boolean` comprueba el sistema de archivos en busca de la ruta y devuelve true si existe y es un archivo. Devolverá `false` si no existe, o si existe pero no es un archivo.
-* `fun isDirectory():Boolean` funciona como el anterior pero comprueba si es una carpeta.
+#### 4.2. Borrar archivos o carpetas
 
-Por ejemplo, el siguiente código hace una serie de comprobaciones sobre un conjunto de rutas. Para poder probarlo puedes crear la carpeta `Temp` en la raíz `C:` (si estas en Windows). Dentro, un archivo llamado `Document.txt` (puede estar vacío) y una carpeta llamada `Fotos`. Después de probar el programa puedes eliminar algún elemento y volver a probar para ver la diferencia.
+Para borrar una ruta se puede usar `delete()`:
 
-```Kotlin
-import kotlin.jvm.JvmStatic
-import un7.PruebaExiste
+```kotlin
+val temporal = File("temporal.txt")
+val borrado = temporal.delete()
+
+println("¿Se ha borrado? $borrado")
+```
+
+Si la ruta corresponde a un directorio, normalmente solo se podrá borrar si está vacío.
+
+!!! warning "Importante"
+    `delete()` devuelve `false` si la operación no se puede realizar. Por ejemplo, cuando el fichero no existe, cuando faltan permisos o cuando la carpeta no está vacía.
+
+#### 4.3. Renombrar o mover
+
+El método `renameTo()` permite cambiar el nombre o mover un fichero o directorio a otra ruta:
+
+```kotlin
+val origen = File("borrador.txt")
+val destino = File("entrega.txt")
+
+val cambiado = origen.renameTo(destino)
+println("¿Renombrado correctamente? $cambiado")
+```
+
+Si origen y destino están en carpetas distintas, además de renombrar se estará moviendo la ruta.
+
+### 5. Listar el contenido de una carpeta
+
+Cuando una ruta representa un directorio, podemos consultar sus elementos con `listFiles()`:
+
+```kotlin
 import java.io.File
 
-object PruebaExiste {
-    @JvmStatic
-    fun main(args: Array<String>) {
-        val temp = File("C:/Temp")
-        val fotos = File("C:/Temp/Fotos")
-        val document = File("C:/Temp/Documento.txt")
-        println(temp.absolutePath + " ¿existe? " + temp.exists())
-        mostrarEstado(fotos)
-        mostrarEstado(document)
-    }
+fun main() {
+    val carpeta = File("datos")
+    val elementos = carpeta.listFiles()
 
-    fun mostrarEstado(f: File) {
-        println(f.absolutePath + " ¿archivo? " + f.isFile)
-        println(f.absolutePath + " ¿carpeta? " + f.isDirectory)
-    }
-}
-```
-
-#### 3.3. Propiedades de archivos
-
-El sistema de archivos de un sistema operativo almacena diversidad de información sobre los archivos y carpetas que puede resultar útil conocer: sus atributos de acceso, su tamaño, la fecha de modificación, etc. En general, todos los datos mostrados en acceder a las propiedades del archivo. Esta información también puede ser consultada usando los métodos adecuados. Entre los más populares hay los siguientes:
-
-* `fun length(): Long` devuelve el tamaño de un archivo en bytes. Este método solo puede ser llamado sobre una ruta que represente un archivo, de lo contrario no se puede garantizar que el resultado sea válido.
-* `fun lastModified(): Long` devuelve la última fecha de edición del elemento representado por esta ruta. El resultado se codifica en un único número entero cuyo valor es el número de milisegundos que han pasado desde el 1 de junio de 1970.
-
-El ejemplo siguiente muestra cómo funcionan estos métodos. Para probarlos crea el archivo `Documento.txt` en la carpeta `C:\Temp`. Primero deja el archivo vacío y ejecuta el programa. Luego, con un editor de texto, escribe cualquier cosa, guarda los cambios y vuelve a ejecutar el programa. Observa cómo el resultado es diferente. Como curiosidad, fíjate en el uso de la clase `Date` para poder mostrar la fecha en un formato legible.
-
-```Kotlin
-import java.io.File
-import java.util.*
-import kotlin.jvm.JvmStatic
-
-object PruebaPropiedades {
-    @JvmStatic
-    fun main(args: Array<String>) {
-        val documento = File("C:/Temp/Documento.txt")
-        println(documento.absolutePath)
-        val milisegundos = documento.lastModified()
-        val fecha = Date(milisegundos)
-        println("Últimamodificación (ms)   : $milisegundos")
-        println("Últimamodificación (fecha): $fecha")
-        println("Tamañodel archivo: " + documento.length())
-    }
-}
-```
-
-**Primera salida:**
-
-```
-C:/Temp/Documento.txt
-Últimamodificación (ms)   : 1583025735411
-Últimamodificación (fecha): Sun Mar 01 02:22:15 CET 2020
-Tamañodel archivo: 0
-```
-
-**Segunda salida:**
-
-```
-C:/Temp/Documento.txt
-Últimamodificación (ms)   : 1583025944088
-Últimamodificación (fecha): Sun Mar 01 02:25:44 CET 2020
-Tamañodel archivo: 7
-```
-
-#### 3.4. Gestión de los archivos
-
-El conjunto de operaciones más habituales al acceder a un sistema de archivos de un ordenador son las vinculadas a su gestión directa: renombrar archivos, borrarlos, copiarlos o moverlos. Dado el nombre de una ruta, Java y kotlin también permite realizar estas acciones.
-
-* `fun mkdir(): Boolean` permite crear la carpeta indicada en la ruta. La ruta debe indicar el nombre de una carpeta que no existe en el momento de invocar el método. Por ejemplo, dado un objeto `File`  instanciado con la ruta `C: /Fotos/Albania` que no existe, el método `mkdir()` creará la carpeta `Albania` dentro de `C:/Fotos`. Devuelve `true` si se ha creado correctamente, en caso contrario devuelve `false` (por ejemplo si la ruta es incorrecta, la carpeta ya existe o el usuario no tiene permisos de escritura).
-* `fun delete(): Boolean` borra el archivo o carpeta indicada en la ruta. La ruta debe indicar el nombre de un archivo o carpeta que sí existe en el momento de invocar el método. Se podrá borrar una carpeta solo si está vacía (no contiene ni carpetas ni archivos). Devuelve `true` o `false` según si la operación se ha podido llevar a cabo.
-
-Para probar el ejemplo que se muestra a continuación de manera que se pueda ver cómo funcionan estos métodos, primero asegúrate de que en la raíz de la unidad `C:` no hay ninguna carpeta llamada `Temp` y ejecute el programa. Todo fallará, ya que las rutas son incorrectas (no existe `Temp`). Luego, crea la carpeta `Temp` y en su interior crea un nuevo documento llamado `Documento.txt` (puede estar vacío). Ejecuta el programa y verás que se habrá creado una nueva carpeta llamada `Fotos`. Si lo vuelves a ejecutar por tercera vez podrás comprobar que se habrá borrado.
-
-```Kotlin
-import java.io.File
-import kotlin.jvm.JvmStatic
-
-object PruebasGestionarchivos {
-    @JvmStatic
-    fun main(args: Array<String>) {
-        val fotos = File("C:/Temp/Fotos")
-        val doc = File("C:/Temp/Documento.txt")
-        val mkdirFot: Boolean = fotos.mkdir()
-        if (mkdirFot) {
-            println("Creada carpeta " + fotos.getName().toString() + "? " + mkdirFot)
-        } else {
-            val delCa: Boolean = fotos.delete()
-            println("Borrada carpeta " + fotos.getName().toString() + "? " + delCa)
-            val delAr: Boolean = doc.delete()
-            println("Borrado archivo " + doc.getName().toString() + "? " + delAr)
-        }
-    }
-}
-```
-
-Desde el punto de vista de un sistema operativo la operación de `mover` un archivo o carpeta no es más que cambiar su nombre desde su ruta original hasta una nueva ruta destino. Para hacer esto también hay un método.
-
-* `fun renameTo(File destino): Boolean` el nombre de este método es algo engañoso ("renombrar", en inglés), ya que su función real no es simplemente cambiar el nombre de un archivo o carpeta, sino cambiar la ubicación completa. El método se invoca el objeto `File` con la ruta origen (donde se encuentra el archivo o carpeta), y se le da como argumento otro objeto `File` con la ruta destino. Devuelve `true` o `false` según si la operación se ha podido llevar a cabo correctamente o no (la ruta origen y destino son correctos, no existe ya un archivo con este nombre en el destino, etc.). Nótese que, en el caso de carpetas, es posible moverlas aunque contengan archivos.
-
-Una vez más, veamos un ejemplo. Dentro de la carpeta `C:/Temp` crea una carpeta llamada `Media` y otra llamada `Fotos`.
-
-Dentro de la carpeta`Fotos` crea dos documentos llamados `Documento.txt` y `Fotos.txt`. Después de ejecutar el programa, observa como la carpeta `Fotos` se ha movido y ha cambiado de nombre, pero mantiene en su interior el archivo `Fotos.txt`. El archivo `Documento.txt` se ha movido hasta la carpeta `Temp`.
-
-```Kotlin
-import java.io.File
-import kotlin.jvm.JvmStatic
-
-object PruebasGestionarchivos2 {
-    @JvmStatic
-    fun main(args: Array<String>) {
-        val origenDir = File("C:/Temp/Fotos")
-        val destinoDir = File("C:/Temp/Media/Fotografies")
-        val origenDoc = File("C:/Temp/Media/Fotografies/Document.txt")
-        val destinoDoc = File("C:/Temp/Document.txt")
-        var res = origenDir.renameTo(destinoDir)
-        println("Se ha movido y renombrado la carpeta? $res")
-        res = origenDoc.renameTo(destinoDoc)
-        println("Se ha movido el documento? $res")
-    }
-}
-
-```
-
-Como ya se ha comentado este método también sirve, implícitamente, para renombrar archivos o carpetas. Si el elemento final de las rutas origen y destino son diferentes, el nombre del elemento, sea archivo o carpeta, cambiará. Para simplemente renombrar un elemento sin moverlo de lugar, simplemente su ruta padre sea exactamente la misma. El resultado es que el elemento de la ruta origen "se mueve" en la misma carpeta donde está ahora, pero con un nombre diferente.
-
-Por ejemplo, si utilizamos `C:/Trabajos/Doc.txt` como ruta origen y `C:/Trabajos/File.txt` como ruta destino, el archivo `Doc.txt` cambiará de nombre a `File.txt` pero permanecerá en la misma carpeta
-`C:/Trabajos`.
-
-#### 3.5. Listado de archivos
-
-Finalmente, sólo en el caso de las carpetas, es posible consultar cuál es el listado de archivos y carpetas que contiene.
-
-* `fun listFiles(): Array<File>` devuelve un vector de objectos `File` con todos los elementos contenidos en la carpeta (representados por objetos `File`, uno por elemento). Para que se ejecute correctamente la ruta debe indicar una carpeta. El tamaño del vector será igual al número de elementos que contiene la carpeta. Si el tamaño es `0`, el valor devuelto será `null` y toda operación posterior sobre el vector será errónea. El orden de los elementos es aleatorio (al contrario que en el explorador de archivos del sistema operativo, no se ordena automáticamente por tipo ni alfabéticamente).
-
-Veamos un ejemplo. Antes de ejecutarlo, crea una carpeta `Temp` en la raíz de la unidad `C:`. Dentro crea o copia cualquier cantidad de carpetas o archivos.
-
-```Kotlin
-import java.io.File
-import kotlin.jvm.JvmStatic
-
-object PruebasGestionarchivos3 {
-    @JvmStatic
-    fun main(args: Array<String>) {
-        val dir = File("C:/Temp")
-        val lista = dir.listFiles()
-        println("Contenido de " + dir.absolutePath + " :")
-
-        // Recorremos el array y mostramos el nombre de cada elemento
-        for (i in lista.indices) {
-            val f = lista[i]
-            if (f.isDirectory) {
-                println("[DIR] " + f.name)
+    if (elementos != null) {
+        for (elemento in elementos) {
+            if (elemento.isDirectory) {
+                println("[DIR] ${elemento.name}")
             } else {
-                println("[ARX] " + f.name)
+                println("[FILE] ${elemento.name}")
             }
         }
     }
 }
 ```
 
-#### 3.6. Creación de archivos
+Este método resulta muy útil para:
 
-En Kotlin, se puede crear un nuevo archivo usando `File.createNewFile()`, `File.writeText(text :String)`, `Files.writeBytes()`, etc. Hay muchas otras formas de crear un archivo en Kotlin. Examinaremos la implementación del código para algunos de ellos utilizando programas Kotlin de ejemplo.
+- mostrar el contenido de un directorio;
+- filtrar ficheros;
+- recorrer una carpeta de trabajo;
+- o preparar procesos por lotes.
 
-##### 3.6.1. Crear archivo usando `File.createNewFile()`
+### 6. Crear ficheros vacíos
 
-`File.createNewFile()` crea un nuevo archivo si aún no existe y devuelve el valor booleano de `true`. Si el archivo ya existe en la ruta proporcionada, el método devuelve `false`. El archivo creado está vacío y tiene cero bytes escritos.
+Aunque el trabajo de lectura y escritura se desarrolla en `7.4`, conviene saber que `File` también permite crear un fichero vacío mediante `createNewFile()`:
 
-Usar `File.createNewFile()` es el mejor procedimiento y el más seguro para crear un nuevo archivo. La mayoría de los otros métodos, **sobrescribirían el archivo si existe**, lo que puede resultar en la pérdida de los datos existentes en el archivo, y puede ser que no se desee este efecto.
-
-En el siguiente ejemplo, intentamos crear un nuevo archivo con el nombre `data.txt`. La primera vez se crea el archivo y se devuelve `true`. Cuando intentamos crear el archivo por segunda vez, como el archivo `data.txt` ya se creó, obtenemos `false`.
-
-```Kotlin
+```kotlin
 import java.io.File
 
-fun main(args: Array<String>) {
+fun main() {
+    val fichero = File("registro.txt")
+    val creado = fichero.createNewFile()
 
-    val fileName = "data.txt"
-    var file = File(fileName)
+    println("¿Se ha creado el fichero? $creado")
+}
+```
 
-    // create a new file
-    val isNewFileCreated: Boolean = file.createNewFile()
+Este método:
 
-    if (isNewFileCreated) {
-        println("$fileName is created successfully.")
-    } else {
-        println("$fileName already exists.")
+- crea el fichero si no existía;
+- devuelve `true` si lo ha creado;
+- y devuelve `false` si ya existía.
+
+!!! note "Puente con el siguiente tema"
+    En este apartado nos centramos en representar rutas y gestionar archivos o carpetas. La lectura y escritura de contenido la desarrollaremos en `7.4`.
+
+### 7. Ejemplo integrador
+
+El siguiente ejemplo combina varias ideas del tema:
+
+```kotlin
+import java.io.File
+
+fun main() {
+    val carpeta = File("datos")
+
+    if (!carpeta.exists()) {
+        carpeta.mkdir()
     }
 
-    // try creating a file that already exists
-    val isFileCreated: Boolean = file.createNewFile()
+    val fichero = File(carpeta, "notas.txt")
 
-    if (isFileCreated) {
-        println("$fileName is created successfully.")
-    } else {
-        println("$fileName already exists.")
-    }
-
+    println("Ruta absoluta: ${fichero.absolutePath}")
+    println("¿Existe? ${fichero.exists()}")
+    println("¿Es fichero? ${fichero.isFile}")
+    println("¿Carpeta padre? ${fichero.parent}")
 }
 ```
 
-mostrará como salida:
+Este programa no escribe todavía contenido en el fichero, pero sí muestra cómo `File` nos permite:
 
-```
-data.txt is created successfully.
-data.txt already exists.
-```
+- construir rutas;
+- apoyarnos en rutas relativas;
+- comprobar estados;
+- y consultar información útil del sistema de archivos.
 
-##### 3.6.2. Crear archivo usando `File.writeText()`
+### 8. Buenas prácticas iniciales
 
-`File.writeText()` crea un nuevo archivo si aún no existe y escribe el texto (argumento de cadena) en el archivo. Si se proporciona una cadena vacía, se crea el archivo y no se escribe nada en él. De forma predeterminada, el archivo está codificado como UTF-8. Pasar cualquier otro conjunto de caracteres como segundo argumento codifica el archivo en consecuencia.
+Cuando trabajes con `File`, intenta recordar estas ideas:
 
-> ![](./assets/rayo.png)
-> En caso de que el archivo ya exista, se sobrescribe y los datos existentes se pierden
+- usa rutas relativas siempre que tenga sentido;
+- comprueba si una ruta existe antes de operar con ella;
+- distingue entre fichero y directorio;
+- evita ejemplos rígidos ligados a una unidad concreta como `C:/Temp`;
+- y no confundas “representar una ruta” con “leer o escribir el contenido”.
 
-Utilice este método si está seguro de que el archivo aún no existe o si sobrescribir los datos existentes no afecta a su aplicación.
+### 9. Resumen
 
-En este ejemplo, usaremos `File.writeText()` para crear un nuevo archivo.
+En este tema has visto que:
 
-```Kotlin
-import java.io.File
+- `File` representa rutas del sistema de archivos;
+- puede referirse tanto a ficheros como a directorios;
+- permite consultar propiedades como nombre, padre, ruta absoluta, tamaño o fecha;
+- permite hacer comprobaciones de estado como `exists()`, `isFile` e `isDirectory`;
+- y ofrece operaciones básicas de gestión como crear carpetas, borrar, renombrar y listar contenido.
 
-fun main(args: Array<String>) {
+Con esta base ya estamos preparados para pasar al siguiente paso: **leer y escribir datos dentro de los ficheros**.
 
-    val fileName = "data.txt"
+## Fuentes y referencias
 
-    var file = File(fileName)
-
-    // create a new file
-    file.writeText("")
-
-}
-```
-
-Al método `writeText()` se le puede proporcionar como argumento la cadena que le gustaría escribir en este archivo. Le hemos pasado una cadena vacía, como dato a escribir en el archivo.
-
-##### 3.6.3. Crear archivo usando `File.writeBytes()`
-
-`File.writeBytes()` crea un nuevo archivo si aún no existe y escribe los bytes del `ByteArray` proporcionado sin ningún formato. Si se proporciona un `ByteArray` vacío, se crea el archivo y no se escribe nada en él.
-
-> ![](./assets/rayo.png)
-> En caso de que el archivo ya exista, se sobrescribe y los datos existentes se pierden
-
-Utilice este método si está seguro de que el archivo aún no existe o si sobrescribir los datos existentes no afecta a su aplicación.
-
-En este ejemplo, usaremos `File.writeBytes()` para crear un nuevo archivo.
-
-```Kotlin
-import java.io.File
-
-fun main(args: Array<String>) {
-
-    val fileName = "data.txt"
-
-    var file = File(fileName)
-
-    // create a new file
-    file.writeBytes(ByteArray(0))
-}
-```
-
-Al método `writeBytes()` se le puede proporcionar como argumento el vector de Bytes que le gustaría escribir en este archivo. Le hemos pasado un vector vacío, como dato a escribir en el archivo.
-
-## Fuente
-
-* [Writing to a File in kotlin](https://www.baeldung.com/kotlin/write-file)
-* [Reading from a File in kotlin](https://www.baeldung.com/kotlin/read-file)
-* [Baeldung Kotlin IO](https://www.baeldung.com/kotlin/category/kotlin-io)
-* [Book: The joy of kotlin](https://livebook.manning.com/book/the-joy-of-kotlin)
-* [Kotlin IO](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.io/)
+- [Oracle Java SE - `java.io.File`](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/io/File.html)
+- [Oracle Java SE - `java.nio.file.Path`](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/nio/file/Path.html)
+- [Kotlin Stdlib - Kotlin I/O](https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.io/)

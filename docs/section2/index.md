@@ -45,6 +45,7 @@ Todo el contenido está supeditado a mejora, pues es solo una propuesta que irá
 
 ### Unidad 3 - Investigación de incidentes
 * [IS-U3.1.1 - Recopilación de Evidencias](https://revilofe.github.io/slides/section2-is/IS-U3.1.1.-RecopilacionDeEvidencias.html)
+* [IS-U3.3.2 - Investigación de incidentes de ciberseguridad](https://revilofe.github.io/slides/section2-is/IS-U3.3.2.-InvestigacionDeIncidentes.html)
 
 ## Información
 

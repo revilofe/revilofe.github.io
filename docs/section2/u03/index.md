@@ -27,6 +27,7 @@ toc_icon: "file-code"
 ## Presentaciones
 
 * [IS-U3.1.1 - Recopilación de Evidencias](https://revilofe.github.io/slides/section2-is/IS-U3.1.1.-RecopilacionDeEvidencias.html)
+* [IS-U3.3.2 - Investigación de incidentes de ciberseguridad](https://revilofe.github.io/slides/section2-is/IS-U3.3.2.-InvestigacionDeIncidentes.html)
 
 ## 1. Normativa que Respalda la Unidad
 Esta unidad está alineada con la normativa del Curso de Especialización en Ciberseguridad en Entornos TI, teniendo como base el Resultado de Aprendizaje (RA) 3 y sus Criterios de Evaluación (CE) asociados. El objetivo principal es que los estudiantes aprendan a investigar incidentes de ciberseguridad, incluyendo el análisis de riesgos y la definición de medidas.
@@ -67,6 +68,8 @@ Durante la Unidad 3, trabajaremos los siguientes contenidos:
 *   **Investigación del incidente (CE 3.c):**
     *   Identificación de la causa raíz.
     *   Determinación del alcance y el impacto del incidente.
+    *   Metodología de investigación basada en hipótesis, evidencias y línea temporal.
+    *   Investigación práctica de correos de phishing y análisis de cabeceras.
     *   Atribución (cuando sea posible y pertinente).
     *   Elaboración de informes de investigación.
 *   **Intercambio de información del incidente con proveedores u organismos competentes (CE 3.d):**

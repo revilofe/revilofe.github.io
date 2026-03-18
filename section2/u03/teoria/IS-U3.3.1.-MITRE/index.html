@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Recopilación y almacenamiento de evidencias">
+        <meta name="description" content="Apuntes didácticos sobre MITRE ATT&CK y RE&CT: qué son, cómo se usan en investigación de incidentes y cómo ayudan a organizar la respuesta.">
       
       
         <meta name="author" content="Eduardo Fdez">
@@ -29,7 +29,7 @@
     
     
       
-        <title>3.3.1.-Investigación incidentes:MITRE - R Z O</title>
+        <title>UD 3 - 3.3.1 MITRE ATT&CK y RE&CT para investigar y responder a incidentes - R Z O</title>
       
     
     
@@ -105,7 +105,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#33-attck-y-rect" class="md-skip">
+        <a href="#331-mitre-attck-y-rect-para-investigar-y-responder-a-incidentes" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -144,7 +144,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              3.3.1.-Investigación incidentes:MITRE
+              UD 3 - 3.3.1 MITRE ATT&CK y RE&CT para investigar y responder a incidentes
             
           </span>
         </div>
@@ -6352,22 +6352,22 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#33-attck-y-rect" class="md-nav__link">
+  <a href="#331-mitre-attck-y-rect-para-investigar-y-responder-a-incidentes" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3.3 ATT&amp;CK y RE&amp;CT!
+        3.3.1. MITRE ATT&amp;CK y RE&amp;CT para investigar y responder a incidentes
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="3.3 ATT&amp;CK y RE&amp;CT!">
+    <nav class="md-nav" aria-label="3.3.1. MITRE ATT&amp;CK y RE&amp;CT para investigar y responder a incidentes">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#1-que-es-esto" class="md-nav__link">
+  <a href="#1-por-que-estos-marcos-importan-en-esta-unidad" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1. ¿Qué es esto?
+        1. Por qué estos marcos importan en esta unidad
       
     </span>
   </a>
@@ -6375,10 +6375,22 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#2-mas-mitre-attck" class="md-nav__link">
+  <a href="#2-que-es-mitre-attck" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2. Más, Mitre ATT&amp;CK
+        2. Qué es MITRE ATT&amp;CK
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Qué es MITRE ATT&amp;CK">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-tacticas-tecnicas-y-sub-tecnicas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1. Tácticas, técnicas y sub-técnicas
       
     </span>
   </a>
@@ -6386,10 +6398,66 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#3-que-es-este-rect" class="md-nav__link">
+  <a href="#22-que-informacion-aporta-attck" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3. ¿Qué es este RE&amp;CT?
+        2.2. Qué información aporta ATT&amp;CK
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-como-se-usa-attck-en-investigacion-de-incidentes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Cómo se usa ATT&amp;CK en investigación de incidentes
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Cómo se usa ATT&amp;CK en investigación de incidentes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-que-aporta-attck-navigator" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1. Qué aporta ATT&amp;CK Navigator
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-que-es-rect" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Qué es RE&amp;CT
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Qué es RE&amp;CT">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-rect-no-sustituye-a-attck" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1. RE&amp;CT no sustituye a ATT&amp;CK
       
     </span>
   </a>
@@ -6397,10 +6465,66 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#4-profundizando-en-rect" class="md-nav__link">
+  <a href="#42-rect-navigator" class="md-nav__link">
     <span class="md-ellipsis">
       
-        4. Profundizando en RE&amp;CT
+        4.2. RE&amp;CT Navigator
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-como-se-complementan-attck-y-rect" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Cómo se complementan ATT&amp;CK y RE&amp;CT
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Cómo se complementan ATT&amp;CK y RE&amp;CT">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-un-ejemplo-practico-de-uso-combinado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1. Un ejemplo práctico de uso combinado
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-ejemplos-de-uso-didacticos-en-clase-o-en-un-soc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Ejemplos de uso didácticos en clase o en un SOC
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Ejemplos de uso didácticos en clase o en un SOC">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-uso-didactico-de-attck" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.1. Uso didáctico de ATT&amp;CK
       
     </span>
   </a>
@@ -6408,10 +6532,37 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#5-attck-o-rect" class="md-nav__link">
+  <a href="#62-uso-didactico-de-rect" class="md-nav__link">
     <span class="md-ellipsis">
       
-        5. ¿ATT&amp;CK o RE&amp;CT?
+        6.2. Uso didáctico de RE&amp;CT
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-cuando-usar-attck-cuando-usar-rect-y-cuando-usar-ambos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Cuándo usar ATT&amp;CK, cuándo usar RE&amp;CT y cuándo usar ambos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8-que-debe-recordar-el-alumnado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Qué debe recordar el alumnado
       
     </span>
   </a>
@@ -6424,21 +6575,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#fuente" class="md-nav__link">
+  <a href="#recursos-y-referencias" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Fuente:
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#recursos" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Recursos:
+        Recursos y referencias
       
     </span>
   </a>
@@ -8324,22 +8464,22 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#33-attck-y-rect" class="md-nav__link">
+  <a href="#331-mitre-attck-y-rect-para-investigar-y-responder-a-incidentes" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3.3 ATT&amp;CK y RE&amp;CT!
+        3.3.1. MITRE ATT&amp;CK y RE&amp;CT para investigar y responder a incidentes
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="3.3 ATT&amp;CK y RE&amp;CT!">
+    <nav class="md-nav" aria-label="3.3.1. MITRE ATT&amp;CK y RE&amp;CT para investigar y responder a incidentes">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#1-que-es-esto" class="md-nav__link">
+  <a href="#1-por-que-estos-marcos-importan-en-esta-unidad" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1. ¿Qué es esto?
+        1. Por qué estos marcos importan en esta unidad
       
     </span>
   </a>
@@ -8347,10 +8487,22 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#2-mas-mitre-attck" class="md-nav__link">
+  <a href="#2-que-es-mitre-attck" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2. Más, Mitre ATT&amp;CK
+        2. Qué es MITRE ATT&amp;CK
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Qué es MITRE ATT&amp;CK">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-tacticas-tecnicas-y-sub-tecnicas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1. Tácticas, técnicas y sub-técnicas
       
     </span>
   </a>
@@ -8358,10 +8510,66 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#3-que-es-este-rect" class="md-nav__link">
+  <a href="#22-que-informacion-aporta-attck" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3. ¿Qué es este RE&amp;CT?
+        2.2. Qué información aporta ATT&amp;CK
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-como-se-usa-attck-en-investigacion-de-incidentes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Cómo se usa ATT&amp;CK en investigación de incidentes
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Cómo se usa ATT&amp;CK en investigación de incidentes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-que-aporta-attck-navigator" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1. Qué aporta ATT&amp;CK Navigator
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-que-es-rect" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Qué es RE&amp;CT
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Qué es RE&amp;CT">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-rect-no-sustituye-a-attck" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1. RE&amp;CT no sustituye a ATT&amp;CK
       
     </span>
   </a>
@@ -8369,10 +8577,66 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#4-profundizando-en-rect" class="md-nav__link">
+  <a href="#42-rect-navigator" class="md-nav__link">
     <span class="md-ellipsis">
       
-        4. Profundizando en RE&amp;CT
+        4.2. RE&amp;CT Navigator
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-como-se-complementan-attck-y-rect" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Cómo se complementan ATT&amp;CK y RE&amp;CT
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Cómo se complementan ATT&amp;CK y RE&amp;CT">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-un-ejemplo-practico-de-uso-combinado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1. Un ejemplo práctico de uso combinado
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-ejemplos-de-uso-didacticos-en-clase-o-en-un-soc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Ejemplos de uso didácticos en clase o en un SOC
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Ejemplos de uso didácticos en clase o en un SOC">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-uso-didactico-de-attck" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.1. Uso didáctico de ATT&amp;CK
       
     </span>
   </a>
@@ -8380,10 +8644,37 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#5-attck-o-rect" class="md-nav__link">
+  <a href="#62-uso-didactico-de-rect" class="md-nav__link">
     <span class="md-ellipsis">
       
-        5. ¿ATT&amp;CK o RE&amp;CT?
+        6.2. Uso didáctico de RE&amp;CT
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-cuando-usar-attck-cuando-usar-rect-y-cuando-usar-ambos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Cuándo usar ATT&amp;CK, cuándo usar RE&amp;CT y cuándo usar ambos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8-que-debe-recordar-el-alumnado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Qué debe recordar el alumnado
       
     </span>
   </a>
@@ -8396,21 +8687,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#fuente" class="md-nav__link">
+  <a href="#recursos-y-referencias" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Fuente:
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#recursos" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Recursos:
+        Recursos y referencias
       
     </span>
   </a>
@@ -8441,7 +8721,7 @@
         
       
       
-        <a href="../../../../tags/#tag:almacenamiento" class="md-tag md-tag-icon">Almacenamiento</a>
+        <a href="../../../../tags/#tag:dfir" class="md-tag md-tag-icon">DFIR</a>
       
     
       
@@ -8451,7 +8731,7 @@
         
       
       
-        <a href="../../../../tags/#tag:evidencias" class="md-tag md-tag-icon">Evidencias</a>
+        <a href="../../../../tags/#tag:incidentes" class="md-tag md-tag-icon">Incidentes</a>
       
     
       
@@ -8461,7 +8741,7 @@
         
       
       
-        <a href="../../../../tags/#tag:is" class="md-tag md-tag-icon">IS</a>
+        <a href="../../../../tags/#tag:mitre-attck" class="md-tag md-tag-icon">MITRE ATT&CK</a>
       
     
       
@@ -8471,7 +8751,7 @@
         
       
       
-        <a href="../../../../tags/#tag:recopilación" class="md-tag md-tag-icon">Recopilación</a>
+        <a href="../../../../tags/#tag:rect" class="md-tag md-tag-icon">RE&CT</a>
       
     
       
@@ -8481,7 +8761,17 @@
         
       
       
-        <a href="../../../../tags/#tag:seguridad" class="md-tag md-tag-icon">Seguridad</a>
+        <a href="../../../../tags/#tag:respuesta-a-incidentes" class="md-tag md-tag-icon">Respuesta a incidentes</a>
+      
+    
+      
+      
+      
+        
+        
+      
+      
+        <a href="../../../../tags/#tag:threat-intelligence" class="md-tag md-tag-icon">Threat Intelligence</a>
       
     
   </nav>
@@ -8493,104 +8783,375 @@
 
   <h1>3.3.1.-Investigación incidentes:MITRE</h1>
 
-<p><img alt="" src="../assets/IS-U311-RecopilacionDeEvidencias0.png" /></p>
-<h2 id="33-attck-y-rect">3.3 ATT&amp;CK y RE&amp;CT!<a class="headerlink" href="#33-attck-y-rect" title="Permanent link">&para;</a></h2>
+<h2 id="331-mitre-attck-y-rect-para-investigar-y-responder-a-incidentes">3.3.1. <abbr title="Es un marco de referencia que se utiliza para describir las tácticas, técnicas y procedimientos utilizados por los atacantes para llevar a cabo un ataque. El marco MITRE ATT&amp;CK se basa en la recopilación de información sobre los ataques reales y proporciona una taxonomía de las tácticas, técnicas y procedimientos utilizados por los atacantes.">MITRE ATT&amp;CK</abbr> y RE&amp;CT para investigar y responder a incidentes<a class="headerlink" href="#331-mitre-attck-y-rect-para-investigar-y-responder-a-incidentes" title="Permanent link">&para;</a></h2>
+<p>Cuando se investiga un incidente no basta con mirar logs y alarmas sueltas. Hace
+falta un lenguaje común para describir <strong>qué está haciendo el adversario</strong> y,
+además, una forma ordenada de decidir <strong>cómo debe responder el equipo</strong>.</p>
+<p>Ahí es donde entran dos marcos muy útiles:</p>
+<ul>
+<li><strong><abbr title="Es un marco de referencia que se utiliza para describir las tácticas, técnicas y procedimientos utilizados por los atacantes para llevar a cabo un ataque. El marco MITRE ATT&amp;CK se basa en la recopilación de información sobre los ataques reales y proporciona una taxonomía de las tácticas, técnicas y procedimientos utilizados por los atacantes.">MITRE ATT&amp;CK</abbr></strong>, que ayuda a describir el comportamiento del atacante.</li>
+<li><strong>RE&amp;CT</strong>, que ayuda a organizar la respuesta ante el incidente.</li>
+</ul>
 <blockquote>
-<p><strong>RA3</strong>
-c) Se ha realizado la investigación de incidentes de ciberseguridad.</p>
+<p>Este tema está directamente alineado con el RA3:
+  - c) se ha realizado la investigación de incidentes de ciberseguridad.</p>
 </blockquote>
-<h3 id="1-que-es-esto">1. ¿Qué es esto?<a class="headerlink" href="#1-que-es-esto" title="Permanent link">&para;</a></h3>
-<p>Tanto ATT&amp;CK como RE&amp;CT son marcos de trabajo que ayudan a cualquier persona en la industria de la seguridad, sin importar el color de su sombrero, a comprender más sobre cómo proteger o penetrar una infraestructura. Ambos marcos proporcionan un conocimiento colectivo que ayuda a ver de forma general la <strong>ciber kill chain</strong> desde varios ángulos, tanto en el punto de vista de los atacantes como en el de los defensores, por tanto nos puede ayudar de igual forma a investigar un <abbr title="Evento que pone en peligro la confidencialidad, integridad o disponibilidad de los activos de una organización. Los incidentes de seguridad pueden ser causados por errores humanos, fallos de software, ataques maliciosos, desastres naturales, etc.">incidente de seguridad</abbr>.</p>
-<p><img alt="" src="../assets/IS_U3.3.1.-ciberkillchain.png" /></p>
-<p>Fuente <a href="https://www.exabeam.com/information-security/cyber-kill-chain/">https://www.exabeam.com/information-security/cyber-kill-chain/</a></p>
-<p>Básicamente, se trata de una base de datos de <strong>tácticas, técnicas y procedimientos (TTP)</strong>, que está en constante evolución y que se puede utilizar de innumerables formas según el rol del usuario.</p>
-<p>Los marcos <strong>ATT&amp;CK</strong> y <strong>RE&amp;CT</strong> se pueden explicar con gran detalle durante cientos de páginas, pero el enfoque que se pretente aqui es llevarlo de 0 a 1 y darle un "por qué" para familiarizarse con estos marcos, dejando la parte de la especializacion en ellos en una decision personal/profesional.</p>
-<h3 id="2-mas-mitre-attck">2. Más, Mitre ATT&amp;CK<a class="headerlink" href="#2-mas-mitre-attck" title="Permanent link">&para;</a></h3>
-<p>Mitre attack se inició en 2013 y este marco es el origen de las colecciones TTP. Hay algunas características básicas del marco Mitre ATT&amp;CK:</p>
+<div class="admonition definition">
+<p class="admonition-title">Idea base</p>
+<p><strong>ATT&amp;CK</strong> sirve para entender y clasificar las tácticas y técnicas del
+adversario. <strong>RE&amp;CT</strong> sirve para decidir qué acciones de respuesta e
+investigación conviene aplicar en cada fase del incidente.</p>
+</div>
+<h3 id="1-por-que-estos-marcos-importan-en-esta-unidad">1. Por qué estos marcos importan en esta unidad<a class="headerlink" href="#1-por-que-estos-marcos-importan-en-esta-unidad" title="Permanent link">&para;</a></h3>
+<p>En una investigación real suelen aparecer preguntas como estas:</p>
 <ul>
-<li><strong>Tácticas</strong>: Son los métodos o fases para alcanzar un objetivo específico, como por ejemplo, la fase de ejecución, la fase de persistencia, la fase de exfiltración, etc.</li>
-<li><strong>Técnicas</strong>: Son las formas en que se pueden llevar a cabo las tácticas para alcanzar los objetivos definidos en estas últimas, por ejemplo, la técnica para la fase de persistencia puede ser la creación de un servicio de Windows.</li>
-<li><strong>Mitigación</strong>: Son las formas en que se pueden mitigar las técnicas, como la mitigación de ejecución, la mitigación de persistencia, la mitigación de exfiltración, etc. Por ejemplo, la mitigación para la técnica de persistencia puede ser el uso de una herramienta de detección de amenazas que detecte la creación de un servicio de Windows.</li>
-<li><strong>Grupos <abbr title="Acrónimo en inglés de Advanced Persistent Threat (Amenaza avanzada persistente), consiste en un tipo de ataque informático que se caracteriza por realizarse con sigilo, permaneciendo activo y oculto durante mucho tiempo, utilizando diferentes formas de ataque. Suelen estar patrocinados por compañías, mafias o un estado. El objetivo principal es vigilar, exfiltrar datos o modificar los recursos de una empresa u organización de forma integrada y continuada en el tiempo. Generalmente, este tipo de malware hace uso de exploits o ejecutables, aprovechando vulnerabilidades de tipo Zero Day presentes en el software de la víctima.">APT</abbr></strong>: Son los grupos de actores de amenazas que utilizan las tácticas y técnicas, como APT28, APT29, APT30, etc. Son grupos de ciberdelincuentes que se dedican a realizar ciberataques de forma organizada y con un objetivo concreto. <abbr title="Acrónimo en inglés de Advanced Persistent Threat (Amenaza avanzada persistente), consiste en un tipo de ataque informático que se caracteriza por realizarse con sigilo, permaneciendo activo y oculto durante mucho tiempo, utilizando diferentes formas de ataque. Suelen estar patrocinados por compañías, mafias o un estado. El objetivo principal es vigilar, exfiltrar datos o modificar los recursos de una empresa u organización de forma integrada y continuada en el tiempo. Generalmente, este tipo de malware hace uso de exploits o ejecutables, aprovechando vulnerabilidades de tipo Zero Day presentes en el software de la víctima.">APT</abbr> es el acrónimo de Advanced Persistent Threat, que en español se traduce como <abbr title="Circunstancia desfavorable que puede ocurrir y que cuando sucede tiene consecuencias negativas sobre los activos provocando su indisponibilidad, funcionamiento incorrecto o pérdida de valor. Una amenaza puede tener causas naturales, ser accidental o intencionada. Si esta circunstancia desfavorable acontece a la vez que existe una vulnerabilidad o debilidad de los sistemas o aprovechando su existencia, puede derivar en un incidente de seguridad.">Amenaza</abbr> Persistente Avanzada. Los ataques <abbr title="Acrónimo en inglés de Advanced Persistent Threat (Amenaza avanzada persistente), consiste en un tipo de ataque informático que se caracteriza por realizarse con sigilo, permaneciendo activo y oculto durante mucho tiempo, utilizando diferentes formas de ataque. Suelen estar patrocinados por compañías, mafias o un estado. El objetivo principal es vigilar, exfiltrar datos o modificar los recursos de una empresa u organización de forma integrada y continuada en el tiempo. Generalmente, este tipo de malware hace uso de exploits o ejecutables, aprovechando vulnerabilidades de tipo Zero Day presentes en el software de la víctima.">APT</abbr> suelen ser muy complejos y se caracterizan por ser muy difíciles de detectar y de eliminar.</li>
-<li><strong>Software</strong>: Son los programas maliciosos que utilizan las tácticas y técnicas, como el <abbr title="Término genérico que engloba a todos los programas informáticos maliciosos, como virus, troyanos, gusanos, spyware, bots, rootkits, ransomware, etc.">malware</abbr> de APT28, el <abbr title="Término genérico que engloba a todos los programas informáticos maliciosos, como virus, troyanos, gusanos, spyware, bots, rootkits, ransomware, etc.">malware</abbr> de APT29, el <abbr title="Término genérico que engloba a todos los programas informáticos maliciosos, como virus, troyanos, gusanos, spyware, bots, rootkits, ransomware, etc.">malware</abbr> de APT30, etc.</li>
+<li>¿lo que estoy viendo encaja con una técnica conocida?;</li>
+<li>¿qué puede intentar hacer el atacante después?;</li>
+<li>¿qué controles o búsquedas conviene activar ahora?;</li>
+<li>¿cómo organizo la respuesta sin improvisar?;</li>
+<li>¿qué acciones debo tener preparadas antes de que ocurra el incidente?</li>
 </ul>
-<p>Aunque estas son 5 categorías diferentes, estas se interconectan creando una malla, lo que hace que ATT&amp;CK sea un arma formidable contra los grupos <abbr title="Acrónimo en inglés de Advanced Persistent Threat (Amenaza avanzada persistente), consiste en un tipo de ataque informático que se caracteriza por realizarse con sigilo, permaneciendo activo y oculto durante mucho tiempo, utilizando diferentes formas de ataque. Suelen estar patrocinados por compañías, mafias o un estado. El objetivo principal es vigilar, exfiltrar datos o modificar los recursos de una empresa u organización de forma integrada y continuada en el tiempo. Generalmente, este tipo de malware hace uso de exploits o ejecutables, aprovechando vulnerabilidades de tipo Zero Day presentes en el software de la víctima.">APT</abbr>. Como ejemplo, un threat hunter (profesional de la ciberseguridad que se dedica a encontrar amenazas que hayan pasado desapercibidas para los sistemas de seguridad de la organización. Para ello, el threat hunter utiliza herramientas de análisis de tráfico, de análisis de logs, de análisis de <abbr title="Término genérico que engloba a todos los programas informáticos maliciosos, como virus, troyanos, gusanos, spyware, bots, rootkits, ransomware, etc.">malware</abbr>, etc.) puede usar este marco de trabajo para formular una metodología para guiar su trabajo aplicando esto al modelo de diamante.</p>
-<p><img alt="" src="../assets/IS-U3.3.1.-ATTCKMatrix.png" /></p>
-<p>Fuente: <a href="https://attack.mitre.org/matrices/enterprise/">https://attack.mitre.org/matrices/enterprise/</a></p>
-<p>Algo que no podemos olvidar sobre el marco es el <a href="https://mitre-attack.github.io/attack-navigator/">navegador Mitre ATT&amp;CK</a>, una hoja técnica interactiva que ayuda a enfocar y priorizar ciertos TTP que son aplicables a una determinada infraestructura en lugar de todo el marco. No termina ahí, y el potencial del navegador depende de la imaginación del analista. Por ejemplo, si está investigando una infracción de seguridad de una institución financiera o tratando de asegurar una, sería mucho más fácil centrarse en los grupos <abbr title="Acrónimo en inglés de Advanced Persistent Threat (Amenaza avanzada persistente), consiste en un tipo de ataque informático que se caracteriza por realizarse con sigilo, permaneciendo activo y oculto durante mucho tiempo, utilizando diferentes formas de ataque. Suelen estar patrocinados por compañías, mafias o un estado. El objetivo principal es vigilar, exfiltrar datos o modificar los recursos de una empresa u organización de forma integrada y continuada en el tiempo. Generalmente, este tipo de malware hace uso de exploits o ejecutables, aprovechando vulnerabilidades de tipo Zero Day presentes en el software de la víctima.">APT</abbr> FinX.</p>
-<p><img alt="" src="../assets/IS-U3.3.1.-MITRE-layer.png" /></p>
-<p>Fuente <a href="https://mitre-attack.github.io/attack-navigator/enterprise/#">https://mitre-attack.github.io/attack-navigator/enterprise/#</a></p>
-<p>Algunos de los sectores donde ATT&amp;CK es útil:</p>
+<p>ATT&amp;CK y RE&amp;CT ayudan precisamente a responder a esas preguntas.</p>
+<p>En términos sencillos:</p>
 <ul>
-<li>Inteligencia de amenazas: Permite a los analistas de inteligencia de amenazas comprender mejor las tácticas, técnicas y procedimientos utilizados por los actores de amenazas, y compartir esta información con otros analistas de inteligencia de amenazas y con los equipos de seguridad.</li>
-<li>Detección y análisis de ataques: Permite a los analistas de seguridad y a los equipos de respuesta a incidentes comprender mejor las tácticas, técnicas y procedimientos utilizados por los actores de amenazas e investigar y responder a los incidentes.</li>
-<li>Emulación del adversario y formación de <abbr title="Equipo de seguridad que simula ser un atacante externo y realiza pruebas de penetración en los sistemas y redes de una organización. Los red teams suelen identificar y explotar las vulnerabilidades de seguridad para evaluar la resistencia de los sistemas y redes.">red team</abbr>: Permite a los equipos de <abbr title="Equipo de seguridad que simula ser un atacante externo y realiza pruebas de penetración en los sistemas y redes de una organización. Los red teams suelen identificar y explotar las vulnerabilidades de seguridad para evaluar la resistencia de los sistemas y redes.">red team</abbr> emular a los actores de amenazas y a los equipos de <abbr title="Equipo de seguridad que defiende los sistemas y redes de un ataque simulado por el red team. Los blue teams suelen estar formados por profesionales de la seguridad de la información que se encargan de detectar, responder y mitigar los ataques.">blue team</abbr> defenderse contra los actores de amenazas, facilitando la formación y el desarrollo de habilidades.</li>
-<li>Evaluaciones e ingeniería: Permite a los equipos de evaluación y a los ingenieros de seguridad comprender mejor las tácticas, técnicas y procedimientos utilizados por los actores de amenazas, y utilizar esta información para evaluar y mejorar la seguridad de las organizaciones.</li>
+<li><strong>ATT&amp;CK</strong> mira el incidente desde el punto de vista del comportamiento del
+  adversario.</li>
+<li><strong>RE&amp;CT</strong> lo mira desde el punto de vista de la respuesta del equipo
+  defensor.</li>
 </ul>
-<h3 id="3-que-es-este-rect">3. ¿Qué es este RE&amp;CT?<a class="headerlink" href="#3-que-es-este-rect" title="Permanent link">&para;</a></h3>
-<p>Si ATT&amp;CK se centra en la Ciber Kill Chain, RE&amp;CT deriva de ATT&amp;CK, y se centra completamente en la respuesta a incidentes y sus etapas: Preparación, Identificación, Contención, Erradicación, Recuperación y Lecciones aprendidas. Esto se puede utilizar para:</p>
+<figure>
+<p><img alt="Relación entre fases del ataque y análisis defensivo" src="../assets/IS_U3.3.1.-ciberkillchain.png" />
+  </p>
+<figcaption>Los marcos de análisis ayudan a situar las acciones del atacante y a responder con más criterio.</figcaption>
+</figure>
+<h3 id="2-que-es-mitre-attck">2. Qué es <abbr title="Es un marco de referencia que se utiliza para describir las tácticas, técnicas y procedimientos utilizados por los atacantes para llevar a cabo un ataque. El marco MITRE ATT&amp;CK se basa en la recopilación de información sobre los ataques reales y proporciona una taxonomía de las tácticas, técnicas y procedimientos utilizados por los atacantes.">MITRE ATT&amp;CK</abbr><a class="headerlink" href="#2-que-es-mitre-attck" title="Permanent link">&para;</a></h3>
+<p><strong><abbr title="Es un marco de referencia que se utiliza para describir las tácticas, técnicas y procedimientos utilizados por los atacantes para llevar a cabo un ataque. El marco MITRE ATT&amp;CK se basa en la recopilación de información sobre los ataques reales y proporciona una taxonomía de las tácticas, técnicas y procedimientos utilizados por los atacantes.">MITRE ATT&amp;CK</abbr></strong> es una base de conocimiento que recopila <strong>tácticas,
+técnicas y sub-técnicas</strong> observadas en ataques reales. Su valor no está en
+“poner nombres bonitos”, sino en ofrecer una forma común de describir el
+comportamiento del adversario.</p>
+<p>Esto es importante porque permite que analistas, equipos <abbr title="Centro de Operaciones de Seguridad. Es un sistema de seguridad que monitoriza y responde a las amenazas de seguridad en una red. Los SOCs pueden integrar información de múltiples fuentes, como firewalls, IDS, IPS, antivirus, etc., y coordinar la respuesta a los incidentes de seguridad.">SOC</abbr>, <abbr title="Computer Security Incident Response Team, Equipo de Respuesta a Incidentes de Seguridad Informática. Variante más amplia del CIRT, que incluye una visión más estratégica y alineada con las políticas de seguridad.">CSIRT</abbr>, personal
+de sistemas y responsables de seguridad hablen del incidente con el mismo
+vocabulario.</p>
+<h4 id="21-tacticas-tecnicas-y-sub-tecnicas">2.1. Tácticas, técnicas y sub-técnicas<a class="headerlink" href="#21-tacticas-tecnicas-y-sub-tecnicas" title="Permanent link">&para;</a></h4>
+<p>Una de las primeras cosas que hay que entender bien es la diferencia entre
+estos conceptos:</p>
+<table>
+<thead>
+<tr>
+<th>Concepto</th>
+<th>Qué representa</th>
+<th>Ejemplo sencillo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Táctica</strong></td>
+<td>El objetivo inmediato del atacante</td>
+<td>Persistencia, movimiento lateral, exfiltración</td>
+</tr>
+<tr>
+<td><strong>Técnica</strong></td>
+<td>La forma general de alcanzar ese objetivo</td>
+<td>Crear una tarea programada, usar credenciales robadas</td>
+</tr>
+<tr>
+<td><strong>Sub-técnica</strong></td>
+<td>Una variante más concreta de la técnica</td>
+<td>Crear una tarea concreta en Windows, usar un tipo específico de acceso remoto</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition tip">
+<p class="admonition-title">Cómo recordarlo</p>
+<p>Una forma fácil de memorizarlo es esta: la <strong>táctica</strong> responde al
+<strong>para qué</strong>, mientras que la <strong>técnica</strong> responde al <strong>cómo</strong>.</p>
+</div>
+<h4 id="22-que-informacion-aporta-attck">2.2. Qué información aporta ATT&amp;CK<a class="headerlink" href="#22-que-informacion-aporta-attck" title="Permanent link">&para;</a></h4>
+<p>ATT&amp;CK no se limita a listar técnicas. También relaciona:</p>
 <ul>
-<li>Identificación de brechas de seguridad: ya que permitirá identificar qué tácticas, técnicas y procedimientos utilizados por los actores de amenazas son más probables en su entorno, y qué medidas de seguridad son más eficaces para mitigar estas tácticas, técnicas y procedimientos y no están cubiertas por las medidas de seguridad actuales.</li>
-<li>Mejores capacidades de respuesta a incidentes: ya que permitirá a los equipos de respuesta a incidentes comprender mejor las tácticas, técnicas y procedimientos utilizados por los actores de amenazas, y utilizar esta información para mejorar sus capacidades de respuesta a incidentes, incluyendo la detección, la investigación y la respuesta a incidentes, identificando que acciones se deben tomar en cada una de las fases del proceso de respuesta a incidentes.</li>
+<li>grupos o actores que usan esas técnicas;</li>
+<li>software o herramientas asociadas;</li>
+<li>mitigaciones recomendadas;</li>
+<li>detecciones posibles;</li>
+<li>y referencias cruzadas útiles para investigación e inteligencia.</li>
 </ul>
-<p>Al igual que ATT&amp;CK, RE&amp;CT también viene con un navegador que se puede utilizar para una mejor priorización de aquello que importa durante el análisis.</p>
-<p><img alt="" src="../assets/IS-U3.3.1.-RECT-Navigator.png" /></p>
-<p>Fuente: <a href="https://atc-project.github.io/react-navigator/">https://atc-project.github.io/react-navigator/</a></p>
-<h3 id="4-profundizando-en-rect">4. Profundizando en RE&amp;CT<a class="headerlink" href="#4-profundizando-en-rect" title="Permanent link">&para;</a></h3>
-<p>Con <a href="https://atc-project.github.io/atc-react/">RE@CT</a>, el concepto es similar, una matriz en la que podemos identificar las técnicas empleadas en la respuesta a incidentes. Pero no te quedes con el DFIR, vamos a darle nuestra “visión”.</p>
-<p><img alt="" src="../assets/IS-3.3.1.-REACT-Matrix.png" /></p>
-<p>Por cierto, DFIR (acrónimo en inglés de Digital Forensics Incident Response) integra dos disciplinas diferenciadas de ciberseguridad: el <strong>análisis forense digital</strong>, es decir, la investigación de ciberamenazas, centrada especialmente en recopilar material digital probatorio que se pueda utilizar luego en los procesos contra ciberdelincuentes, y la <strong>respuesta ante incidentes</strong>, que abarca la detección y la mitigación de los ciberataques en curso. Mediante la combinación de ambas disciplinas, los servicios DFIR ayudan a los equipos de seguridad a detener las amenazas más rápido, así como a preservar el material probatorio que se puede perder cuando la prioridad es mitigar una amenaza lo antes posible)</p>
-<p>La matriz identifica las distintas fases en:</p>
+<p>Esto convierte ATT&amp;CK en una herramienta muy útil para:</p>
 <ul>
-<li>Preparación.</li>
-<li>Identificación.</li>
-<li>Contención.</li>
-<li>Erradicación.</li>
-<li>Recuperación</li>
-<li>Lecciones aprendidas.</li>
+<li><strong>investigar incidentes</strong>;</li>
+<li><strong>crear detecciones</strong>;</li>
+<li><strong>hacer threat hunting</strong>;</li>
+<li><strong>priorizar controles defensivos</strong>;</li>
+<li>y <strong>explicar mejor un incidente</strong>.</li>
 </ul>
-<p>En DFIR tendrás definidas estas fases en tus procesos, con estos u otros nombres.</p>
-<p>Por ejemplo, durante la fase de preparación te encargarás de preparar todo lo necesario para poder realizar un proceso de respuesta a incidentes de forma adecuada, por ejemplo: si no tienes “cámaras de video” luego no me pidas que revise el video…</p>
-<p>Las acciones de respuesta que nos enumera la matriz por cada una de las fases, son una guía fenomenal para nuestros departamentos de administración de sistemas, de seguridad, nuestro <abbr title="Equipo de seguridad que defiende los sistemas y redes de un ataque simulado por el red team. Los blue teams suelen estar formados por profesionales de la seguridad de la información que se encargan de detectar, responder y mitigar los ataques.">blue team</abbr> puedan cumplir con las fases de respuesta a incidentes.  </p>
-<p>Por ejemplo, en <code>Preparation</code>: nos plantará un conjunto de acciones a tomar que debemos tener resueltas antes de tener un incidente, como por ejemplo:</p>
+<figure>
+<p><img alt="Matriz MITRE ATT&amp;CK" src="../assets/IS-U3.3.1.-ATTCKMatrix.png" />
+  </p>
+<figcaption>La matriz MITRE ATT&amp;CK organiza tácticas y técnicas para describir comportamientos observados en ataques reales.</figcaption>
+</figure>
+<h3 id="3-como-se-usa-attck-en-investigacion-de-incidentes">3. Cómo se usa ATT&amp;CK en investigación de incidentes<a class="headerlink" href="#3-como-se-usa-attck-en-investigacion-de-incidentes" title="Permanent link">&para;</a></h3>
+<p>En una investigación, ATT&amp;CK ayuda a traducir hechos técnicos en una secuencia
+de comportamiento del atacante.</p>
+<p>Por ejemplo, imagina este caso:</p>
 <ul>
-<li>
-<p><code>RA1006: Set up a centralized long-term log storage</code>. El framework nos está diciendo que tenemos que tener un almacenamiento longevo para nuestros logs. No el que usamos en el <abbr title="Sistema de Gestión de Eventos e Información de Seguridad. Es un sistema de seguridad que recopila, correlaciona y analiza los eventos de seguridad de una red para detectar y responder a las amenazas de seguridad. Los SIEM pueden integrar información de múltiples fuentes, como firewalls, IDS, IPS, antivirus, etc.">SIEM</abbr> en el mejor de los casos… uno más barato, lento, poco inteligente, pero que nos permita tirar de eventos pasados.</p>
-</li>
-<li>
-<p><code>RA1103 y RA1104: acceso a los logs http</code>. Nos plantea la pregunta de si tenemos los logs del server que hosteamos en nuestra empresa y si tenemos los de la web que tenemos en el proveedor. Si estos últimos no los tenemos, ¿qué pasa si nos hacen un defacement en la web pública? nos quedamos sin poder investigar nada… porque claro… estaba “fuera”….</p>
-</li>
-<li>
-<p><code>RA1108: Logs de DHCP</code>, En cuanto a los logs <abbr title="Protocolo de Configuración Dinámica de Host. Es un protocolo que se utiliza para asignar direcciones IP de forma dinámica a los dispositivos de una red. El DHCP permite a los dispositivos obtener automáticamente una dirección IP, una máscara de subred, una puerta de enlace, etc.">DHCP</abbr>, posiblemente ya los guardas y los exportas desde su ubicación por defecto… pero por si acaso, sirva esta guía para tener un control de cuáles son estas medidas.</p>
-</li>
+<li>un correo sospechoso llega a un buzón;</li>
+<li>la persona usuaria abre el adjunto;</li>
+<li>aparece un proceso de <code>powershell.exe</code>;</li>
+<li>después hay una conexión a un dominio no habitual;</li>
+<li>y más tarde se detecta persistencia.</li>
 </ul>
-<p>Además se plantearán un montón de ideas como: ¿eres capaz de detectar un fichero borrado? ¿Modificado? Una clave del registro? y que como hemos comentado, tendremos que resolver antes de tener un incidente.</p>
-<p>Si seguimos con la fase de <code>Identification</code>, se encuentrán acciones a emprender que nos ayudarán a iniciar esta fase, como listar ficheros borrados, listar ficheros modificados, listar claves del registro, etc.</p>
-<p>En cuanto a la <code>Containment</code>, es de las fases a la que más valor se le suele dar, pero ¿estás preparado? ¿puedes bloquear un puerto interno?, ¿puedes cambiar una ACL en un Switch para una Vlan? Todas estas reflexiones las debes hacer antes de tener un incidente, o al menos, tener claro el procedimiento. Suele pasar en muchas empresas que, aunque se puede, ésta delega a “otra empresa” estos trabajos, y se pierde el control… se pierde tiempo, que en la contención es primordial.</p>
-<p>No creo que haga falta seguir con la enumeración. Lo que si es interesante es que igual que ocurre con <abbr title="Es una organización sin ánimo de lucro que se dedica a la investigación y el desarrollo en diversas áreas, como la ciberseguridad, la defensa, la salud, etc. MITRE proporciona recursos, herramientas y guías para ayudar a las organizaciones a mejorar su seguridad y eficiencia.">MITRE</abbr>, que tenemos un proyecto de la matriz navegable, con RE@CT tenemos lo mismo, <a href="https://atc-project.github.io/react-navigator/">un mapa en el que podemos trabajar los ítems</a>, dándole el enfoque que queramos.</p>
-<p>En este caso, tenemos una categorización por colores de las técnicas enumeradas, en referencia a si son elementos generales, de red, correo, ficheros, procesos, etc… pero lo bueno de la matriz es que podemos configurarla de la manera que queramos. Un ejemplo de uso podría ser para reflejar el grado de madurez de nuestra organización, imagina un semáforo, y pintamos para cada técnica, si lo tenemos bien (verde), si lo tenemos en el radar o pendiente (amarillo) o si no tenemos cobertura ninguna de la técnica (rojo). Me parece muy interesante a la hora de documentar a clientes su estado de madurez ante una respuesta a incidentes.</p>
-<p><img alt="" src="../assets/IS-U3.3.1.-REACT-EnterpriseMatrix.png" /></p>
-<p>El proyecto es mucho más ambicioso, ya que contempla la recopilación de playbooks (guía estratégica que detalla las acciones a seguir en respuesta a eventos específicos, como incidentes de ciberseguridad), una comunidad donde podamos crear elementos “accionables” que además, podemos importar en nuestro The Hive/Cortex &amp;MISP como elementos de automatización de tareas…</p>
-<p>Pero por si fuera poco, es una pata del proyecto  <a href="https://github.com/atc-project/atomic-threat-coverage">Atomic Threat Coverage</a>, lo que pretende ser el punto de unión de “todo esto” que hablamos de <abbr title="Es una organización sin ánimo de lucro que se dedica a la investigación y el desarrollo en diversas áreas, como la ciberseguridad, la defensa, la salud, etc. MITRE proporciona recursos, herramientas y guías para ayudar a las organizaciones a mejorar su seguridad y eficiencia.">MITRE</abbr>, reglas Sigma de detección, playbooks para automatizar, lenguaje de marcas para poder documentar mitigaciones, procesos de <abbr title="Equipo de seguridad que simula ser un atacante externo y realiza pruebas de penetración en los sistemas y redes de una organización. Los red teams suelen identificar y explotar las vulnerabilidades de seguridad para evaluar la resistencia de los sistemas y redes.">red team</abbr> para generar el “ruido”, un proyecto BRUTAL que pone nombre y apellidos a toda la cadena de valor desde la nomenclatura del ataque, la detección, hasta lecciones aprendidas, fortificación…</p>
-<p><img alt="" src="../assets/IS-U3.3.1.-AtomicThreatCoverage.png" /></p>
-<p>Si bien esto es un proyecto ambicioso, orientado a la respuesta a incidentes, nos lo podemos llevar a nuestro terreno defensivo.</p>
-<h3 id="5-attck-o-rect">5. ¿ATT&amp;CK o RE&amp;CT?<a class="headerlink" href="#5-attck-o-rect" title="Permanent link">&para;</a></h3>
-<p>Y ¿por qué no ambos? Estos dos marcos se crean con diferentes perspectivas de enfoque, según el rol de uso del marco. Por lo tanto, familiarizarse con estos marcos y utilizarlos te dará una ventaja adicional sobre los adversarios, así como también te ayudará a ser proactivo para poder prevenir los incidentes por completo.</p>
-<h2 id="fuente">Fuente:<a class="headerlink" href="#fuente" title="Permanent link">&para;</a></h2>
+<p>Sin un marco de análisis, esto puede quedarse en una lista de eventos. Con
+ATT&amp;CK, el equipo puede empezar a describir lo ocurrido con más contexto:</p>
 <ul>
-<li><a href="https://vidura-supun.github.io/2020/06/08/should-i-rect-or-attck/">Should I RE&amp;CT or ATT&amp;CK</a></li>
-<li><a href="https://blogvisionarios.com/articulos-ciberseguridad/no-es-matrix-es-la-matriz-react-respuesta-incidentes/">No es matrix, es la matriz RE@CT de respuesta a incidentes</a></li>
+<li><strong>phishing</strong> o entrega por correo;</li>
+<li><strong>ejecución</strong> de <em>scripts</em> o comandos;</li>
+<li><strong>persistencia</strong>;</li>
+<li><strong>mando y control</strong>;</li>
+<li>posible <strong>robo de credenciales</strong> o <strong>movimiento lateral</strong>.</li>
 </ul>
-<h2 id="recursos">Recursos:<a class="headerlink" href="#recursos" title="Permanent link">&para;</a></h2>
+<p>Eso no sustituye a la evidencia, pero ayuda a:</p>
 <ul>
-<li>Mitre ATT&amp;CK: <a href="https://attack.mitre.org/">https://attack.mitre.org/</a></li>
+<li>estructurar la investigación;</li>
+<li>anticipar pasos siguientes del adversario;</li>
+<li>buscar otros equipos afectados;</li>
+<li>y comunicar mejor el caso.</li>
+</ul>
+<div class="admonition example">
+<p class="admonition-title">Ejemplo didáctico</p>
+<p>Si en un host observas un cambio de registro para persistencia, ATT&amp;CK te
+permite clasificar ese comportamiento dentro de una técnica concreta. A
+partir de ahí, puedes preguntarte qué otras técnicas suelen aparecer junto
+a esa y qué controles o búsquedas defensivas conviene activar.</p>
+</div>
+<h4 id="31-que-aporta-attck-navigator">3.1. Qué aporta ATT&amp;CK Navigator<a class="headerlink" href="#31-que-aporta-attck-navigator" title="Permanent link">&para;</a></h4>
+<p>Además de la matriz general, ATT&amp;CK dispone de una herramienta muy práctica:
+<strong>ATT&amp;CK Navigator</strong>.</p>
+<p>El Navigator permite trabajar con capas (<em>layers</em>) para:</p>
+<ul>
+<li>marcar técnicas observadas en un incidente;</li>
+<li>priorizar técnicas relevantes para una organización;</li>
+<li>reflejar cobertura defensiva;</li>
+<li>comparar qué ve un equipo y qué no ve;</li>
+<li>y documentar el grado de madurez del entorno.</li>
+</ul>
+<figure>
+<p><img alt="ATT&amp;CK Navigator" src="../assets/IS-U3.3.1.-MITRE-layer.png" />
+  </p>
+<figcaption>ATT&amp;CK Navigator permite resaltar técnicas, priorizarlas y visualizar cobertura o huecos de detección.</figcaption>
+</figure>
+<p>En clase o en una organización real, esto puede usarse de varias formas:</p>
+<ul>
+<li>para marcar técnicas vistas en un incidente concreto;</li>
+<li>para representar qué tácticas detecta bien el <abbr title="Centro de Operaciones de Seguridad. Es un sistema de seguridad que monitoriza y responde a las amenazas de seguridad en una red. Los SOCs pueden integrar información de múltiples fuentes, como firewalls, IDS, IPS, antivirus, etc., y coordinar la respuesta a los incidentes de seguridad.">SOC</abbr>;</li>
+<li>para identificar lagunas de visibilidad;</li>
+<li>o para preparar simulaciones de <abbr title="Equipo de seguridad que simula ser un atacante externo y realiza pruebas de penetración en los sistemas y redes de una organización. Los red teams suelen identificar y explotar las vulnerabilidades de seguridad para evaluar la resistencia de los sistemas y redes.">red team</abbr> y <abbr title="Equipo de seguridad que defiende los sistemas y redes de un ataque simulado por el red team. Los blue teams suelen estar formados por profesionales de la seguridad de la información que se encargan de detectar, responder y mitigar los ataques.">blue team</abbr>.</li>
+</ul>
+<h3 id="4-que-es-rect">4. Qué es RE&amp;CT<a class="headerlink" href="#4-que-es-rect" title="Permanent link">&para;</a></h3>
+<p>Si ATT&amp;CK describe al adversario, <strong>RE&amp;CT</strong> describe mejor la parte defensiva y
+de respuesta.</p>
+<p>RE&amp;CT es un marco orientado a <strong>respuesta a incidentes y DFIR</strong> (<em>Digital
+Forensics and Incident Response</em>). Organiza acciones y técnicas relacionadas con
+las fases habituales de la respuesta, por ejemplo:</p>
+<ul>
+<li><strong>preparación</strong>;</li>
+<li><strong>identificación</strong>;</li>
+<li><strong>contención</strong>;</li>
+<li><strong>erradicación</strong>;</li>
+<li><strong>recuperación</strong>;</li>
+<li><strong>lecciones aprendidas</strong>.</li>
+</ul>
+<p>Su valor práctico está en que ayuda a responder preguntas como estas:</p>
+<ul>
+<li>¿qué información debería estar recogiendo ya?;</li>
+<li>¿qué controles necesito tener preparados antes del incidente?;</li>
+<li>¿qué acciones de contención puedo aplicar en esta fase?;</li>
+<li>¿qué evidencias debo conservar para no perder contexto?;</li>
+<li>¿qué playbooks conviene tener definidos?</li>
+</ul>
+<figure>
+<p><img alt="Matriz RE&amp;CT" src="../assets/IS-3.3.1.-REACT-Matrix.png" />
+  </p>
+<figcaption>RE&amp;CT organiza técnicas y acciones defensivas alrededor de las fases de la respuesta a incidentes.</figcaption>
+</figure>
+<h4 id="41-rect-no-sustituye-a-attck">4.1. RE&amp;CT no sustituye a ATT&amp;CK<a class="headerlink" href="#41-rect-no-sustituye-a-attck" title="Permanent link">&para;</a></h4>
+<p>Este punto es importante: <strong>RE&amp;CT no compite con ATT&amp;CK</strong>.</p>
+<p>Ambos marcos responden a preguntas distintas:</p>
+<ul>
+<li>ATT&amp;CK ayuda a entender <strong>qué hace el atacante</strong>.</li>
+<li>RE&amp;CT ayuda a decidir <strong>cómo debe responder el equipo</strong>.</li>
+</ul>
+<p>Por eso RE&amp;CT resulta especialmente útil para:</p>
+<ul>
+<li>definir playbooks;</li>
+<li>revisar preparación técnica y organizativa;</li>
+<li>comprobar qué datos y logs hacen falta;</li>
+<li>valorar si un equipo está realmente preparado para contener e investigar;</li>
+<li>y mejorar la madurez de la respuesta.</li>
+</ul>
+<h4 id="42-rect-navigator">4.2. RE&amp;CT Navigator<a class="headerlink" href="#42-rect-navigator" title="Permanent link">&para;</a></h4>
+<p>Igual que ATT&amp;CK tiene su Navigator, RE&amp;CT también cuenta con herramientas para
+trabajar visualmente la cobertura de respuesta.</p>
+<figure>
+<p><img alt="RE&amp;CT Navigator" src="../assets/IS-U3.3.1.-RECT-Navigator.png" />
+  </p>
+<figcaption>El navegador de RE&amp;CT permite priorizar acciones de respuesta y visualizar cobertura por fases.</figcaption>
+</figure>
+<p>Esto puede ser útil, por ejemplo, para marcar:</p>
+<ul>
+<li>acciones que ya están cubiertas;</li>
+<li>acciones que el equipo puede ejecutar parcialmente;</li>
+<li>acciones que todavía no están preparadas;</li>
+<li>o medidas que dependen de terceros y deberían revisarse antes de un incidente.</li>
+</ul>
+<h3 id="5-como-se-complementan-attck-y-rect">5. Cómo se complementan ATT&amp;CK y RE&amp;CT<a class="headerlink" href="#5-como-se-complementan-attck-y-rect" title="Permanent link">&para;</a></h3>
+<p>La combinación de ambos marcos es especialmente útil en investigación y
+respuesta a incidentes.</p>
+<table>
+<thead>
+<tr>
+<th>Si necesitas...</th>
+<th>Te ayuda más...</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Describir técnicas del atacante</td>
+<td><strong>ATT&amp;CK</strong></td>
+</tr>
+<tr>
+<td>Entender el comportamiento observado</td>
+<td><strong>ATT&amp;CK</strong></td>
+</tr>
+<tr>
+<td>Construir reglas de detección o <em>hunting</em></td>
+<td><strong>ATT&amp;CK</strong></td>
+</tr>
+<tr>
+<td>Organizar acciones de respuesta</td>
+<td><strong>RE&amp;CT</strong></td>
+</tr>
+<tr>
+<td>Revisar preparación y playbooks</td>
+<td><strong>RE&amp;CT</strong></td>
+</tr>
+<tr>
+<td>Coordinar investigación y respuesta</td>
+<td><strong>ATT&amp;CK + RE&amp;CT</strong></td>
+</tr>
+</tbody>
+</table>
+<h4 id="51-un-ejemplo-practico-de-uso-combinado">5.1. Un ejemplo práctico de uso combinado<a class="headerlink" href="#51-un-ejemplo-practico-de-uso-combinado" title="Permanent link">&para;</a></h4>
+<p>Supongamos un incidente de <em>phishing</em>:</p>
+<ol>
+<li>Llega un correo con un enlace malicioso.</li>
+<li>La persona usuaria pulsa el enlace.</li>
+<li>El equipo descarga una carga adicional.</li>
+<li>Se detecta persistencia y tráfico hacia un dominio externo.</li>
+</ol>
+<p>Con <strong>ATT&amp;CK</strong>, el equipo puede describir:</p>
+<ul>
+<li>el vector de entrada;</li>
+<li>la ejecución;</li>
+<li>la persistencia;</li>
+<li>y el mando y control.</li>
+</ul>
+<p>Con <strong>RE&amp;CT</strong>, el equipo puede decidir:</p>
+<ul>
+<li>qué evidencias recoger primero;</li>
+<li>qué cuentas o equipos aislar;</li>
+<li>qué bloqueos aplicar en <abbr title="Sistema de Nombres de Dominio. Es un sistema que se utiliza para traducir los nombres de dominio en direcciones IP. El DNS permite a los usuarios acceder a los sitios web utilizando nombres de dominio en lugar de direcciones IP.">DNS</abbr>, proxy o <abbr title="Dispositivo de seguridad que se utiliza para proteger una red de comunicaciones. El firewall controla el tráfico de red y decide qué paquetes de datos pueden entrar o salir de la red.">firewall</abbr>;</li>
+<li>y qué <abbr title="Conjunto de procedimientos y acciones predefinidas que se utilizan para responder a incidentes de seguridad. Los playbooks pueden incluir pasos para identificar, contener, erradicar y recuperar de un incidente de seguridad, así como para comunicarlo a las partes interesadas.">playbook</abbr> seguir para contener sin perder evidencia.</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Idea importante</p>
+<p>ATT&amp;CK ayuda a <strong>leer el ataque</strong>. RE&amp;CT ayuda a <strong>organizar la respuesta</strong>.
+Usados juntos, mejoran tanto la investigación como la toma de decisiones.</p>
+</div>
+<h3 id="6-ejemplos-de-uso-didacticos-en-clase-o-en-un-soc">6. Ejemplos de uso didácticos en clase o en un <abbr title="Centro de Operaciones de Seguridad. Es un sistema de seguridad que monitoriza y responde a las amenazas de seguridad en una red. Los SOCs pueden integrar información de múltiples fuentes, como firewalls, IDS, IPS, antivirus, etc., y coordinar la respuesta a los incidentes de seguridad.">SOC</abbr><a class="headerlink" href="#6-ejemplos-de-uso-didacticos-en-clase-o-en-un-soc" title="Permanent link">&para;</a></h3>
+<p>Estos marcos no son solo teoría. Se pueden aplicar de forma muy práctica.</p>
+<h4 id="61-uso-didactico-de-attck">6.1. Uso didáctico de ATT&amp;CK<a class="headerlink" href="#61-uso-didactico-de-attck" title="Permanent link">&para;</a></h4>
+<p>ATT&amp;CK puede utilizarse en clase para:</p>
+<ul>
+<li>clasificar comportamientos observados en un caso;</li>
+<li>relacionar indicadores con tácticas y técnicas;</li>
+<li>comparar campañas distintas;</li>
+<li>o justificar por qué cierta evidencia es relevante en una investigación.</li>
+</ul>
+<p>Por ejemplo, si el alumnado analiza un incidente y detecta:</p>
+<ul>
+<li>un adjunto malicioso;</li>
+<li>ejecución de macros o <em>scripts</em>;</li>
+<li>cambios de persistencia;</li>
+<li>y tráfico a un dominio extraño;</li>
+</ul>
+<p>puede usar ATT&amp;CK para ordenar la investigación y expresarla con un lenguaje
+común.</p>
+<h4 id="62-uso-didactico-de-rect">6.2. Uso didáctico de RE&amp;CT<a class="headerlink" href="#62-uso-didactico-de-rect" title="Permanent link">&para;</a></h4>
+<p>RE&amp;CT puede utilizarse para:</p>
+<ul>
+<li>comprobar si el equipo sabría responder;</li>
+<li>diseñar un <abbr title="Conjunto de procedimientos y acciones predefinidas que se utilizan para responder a incidentes de seguridad. Los playbooks pueden incluir pasos para identificar, contener, erradicar y recuperar de un incidente de seguridad, así como para comunicarlo a las partes interesadas.">playbook</abbr> mínimo;</li>
+<li>revisar qué logs hacen falta;</li>
+<li>o detectar carencias de preparación antes de que ocurra el incidente real.</li>
+</ul>
+<p>Un ejercicio sencillo podría consistir en preguntar:</p>
+<ul>
+<li>¿tenemos acceso a logs de correo?;</li>
+<li>¿podemos aislar un endpoint rápidamente?;</li>
+<li>¿sabemos revocar sesiones o tokens?;</li>
+<li>¿tenemos forma de conservar evidencias críticas?;</li>
+<li>¿quién decide qué hacer si el servicio afectado es crítico?</li>
+</ul>
+<p>Estas preguntas conectan muy bien con la práctica real, porque muestran que la
+respuesta a incidentes no depende solo de herramientas, sino también de
+procedimientos y preparación previa.</p>
+<figure>
+<p><img alt="Cobertura empresarial en RE&amp;CT" src="../assets/IS-U3.3.1.-REACT-EnterpriseMatrix.png" />
+  </p>
+<figcaption>RE&amp;CT también puede emplearse para representar el nivel de madurez o cobertura defensiva de una organización.</figcaption>
+</figure>
+<h3 id="7-cuando-usar-attck-cuando-usar-rect-y-cuando-usar-ambos">7. Cuándo usar ATT&amp;CK, cuándo usar RE&amp;CT y cuándo usar ambos<a class="headerlink" href="#7-cuando-usar-attck-cuando-usar-rect-y-cuando-usar-ambos" title="Permanent link">&para;</a></h3>
+<p>La respuesta corta es esta:</p>
+<ul>
+<li>usa <strong>ATT&amp;CK</strong> cuando necesites describir y entender el comportamiento del
+  atacante;</li>
+<li>usa <strong>RE&amp;CT</strong> cuando necesites organizar la respuesta y comprobar si el
+  equipo está preparado;</li>
+<li>usa <strong>ambos</strong> cuando estés investigando un incidente real y necesites tanto
+  entender el ataque como responder con orden.</li>
+</ul>
+<p>En la práctica, lo más habitual es combinarlos:</p>
+<ul>
+<li><strong>ATT&amp;CK</strong> para interpretar el incidente;</li>
+<li><strong>RE&amp;CT</strong> para convertir esa interpretación en acciones de respuesta.</li>
+</ul>
+<h3 id="8-que-debe-recordar-el-alumnado">8. Qué debe recordar el alumnado<a class="headerlink" href="#8-que-debe-recordar-el-alumnado" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong><abbr title="Es un marco de referencia que se utiliza para describir las tácticas, técnicas y procedimientos utilizados por los atacantes para llevar a cabo un ataque. El marco MITRE ATT&amp;CK se basa en la recopilación de información sobre los ataques reales y proporciona una taxonomía de las tácticas, técnicas y procedimientos utilizados por los atacantes.">MITRE ATT&amp;CK</abbr></strong> es una base de conocimiento sobre tácticas y técnicas
+  observadas en ataques reales.</li>
+<li>La diferencia clave es que la <strong>táctica</strong> indica el objetivo del atacante y
+  la <strong>técnica</strong> indica cómo intenta conseguirlo.</li>
+<li><strong>ATT&amp;CK Navigator</strong> ayuda a visualizar técnicas observadas, priorizarlas y
+  medir cobertura.</li>
+<li><strong>RE&amp;CT</strong> está orientado a la respuesta a incidentes y a la preparación del
+  equipo defensor.</li>
+<li>ATT&amp;CK y RE&amp;CT <strong>no compiten</strong>: se complementan.</li>
+<li>En una investigación real, ATT&amp;CK ayuda a entender el ataque y RE&amp;CT ayuda a
+  organizar la respuesta.</li>
+</ul>
+<div class="admonition success">
+<p class="admonition-title">Idea final</p>
+<p>Si ATT&amp;CK te ayuda a responder <strong>qué está haciendo el adversario</strong>, RE&amp;CT
+te ayuda a responder <strong>qué debe hacer tu equipo ahora</strong>. Ese es el valor de
+usar ambos marcos juntos.</p>
+</div>
+<h2 id="recursos-y-referencias">Recursos y referencias<a class="headerlink" href="#recursos-y-referencias" title="Permanent link">&para;</a></h2>
+<ul>
+<li><abbr title="Es un marco de referencia que se utiliza para describir las tácticas, técnicas y procedimientos utilizados por los atacantes para llevar a cabo un ataque. El marco MITRE ATT&amp;CK se basa en la recopilación de información sobre los ataques reales y proporciona una taxonomía de las tácticas, técnicas y procedimientos utilizados por los atacantes.">MITRE ATT&amp;CK</abbr>: <a href="https://attack.mitre.org/">https://attack.mitre.org/</a></li>
+<li>ATT&amp;CK Navigator: <a href="https://mitre-attack.github.io/attack-navigator/">https://mitre-attack.github.io/attack-navigator/</a></li>
 <li>RE&amp;CT: <a href="https://atc-project.github.io/atc-react/">https://atc-project.github.io/atc-react/</a></li>
-<li>RE&amp;CT navigator: <a href="https://atc-project.github.io/react-navigator/">https://atc-project.github.io/react-navigator/</a></li>
-<li>Charlas: <a href="https://github.com/aboutsecurity/Talks-and-Presentations">https://github.com/aboutsecurity/Talks-and-Presentations</a> (hay video tb)</li>
-<li>eBook: <a href="https://github.com/Incidentes/Incident-Response-with-Threat-Intelligence">https://github.com/Incidentes/Incident-Response-with-Threat-Intelligence</a></li>
+<li>RE&amp;CT Navigator: <a href="https://atc-project.github.io/react-navigator/">https://atc-project.github.io/react-navigator/</a></li>
+<li>Atomic Threat Coverage: <a href="https://github.com/atc-project/atomic-threat-coverage">https://github.com/atc-project/atomic-threat-coverage</a></li>
 </ul>
-<p>**</p>
-<p><img alt="" src="../assets/IS-U311-RecopilacionDeEvidencias2.png" /></p>
 
 
 

@@ -1,0 +1,155 @@
+// IS-U3.3.2 - Investigacion de incidentes de ciberseguridad
+// Banco de preguntas en formato GIFT (Incidentes de seguridad)
+
+::RA_3.CE_c. Finalidad real de la investigacion::
+El SOC ha identificado un equipo con actividad anomala y una analista propone cerrar el caso en cuanto encuentre el fichero malicioso. El responsable del incidente pide una investigacion mas completa para tomar decisiones de contencion y mejora. ¿Que enfoque refleja mejor la finalidad real de investigar?
+{
+=Delimitar alcance, reconstruir hechos, hallar causa raiz y extraer indicadores utiles para responder mejor. #Correcto\: La investigacion no se limita a localizar un artefacto aislado, sino a explicar el incidente y orientar decisiones tecnicas.
+~%-33.3333%Confirmar que existe un malware y eliminarlo cuanto antes para dar el incidente por resuelto. #Incorrecto\: Erradicar puede ser necesario, pero investigar exige entender alcance, via de entrada e impacto antes de cerrar el caso.
+~%-33.3333%Recoger todos los logs disponibles y almacenarlos, aunque todavia no exista una hipotesis de trabajo. #Incorrecto\: Reunir datos ayuda, pero sin una hipotesis y un objetivo claro la investigacion pierde foco y eficiencia.
+~%-33.3333%Atribuir el ataque a un grupo concreto para poder justificar medidas de defensa posteriores. #Incorrecto\: La atribucion es un nivel avanzado y no suele ser el objetivo principal en una organizacion corriente.
+}
+
+::RA_3.CE_c. Deteccion frente a incidente real::
+Una alerta del EDR marca una ejecucion sospechosa de PowerShell en un portatil. Antes de movilizar a todo el equipo, la persona analista quiere saber si realmente hay incidente o si es un falso positivo. ¿Que tipo de analisis corresponde mejor?
+{
+=Analisis de deteccion para validar o descartar que la alerta apunte a un incidente real. #Correcto\: Este nivel busca confirmar si la senal inicial merece tratarse como incidente.
+~%-33.3333%Analisis preliminar para reconstruir toda la intrusion y documentar la secuencia completa del ataque. #Incorrecto\: El analisis preliminar da visibilidad rapida sobre alcance e impacto, pero no sustituye la validacion inicial de la alerta.
+~%-33.3333%Analisis de causa raiz para corregir la vulnerabilidad explotada aunque aun no se sepa si hubo compromiso. #Incorrecto\: La causa raiz se estudia cuando ya existe base suficiente para afirmar que el incidente es real.
+~%-33.3333%Analisis de atribucion para relacionar el evento con un actor conocido de amenazas persistentes. #Incorrecto\: La atribucion requiere mucha mas informacion y no es el primer paso ante una alerta dudosa.
+}
+
+::RA_3.CE_c. Valor del analisis preliminar::
+Se ha confirmado una infeccion inicial en un equipo y el CSIRT necesita decidir en minutos si aísla solo ese host o si amplía la contencion a otros sistemas. ¿Que aporta mejor el analisis preliminar en este momento?
+{
+=Ofrece visibilidad rapida sobre alcance e impacto inicial para decidir si escalar y contener. #Correcto\: El analisis preliminar ayuda a ganar tiempo y actuar sin trabajar completamente a ciegas.
+~%-33.3333%Determina con precision juridica quien es el atacante para adaptar la comunicacion externa. #Incorrecto\: Eso pertenece a inteligencia y atribucion, no al analisis preliminar operativo.
+~%-33.3333%Sustituye por completo el informe final porque ya incluye toda la reconstruccion detallada del ataque. #Incorrecto\: Sirve para orientar la respuesta temprana, no para cerrar toda la investigacion.
+~%-33.3333%Se limita a clasificar indicadores en IOCs atomicos y computacionales sin valorar impacto ni alcance. #Incorrecto\: Los indicadores ayudan, pero el valor del analisis preliminar es precisamente orientar decisiones de contencion y escalado.
+}
+
+::RA_3.CE_c. Causa raiz y correccion::
+Tras contener un acceso no autorizado por VPN, el equipo quiere evitar que el problema vuelva a repetirse. ¿Que analisis es el mas util para descubrir la debilidad que hizo posible el compromiso?
+{
+=Analisis de causa raiz para explicar como empezo el incidente y corregir el fallo habilitador. #Correcto\: Busca la via de entrada o la debilidad que permitio el incidente y sirve para reducir riesgo futuro.
+~%-33.3333%Analisis de deteccion para verificar si la autenticacion sospechosa fue un falso positivo del SIEM. #Incorrecto\: Eso seria util al principio, pero aqui el acceso no autorizado ya esta confirmado.
+~%-33.3333%Analisis de intrusion para vincular el caso con una campaña global aunque no se conozca la via de entrada. #Incorrecto\: El analisis de intrusion es mas amplio, pero si la prioridad es corregir la debilidad inicial conviene centrarse en causa raiz.
+~%-33.3333%Analisis de atribucion para decidir si las credenciales comprometidas pertenecen a un grupo criminal concreto. #Incorrecto\: La atribucion no corrige por si misma la exposicion que permitio el acceso.
+}
+
+::RA_3.CE_c. Alcance del analisis de intrusion::
+El equipo ya sabe que la entrada inicial fue un correo de phishing, pero ahora necesita entender que infraestructura uso el adversario, como avanzo por el entorno y que objetivo perseguia. ¿Que nivel de analisis encaja mejor?
+{
+=Analisis de intrusion porque reconstruye el comportamiento del adversario y sus TTP a lo largo del ataque. #Correcto\: Va mas alla de la entrada inicial y busca entender fases, objetivos e infraestructura utilizada.
+~%-33.3333%Analisis preliminar porque basta con confirmar que el impacto puede extenderse a otros equipos. #Incorrecto\: El analisis preliminar es mas rapido y superficial; aqui se busca una reconstruccion mas rica.
+~%-33.3333%Analisis de deteccion porque su meta es decidir si el correo sospechoso fue malicioso. #Incorrecto\: Ese punto ya esta superado al saberse que la entrada inicial fue phishing.
+~%-33.3333%Analisis de atribucion porque todo estudio del comportamiento del atacante termina identificando al grupo. #Incorrecto\: Entender TTP no implica necesariamente atribuir la intrusión a un actor concreto.
+}
+
+::RA_3.CE_c. Atribucion en un CSIRT corriente::
+Durante una reunion, una persona directiva pide al CSIRT que identifique en pocas horas que grupo criminal esta detras de la intrusión. El equipo dispone de logs internos y telemetria de EDR, pero no de inteligencia avanzada externa. ¿Que respuesta es la mas realista?
+{
+=La atribucion es un analisis avanzado que suele requerir mas tiempo, datos y apoyo especializado del que tiene un CSIRT corriente. #Correcto\: El tema indica que la atribucion no suele ser responsabilidad directa del equipo de respuesta habitual.
+~%-33.3333%La atribucion debe hacerse siempre antes de contener para no destruir pistas sobre el actor. #Incorrecto\: La prioridad operativa suele ser contener y entender el incidente; atribuir no es requisito previo.
+~%-33.3333%Basta con comparar un hash detectado con una base de firmas para asignar con seguridad el ataque a un actor. #Incorrecto\: Un artefacto aislado raramente permite una atribucion fiable y completa.
+~%-33.3333%Si el incidente afecta a un servicio expuesto a internet, la atribucion se deduce directamente del pais de origen de la IP. #Incorrecto\: La geolocalizacion de IP no identifica de forma fiable al actor responsable.
+}
+
+::RA_3.CE_c. Hipotesis y conclusion::
+Una analista cree que el acceso inicial se produjo mediante phishing porque la victima recibio un correo sospechoso el mismo dia. Al revisar cabeceras, adjuntos, logs de VPN y autenticaciones, observa indicios mas fuertes de credenciales robadas. ¿Que deberia hacer?
+{
+=Cambiar o descartar la hipotesis inicial porque la evidencia manda sobre la intuicion del analista. #Correcto\: La hipotesis orienta la investigacion, pero no es la conclusion si los datos apuntan a otra via.
+~%-33.3333%Mantener la hipotesis original hasta cerrar el informe para no introducir incoherencias metodologicas. #Incorrecto\: La coherencia no consiste en sostener una idea inicial, sino en ajustarla a la evidencia disponible.
+~%-33.3333%Fusionar ambas explicaciones en el informe final aunque no exista evidencia de phishing ejecutado. #Incorrecto\: Mezclar escenarios no demostrados debilita la explicacion tecnica y confunde la toma de decisiones.
+~%-33.3333%Esperar al final del incidente para formular cualquier hipotesis y asi evitar sesgos durante el analisis. #Incorrecto\: La hipotesis es util para orientar la busqueda de evidencias desde el principio, siempre que pueda revisarse.
+}
+
+::RA_3.CE_c. Primera fase metodologica::
+Llega una alerta del SIEM sobre conexiones inusuales desde un servidor web a un dominio externo. Antes de extraer memoria o revisar todos los logs del entorno, ¿que tarea corresponde primero segun la metodologia funcional?
+{
+=Identificar y delimitar el alcance del posible incidente para centrar que activos estan implicados. #Correcto\: La primera fase busca responder que activo la investigacion y que sistemas pueden estar relacionados.
+~%-33.3333%Normalizar inmediatamente todos los eventos con MITRE ATT&CK para unificar el vocabulario. #Incorrecto\: La normalizacion aparece despues, cuando ya hay datos recopilados y un analisis inicial.
+~%-33.3333%Elaborar el informe tecnico con escenarios posibles para reservar tiempo de redaccion. #Incorrecto\: El informe es la fase final, no el punto de partida de la investigacion.
+~%-33.3333%Construir la linea temporal completa con todos los sistemas de la red por si el incidente se expande. #Incorrecto\: Sin alcance delimitado se malgastan recursos revisando activos posiblemente irrelevantes.
+}
+
+::RA_3.CE_c. Volatilidad de la evidencia::
+En un endpoint comprometido hay procesos activos, conexiones de red abiertas y sospecha de malware residente en memoria. El equipo debe decidir que recoger primero. ¿Que criterio es mas correcto?
+{
+=Priorizar evidencias volatiles como memoria, procesos y conexiones activas porque pueden desaparecer rapidamente. #Correcto\: La volatilidad obliga a capturar primero aquello que se pierde con facilidad.
+~%-33.3333%Empezar por informes historicos del SIEM porque son mas faciles de exportar y no cambian con el tiempo. #Incorrecto\: Los logs historicos son valiosos, pero normalmente no desaparecen tan rapido como la evidencia en vivo del host.
+~%-33.3333%Recopilar solo artefactos del sistema de ficheros porque son mas aceptables en un informe forense. #Incorrecto\: El sistema de ficheros importa, pero omitir memoria y conexiones puede hacer perder informacion critica.
+~%-33.3333%Esperar a que termine la contencion para capturar cualquier dato y asi no interferir con la respuesta. #Incorrecto\: Retrasar la recogida puede hacer que la evidencia volatil se pierda antes de analizarla.
+}
+
+::RA_3.CE_c. Tipos de indicadores::
+Durante el analisis inicial aparecen una IP externa, el hash de un ejecutable y una secuencia de acciones que muestra persistencia seguida de exfiltracion. ¿Que clasificacion es correcta?
+{
+=La IP es un indicador atomico, el hash es computacional y la secuencia observada es de comportamiento. #Correcto\: El tema distingue entre datos puntuales, artefactos tecnicos y patrones de acciones.
+~%-33.3333%La IP y el hash son indicadores de comportamiento, mientras que la secuencia es un indicador atomico. #Incorrecto\: Confunde un patron de acciones con valores concretos observables.
+~%-33.3333%La IP es computacional, el hash es atomico y la secuencia es preliminar porque aun no esta confirmada. #Incorrecto\: La clasificacion no depende del grado de confirmacion, sino del tipo de evidencia representada.
+~%-33.3333%Los tres son indicadores atomicos porque pueden almacenarse como campos individuales en el SIEM. #Incorrecto\: Que un sistema los guarde en campos no cambia su naturaleza conceptual.
+}
+
+::RA_3.CE_c. Sentido de la correlacion preliminar::
+El equipo dispone de registros del servidor de correo, telemetria del endpoint y eventos del firewall. Cada fuente por separado muestra actividad llamativa, pero no explica el caso completo. ¿Para que sirve mejor la correlacion preliminar?
+{
+=Para unir hechos dispersos y encajarlos en una secuencia que explique mejor lo ocurrido. #Correcto\: La correlacion aporta valor cuando relaciona rastros que aislados dicen poco.
+~%-33.3333%Para eliminar duplicidades y contradicciones antes de decidir si un evento fue malicioso. #Incorrecto\: Eso se acerca mas a la desconfliccion, no al sentido principal de correlacionar.
+~%-33.3333%Para traducir automaticamente cada evento a un identificador de MITRE ATT&CK. #Incorrecto\: ATT&CK ayuda a normalizar, pero correlacionar es relacionar hechos, no solo etiquetarlos.
+~%-33.3333%Para reducir el numero de logs almacenados y mejorar el rendimiento de las herramientas de analisis. #Incorrecto\: La correlacion busca comprension del incidente, no optimizacion de almacenamiento.
+}
+
+::RA_3.CE_c. Normalizacion con vocabulario comun::
+Dos analistas describen el mismo comportamiento de forma distinta y eso complica comparar sus hallazgos en el informe. ¿Que practica mejora mas esta situacion?
+{
+=Normalizar los eventos con una sintaxis coherente y apoyarse en marcos como MITRE ATT&CK. #Correcto\: Un vocabulario comun facilita comparar, comunicar y reutilizar hallazgos.
+~%-33.3333%Quedarse con la descripcion mas detallada y descartar la otra para evitar duplicidades. #Incorrecto\: Puede reducir ruido, pero no resuelve la necesidad de un lenguaje comun y consistente.
+~%-33.3333%Pedir a cada analista que use la nomenclatura de su herramienta para conservar fidelidad tecnica. #Incorrecto\: Eso incrementa la heterogeneidad y dificulta la correlacion entre fuentes.
+~%-33.3333%Mover la discrepancia al anexo final para no retrasar el analisis operativo. #Incorrecto\: Esconde el problema, pero no mejora la comprension compartida del comportamiento observado.
+}
+
+::RA_3.CE_c. Desconfliccion y ruido::
+Durante la investigacion aparecen alertas duplicadas del SIEM, procesos legitimos marcados como sospechosos y eventos que se contradicen por problemas de timestamp. ¿Que tarea responde mejor a este punto?
+{
+=Desconflictuar eventos para eliminar ruido, duplicidades y contradicciones antes de seguir correlacionando. #Correcto\: La desconfliccion depura la informacion para que la cronologia y las conclusiones sean mas solidas.
+~%-33.3333%Ampliar el alcance del incidente para incluir todos los sistemas con cualquier alerta parecida. #Incorrecto\: Eso puede aumentar aun mas el ruido si no se han depurado primero los datos.
+~%-33.3333%Pasar directamente al modelo de diamante para identificar relacion entre victima e infraestructura. #Incorrecto\: Los modelos de intrusión requieren una base de eventos ya depurada y contextualizada.
+~%-33.3333%Cerrar el caso al confirmar que existen alertas falsas positivas entre los datos iniciales. #Incorrecto\: La presencia de ruido no invalida automaticamente que tambien exista actividad maliciosa real.
+}
+
+::RA_3.CE_c. Utilidad de la linea temporal::
+En una intrusión se sabe que hubo acceso inicial, persistencia y exfiltracion, pero el equipo no tiene claro que ocurrio primero ni cuanto tiempo estuvo activo el atacante. ¿Que aporta construir una linea temporal solida?
+{
+=Permite ordenar cronologicamente los hechos y responder que ocurrio primero, despues y cuando se produjo el impacto. #Correcto\: La cronologia ayuda a reconstruir la secuencia y a medir duracion e impacto del incidente.
+~%-33.3333%Sirve sobre todo para decidir si la alerta inicial era un falso positivo del antivirus. #Incorrecto\: La linea temporal se construye cuando ya se esta profundizando en la secuencia del incidente.
+~%-33.3333%Sustituye la necesidad de correlacionar porque con poner fechas ya se explican las relaciones entre eventos. #Incorrecto\: La cronologia necesita haberse apoyado en correlacion previa y no basta por si sola para interpretar relaciones.
+~%-33.3333%Es un recurso principalmente visual para el informe, pero aporta poco al analisis tecnico. #Incorrecto\: No es solo presentacion; es una herramienta central para comprender el desarrollo del ataque.
+}
+
+::RA_3.CE_c. Cyber Kill Chain como marco::
+Una vez ordenados los eventos, el equipo quiere dar contexto a cada accion observada dentro de una secuencia de ataque. ¿Para que resulta mas adecuada la Cyber Kill Chain?
+{
+=Para situar acciones del atacante dentro de fases del ataque y entender su progresion. #Correcto\: Este marco organiza la intrusión como una cadena de etapas sucesivas.
+~%-33.3333%Para relacionar directamente adversario, capacidad, infraestructura y victima en un mismo esquema. #Incorrecto\: Esa relacion corresponde al modelo de diamante, no a la Kill Chain.
+~%-33.3333%Para convertir cualquier IOC en evidencia juridicamente valida de cadena de custodia. #Incorrecto\: La Kill Chain da contexto operacional, no gestiona por si misma requisitos forenses o legales.
+~%-33.3333%Para clasificar el impacto economico del incidente en bajo, medio o alto segun el activo afectado. #Incorrecto\: Ese tipo de valoracion pertenece a la gestion del impacto, no al marco de fases del ataque.
+}
+
+::RA_3.CE_c. Modelo de diamante::
+En un analisis de intrusión, la persona analista necesita representar como se relacionan el atacante, la herramienta usada, la infraestructura empleada y la organizacion afectada. ¿Que modelo encaja mejor?
+{
+=El modelo de diamante porque relaciona adversario, capacidad, infraestructura y victima. #Correcto\: Precisamente esos cuatro elementos forman el nucleo de este modelo de analisis.
+~%-33.3333%La Cyber Kill Chain porque organiza la intrusion en reconocimiento, entrega y otras fases temporales. #Incorrecto\: La Kill Chain aporta secuencia, pero no se centra en esa relacion de cuatro elementos.
+~%-33.3333%La desconfliccion de eventos porque elimina duplicidades y deja un unico nodo por cada sistema afectado. #Incorrecto\: La desconfliccion depura datos; no es un modelo conceptual de la intrusión.
+~%-33.3333%El analisis preliminar porque resume rapidamente impacto, alcance y prioridad del incidente. #Incorrecto\: El analisis preliminar orienta decisiones tempranas, pero no modela relaciones entre actor, medios y victima.
+}
+
+::RA_3.CE_c. Contenido del informe final::
+Tras completar la investigacion, el CSIRT debe entregar un informe tecnico que sirva para justificar decisiones y acciones posteriores. ¿Que conjunto de elementos no deberia faltar?
+{
+=Que ocurrio, como se produjo, que activos fueron afectados, que evidencias sostienen las conclusiones y que medidas aplicar despues. #Correcto\: Un buen informe cierra la investigacion explicando hechos, soporte probatorio y recomendaciones.
+~%-33.3333%Solo el listado de IOCs confirmados y las herramientas utilizadas por el equipo investigador. #Incorrecto\: Los IOCs ayudan, pero por si solos no explican alcance, causa ni conclusiones.
+~%-33.3333%La cronologia completa en bruto y todos los logs exportados, dejando la interpretacion para cada lector. #Incorrecto\: Un informe debe explicar con claridad el incidente, no trasladar el esfuerzo interpretativo a quien lee.
+~%-33.3333%La propuesta de compra de nuevas herramientas y el presupuesto estimado para el siguiente ejercicio. #Incorrecto\: Puede derivarse alguna recomendacion, pero no sustituye la explicacion tecnica del incidente investigado.
+}

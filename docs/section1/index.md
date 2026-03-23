@@ -138,4 +138,9 @@ Típicamente se intenta tener los siguientes apartados en cada uno de los módul
 * [PR-U4.1 - Kotlin](https://revilofe.github.io/slides/section1-pr/PR-U4.1.-kotlin.html)
 
 ### Unidad 7 - Gestión de archivos
-* [PR-U7.3 - Gestión de Archivos Clase File](https://revilofe.github.io/slides/section1-pr/PR-U7.3.-GestionArchivosClaseFile.html)
+* [PR-U7.1 - Sistema de archivos](https://revilofe.github.io/slides/section1-pr/PR-U7.1.-SistemaArchivos.html)
+* [PR-U7.2 - Consola y teclado](https://revilofe.github.io/slides/section1-pr/PR-U7.2.-ConsolaTeclado.html)
+* [PR-U7.2.1 - Consola y teclado: ampliación](https://revilofe.github.io/slides/section1-pr/PR-U7.2.1.-ConsolaTecladoExpansion.html)
+* [PR-U7.3 - Manejo de archivos con File](https://revilofe.github.io/slides/section1-pr/PR-U7.3.-File.html)
+* [PR-U7.4 - Lectura y escritura de archivos](https://revilofe.github.io/slides/section1-pr/PR-U7.4.-LecturaEscritura.html)
+* [PR-U7.4.1 - Ficheros de texto](https://revilofe.github.io/slides/section1-pr/PR-U7.4.1.-TextFile.html)

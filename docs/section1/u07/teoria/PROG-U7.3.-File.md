@@ -342,3 +342,7 @@ Con esta base ya estamos preparados para pasar al siguiente paso: **leer y escri
 - [Oracle Java SE - `java.io.File`](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/io/File.html)
 - [Oracle Java SE - `java.nio.file.Path`](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/nio/file/Path.html)
 - [Kotlin Stdlib - Kotlin I/O](https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.io/)
+
+## Presentación
+
+- [PR-U7.3 - Manejo de archivos con File](https://revilofe.github.io/slides/section1-pr/PR-U7.3.-File.html)

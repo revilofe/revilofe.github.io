@@ -331,3 +331,7 @@ Con esta base ya puedes crear programas sencillos de consola que pidan datos, lo
 - [Kotlin Docs - Basic syntax](https://kotlinlang.org/docs/basic-syntax.html#print-to-the-standard-output)
 - [Kotlin Docs - Strings](https://kotlinlang.org/docs/strings.html)
 - [Oracle Java SE - Formatter](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/Formatter.html)
+
+## Presentación
+
+- [PR-U7.2 - Consola y teclado](https://revilofe.github.io/slides/section1-pr/PR-U7.2.-ConsolaTeclado.html)

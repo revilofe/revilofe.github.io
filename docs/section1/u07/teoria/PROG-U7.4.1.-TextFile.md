@@ -318,3 +318,7 @@ Con esto queda cerrada la parte de trabajo básico con ficheros de texto de la u
 - [Kotlin Stdlib - Kotlin I/O](https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.io/)
 - [Oracle Java SE - `BufferedReader`](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/io/BufferedReader.html)
 - [Oracle Java SE - `BufferedWriter`](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/io/BufferedWriter.html)
+
+## Presentación
+
+- [PR-U7.4.1 - Ficheros de texto](https://revilofe.github.io/slides/section1-pr/PR-U7.4.1.-TextFile.html)

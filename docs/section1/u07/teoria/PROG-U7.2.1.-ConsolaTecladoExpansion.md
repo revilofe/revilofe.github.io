@@ -243,3 +243,7 @@ Saber elegir entre `readln()`, `readlnOrNull()`, `Scanner` o `args` forma parte 
 - [Kotlin Stdlib - `readlnOrNull`](https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.io/readln-or-null.html)
 - [Kotlin Stdlib - `readLine`](https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.io/read-line.html)
 - [Oracle Java SE - `Scanner`](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/Scanner.html)
+
+## Presentación
+
+- [PR-U7.2.1 - Consola y teclado: ampliación](https://revilofe.github.io/slides/section1-pr/PR-U7.2.1.-ConsolaTecladoExpansion.html)

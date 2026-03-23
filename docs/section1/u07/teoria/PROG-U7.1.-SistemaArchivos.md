@@ -263,3 +263,7 @@ Con esta base ya podemos entrar en detalle en las herramientas concretas que usa
 - [Oracle Java SE - `java.io.File`](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/io/File.html)
 - [Oracle Java SE - `java.nio.file.Path`](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/nio/file/Path.html)
 - [Apuntes de entrada y salida - UCM](https://www.fdi.ucm.es/profesor/jpavon/poo/2.13.EntradaySalida.pdf)
+
+## Presentación
+
+- [PR-U7.1 - Sistema de archivos](https://revilofe.github.io/slides/section1-pr/PR-U7.1.-SistemaArchivos.html)

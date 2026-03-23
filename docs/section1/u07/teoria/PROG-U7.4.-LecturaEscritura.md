@@ -342,3 +342,7 @@ Con esta base ya puedes empezar a construir programas que no solo procesen datos
 - [Oracle Java SE - `DataOutputStream`](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/io/DataOutputStream.html)
 - [Oracle Java SE - `BufferedReader`](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/io/BufferedReader.html)
 - [Oracle Java SE - `BufferedWriter`](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/io/BufferedWriter.html)
+
+## Presentación
+
+- [PR-U7.4 - Lectura y escritura de archivos](https://revilofe.github.io/slides/section1-pr/PR-U7.4.-LecturaEscritura.html)

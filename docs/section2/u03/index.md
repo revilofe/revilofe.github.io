@@ -28,6 +28,7 @@ toc_icon: "file-code"
 
 * [IS-U3.1.1 - Recopilación de Evidencias](https://revilofe.github.io/slides/section2-is/IS-U3.1.1.-RecopilacionDeEvidencias.html)
 * [IS-U3.3.2 - Investigación de incidentes de ciberseguridad](https://revilofe.github.io/slides/section2-is/IS-U3.3.2.-InvestigacionDeIncidentes.html)
+* [IS-U3.5.1 - Contención de incidentes: medidas y estrategias](https://revilofe.github.io/slides/section2-is/IS-U3.5.1.-Contencion.html)
 
 ## 1. Normativa que Respalda la Unidad
 Esta unidad está alineada con la normativa del Curso de Especialización en Ciberseguridad en Entornos TI, teniendo como base el Resultado de Aprendizaje (RA) 3 y sus Criterios de Evaluación (CE) asociados. El objetivo principal es que los estudiantes aprendan a investigar incidentes de ciberseguridad, incluyendo el análisis de riesgos y la definición de medidas.

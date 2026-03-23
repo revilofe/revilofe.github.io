@@ -127,6 +127,7 @@ Aquí tienes acceso directo a todas las presentaciones disponibles, organizadas 
 #### Unidad 3 - Investigación de incidentes
 * [IS-U3.1.1 - Recopilación de Evidencias](https://revilofe.github.io/slides/section2-is/IS-U3.1.1.-RecopilacionDeEvidencias.html)
 * [IS-U3.3.2 - Investigación de incidentes de ciberseguridad](https://revilofe.github.io/slides/section2-is/IS-U3.3.2.-InvestigacionDeIncidentes.html)
+* [IS-U3.5.1 - Contención de incidentes: medidas y estrategias](https://revilofe.github.io/slides/section2-is/IS-U3.5.1.-Contencion.html)
 
 ### Despliegue de Aplicaciones Web (DAW)
 

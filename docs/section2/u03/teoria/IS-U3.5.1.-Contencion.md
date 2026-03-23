@@ -727,6 +727,10 @@ A continuación, actividades pensadas para que alumnos y alumnas practiquéis co
 * UK NCSC: mitigación de malware y ransomware (guía práctica). ([ncsc.gov.uk][3])
 * MITRE ATT&CK Mitigation M1030: Network Segmentation. ([attack.mitre.org][1])
 
+## Presentación
+
+- [IS-U3.5.1.-Contencion](https://revilofe.github.io/slides/section2-is/IS-U3.5.1.-Contencion.html)
+
 ## Recursos adicionales
 
 * Plantilla de playbook (para completar en clase): objetivos, pasos, roles, evidencias y checklist.

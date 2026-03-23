@@ -1,0 +1,209 @@
+// IS-U3.5.1 - Contencion de incidentes
+// Banco de preguntas en formato GIFT (Incidentes de seguridad)
+
+::RA_3.CE_e. Finalidad de la contencion::
+Un equipo detecta actividad maliciosa en un servidor y la persona responsable propone "arreglarlo ya" reinstalando el sistema. Otra persona defiende aplicar primero medidas que frenen el incidente mientras se investiga. ¿Que enfoque describe mejor la finalidad de la contencion?
+{
+=Limitar el alcance y la propagacion del incidente, cortando capacidad al atacante sin perder de vista evidencia e impacto en negocio. #Correcto\: La contencion pone freno al incidente para ganar tiempo y reducir daño, pero no sustituye a investigacion, erradicacion ni recuperacion.
+~%-33.3333%Eliminar definitivamente la causa raiz del incidente y restaurar el servicio a estado normal en la misma fase. #Incorrecto\: Eso corresponde sobre todo a erradicacion y recuperacion; contencion busca frenar el daño y sostener el control.
+~%-33.3333%Documentar todo el incidente con detalle forense completo antes de tomar cualquier medida operativa. #Incorrecto\: La documentacion es necesaria, pero no puede desplazar la necesidad de limitar daño cuando el incidente sigue activo.
+~%-33.3333%Identificar al actor responsable para justificar medidas de red e informar a direccion con certeza. #Incorrecto\: La atribucion no es el objetivo principal de la contencion y ademas puede requerir mucho mas tiempo.
+}
+
+::RA_3.CE_e. Puente entre fases de respuesta::
+En una reunion de crisis, una analista afirma que la contencion "cierra el incidente" si consigue parar el daño. ¿Cual es la respuesta mas correcta?
+{
+=La contencion actua como puente entre investigar y erradicar-recuperar, pero no cierra por si sola el incidente. #Correcto\: Permite frenar el impacto y ganar tiempo, mientras la investigacion orienta y las fases posteriores eliminan la causa y restauran servicio.
+~%-33.3333%La contencion sustituye a la investigacion siempre que los IoC ya se hayan bloqueado en red y EDR. #Incorrecto\: Bloquear IoC no reemplaza comprender alcance, vector ni persistencia.
+~%-33.3333%La contencion solo tiene sentido despues de completar la erradicacion para evitar recaidas durante la recuperacion. #Incorrecto\: El orden es inverso; contener suele llegar antes para limitar daños mientras se prepara lo demas.
+~%-33.3333%La contencion y la recuperacion son equivalentes si el negocio vuelve a estar operativo en pocas horas. #Incorrecto\: Recuperar servicio no demuestra que el ataque este entendido ni erradicado correctamente.
+}
+
+::RA_3.CE_e. Objetivo prioritario con dano activo::
+En un caso de ransomware, varios equipos estan cifrando ficheros en ese momento. El SOC duda entre esperar a reunir mas contexto o actuar. ¿Que objetivo debe priorizar la contencion?
+{
+=Detener el dano activo para frenar cifrado, exfiltracion o propagacion antes de que el impacto siga creciendo. #Correcto\: Cuando el incidente esta en marcha, cada minuto cuenta y la primera prioridad es parar el impacto.
+~%-33.3333%Completar el inventario de todos los sistemas posiblemente afectados antes de tocar ningun equipo. #Incorrecto\: Delimitar alcance es importante, pero no puede retrasar una respuesta urgente ante dano activo.
+~%-33.3333%Preparar el informe tecnico final con cronologia y medidas para direccion antes de aislar hosts. #Incorrecto\: La comunicacion importa, pero el informe no precede a frenar el dano que sigue ocurriendo.
+~%-33.3333%Esperar a confirmar atribucion para evitar medidas que puedan alertar al atacante prematuramente. #Incorrecto\: La atribucion no justifica demorar la parada de un impacto activo y creciente.
+}
+
+::RA_3.CE_e. Corto plazo frente a largo plazo::
+Se detecta un host haciendo conexiones a un dominio malicioso. El equipo decide aislar ese equipo y bloquear el dominio; despues planea revisar segmentacion, privilegios y reglas de salida. ¿Que interpretacion es la mas correcta?
+{
+=Las primeras medidas son contencion tactica de corto plazo y las segundas corresponden a contencion estrategica de largo plazo. #Correcto\: Aislar y bloquear frena el problema ya; endurecer controles y segmentacion sostiene el control y reduce recaidas.
+~%-33.3333%Todas las medidas pertenecen a la misma fase porque se ejecutan dentro del mismo incidente. #Incorrecto\: Que ocurran en un mismo incidente no borra la diferencia entre lo inmediato y lo sostenido en el tiempo.
+~%-33.3333%La segmentacion y el hardening son tacticos porque afectan a la red y al endpoint donde se detecto el evento. #Incorrecto\: Son medidas de mas recorrido y preparacion, tipicas de una contencion estrategica.
+~%-33.3333%Bloquear el dominio y aislar el host son estrategicos porque previenen reentrada futura aunque el dano sea actual. #Incorrecto\: Tambien ayudan a prevenir, pero su valor principal es frenar de inmediato el incidente en curso.
+}
+
+::RA_3.CE_e. Tiempo frente a capas::
+Una alumna duda si "red" e "identidad" sustituyen la distincion entre contencion tactica y estrategica. ¿Cual es la aclaracion mas precisa?
+{
+=Tactica y estrategica ordenan la contencion por tiempo y urgencia, mientras red e identidad indican en que capa aplicas controles. #Correcto\: Son dos ejes distintos y compatibles; es normal hacer contencion tactica por capas y luego estrategica por capas.
+~%-33.3333%Red e identidad son categorias tacticas, mientras endpoint y servicios son categorias estrategicas. #Incorrecto\: La capa no determina por si sola si la medida es tactica o estrategica.
+~%-33.3333%La distincion por capas solo sirve en investigacion, porque en contencion lo importante es actuar sin clasificar. #Incorrecto\: La clasificacion por capas ayuda precisamente a ordenar y aplicar mejor la contencion.
+~%-33.3333%La contencion estrategica solo puede aplicarse en red, porque identidad y endpoint son reacciones de corto plazo. #Incorrecto\: En identidad y endpoint tambien existen medidas de largo plazo como MFA, hardening o ajuste de politicas EDR.
+}
+
+::RA_3.CE_e. Evidencia primero cuando aplica::
+En un endpoint comprometido hay conexiones activas y procesos sospechosos en memoria, pero el ataque no esta exfiltrando ni cifrando en ese momento. ¿Que decision encaja mejor con los principios del tema?
+{
+=Capturar un minimo viable de evidencia volatil si puede hacerse rapido y luego aislar de forma controlada. #Correcto\: Cuando la captura no retrasa peligrosamente la respuesta y la evidencia es irrepetible, conviene preservarla antes de contener.
+~%-33.3333%Apagar inmediatamente el equipo despues de exportar los ultimos logs del SIEM, porque esos registros suelen bastar para reconstruir el caso sin asumir mas riesgo local. #Incorrecto\: Los logs ayudan, pero no sustituyen memoria, procesos y conexiones locales si la evidencia volatil puede capturarse rapido.
+~%-33.3333%Esperar a completar una adquisicion forense de memoria y disco con cadena de custodia completa antes de aplicar cualquier restriccion, para no comprometer la validez posterior del analisis. #Incorrecto\: La validez forense importa, pero aqui el criterio es minimo viable y rapidez; una adquisicion exhaustiva puede retrasar demasiado la contencion.
+~%-33.3333%Mantener el equipo conectado mientras se amplian reglas de monitorizacion de red, porque con mas trafico capturado sera mas facil identificar persistencia y movimiento lateral. #Incorrecto\: Mejorar visibilidad puede aportar contexto, pero no justifica dejar expuesto un endpoint comprometido sin contencion selectiva.
+}
+
+::RA_3.CE_e. Rapidez con cabeza::
+Tras detectar un compromiso, una persona propone "hacer todo lo posible" sin seguir playbook, porque la velocidad es lo unico que importa. ¿Que respuesta es la mas correcta?
+{
+=Contener rapido exige aplicar un plan con aislamiento, bloqueos, rotacion de credenciales y registro de acciones, no improvisar. #Correcto\: La velocidad sin metodo puede dejar rutas abiertas, romper servicios o dificultar la investigacion posterior.
+~%-33.3333%Improvisar es valido si las acciones tecnicas son agresivas, porque un corte amplio compensa los errores de coordinacion. #Incorrecto\: La agresividad sin criterio puede multiplicar impacto de negocio y dejar lagunas de control.
+~%-33.3333%Conviene aplazar cualquier accion hasta tener confirmacion total del alcance para no introducir ruido en la investigacion. #Incorrecto\: Esperar demasiado tambien es un error; la clave es rapidez con criterio, no inaccion.
+~%-33.3333%El playbook solo es util para documentar despues, pero no debe condicionar las decisiones tecnicas en los primeros minutos. #Incorrecto\: Justamente ayuda a decidir con orden bajo presion durante esos primeros minutos.
+}
+
+::RA_3.CE_e. Menor impacto posible::
+Un servicio de negocio critico muestra un comportamiento anomalo localizado en un solo nodo del cluster. ¿Que contencion refleja mejor el principio de menor impacto posible?
+{
+=Aislar o sacar del servicio el nodo afectado y mantener el resto operativo mientras se monitoriza el efecto. #Correcto\: La idea es frenar el riesgo con la medida reversible y mas acotada que proteja negocio y seguridad.
+~%-33.3333%Apagar todo el cluster para garantizar que ninguna parte del servicio siga expuesta mientras se analiza. #Incorrecto\: Puede ser necesario en casos extremos, pero aqui no es la opcion de menor impacto con la informacion dada.
+~%-33.3333%Esperar a la ventana de mantenimiento prevista para no afectar continuidad aunque el nodo siga anomalo. #Incorrecto\: Prioriza demasiado la disponibilidad y deja al incidente margen para crecer.
+~%-33.3333%Mantener el servicio completo en linea y solo aumentar el registro para no interrumpir a usuarios legitimos. #Incorrecto\: Mejorar visibilidad ayuda, pero no contiene por si solo un nodo ya sospechoso.
+}
+
+::RA_3.CE_e. Compromiso de identidad probable::
+Se ha aislado una estacion desde la que se usaron credenciales robadas, pero siguen apareciendo autenticaciones sospechosas desde otros equipos. ¿Que deberia priorizar el flujo de decision?
+{
+=Contencion de identidad, revocando sesiones y tokens, reseteando credenciales y endureciendo accesos como MFA. #Correcto\: Si la identidad esta comprometida, el atacante puede reentrar aunque hayas aislado una maquina concreta.
+~%-33.3333%Contencion exclusiva de red, bloqueando el segmento del primer host afectado y manteniendo credenciales activas para no molestar a usuarios. #Incorrecto\: La red ayuda, pero dejar identidades operativas mantiene una via de reentrada.
+~%-33.3333%Tomar imagenes de todos los equipos autenticados recientemente antes de tocar cuentas o sesiones. #Incorrecto\: La forense es util, pero si el problema es identidad comprometida la prioridad operativa es cortar el acceso.
+~%-33.3333%Retrasar cualquier cambio en identidad hasta confirmar exactamente que cuentas han sido usadas de forma fraudulenta. #Incorrecto\: Esperar a certeza absoluta puede prolongar el abuso de credenciales y el movimiento lateral.
+}
+
+::RA_3.CE_e. Si no hay dano activo::
+Aparece una sospecha razonable de compromiso, pero no hay cifrado, exfiltracion ni propagacion en curso. ¿Que secuencia encaja mejor con el flujo del tema?
+{
+=Preservar evidencia minima y despues aplicar una contencion selectiva que reduzca riesgo sin tirar servicios innecesariamente. #Correcto\: Si no hay dano activo, la respuesta puede ser mas selectiva y orientada a conservar contexto.
+~%-33.3333%Aplicar inmediatamente un corte amplio en toda la red para adelantarse a cualquier dano futuro posible. #Incorrecto\: Puede ser desproporcionado y generar un incidente de disponibilidad innecesario.
+~%-33.3333%Esperar a completar una atribucion inicial para elegir si la sospecha merece medidas de contencion. #Incorrecto\: La atribucion no es requisito previo para contener una sospecha fundada.
+~%-33.3333%Pasar directamente a la recuperacion, porque sin dano activo no existe necesidad de contencion operativa. #Incorrecto\: Puede no haber dano visible y aun asi ser necesario reducir riesgo y preservar evidencia.
+}
+
+::RA_3.CE_e. IoC y delimitacion de alcance::
+El SOC detecta un hash malicioso en un portatil y aísla ese equipo. ¿Que paso adicional refleja mejor la idea de "contener el incidente" y no solo "contener un equipo"?
+{
+=Usar los IoC extraidos para buscar otros equipos, cuentas o servicios relacionados y delimitar la poblacion afectada. #Correcto\: Los sintomas iniciales deben convertirse en indicadores para descubrir el resto del incidente.
+~%-33.3333%Mantener el aislamiento del primer equipo y posponer la busqueda en el entorno hasta la fase de recuperacion. #Incorrecto\: Retrasar la delimitacion del alcance puede dejar movimiento lateral y persistencia sin contener.
+~%-33.3333%Reinstalar el portatil afectado cuanto antes para evitar que el hash vuelva a ejecutarse en esa maquina concreta. #Incorrecto\: Puede ayudar en otra fase, pero no responde a la necesidad de descubrir el resto del alcance.
+~%-33.3333%Eliminar el hash de las reglas de deteccion para evitar falsos positivos mientras se investiga el caso. #Incorrecto\: Quitar visibilidad empeora la deteccion de otros posibles sistemas afectados.
+}
+
+::RA_3.CE_e. Estrategia segun capacidad y objetivos::
+Una pyme sin capacidad forense interna suficiente sospecha movimiento lateral, pero el incidente no esta cifrando ni exfiltrando activamente. ¿Que enfoque es mas prudente segun el tema?
+{
+=Apoyarse en terceros si hace falta y priorizar un inventario razonable de sistemas afectados antes de erradicar a ciegas. #Correcto\: Cuando no hay dano activo inmediato, identificar mejor el alcance puede ser mas seguro que volver al servicio sin entender la extension del incidente.
+~%-33.3333%Elegir el enfoque de volver al servicio con aislamiento minimo y restauracion rapida, reforzando despues la busqueda de IoC cuando la operacion se haya estabilizado. #Incorrecto\: Puede parecer razonable por continuidad, pero si ya sospechas movimiento lateral corres el riesgo de dejar sistemas comprometidos fuera del radar.
+~%-33.3333%Esperar a disponer de apoyo forense externo antes de tocar ningun sistema, limitandote mientras tanto a recopilar logs centralizados y alertas del SIEM. #Incorrecto\: El apoyo externo ayuda, pero la organizacion debe contener e investigar con los medios disponibles sin quedar paralizada.
+~%-33.3333%Centrarse primero en si el incidente encaja con una campana conocida, porque esa atribucion orienta mejor que sistemas revisar y que terceros contratar. #Incorrecto\: La atribucion puede aportar contexto, pero no sustituye la necesidad inmediata de delimitar alcance y preparar la erradicacion.
+}
+
+::RA_3.CE_e. Medida tactica de red::
+Una intrusion depende de conexiones salientes a dominios de mando y control y de movimiento lateral entre segmentos. ¿Que medida de red es mas claramente tactica?
+{
+=Bloquear IoC en firewall, proxy o DNS y limitar egress a lo estrictamente necesario. #Correcto\: Son acciones de minutos-horas orientadas a cortar C2 y salida mientras se sostiene la respuesta.
+~%-33.3333%Redisenar toda la segmentacion corporativa con modelo deny by default antes de tocar reglas actuales. #Incorrecto\: Esa mejora es estrategica y no responde con la velocidad necesaria ante un incidente en curso.
+~%-33.3333%Implantar una nueva plataforma de NetFlow y analitica avanzada para observar mejor el trafico futuro. #Incorrecto\: Mejora la postura y la monitorizacion, pero no es una medida tactica inmediata.
+~%-33.3333%Revisar contratos con el ISP para futuras mitigaciones aguas arriba y actualizar contactos de escalado. #Incorrecto\: Es una buena preparacion estrategica, no una contencion inmediata de la intrusión descrita.
+}
+
+::RA_3.CE_e. Medida tactica de identidad::
+Tras un caso de phishing, se confirma acceso a correo y SSO con una cuenta de usuario. ¿Que accion corresponde mejor a contencion tactica de identidad?
+{
+=Revocar sesiones y tokens, forzar reset de contrasena y activar o endurecer MFA para esa identidad y cuentas relacionadas. #Correcto\: Corta acceso reutilizable y reduce la posibilidad de reentrada inmediata por identidad comprometida.
+~%-33.3333%Revisar roles y disenar un proyecto de minimo privilegio para el siguiente trimestre. #Incorrecto\: Es valioso, pero es una mejora estrategica de mas recorrido.
+~%-33.3333%Mantener la cuenta activa y solo aumentar el logging para verificar si el usuario vuelve a autenticarse desde otra ubicacion. #Incorrecto\: Mejora visibilidad, pero no contiene el abuso ya confirmado.
+~%-33.3333%Aislar el equipo del usuario y asumir que eso basta para cortar cualquier sesion o token ya emitido. #Incorrecto\: La identidad puede seguir valida desde otros equipos o ubicaciones aunque el endpoint original este aislado.
+}
+
+::RA_3.CE_e. Endpoint y memoria volatil::
+En un equipo con malware activo, el EDR permite aislar red sin apagar la maquina. La memoria puede contener credenciales y procesos utiles para investigacion. ¿Que opcion es tecnicamente mejor?
+{
+=Aislar con EDR o por red y valorar captura minima de evidencia volatil en lugar de apagar de inmediato. #Correcto\: Asi se limita comunicacion y se preserva informacion volatil potencialmente critica.
+~%-33.3333%Apagar sin mas porque una maquina encendida siempre representa mas riesgo que cualquier perdida forense. #Incorrecto\: El riesgo existe, pero el tema insiste en equilibrar contencion y preservacion cuando es viable.
+~%-33.3333%Dejar el equipo conectado para capturar toda la memoria y el trafico durante varias horas antes de intervenir. #Incorrecto\: La captura no debe convertirse en excusa para demorar demasiado la contencion.
+~%-33.3333%Formatear el equipo desde consola remota para asegurar que el malware no pueda volver a ejecutarse durante el analisis. #Incorrecto\: Destruye evidencia y adelanta erradicacion sin haber contenido ni entendido el caso correctamente.
+}
+
+::RA_3.CE_e. Servicios y aplicaciones::
+Una aplicacion web presenta indicios de webshell y la empresa no puede permitirse una parada larga. ¿Que accion de contencion tactica sobre servicios encaja mejor?
+{
+=Poner el servicio en mantenimiento o limitar funciones expuestas de forma coordinada, preservando logs y rotando secretos si hay sospecha. #Correcto\: Son medidas temporales para ganar tiempo sin perder visibilidad ni dejar abierta la via de abuso.
+~%-33.3333%Mantener la aplicacion publica y limitarte a activar trazas detalladas y capturas de integridad, para no perder contexto antes del siguiente despliegue controlado. #Incorrecto\: Aumentar visibilidad ayuda, pero deja expuesta una aplicacion con indicios de compromiso sin una reduccion real del riesgo.
+~%-33.3333%Rehacer de urgencia el pipeline de despliegue y mover todos los secretos a un vault antes de tocar el servicio afectado, para corregir de una vez la causa probable. #Incorrecto\: Es una mejora valiosa, pero pertenece mas a contencion estrategica y recuperacion que a la primera respuesta tactica.
+~%-33.3333%Aplicar una regla temporal en el WAF y mantener el servicio igual mientras se revisa el codigo, suponiendo que esa capa compensa provisionalmente cualquier persistencia local. #Incorrecto\: El WAF puede mitigar parte del riesgo, pero no reemplaza la necesidad de revisar persistencia, logs y secretos en una web comprometida.
+}
+
+::RA_3.CE_e. Ransomware y backups::
+Durante un incidente de ransomware, el equipo ya ha aislado varios hosts cifrando. ¿Que medida complementaria es especialmente importante segun el mini playbook del tema?
+{
+=Proteger los backups y cortar credenciales comprometidas para evitar que el atacante amplie el dano o inutilice la recuperacion. #Correcto\: Respaldos e identidad son activos criticos; si caen, la situacion empeora mucho.
+~%-33.3333%Esperar a confirmar si los archivos cifrados pueden recuperarse antes de tocar backups o cuentas privilegiadas. #Incorrecto\: Retrasar esa proteccion deja expuestos dos elementos clave para contener y recuperar.
+~%-33.3333%Mantener accesibles los backups desde las mismas cuentas para poder restaurar rapido en cuanto termine el cifrado. #Incorrecto\: Eso facilita precisamente que el atacante alcance o borre las copias.
+~%-33.3333%Subir la muestra directamente a servicios publicos con datos internos incluidos para extraer IoC mas deprisa. #Incorrecto\: Las herramientas publicas pueden ser utiles, pero subir datos sensibles puede generar otro problema.
+}
+
+::RA_3.CE_e. Exfiltracion y canales de salida::
+Un analista detecta consultas anormalmente grandes y movimientos previos de datos a una ubicacion intermedia. ¿Que contencion tactica es mas adecuada?
+{
+=Limitar o bloquear los canales de salida usados para exfiltrar y restringir cuentas u hosts implicados preservando evidencias de red. #Correcto\: En exfiltracion la prioridad es cortar el canal, revisar staging y conservar trazas que expliquen el recorrido de los datos.
+~%-33.3333%Esperar a comprobar si el volumen extraido supera umbrales regulatorios antes de restringir trafico o cuentas. #Incorrecto\: La obligacion de comunicar vendra despues; ahora toca limitar el robo de datos.
+~%-33.3333%Centrarse en clasificar la sensibilidad exacta de todos los datos antes de aplicar cualquier limitacion de salida. #Incorrecto\: Clasificar ayuda al impacto, pero no debe retrasar la parada de la exfiltracion.
+~%-33.3333%Bloquear solo el host final de exfiltracion y omitir la revision de ubicaciones intermedias para no ampliar el alcance. #Incorrecto\: El tema destaca que los datos pueden moverse antes de salir y eso hay que investigarlo.
+}
+
+::RA_3.CE_e. DoS o DDoS::
+Una API publica esta cayendo por un pico de trafico hostil. ¿Que combinacion responde mejor a la contencion tactica descrita en el tema?
+{
+=Caracterizar el flujo con logs y despues aplicar rate limit, reglas perimetrales o mitigacion con ISP o CDN si procede. #Correcto\: En disponibilidad la contencion suele pasar por red y proveedor, no por medidas pensadas para malware o identidad.
+~%-33.3333%Revocar accesos privilegiados y reforzar MFA de administracion antes de tocar balanceadores, porque una degradacion sostenida suele indicar primero abuso de consola o API keys. #Incorrecto\: Puede ser una hipotesis valida en otro contexto, pero el escenario descrito es de saturacion de trafico y la respuesta tactica principal sigue estando en red y proveedor.
+~%-33.3333%Tomar imagenes de los nodos mas castigados y preservar memoria de todos los balanceadores antes de activar filtrados agresivos, para no perder detalle del patron del ataque. #Incorrecto\: Preservar evidencia puede aportar valor, pero no debe retrasar la mitigacion de disponibilidad en un DDoS en curso.
+~%-33.3333%Activar inmediatamente autoscaling y cache de emergencia y dejar el filtrado para despues, porque absorber primero la carga reduce el riesgo de bloquear trafico legitimo. #Incorrecto\: Aumentar capacidad puede ayudar, pero sin caracterizar y filtrar el flujo puedes escalar el coste sin contener el ataque.
+}
+
+::RA_3.CE_e. Activo perdido o robado::
+A una empleada le roban un portatil corporativo. El disco estaba cifrado, el equipo estaba apagado y existe MDM con borrado remoto. ¿Que evaluacion es mas precisa?
+{
+=El riesgo disminuye de forma importante, pero aun hay que revisar accesos, tokens, posibilidad de borrado remoto y tipo de datos expuestos. #Correcto\: El cifrado y el apagado reducen mucho el riesgo, aunque no eliminan la necesidad de valorar accesos y datos.
+~%-33.3333%El riesgo tecnico inmediato es bajo, asi que basta con esperar a una nueva conexion del equipo para verificar inventario y decidir entonces si conviene revocar accesos o borrar en remoto. #Incorrecto\: Que el riesgo baje no significa que debas retrasar la revision de sesiones, tokens y capacidades MDM disponibles.
+~%-33.3333%La prioridad debe ser preservar el estado del dispositivo en la plataforma MDM y posponer cambios sobre cuentas asociadas, para no perder trazabilidad si el equipo reaparece. #Incorrecto\: La trazabilidad es util, pero no debe ir por delante de reducir el riesgo de accesos y datos ligados al activo robado.
+~%-33.3333%Solo deberia valorarse una denuncia si el equipo almacenaba datos especialmente sensibles, porque en los demas casos el cifrado completo cubre razonablemente la gestion del incidente. #Incorrecto\: El robo del activo puede justificar denuncia y otras acciones aunque el riesgo de acceso a datos sea menor por el cifrado.
+}
+
+::RA_3.CE_e. Error frecuente con primer sistema detectado::
+Se observa movimiento lateral y el equipo decide dejar el resto del entorno igual mientras aisla solo el primer host donde salto la alerta. ¿Que error resume mejor esta decision?
+{
+=Confundir el sintoma inicial con el alcance real del incidente, dejando otros sistemas posiblemente comprometidos sin contener. #Correcto\: El tema insiste en usar los IoC para delimitar poblacion afectada y no quedarse en el paciente cero.
+~%-33.3333%Aplicar una contencion demasiado agresiva que puede tumbar servicios por encima de lo necesario. #Incorrecto\: Aqui el fallo no es agresividad excesiva, sino una contencion insuficiente y miope.
+~%-33.3333%Priorizar evidencia volatil por encima de continuidad de negocio en un momento de impacto critico. #Incorrecto\: El problema descrito no gira sobre evidencia, sino sobre falta de alcance en la contencion.
+~%-33.3333%Bloquear IoC a ciegas sin validar si pertenecen a trafico legitimo o a un falso positivo. #Incorrecto\: Ese es otro error comun, pero no es el principal en la decision descrita.
+}
+
+::RA_3.CE_e. Checklist en primeros minutos::
+Durante los primeros 30-60 minutos de un incidente, el equipo esta saturado y quiere simplificar acciones. ¿Que secuencia refleja mejor el checklist propuesto en el tema?
+{
+=Identificar alcance inicial, valorar evidencia volatil, aislar con menor impacto, cortar accesos, bloquear IoC conocidos, proteger backups, escalar y documentar. #Correcto\: Resume la secuencia operativa recomendada para no perder control en la fase inicial.
+~%-33.3333%Aislar de forma amplia, restaurar servicio cuanto antes, redactar informe preliminar y despues revisar si habia evidencia que preservar. #Incorrecto\: Pone recuperacion y documentacion por delante de decisiones criticas iniciales.
+~%-33.3333%Esperar a tener inventario completo, atribuir el ataque, decidir si comunicar y al final aplicar bloqueos tecnicos. #Incorrecto\: La atribucion e inventario exhaustivo no deben retrasar la respuesta inicial.
+~%-33.3333%Tomar imagenes de todos los sistemas, reiniciar servicios afectados, comprobar continuidad y revisar cuentas si sobra tiempo. #Incorrecto\: Es una secuencia poco realista y desalineada con el equilibrio entre urgencia e impacto.
+}
+
+::RA_3.CE_e. Direccion y especulacion::
+Direccion pide una explicacion inmediata y cerrada sobre el incidente, pero el equipo aun esta en contencion y no tiene todos los hechos. ¿Que practica es la mas correcta?
+{
+=Compartir hechos confirmados, progreso y siguientes pasos, evitando especular aunque exista presion por cerrar el mensaje. #Correcto\: El tema subraya que especular para tranquilizar suele causar mas dano cuando luego toca rectificar.
+~%-33.3333%Ofrecer el escenario mas probable como linea de trabajo principal y presentarlo como cierre provisional, actualizandolo solo si aparece evidencia claramente contradictoria. #Incorrecto\: Es razonable comunicar hipotesis de trabajo, pero no convertirla en cierre provisional firme cuando aun falta informacion relevante.
+~%-33.3333%Esperar a tener validacion del apoyo forense o del proveedor externo antes de trasladar cualquier detalle a direccion, para evitar mensajes parciales o tecnicamente inseguros. #Incorrecto\: Retrasar toda comunicacion deja a direccion sin hechos confirmados ni siguientes pasos en plena contencion.
+~%-33.3333%Centralizar la comunicacion en el proveedor de respuesta para que emita un mensaje unico, mientras el equipo interno se limita a ejecutar acciones tecnicas sin matices. #Incorrecto\: El proveedor puede apoyar, pero la organizacion debe seguir comunicando avance, impacto y decisiones con su propio criterio.
+}

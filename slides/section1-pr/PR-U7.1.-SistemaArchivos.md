@@ -57,8 +57,7 @@ recuperar información.
 - Muchas aplicaciones necesitan conservar datos entre sesiones
 - Ahí aparece la necesidad de **persistencia**
 
-![Programa y persistencia](assets/PROG-U7.1.-Programa.png)
-<!-- .element: style="max-width: 50%;" -->
+![Programa y persistencia](assets/PROG-U7.1.-Programa.png) <!-- .element: style="max-width: 50%;" -->
 
 Note: Conviene insistir en que una variable no es un almacén permanente. Sirve
 durante la ejecución, pero no cuando el programa termina. La **persistencia**
@@ -95,8 +94,7 @@ visualizarlo como una estructura jerárquica de **carpetas**, **ficheros** y
 - Dentro de esa jerarquía encontramos ficheros y subdirectorios
 - Las rutas permiten localizar cada elemento
 
-![Jerarquía de carpetas y archivos](assets/PROG-U7.1.-carpetasArchivos.png)
-<!-- .element: style="max-width: 48%;" -->
+![Jerarquía de carpetas y archivos](assets/PROG-U7.1.-carpetasArchivos.png) <!-- .element: style="max-width: 48%;" -->
 
 Note: La metáfora de árbol ayuda mucho: unas carpetas contienen otras y, al
 final, localizamos cada fichero por su posición en esa jerarquía. Desde un
@@ -184,8 +182,7 @@ Esa idea sirve para teclado, pantalla, ficheros, red o memoria.
 - Las acciones típicas son abrir, leer, escribir y cerrar
 - El mismo modelo se reutiliza en muchos contextos
 
-![Modelo de flujos](assets/PROG-U7.1.-Flujos.png)
-<!-- .element: style="max-width: 52%;" -->
+![Modelo de flujos](assets/PROG-U7.1.-Flujos.png) <!-- .element: style="max-width: 52%;" -->
 
 Note: El valor didáctico del concepto está en la unificación: aunque cambie el
 dispositivo físico, seguimos pensando en una secuencia de datos y en operaciones
@@ -219,8 +216,7 @@ el alumnado conoce desde las primeras prácticas.
 - **Salida de error**: canal específico para mensajes de error
 - En la JVM aparecen como `System.in`, `System.out` y `System.err`
 
-![Flujos estándar](assets/PROG-U7.1.-FlujosEstandar.png)
-<!-- .element: style="max-width: 45%;" -->
+![Flujos estándar](assets/PROG-U7.1.-FlujosEstandar.png) <!-- .element: style="max-width: 45%;" -->
 
 Note: Es importante distinguir **salida normal** y **salida de error**, porque
 no son exactamente lo mismo aunque ambas se vean en consola. Esta separación
@@ -274,8 +270,7 @@ más bajos de la plataforma Java.
 - `java.nio.file` es la API más moderna para rutas y operaciones
 - Destacan `Path` y `Files` para un trabajo más robusto
 
-![APIs de Kotlin y Java](assets/PROG-U7.1.-BibliotecaKotlin.png)
-<!-- .element: style="max-width: 52%;" -->
+![APIs de Kotlin y Java](assets/PROG-U7.1.-BibliotecaKotlin.png) <!-- .element: style="max-width: 52%;" -->
 
 Note: Conviene presentar estas dos APIs como complementarias. Kotlin hereda la
 potencia del ecosistema Java y añade utilidades de más alto nivel. En la unidad

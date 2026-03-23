@@ -606,3 +606,7 @@ Si este caso llegara a informe, el documento debería recoger al menos:
     Una investigación útil no se basa en intuiciones ni en revisar logs sin
     rumbo. Se basa en **método, evidencias, contexto y capacidad para explicar
     técnicamente lo ocurrido**.
+
+## Presentación
+
+- [IS-U3.3.2.-InvestigacionDeIncidentes](https://revilofe.github.io/slides/section2-is/IS-U3.3.2.-InvestigacionDeIncidentes.html)

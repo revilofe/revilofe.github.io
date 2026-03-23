@@ -1,7 +1,7 @@
 ---
 title: "UD 7 - 7.4.1 Ficheros de texto"
 description: Trabajo práctico con lectura y escritura de ficheros de texto en Kotlin
-summary: Detalle técnico de los ficheros de texto en Kotlin: lectura completa, lectura por líneas, escritura, añadido de contenido, caracteres especiales y buenas prácticas.
+summary: Detalle técnico de los ficheros de texto en Kotlin - lectura completa, lectura por líneas, escritura, añadido de contenido, caracteres especiales y buenas prácticas.
 authors:
     - Eduardo Fdez
 date: 2026-03-19

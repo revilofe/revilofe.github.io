@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0,
+          user-scalable=no">
+
+    <title>IS-U3.3.2.-InvestigacionDeIncidentes</title>
+
+    <link rel="stylesheet" href="../dist/reset.css">
+    <link rel="stylesheet" href="../dist/reveal.css">
+    <link rel="stylesheet" href="../dist/theme/simple.css">
+    <link rel="stylesheet" href="../plugin/highlight/monokai.css">
+    <link rel="stylesheet" href="../custom.css">
+</head>
+<body>
+<input type="button" value="Volver" name="volver" onclick="history.back()" />
+<div class="reveal">
+    <div class="slides">
+        <section data-markdown="IS-U3.3.2.-InvestigacionDeIncidentes.md"
+                 data-separator-vertical="^\n\n"
+                 data-separator-notes="^Note:"
+                 data-charset="UTF-8">
+        </section>
+    </div>
+</div>
+
+<script src="../dist/reveal.js"></script>
+<script src="../plugin/notes/notes.js"></script>
+<script src="../plugin/markdown/markdown.js"></script>
+<script src="../plugin/highlight/highlight.js"></script>
+<script src="../plugin/zoom/zoom.js"></script>
+<script src="../plugin/search/search.js"></script>
+<script>
+    Reveal.initialize({
+        hash: true,
+        width: 960,
+        height: 700,
+        margin: 0.1,
+        minScale: 0.2,
+        maxScale: 2.0,
+        slideNumber: 'c/t',
+        showSlideNumber: 'all',
+        progress: true,
+        plugins: [
+            RevealMarkdown,
+            RevealHighlight,
+            RevealNotes,
+            RevealZoom,
+            RevealSearch
+        ]
+    });
+</script>
+</body>
+</html>

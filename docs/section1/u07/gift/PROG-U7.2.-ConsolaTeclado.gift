@@ -1,0 +1,143 @@
+::RA_5.CE_a. Elegir print o println en Kotlin::
+Estás programando un asistente en Kotlin que debe mostrar `Introduce tu nombre: ` y dejar el cursor en esa misma línea para que la persona usuaria escriba a continuación. ¿Qué opción es la más adecuada?
+{
+=Usar `print("Introduce tu nombre: ")` antes de llamar a `readln()`. #Correcto. `print()` no añade salto de línea y encaja con una petición interactiva en la misma línea.
+~%-33.3333%Usar `println("Introduce tu nombre: ")` antes de `readln()`, porque Kotlin alinea mejor la entrada cuando hay salto de línea. #Incorrecto. `println()` añade un salto de línea y cambia la presentación deseada; no mejora la lectura del dato.
+~%-33.3333%Usar `System.err.println("Introduce tu nombre: ")` antes de `readln()`, porque toda petición de datos debe ir por el canal de error. #Incorrecto. Pedir un dato no es un error. La salida de error se reserva para avisos o fallos, no para la interacción normal.
+~%-33.3333%Usar `readln("Introduce tu nombre: ")`, porque en Kotlin esa función muestra el mensaje y recoge el texto en una sola llamada. #Incorrecto. `readln()` no acepta un mensaje como argumento; primero se muestra el texto y luego se lee la línea.
+}
+
+::RA_5.CE_a. Cuándo usar println en la salida normal::
+Un programa en Kotlin muestra una cabecera, una línea separadora y un resultado final, cada uno en su propia línea. ¿Qué decisión describe mejor el uso correcto de la salida normal?
+{
+=Usar `println()` en cada mensaje que deba terminar con salto de línea. #Correcto. Cuando cada elemento debe quedar en su propia línea, `println()` es la opción natural y más legible.
+~%-33.3333%Usar solo `print()` y añadir espacios al final de cada cadena para simular el cambio de línea. #Incorrecto. Los espacios no sustituyen al salto de línea y hacen la salida menos predecible.
+~%-33.3333%Usar `System.err.print()` para la cabecera y `println()` para el resto, porque los títulos deben salir por otro canal. #Incorrecto. El canal de error no sirve para resaltar títulos, sino para separar mensajes problemáticos de la salida normal.
+~%-33.3333%Usar `readln()` entre mensajes, porque Kotlin pausa y organiza así la presentación de forma más clara. #Incorrecto. `readln()` sirve para leer entrada, no para estructurar la salida.
+}
+
+::RA_5.CE_b. Interpolación frente a concatenación en Kotlin::
+Una alumna escribe `println("Alumno: " + nombre + " Nota: " + nota)` y otra propone `println("Alumno: $nombre Nota: $nota")`. ¿Qué valoración es la más adecuada según el tema?
+{
+=La interpolación suele ser más legible y más idiomática en Kotlin para mensajes sencillos. #Correcto. Las plantillas de cadenas forman parte del estilo natural de Kotlin y reducen ruido visual.
+~%-33.3333%La concatenación es preferible porque evita conversiones implícitas y por eso Kotlin la optimiza mejor. #Incorrecto. El problema principal aquí no es el rendimiento, sino la claridad del código y la expresividad del lenguaje.
+~%-33.3333%Ambas opciones son incorrectas, porque en Kotlin toda salida profesional debe construirse con `format`. #Incorrecto. `format` es útil en ciertos casos, pero no sustituye a la interpolación en mensajes simples.
+~%-33.3333%La interpolación solo es válida cuando todas las variables ya son `String`, así que deja de ser recomendable con números. #Incorrecto. Kotlin permite interpolar números y expresiones, no solo cadenas.
+}
+
+::RA_5.CE_a. Leer texto con readln en una interacción simple::
+Quieres pedir el nombre completo de una persona usuaria y después saludarla. El enunciado no plantea redirecciones ni fin de entrada inesperado. ¿Qué opción refleja mejor la solución más natural en Kotlin?
+{
+=Usar `readln()` para leer la línea y trabajar con el resultado como `String`. #Correcto. En una interacción normal de consola, `readln()` es la opción didáctica y directa que presenta el tema.
+~%-33.3333%Usar `readLine()!!`, porque es la forma moderna recomendada en Kotlin actual para lecturas simples. #Incorrecto. El tema prioriza `readln()` y desaconseja depender de enfoques antiguos o de `!!` si no hacen falta.
+~%-33.3333%Usar `toIntOrNull()` sobre la entrada, porque así se valida mejor cualquier texto introducido. #Incorrecto. Esa conversión se usa para números, no para leer un nombre completo.
+~%-33.3333%Usar `System.in` directamente, porque Kotlin no aporta funciones propias para leer desde teclado. #Incorrecto. Kotlin sí ofrece funciones de alto nivel como `readln()` para este caso.
+}
+
+::RA_5.CE_a. Leer números con seguridad en Kotlin::
+Un programa pide la edad y no debe romperse si la persona usuaria escribe `dieciocho` en vez de `18`. ¿Qué enfoque es el más adecuado según la teoría?
+{
+=Leer con `readln()` y convertir con `toIntOrNull()` antes de usar el dato. #Correcto. Ese patrón permite validar la entrada sin lanzar una excepción en el caso habitual de error.
+~%-33.3333%Leer con `readln()` y convertir con `toInt()`, porque una excepción ya indica suficientemente que el dato era incorrecto. #Incorrecto. Confiar en la excepción como validación empeora la robustez y la experiencia de uso.
+~%-33.3333%Leer con `println()` y convertir con `toIntOrNull()`, porque la salida normal en Kotlin también puede devolver texto al programa. #Incorrecto. `println()` no lee datos; solo escribe en consola.
+~%-33.3333%Leer con `readlnOrNull()` y usar `!!` después, porque así el compilador sabe que la entrada será un entero. #Incorrecto. `!!` no valida que el texto represente un entero; solo fuerza el tratamiento de un nullable.
+}
+
+::RA_5.CE_a. Qué devuelve realmente readln::
+Un compañero afirma que `readln()` devuelve un `Int` si la persona escribe `25` y un `Double` si escribe `25.5`. ¿Cuál es la corrección más precisa?
+{
+=`readln()` siempre devuelve un `String`; la conversión al tipo numérico se hace después. #Correcto. El teclado entrega texto y el programa decide luego cómo interpretarlo.
+~%-33.3333%`readln()` devuelve un tipo dinámico y Kotlin decide en tiempo de ejecución si debe tratarlo como entero o decimal. #Incorrecto. Kotlin no trabaja así con `readln()`; la función tiene un tipo de retorno concreto.
+~%-33.3333%`readln()` devuelve bytes y por eso conviene aplicar primero `format` antes de cualquier conversión. #Incorrecto. El tema trata `readln()` como lectura de texto, no de bytes.
+~%-33.3333%`readln()` devuelve `Any`, y por eso se puede usar directamente con `toIntOrNull()` o con operaciones matemáticas sin más pasos. #Incorrecto. No devuelve `Any`; devuelve una cadena.
+}
+
+::RA_5.CE_a. Riesgo de usar toInt sin validar::
+Revisas un programa en Kotlin que contiene `val cantidad = readln().toInt()` y no contempla ningún otro caso. ¿Qué problema técnico es el más relevante?
+{
+=Si la entrada no representa un entero válido, puede lanzarse una excepción en tiempo de ejecución. #Correcto. El fallo está en convertir sin comprobar previamente si el texto es válido.
+~%-33.3333%Si la entrada contiene texto no numérico, Kotlin la convierte automáticamente a `0` y eso puede ocultar errores. #Incorrecto. Kotlin no sustituye por cero una conversión fallida en este caso.
+~%-33.3333%El código no compila, porque `readln()` no puede encadenarse con métodos como `toInt()`. #Incorrecto. El código compila; el riesgo aparece al ejecutarlo con una entrada inválida.
+~%-33.3333%La conversión produce siempre un `Double`, así que el verdadero problema es la pérdida de precisión al guardarlo. #Incorrecto. `toInt()` intenta obtener un entero, no un decimal.
+}
+
+::RA_5.CE_a. Bucle de reintento con toIntOrNull::
+Quieres implementar en Kotlin una petición de cantidad que se repita hasta que la persona usuaria escriba un entero correcto. ¿Qué patrón encaja mejor con lo visto en clase?
+{
+=Usar una variable nullable y repetir la lectura mientras `toIntOrNull()` siga devolviendo `null`. #Correcto. Ese enfoque es simple, robusto y coherente con el patrón mostrado en la unidad.
+~%-33.3333%Usar `toInt()` dentro del bucle y confiar en que la excepción reinicie automáticamente la lectura. #Incorrecto. La excepción no constituye un mecanismo de control de flujo adecuado en este contexto.
+~%-33.3333%Leer una sola vez y asignar un valor por defecto si falla, porque así el programa no molesta a la persona usuaria. #Incorrecto. Un valor por defecto puede ocultar el error y romper la lógica del programa.
+~%-33.3333%Cambiar a `System.err` para leer el dato, porque el bucle de validación ya pertenece al flujo de errores. #Incorrecto. `System.err` sirve para mostrar avisos, no para recibir datos.
+}
+
+::RA_5.CE_a. Cuándo usar System.err en Kotlin::
+Un programa pide la edad con `readln()`, intenta convertirla con `toIntOrNull()` y detecta que el resultado es `null`. Quiere informar del problema sin mezclar el aviso con la salida normal. ¿Qué opción es la más apropiada?
+{
+=Usar `System.err.println("La edad introducida no es válida")`. #Correcto. La teoría propone usar la salida de error para avisos o fallos, manteniendo separada la salida normal.
+~%-33.3333%Usar `println("La edad introducida no es válida")`, porque cualquier mensaje visible pertenece al mismo canal en Kotlin. #Incorrecto. Puede mostrarse así, pero se pierde la separación conceptual que el tema quiere destacar.
+~%-33.3333%Usar `readln()` otra vez sin avisar, porque repetir la lectura hace innecesario explicar el error. #Incorrecto. Reintentar puede ser correcto, pero no sustituye al mensaje que orienta a la persona usuaria.
+~%-33.3333%Usar `System.in.println("La edad introducida no es válida")`, porque el fallo se ha producido al leer desde la entrada estándar. #Incorrecto. `System.in` representa entrada, no un canal de salida.
+}
+
+::RA_5.CE_a. Evitar el abuso de !! al leer datos::
+Encuentras este código heredado en Kotlin `val numero = readLine()!!.toInt()`. Quieres adaptarlo a un estilo más seguro para el alumnado. ¿Qué criterio es el más acertado?
+{
+=Evitar `!!` cuando sea posible y preferir lectura y conversión validadas con `readln()` o funciones seguras. #Correcto. El problema no es solo `readLine()`, sino forzar un valor no nulo y convertir sin una validación adecuada.
+~%-33.3333%Mantener `!!`, porque en programas pequeños de consola la seguridad complica el aprendizaje y aporta poco. #Incorrecto. Precisamente en ejercicios iniciales conviene consolidar hábitos seguros.
+~%-33.3333%Sustituir `!!` por `println()` antes de leer, porque así Kotlin garantiza que la línea nunca será nula. #Incorrecto. Mostrar mensajes no garantiza el valor que devuelve la lectura.
+~%-33.3333%Mantener `readLine()!!.toInt()` y añadir `format` al resultado final, porque el buen formato compensa el riesgo de la lectura. #Incorrecto. El formato de salida no corrige un problema de robustez en la entrada.
+}
+
+::RA_5.CE_b. Cuándo basta con interpolación::
+En un programa de Kotlin solo quieres mostrar `Producto: Teclado` y `Precio: 19.95 €`, sin columnas ni control fino de decimales. ¿Qué solución es la más razonable?
+{
+=Usar interpolación en `println()`, porque para mensajes sencillos suele ser suficiente y clara. #Correcto. La teoría indica que en casos simples no hace falta recurrir a un formateo más complejo.
+~%-33.3333%Usar siempre `format`, porque cualquier salida seria debe definirse con especificadores desde el principio. #Incorrecto. `format` es útil cuando aporta algo real, no como obligación universal.
+~%-33.3333%Usar `System.err` para el precio y `println()` para el producto, porque así cada dato queda mejor separado visualmente. #Incorrecto. Cambiar de canal no resuelve una necesidad de formato.
+~%-33.3333%Usar concatenación con espacios añadidos a mano para preparar el programa por si luego crece. #Incorrecto. Introduce complejidad sin resolver un problema que aquí no existe.
+}
+
+::RA_5.CE_b. Cuándo conviene format en Kotlin::
+Estás mostrando una lista de alumnos con notas decimales y necesitas que los valores queden alineados con dos cifras tras la coma para que la comparación sea inmediata. ¿Qué técnica es la más adecuada?
+{
+=Usar `format` para controlar precisión decimal y alineación cuando la salida debe ser más precisa. #Correcto. Ahí `format` sí aporta un valor claro frente a una interpolación simple.
+~%-33.3333%Usar interpolación, porque Kotlin alinea automáticamente cualquier número si se imprime uno por línea. #Incorrecto. La interpolación no añade control sobre anchura ni decimales.
+~%-33.3333%Usar `readln()` entre alumnos, porque así la consola ordena mejor la información mostrada. #Incorrecto. Leer entrada no es una técnica de formato de salida.
+~%-33.3333%Usar `System.err` para las notas con decimales y la salida normal para los nombres, porque eso mejora la legibilidad. #Incorrecto. Los canales no se usan para alinear ni para formatear datos tabulares.
+}
+
+::RA_5.CE_b. Interpretar un uso correcto de format::
+Una compañera usa `println("Alumno: %s | Nota: %.2f".format(nombre, nota))` en Kotlin. ¿Qué necesidad está resolviendo mejor con esa decisión?
+{
+=Está controlando explícitamente cómo se muestran el texto y el número decimal en la salida. #Correcto. `format` permite decidir la forma visual del resultado, especialmente con números y tablas.
+~%-33.3333%Está validando que `nota` sea realmente un `Double` antes de imprimirla. #Incorrecto. `format` afecta a la presentación, no sustituye a la validación previa del dato.
+~%-33.3333%Está convirtiendo la salida estándar en un flujo de error si la nota tiene decimales. #Incorrecto. El uso de `format` no cambia el canal de salida.
+~%-33.3333%Está haciendo que Kotlin lea automáticamente nuevos valores si la nota no cabe en dos decimales. #Incorrecto. `format` no interviene en la lectura de entrada.
+}
+
+::RA_5.CE_b. Tabla sencilla en consola con Kotlin::
+Quieres mostrar una lista de artículos y precios donde los nombres queden alineados a la izquierda y los importes aparezcan ordenados en columna. ¿Qué planteamiento es el más sólido?
+{
+=Definir un formato de salida con anchos de columna en lugar de ajustar espacios manualmente. #Correcto. La alineación basada en `format` es más estable cuando cambia la longitud de los datos.
+~%-33.3333%Usar interpolación y probar con varios espacios literales hasta que la tabla se vea bien en tu terminal. #Incorrecto. Ese ajuste manual es frágil y se rompe fácilmente al cambiar los valores.
+~%-33.3333%Separar cada columna en llamadas distintas a `println()`, porque la consola reordena automáticamente los datos impresos. #Incorrecto. La consola no alinea por sí sola columnas repartidas en distintas llamadas.
+~%-33.3333%Enviar la cabecera a `System.err` y las filas a `println()`, porque así la tabla queda visualmente más estructurada. #Incorrecto. Cambiar de canal no resuelve el problema de alineación.
+}
+
+::RA_5.CE_a. Diferencia entre salida normal y flujo de error en una corrección::
+Una calculadora en Kotlin imprime el resultado correcto de una operación y, en otro caso, muestra `No se puede dividir entre cero`. Quieres que otro programa pueda redirigir solo los resultados válidos. ¿Qué decisión es la más precisa?
+{
+=Enviar los resultados válidos por `println()` y el aviso de división imposible por `System.err.println()`. #Correcto. Esa separación permite tratar por un lado la salida normal y por otro los mensajes problemáticos.
+~%-33.3333%Enviar todo por `println()`, porque la persona usuaria necesita ver el flujo completo en orden exacto. #Incorrecto. Es una solución posible, pero pierde la ventaja de separar semánticamente resultados y errores.
+~%-33.3333%Enviar todo por `System.err.println()`, porque cualquier mensaje matemático incorrecto convierte el programa en un caso de error. #Incorrecto. El hecho de que exista un error en algunos casos no obliga a mover toda la salida al canal de error.
+~%-33.3333%Enviar el resultado correcto por `System.err.println()` y el error por `println()`, porque así se detecta antes cuándo el cálculo funciona. #Incorrecto. Invierte el sentido de ambos canales.
+}
+
+::RA_5.CE_b. Separar lógica y presentación en un programa de consola::
+Tu programa en Kotlin ya calcula totales, descuentos y validaciones, pero toda la lógica está mezclada con `print`, `println` y `System.err.println`. Según las buenas prácticas del tema, ¿qué mejora aporta más valor?
+{
+=Separar la lógica del cálculo de la presentación en consola para que cada parte tenga una responsabilidad clara. #Correcto. El tema insiste en que, cuando el programa crece, conviene no mezclar reglas de negocio con interacción en consola.
+~%-33.3333%Mantener todo en `main()` y añadir más comentarios, porque en programas de consola la simplicidad depende de que todo quede en el mismo sitio. #Incorrecto. Los comentarios ayudan, pero no sustituyen una mejor organización del código.
+~%-33.3333%Mover toda la lógica a llamadas de `println()`, porque así el flujo queda documentado a la vez que se ejecuta. #Incorrecto. Mostrar mensajes no es una técnica válida para estructurar la lógica del programa.
+~%-33.3333%Enviar cálculos a `System.err` y presentación a `println()`, porque eso ya separa responsabilidades suficientes. #Incorrecto. Los canales de salida no resuelven por sí mismos el diseño interno del programa.
+}

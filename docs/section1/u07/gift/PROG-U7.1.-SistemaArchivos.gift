@@ -1,0 +1,134 @@
+::RA_5.CE_c. Persistencia frente a memoria en un programa Kotlin::
+Una app en Kotlin guarda incidencias en una lista mutable mientras se ejecuta. Al cerrar el programa y volver a abrirlo, todo el contenido desaparece. ¿Qué cambio responde realmente al problema planteado?
+{
+=Guardar las incidencias en un fichero y volver a leerlas al iniciar la aplicación. #Correcto. El problema no está en la lista, sino en que la memoria es temporal y no conserva datos entre ejecuciones.
+~%-33.3333%Cambiar la lista mutable por una variable global para que siga existiendo durante toda la vida del programa. #Incorrecto. Una variable global amplía el alcance dentro de una ejecución, pero no aporta persistencia entre sesiones.
+~%-33.3333%Usar una colección más grande para evitar que los datos se pierdan cuando haya muchas incidencias. #Incorrecto. El tamaño de la colección no tiene relación con la persistencia.
+~%-33.3333%Mostrar las incidencias con `println()` antes de salir para que la persona usuaria pueda copiarlas manualmente. #Incorrecto. Visualizar datos no equivale a almacenarlos de forma persistente.
+}
+
+::RA_5.CE_c. Qué representa un sistema de archivos para el programa::
+Una alumna dice que el sistema de archivos es solo “la forma en que el disco guarda bits físicamente”. ¿Qué explicación es más útil desde el punto de vista del tema?
+{
+=Es el mecanismo que permite organizar y localizar ficheros, carpetas y rutas para que el programa pueda trabajar con ellos. #Correcto. La unidad se centra en la organización y acceso lógico, no en el detalle físico del hardware.
+~%-33.3333%Es una técnica exclusiva de Kotlin para convertir objetos en texto antes de imprimirlos por consola. #Incorrecto. Confunde persistencia en disco con salida por consola.
+~%-33.3333%Es una clase de Java que sustituye a `File` cuando el proyecto usa rutas relativas. #Incorrecto. Un sistema de archivos no es una clase concreta ni se limita a esa función.
+~%-33.3333%Es el nombre genérico del directorio de trabajo desde el que se ejecuta un proyecto. #Incorrecto. El directorio de trabajo forma parte del sistema de archivos, pero no lo agota.
+}
+
+::RA_5.CE_c. Diferenciar fichero y directorio en un caso real::
+En el proyecto aparecen `datos`, `config` y `ventas.txt`. Un compañero afirma que los tres son ficheros porque todos “guardan información”. ¿Cuál es la interpretación más precisa?
+{
+=`datos` y `config` pueden ser directorios, mientras `ventas.txt` es un fichero con contenido. #Correcto. Un directorio organiza otros elementos y un fichero almacena datos de forma directa.
+~%-33.3333%Los tres son ficheros, porque cualquier elemento del sistema de archivos se abre igual desde Kotlin. #Incorrecto. Aunque todos son elementos del sistema de archivos, no cumplen la misma función ni se manipulan igual.
+~%-33.3333%`datos` es un flujo, `config` es una ruta y `ventas.txt` es el único fichero real del proyecto. #Incorrecto. Confunde categorías distintas; nombre de carpeta, ruta y flujo no son intercambiables.
+~%-33.3333%`ventas.txt` solo será fichero si Kotlin reconoce automáticamente su extensión como válida. #Incorrecto. La extensión orienta, pero no determina por sí sola la naturaleza del elemento.
+}
+
+::RA_5.CE_c. Qué metadato ayuda a diagnosticar una escritura::
+Un programa en Kotlin genera un informe aparentemente vacío y el equipo quiere saber si realmente se ha vuelto a escribir en él durante la última ejecución. Sin abrir su contenido, ¿qué dato ofrece la pista más directa?
+{
+=La fecha de modificación del fichero. #Correcto. Ese metadato permite comprobar si el archivo se ha actualizado recientemente.
+~%-33.3333%La extensión usada por el fichero. #Incorrecto. La extensión orienta sobre el tipo de archivo, pero no indica si se ha reescrito.
+~%-33.3333%El número de carpetas padre hasta la raíz. #Incorrecto. La profundidad de la ruta no informa sobre la última escritura realizada.
+~%-33.3333%El texto que se usó en el último `println()` del programa. #Incorrecto. La salida por consola no es un metadato del fichero.
+}
+
+::RA_5.CE_c. Ruta absoluta frente a relativa en un proyecto compartido::
+Un alumno usa en Kotlin una ruta escrita a mano que solo existe en su portátil. La práctica funciona en su equipo, pero falla en el del resto de la clase. ¿Qué decisión habría sido más adecuada?
+{
+=Usar una ruta relativa al directorio de trabajo cuando el recurso forma parte del proyecto. #Correcto. Las rutas relativas suelen hacer el código más portable en proyectos compartidos.
+~%-33.3333%Mantener la ruta completa y pedir a toda la clase que replique la misma estructura de carpetas. #Incorrecto. Puede parchear el problema, pero deja el programa acoplado a un entorno concreto.
+~%-33.3333%Cambiar la extensión del archivo a `.txt`, porque eso permite que el sistema lo localice desde cualquier equipo. #Incorrecto. La extensión no corrige una ubicación mal definida.
+~%-33.3333%Guardar la ruta en una variable global, porque así deja de depender del ordenador donde se ejecute. #Incorrecto. Centralizar una ruta ayuda al mantenimiento, pero no resuelve su falta de portabilidad.
+}
+
+::RA_5.CE_c. Papel del directorio de trabajo en Kotlin::
+Una aplicación usa `File("datos/clientes.txt")` y funciona desde el IDE, pero deja de encontrar el fichero al ejecutarse desde otra carpeta del terminal. ¿Qué explica mejor el problema?
+{
+=La ruta relativa se resuelve respecto al directorio de trabajo actual y ese punto de referencia ha cambiado. #Correcto. El mismo texto de ruta puede apuntar a lugares distintos según desde dónde se lance el programa.
+~%-33.3333%Kotlin solo permite rutas relativas cuando la ejecución se hace desde un IDE. #Incorrecto. Las rutas relativas funcionan también fuera del IDE si el directorio de trabajo es el esperado.
+~%-33.3333%`File` convierte siempre las rutas relativas en absolutas inválidas fuera del proyecto. #Incorrecto. Resolver una ruta no la invalida por sí mismo; el problema es a qué lugar termina apuntando.
+~%-33.3333%Las rutas con subcarpetas obligan a usar acceso aleatorio y por eso fallan en consola. #Incorrecto. El patrón de acceso al contenido no depende de que la ruta incluya directorios.
+}
+
+::RA_5.CE_c. Cuándo preferir un fichero de texto::
+Quieres que un programa en Kotlin guarde un listado de ventas para que el profesorado pueda abrirlo fácilmente con un editor y revisarlo sin herramientas especiales. ¿Qué opción encaja mejor?
+{
+=Guardar la información en un fichero de texto estructurado con líneas o separadores sencillos. #Correcto. Cuando se busca legibilidad humana y facilidad de revisión, el texto suele ser la elección más razonable.
+~%-33.3333%Guardar la información en binario, porque cualquier editor lo interpretará con más precisión. #Incorrecto. Un fichero binario no suele ser legible directamente en un editor de texto.
+~%-33.3333%Guardar cada venta como nombre de carpeta para evitar decidir entre texto y binario. #Incorrecto. Eso cambia la organización, pero no resuelve cómo almacenar el contenido.
+~%-33.3333%Mostrar las ventas solo por consola al finalizar la ejecución, porque así no hace falta persistencia. #Incorrecto. La consola informa, pero no conserva la información para recuperarla después.
+}
+
+::RA_5.CE_c. Elegir entre texto y binario según el dato::
+Tienes que trabajar en Kotlin con un archivo de imagen y con un fichero de configuración legible por humanos. ¿Qué combinación de enfoque es la más adecuada?
+{
+=Tratar la imagen como contenido binario y la configuración como contenido de texto. #Correcto. Cada tipo de dato pide un tratamiento distinto según su naturaleza y su forma de uso.
+~%-33.3333%Tratar ambos como texto, porque al final todo puede verse como caracteres si se imprime correctamente. #Incorrecto. Que algo pueda representarse internamente no significa que sea texto legible o que deba manejarse así.
+~%-33.3333%Tratar ambos como binario, porque es la opción general y evita decidir según el contexto. #Incorrecto. Esa simplificación oculta una diferencia importante del tema.
+~%-33.3333%Tratar ambos como objetos serializados, porque tanto la imagen como la configuración pertenecen al dominio del programa. #Incorrecto. Ser parte del dominio no obliga a elegir serialización como modelo de trabajo.
+}
+
+::RA_5.CE_c. Acceso secuencial y acceso aleatorio en un caso de uso::
+Dispones de un fichero grande con lecturas de sensores. Una tarea debe recorrerlo entero para calcular una media, mientras otra necesita saltar directamente a un registro concreto. ¿Qué descripción es la más precisa?
+{
+=La media usa acceso secuencial y la consulta puntual requiere acceso aleatorio. #Correcto. Leer todo en orden no es lo mismo que ir directamente a una posición concreta del fichero.
+~%-33.3333%Ambas tareas usan acceso secuencial, porque se apoyan en el mismo fichero físico. #Incorrecto. Compartir archivo no implica compartir patrón de acceso.
+~%-33.3333%Ambas tareas usan acceso aleatorio, porque cualquier fichero puede abrirse desde cualquier punto. #Incorrecto. Poder hacerlo no significa que sea la estrategia adecuada para una lectura completa.
+~%-33.3333%La media usa acceso textual y la consulta puntual acceso binario. #Incorrecto. Texto o binario describe el formato del dato, no el tipo de acceso.
+}
+
+::RA_5.CE_c. Qué es un flujo de E/S en el tema::
+Una compañera resume un flujo de E/S diciendo que es “un archivo abierto”. ¿Cuál es la corrección más ajustada a la teoría?
+{
+=Un flujo es la abstracción del paso de datos entre una fuente o destino y el programa, no solo un archivo concreto. #Correcto. La misma idea sirve para teclado, consola, fichero, red o memoria.
+~%-33.3333%Un flujo es cualquier carpeta que guarda información temporal durante la ejecución. #Incorrecto. Una carpeta organiza contenido almacenado, pero no modela el movimiento de datos.
+~%-33.3333%Un flujo es una clase reservada a operaciones binarias, mientras el texto usa únicamente rutas. #Incorrecto. Hay flujos de bytes y de caracteres; no se limita a binario.
+~%-33.3333%Un flujo solo existe cuando el programa escribe, porque leer no altera el sistema de archivos. #Incorrecto. También hay flujos de entrada para leer datos desde una fuente.
+}
+
+::RA_5.CE_c. Analizar un ejemplo con readln y appendText::
+Observa este comportamiento en Kotlin. El programa lee una incidencia con `readln()`, la añade con `appendText()` a `incidencias.txt` y después muestra `Incidencia guardada`. ¿Qué interpretación resume mejor la situación?
+{
+=Combina entrada estándar, salida estándar y persistencia en fichero dentro del mismo programa. #Correcto. El ejemplo une lectura por consola, almacenamiento persistente y mensaje de confirmación.
+~%-33.3333%Solo trabaja con consola, porque `appendText()` actúa como una extensión de `println()`. #Incorrecto. Escribir en un fichero no equivale a imprimir en pantalla.
+~%-33.3333%Solo trabaja con persistencia, porque la consola en este caso es un detalle sin relación con la E/S. #Incorrecto. Leer y escribir en consola también son operaciones de entrada y salida.
+~%-33.3333%Está haciendo acceso aleatorio, porque añadir una línea nueva obliga a saltar a cualquier posición del archivo. #Incorrecto. Añadir contenido no implica por sí mismo el tipo de acceso aleatorio que se estudia en el tema.
+}
+
+::RA_5.CE_c. Elegir kotlin.io en una tarea simple::
+Necesitas en Kotlin pedir un dato por consola y añadir después una línea a un fichero de texto del proyecto. Quieres la opción más directa y didáctica para empezar. ¿Qué familia encaja mejor?
+{
+=Las utilidades de `kotlin.io`, como `readln()` y extensiones como `appendText()`. #Correcto. El tema presenta `kotlin.io` como la familia de alto nivel más cómoda para tareas frecuentes.
+~%-33.3333%`java.nio.file` como única opción válida, porque Kotlin no debería usar funciones propias si el programa trabaja con ficheros. #Incorrecto. Kotlin sí ofrece utilidades propias y aquí se busca precisamente la opción más directa.
+~%-33.3333%`System.out` y `System.in`, porque esos canales cubren tanto consola como persistencia en ficheros. #Incorrecto. Los canales estándar no sustituyen a las utilidades para trabajar con ficheros.
+~%-33.3333%Las variables de entorno del sistema operativo, porque permiten guardar texto entre ejecuciones sin usar archivos. #Incorrecto. No son el mecanismo normal para persistir este tipo de datos de aplicación.
+}
+
+::RA_5.CE_c. Papel de File dentro de Kotlin sobre la JVM::
+En `7.1` se introduce `File` y más adelante la unidad profundiza en su uso. ¿Qué explicación conecta mejor con el enfoque del tema?
+{
+=`File` permite representar y consultar elementos del sistema de archivos desde Kotlin antes de trabajar con su contenido. #Correcto. Es una pieza básica para localizar, comprobar o gestionar ficheros y directorios.
+~%-33.3333%`File` reemplaza por completo cualquier utilidad de Kotlin, así que deja obsoletas funciones como `readText()` o `appendText()`. #Incorrecto. En Kotlin conviven utilidades propias y clases de Java.
+~%-33.3333%`File` se usa solo para imprimir texto por consola cuando el programa aún no maneja ficheros reales. #Incorrecto. `File` está precisamente relacionado con el sistema de archivos, no con la consola.
+~%-33.3333%`File` convierte cualquier ruta relativa en una ruta correcta para cualquier sistema operativo sin que el programador deba pensar en nada más. #Incorrecto. Ayuda a trabajar con rutas, pero no elimina mágicamente todos los problemas de ubicación o portabilidad.
+}
+
+::RA_5.CE_c. Cuándo tiene sentido mirar java.nio.file desde Kotlin::
+Estás desarrollando una utilidad en Kotlin donde el trabajo con rutas va a ser especialmente importante y quieres una API moderna y robusta para ese aspecto. ¿Qué familia encaja mejor con esa necesidad?
+{
+=`java.nio.file`, con tipos como `Path` y utilidades como `Files`. #Correcto. La teoría la presenta como la API moderna de Java para rutas y operaciones del sistema de archivos, también utilizable desde Kotlin.
+~%-33.3333%`kotlin.io` en solitario, porque cualquier uso de APIs Java contradice el enfoque idiomático de Kotlin. #Incorrecto. Kotlin corre sobre la JVM y puede combinar utilidades propias con APIs de Java.
+~%-33.3333%`System.err`, porque las rutas robustas deben gestionarse siempre por el canal de error. #Incorrecto. `System.err` es un canal de salida, no una API para rutas.
+~%-33.3333%`println()`, porque cualquier ruta puede gestionarse correctamente si primero se muestra en pantalla. #Incorrecto. Mostrar una ruta no equivale a disponer de una API adecuada para manipularla.
+}
+
+::RA_5.CE_c. Buenas prácticas iniciales al empezar con ficheros::
+Un compañero da por hecho que `config/app.properties` existe siempre y que la entrada del usuario será correcta sin necesidad de revisarla. Según las recomendaciones finales del tema, ¿qué acción es la más sensata?
+{
+=Comprobar la existencia del fichero y validar la entrada antes de usarla o guardarla. #Correcto. Son dos precauciones básicas para evitar fallos frecuentes al trabajar con E/S.
+~%-33.3333%Cambiar todas las rutas a absolutas para garantizar que el fichero aparezca exactamente donde el programa espera. #Incorrecto. Una ruta absoluta no garantiza que el fichero exista ni reemplaza la validación.
+~%-33.3333%Confiar en que `File` cree siempre automáticamente el recurso correcto aunque se esté leyendo en lugar de escribiendo. #Incorrecto. No debe asumirse ese comportamiento ni sustituye a una comprobación real.
+~%-33.3333%Mostrar un mensaje previo con `print()` para reducir la probabilidad de error y prescindir ya de más comprobaciones. #Incorrecto. Informar ayuda, pero no reemplaza la validación efectiva del dato o del recurso.
+}

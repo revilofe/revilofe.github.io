@@ -1,16 +1,18 @@
 # PR-U7.4 - Lectura y escritura de archivos
 
+Note: En esta presentación damos el salto desde las **rutas** al **contenido** de los ficheros, que es donde la persistencia empieza a verse de verdad en un programa. Quiero que el alumnado entienda cómo leer y escribir datos de forma consciente, diferenciando **texto**, **binario**, acceso **secuencial** y varias decisiones prácticas que afectan al diseño del programa.
+
 ---
 
 ![Logo Alberti](assets/logo-iesra.png) <!-- .element height="50%" width="50%" -->
+
+Note: Este tema es el núcleo práctico de la unidad 7 porque aquí el programa empieza a **guardar** y **recuperar información** de verdad. Todo lo que veamos va a servir después para construir logs, cargar configuraciones, escribir informes y, en general, tratar la **persistencia** como una parte natural del desarrollo.
 
 ---
 
 ## Índice
 
-Note: En esta presentación damos el paso desde las rutas a los **contenidos**.
-El objetivo es entender cómo leer y escribir información persistente en
-ficheros, diferenciando texto, binario y buenas prácticas básicas.
+Note: En esta presentación damos el paso desde las **rutas** hasta los **contenidos** de los ficheros. La idea central es que ya no basta con saber dónde está un archivo: ahora necesitamos entender cómo se **lee**, cómo se **escribe** y qué decisiones conviene tomar según el tipo de dato y el formato elegido.
 
 
 ### Índice I
@@ -21,9 +23,7 @@ ficheros, diferenciando texto, binario y buenas prácticas básicas.
 - 4. Leer ficheros de texto
 - 5. Escribir ficheros de texto
 
-Note: La primera mitad explica el problema general: por qué se necesitan los
-ficheros, qué formatos hay y qué operaciones de lectura aparecen con más
-frecuencia en Kotlin.
+Note: La primera mitad del tema explica el problema general: por qué necesitamos **persistencia**, qué diferencia hay entre **texto** y **binario** y qué operaciones de **lectura** aparecen con más frecuencia en Kotlin. Es la parte que construye el mapa mental antes de ir a métodos concretos.
 
 
 ### Índice II
@@ -34,15 +34,13 @@ frecuencia en Kotlin.
 - 9. Ejemplo integrador
 - 10. Relación con `7.4.1` y resumen
 
-Note: La segunda mitad baja a decisiones prácticas: coherencia entre escritura
-y lectura, errores típicos y un primer vistazo al trabajo binario.
+Note: La segunda mitad baja a decisiones mucho más prácticas: mantener coherencia entre **cómo se escribe** y **cómo se lee**, anticipar errores frecuentes y entender por qué el trabajo en **binario** exige todavía más disciplina con el formato.
 
 ---
 
 ## 1. ¿Por que leer y escribir archivos?
 
-Note: Empezamos conectando el tema con la persistencia. La memoria no basta si
-queremos conservar datos entre ejecuciones del programa.
+Note: Empezamos conectando el tema con la **persistencia**. La memoria sirve mientras el programa se está ejecutando, pero si queremos conservar datos entre ejecuciones necesitamos un soporte externo, y ahí es donde entran los **ficheros** como mecanismo básico de almacenamiento.
 
 
 ### 1.1. Almacenar y recuperar informacion
@@ -52,8 +50,7 @@ queremos conservar datos entre ejecuciones del programa.
 - Leer significa traer datos al programa
 - Escribir significa enviarlos al fichero
 
-Note: Conviene presentar lectura y escritura como dos direcciones opuestas del
-flujo de datos. Esto aclara mucho el resto del tema.
+Note: Conviene presentar **lectura** y **escritura** como dos direcciones opuestas de un mismo **flujo de datos**. Leer significa traer información al programa, y escribir significa enviarla fuera; si esta idea queda clara, luego se entienden mejor los métodos concretos de Kotlin.
 
 
 ### 1.2. Casos de uso habituales
@@ -63,15 +60,13 @@ flujo de datos. Esto aclara mucho el resto del tema.
 - Cargar configuraciones al arrancar
 - Exportar resultados a un informe
 
-Note: Estos ejemplos conectan la teoría con aplicaciones reales y justifican
-por qué el criterio RA5 pide trabajar con ficheros.
+Note: Estos ejemplos son importantes porque conectan la teoría con usos reales: **guardar pedidos**, **registrar eventos**, **cargar configuraciones** o **exportar informes**. Así el alumnado ve que trabajar con ficheros no es un tema artificial, sino una necesidad muy habitual en programas reales.
 
 ---
 
 ## 2. Texto y binario
 
-Note: Antes de hablar de métodos concretos, hay que distinguir qué tipo de
-contenido estamos almacenando.
+Note: Antes de hablar de métodos concretos, hay que distinguir muy bien qué tipo de **contenido** estamos almacenando. No es lo mismo guardar **texto legible** que guardar **bytes** de una imagen, y esa diferencia condiciona tanto la API como la forma de pensar el problema.
 
 
 ### 2.1. Ficheros de texto
@@ -85,8 +80,7 @@ Luis,7.25
 Marta,9.0
 ```
 
-Note: El texto es muy didáctico porque permite ver directamente qué se ha
-guardado. Por eso será el caso más trabajado en el aula.
+Note: El **texto** es muy didáctico porque permite ver directamente qué se ha guardado y comprobar el resultado con un editor sencillo. Por eso será el caso más trabajado en el aula: hace visible la persistencia y facilita que el alumnado conecte código y resultado.
 
 
 ### 2.2. Ficheros binarios
@@ -95,15 +89,13 @@ guardado. Por eso será el caso más trabajado en el aula.
 - Son frecuentes en imágenes, audio o datos compactos
 - No son peores ni mejores: responden a otra necesidad
 
-Note: La idea importante es evitar el juicio "texto bueno, binario malo". Cada
-formato tiene su contexto y sus ventajas.
+Note: La idea importante aquí es evitar el juicio simplista de que **texto** es bueno y **binario** es malo. Cada formato responde a necesidades distintas, y lo que queremos es que el alumnado aprenda a elegir según el **contexto**, no por costumbre.
 
 ---
 
 ## 3. Acceso secuencial
 
-Note: El acceso secuencial es el modelo principal de la unidad y conecta muy
-bien con la intuición que ya tenemos de leer línea a línea.
+Note: El **acceso secuencial** es el modelo principal de esta unidad porque conecta muy bien con la intuición de leer línea a línea o dato a dato desde el principio hasta el final. Es un modelo muy natural para empezar y el que mejor prepara el trabajo con ficheros de texto.
 
 
 ### 3.1. Procesar en orden
@@ -112,15 +104,13 @@ bien con la intuición que ya tenemos de leer línea a línea.
 - Es parecido a leer líneas en consola
 - Es el caso más habitual en esta unidad
 
-Note: Esta slide prepara el terreno para métodos como `readLines()` o
-`useLines()`, que encajan justamente en ese modelo secuencial.
+Note: Esta slide prepara el terreno para métodos como **`readLines()`** o **`useLines()`**, que encajan precisamente en ese enfoque **secuencial**. Quiero que el alumnado vea que la teoría del acceso no está separada de la API, sino que explica por qué ciertos métodos tienen sentido.
 
 ---
 
 ## 4. Leer ficheros de texto
 
-Note: Kotlin ofrece varias opciones cómodas. La elección depende del tamaño del
-fichero y del tipo de procesamiento que queremos hacer.
+Note: Kotlin ofrece varias opciones muy cómodas para leer ficheros, pero no conviene enseñarlas como si fueran intercambiables sin más. La elección depende del **tamaño del fichero**, del tipo de **procesamiento** y de si necesitamos todo el contenido de golpe o preferimos ir línea a línea.
 
 
 ### 4.1. `readText()` y `readLines()`
@@ -133,8 +123,7 @@ val contenido = File("datos/notas.txt").readText()
 val lineas = File("datos/notas.txt").readLines()
 ```
 
-Note: La diferencia clave es el formato del resultado: una única cadena o una
-colección de líneas listas para recorrer.
+Note: La diferencia clave aquí está en el **formato del resultado**: una única **cadena** completa o una **colección de líneas** lista para recorrer. Esa diferencia parece pequeña, pero cambia bastante la manera en la que luego procesamos la información.
 
 
 ### 4.2. `useLines()` para procesar mejor
@@ -149,15 +138,13 @@ File("datos/notas.txt").useLines { lineas ->
 }
 ```
 
-Note: Aquí es importante explicar que "más eficiente" no siempre significa
-"mejor en todos los casos". Depende del tamaño del fichero y de la tarea.
+Note: Aquí conviene explicar que "más **eficiente**" no significa automáticamente "mejor" en todos los casos. **`useLines()`** es muy útil cuando no queremos cargarlo todo en memoria, pero la decisión correcta depende siempre del tamaño del fichero y de la tarea concreta que queramos resolver.
 
 ---
 
 ## 5. Escribir ficheros de texto
 
-Note: La escritura requiere una decisión clave: sobrescribir lo existente o
-añadir contenido al final.
+Note: La **escritura** obliga a tomar una decisión muy importante desde el principio: si vamos a **sobrescribir** lo que ya había o si vamos a **añadir** contenido al final. Muchísimos errores vienen precisamente de no pensar esta diferencia antes de elegir el método.
 
 
 ### 5.1. `writeText()` y `appendText()`
@@ -170,9 +157,7 @@ File("salida.txt").writeText("Hola desde Kotlin\n")
 File("log.txt").appendText("Nueva entrada\n")
 ```
 
-Note: Este contraste es uno de los puntos más importantes del tema. Muchísimos
-errores vienen de usar `writeText()` cuando en realidad se quería conservar lo
-anterior.
+Note: Este contraste es uno de los puntos más importantes de todo el tema. Si usamos **`writeText()`** cuando en realidad queríamos conservar lo anterior, perderemos datos; por eso es importante remarcar muy bien cuándo conviene **reemplazar** y cuándo conviene **acumular** con **`appendText()`**.
 
 
 ### 5.2. Escritura con `bufferedWriter()`
@@ -187,15 +172,13 @@ File("salida.txt").bufferedWriter().use { writer ->
 }
 ```
 
-Note: Aquí conviene introducir la idea de gestionar bien los recursos. Aunque
-Kotlin facilite mucho la E/S, cerrar correctamente sigue siendo importante.
+Note: Aquí conviene introducir la idea de **gestionar recursos** con cuidado. Aunque Kotlin simplifique mucho la **E/S**, sigue siendo importante cerrar bien los flujos y escritores, y por eso **`use()`** es una herramienta tan valiosa: evita olvidos y hace el código más seguro.
 
 ---
 
 ## 6. Leer y escribir no es lo mismo
 
-Note: Esta sección parece obvia, pero didácticamente es fundamental: guardar un
-formato y luego leer otro distinto rompe el programa.
+Note: Esta sección parece obvia, pero didácticamente es fundamental. Guardar información con un **formato** y luego intentar leerla con otro distinto rompe el programa, así que aquí quiero insistir mucho en la idea de **coherencia** entre escritura y lectura.
 
 
 ### 6.1. Coherencia entre escritura y lectura
@@ -209,15 +192,13 @@ Ana,8.5
 Luis,7.25
 ```
 
-Note: Este ejemplo simple de CSV ayuda a visualizar que una coma o un salto de
-línea también forman parte del formato que luego habrá que interpretar.
+Note: Este ejemplo simple de **CSV** ayuda mucho a visualizar que una coma, un separador o un salto de línea también forman parte del **formato**. No son "decoración": son la estructura que después el programa tendrá que interpretar correctamente al leer.
 
 ---
 
 ## 7. Errores frecuentes al trabajar con texto
 
-Note: Enumerar errores típicos ayuda a que el alumnado anticipe fallos antes de
-verlos en ejecución.
+Note: Enumerar **errores frecuentes** ayuda a que el alumnado anticipe fallos antes de encontrárselos por sorpresa en ejecución. Es una parte muy útil del aprendizaje porque enseña a pensar con más prudencia y a desconfiar sanamente de rutas, formatos y contenidos.
 
 
 ### 7.1. Lista de fallos habituales
@@ -228,15 +209,13 @@ verlos en ejecución.
 - Cargar en memoria más de lo necesario
 - Suponer que el contenido siempre es válido
 
-Note: Aquí conviene insistir en que trabajar con ficheros implica una cierta
-desconfianza saludable: rutas, formato y contenido deben comprobarse.
+Note: Aquí conviene insistir en una idea de calidad muy importante: trabajar con ficheros implica una **desconfianza saludable**. Debemos comprobar **rutas**, validar **formatos** y no suponer que el **contenido** siempre es correcto o está en el estado esperado.
 
 ---
 
 ## 8. Introduccion a los ficheros binarios
 
-Note: No es el foco principal del aula, pero el alumnado debe reconocer que la
-JVM también ofrece herramientas para escribir y leer datos binarios.
+Note: Aunque el foco principal del aula va a ser el **texto**, el alumnado debe reconocer que la JVM también ofrece herramientas para trabajar con **binario**. No lo veremos con tanto detalle, pero sí conviene que entiendan que existe otro nivel de persistencia más estricto con el formato.
 
 
 ### 8.1. `DataOutputStream` y `DataInputStream`
@@ -251,8 +230,7 @@ DataOutputStream(FileOutputStream("datos.bin")).use { salida ->
 }
 ```
 
-Note: Este ejemplo abre la puerta al binario, pero lo importante es la regla:
-si escribes un `Int` y luego un `Boolean`, deberás leer exactamente eso mismo.
+Note: Este ejemplo abre la puerta al trabajo en **binario**, pero lo importante no es memorizar la clase sino la **regla**: si escribes primero un **`Int`** y luego un **`Boolean`**, deberás leer exactamente en ese mismo orden y con esos mismos tipos para no romper la interpretación.
 
 
 ### 8.2. Regla esencial del binario
@@ -261,15 +239,13 @@ si escribes un `Int` y luego un `Boolean`, deberás leer exactamente eso mismo.
 - Cambiar el tipo también la rompe
 - El contrato de lectura y escritura debe coincidir
 
-Note: Esta slide merece enfatizarse. En binario hay menos pistas visuales, así
-que la disciplina con el formato es aún más importante que en texto.
+Note: Esta slide merece enfatizarse especialmente porque en **binario** hay muchas menos pistas visuales que en **texto**. Precisamente por eso la disciplina con el **formato**, el **orden** y los **tipos** es todavía más importante y hay menos margen para improvisar.
 
 ---
 
 ## 9. Ejemplo integrador
 
-Note: Cerramos con un caso de fichero de texto que escribe y luego vuelve a
-leer. Resume muy bien el núcleo práctico del tema.
+Note: Cerramos con un caso integrador que escribe en un fichero de **texto** y luego vuelve a leerlo. Es un ejemplo muy útil porque resume el núcleo práctico del tema y hace visible la idea de ida y vuelta entre **programa**, **fichero** y **consola**.
 
 
 ### 9.1. Escribir y volver a leer
@@ -289,15 +265,13 @@ for (linea in lineas) {
 - Recupera el contenido con `readLines()`
 - Muestra el puente entre persistencia y consola
 
-Note: Este tipo de ejemplo deja claro que la E/S no es un mundo aparte:
-teclado, consola y archivos pueden colaborar dentro del mismo programa.
+Note: Este tipo de ejemplo deja claro que la **E/S** no es un mundo aparte ni una colección de trucos sueltos. **Teclado**, **consola** y **archivos** pueden colaborar dentro del mismo programa, y esa visión unificada es justo la que interesa que el alumnado consolide.
 
 ---
 
 ## 10. Relacion con `7.4.1` y resumen
 
-Note: Cerramos marcando continuidad. Este tema es la visión general; el
-siguiente profundiza en el caso más habitual: los ficheros de texto.
+Note: Cerramos marcando continuidad entre temas. Este bloque ofrece la visión general de la **lectura** y la **escritura**, y el siguiente profundiza en el caso más habitual y más didáctico: el trabajo con **ficheros de texto**.
 
 
 ### 10.1. Ideas clave para continuar
@@ -307,5 +281,4 @@ siguiente profundiza en el caso más habitual: los ficheros de texto.
 - Kotlin facilita lectura con `readText()`, `readLines()` y `useLines()`
 - Y facilita escritura con `writeText()` y `appendText()`
 
-Note: Si estas ideas quedan claras, el alumnado ya puede empezar a construir
-programas que guarden y recuperen información de forma persistente.
+Note: Si estas ideas quedan claras, el alumnado ya puede empezar a construir programas que **guarden** y **recuperen información** de forma persistente. La idea final que debe quedar es mantener siempre la coherencia entre **cómo se escribe** un fichero, **qué formato se elige** y **cómo se vuelve a leer** después.

@@ -1,17 +1,18 @@
 # PR-U7.2 - Consola y teclado
 
+Note: En esta presentación trabajamos la **consola** y el **teclado** como primeros mecanismos reales de **entrada** y **salida**. La idea importante es que un programa ya puede comunicarse con la persona usuaria, pedir datos y mostrar resultados mucho antes de empezar a guardar información en ficheros.
+
 ---
 
 ![Logo Alberti](assets/logo-iesra.png) <!-- .element height="50%" width="50%" -->
+
+Note: Esta parte de la unidad 7 sirve para fijar la base de la **E/S básica** sobre la que se apoyará todo lo demás. Vamos a distinguir **entrada estándar**, **salida estándar** y **salida de error**, y a ver cómo Kotlin nos permite pedir datos, validarlos y mostrarlos con claridad.
 
 ---
 
 ## Índice
 
-Note: En esta presentación pasamos de la teoría general de la
-**entrada/salida** al caso más cercano: la **consola**. El objetivo es que el
-alumnado sepa mostrar mensajes, leer datos, validarlos y cuidar el formato de
-salida dentro del **RA5**.
+Note: En esta presentación pasamos de la teoría general de la **entrada/salida** al caso más cercano y más visible: la **consola**. El objetivo es que el alumnado sepa mostrar mensajes, leer datos, validarlos y cuidar el formato de salida dentro del **RA5**, entendiendo que comunicar bien también es parte de programar.
 
 
 ### Índice I
@@ -22,9 +23,7 @@ salida dentro del **RA5**.
 - 2.2. `System.err`
 - 3. Lectura con `readln()` y `readlnOrNull()`
 
-Note: En la primera mitad fijamos la base: qué canales usa una aplicación de
-consola y cómo mostrar información. Después introducimos la lectura desde
-teclado, que es la operación más habitual en ejercicios iniciales.
+Note: En la primera mitad fijamos la base que toda aplicación de **consola** necesita: qué **canales** usa y cómo se muestra la información de forma comprensible. Después introducimos la lectura desde **teclado**, que es la operación más habitual en los ejercicios iniciales y la que abre la puerta a la **interacción** real.
 
 
 ### Índice II
@@ -35,16 +34,13 @@ teclado, que es la operación más habitual en ejercicios iniciales.
 - 5. Ejemplo integrador
 - 6. Buenas prácticas y resumen
 
-Note: En la segunda mitad nos centramos en la parte más práctica: validar
-entrada, formatear resultados y evitar errores frecuentes. La meta no es solo
-que el programa funcione, sino que se comunique bien con la persona usuaria.
+Note: En la segunda mitad nos centramos en la parte más práctica y más cercana a los errores reales de aula: **validar** entrada, **formatear** resultados y evitar fallos frecuentes. La meta no es solo que el programa funcione, sino que se comunique bien con la persona usuaria y reaccione con cierta robustez.
 
 ---
 
 ## 1. La consola como canal de entrada y salida
 
-Note: Abrimos con la idea clave del tema: aunque todavía no haya ficheros, ya
-estamos haciendo **entrada/salida** cuando un programa habla con la consola.
+Note: Abrimos con la idea clave del tema: aunque todavía no haya ficheros, ya estamos haciendo **entrada/salida** cuando un programa habla con la **consola**. Esto ayuda a que el alumnado vea la consola como un caso concreto del problema general de intercambio de datos.
 
 
 ### 1.1. Tres canales básicos
@@ -54,16 +50,13 @@ estamos haciendo **entrada/salida** cuando un programa habla con la consola.
 - **Salida de error**: mensajes de fallo o aviso
 - En la JVM aparecen como `System.in`, `System.out` y `System.err`
 
-Note: Conviene insistir en que estos tres canales tienen funciones distintas.
-Separar salida normal y salida de error ayuda a pensar mejor los programas y a
-depurarlos después.
+Note: Conviene insistir en que estos tres canales tienen funciones distintas y no están ahí por capricho. Separar **salida normal** y **salida de error** ayuda a pensar mejor los programas, a guiarlos mejor y a depurarlos después con más orden.
 
 ---
 
 ## 2. Escribir información en consola
 
-Note: Esta sección enseña a producir salida visible. Es el primer paso para que
-un programa guíe a la persona usuaria y muestre resultados comprensibles.
+Note: Esta sección enseña a producir **salida visible**, que es el primer paso para que un programa pueda guiar a la persona usuaria. Un programa que no explica qué pide ni qué ha obtenido puede funcionar técnicamente, pero sigue estando mal comunicado.
 
 
 ### 2.1. `print()` y `println()`
@@ -81,9 +74,7 @@ fun main() {
 }
 ```
 
-Note: La diferencia entre ambas funciones parece pequeña, pero afecta a cómo se
-ven los mensajes. Es útil mostrarlo pronto porque luego condiciona la claridad
-de los diálogos en consola.
+Note: La diferencia entre **`print()`** y **`println()`** parece pequeña, pero afecta directamente a cómo se ven los mensajes y a la claridad del diálogo en **consola**. Conviene mostrarla pronto porque muchos programas sencillos se vuelven confusos precisamente por no controlar bien esos **saltos de línea**.
 
 
 ### 2.2. Plantillas de cadenas
@@ -100,9 +91,7 @@ println("Alumno: $nombre")
 println("El doble es ${nota * 2}")
 ```
 
-Note: Aquí conviene remarcar que la interpolación mejora la legibilidad del
-código. Para alumnado que empieza, suele ser más clara que encadenar varias
-sumas de cadenas.
+Note: Aquí conviene remarcar que la **interpolación** mejora mucho la legibilidad del código y también del pensamiento del alumnado. Para quien empieza, suele ser bastante más clara que encadenar varias sumas de cadenas y permite concentrarse en el mensaje en lugar de en la sintaxis.
 
 
 ### 2.3. Salida de error con `System.err`
@@ -115,16 +104,13 @@ sumas de cadenas.
 System.err.println("No se ha podido leer la edad")
 ```
 
-Note: Aunque en algunos terminales no se vea diferente, la separación entre
-**salida estándar** y **salida de error** es importante y forma parte del
-modelo real de entrada/salida.
+Note: Aunque en algunos terminales no se vea una diferencia llamativa, la separación entre **salida estándar** y **salida de error** es importante y forma parte del modelo real de **entrada/salida**. Quiero que el alumnado entienda que un mensaje de error no es solo "otro `println`", sino una salida con un propósito distinto.
 
 ---
 
 ## 3. Leer datos desde teclado
 
-Note: Leer desde teclado parece simple, pero aquí aparecen muchas decisiones:
-qué función usar, cómo convertir texto y cómo evitar excepciones innecesarias.
+Note: Leer desde teclado parece simple cuando se mira por encima, pero aquí aparecen muchas decisiones reales: qué función usar, cómo convertir **texto** a otros tipos y cómo evitar **excepciones** innecesarias. Este bloque es el que transforma una lectura ingenua en una lectura algo más robusta.
 
 
 ### 3.1. Lectura básica de texto
@@ -141,9 +127,7 @@ fun main() {
 }
 ```
 
-Note: Para ejercicios interactivos sencillos, `readln()` suele ser suficiente.
-La versión anulable será útil cuando la entrada pueda agotarse o no dependa del
-teclado directamente.
+Note: Para ejercicios interactivos sencillos, `readln()` suele ser suficiente y además es muy fácil de explicar en voz alta. La versión anulable empieza a tener sentido cuando la entrada puede agotarse o cuando ya no depende directamente del **teclado**, y ese matiz conviene dejarlo bien sembrado.
 
 
 ### 3.2. Convertir texto a números con seguridad
@@ -164,8 +148,7 @@ if (edad != null) {
 }
 ```
 
-Note: Este bloque conecta directamente con la robustez. La idea clave es que la
-entrada puede venir mal y que el programa debe anticiparlo en lugar de fallar.
+Note: Este bloque conecta directamente con la idea de **robustez**, que es una palabra importante aunque todavía estemos en ejercicios básicos. La entrada puede venir mal y el programa debe anticiparlo, porque programar no es solo pensar en el caso ideal, sino también en los errores normales de la persona usuaria.
 
 
 ### 3.3. Evita conversiones directas sin validar
@@ -180,9 +163,7 @@ val numero = readln().toInt()
 val otro = readLine()!!.toInt()
 ```
 
-Note: Este es un buen momento para insistir en un criterio de calidad:
-**funcionar cuando todo va bien no basta**. Hay que pensar qué pasa cuando la
-persona usuaria escribe algo inesperado.
+Note: Este es un buen momento para insistir en un criterio de calidad que el alumnado debe empezar a interiorizar: **funcionar cuando todo va bien no basta**. También hay que pensar qué ocurre cuando la persona usuaria escribe algo inesperado, se equivoca o introduce un formato que el programa no esperaba.
 
 
 ### 3.4. Repetir la petición hasta obtener un dato valido
@@ -203,15 +184,13 @@ while (cantidad == null) {
 }
 ```
 
-Note: Este patrón aparece mucho en actividades de aula. Es simple y enseña a la
-vez validación, control de flujo y mensajes de error bien orientados.
+Note: Este patrón aparece muchísimo en las actividades de aula porque es simple, útil y muy formativo. Enseña a la vez **validación**, **control de flujo** y mensajes de error bien orientados, y además muestra cómo un programa puede insistir sin romperse.
 
 ---
 
 ## 4. Formato de salida
 
-Note: El criterio de evaluación no pide solo "imprimir algo". También importa
-que la salida sea clara y fácil de interpretar por quien usa el programa.
+Note: El criterio de evaluación no pide solo "imprimir algo", sino comunicarlo bien y con intención. También importa que la **salida** sea clara, legible y fácil de interpretar por quien usa el programa, porque un programa oscuro sigue siendo un programa mal resuelto.
 
 
 ### 4.1. Interpolación para mensajes sencillos
@@ -227,8 +206,7 @@ println("Producto: $producto")
 println("Precio: $precio EUR")
 ```
 
-Note: Para salidas simples no hace falta complicarse. La interpolación resuelve
-la mayoría de mensajes de consola de manera directa.
+Note: Para salidas simples no hace falta complicarse ni introducir mecanismos más pesados antes de tiempo. La **interpolación** resuelve la mayoría de mensajes de consola de manera directa y deja el código bastante más limpio y fácil de leer.
 
 
 ### 4.2. `format` para decimales y columnas
@@ -244,8 +222,7 @@ val nota = 7.456
 println("Alumno: %s | Nota: %.2f".format(nombre, nota))
 ```
 
-Note: Aquí conviene mostrar que `format` no sustituye a la interpolación, sino
-que la complementa cuando necesitamos precisión en la presentación.
+Note: Aquí conviene mostrar que `format` no sustituye a la **interpolación**, sino que la complementa cuando necesitamos más precisión en la presentación. La idea es que el alumnado vea que hay una escala de herramientas y que cada una encaja mejor según el nivel de control que haga falta.
 
 
 ### 4.3. Tabla sencilla en consola
@@ -267,15 +244,13 @@ for ((articulo, precio) in articulos) {
 - Mejora la legibilidad respecto a una salida desordenada
 - Hace visible el valor del formato como parte del resultado
 
-Note: Este ejemplo ayuda a que el alumnado vea por qué el formato importa. La
-misma información puede ser mucho más útil si está bien presentada.
+Note: Este ejemplo ayuda a que el alumnado vea por qué el **formato** importa de verdad y no es solo maquillaje. La misma información puede ser mucho más útil si está bien presentada, especialmente cuando hay números, resultados o datos que deben leerse con rapidez.
 
 ---
 
 ## 5. Ejemplo integrador
 
-Note: Cerramos con un caso que combina lectura, validación y formato. Es la
-traducción directa del tema a un ejercicio típico de clase.
+Note: Cerramos con un caso que combina **lectura**, **validación** y **formato** en un único ejercicio reconocible. Es la traducción directa del tema a una actividad típica de clase y por eso sirve muy bien como modelo de repaso.
 
 
 ### 5.1. Ticket de compra en consola
@@ -295,8 +270,7 @@ val precio = readln().toDoubleOrNull()
 - Obliga a validar cantidades y precios
 - Prepara una salida con formato claro
 
-Note: El interés del ejemplo está en que combina varias piezas del tema. No es
-solo pedir datos: también hay que interpretar qué valores son válidos.
+Note: El interés del ejemplo está en que combina varias piezas del tema dentro de una misma situación. No es solo pedir datos, sino también interpretar qué valores son **válidos**, reaccionar si no lo son y mostrar una salida final bien presentada.
 
 
 ### 5.2. Salida final y buenas practicas
@@ -316,16 +290,13 @@ println("Total: %.2f EUR".format(total))
 - Usa `System.err` para errores
 - Separa, si el programa crece, lógica y presentación
 
-Note: Esta slide sirve como transición al resumen. La idea es que el alumnado
-salga con una pequeña lista de control para futuros programas de consola.
+Note: Esta slide sirve como transición al **resumen** y como pequeña **lista de control** para futuros programas de consola. Quiero que el alumnado salga con criterios muy concretos sobre qué revisar cuando construya un programa **interactivo** sencillo y tenga que cuidar tanto la **entrada** como la **salida**.
 
 ---
 
 ## 6. Resumen
 
-Note: Recuperamos las ideas imprescindibles antes de pasar a la ampliación
-`7.2.1` o a los temas de ficheros. El grupo ya debería ver la consola como un
-caso concreto del problema general de entrada/salida.
+Note: Recuperamos aquí las ideas imprescindibles antes de pasar a la ampliación `7.2.1` o a los temas de ficheros para que no se pierda el hilo. A estas alturas el grupo ya debería ver la **consola** como un caso concreto del problema general de **entrada/salida**.
 
 
 ### 6.1. Ideas clave del tema
@@ -336,6 +307,4 @@ caso concreto del problema general de entrada/salida.
 - `toIntOrNull()` y similares evitan muchos errores
 - El formato mejora la claridad de la salida
 
-Note: Si estas cinco ideas están claras, el objetivo del tema está cumplido.
-Con esta base ya se pueden construir programas sencillos de consola bien
-formados y razonablemente robustos.
+Note: Si estas cinco ideas están claras, el objetivo del tema está cumplido y la base ya es buena. Con ella el alumnado puede construir programas sencillos de **consola** bien formados, más legibles y razonablemente **robustos** para el nivel de la unidad.

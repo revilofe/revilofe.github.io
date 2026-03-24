@@ -1,0 +1,143 @@
+::RA_5.CE_c. Qué representa realmente File en Kotlin::
+Una alumna crea `val fichero = File("datos/alumnos.txt")` y afirma que en ese momento el archivo ya está cargado en memoria y listo para leerse carácter a carácter. ¿Qué interpretación es la más precisa?
+{
+=`File` representa una ruta del sistema de archivos, no el contenido cargado del archivo. #Correcto. Crear el objeto permite trabajar con una ruta, pero no implica haber leído todavía el contenido ni haber cargado el fichero en memoria.
+~%-33.3333%`File` representa siempre un fichero existente, así que si el archivo no está creado el constructor lanza una excepción. #Incorrecto. `File` puede apuntar también a una ubicación que todavía no existe.
+~%-33.3333%`File` representa directamente el flujo de lectura del fichero, por eso ya puede recorrerse como texto sin pasos previos. #Incorrecto. Un flujo de lectura y un objeto que representa una ruta no son lo mismo.
+~%-33.3333%`File` representa el contenido serializado del archivo para que Kotlin lo convierta después en bytes o caracteres. #Incorrecto. El objeto no contiene el contenido ni lo serializa por sí mismo.
+}
+
+::RA_5.CE_c. File puede apuntar a algo que no existe todavía::
+En Kotlin escribes `val ruta = File("salidas/informe.txt")` antes de crear la carpeta o el fichero. ¿Qué conclusión es correcta?
+{
+=El objeto `File` puede existir como representación de ruta aunque el fichero real todavía no exista. #Correcto. El objeto representa una ubicación; la existencia real de esa ruta debe consultarse aparte.
+~%-33.3333%El código no compila hasta que el sistema de archivos confirme que `salidas/informe.txt` ya está creado. #Incorrecto. La compilación no depende de que exista la ruta en disco.
+~%-33.3333%Kotlin crea automáticamente tanto la carpeta como el archivo al construir el `File`. #Incorrecto. Construir el objeto no crea recursos físicos por sí mismo.
+~%-33.3333%Si la ruta no existe, `File` pasa a representar una ruta vacía y deja de apuntar a la ubicación indicada. #Incorrecto. Sigue representando la ruta que se le ha proporcionado.
+}
+
+::RA_5.CE_c. Construir rutas a partir de padre e hijo::
+Tienes `val carpeta = File("datos")` y quieres representar `notas.txt` dentro de esa carpeta de forma legible en Kotlin. ¿Qué opción encaja mejor con el tema?
+{
+=Usar `File(carpeta, "notas.txt")` para construir la ruta hija a partir del directorio padre. #Correcto. Esa forma mejora la legibilidad cuando trabajas con varias rutas relacionadas.
+~%-33.3333%Usar `File(carpeta.name + "notas.txt")`, porque `File` necesita recibir siempre una cadena ya concatenada manualmente. #Incorrecto. Puede construirse una ruta hija directamente a partir de un `File` padre.
+~%-33.3333%Usar `File("datos").createNewFile("notas.txt")`, porque el nombre hijo debe pasarse al método de creación y no al constructor. #Incorrecto. `createNewFile()` no se usa así ni sustituye a la representación de la ruta.
+~%-33.3333%Usar `File("notas.txt", carpeta)`, porque en Kotlin el orden recomendado es primero el fichero y luego el directorio. #Incorrecto. Ese no es el orden ni la forma presentada en la unidad.
+}
+
+::RA_5.CE_c. Ruta absoluta frente a ruta relativa con File::
+En un proyecto de aula, un estudiante duda entre usar `File("datos/notas.txt")` o escribir una ruta completa ligada a su portátil. ¿Qué decisión encaja mejor con las buenas prácticas del tema?
+{
+=Preferir la ruta relativa cuando el recurso forma parte del proyecto y no depende de un equipo concreto. #Correcto. En proyectos de aula, las rutas relativas suelen ser más portables y reutilizables.
+~%-33.3333%Preferir siempre la ruta absoluta, porque `File` solo funciona de forma fiable cuando conoce la ubicación completa desde la raíz. #Incorrecto. `File` funciona también con rutas relativas y el tema las recomienda en muchos casos.
+~%-33.3333%Usar primero una ruta absoluta y convertirla después en relativa con `absolutePath` para ganar portabilidad. #Incorrecto. `absolutePath` no convierte una ruta absoluta en relativa ni resuelve ese problema.
+~%-33.3333%Evitar `File` con rutas relativas, porque solo `java.nio.file` puede interpretarlas correctamente desde Kotlin. #Incorrecto. `File` maneja también rutas relativas; el punto clave es entender el directorio de trabajo.
+}
+
+::RA_5.CE_c. Qué muestra absolutePath::
+Un programa crea `val fichero = File("datos/notas.txt")` y después imprime `fichero.absolutePath`. ¿Qué información aporta realmente esa propiedad?
+{
+=La ruta completa resultante según el directorio de trabajo desde el que se ejecuta el programa. #Correcto. Ayuda a entender a qué ubicación real está apuntando una ruta relativa.
+~%-33.3333%La cadena original tal como se escribió en el constructor, sin interpretación adicional. #Incorrecto. Para eso bastaría la ruta relativa original; `absolutePath` da la versión completa resuelta.
+~%-33.3333%El contenido textual del fichero convertido en una sola ruta absoluta. #Incorrecto. `absolutePath` habla de la ubicación, no del contenido.
+~%-33.3333%La carpeta padre del fichero, sin incluir el nombre del archivo final. #Incorrecto. La propiedad incluye la ruta completa representada por ese `File`.
+}
+
+::RA_5.CE_c. Usar name y parent para inspeccionar una ruta::
+Quieres mostrar por consola el nombre del fichero y la carpeta que lo contiene a partir de `val fichero = File("datos/notas.txt")`. ¿Qué combinación de propiedades es la más adecuada?
+{
+=`name` para el nombre del fichero y `parent` para la carpeta padre. #Correcto. Son precisamente dos de las propiedades básicas que el tema destaca para inspeccionar una ruta.
+~%-33.3333%`absolutePath` para el nombre del fichero y `length()` para la carpeta padre. #Incorrecto. `absolutePath` devuelve la ruta completa y `length()` no informa sobre la carpeta padre.
+~%-33.3333%`isFile` para el nombre y `exists()` para la carpeta padre. #Incorrecto. Son comprobaciones lógicas, no propiedades textuales de la ruta.
+~%-33.3333%`parent` para el nombre y `name` para la carpeta, porque Kotlin invierte esas propiedades en rutas relativas. #Incorrecto. No existe esa inversión; cada propiedad mantiene su significado.
+}
+
+::RA_5.CE_c. Cuándo conviene comprobar exists::
+Un programa va a operar con `File("datos/notas.txt")` y no sabe si la ruta existe realmente en disco. ¿Qué decisión es la más razonable antes de actuar?
+{
+=Usar `exists()` para comprobar si la ruta está presente en el sistema de archivos. #Correcto. La unidad insiste en comprobar la existencia antes de operar cuando no puede darse por supuesta.
+~%-33.3333%Usar `name`, porque si la ruta tiene nombre significa que el recurso ya existe. #Incorrecto. Que una ruta tenga nombre no garantiza que exista físicamente.
+~%-33.3333%Usar `absolutePath`, porque una ruta absoluta solo se genera si el fichero está creado. #Incorrecto. Se puede obtener una ruta absoluta aunque el recurso no exista todavía.
+~%-33.3333%Usar `length()`, porque si devuelve cero significa que la ruta no existe. #Incorrecto. Un fichero puede existir y estar vacío; además esa comprobación no sustituye a `exists()`.
+}
+
+::RA_5.CE_c. Distinguir entre fichero y directorio con File::
+Una ruta existe, pero el programa necesita saber si apunta a un fichero o a una carpeta antes de continuar. ¿Qué enfoque es el más adecuado?
+{
+=Consultar `isFile` e `isDirectory`, porque no basta con saber solo que la ruta existe. #Correcto. Una misma ruta existente puede representar cosas distintas y el programa necesita distinguirlas.
+~%-33.3333%Consultar solo `exists()`, porque si una ruta existe Kotlin ya sabe automáticamente si debe tratarla como fichero o directorio. #Incorrecto. `exists()` no aporta por sí sola esa distinción.
+~%-33.3333%Mirar si el nombre termina en `.txt`, porque la extensión determina con seguridad la naturaleza real del recurso. #Incorrecto. La teoría insiste en que la extensión no garantiza el tipo real.
+~%-33.3333%Usar `absolutePath` y comprobar si contiene barras, porque las carpetas siempre tienen más separadores que los ficheros. #Incorrecto. Ese criterio no es fiable para distinguir el tipo de recurso.
+}
+
+::RA_5.CE_c. Interpretar length y lastModified::
+Un fichero existe y quieres saber si está vacío y cuándo se actualizó por última vez. ¿Qué combinación de llamadas responde mejor a ese objetivo?
+{
+=`length()` para el tamaño en bytes y `lastModified()` para el instante de la última modificación. #Correcto. Son dos metadatos básicos que la unidad presenta expresamente para este tipo de consulta.
+~%-33.3333%`name` para el tamaño y `parent` para la fecha de modificación. #Incorrecto. Esas propiedades describen la ruta, no el tamaño ni la fecha.
+~%-33.3333%`exists()` para el tamaño y `isFile` para la fecha, porque ambas cambian cuando el contenido se modifica. #Incorrecto. No ofrecen esa información ni cambian con ese significado.
+~%-33.3333%`mkdir()` para el tamaño y `renameTo()` para la última modificación, porque ambos métodos recalculan los metadatos. #Incorrecto. Son operaciones sobre el sistema de archivos, no consultas de metadatos.
+}
+
+::RA_5.CE_c. mkdir frente a mkdirs en Kotlin::
+Quieres crear la ruta `salidas/2026/marzo` y no puedes asegurar que existan antes las carpetas intermedias. ¿Qué opción refleja mejor la decisión correcta?
+{
+=Usar `mkdirs()`, porque puede crear de una vez varias carpetas anidadas que aún no existan. #Correcto. Esa es precisamente la diferencia práctica con respecto a `mkdir()`.
+~%-33.3333%Usar `mkdir()`, porque Kotlin crea automáticamente también todos los directorios padre cuando falta alguno. #Incorrecto. `mkdir()` no cubre de forma general ese caso anidado como lo hace `mkdirs()`.
+~%-33.3333%Usar `createNewFile()`, porque una carpeta anidada se representa en `File` igual que un fichero vacío. #Incorrecto. Crear un fichero no sustituye a crear una estructura de directorios.
+~%-33.3333%Usar `renameTo()`, porque renombrar una ruta inexistente provoca que se creen las carpetas necesarias. #Incorrecto. `renameTo()` no se usa con ese propósito.
+}
+
+::RA_5.CE_c. Interpretar correctamente delete::
+Un estudiante llama a `delete()` sobre un directorio y recibe `false`. Piensa que Kotlin ha fallado de forma aleatoria. ¿Qué explicación es la más adecuada según el tema?
+{
+=`delete()` puede devolver `false` si la ruta no existe, faltan permisos o la carpeta no está vacía. #Correcto. El resultado `false` indica que la operación no pudo realizarse, y la carpeta no vacía es un caso típico.
+~%-33.3333%`delete()` devuelve `false` siempre que el recurso sea un directorio, porque solo puede borrar ficheros. #Incorrecto. Un directorio puede borrarse si se cumplen ciertas condiciones, como estar vacío.
+~%-33.3333%`delete()` borra igualmente la ruta, pero devuelve `false` mientras el sistema actualiza los metadatos. #Incorrecto. Eso no es lo que expresa el método; `false` indica fallo de la operación.
+~%-33.3333%`delete()` solo funciona cuando antes se ha consultado `exists()`, de lo contrario la operación queda anulada. #Incorrecto. Comprobar antes es útil, pero no es una condición obligatoria del método.
+}
+
+::RA_5.CE_c. renameTo para renombrar o mover::
+Tienes `val origen = File("borrador.txt")` y `val destino = File("entrega.txt")`. Quieres cambiar el nombre del recurso usando la API explicada en la unidad. ¿Qué método corresponde mejor?
+{
+=`renameTo(destino)`, porque permite renombrar la ruta y también moverla si el destino está en otra carpeta. #Correcto. La unidad presenta ese método justo para cambios de nombre y movimientos simples.
+~%-33.3333%`mkdir(destino)`, porque renombrar un fichero en Kotlin se trata como crear una nueva ruta con otro nombre. #Incorrecto. `mkdir()` crea directorios; no sirve para renombrar ficheros.
+~%-33.3333%`absolutePath(destino)`, porque la ruta absoluta del destino sustituye automáticamente al nombre original. #Incorrecto. `absolutePath` es una propiedad, no un método para renombrar.
+~%-33.3333%`createNewFile(destino)`, porque primero debe crearse el nuevo nombre y luego Kotlin borra el antiguo de forma implícita. #Incorrecto. Ese no es el comportamiento del método ni la operación adecuada.
+}
+
+::RA_5.CE_c. Cuándo listFiles tiene sentido::
+Quieres recorrer el contenido de `datos` y mostrar por consola qué elementos son carpetas y cuáles son ficheros. ¿Qué método encaja mejor con esa tarea?
+{
+=`listFiles()`, porque permite obtener los elementos contenidos en una ruta que representa un directorio. #Correcto. La unidad lo presenta precisamente para listar y recorrer el contenido de carpetas.
+~%-33.3333%`length()`, porque devuelve el número de elementos del directorio y permite saber si cada uno es fichero o carpeta. #Incorrecto. `length()` no cumple esa función.
+~%-33.3333%`createNewFile()`, porque antes de listar una carpeta Kotlin necesita materializar sus entradas como archivos vacíos. #Incorrecto. Listar contenido no requiere crear nada.
+~%-33.3333%`lastModified()`, porque la fecha del directorio incluye implícitamente todos los elementos que contiene. #Incorrecto. No sirve para enumerar el contenido.
+}
+
+::RA_5.CE_c. Crear un fichero vacío con File::
+Necesitas dejar preparado `registro.txt` si todavía no existe, sin escribir aún contenido dentro. ¿Qué método refleja mejor esa intención?
+{
+=`createNewFile()`, porque crea el fichero si no existía y devuelve `true` en ese caso. #Correcto. El método sirve justo como puente entre representar la ruta y preparar un fichero vacío.
+~%-33.3333%`mkdir()`, porque cualquier fichero nuevo se crea primero como directorio y luego se convierte en archivo al escribir texto. #Incorrecto. Un fichero y un directorio son recursos distintos.
+~%-33.3333%`exists()`, porque si la llamada devuelve `false` Kotlin crea automáticamente el archivo vacío. #Incorrecto. `exists()` solo consulta; no crea recursos.
+~%-33.3333%`listFiles()`, porque al listar una ruta inexistente el sistema genera el archivo como elemento inicial. #Incorrecto. Listar contenido no crea ficheros.
+}
+
+::RA_5.CE_c. Interpretar el valor devuelto por createNewFile::
+Un fichero ya existe y tu código ejecuta `createNewFile()` sobre esa misma ruta. ¿Qué comportamiento es el más adecuado esperar?
+{
+=Devolverá `false`, porque el método solo crea el fichero cuando todavía no existe. #Correcto. Ese valor indica precisamente que no ha sido necesario crearlo de nuevo.
+~%-33.3333%Devolverá `true`, porque Kotlin recrea el fichero vacío en cada ejecución para asegurar un estado limpio. #Incorrecto. No lo recrea si ya existe.
+~%-33.3333%Borrará el contenido anterior y devolverá `true`, porque la creación de un fichero nuevo siempre implica reiniciar sus datos. #Incorrecto. Ese no es el comportamiento explicado ni el esperado.
+~%-33.3333%Lanzará una excepción obligatoria, porque `createNewFile()` no puede invocarse sobre rutas ya existentes. #Incorrecto. El método informa del resultado mediante su valor booleano.
+}
+
+::RA_5.CE_c. No confundir representar la ruta con leer o escribir contenido::
+Una compañera asegura que en `7.3` ya se está trabajando realmente con el contenido del archivo, porque `File` “maneja archivos”. ¿Qué matiz corrige mejor esa idea?
+{
+=En `7.3` se trabaja sobre todo con rutas, estados y operaciones básicas; la lectura y escritura de contenido se desarrolla después. #Correcto. Ese es el puente didáctico explícito que marca la unidad.
+~%-33.3333%En `7.3` ya se cubre toda la lectura y escritura de texto, así que `7.4` solo amplía ejemplos de consola. #Incorrecto. Invierte el papel de ambos temas.
+~%-33.3333%En `7.3` solo se puede leer contenido binario, mientras el texto se reserva para `kotlin.io` en otra unidad. #Incorrecto. Ese no es el recorte que plantea el tema.
+~%-33.3333%En `7.3` `File` reemplaza completamente a funciones como `readText()` y `appendText()`, por lo que no hace falta estudiar nada más. #Incorrecto. La unidad no sostiene esa sustitución total.
+}

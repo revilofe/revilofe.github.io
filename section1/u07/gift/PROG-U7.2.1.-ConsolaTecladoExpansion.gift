@@ -1,0 +1,143 @@
+::RA_5.CE_c. Elegir readln en una interacción normal de Kotlin::
+Estás programando en Kotlin una actividad interactiva de consola donde siempre esperas que la persona usuaria escriba un nombre cuando el programa lo solicite. No hay redirecciones ni lectura desde fichero. ¿Qué opción es la más adecuada?
+{
+=Usar `readln()`, porque en una interacción normal de consola se asume que la entrada estará disponible. #Correcto. El tema presenta `readln()` como la opción natural en ejercicios interactivos sencillos.
+~%-33.3333%Usar `readlnOrNull()!!`, porque así se consigue exactamente el mismo efecto pero de forma más moderna. #Incorrecto. Forzar con `!!` anula la ventaja de `readlnOrNull()` y añade complejidad innecesaria.
+~%-33.3333%Usar `readLine()!!`, porque en Kotlin actual es la función recomendada para cualquier lectura de texto. #Incorrecto. La ampliación indica que `readLine()` sigue existiendo, pero no es la primera opción didáctica actual.
+~%-33.3333%Usar `Scanner.nextLine()`, porque cualquier lectura por consola debería hacerse con clases Java para evitar limitaciones de Kotlin. #Incorrecto. `Scanner` puede usarse, pero no es la opción preferida aquí.
+}
+
+::RA_5.CE_c. Cuándo preferir readlnOrNull::
+Vas a ejecutar un programa Kotlin leyendo líneas desde una redirección o una tubería, de modo que la entrada puede agotarse antes de que el programa termine. ¿Qué función expresa mejor esa situación?
+{
+=`readlnOrNull()`, porque permite detectar el fin de entrada sin depender de una excepción. #Correcto. Ese es precisamente el caso que la ampliación asocia con una entrada que puede agotarse.
+~%-33.3333%`readln()`, porque cuando se agota la entrada devuelve una cadena vacía y permite seguir procesando. #Incorrecto. `readln()` no devuelve cadena vacía al agotarse la entrada; ese supuesto lleva a un manejo incorrecto.
+~%-33.3333%`readLine()!!`, porque al forzar el valor no nulo el programa puede distinguir mejor el EOF. #Incorrecto. Forzar un valor no nulo no ayuda a gestionar el fin de entrada; más bien elimina la información útil.
+~%-33.3333%`println()`, porque la salida estándar puede reutilizarse como fuente de líneas cuando ya no hay datos en la entrada. #Incorrecto. `println()` escribe en consola; no sirve para leer entrada.
+}
+
+::RA_5.CE_c. Diferencia relevante entre readln y readlnOrNull::
+Un alumno afirma que `readln()` y `readlnOrNull()` solo se diferencian en el nombre y que ambas funciones devuelven siempre un `String`. ¿Qué corrección es la más precisa?
+{
+=`readln()` devuelve `String`, mientras `readlnOrNull()` devuelve `String?` para contemplar que no haya más datos. #Correcto. La diferencia clave es cómo representan la ausencia de entrada disponible.
+~%-33.3333%`readln()` devuelve `String?` y `readlnOrNull()` devuelve `String`, porque la segunda ya valida internamente la lectura. #Incorrecto. Invierte justo el comportamiento explicado en el tema.
+~%-33.3333%Ambas devuelven `String`, pero `readlnOrNull()` recorta automáticamente espacios y saltos de línea. #Incorrecto. La diferencia relevante no está ahí, sino en el tratamiento del fin de entrada.
+~%-33.3333%Ambas devuelven `Any`, y la única diferencia es que `readlnOrNull()` funciona mejor con `Scanner`. #Incorrecto. No devuelven `Any` ni su distinción depende de `Scanner`.
+}
+
+::RA_5.CE_c. Qué ocurre al agotarse la entrada con readln::
+Un programa en Kotlin usa `readln()` dentro de un proceso donde la entrada puede terminarse. ¿Qué comportamiento describe mejor el riesgo real?
+{
+=Si ya no quedan datos, `readln()` puede provocar una excepción en vez de devolver un valor usable. #Correcto. Esa es la razón por la que la ampliación propone `readlnOrNull()` en estos casos.
+~%-33.3333%Si ya no quedan datos, `readln()` devuelve una cadena vacía y permite seguir diferenciando sin problema el EOF. #Incorrecto. Confiar en esa idea lleva a un control incorrecto del fin de entrada.
+~%-33.3333%Si ya no quedan datos, `readln()` cambia automáticamente a leer desde `System.err`. #Incorrecto. No existe ese cambio automático de canal.
+~%-33.3333%Si ya no quedan datos, `readln()` vuelve a pedir la última línea válida para no interrumpir la ejecución. #Incorrecto. La función no reutiliza lecturas anteriores.
+}
+
+::RA_5.CE_c. Interpretar correctamente EOF en Kotlin::
+En una utilidad que procesa líneas hasta que no haya más datos, quieres terminar el bucle con claridad y sin tratar el fin de entrada como un caso de error. ¿Qué enfoque encaja mejor?
+{
+=Leer con `readlnOrNull()` y salir del bucle cuando el valor devuelto sea `null`. #Correcto. Ese patrón permite expresar el EOF como fin normal de entrada.
+~%-33.3333%Leer con `readln()` y usar `""` como marcador de EOF, porque una línea vacía y el fin de entrada son equivalentes en consola. #Incorrecto. Una línea vacía puede ser un dato válido y no debe confundirse con el EOF.
+~%-33.3333%Leer con `readLine()!!` y asumir que si hay error ya se interpretará como final del flujo. #Incorrecto. Esa estrategia mezcla un caso esperado con un fallo y además fuerza un valor no nulo.
+~%-33.3333%Leer con `Scanner.nextLine()` y capturar cualquier excepción como forma principal de controlar el bucle. #Incorrecto. Puede funcionar de forma parcial, pero no expresa tan bien el caso previsto como el patrón con `null`.
+}
+
+::RA_5.CE_c. Analizar un patrón típico de lectura hasta EOF::
+Observa este esquema en Kotlin: `while (true) { val linea = readlnOrNull() ?: break; println(linea) }`. ¿Qué ventaja técnica describe mejor?
+{
+=Permite procesar cada línea hasta que la entrada se agote sin confundir ese momento con un dato normal. #Correcto. El operador Elvis con `break` expresa de forma clara cuándo termina el flujo.
+~%-33.3333%Convierte automáticamente cualquier línea vacía en fin de entrada para simplificar el bucle. #Incorrecto. El bucle termina con `null`, no con cadena vacía.
+~%-33.3333%Hace innecesario distinguir entre lectura de consola y lectura desde fichero, porque ambas pasan siempre a `System.out`. #Incorrecto. La salida no elimina las diferencias de origen ni el sentido del bucle.
+~%-33.3333%Garantiza que todas las líneas leídas serán numéricas si después se imprimen con `println()`. #Incorrecto. Imprimir una línea no valida su contenido.
+}
+
+::RA_5.CE_c. Qué lugar ocupa readLine en la ampliación::
+Un estudiante encuentra ejemplos con `readLine()` en apuntes antiguos y pregunta si debe usarlo como primera opción en esta unidad. ¿Cuál es la respuesta más ajustada?
+{
+=Debe reconocerlo porque sigue apareciendo en código heredado, pero la opción didáctica preferente aquí sigue siendo `readln()`. #Correcto. La ampliación no niega su existencia, pero tampoco lo sitúa como primera recomendación.
+~%-33.3333%Debe sustituir siempre `readln()` por `readLine()`, porque Kotlin moderno ha dejado de recomendar las funciones sin nullable. #Incorrecto. Eso contradice el criterio de la unidad.
+~%-33.3333%Debe evitar incluso leer código con `readLine()`, porque ya no funciona en la JVM actual. #Incorrecto. La función sigue existiendo y es importante saber reconocerla.
+~%-33.3333%Debe usar `readLine()` solo si además quiere leer números, porque `readln()` no permite conversiones posteriores. #Incorrecto. Ambas lecturas producen texto y pueden convertirse después.
+}
+
+::RA_5.CE_c. Cuándo tiene sentido usar Scanner desde Kotlin::
+Estás trabajando en Kotlin con ejemplos heredados de Java y quieres leer tokens o reutilizar código que ya usa `Scanner`. ¿Qué valoración es la más precisa?
+{
+=`Scanner` puede tener sentido en esos casos, aunque para ejercicios básicos de la unidad suele ser más claro `readln()`. #Correcto. La ampliación lo presenta como una opción útil en contextos concretos, no como la primera elección general.
+~%-33.3333%`Scanner` es siempre preferible en Kotlin porque las funciones nativas de lectura están pensadas solo para scripts pequeños. #Incorrecto. El tema no sostiene esa superioridad general.
+~%-33.3333%`Scanner` solo se usa cuando el programa necesita escribir por consola, no cuando debe leer datos. #Incorrecto. Su uso relevante aquí es precisamente la lectura.
+~%-33.3333%`Scanner` es obligatorio siempre que se trabajen enteros, porque `toIntOrNull()` no funciona con texto leído desde teclado. #Incorrecto. `toIntOrNull()` sí funciona y es parte del enfoque recomendado.
+}
+
+::RA_5.CE_c. Error típico al mezclar nextInt y nextLine::
+Un programa en Kotlin usa `Scanner`. Lee una edad con `nextInt()` y, justo después, intenta leer la ciudad con `nextLine()`, pero obtiene una cadena vacía. ¿Qué explicación es la más correcta?
+{
+=Ha quedado pendiente el salto de línea de la lectura numérica y la siguiente llamada a `nextLine()` lo consume. #Correcto. Ese es el error clásico que la ampliación destaca con `Scanner`.
+~%-33.3333%`nextLine()` siempre devuelve cadena vacía después de un entero, porque `Scanner` no permite mezclar texto y números. #Incorrecto. Sí permite mezclar ambos, pero hay que gestionar el salto de línea restante.
+~%-33.3333%`nextInt()` convierte automáticamente la siguiente línea en comentario y por eso `nextLine()` la ignora. #Incorrecto. No existe ese comportamiento en `Scanner`.
+~%-33.3333%El problema es que `nextLine()` solo funciona si antes se ha usado `println()` para preparar la consola. #Incorrecto. La salida por consola no corrige ese comportamiento de lectura.
+}
+
+::RA_5.CE_c. Solución razonable al salto de línea con Scanner::
+Tras leer un entero con `scanner.nextInt()`, quieres seguir leyendo una línea completa de texto. ¿Qué ajuste encaja con la explicación del tema?
+{
+=Consumir el final de línea pendiente con una llamada adicional a `nextLine()` antes de leer el texto real. #Correcto. Esa llamada intermedia limpia la entrada pendiente dejada por la lectura numérica.
+~%-33.3333%Sustituir `nextLine()` por `readln()`, porque ambas lecturas comparten automáticamente el mismo estado interno del `Scanner`. #Incorrecto. Mezclar mecanismos distintos no resuelve por sí mismo el problema del salto pendiente.
+~%-33.3333%Llamar a `nextInt()` una segunda vez, porque así el `Scanner` entiende que la siguiente lectura ya será textual. #Incorrecto. Volver a leer un entero no limpia correctamente el salto ni expresa la intención real.
+~%-33.3333%Imprimir una línea vacía con `println()` para que la consola compense el salto que falta en la entrada. #Incorrecto. La salida no modifica el estado de la entrada pendiente del `Scanner`.
+}
+
+::RA_5.CE_c. Cuándo compensa crear una función pedirEntero::
+En un programa Kotlin estás repitiendo varias veces el patrón “mostrar mensaje, leer con `readln()`, convertir con `toIntOrNull()` y volver a pedir si falla”. ¿Qué mejora propone la ampliación?
+{
+=Crear una función auxiliar como `pedirEntero()` para reutilizar la validación y evitar duplicar código. #Correcto. La idea es encapsular un patrón repetido para que el programa sea más limpio.
+~%-33.3333%Cambiar todas las lecturas a `Scanner`, porque solo esa clase permite reutilizar validaciones en Kotlin. #Incorrecto. La reutilización puede hacerse perfectamente con funciones auxiliares.
+~%-33.3333%Mover toda la validación a `System.err`, porque los errores repetidos deben centralizarse en otro canal. #Incorrecto. El canal de salida no sustituye a la organización del código.
+~%-33.3333%Usar `readlnOrNull()!!` dentro de cada lectura, porque así se elimina la necesidad de crear funciones separadas. #Incorrecto. Eso no reduce duplicación ni mejora la claridad.
+}
+
+::RA_5.CE_c. Ventaja real de una función auxiliar de validación::
+Una compañera pregunta qué se gana realmente con una función como `pedirEntero(mensaje: String): Int`. ¿Qué respuesta es la más completa según el tema?
+{
+=Evita repetir el mismo patrón de validación y separa mejor esa lógica del resto del programa. #Correcto. La ampliación destaca precisamente la reducción de duplicación y la mejora de organización.
+~%-33.3333%Hace que `readln()` devuelva directamente un `Int`, por lo que ya no hace falta convertir nada. #Incorrecto. La función no cambia el tipo de retorno de `readln()`; encapsula el proceso de conversión y control.
+~%-33.3333%Permite usar `System.in` como si fuera una función de Kotlin y por eso simplifica la sintaxis. #Incorrecto. No transforma el canal de entrada en una función de alto nivel.
+~%-33.3333%Convierte cualquier dato inválido en `0`, lo que garantiza que el programa siempre continúe. #Incorrecto. La idea no es ocultar errores con valores por defecto, sino pedir un dato válido.
+}
+
+::RA_5.CE_c. Cuándo usar args en Kotlin::
+Quieres lanzar un programa Kotlin indicando el nombre a saludar antes de que empiece la ejecución, sin pedirlo luego por teclado. ¿Qué mecanismo encaja mejor?
+{
+=Usar argumentos en `main(args: Array<String>)`. #Correcto. Los argumentos se entregan al arrancar el programa y sirven justo para ese tipo de dato inicial.
+~%-33.3333%Usar `readln()`, porque cualquier dato de entrada en consola debe pedirse siempre durante la ejecución. #Incorrecto. Los argumentos forman parte precisamente de otra forma válida de entrada en programas de consola.
+~%-33.3333%Usar `System.err`, porque los datos previos al arranque no pasan por la entrada estándar. #Incorrecto. `System.err` es salida de error, no mecanismo de entrada de parámetros.
+~%-33.3333%Usar `Scanner.nextLine()`, porque los argumentos y el teclado se leen exactamente del mismo modo en Kotlin. #Incorrecto. Los argumentos llegan ya preparados al arrancar el programa; no se leen igual que el teclado.
+}
+
+::RA_5.CE_c. Diferencia entre teclado y argumentos::
+Un alumno confunde `args` con la lectura por teclado y dice que ambos mecanismos son equivalentes porque “al final los dos meten texto en el programa”. ¿Qué matiz corrige mejor esa idea?
+{
+=Los argumentos llegan antes de empezar la ejecución, mientras que el teclado se consulta durante la ejecución del programa. #Correcto. Esa diferencia temporal refleja también un uso distinto en la práctica.
+~%-33.3333%Los argumentos se leen desde `System.err` y el teclado desde `System.in`, por eso no deben compararse. #Incorrecto. `System.err` no es un canal de entrada de argumentos.
+~%-33.3333%El teclado produce `String` y los argumentos producen `Int`, así que pertenecen a categorías distintas de datos. #Incorrecto. Ambos suelen trabajarse como texto inicialmente.
+~%-33.3333%Los argumentos sustituyen por completo al teclado cuando el programa usa Kotlin moderno. #Incorrecto. Son mecanismos complementarios, no excluyentes.
+}
+
+::RA_5.CE_c. Elegir el mecanismo más adecuado según el escenario::
+Tienes que decidir cómo recibirá un programa Kotlin el nombre de un fichero a procesar. El valor será el mismo durante toda la ejecución y suele saberse al lanzar el comando. ¿Qué opción es la más razonable?
+{
+=Pasarlo como argumento en `args`, porque es un dato conocido antes de que el programa empiece a ejecutarse. #Correcto. Ese uso encaja mejor con parámetros de arranque que con preguntas interactivas.
+~%-33.3333%Pedirlo siempre con `readln()`, porque cualquier ruta debe introducirse después de iniciar el programa para ser válida. #Incorrecto. Una ruta puede ser perfectamente un parámetro de arranque.
+~%-33.3333%Leerlo con `readlnOrNull()` en bucle hasta que aparezca un valor, porque un nombre de fichero debe tratarse como fin de entrada posible. #Incorrecto. Esa estrategia responde a otro tipo de problema.
+~%-33.3333%Usar `Scanner.nextInt()`, porque los nombres de fichero se interpretan mejor como tokens numéricos en línea de comandos. #Incorrecto. No tiene sentido para una ruta o nombre de archivo.
+}
+
+::RA_5.CE_c. Mini comparativa de mecanismos de entrada::
+Estás revisando una tabla-resumen de la ampliación y quieres asociar cada situación con su opción más natural. ¿Qué emparejamiento es el más correcto?
+{
+=Programa interactivo sencillo con `readln()`; entrada que puede agotarse con `readlnOrNull()`; parámetros al arrancar con `args`. #Correcto. Ese resumen coincide con la mini comparativa final del tema.
+~%-33.3333%Programa interactivo sencillo con `args`; entrada que puede agotarse con `readln()`; parámetros al arrancar con `Scanner`. #Incorrecto. Desordena los mecanismos y los saca de su contexto natural.
+~%-33.3333%Programa interactivo sencillo con `readLine()!!`; entrada que puede agotarse con `toIntOrNull()`; parámetros al arrancar con `System.err`. #Incorrecto. Mezcla una función histórica, una conversión y un canal que no corresponde.
+~%-33.3333%Programa interactivo sencillo con `Scanner.nextInt()`; entrada que puede agotarse con `println()`; parámetros al arrancar con `readlnOrNull()`. #Incorrecto. La asociación no refleja la lógica de la comparativa del tema.
+}

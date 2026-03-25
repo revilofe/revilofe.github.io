@@ -68,6 +68,7 @@ Durante la Unidad 2, trabajaremos los siguientes contenidos:
     *   IDS/IPS (Intrusion Detection/Prevention Systems).
     *   Análisis de logs y flujos de red.
     *   Fuentes de inteligencia de amenazas.
+    *   Funciones del analista SOC de nivel 1 en el triaje y escalado inicial.
 *   **Controles y mecanismos de detección e identificación de incidentes de seguridad física (CE 2.c):**
     *   Sistemas de control de acceso físico.
     *   CCTV y videovigilancia.

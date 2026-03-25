@@ -1,6 +1,6 @@
 ---
 title: "UD 3 - 3.3.1 MITRE ATT&CK y RE&CT para investigar y responder a incidentes"
-description: "Apuntes didácticos sobre MITRE ATT&CK y RE&CT: qué son, cómo se usan en investigación de incidentes y cómo ayudan a organizar la respuesta."
+description: "Apuntes sobre MITRE ATT&CK y RE&CT: qué son, cómo se usan en investigación de incidentes y cómo ayudan a organizar la respuesta."
 summary: "Guía para entender ATT&CK y RE&CT, diferenciar tácticas y técnicas, usar ATT&CK Navigator y combinar ambos marcos en la investigación y respuesta a incidentes."
 authors:
     - Eduardo Fdez
@@ -77,11 +77,11 @@ vocabulario.
 Una de las primeras cosas que hay que entender bien es la diferencia entre
 estos conceptos:
 
-| Concepto | Qué representa | Ejemplo sencillo |
-| --- | --- | --- |
-| **Táctica** | El objetivo inmediato del atacante | Persistencia, movimiento lateral, exfiltración |
-| **Técnica** | La forma general de alcanzar ese objetivo | Crear una tarea programada, usar credenciales robadas |
-| **Sub-técnica** | Una variante más concreta de la técnica | Crear una tarea concreta en Windows, usar un tipo específico de acceso remoto |
+| Concepto        | Qué representa                            | Ejemplo sencillo                                                              |
+|-----------------|-------------------------------------------|-------------------------------------------------------------------------------|
+| **Táctica**     | El objetivo inmediato del atacante        | Persistencia, movimiento lateral, exfiltración                                |
+| **Técnica**     | La forma general de alcanzar ese objetivo | Crear una tarea programada, usar credenciales robadas                         |
+| **Sub-técnica** | Una variante más concreta de la técnica   | Crear una tarea concreta en Windows, usar un tipo específico de acceso remoto |
 
 !!! tip "Cómo recordarlo"
     Una forma fácil de memorizarlo es esta: la **táctica** responde al
@@ -238,14 +238,14 @@ Esto puede ser útil, por ejemplo, para marcar:
 La combinación de ambos marcos es especialmente útil en investigación y
 respuesta a incidentes.
 
-| Si necesitas... | Te ayuda más... |
-| --- | --- |
-| Describir técnicas del atacante | **ATT&CK** |
-| Entender el comportamiento observado | **ATT&CK** |
-| Construir reglas de detección o *hunting* | **ATT&CK** |
-| Organizar acciones de respuesta | **RE&CT** |
-| Revisar preparación y playbooks | **RE&CT** |
-| Coordinar investigación y respuesta | **ATT&CK + RE&CT** |
+| Si necesitas...                           | Te ayuda más...    |
+|-------------------------------------------|--------------------|
+| Describir técnicas del atacante           | **ATT&CK**         |
+| Entender el comportamiento observado      | **ATT&CK**         |
+| Construir reglas de detección o *hunting* | **ATT&CK**         |
+| Organizar acciones de respuesta           | **RE&CT**          |
+| Revisar preparación y playbooks           | **RE&CT**          |
+| Coordinar investigación y respuesta       | **ATT&CK + RE&CT** |
 
 #### 5.1. Un ejemplo práctico de uso combinado
 
@@ -297,7 +297,7 @@ Por ejemplo, si el alumnado analiza un incidente y detecta:
 puede usar ATT&CK para ordenar la investigación y expresarla con un lenguaje
 común.
 
-#### 6.2. Uso didáctico de RE&CT
+#### 6.2. Uso de RE&CT
 
 RE&CT puede utilizarse para:
 
@@ -339,7 +339,7 @@ En la práctica, lo más habitual es combinarlos:
 - **ATT&CK** para interpretar el incidente;
 - **RE&CT** para convertir esa interpretación en acciones de respuesta.
 
-### 8. Qué debe recordar el alumnado
+### 8. Qué debes recordar
 
 - **MITRE ATT&CK** es una base de conocimiento sobre tácticas y técnicas
   observadas en ataques reales.

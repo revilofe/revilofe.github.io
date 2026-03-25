@@ -18,14 +18,23 @@ tags:
 
 ## 7.2 Lectura y escritura en consola
 
-Después de comprender en `7.1` qué es la entrada/salida, ahora toca trabajar con el caso más cercano y habitual: la **consola**. 
+Después de comprender en `7.1` qué es la entrada/salida, ahora toca trabajar
+con el caso más cercano y habitual: la **consola**.
 
-> Este apartado está directamente relacionado con el resultado de aprendizaje 5, especialmente con los criterios que piden:    
->    - a) usar la consola para realizar operaciones de entrada y salida.     
->    - b) aplicar formatos en la visualización de la información.    
->    - c) reconocer posibilidades de E/S del lenguaje y sus librerías.    
+La consola es el entorno más sencillo para practicar cómo un programa muestra
+información, pide datos y responde a lo que introduce la persona usuaria.
+Aunque parezca un caso básico, aquí aparecen ideas que luego se reutilizan en
+muchos programas: validación, formato y separación entre lógica y presentación.
 
-La idea es sencilla: un programa de consola **muestra mensajes**, **pide datos** y **responde en función de lo que introduce la persona usuaria**. Aunque parezca básico, aquí se apoyan muchas prácticas posteriores: validación de datos, mensajes claros, formato de salida y separación entre lógica y presentación.
+| Código | Descripción                                                    |
+|--------|----------------------------------------------------------------|
+| RA5    | Realiza operaciones de entrada y salida de información, utilizando procedimientos específicos del lenguaje y librerías de clases. |
+| CE a   | Se ha utilizado la consola para realizar operaciones de entrada y salida de información. |
+| CE b   | Se han aplicado formatos en la visualización de la información. |
+| CE c   | Se han reconocido las posibilidades de entrada / salida del lenguaje y las librerías asociadas. |
+
+La idea es sencilla: un programa de consola **muestra mensajes**, **pide
+datos** y **responde en función de lo que introduce la persona usuaria**.
 
 !!! abstract "Qué vas a aprender en este tema"
     - Escribir mensajes en la salida estándar y de error.
@@ -194,7 +203,9 @@ Este patrón aparece mucho en programas de consola y en actividades de clase.
 
 ### 4. Formato de salida
 
-Una cosa es que un programa funcione y otra que su salida sea clara. El criterio de evaluación sobre formato no consiste solo en “que imprima algo”, sino en que la información se vea bien y resulte fácil de interpretar.
+Una cosa es que un programa funcione y otra que su salida sea clara. No basta
+con "que imprima algo": la información debe verse bien y resultar fácil de
+interpretar.
 
 #### 4.1. Cuándo basta con interpolación
 
@@ -293,7 +304,7 @@ fun main() {
 }
 ```
 
-Este ejemplo ya refleja una situación realista de RA5:
+Este ejemplo ya refleja una situación realista de trabajo con consola:
 
 - se lee información desde teclado;
 - se muestra información en consola;
@@ -321,7 +332,7 @@ En este tema has visto que:
 - `print()` y `println()` sirven para mostrar información;
 - `readln()` y `readlnOrNull()` permiten leer desde teclado;
 - la validación con `toIntOrNull()` y similares evita muchos errores;
-- el formato de salida mejora la claridad y cumple con el criterio de evaluación asociado.
+- el formato de salida mejora la claridad del resultado.
 
 Con esta base ya puedes crear programas sencillos de consola que pidan datos, los validen y muestren resultados de forma clara.
 

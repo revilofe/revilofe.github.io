@@ -22,6 +22,12 @@ En `7.4` vimos la visión general de la lectura y escritura de archivos. En esta
 
 Trabajar con texto es muy común porque permite guardar información de forma sencilla, visible y fácil de depurar. Además, es ideal para practicar cómo leer, escribir y procesar datos persistentes en programas pequeños y medianos.
 
+| Código | Descripción |
+|--------|-------------|
+| RA5 | Realiza operaciones de entrada y salida de información, utilizando procedimientos específicos del lenguaje y librerías de clases. |
+| CE d | Se han utilizado ficheros para almacenar y recuperar información. |
+| CE e | Se han creado programas que utilicen diversos métodos de acceso al contenido de los ficheros. |
+
 !!! abstract "Qué vas a aprender en este apartado"    
     - Cuándo conviene usar un fichero de texto.    
     - Cómo leer un fichero completo o línea a línea.     

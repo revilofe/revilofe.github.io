@@ -20,9 +20,15 @@ tags:
 
 La mayor parte de los programas trabajan con datos: notas, pedidos, usuarios, imágenes, registros de actividad o configuraciones. Mientras el programa se está ejecutando, esos datos suelen vivir en memoria. El problema aparece cuando la aplicación termina: **lo que estaba en memoria se pierde**.
 
-Por eso, dentro del resultado de aprendizaje 5, este tema es especialmente importante. Nos ayuda a comprender **qué posibilidades de entrada/salida ofrece el lenguaje y qué librerías podemos usar** para leer, escribir y conservar información. Además, sienta la base para los criterios relacionados con el uso de **ficheros** para almacenar y recuperar datos.
+Por eso, antes de leer o escribir ficheros, necesitamos entender cómo se
+organiza la información en el sistema de archivos y qué herramientas ofrece el
+lenguaje para trabajar con ella.
 
-> El tema está relacionado con el resultado de aprendizaje 5.   
+| Código | Descripción |
+|--------|-------------|
+| RA5 | Realiza operaciones de entrada y salida de información, utilizando procedimientos específicos del lenguaje y librerías de clases. |
+| CE c | Se han reconocido las posibilidades de entrada / salida del lenguaje y las librerías asociadas. |
+| CE d | Se han utilizado ficheros para almacenar y recuperar información. |
 
 
 !!! abstract "Qué vas a aprender en este apartado"
@@ -228,7 +234,8 @@ Este programa combina varias ideas del tema:
 - utiliza un **fichero** para conservar información;
 - y emplea librerías del lenguaje para realizar operaciones de E/S.
 
-Es justo el tipo de base conceptual que exige el RA5: reconocer posibilidades de entrada/salida y aplicar librerías adecuadas según la necesidad.
+Es justo el tipo de base conceptual que permite reconocer posibilidades reales
+de entrada/salida y aplicar librerías adecuadas según la necesidad.
 
 ### 8. Buenas prácticas iniciales
 

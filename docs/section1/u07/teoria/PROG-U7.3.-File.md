@@ -20,7 +20,14 @@ tags:
 
 En `7.1` vimos qué es un sistema de archivos y en `7.2` trabajamos la entrada y salida por consola. Ahora damos un paso más: vamos a aprender a representar rutas del sistema de archivos y a consultar información sobre ellas desde Kotlin.
 
-Este tema está especialmente relacionado con el criterio del `RA5` que pide **reconocer las posibilidades de entrada/salida del lenguaje y de las librerías asociadas**. La clase `File` forma parte de ese conjunto de herramientas básicas que necesitamos antes de leer o escribir contenido de ficheros.
+La clase `File` forma parte del conjunto de herramientas básicas que
+necesitamos antes de leer o escribir contenido de ficheros.
+
+| Código | Descripción |
+|--------|-------------|
+| RA5 | Realiza operaciones de entrada y salida de información, utilizando procedimientos específicos del lenguaje y librerías de clases. |
+| CE c | Se han reconocido las posibilidades de entrada / salida del lenguaje y las librerías asociadas. |
+| CE d | Se han utilizado ficheros para almacenar y recuperar información. |
 
 !!! abstract "Qué vas a aprender en este tema"     
     - Qué representa realmente la clase `File`.    

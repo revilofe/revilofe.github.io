@@ -20,9 +20,16 @@ tags:
 
 En `7.3` aprendimos a representar rutas con `File` y a consultar información sobre ficheros y carpetas. El siguiente paso natural es **trabajar con el contenido** de esos ficheros: leerlo, procesarlo, modificarlo o guardarlo.
 
-> Este tema conecta directamente con los criterios del `RA5` relacionados con:    
->    - d) usar ficheros para **almacenar y recuperar información**.    
->    - e) crear programas que utilicen **distintos métodos de acceso al contenido de los ficheros**.    
+En este punto la unidad deja de centrarse solo en las rutas y pasa al trabajo
+real con los datos: almacenarlos, recuperarlos y decidir cómo acceder a ellos
+según el tipo de fichero y la necesidad del programa.
+
+| Código | Descripción |
+|--------|-------------|
+| RA5 | Realiza operaciones de entrada y salida de información, utilizando procedimientos específicos del lenguaje y librerías de clases. |
+| CE c | Se han reconocido las posibilidades de entrada / salida del lenguaje y las librerías asociadas. |
+| CE d | Se han utilizado ficheros para almacenar y recuperar información. |
+| CE e | Se han creado programas que utilicen diversos métodos de acceso al contenido de los ficheros. |
 
 
 !!! abstract "Qué vas a aprender en este tema"

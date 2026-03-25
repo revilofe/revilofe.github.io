@@ -26,8 +26,14 @@ Este documento complementa `7.2`, pero no lo sustituye. Allí vimos lo esencial 
 - cómo crear funciones reutilizables para pedir datos;
 - y cómo encajan los argumentos de línea de comandos en el trabajo con programas de consola.
 
+| Código | Descripción |
+|--------|-------------|
+| RA5 | Realiza operaciones de entrada y salida de información, utilizando procedimientos específicos del lenguaje y librerías de clases. |
+| CE a | Se ha utilizado la consola para realizar operaciones de entrada y salida de información. |
+| CE c | Se han reconocido las posibilidades de entrada / salida del lenguaje y las librerías asociadas. |
+
 !!! abstract "Objetivo de esta ampliación"
-    Profundizar en situaciones reales de entrada por consola que no cabían en el tema principal, manteniendo el foco en el `RA5`.
+    Profundizar en situaciones reales de entrada por consola que no cabían en el tema principal.
 
 ### 1. `readln()`, `readlnOrNull()` y `readLine()`
 
@@ -234,7 +240,9 @@ Para aprovechar esta ampliación, puedes probar actividades como estas:
 
 El tema principal `7.2` te enseña a usar la consola. Esta ampliación te ayuda a tomar mejores decisiones cuando aparecen casos menos simples: entrada que se agota, código Java heredado, validación repetitiva o datos que llegan como argumentos.
 
-Saber elegir entre `readln()`, `readlnOrNull()`, `Scanner` o `args` forma parte de reconocer las posibilidades reales de entrada/salida del lenguaje, que es precisamente una de las ideas centrales del `RA5`.
+Saber elegir entre `readln()`, `readlnOrNull()`, `Scanner` o `args` forma parte
+de reconocer las posibilidades reales de entrada/salida del lenguaje y de usar
+la opción más adecuada según el contexto.
 
 ## Fuentes
 

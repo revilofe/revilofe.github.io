@@ -20,21 +20,29 @@ tags:
 
 ## 3.5.1. Contención de incidentes: medidas y estrategias
 
-En esta parte vamos a centrarnos en **la contención**: el conjunto de acciones que se aplican para **frenar un incidente** y evitar que su impacto aumente.
+Cuando una organización detecta un incidente, una de las primeras preguntas
+reales no es "quién ha sido", sino **cómo evitamos que esto vaya a más**. Ahí
+entra la contención.
 
-La contención suele venir **después de identificar un evento** y concluir que hay que actuar para limitar su impacto. A partir de ahí, el objetivo es:
+La contención es la fase de la respuesta en la que el equipo intenta
+**frenar el daño**, **limitar la propagación** y **ganar tiempo** para seguir
+investigando sin que el incidente se descontrole. Dicho de forma sencilla:
+si la investigación ayuda a entender el problema, la contención pone el freno
+para que el problema no siga creciendo.
 
-- entender las características del evento (qué está pasando y cómo),
-- identificar la población de sistemas y usuarios afectados,
-- y poner en cuarentena lo afectado hasta que la situación se resuelva y el negocio vuelva a la normalidad.
-
-> Este tema está directamente alineado con el RA 3:     
+> Este tema está directamente alineado con el RA 3:
 >    - e) Iniciar las primeras medidas de contención para limitar daños.
 
 !!! definition "Definición"
-    La contención es el conjunto de medidas que **limitan el alcance** de un incidente, reducen su propagación y cortan la capacidad del atacante de seguir actuando, **sin perder de vista la evidencia** y el impacto en negocio.
+    La contención es el conjunto de medidas que **limitan el alcance** de un
+    incidente, reducen su propagación y cortan la capacidad del atacante de
+    seguir actuando, **sin perder de vista la evidencia** ni el impacto en el
+    negocio.
 
-En la secuencia lógica de la unidad, la contención **no sustituye a la investigación** ni cierra por sí sola el incidente. La investigación ayuda a decidir **qué conviene contener y por qué**, mientras que la erradicación y la recuperación llegan después para eliminar la causa y devolver los servicios a la normalidad.
+En la secuencia lógica de la unidad, la contención **no sustituye a la
+investigación** ni resuelve por sí sola el incidente. La investigación ayuda a
+decidir **qué conviene contener y por qué**; después, la erradicación elimina
+la causa y la recuperación devuelve los servicios a la normalidad.
 
 !!! note "Relación con el resto de la unidad"
     La contención actúa como un puente entre tres momentos del trabajo técnico:
@@ -43,38 +51,63 @@ En la secuencia lógica de la unidad, la contención **no sustituye a la investi
     - **contener**, para frenar el daño y ganar tiempo;
     - **erradicar y recuperar**, para eliminar la causa y volver al servicio con seguridad.
 
+!!! tip "Mapa del tema"
+    En este documento vamos a seguir esta línea argumental:
+
+    1. entender **para qué sirve** la contención;
+    2. distinguir entre **contención táctica y estratégica**;
+    3. aplicar un **flujo de decisión** para saber qué hacer primero;
+    4. aterrizarlo en **medidas por capas** y en **escenarios reales**.
+
 ### 1. Objetivos de la contención
 
-La contención persigue objetivos muy concretos (y evaluables):
+Contener no significa "hacer algo rápido". Significa actuar con un propósito
+claro. En la práctica, la contención persigue cinco objetivos:
 
 1. **Detener el daño activo**: frenar propagación, exfiltración o cifrado.
 
-    En la práctica suele ser lo primero: si el incidente sigue “en marcha”, cada minuto puede aumentar el impacto. Un ejemplo claro es el ransomware: si hay cifrado activo, el objetivo es **pararlo ya** para que no afecte a más equipos.
+    Si el incidente sigue "en marcha", cada minuto cuenta. Un ejemplo claro es
+    el ransomware: si hay cifrado activo, el primer objetivo es **pararlo ya**
+    para que no afecte a más equipos.
 
 2. **Reducir superficie de ataque**: limitar movimiento lateral y accesos.
 
-    Esto implica que el atacante tenga menos “caminos” para avanzar: menos rutas de red, menos privilegios, menos servicios accesibles, menos credenciales válidas. Si no reduces superficie, puede que “contengas” un equipo, pero el atacante siga moviéndose por otros.
+    Esto implica quitar al atacante caminos para avanzar: menos rutas de red,
+    menos privilegios, menos servicios accesibles y menos credenciales válidas.
+    Si no reduces superficie, puede que "contengas" un equipo, pero el
+    incidente siga vivo en otros.
 
 3. **Comprar tiempo** para investigar con rigor.
 
-    La contención **no resuelve** el incidente, pero te permite ganar aire para analizar evidencias, delimitar alcance y preparar erradicación y recuperación sin ir “a ciegas”.
+    La contención **no resuelve** el incidente, pero permite analizar
+    evidencias, delimitar alcance y preparar la erradicación sin trabajar "a
+    ciegas".
 
 4. **Proteger activos críticos**: identidad, copias de seguridad, servicios esenciales.
 
-    Hay activos que, si caen, empeoran todo: por ejemplo, la identidad (AD/SSO), los repositorios de backups o el plano de gestión (hypervisor, EDR, herramientas de despliegue). Contener también es **blindar** esos puntos.
+    Hay elementos que, si caen, empeoran todo: la identidad (AD, SSO), las
+    copias de seguridad o las herramientas de administración. Contener también
+    es **blindar esos puntos**.
 
 5. **Preservar evidencia** cuando sea necesario (sobre todo evidencias volátiles).
 
-    En incidentes reales, un cierre brusco puede eliminar conexiones, procesos y datos de memoria que son clave para entender el vector de entrada o la persistencia. Por eso, muchas veces se captura “lo mínimo viable” antes de aislar.
+    Un cierre brusco puede eliminar conexiones, procesos o datos de memoria
+    clave para entender el vector de entrada o la persistencia. Por eso, en
+    muchos casos se captura **lo mínimo viable** antes de aislar.
 
-Una idea importante (y muy repetida en guías de respuesta a incidentes) es que la contención sirve para **limitar impacto** y, a la vez, permitir que el equipo trabaje con información suficiente para erradicar y recuperar con criterio.
+En resumen, contener sirve para **limitar impacto** y, al mismo tiempo, permitir
+que el equipo trabaje con información suficiente para erradicar y recuperar con
+criterio.
 
 !!! tip "Idea clave"
-    Contener no es “arreglar” el incidente. Es **poner el freno** para que el problema no crezca mientras investigáis y preparáis erradicación y recuperación.
+    Contener no es "arreglar" el incidente. Es **poner el freno** para que el
+    problema no crezca mientras investigáis y preparáis la siguiente fase.
 
 ### 2. Contención a corto plazo y a largo plazo
 
-Una forma muy práctica (y realista) de explicarlo es separar dos estrategias:
+Una forma muy útil de entender la contención es distinguir entre lo que hacéis
+**para parar el golpe ahora mismo** y lo que hacéis **para sostener el control
+del incidente durante los días siguientes**.
 
 - **Contención a corto plazo (táctica)**: acciones inmediatas para frenar el impacto ya.
 - **Contención a largo plazo (estratégica)**: acciones para sostener el control mientras se investiga y evitar recaídas.
@@ -86,57 +119,71 @@ Una forma muy práctica (y realista) de explicarlo es separar dos estrategias:
 
 !!! note "Aclaración importante: tiempo vs. capas"
     En esta unidad vamos a usar dos formas de “ordenar” la contención:
-    
+
     - **Por tiempo (táctica vs. estratégica)**: responde a *cuándo* y *con qué urgencia* actúas.
     - **Por capas (red, identidad, endpoint, servicios, etc.)**: responde a *dónde* aplicas controles.
-    
+
     Es decir: **la contención por capas no compite con corto/largo plazo**. Lo normal es hacer contención **táctica por capas** (para frenar ya) y, después, contención **estratégica por capas** (para sostener el control).
 
 !!! example "Ejemplo rápido"
     Si detectas un equipo que hace conexiones a un dominio malicioso:
-    
+
     - Corto plazo: aislas el equipo y bloqueas el dominio en proxy/DNS.
     - Largo plazo: revisas por qué pudo salir esa conexión (reglas de salida, EDR, parches, privilegios) y endureces controles para que no vuelva a pasar.
 
 !!! note "Aclaración"
-    Una estrategia basada en **objetivos** guía la contención, en este caso los objetivos de corto y largo plazo. En la práctica, la secuencia suele ser:
-    
-    - identificar síntomas: conexiones, procesos, cambios, etc. y sacar IoC,
-    - poner en cuarentena: aislar el equipo o bloquear la comunicación,
-    - y luego investigar: qué ha pasado, qué más está afectado, cómo se ha movido el atacante, etc.
-    - y volver a la actividad lo antes posible.
-    
-    Aun así, algunos enfoques priorizan identificar rápido todos los sistemas afectados para preparar erradicación. Observar al atacante “para aprender” puede tener sentido en casos concretos, pero el riesgo de observar y no actuar suele ser alto.
-    
+    La distinción entre corto y largo plazo ayuda a ordenar las decisiones. En
+    la práctica, la secuencia habitual suele ser:
+
+    - detectar síntomas e identificar IoC iniciales;
+    - aplicar una cuarentena o bloqueo que frene el riesgo inmediato;
+    - investigar alcance, vector y movimiento del atacante;
+    - y preparar la vuelta al servicio con seguridad.
+
+    En algunos casos conviene ampliar visibilidad antes de cortar más, pero
+    observar al atacante "para aprender" mientras el daño sigue creciendo suele
+    ser una mala idea.
+
     Con esto en mente, pasamos a los principios clave: los que evitan que una contención improvisada empeore el incidente.
 
 ### 3. Principios clave antes de actuar
 
-Hay cinco principios que conviene interiorizar, porque son los que más ayudan a contener sin perder el control del incidente:
+Antes de aplicar medidas concretas, conviene tener claros algunos principios.
+Son los que evitan que una contención improvisada empeore el incidente.
 
 - **Evidencia primero (cuando aplique)**: si vais a perder memoria, conexiones o procesos, hay que valorar la captura rápida antes de aislar o apagar.
 
-    En muchos casos la evidencia más valiosa es volátil: conexiones activas, procesos en ejecución, credenciales en memoria, etc. Por eso, antes de “apagar por si acaso”, pensad: ¿voy a perder datos que necesito para entender el vector de entrada o la persistencia?
+    En muchos casos la evidencia más valiosa es volátil: conexiones activas,
+    procesos en ejecución o credenciales en memoria. Antes de "apagar por si
+    acaso", la pregunta correcta es: ¿voy a perder datos necesarios para
+    entender lo ocurrido?
 
 - **Rapidez con cabeza**: contención improvisada puede multiplicar el incidente.
 
-    Contener rápido no es “hacer cosas al azar”. Es aplicar un plan: aislar, bloquear, rotar credenciales, registrar acciones y seguir un playbook. Si no, puedes dejar agujeros (por ejemplo, aislas un equipo, pero el atacante sigue con las mismas credenciales en otros).
+    Contener rápido no es "hacer cosas al azar". Es aplicar un plan: aislar,
+    bloquear, rotar credenciales, registrar acciones y seguir un playbook. Si
+    no, dejas agujeros abiertos.
 
 - **Menor impacto posible**: frenar sin romper lo crítico.
 
-    La contención es un equilibrio entre seguridad y continuidad. Si cortas demasiado, puedes tumbar un servicio esencial y crear un incidente “doble”: el de seguridad y el de disponibilidad. Por eso se prioriza: activos críticos primero, y medidas reversibles cuando se pueda, con comunicación clara a negocio.
+    La contención es un equilibrio entre seguridad y continuidad. Si cortáis
+    demasiado, podéis provocar un segundo incidente: el de disponibilidad. Por
+    eso se priorizan activos críticos y medidas reversibles cuando sea posible.
 
 - **Cortar el acceso del atacante**: si no cortáis credenciales/tokens, el atacante vuelve.
 
-    Un patrón muy común es contener un equipo, pero no la identidad: el atacante conserva una sesión, un token, una VPN o una cuenta de servicio, y reentra en cuanto puede. Si hay sospecha de compromiso de credenciales, la contención debe incluir identidad.
+    Un error muy común es contener un equipo, pero no la identidad. Si el
+    atacante conserva una sesión, un token o una cuenta válida, puede reentrar
+    en cuanto encuentre otra vía.
 
 - **Comunicación y escalado**: la contención es técnica, pero también organizativa.
 
-    Durante contención, la dirección y el negocio piden respuestas. Es normal. Lo importante es comunicar **hechos y siguientes pasos**, sin especular. Dar una conclusión prematura “para tranquilizar” suele empeorar la situación más tarde.
+    Durante la contención, dirección y negocio piden respuestas. Es normal. Lo
+    importante es comunicar **hechos y siguientes pasos**, sin especular.
 
 !!! warning "Atención"
     “Apago el servidor y listo” puede ser una contención… pero también puede ser:
-    
+
     - una pérdida de evidencia,
     - una caída de negocio innecesaria,
     - y un examen suspendido por no documentar ni justificar.
@@ -145,7 +192,9 @@ Con estos principios claros, el siguiente paso es decidir **qué** contienes pri
 
 ### 4. Flujo de decisión: ¿qué contengo y cómo?
 
-“¿Qué hago primero?”. La respuesta correcta es: depende, pero con un flujo claro.
+La pregunta clásica en un incidente es: **"¿qué hacemos primero?"**. La
+respuesta correcta es "depende", pero no depende del azar. Depende de seguir un
+flujo de decisión ordenado.
 
 ```mermaid
 flowchart TD
@@ -156,7 +205,7 @@ flowchart TD
     C -->|Sí| D["Capturar mínimo viable (memoria, conexiones, procesos)"]
     C -->|No| E["Contención táctica inmediata (aislar host, cortar salida, bloquear IoC)"]
     D --> E
-    
+
     B -->|No| G["Preservar evidencia mínima (logs, instantánea, línea temporal)"]
     G --> H["Contención selectiva (lo mínimo que reduzca riesgo)"]
 
@@ -173,139 +222,183 @@ flowchart TD
     N --> O["Documentar y coordinar con negocio/recuperación"]
 ```
 
-La explicación del flujo (siguiendo el diagrama) es la siguiente. Partimos de un comportamiento anómalo que puede ser un incidente:
+La lógica del flujo es esta: partimos de un comportamiento anómalo y decidimos
+si la prioridad es **frenar daño ya** o **preservar información antes de actuar**.
 
 1. **Primero decides si hay daño activo**.
 
-    Ejemplos de daño activo: cifrado en curso, exfiltración confirmada, propagación a otros equipos, creación masiva de cuentas/tareas, etc.
+    Ejemplos de daño activo son un cifrado en curso, una exfiltración
+    confirmada, la propagación a otros equipos o la creación masiva de cuentas
+    y tareas.
 
 2. **Si hay daño activo**, la prioridad es frenar el impacto, pero con un matiz importante:
 
-    - Si hay **evidencia volátil crítica** (por ejemplo, memoria, conexiones de red, procesos) y podéis capturar un **mínimo viable** sin retrasar la contención, se captura primero (rápido y con método).
+    - Si hay **evidencia volátil crítica** y podéis capturar un **mínimo
+      viable** sin retrasar la respuesta, se captura primero.
     - Si capturar evidencia implica perder tiempo mientras el daño sigue ocurriendo, se prioriza la contención inmediata.
 
 3. **Contención táctica inmediata (cuando hay daño activo)**.
 
-    Acciones típicas (según el caso) son:
+    Acciones típicas son:
 
     - aislar el host desde EDR o a nivel de red,
     - cortar salida a Internet (egress) si hay exfiltración,
-    - bloquear IoC (dominios/URLs/IPs/hashes) en DNS, proxy o firewall.
+    - bloquear IoC en DNS, proxy o firewall.
 
 4. **Si no hay daño activo**, pero hay sospecha razonable, la secuencia cambia:
 
-    - primero preservas evidencia mínima (logs relevantes, instantánea (snapshot) si aplica, línea temporal),
-    - y luego aplicas una contención selectiva (lo mínimo que reduzca el riesgo sin tirar servicios innecesariamente).
+    - primero preserváis evidencia mínima;
+    - después aplicáis una contención selectiva: lo mínimo necesario para
+      reducir riesgo sin tirar servicios innecesariamente.
 
 5. **Después de la primera contención (táctica o selectiva), investigas alcance y vector**.
 
-    Aquí el objetivo es no quedarte en el “síntoma”: usas IoC para buscar otros equipos/usuarios/servicios afectados y entender por dónde entró y cómo se movió el atacante.
+    Aquí el objetivo es no quedarse en el primer síntoma. Usáis IoC para buscar
+    otros equipos, cuentas o servicios afectados y entender por dónde entró y
+    cómo se movió el atacante.
 
 6. **Decides si hay compromiso de identidad probable**.
 
-    Si lo hay, se suele **priorizar identidad** (revocar sesiones/tokens, reset de credenciales, imponer MFA o endurecer políticas) porque es un multiplicador del incidente: con identidad comprometida, el atacante puede moverse y reentrar aunque aisléis máquinas.
+    Si la identidad está comprometida, se suele **priorizar esa capa**:
+    revocar sesiones y tokens, resetear credenciales y endurecer autenticación.
+    Con identidad comprometida, el atacante puede reentrar aunque aisléis
+    máquinas.
 
-    En cualquier caso, después (o en paralelo, si tenéis equipo y capacidad), completáis la contención **por capas**, empezando por medidas **tácticas** (las que frenan ya) y preparando las **estratégicas** (las que sostienen el control).
+    Después, o en paralelo si el equipo lo permite, completáis la contención
+    **por capas**, empezando por medidas tácticas y preparando las estratégicas.
 
     - red (segmentación, bloqueo de IoC, corte de rutas, salida a Internet),
     - identidad (cuentas, tokens, sesiones, MFA, privilegios),
     - endpoint (aislamiento, bloqueo de ejecución, cuarentena),
-    - servicios (correo, VPN, repositorios, cloud, etc.). 
+    - servicios (correo, VPN, repositorios, cloud, etc.).
 
 !!! note "Aclaración"
     **Identidad es una “capa” de contención**, igual que red o endpoint. En el flujo se destaca aparte porque, cuando está comprometida, suele ser lo más urgente para evitar reentrada y movimiento lateral.
 
 7. **Validas efecto y monitorizas**.
 
-    Contener también es comprobar que el daño se ha parado y que no hay rutas alternativas (por ejemplo, que no se siguen viendo conexiones a IoC o nuevos endpoints afectados).
+    Contener también es verificar que el daño se ha frenado y que no aparecen
+    rutas alternativas.
 
 8. **Planificas contención a largo plazo y documentas**.
 
-    Aquí entran medidas de días/semanas (hardening, segmentación, rotación de secretos, reglas duraderas, etc.) y el trabajo de coordinación con negocio para la recuperación.
+    Aquí entran medidas de días o semanas: hardening, segmentación, rotación de
+    secretos, reglas duraderas y coordinación con negocio para recuperar.
 
 !!! tip "Ideas claves"
-    Este flujo no es una autopista de sentido único: es habitual volver atrás (por ejemplo, descubrir un IoC nuevo y reforzar la contención).
-    
-    En presencia de daño activo, la prioridad es detener el impacto.    Solo se realiza una captura previa de evidencias volátiles cuando pueda ejecutarse en un tiempo mínimo (minutos), sin retrasar la contención, y cuando dichas evidencias sean irrepetibles (memoria, conexiones, procesos). En caso contrario, se aplica contención inmediata y se preservan evidencias persistentes (logs en disco, imágenes de sistema) en una segunda fase.
+    Este flujo no es una autopista de sentido único. Es habitual volver atrás,
+    descubrir un IoC nuevo y reforzar la contención.
 
-En cada paso, la comunicación con negocio y dirección es clave para gestionar expectativas y explicar decisiones. Y, por supuesto, todo debe quedar registrado: qué se hizo, cuándo, por qué y quién lo hizo.
+    Si hay daño activo, la prioridad es detenerlo. Solo conviene capturar
+    evidencias volátiles antes de actuar cuando esa captura pueda hacerse en
+    minutos y sin empeorar el incidente.
 
-Este flujo es una guía general, pero cada incidente es único. A partir de aquí vamos a aterrizarlo en tres ideas prácticas: IoC y alcance (4.1), estrategia (4.2) y secuencia iterativa (4.3).
+En cada paso, la comunicación con negocio y dirección es importante para
+gestionar expectativas y explicar decisiones. Y, por supuesto, todo debe quedar
+registrado: qué se hizo, cuándo, por qué y quién lo hizo.
+
+Este flujo es una guía general. A partir de aquí vamos a aterrizarlo en tres
+ideas prácticas: usar IoC para delimitar alcance, elegir una estrategia realista
+y trabajar de forma iterativa.
 
 #### 4.1. Indicadores, alcance y cuarentena
 
-En contención hay una idea muy potente: **no basta con “ver el síntoma”**, hay que usarlo para descubrir el resto del incidente. Es decir, conviertes el síntoma en indicadores (IoC) y luego buscas esos indicadores en el entorno para delimitar el alcance.
+En contención hay una idea clave: **no basta con ver el síntoma**. Hay que usar
+ese síntoma para descubrir el resto del incidente. Eso significa convertir lo
+observado en indicadores (IoC) y buscarlos en el entorno para delimitar el
+alcance.
 
 Esto es lo que marca la diferencia entre “contener un equipo” y “contener el incidente”.
 
 1. **Identificar indicadores (IoC)**.
 
-    Los indicadores de compromiso (IoC) son “pistas” observables: hash de un binario, una clave de registro, un servicio nuevo, una URL maliciosa, conexiones a un dominio concreto, etc. Con una lista inicial de IoC puedes buscar en el resto del entorno para descubrir otros equipos afectados.
-    
+    Los indicadores de compromiso (IoC) son pistas observables: el hash de un
+    binario, una clave de registro, un servicio nuevo, una URL maliciosa o una
+    conexión a un dominio concreto. Con una lista inicial de IoC podéis buscar
+    otros equipos afectados.
+
     Ejemplos típicos de IoC que aparecen en incidentes reales:
-    
+
     - firmas o detecciones de malware,
     - cambios en el sistema de archivos (ficheros creados, renombrados o cifrados),
     - cambios en registro/configuración (persistencia, tareas programadas, servicios),
     - conexiones salientes o entrantes hacia/desde URLs o dominios maliciosos conocidos.
-    
+
     !!! info "Información"
-        La inteligencia de amenazas (threat intelligence) aporta contexto a la investigación: si un grupo de ataque conocido deja indicadores “muy suyos”, buscarlos en el entorno puede ayudar a detectar rápidamente otros sistemas afectados.
-    
+        La inteligencia de amenazas aporta contexto: si un grupo de ataque deja
+        indicadores muy característicos, buscarlos en el entorno puede acelerar
+        la detección de otros sistemas afectados.
+
     !!! tip "Consejo"
-        En muchos casos, **la atribución** (quién ha sido) no es lo primero. Lo urgente suele ser: contener, inventariar sistemas afectados y preparar erradicación.
-        
-        Si el equipo se centra en “quién” demasiado pronto, puede perder tiempo mientras el incidente sigue creciendo. En la mayoría de organizaciones, la atribución suele ser lo último que se prioriza.
+        En muchos casos, **la atribución** no es lo primero. Lo urgente suele
+        ser contener, inventariar sistemas afectados y preparar la erradicación.
 
 2. **Delimitar la población afectada**.
 
-    El objetivo es responder a: ¿qué equipos, cuentas y servicios están tocados? Si solo aislas el primer equipo detectado (el “paciente 0”) y no buscas más, es fácil que el atacante ya se haya movido lateralmente.
+    El objetivo es responder a una pregunta básica: **qué equipos, cuentas y
+    servicios están tocados**. Si solo aisláis el primer equipo detectado y no
+    buscáis más, es muy posible que el atacante ya se haya movido lateralmente.
 
 3. **Poner en cuarentena de forma segura**.
 
-    Aislar no siempre significa apagar. Opciones típicas (según el escenario) son:
-    
+    Aislar no siempre significa apagar. Según el escenario, podéis:
+
     - desconectar red (por ejemplo, cable o puerto switch),
     - poner el equipo en suspensión si necesitáis preservar memoria volátil,
     - aislar con reglas (DNS, firewall, ACL),
     - o cuarentena desde EDR.
-    
-    Si necesitas evidencia volátil, valora primero una captura rápida y luego aísla.
+
+    Si necesitáis evidencia volátil, valorad primero una captura rápida y luego
+    aisláis.
 
 4. **Preservar evidencia con imágenes cuando aplique**.
 
-    Cuando el objetivo es investigar con rigor, se suelen tomar imágenes (disco y, a veces, memoria) para analizarlas sin “pisar” el sistema original. Las imágenes de sistema de archivos y memoria son especialmente útiles para investigación.
-    
-    A nivel de herramientas, existen opciones open source y comerciales. Por ejemplo, Volatility o Rekall suelen usarse para análisis de memoria, y suites comerciales como EnCase para adquisición/análisis forense, entre otras.
-    
-    Esto es más fácil cuando hay playbooks y herramientas listas, porque el tiempo durante un incidente es oro.
+    Cuando el objetivo es investigar con rigor, se suelen tomar imágenes de
+    disco y, a veces, de memoria para analizar sin "pisar" el sistema original.
+
+    A nivel de herramientas, existen opciones libres y comerciales. Por
+    ejemplo, Volatility o Rekall se usan para análisis de memoria, y suites
+    como EnCase para adquisición y análisis forense.
+
+    Esto resulta más fácil cuando ya existen playbooks y herramientas listas,
+    porque el tiempo durante un incidente es oro.
 
 #### 4.2. Elegir una estrategia de contención según capacidad y objetivos
 
-Si el objetivo es identificar, contener y erradicar lo antes posible antes de que haya daño en datos sensibles, la pregunta es: ¿qué estrategia realista puedo ejecutar con lo que tengo?
+La estrategia de contención no se elige en abstracto. Se elige según dos
+preguntas: **qué objetivo persigo ahora mismo** y **con qué capacidad real
+cuento**.
 
 1. Evaluad capacidades.
 
-    Muchas organizaciones pequeñas y medianas no tienen, de forma interna, todas las habilidades y herramientas para:
-    
+    Muchas organizaciones pequeñas y medianas no tienen internamente todas las
+    habilidades y herramientas para:
+
     - identificar IoC a buen ritmo,
     - buscarlos en el entorno,
     - y tomar imágenes forenses.
 
 2. Apoyaros en terceros si hace falta.
 
-    Es habitual trabajar con entidades externas para reforzar detección e investigación (por ejemplo, DLP, correlación de logs, SIEM, EDR gestionado o un proveedor de respuesta a incidentes).
+    Es habitual trabajar con terceros para reforzar detección e investigación:
+    SIEM, EDR gestionado, correlación de logs, DLP o proveedores de respuesta a
+    incidentes.
 
 3. Elegid el enfoque con cabeza.
 
-    - Enfoque “volver al servicio”: aislar lo mínimo imprescindible y restaurar rápido.
-    - Enfoque “inventario completo”: identificar la mayor cantidad de sistemas afectados posible y preparar cada uno para erradicación.
-    
-    Ambos pueden ser válidos, pero no igual de seguros para todos los casos. Si el incidente es activo (por ejemplo, ransomware cifrando), el enfoque “volver al servicio” puede ser arriesgado porque el atacante sigue en marcha. Si el incidente no es activo, pero hay sospecha de movimiento lateral, el enfoque “inventario completo” puede ser más seguro para no dejar nada sin contener.
+    - Enfoque **volver al servicio**: aislar lo mínimo imprescindible y
+      restaurar rápido.
+    - Enfoque **inventario completo**: identificar el mayor número posible de
+      sistemas afectados y preparar cada uno para erradicación.
+
+    Ambos pueden ser válidos, pero no son igual de seguros en todos los casos.
+    Si el incidente está activo, "volver al servicio" demasiado pronto puede
+    ser arriesgado. Si no hay daño visible, pero sí sospecha de movimiento
+    lateral, suele ser más seguro ampliar inventario antes de cerrar el caso.
 
 #### 4.3. Secuencia típica: síntomas, cuarentena, imágenes y correlación
 
-Una secuencia muy común y genérica en contención es:
+Una secuencia muy habitual en contención es esta:
 
 1. Identificar síntomas e IoC iniciales.
 2. Poner en cuarentena sistemas sospechosos.
@@ -322,15 +415,21 @@ flowchart TD
     E --> F["Búsqueda de nuevos IoC<br/>en el entorno para<br/>delimitar alcance"]
 ```
 
-Si dispones de EDR, SIEM y/o capturas de tráfico, se suelen usar como “aceleradores” para inventariar dispositivos afectados y detectar patrones (por ejemplo, máquinas que llaman al mismo dominio o que ejecutan el mismo proceso).
+Si disponéis de EDR, SIEM o capturas de tráfico, estas herramientas actúan como
+"aceleradores" para inventariar dispositivos afectados y detectar patrones.
 
-A medida que se ponen más sistemas fuera de línea, aparecen problemas de productividad. Por eso, la comunicación con el negocio es parte del trabajo: hay que explicar impacto, alternativas y siguientes pasos.
+A medida que se ponen más sistemas fuera de línea, aparecen problemas de
+productividad. Por eso, la comunicación con negocio también forma parte de la
+contención.
 
-Una vez que ya sabes “qué está afectado” (o al menos tienes una primera lista razonable), pasas a aplicar medidas de contención **por capas**: red, identidad, endpoint y servicios.
+Cuando ya sabéis qué está afectado, o al menos tenéis una primera lista
+razonable, pasáis a aplicar medidas de contención **por capas**: red,
+identidad, endpoint y servicios.
 
 ### 5. Catálogo de medidas de contención por capas
 
-Para que resulte aplicable en laboratorio y en casos reales sencillos, agrupamos las medidas por capas: red, identidad, endpoint y servicios.
+Para que el contenido sea aplicable en laboratorio y en casos reales sencillos,
+agrupamos las medidas por capas: red, identidad, endpoint y servicios.
 
 La idea es que, en cada capa, distingáis entre:
 
@@ -358,7 +457,7 @@ MITRE define la segmentación como control para limitar flujo y restringir movim
 
 !!! tip "Consejo"
     Cuando bloquees IoC, intenta hacerlo en dos sitios:
-    
+
     - en el perímetro (para cortar salida), ejemplo, en el proxy o firewall,
     - y dentro (para evitar que un equipo infectado hable con otros segmentos), ejemplo, con ACL o microsegmentación.
 
@@ -419,11 +518,15 @@ En aplicaciones, muchas medidas de contención son “parches temporales” para
 
 ### 6. Contención por escenarios: mini playbooks
 
-Después de ver medidas por capas, toca bajarlo a casos reales. Aquí entran los playbooks: procedimientos que os guían cuando hay prisa y presión.
+Después de ver medidas por capas, toca llevarlas a casos concretos. Aquí entran
+los playbooks: procedimientos que os guían cuando hay prisa, presión y poco
+tiempo para improvisar.
 
-Un playbook es un procedimiento predefinido (un guion). En un equipo real (y también en el módulo), ayudan a responder con orden: qué se hace, en qué orden, qué evidencias se recogen y quién decide cada cosa.
+Un playbook es un procedimiento predefinido. En un equipo real, y también en el
+módulo, ayuda a responder con orden: qué se hace, en qué secuencia, qué
+evidencias se recogen y quién toma cada decisión.
 
-Es importante establecer planes de acción fundamentales con playbooks y checklists. Como mínimo, suele tener sentido cubrir:
+Como mínimo, suele tener sentido disponer de playbooks para:
 
 - malware y ransomware,
 - denegación de servicio (DoS/DDoS),
@@ -449,7 +552,7 @@ NCSC mantiene guías específicas para mitigar malware y ransomware. ([ncsc.gov.
 
 !!! note "Nota"
     Antes de bloquear de forma masiva, conviene confirmar lo básico: que la alerta no sea un falso positivo o un malware antiguo sin impacto. Si se dispone de una muestra (hash, fichero o URL), el análisis ayuda a extraer IoC útiles para buscar otros equipos afectados.
-    
+
     Si el análisis revela dominios o IP relacionados, eso puede ayudar a detectar comunicación de mando y control (C2) y a localizar otras máquinas que estén intentando conectar con esos destinos.
 
 !!! warning "Atención"
@@ -549,7 +652,8 @@ Este tipo de incidentes son principalmente de **disponibilidad**: el objetivo de
 
 #### 6.6. Activo perdido o robado (portátil, móvil, USB)
 
-No todo incidente es “malware”. En perdida/robo, la contención es responder a una pregunta: ¿hay riesgo de datos?
+No todo incidente es "malware". En una pérdida o robo, la contención consiste
+en responder a una pregunta: ¿hay riesgo de datos?
 
 **Contención táctica (preguntas que hay que responder):**
 
@@ -613,6 +717,10 @@ Aquí entran casos como abuso de privilegios, creación de cuentas sin permiso o
 
 ### 7. Matriz de decisiones de contención
 
+No existe una única forma correcta de contener. La decisión depende del impacto,
+de la criticidad del servicio y del riesgo de perder evidencia. Esta tabla
+resume las opciones más habituales:
+
 | Decisión                                   | Ventaja            | Riesgo                           | Cuándo usar                                        |
 |--------------------------------------------|--------------------|----------------------------------|----------------------------------------------------|
 | Contención agresiva (corte amplio)         | Detiene rápido     | Tumbar negocio, perder evidencia | Daño activo grave (cifrado/exfiltración)           |
@@ -626,32 +734,44 @@ Aquí entran casos como abuso de privilegios, creación de cuentas sin permiso o
 
 ### 8. Errores frecuentes en contención
 
-Durante contención, es fácil caer en errores que empeoran el incidente. Aquí tenéis los más comunes:
+Durante la contención es fácil tomar decisiones rápidas que parecen lógicas,
+pero empeoran el incidente. Estos son los errores más comunes:
 
 1. **Formatear o reinstalar sin investigar**: destruye evidencia y no aprendéis nada.
 
-    Es tentador “borrar y empezar de nuevo”, pero si no entendéis qué ha pasado, es fácil que el atacante vuelva a entrar por el mismo agujero o que haya otros sistemas afectados sin contener. Investigar no es solo para “saber quién ha sido”, sino para entender el vector de entrada, la persistencia y el movimiento lateral. Esto te ayuda a cerrar el incidente de forma completa y a mejorar la postura de seguridad para que no vuelva a pasar.
+    Es tentador "borrar y empezar de nuevo", pero si no entendéis qué ha
+    pasado, es fácil que el atacante vuelva a entrar por el mismo agujero o
+    que haya otros sistemas afectados sin contener.
 
 2. **Aislar solo el primer sistema detectado** cuando ya hay movimiento lateral.
 
-    Si solo aislas el primer equipo detectado, pero el atacante ya se ha movido a otros, es como poner una venda en un brazo roto: no solucionas el problema real. Es fundamental usar los IoC para buscar en el entorno y delimitar el alcance. De lo contrario, puedes dejar otros sistemas comprometidos sin contener, lo que puede llevar a un incidente más grande o a una recaída.
+    Si solo aisláis el primer equipo detectado, pero el atacante ya se ha
+    movido a otros, no solucionáis el problema real. Por eso es fundamental
+    usar IoC para buscar en el resto del entorno.
 
 3. **No cortar credenciales**: el atacante vuelve.
 
-    Si no revocas sesiones, bloqueas cuentas o rotas tokens, el atacante puede volver a entrar aunque hayas aislado un equipo. La identidad es la “llave maestra” del entorno. Si el atacante tiene credenciales, puede reentrar desde otro equipo o incluso desde el mismo si no lo has aislado correctamente. Por eso, en muchos incidentes, la contención real se consigue cuando se controla qué identidades pueden autenticarse y desde dónde.
+    Si no revocáis sesiones, bloqueáis cuentas o rotáis tokens, el atacante
+    puede volver a entrar aunque hayáis aislado un equipo.
 
 4. **Bloquear IoC a ciegas** y dejar fuera a usuarios o servicios legítimos.
 
-    Si bloqueas sin confirmar, puedes tumbar servicios críticos o afectar a usuarios legítimos, lo que puede generar un incidente de disponibilidad además del de seguridad. Es importante validar los IoC antes de bloquearlos, por ejemplo, confirmando que la URL o IP es realmente maliciosa y no un falso positivo. Si bloqueas algo legítimo, puedes generar una crisis de negocio que complica aún más la gestión del incidente.
+    Si bloqueáis sin confirmar, podéis tumbar servicios críticos o afectar a
+    usuarios legítimos. La validación previa evita convertir un incidente de
+    seguridad en otro de disponibilidad.
 
 5. **No documentar**: en un incidente real y en el módulo, si no está registrado, no existe.
 
-    Es fundamental documentar cada paso: qué se hizo, cuándo, por qué y quién lo hizo. Esto es clave para la investigación, para aprender y para justificar decisiones ante dirección. No hacerlo es como pelear una batalla sin dejar rastro: no sabrás qué pasó ni cómo mejorar.
+    Es fundamental registrar qué se hizo, cuándo, por qué y quién lo hizo. Si
+    no queda documentado, luego es mucho más difícil investigar, justificar
+    decisiones y aprender del caso.
 
 
 ### 9. Checklist de contención
 
-Durante los primeros minutos de un incidente (primeros 30–60 minutos), la presión es máxima. Para no perder el control, conviene tener un checklist claro que os guíe en la secuencia de acciones. Aquí tenéis un ejemplo genérico que podéis adaptar a cada escenario:
+Durante los primeros 30 a 60 minutos de un incidente, la presión suele ser
+máxima. Para no perder el control, conviene tener un checklist breve y claro.
+Este ejemplo es genérico y se puede adaptar a cada escenario:
 
 1. Identificar alcance inicial (sistemas, cuentas, servicios).
 2. Valorar evidencia volátil (si procede): ¿se pierde si apagáis/aisláis?
@@ -666,11 +786,14 @@ CISA publica listas y guías de respuesta para ransomware que incluyen checklist
 
 ### 10. Evidencia forense y expectativas de dirección
 
-La contención no es solo técnica. Durante un incidente, el equipo de respuesta también tiene que gestionar la evidencia forense y las expectativas de dirección. Esto es clave para no perder el control del incidente y para tomar decisiones informadas.
+La contención no es solo técnica. Durante un incidente, el equipo también tiene
+que gestionar la evidencia forense y las expectativas de dirección.
 
 #### 10.1. Apoyo forense (interno o externo)
 
-Durante la respuesta, el equipo recopila evidencia digital para entender qué ocurrió. Parte de esa evidencia se usa para identificar otros sistemas comprometidos y parte para llegar a la causa raíz. Tomar imágenes de sistemas es un patrón habitual cuando se necesita investigar con rigor.
+Durante la respuesta, el equipo recopila evidencia digital para entender qué
+ocurrió. Parte de esa evidencia sirve para identificar otros sistemas
+comprometidos y parte para llegar a la causa raíz.
 
 Como estas habilidades no siempre existen internamente, muchas organizaciones:
 
@@ -695,6 +818,9 @@ La especulación suele causar más daño que beneficio cuando luego hay que rect
 
 
 ### 11. Actividades de aula recomendadas
+
+Para cerrar el tema, estas actividades ayudan a practicar la contención no como
+una lista de medidas aisladas, sino como una secuencia de decisiones justificadas.
 
 A continuación, actividades pensadas para que alumnos y alumnas practiquéis contención de forma realista:
 

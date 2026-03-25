@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="560" viewBox="0 0 1200 560">
+  <defs>
+    <style>
+      .bg { fill: #0b1220; }
+      .panel { fill: #111c33; stroke: #24355f; stroke-width: 2; }
+      .soc { fill: #0f2747; stroke: #2c7be5; stroke-width: 3; }
+      .box { fill: #0f1f3a; stroke: #3c5a99; stroke-width: 2; }
+      .box2 { fill: #132a22; stroke: #2ecc71; stroke-width: 2; }
+      .box3 { fill: #2a1c10; stroke: #f39c12; stroke-width: 2; }
+      .box4 { fill: #2a1020; stroke: #e056fd; stroke-width: 2; }
+      .title { fill: #eaf2ff; font: 700 22px system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; }
+      .label { fill: #eaf2ff; font: 700 18px system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; }
+      .text { fill: #cfe3ff; font: 500 14px system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; }
+      .muted { fill: #9bb6de; font: 500 12px system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; }
+      .arrow { stroke: #9bb6de; stroke-width: 4; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+    </style>
+    <marker id="arrowHead" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="10" markerHeight="10" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#9bb6de"/>
+    </marker>
+  </defs>
+
+  <rect class="bg" x="0" y="0" width="1200" height="560"/>
+  <rect class="panel" x="30" y="30" width="1140" height="500" rx="18"/>
+
+  <text class="title" x="60" y="70">Ecosistema de un SOC: personas, procesos, tecnologías y servicios</text>
+  <text class="muted" x="60" y="95">Un mapa rápido para ubicar “quién”, “cómo” y “con qué” se trabaja en un SOC.</text>
+
+  <!-- Centro SOC -->
+  <g transform="translate(510,220)">
+    <circle class="soc" cx="90" cy="90" r="90"/>
+    <text class="label" x="90" y="85" text-anchor="middle">SOC</text>
+    <text class="text" x="90" y="112" text-anchor="middle">Operación 24/7</text>
+    <text class="muted" x="90" y="136" text-anchor="middle">Detección · Respuesta · Mejora</text>
+  </g>
+
+  <!-- Personas -->
+  <g transform="translate(95,170)">
+    <rect class="box2" x="0" y="0" width="290" height="160" rx="14"/>
+    <text class="label" x="18" y="40">Personas</text>
+    <text class="text" x="18" y="72">• Analistas (L1/L2/L3)</text>
+    <text class="text" x="18" y="96">• Threat hunting / intel</text>
+    <text class="text" x="18" y="120">• Ingenieros y gestión</text>
+    <text class="muted" x="18" y="145">Decisión y criterio</text>
+  </g>
+
+  <!-- Procesos -->
+  <g transform="translate(95,360)">
+    <rect class="box" x="0" y="0" width="290" height="160" rx="14"/>
+    <text class="label" x="18" y="40">Procesos</text>
+    <text class="text" x="18" y="72">• Monitorización y triage</text>
+    <text class="text" x="18" y="96">• Respuesta a incidentes</text>
+    <text class="text" x="18" y="120">• Lecciones aprendidas</text>
+    <text class="muted" x="18" y="145">Estandariza y acelera</text>
+  </g>
+
+  <!-- Tecnologías -->
+  <g transform="translate(815,170)">
+    <rect class="box3" x="0" y="0" width="290" height="160" rx="14"/>
+    <text class="label" x="18" y="40">Tecnologías</text>
+    <text class="text" x="18" y="72">• SIEM / SOAR</text>
+    <text class="text" x="18" y="96">• EDR / NDR / IDS</text>
+    <text class="text" x="18" y="120">• Ticketing / Forense</text>
+    <text class="muted" x="18" y="145">Visibilidad y automatización</text>
+  </g>
+
+  <!-- Servicios -->
+  <g transform="translate(815,360)">
+    <rect class="box4" x="0" y="0" width="290" height="160" rx="14"/>
+    <text class="label" x="18" y="40">Servicios</text>
+    <text class="text" x="18" y="72">• Alerting y monitoring</text>
+    <text class="text" x="18" y="96">• Incident response</text>
+    <text class="text" x="18" y="120">• Threat hunting / intel</text>
+    <text class="muted" x="18" y="145">Entregables al negocio</text>
+  </g>
+
+  <!-- Flechas -->
+  <path class="arrow" d="M 385 250 C 450 250, 470 260, 510 300" marker-end="url(#arrowHead)"/>
+  <path class="arrow" d="M 385 440 C 450 440, 470 420, 510 360" marker-end="url(#arrowHead)"/>
+  <path class="arrow" d="M 815 250 C 750 250, 730 260, 690 300" marker-end="url(#arrowHead)"/>
+  <path class="arrow" d="M 815 440 C 750 440, 730 420, 690 360" marker-end="url(#arrowHead)"/>
+
+  <text class="muted" x="60" y="508">Idea clave: un SOC funciona bien cuando estos cuatro elementos encajan y se retroalimentan.</text>
+</svg>
+

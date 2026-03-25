@@ -63,7 +63,11 @@ En la Unidad 7, veremos:
 3. API para trabajar con ficheros (RA5.c)   
 4. Trabajar con ficheros (RA5.d, e)    
     4.1. Texto    
-    4.2. Binarios   
+    4.2. Binarios
+5. Interfaces gráficas de usuario (RA5.f, g, h)
+    5.1. Qué es una GUI y criterios básicos de diseño
+    5.2. Jetpack Compose: introducción y primeros componentes
+    5.3. Jetpack Compose: estado, eventos y maquetación
 
 ### Presentaciones
 

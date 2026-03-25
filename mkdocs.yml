@@ -99,7 +99,9 @@ nav:
         - '7.3.-Gestión Archivos': 'section1/u07/teoria/PROG-U7.3.-File.md'
         - '7.4.-Lectura/Escritura Archivos': 'section1/u07/teoria/PROG-U7.4.-LecturaEscritura.md'
         - '7.4.1.-Archivo de texto': 'section1/u07/teoria/PROG-U7.4.1.-TextFile.md'
-        - '7.5.-GUI': 'section1/u07/teoria/PROG-U7.5.-GUI.md'
+        - '7.5.-Interfaces gráficas de usuario': 'section1/u07/teoria/PROG-U7.5.-GUI.md'
+        - '7.5.1.-Jetpack Compose: introducción': 'section1/u07/teoria/PROG-U7.5.1.-JetpackComposePrimerosPasos.md'
+        - '7.5.2.-Jetpack Compose: estado y eventos': 'section1/u07/teoria/PROG-U7.5.2.-JetpackComposeEstadoYEventos.md'
     - 'U9: Acceso a base de datos relacionales':
         - 'section1/u09/index.md'
         - '9.1.-Acceso a BBDD': 'section1/u09/teoria/PROG-U9.1.-AccesoBBDD.md'

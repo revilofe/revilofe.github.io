@@ -3019,6 +3019,10 @@
       
         
       
+        
+      
+        
+      
     
     
     
@@ -3271,7 +3275,67 @@
   <span class="md-ellipsis">
     
   
-    7.5.-GUI
+    7.5.-Interfaces gráficas de usuario
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u07/teoria/PROG-U7.5.1.-JetpackComposePrimerosPasos/" class="md-nav__link">
+        
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"/></svg>
+  
+  <span class="md-ellipsis">
+    
+  
+    7.5.1.-Jetpack Compose: introducción
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../section1/u07/teoria/PROG-U7.5.2.-JetpackComposeEstadoYEventos/" class="md-nav__link">
+        
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"/></svg>
+  
+  <span class="md-ellipsis">
+    
+  
+    7.5.2.-Jetpack Compose: estado y eventos
   
 
     
@@ -9116,22 +9180,29 @@
   <h1>3.5.1.-Contención de incidentes</h1>
 
 <h2 id="351-contencion-de-incidentes-medidas-y-estrategias">3.5.1. Contención de incidentes: medidas y estrategias<a class="headerlink" href="#351-contencion-de-incidentes-medidas-y-estrategias" title="Permanent link">&para;</a></h2>
-<p>En esta parte vamos a centrarnos en <strong>la contención</strong>: el conjunto de acciones que se aplican para <strong>frenar un incidente</strong> y evitar que su impacto aumente.</p>
-<p>La contención suele venir <strong>después de identificar un evento</strong> y concluir que hay que actuar para limitar su impacto. A partir de ahí, el objetivo es:</p>
-<ul>
-<li>entender las características del evento (qué está pasando y cómo),</li>
-<li>identificar la población de sistemas y usuarios afectados,</li>
-<li>y poner en cuarentena lo afectado hasta que la situación se resuelva y el negocio vuelva a la normalidad.</li>
-</ul>
+<p>Cuando una organización detecta un incidente, una de las primeras preguntas
+reales no es "quién ha sido", sino <strong>cómo evitamos que esto vaya a más</strong>. Ahí
+entra la contención.</p>
+<p>La contención es la fase de la respuesta en la que el equipo intenta
+<strong>frenar el daño</strong>, <strong>limitar la propagación</strong> y <strong>ganar tiempo</strong> para seguir
+investigando sin que el incidente se descontrole. Dicho de forma sencilla:
+si la investigación ayuda a entender el problema, la contención pone el freno
+para que el problema no siga creciendo.</p>
 <blockquote>
-<p>Este tema está directamente alineado con el RA 3:   <br />
+<p>Este tema está directamente alineado con el RA 3:
    - e) Iniciar las primeras medidas de contención para limitar daños.</p>
 </blockquote>
 <div class="admonition definition">
 <p class="admonition-title">Definición</p>
-<p>La contención es el conjunto de medidas que <strong>limitan el alcance</strong> de un incidente, reducen su propagación y cortan la capacidad del atacante de seguir actuando, <strong>sin perder de vista la evidencia</strong> y el impacto en negocio.</p>
+<p>La contención es el conjunto de medidas que <strong>limitan el alcance</strong> de un
+incidente, reducen su propagación y cortan la capacidad del atacante de
+seguir actuando, <strong>sin perder de vista la evidencia</strong> ni el impacto en el
+negocio.</p>
 </div>
-<p>En la secuencia lógica de la unidad, la contención <strong>no sustituye a la investigación</strong> ni cierra por sí sola el incidente. La investigación ayuda a decidir <strong>qué conviene contener y por qué</strong>, mientras que la erradicación y la recuperación llegan después para eliminar la causa y devolver los servicios a la normalidad.</p>
+<p>En la secuencia lógica de la unidad, la contención <strong>no sustituye a la
+investigación</strong> ni resuelve por sí sola el incidente. La investigación ayuda a
+decidir <strong>qué conviene contener y por qué</strong>; después, la erradicación elimina
+la causa y la recuperación devuelve los servicios a la normalidad.</p>
 <div class="admonition note">
 <p class="admonition-title">Relación con el resto de la unidad</p>
 <p>La contención actúa como un puente entre tres momentos del trabajo técnico:</p>
@@ -9141,37 +9212,64 @@
 <li><strong>erradicar y recuperar</strong>, para eliminar la causa y volver al servicio con seguridad.</li>
 </ul>
 </div>
+<div class="admonition tip">
+<p class="admonition-title">Mapa del tema</p>
+<p>En este documento vamos a seguir esta línea argumental:</p>
+<ol>
+<li>entender <strong>para qué sirve</strong> la contención;</li>
+<li>distinguir entre <strong>contención táctica y estratégica</strong>;</li>
+<li>aplicar un <strong>flujo de decisión</strong> para saber qué hacer primero;</li>
+<li>aterrizarlo en <strong>medidas por capas</strong> y en <strong>escenarios reales</strong>.</li>
+</ol>
+</div>
 <h3 id="1-objetivos-de-la-contencion">1. Objetivos de la contención<a class="headerlink" href="#1-objetivos-de-la-contencion" title="Permanent link">&para;</a></h3>
-<p>La contención persigue objetivos muy concretos (y evaluables):</p>
+<p>Contener no significa "hacer algo rápido". Significa actuar con un propósito
+claro. En la práctica, la contención persigue cinco objetivos:</p>
 <ol>
 <li>
 <p><strong>Detener el daño activo</strong>: frenar propagación, exfiltración o cifrado.</p>
-<p>En la práctica suele ser lo primero: si el incidente sigue “en marcha”, cada minuto puede aumentar el impacto. Un ejemplo claro es el <abbr title="Programa informático que cifra los archivos de un sistema y pide un rescate a cambio de la clave de cifrado. Los ransomware pueden cifrar archivos personales, documentos importantes, bases de datos, etc.">ransomware</abbr>: si hay cifrado activo, el objetivo es <strong>pararlo ya</strong> para que no afecte a más equipos.</p>
+<p>Si el incidente sigue "en marcha", cada minuto cuenta. Un ejemplo claro es
+el <abbr title="Programa informático que cifra los archivos de un sistema y pide un rescate a cambio de la clave de cifrado. Los ransomware pueden cifrar archivos personales, documentos importantes, bases de datos, etc.">ransomware</abbr>: si hay cifrado activo, el primer objetivo es <strong>pararlo ya</strong>
+para que no afecte a más equipos.</p>
 </li>
 <li>
 <p><strong>Reducir superficie de ataque</strong>: limitar movimiento lateral y accesos.</p>
-<p>Esto implica que el atacante tenga menos “caminos” para avanzar: menos rutas de red, menos privilegios, menos servicios accesibles, menos credenciales válidas. Si no reduces superficie, puede que “contengas” un equipo, pero el atacante siga moviéndose por otros.</p>
+<p>Esto implica quitar al atacante caminos para avanzar: menos rutas de red,
+menos privilegios, menos servicios accesibles y menos credenciales válidas.
+Si no reduces superficie, puede que "contengas" un equipo, pero el
+incidente siga vivo en otros.</p>
 </li>
 <li>
 <p><strong>Comprar tiempo</strong> para investigar con rigor.</p>
-<p>La contención <strong>no resuelve</strong> el incidente, pero te permite ganar aire para analizar evidencias, delimitar alcance y preparar erradicación y recuperación sin ir “a ciegas”.</p>
+<p>La contención <strong>no resuelve</strong> el incidente, pero permite analizar
+evidencias, delimitar alcance y preparar la erradicación sin trabajar "a
+ciegas".</p>
 </li>
 <li>
 <p><strong>Proteger activos críticos</strong>: identidad, copias de seguridad, servicios esenciales.</p>
-<p>Hay activos que, si caen, empeoran todo: por ejemplo, la identidad (AD/<abbr title="Autenticación Única. Es un sistema de seguridad que permite a los usuarios acceder a múltiples aplicaciones o servicios con una sola autenticación. El SSO simplifica la gestión de contraseñas, mejora la experiencia del usuario y aumenta la seguridad al reducir el número de credenciales que los usuarios deben recordar.">SSO</abbr>), los repositorios de backups o el plano de gestión (hypervisor, <abbr title="Respuesta y Detección de Endpoints. Es un sistema de seguridad que monitoriza y analiza el comportamiento de los endpoints, como los ordenadores, los servidores, los dispositivos móviles, etc., en busca de actividades sospechosas o maliciosas. El EDR puede detectar y responder a los ataques en tiempo real.">EDR</abbr>, herramientas de despliegue). Contener también es <strong>blindar</strong> esos puntos.</p>
+<p>Hay elementos que, si caen, empeoran todo: la identidad (AD, <abbr title="Autenticación Única. Es un sistema de seguridad que permite a los usuarios acceder a múltiples aplicaciones o servicios con una sola autenticación. El SSO simplifica la gestión de contraseñas, mejora la experiencia del usuario y aumenta la seguridad al reducir el número de credenciales que los usuarios deben recordar.">SSO</abbr>), las
+copias de seguridad o las herramientas de administración. Contener también
+es <strong>blindar esos puntos</strong>.</p>
 </li>
 <li>
 <p><strong>Preservar evidencia</strong> cuando sea necesario (sobre todo evidencias volátiles).</p>
-<p>En incidentes reales, un cierre brusco puede eliminar conexiones, procesos y datos de memoria que son clave para entender el vector de entrada o la persistencia. Por eso, muchas veces se captura “lo mínimo viable” antes de aislar.</p>
+<p>Un cierre brusco puede eliminar conexiones, procesos o datos de memoria
+clave para entender el vector de entrada o la persistencia. Por eso, en
+muchos casos se captura <strong>lo mínimo viable</strong> antes de aislar.</p>
 </li>
 </ol>
-<p>Una idea importante (y muy repetida en guías de respuesta a incidentes) es que la contención sirve para <strong>limitar impacto</strong> y, a la vez, permitir que el equipo trabaje con información suficiente para erradicar y recuperar con criterio.</p>
+<p>En resumen, contener sirve para <strong>limitar impacto</strong> y, al mismo tiempo, permitir
+que el equipo trabaje con información suficiente para erradicar y recuperar con
+criterio.</p>
 <div class="admonition tip">
 <p class="admonition-title">Idea clave</p>
-<p>Contener no es “arreglar” el incidente. Es <strong>poner el freno</strong> para que el problema no crezca mientras investigáis y preparáis erradicación y recuperación.</p>
+<p>Contener no es "arreglar" el incidente. Es <strong>poner el freno</strong> para que el
+problema no crezca mientras investigáis y preparáis la siguiente fase.</p>
 </div>
 <h3 id="2-contencion-a-corto-plazo-y-a-largo-plazo">2. Contención a corto plazo y a largo plazo<a class="headerlink" href="#2-contencion-a-corto-plazo-y-a-largo-plazo" title="Permanent link">&para;</a></h3>
-<p>Una forma muy práctica (y realista) de explicarlo es separar dos estrategias:</p>
+<p>Una forma muy útil de entender la contención es distinguir entre lo que hacéis
+<strong>para parar el golpe ahora mismo</strong> y lo que hacéis <strong>para sostener el control
+del incidente durante los días siguientes</strong>.</p>
 <ul>
 <li><strong>Contención a corto plazo (táctica)</strong>: acciones inmediatas para frenar el impacto ya.</li>
 <li><strong>Contención a largo plazo (estratégica)</strong>: acciones para sostener el control mientras se investiga y evitar recaídas.</li>
@@ -9222,38 +9320,52 @@
 </div>
 <div class="admonition note">
 <p class="admonition-title">Aclaración</p>
-<p>Una estrategia basada en <strong>objetivos</strong> guía la contención, en este caso los objetivos de corto y largo plazo. En la práctica, la secuencia suele ser:</p>
+<p>La distinción entre corto y largo plazo ayuda a ordenar las decisiones. En
+la práctica, la secuencia habitual suele ser:</p>
 <ul>
-<li>identificar síntomas: conexiones, procesos, cambios, etc. y sacar <abbr title="Indicador de Compromiso. Es una pista o evidencia que indica la presencia de un incidente de seguridad en un sistema. Los IoCs pueden incluir direcciones IP, nombres de dominio, hashes de archivos, patrones de tráfico, literales de malware, correos electrónicos, etc.">IoC</abbr>,</li>
-<li>poner en cuarentena: aislar el equipo o bloquear la comunicación,</li>
-<li>y luego investigar: qué ha pasado, qué más está afectado, cómo se ha movido el atacante, etc.</li>
-<li>y volver a la actividad lo antes posible.</li>
+<li>detectar síntomas e identificar <abbr title="Indicador de Compromiso. Es una pista o evidencia que indica la presencia de un incidente de seguridad en un sistema. Los IoCs pueden incluir direcciones IP, nombres de dominio, hashes de archivos, patrones de tráfico, literales de malware, correos electrónicos, etc.">IoC</abbr> iniciales;</li>
+<li>aplicar una cuarentena o bloqueo que frene el riesgo inmediato;</li>
+<li>investigar alcance, vector y movimiento del atacante;</li>
+<li>y preparar la vuelta al servicio con seguridad.</li>
 </ul>
-<p>Aun así, algunos enfoques priorizan identificar rápido todos los sistemas afectados para preparar erradicación. Observar al atacante “para aprender” puede tener sentido en casos concretos, pero el riesgo de observar y no actuar suele ser alto.</p>
+<p>En algunos casos conviene ampliar visibilidad antes de cortar más, pero
+observar al atacante "para aprender" mientras el daño sigue creciendo suele
+ser una mala idea.</p>
 <p>Con esto en mente, pasamos a los principios clave: los que evitan que una contención improvisada empeore el incidente.</p>
 </div>
 <h3 id="3-principios-clave-antes-de-actuar">3. Principios clave antes de actuar<a class="headerlink" href="#3-principios-clave-antes-de-actuar" title="Permanent link">&para;</a></h3>
-<p>Hay cinco principios que conviene interiorizar, porque son los que más ayudan a contener sin perder el control del incidente:</p>
+<p>Antes de aplicar medidas concretas, conviene tener claros algunos principios.
+Son los que evitan que una contención improvisada empeore el incidente.</p>
 <ul>
 <li>
 <p><strong>Evidencia primero (cuando aplique)</strong>: si vais a perder memoria, conexiones o procesos, hay que valorar la captura rápida antes de aislar o apagar.</p>
-<p>En muchos casos la evidencia más valiosa es volátil: conexiones activas, procesos en ejecución, credenciales en memoria, etc. Por eso, antes de “apagar por si acaso”, pensad: ¿voy a perder datos que necesito para entender el vector de entrada o la persistencia?</p>
+<p>En muchos casos la evidencia más valiosa es volátil: conexiones activas,
+procesos en ejecución o credenciales en memoria. Antes de "apagar por si
+acaso", la pregunta correcta es: ¿voy a perder datos necesarios para
+entender lo ocurrido?</p>
 </li>
 <li>
 <p><strong>Rapidez con cabeza</strong>: contención improvisada puede multiplicar el incidente.</p>
-<p>Contener rápido no es “hacer cosas al azar”. Es aplicar un plan: aislar, bloquear, rotar credenciales, registrar acciones y seguir un <abbr title="Conjunto de procedimientos y acciones predefinidas que se utilizan para responder a incidentes de seguridad. Los playbooks pueden incluir pasos para identificar, contener, erradicar y recuperar de un incidente de seguridad, así como para comunicarlo a las partes interesadas.">playbook</abbr>. Si no, puedes dejar agujeros (por ejemplo, aislas un equipo, pero el atacante sigue con las mismas credenciales en otros).</p>
+<p>Contener rápido no es "hacer cosas al azar". Es aplicar un plan: aislar,
+bloquear, rotar credenciales, registrar acciones y seguir un <abbr title="Conjunto de procedimientos y acciones predefinidas que se utilizan para responder a incidentes de seguridad. Los playbooks pueden incluir pasos para identificar, contener, erradicar y recuperar de un incidente de seguridad, así como para comunicarlo a las partes interesadas.">playbook</abbr>. Si
+no, dejas agujeros abiertos.</p>
 </li>
 <li>
 <p><strong>Menor impacto posible</strong>: frenar sin romper lo crítico.</p>
-<p>La contención es un equilibrio entre seguridad y continuidad. Si cortas demasiado, puedes tumbar un servicio esencial y crear un incidente “doble”: el de seguridad y el de disponibilidad. Por eso se prioriza: activos críticos primero, y medidas reversibles cuando se pueda, con comunicación clara a negocio.</p>
+<p>La contención es un equilibrio entre seguridad y continuidad. Si cortáis
+demasiado, podéis provocar un segundo incidente: el de disponibilidad. Por
+eso se priorizan activos críticos y medidas reversibles cuando sea posible.</p>
 </li>
 <li>
 <p><strong>Cortar el acceso del atacante</strong>: si no cortáis credenciales/tokens, el atacante vuelve.</p>
-<p>Un patrón muy común es contener un equipo, pero no la identidad: el atacante conserva una sesión, un token, una <abbr title="Red Privada Virtual. Es un sistema de seguridad que se utiliza para establecer una conexión segura entre un cliente y un servidor a través de una red pública. Las VPN cifran la comunicación, protegen la privacidad de los datos y permiten a los usuarios acceder a recursos de red de forma segura.">VPN</abbr> o una cuenta de servicio, y reentra en cuanto puede. Si hay sospecha de compromiso de credenciales, la contención debe incluir identidad.</p>
+<p>Un error muy común es contener un equipo, pero no la identidad. Si el
+atacante conserva una sesión, un token o una cuenta válida, puede reentrar
+en cuanto encuentre otra vía.</p>
 </li>
 <li>
 <p><strong>Comunicación y escalado</strong>: la contención es técnica, pero también organizativa.</p>
-<p>Durante contención, la dirección y el negocio piden respuestas. Es normal. Lo importante es comunicar <strong>hechos y siguientes pasos</strong>, sin especular. Dar una conclusión prematura “para tranquilizar” suele empeorar la situación más tarde.</p>
+<p>Durante la contención, dirección y negocio piden respuestas. Es normal. Lo
+importante es comunicar <strong>hechos y siguientes pasos</strong>, sin especular.</p>
 </li>
 </ul>
 <div class="admonition warning">
@@ -9267,7 +9379,9 @@
 </div>
 <p>Con estos principios claros, el siguiente paso es decidir <strong>qué</strong> contienes primero y <strong>cómo</strong> lo haces para frenar el daño sin perder el control del incidente.</p>
 <h3 id="4-flujo-de-decision-que-contengo-y-como">4. Flujo de decisión: ¿qué contengo y cómo?<a class="headerlink" href="#4-flujo-de-decision-que-contengo-y-como" title="Permanent link">&para;</a></h3>
-<p>“¿Qué hago primero?”. La respuesta correcta es: depende, pero con un flujo claro.</p>
+<p>La pregunta clásica en un incidente es: <strong>"¿qué hacemos primero?"</strong>. La
+respuesta correcta es "depende", pero no depende del azar. Depende de seguir un
+flujo de decisión ordenado.</p>
 <pre class="mermaid"><code>flowchart TD
 
     A["Detectáis comportamiento anómalo"] --&gt; B{"¿Hay daño activo? (cifrado/exfiltración/propagación)"}
@@ -9291,48 +9405,59 @@
     L --&gt; M["Validar efecto y monitorizar"]
     M --&gt; N["Contención por capas (largo plazo): hardening, segmentación, rotación de secretos"]
     N --&gt; O["Documentar y coordinar con negocio/recuperación"]</code></pre>
-<p>La explicación del flujo (siguiendo el diagrama) es la siguiente. Partimos de un comportamiento anómalo que puede ser un incidente:</p>
+<p>La lógica del flujo es esta: partimos de un comportamiento anómalo y decidimos
+si la prioridad es <strong>frenar daño ya</strong> o <strong>preservar información antes de actuar</strong>.</p>
 <ol>
 <li>
 <p><strong>Primero decides si hay daño activo</strong>.</p>
-<p>Ejemplos de daño activo: cifrado en curso, exfiltración confirmada, propagación a otros equipos, creación masiva de cuentas/tareas, etc.</p>
+<p>Ejemplos de daño activo son un cifrado en curso, una exfiltración
+confirmada, la propagación a otros equipos o la creación masiva de cuentas
+y tareas.</p>
 </li>
 <li>
 <p><strong>Si hay daño activo</strong>, la prioridad es frenar el impacto, pero con un matiz importante:</p>
 <ul>
-<li>Si hay <strong>evidencia volátil crítica</strong> (por ejemplo, memoria, conexiones de red, procesos) y podéis capturar un <strong>mínimo viable</strong> sin retrasar la contención, se captura primero (rápido y con método).</li>
+<li>Si hay <strong>evidencia volátil crítica</strong> y podéis capturar un <strong>mínimo
+  viable</strong> sin retrasar la respuesta, se captura primero.</li>
 <li>Si capturar evidencia implica perder tiempo mientras el daño sigue ocurriendo, se prioriza la contención inmediata.</li>
 </ul>
 </li>
 <li>
 <p><strong>Contención táctica inmediata (cuando hay daño activo)</strong>.</p>
-<p>Acciones típicas (según el caso) son:</p>
+<p>Acciones típicas son:</p>
 <ul>
 <li>aislar el host desde <abbr title="Respuesta y Detección de Endpoints. Es un sistema de seguridad que monitoriza y analiza el comportamiento de los endpoints, como los ordenadores, los servidores, los dispositivos móviles, etc., en busca de actividades sospechosas o maliciosas. El EDR puede detectar y responder a los ataques en tiempo real.">EDR</abbr> o a nivel de red,</li>
 <li>cortar salida a Internet (egress) si hay exfiltración,</li>
-<li>bloquear <abbr title="Indicador de Compromiso. Es una pista o evidencia que indica la presencia de un incidente de seguridad en un sistema. Los IoCs pueden incluir direcciones IP, nombres de dominio, hashes de archivos, patrones de tráfico, literales de malware, correos electrónicos, etc.">IoC</abbr> (dominios/URLs/IPs/hashes) en <abbr title="Sistema de Nombres de Dominio. Es un sistema que se utiliza para traducir los nombres de dominio en direcciones IP. El DNS permite a los usuarios acceder a los sitios web utilizando nombres de dominio en lugar de direcciones IP.">DNS</abbr>, proxy o <abbr title="Dispositivo de seguridad que se utiliza para proteger una red de comunicaciones. El firewall controla el tráfico de red y decide qué paquetes de datos pueden entrar o salir de la red.">firewall</abbr>.</li>
+<li>bloquear <abbr title="Indicador de Compromiso. Es una pista o evidencia que indica la presencia de un incidente de seguridad en un sistema. Los IoCs pueden incluir direcciones IP, nombres de dominio, hashes de archivos, patrones de tráfico, literales de malware, correos electrónicos, etc.">IoC</abbr> en <abbr title="Sistema de Nombres de Dominio. Es un sistema que se utiliza para traducir los nombres de dominio en direcciones IP. El DNS permite a los usuarios acceder a los sitios web utilizando nombres de dominio en lugar de direcciones IP.">DNS</abbr>, proxy o <abbr title="Dispositivo de seguridad que se utiliza para proteger una red de comunicaciones. El firewall controla el tráfico de red y decide qué paquetes de datos pueden entrar o salir de la red.">firewall</abbr>.</li>
 </ul>
 </li>
 <li>
 <p><strong>Si no hay daño activo</strong>, pero hay sospecha razonable, la secuencia cambia:</p>
 <ul>
-<li>primero preservas evidencia mínima (logs relevantes, instantánea (snapshot) si aplica, línea temporal),</li>
-<li>y luego aplicas una contención selectiva (lo mínimo que reduzca el riesgo sin tirar servicios innecesariamente).</li>
+<li>primero preserváis evidencia mínima;</li>
+<li>después aplicáis una contención selectiva: lo mínimo necesario para
+  reducir riesgo sin tirar servicios innecesariamente.</li>
 </ul>
 </li>
 <li>
 <p><strong>Después de la primera contención (táctica o selectiva), investigas alcance y vector</strong>.</p>
-<p>Aquí el objetivo es no quedarte en el “síntoma”: usas <abbr title="Indicador de Compromiso. Es una pista o evidencia que indica la presencia de un incidente de seguridad en un sistema. Los IoCs pueden incluir direcciones IP, nombres de dominio, hashes de archivos, patrones de tráfico, literales de malware, correos electrónicos, etc.">IoC</abbr> para buscar otros equipos/usuarios/servicios afectados y entender por dónde entró y cómo se movió el atacante.</p>
+<p>Aquí el objetivo es no quedarse en el primer síntoma. Usáis <abbr title="Indicador de Compromiso. Es una pista o evidencia que indica la presencia de un incidente de seguridad en un sistema. Los IoCs pueden incluir direcciones IP, nombres de dominio, hashes de archivos, patrones de tráfico, literales de malware, correos electrónicos, etc.">IoC</abbr> para buscar
+otros equipos, cuentas o servicios afectados y entender por dónde entró y
+cómo se movió el atacante.</p>
 </li>
 <li>
 <p><strong>Decides si hay compromiso de identidad probable</strong>.</p>
-<p>Si lo hay, se suele <strong>priorizar identidad</strong> (revocar sesiones/tokens, reset de credenciales, imponer <abbr title="Autenticación Multifactor. Es un sistema de seguridad que requiere múltiples factores de autenticación para verificar la identidad de los usuarios. Los factores de autenticación pueden incluir contraseñas, códigos de un solo uso, huellas dactilares, etc.">MFA</abbr> o endurecer políticas) porque es un multiplicador del incidente: con identidad comprometida, el atacante puede moverse y reentrar aunque aisléis máquinas.</p>
-<p>En cualquier caso, después (o en paralelo, si tenéis equipo y capacidad), completáis la contención <strong>por capas</strong>, empezando por medidas <strong>tácticas</strong> (las que frenan ya) y preparando las <strong>estratégicas</strong> (las que sostienen el control).</p>
+<p>Si la identidad está comprometida, se suele <strong>priorizar esa capa</strong>:
+revocar sesiones y tokens, resetear credenciales y endurecer autenticación.
+Con identidad comprometida, el atacante puede reentrar aunque aisléis
+máquinas.</p>
+<p>Después, o en paralelo si el equipo lo permite, completáis la contención
+<strong>por capas</strong>, empezando por medidas tácticas y preparando las estratégicas.</p>
 <ul>
 <li>red (segmentación, bloqueo de <abbr title="Indicador de Compromiso. Es una pista o evidencia que indica la presencia de un incidente de seguridad en un sistema. Los IoCs pueden incluir direcciones IP, nombres de dominio, hashes de archivos, patrones de tráfico, literales de malware, correos electrónicos, etc.">IoC</abbr>, corte de rutas, salida a Internet),</li>
 <li>identidad (cuentas, tokens, sesiones, <abbr title="Autenticación Multifactor. Es un sistema de seguridad que requiere múltiples factores de autenticación para verificar la identidad de los usuarios. Los factores de autenticación pueden incluir contraseñas, códigos de un solo uso, huellas dactilares, etc.">MFA</abbr>, privilegios),</li>
 <li>endpoint (aislamiento, bloqueo de ejecución, cuarentena),</li>
-<li>servicios (correo, <abbr title="Red Privada Virtual. Es un sistema de seguridad que se utiliza para establecer una conexión segura entre un cliente y un servidor a través de una red pública. Las VPN cifran la comunicación, protegen la privacidad de los datos y permiten a los usuarios acceder a recursos de red de forma segura.">VPN</abbr>, repositorios, cloud, etc.). </li>
+<li>servicios (correo, <abbr title="Red Privada Virtual. Es un sistema de seguridad que se utiliza para establecer una conexión segura entre un cliente y un servidor a través de una red pública. Las VPN cifran la comunicación, protegen la privacidad de los datos y permiten a los usuarios acceder a recursos de red de forma segura.">VPN</abbr>, repositorios, cloud, etc.).</li>
 </ul>
 </li>
 </ol>
@@ -9343,27 +9468,42 @@
 <ol>
 <li>
 <p><strong>Validas efecto y monitorizas</strong>.</p>
-<p>Contener también es comprobar que el daño se ha parado y que no hay rutas alternativas (por ejemplo, que no se siguen viendo conexiones a <abbr title="Indicador de Compromiso. Es una pista o evidencia que indica la presencia de un incidente de seguridad en un sistema. Los IoCs pueden incluir direcciones IP, nombres de dominio, hashes de archivos, patrones de tráfico, literales de malware, correos electrónicos, etc.">IoC</abbr> o nuevos endpoints afectados).</p>
+<p>Contener también es verificar que el daño se ha frenado y que no aparecen
+rutas alternativas.</p>
 </li>
 <li>
 <p><strong>Planificas contención a largo plazo y documentas</strong>.</p>
-<p>Aquí entran medidas de días/semanas (hardening, segmentación, rotación de secretos, reglas duraderas, etc.) y el trabajo de coordinación con negocio para la recuperación.</p>
+<p>Aquí entran medidas de días o semanas: hardening, segmentación, rotación de
+secretos, reglas duraderas y coordinación con negocio para recuperar.</p>
 </li>
 </ol>
 <div class="admonition tip">
 <p class="admonition-title">Ideas claves</p>
-<p>Este flujo no es una autopista de sentido único: es habitual volver atrás (por ejemplo, descubrir un <abbr title="Indicador de Compromiso. Es una pista o evidencia que indica la presencia de un incidente de seguridad en un sistema. Los IoCs pueden incluir direcciones IP, nombres de dominio, hashes de archivos, patrones de tráfico, literales de malware, correos electrónicos, etc.">IoC</abbr> nuevo y reforzar la contención).</p>
-<p>En presencia de daño activo, la prioridad es detener el impacto.    Solo se realiza una captura previa de evidencias volátiles cuando pueda ejecutarse en un tiempo mínimo (minutos), sin retrasar la contención, y cuando dichas evidencias sean irrepetibles (memoria, conexiones, procesos). En caso contrario, se aplica contención inmediata y se preservan evidencias persistentes (logs en disco, imágenes de sistema) en una segunda fase.</p>
+<p>Este flujo no es una autopista de sentido único. Es habitual volver atrás,
+descubrir un <abbr title="Indicador de Compromiso. Es una pista o evidencia que indica la presencia de un incidente de seguridad en un sistema. Los IoCs pueden incluir direcciones IP, nombres de dominio, hashes de archivos, patrones de tráfico, literales de malware, correos electrónicos, etc.">IoC</abbr> nuevo y reforzar la contención.</p>
+<p>Si hay daño activo, la prioridad es detenerlo. Solo conviene capturar
+evidencias volátiles antes de actuar cuando esa captura pueda hacerse en
+minutos y sin empeorar el incidente.</p>
 </div>
-<p>En cada paso, la comunicación con negocio y dirección es clave para gestionar expectativas y explicar decisiones. Y, por supuesto, todo debe quedar registrado: qué se hizo, cuándo, por qué y quién lo hizo.</p>
-<p>Este flujo es una guía general, pero cada incidente es único. A partir de aquí vamos a aterrizarlo en tres ideas prácticas: <abbr title="Indicador de Compromiso. Es una pista o evidencia que indica la presencia de un incidente de seguridad en un sistema. Los IoCs pueden incluir direcciones IP, nombres de dominio, hashes de archivos, patrones de tráfico, literales de malware, correos electrónicos, etc.">IoC</abbr> y alcance (4.1), estrategia (4.2) y secuencia iterativa (4.3).</p>
+<p>En cada paso, la comunicación con negocio y dirección es importante para
+gestionar expectativas y explicar decisiones. Y, por supuesto, todo debe quedar
+registrado: qué se hizo, cuándo, por qué y quién lo hizo.</p>
+<p>Este flujo es una guía general. A partir de aquí vamos a aterrizarlo en tres
+ideas prácticas: usar <abbr title="Indicador de Compromiso. Es una pista o evidencia que indica la presencia de un incidente de seguridad en un sistema. Los IoCs pueden incluir direcciones IP, nombres de dominio, hashes de archivos, patrones de tráfico, literales de malware, correos electrónicos, etc.">IoC</abbr> para delimitar alcance, elegir una estrategia realista
+y trabajar de forma iterativa.</p>
 <h4 id="41-indicadores-alcance-y-cuarentena">4.1. Indicadores, alcance y cuarentena<a class="headerlink" href="#41-indicadores-alcance-y-cuarentena" title="Permanent link">&para;</a></h4>
-<p>En contención hay una idea muy potente: <strong>no basta con “ver el síntoma”</strong>, hay que usarlo para descubrir el resto del incidente. Es decir, conviertes el síntoma en indicadores (<abbr title="Indicador de Compromiso. Es una pista o evidencia que indica la presencia de un incidente de seguridad en un sistema. Los IoCs pueden incluir direcciones IP, nombres de dominio, hashes de archivos, patrones de tráfico, literales de malware, correos electrónicos, etc.">IoC</abbr>) y luego buscas esos indicadores en el entorno para delimitar el alcance.</p>
+<p>En contención hay una idea clave: <strong>no basta con ver el síntoma</strong>. Hay que usar
+ese síntoma para descubrir el resto del incidente. Eso significa convertir lo
+observado en indicadores (<abbr title="Indicador de Compromiso. Es una pista o evidencia que indica la presencia de un incidente de seguridad en un sistema. Los IoCs pueden incluir direcciones IP, nombres de dominio, hashes de archivos, patrones de tráfico, literales de malware, correos electrónicos, etc.">IoC</abbr>) y buscarlos en el entorno para delimitar el
+alcance.</p>
 <p>Esto es lo que marca la diferencia entre “contener un equipo” y “contener el incidente”.</p>
 <ol>
 <li>
 <p><strong>Identificar indicadores (<abbr title="Indicador de Compromiso. Es una pista o evidencia que indica la presencia de un incidente de seguridad en un sistema. Los IoCs pueden incluir direcciones IP, nombres de dominio, hashes de archivos, patrones de tráfico, literales de malware, correos electrónicos, etc.">IoC</abbr>)</strong>.</p>
-<p>Los indicadores de compromiso (<abbr title="Indicador de Compromiso. Es una pista o evidencia que indica la presencia de un incidente de seguridad en un sistema. Los IoCs pueden incluir direcciones IP, nombres de dominio, hashes de archivos, patrones de tráfico, literales de malware, correos electrónicos, etc.">IoC</abbr>) son “pistas” observables: hash de un binario, una clave de registro, un servicio nuevo, una URL maliciosa, conexiones a un dominio concreto, etc. Con una lista inicial de <abbr title="Indicador de Compromiso. Es una pista o evidencia que indica la presencia de un incidente de seguridad en un sistema. Los IoCs pueden incluir direcciones IP, nombres de dominio, hashes de archivos, patrones de tráfico, literales de malware, correos electrónicos, etc.">IoC</abbr> puedes buscar en el resto del entorno para descubrir otros equipos afectados.</p>
+<p>Los indicadores de compromiso (<abbr title="Indicador de Compromiso. Es una pista o evidencia que indica la presencia de un incidente de seguridad en un sistema. Los IoCs pueden incluir direcciones IP, nombres de dominio, hashes de archivos, patrones de tráfico, literales de malware, correos electrónicos, etc.">IoC</abbr>) son pistas observables: el hash de un
+binario, una clave de registro, un servicio nuevo, una URL maliciosa o una
+conexión a un dominio concreto. Con una lista inicial de <abbr title="Indicador de Compromiso. Es una pista o evidencia que indica la presencia de un incidente de seguridad en un sistema. Los IoCs pueden incluir direcciones IP, nombres de dominio, hashes de archivos, patrones de tráfico, literales de malware, correos electrónicos, etc.">IoC</abbr> podéis buscar
+otros equipos afectados.</p>
 <p>Ejemplos típicos de <abbr title="Indicador de Compromiso. Es una pista o evidencia que indica la presencia de un incidente de seguridad en un sistema. Los IoCs pueden incluir direcciones IP, nombres de dominio, hashes de archivos, patrones de tráfico, literales de malware, correos electrónicos, etc.">IoC</abbr> que aparecen en incidentes reales:</p>
 <ul>
 <li>firmas o detecciones de <abbr title="Término genérico que engloba a todos los programas informáticos maliciosos, como virus, troyanos, gusanos, spyware, bots, rootkits, ransomware, etc.">malware</abbr>,</li>
@@ -9373,42 +9513,54 @@
 </ul>
 <div class="admonition info">
 <p class="admonition-title">Información</p>
-<p>La inteligencia de amenazas (threat intelligence) aporta contexto a la investigación: si un grupo de ataque conocido deja indicadores “muy suyos”, buscarlos en el entorno puede ayudar a detectar rápidamente otros sistemas afectados.</p>
+<p>La inteligencia de amenazas aporta contexto: si un grupo de ataque deja
+indicadores muy característicos, buscarlos en el entorno puede acelerar
+la detección de otros sistemas afectados.</p>
 </div>
 <div class="admonition tip">
 <p class="admonition-title">Consejo</p>
-<p>En muchos casos, <strong>la atribución</strong> (quién ha sido) no es lo primero. Lo urgente suele ser: contener, inventariar sistemas afectados y preparar erradicación.</p>
-<p>Si el equipo se centra en “quién” demasiado pronto, puede perder tiempo mientras el incidente sigue creciendo. En la mayoría de organizaciones, la atribución suele ser lo último que se prioriza.</p>
+<p>En muchos casos, <strong>la atribución</strong> no es lo primero. Lo urgente suele
+ser contener, inventariar sistemas afectados y preparar la erradicación.</p>
 </div>
 </li>
 <li>
 <p><strong>Delimitar la población afectada</strong>.</p>
-<p>El objetivo es responder a: ¿qué equipos, cuentas y servicios están tocados? Si solo aislas el primer equipo detectado (el “paciente 0”) y no buscas más, es fácil que el atacante ya se haya movido lateralmente.</p>
+<p>El objetivo es responder a una pregunta básica: <strong>qué equipos, cuentas y
+servicios están tocados</strong>. Si solo aisláis el primer equipo detectado y no
+buscáis más, es muy posible que el atacante ya se haya movido lateralmente.</p>
 </li>
 <li>
 <p><strong>Poner en cuarentena de forma segura</strong>.</p>
-<p>Aislar no siempre significa apagar. Opciones típicas (según el escenario) son:</p>
+<p>Aislar no siempre significa apagar. Según el escenario, podéis:</p>
 <ul>
 <li>desconectar red (por ejemplo, cable o puerto switch),</li>
 <li>poner el equipo en suspensión si necesitáis preservar memoria volátil,</li>
 <li>aislar con reglas (<abbr title="Sistema de Nombres de Dominio. Es un sistema que se utiliza para traducir los nombres de dominio en direcciones IP. El DNS permite a los usuarios acceder a los sitios web utilizando nombres de dominio en lugar de direcciones IP.">DNS</abbr>, <abbr title="Dispositivo de seguridad que se utiliza para proteger una red de comunicaciones. El firewall controla el tráfico de red y decide qué paquetes de datos pueden entrar o salir de la red.">firewall</abbr>, ACL),</li>
 <li>o cuarentena desde <abbr title="Respuesta y Detección de Endpoints. Es un sistema de seguridad que monitoriza y analiza el comportamiento de los endpoints, como los ordenadores, los servidores, los dispositivos móviles, etc., en busca de actividades sospechosas o maliciosas. El EDR puede detectar y responder a los ataques en tiempo real.">EDR</abbr>.</li>
 </ul>
-<p>Si necesitas evidencia volátil, valora primero una captura rápida y luego aísla.</p>
+<p>Si necesitáis evidencia volátil, valorad primero una captura rápida y luego
+aisláis.</p>
 </li>
 <li>
 <p><strong>Preservar evidencia con imágenes cuando aplique</strong>.</p>
-<p>Cuando el objetivo es investigar con rigor, se suelen tomar imágenes (disco y, a veces, memoria) para analizarlas sin “pisar” el sistema original. Las imágenes de sistema de archivos y memoria son especialmente útiles para investigación.</p>
-<p>A nivel de herramientas, existen opciones open source y comerciales. Por ejemplo, Volatility o Rekall suelen usarse para análisis de memoria, y suites comerciales como EnCase para adquisición/análisis forense, entre otras.</p>
-<p>Esto es más fácil cuando hay playbooks y herramientas listas, porque el tiempo durante un incidente es oro.</p>
+<p>Cuando el objetivo es investigar con rigor, se suelen tomar imágenes de
+disco y, a veces, de memoria para analizar sin "pisar" el sistema original.</p>
+<p>A nivel de herramientas, existen opciones libres y comerciales. Por
+ejemplo, Volatility o Rekall se usan para análisis de memoria, y suites
+como EnCase para adquisición y análisis forense.</p>
+<p>Esto resulta más fácil cuando ya existen playbooks y herramientas listas,
+porque el tiempo durante un incidente es oro.</p>
 </li>
 </ol>
 <h4 id="42-elegir-una-estrategia-de-contencion-segun-capacidad-y-objetivos">4.2. Elegir una estrategia de contención según capacidad y objetivos<a class="headerlink" href="#42-elegir-una-estrategia-de-contencion-segun-capacidad-y-objetivos" title="Permanent link">&para;</a></h4>
-<p>Si el objetivo es identificar, contener y erradicar lo antes posible antes de que haya daño en datos sensibles, la pregunta es: ¿qué estrategia realista puedo ejecutar con lo que tengo?</p>
+<p>La estrategia de contención no se elige en abstracto. Se elige según dos
+preguntas: <strong>qué objetivo persigo ahora mismo</strong> y <strong>con qué capacidad real
+cuento</strong>.</p>
 <ol>
 <li>
 <p>Evaluad capacidades.</p>
-<p>Muchas organizaciones pequeñas y medianas no tienen, de forma interna, todas las habilidades y herramientas para:</p>
+<p>Muchas organizaciones pequeñas y medianas no tienen internamente todas las
+habilidades y herramientas para:</p>
 <ul>
 <li>identificar <abbr title="Indicador de Compromiso. Es una pista o evidencia que indica la presencia de un incidente de seguridad en un sistema. Los IoCs pueden incluir direcciones IP, nombres de dominio, hashes de archivos, patrones de tráfico, literales de malware, correos electrónicos, etc.">IoC</abbr> a buen ritmo,</li>
 <li>buscarlos en el entorno,</li>
@@ -9417,19 +9569,26 @@
 </li>
 <li>
 <p>Apoyaros en terceros si hace falta.</p>
-<p>Es habitual trabajar con entidades externas para reforzar detección e investigación (por ejemplo, <abbr title="Prevención de Pérdida de Datos. Es un sistema de seguridad que se utiliza para proteger la información confidencial de una organización y prevenir su divulgación no autorizada. El DLP puede monitorizar y controlar el tráfico de red, los dispositivos de almacenamiento, los dispositivos móviles, etc.">DLP</abbr>, correlación de logs, <abbr title="Sistema de Gestión de Eventos e Información de Seguridad. Es un sistema de seguridad que recopila, correlaciona y analiza los eventos de seguridad de una red para detectar y responder a las amenazas de seguridad. Los SIEM pueden integrar información de múltiples fuentes, como firewalls, IDS, IPS, antivirus, etc.">SIEM</abbr>, <abbr title="Respuesta y Detección de Endpoints. Es un sistema de seguridad que monitoriza y analiza el comportamiento de los endpoints, como los ordenadores, los servidores, los dispositivos móviles, etc., en busca de actividades sospechosas o maliciosas. El EDR puede detectar y responder a los ataques en tiempo real.">EDR</abbr> gestionado o un proveedor de respuesta a incidentes).</p>
+<p>Es habitual trabajar con terceros para reforzar detección e investigación:
+<abbr title="Sistema de Gestión de Eventos e Información de Seguridad. Es un sistema de seguridad que recopila, correlaciona y analiza los eventos de seguridad de una red para detectar y responder a las amenazas de seguridad. Los SIEM pueden integrar información de múltiples fuentes, como firewalls, IDS, IPS, antivirus, etc.">SIEM</abbr>, <abbr title="Respuesta y Detección de Endpoints. Es un sistema de seguridad que monitoriza y analiza el comportamiento de los endpoints, como los ordenadores, los servidores, los dispositivos móviles, etc., en busca de actividades sospechosas o maliciosas. El EDR puede detectar y responder a los ataques en tiempo real.">EDR</abbr> gestionado, correlación de logs, <abbr title="Prevención de Pérdida de Datos. Es un sistema de seguridad que se utiliza para proteger la información confidencial de una organización y prevenir su divulgación no autorizada. El DLP puede monitorizar y controlar el tráfico de red, los dispositivos de almacenamiento, los dispositivos móviles, etc.">DLP</abbr> o proveedores de respuesta a
+incidentes.</p>
 </li>
 <li>
 <p>Elegid el enfoque con cabeza.</p>
 <ul>
-<li>Enfoque “volver al servicio”: aislar lo mínimo imprescindible y restaurar rápido.</li>
-<li>Enfoque “inventario completo”: identificar la mayor cantidad de sistemas afectados posible y preparar cada uno para erradicación.</li>
+<li>Enfoque <strong>volver al servicio</strong>: aislar lo mínimo imprescindible y
+  restaurar rápido.</li>
+<li>Enfoque <strong>inventario completo</strong>: identificar el mayor número posible de
+  sistemas afectados y preparar cada uno para erradicación.</li>
 </ul>
-<p>Ambos pueden ser válidos, pero no igual de seguros para todos los casos. Si el incidente es activo (por ejemplo, <abbr title="Programa informático que cifra los archivos de un sistema y pide un rescate a cambio de la clave de cifrado. Los ransomware pueden cifrar archivos personales, documentos importantes, bases de datos, etc.">ransomware</abbr> cifrando), el enfoque “volver al servicio” puede ser arriesgado porque el atacante sigue en marcha. Si el incidente no es activo, pero hay sospecha de movimiento lateral, el enfoque “inventario completo” puede ser más seguro para no dejar nada sin contener.</p>
+<p>Ambos pueden ser válidos, pero no son igual de seguros en todos los casos.
+Si el incidente está activo, "volver al servicio" demasiado pronto puede
+ser arriesgado. Si no hay daño visible, pero sí sospecha de movimiento
+lateral, suele ser más seguro ampliar inventario antes de cerrar el caso.</p>
 </li>
 </ol>
 <h4 id="43-secuencia-tipica-sintomas-cuarentena-imagenes-y-correlacion">4.3. Secuencia típica: síntomas, cuarentena, imágenes y correlación<a class="headerlink" href="#43-secuencia-tipica-sintomas-cuarentena-imagenes-y-correlacion" title="Permanent link">&para;</a></h4>
-<p>Una secuencia muy común y genérica en contención es:</p>
+<p>Una secuencia muy habitual en contención es esta:</p>
 <ol>
 <li>Identificar síntomas e <abbr title="Indicador de Compromiso. Es una pista o evidencia que indica la presencia de un incidente de seguridad en un sistema. Los IoCs pueden incluir direcciones IP, nombres de dominio, hashes de archivos, patrones de tráfico, literales de malware, correos electrónicos, etc.">IoC</abbr> iniciales.</li>
 <li>Poner en cuarentena sistemas sospechosos.</li>
@@ -9443,11 +9602,17 @@
     C --&gt; D["Captura de imágenes&lt;br/&gt;para investigación"]
     D --&gt; E["Análisis de imágenes&lt;br/&gt;y extracción de IoC&lt;br/&gt;adicionales"]
     E --&gt; F["Búsqueda de nuevos IoC&lt;br/&gt;en el entorno para&lt;br/&gt;delimitar alcance"]</code></pre>
-<p>Si dispones de <abbr title="Respuesta y Detección de Endpoints. Es un sistema de seguridad que monitoriza y analiza el comportamiento de los endpoints, como los ordenadores, los servidores, los dispositivos móviles, etc., en busca de actividades sospechosas o maliciosas. El EDR puede detectar y responder a los ataques en tiempo real.">EDR</abbr>, <abbr title="Sistema de Gestión de Eventos e Información de Seguridad. Es un sistema de seguridad que recopila, correlaciona y analiza los eventos de seguridad de una red para detectar y responder a las amenazas de seguridad. Los SIEM pueden integrar información de múltiples fuentes, como firewalls, IDS, IPS, antivirus, etc.">SIEM</abbr> y/o capturas de tráfico, se suelen usar como “aceleradores” para inventariar dispositivos afectados y detectar patrones (por ejemplo, máquinas que llaman al mismo dominio o que ejecutan el mismo proceso).</p>
-<p>A medida que se ponen más sistemas fuera de línea, aparecen problemas de productividad. Por eso, la comunicación con el negocio es parte del trabajo: hay que explicar impacto, alternativas y siguientes pasos.</p>
-<p>Una vez que ya sabes “qué está afectado” (o al menos tienes una primera lista razonable), pasas a aplicar medidas de contención <strong>por capas</strong>: red, identidad, endpoint y servicios.</p>
+<p>Si disponéis de <abbr title="Respuesta y Detección de Endpoints. Es un sistema de seguridad que monitoriza y analiza el comportamiento de los endpoints, como los ordenadores, los servidores, los dispositivos móviles, etc., en busca de actividades sospechosas o maliciosas. El EDR puede detectar y responder a los ataques en tiempo real.">EDR</abbr>, <abbr title="Sistema de Gestión de Eventos e Información de Seguridad. Es un sistema de seguridad que recopila, correlaciona y analiza los eventos de seguridad de una red para detectar y responder a las amenazas de seguridad. Los SIEM pueden integrar información de múltiples fuentes, como firewalls, IDS, IPS, antivirus, etc.">SIEM</abbr> o capturas de tráfico, estas herramientas actúan como
+"aceleradores" para inventariar dispositivos afectados y detectar patrones.</p>
+<p>A medida que se ponen más sistemas fuera de línea, aparecen problemas de
+productividad. Por eso, la comunicación con negocio también forma parte de la
+contención.</p>
+<p>Cuando ya sabéis qué está afectado, o al menos tenéis una primera lista
+razonable, pasáis a aplicar medidas de contención <strong>por capas</strong>: red,
+identidad, endpoint y servicios.</p>
 <h3 id="5-catalogo-de-medidas-de-contencion-por-capas">5. Catálogo de medidas de contención por capas<a class="headerlink" href="#5-catalogo-de-medidas-de-contencion-por-capas" title="Permanent link">&para;</a></h3>
-<p>Para que resulte aplicable en laboratorio y en casos reales sencillos, agrupamos las medidas por capas: red, identidad, endpoint y servicios.</p>
+<p>Para que el contenido sea aplicable en laboratorio y en casos reales sencillos,
+agrupamos las medidas por capas: red, identidad, endpoint y servicios.</p>
 <p>La idea es que, en cada capa, distingáis entre:</p>
 <ul>
 <li><strong>Medidas tácticas (minutos-horas)</strong>: frenan el incidente <em>ya</em>.</li>
@@ -9528,9 +9693,13 @@
 </ul>
 <p>En aplicaciones, muchas medidas de contención son “parches temporales” para ganar tiempo: deshabilitar una funcionalidad vulnerable, endurecer el <abbr title="Firewall de Aplicaciones Web. Es un sistema de seguridad que se utiliza para proteger las aplicaciones web de los ataques de seguridad. Los WAFs pueden detectar y bloquear los ataques de inyección SQL, los ataques de cross-site scripting, los ataques de denegación de servicio, etc.">WAF</abbr> o limitar peticiones. La clave es coordinarlo con negocio para no romper lo que es crítico sin avisar.</p>
 <h3 id="6-contencion-por-escenarios-mini-playbooks">6. Contención por escenarios: mini playbooks<a class="headerlink" href="#6-contencion-por-escenarios-mini-playbooks" title="Permanent link">&para;</a></h3>
-<p>Después de ver medidas por capas, toca bajarlo a casos reales. Aquí entran los playbooks: procedimientos que os guían cuando hay prisa y presión.</p>
-<p>Un <abbr title="Conjunto de procedimientos y acciones predefinidas que se utilizan para responder a incidentes de seguridad. Los playbooks pueden incluir pasos para identificar, contener, erradicar y recuperar de un incidente de seguridad, así como para comunicarlo a las partes interesadas.">playbook</abbr> es un procedimiento predefinido (un guion). En un equipo real (y también en el módulo), ayudan a responder con orden: qué se hace, en qué orden, qué evidencias se recogen y quién decide cada cosa.</p>
-<p>Es importante establecer planes de acción fundamentales con playbooks y checklists. Como mínimo, suele tener sentido cubrir:</p>
+<p>Después de ver medidas por capas, toca llevarlas a casos concretos. Aquí entran
+los playbooks: procedimientos que os guían cuando hay prisa, presión y poco
+tiempo para improvisar.</p>
+<p>Un <abbr title="Conjunto de procedimientos y acciones predefinidas que se utilizan para responder a incidentes de seguridad. Los playbooks pueden incluir pasos para identificar, contener, erradicar y recuperar de un incidente de seguridad, así como para comunicarlo a las partes interesadas.">playbook</abbr> es un procedimiento predefinido. En un equipo real, y también en el
+módulo, ayuda a responder con orden: qué se hace, en qué secuencia, qué
+evidencias se recogen y quién toma cada decisión.</p>
+<p>Como mínimo, suele tener sentido disponer de playbooks para:</p>
 <ul>
 <li><abbr title="Término genérico que engloba a todos los programas informáticos maliciosos, como virus, troyanos, gusanos, spyware, bots, rootkits, ransomware, etc.">malware</abbr> y <abbr title="Programa informático que cifra los archivos de un sistema y pide un rescate a cambio de la clave de cifrado. Los ransomware pueden cifrar archivos personales, documentos importantes, bases de datos, etc.">ransomware</abbr>,</li>
 <li>denegación de servicio (<abbr title="Ataque de Denegación de Servicio. Es un ataque en el que los atacantes intentan saturar los recursos de un sistema o una red para que deje de funcionar correctamente. Los ataques DoS pueden ser utilizados para interrumpir los servicios, causar daños económicos, etc.">DoS</abbr>/<abbr title="Ataque de Denegación de Servicio Distribuido. Es un ataque en el que los atacantes intentan saturar los recursos de un sistema o una red para que deje de funcionar correctamente. Los ataques DDoS pueden ser utilizados para interrumpir los servicios, causar daños económicos, etc.">DDoS</abbr>),</li>
@@ -9673,7 +9842,8 @@
 <li>Diseñar capacidad de absorción (<abbr title="Red de Distribución de Contenidos. Es una red de servidores distribuidos geográficamente que se utilizan para entregar contenido web de forma rápida y eficiente. Las CDN pueden mejorar la velocidad de carga de los sitios web, reducir la latencia, proteger contra ataques DDoS, etc.">CDN</abbr>, caché, autoscaling, balanceo).</li>
 </ul>
 <h4 id="66-activo-perdido-o-robado-portatil-movil-usb">6.6. Activo perdido o robado (portátil, móvil, USB)<a class="headerlink" href="#66-activo-perdido-o-robado-portatil-movil-usb" title="Permanent link">&para;</a></h4>
-<p>No todo incidente es “<abbr title="Término genérico que engloba a todos los programas informáticos maliciosos, como virus, troyanos, gusanos, spyware, bots, rootkits, ransomware, etc.">malware</abbr>”. En perdida/robo, la contención es responder a una pregunta: ¿hay riesgo de datos?</p>
+<p>No todo incidente es "<abbr title="Término genérico que engloba a todos los programas informáticos maliciosos, como virus, troyanos, gusanos, spyware, bots, rootkits, ransomware, etc.">malware</abbr>". En una pérdida o robo, la contención consiste
+en responder a una pregunta: ¿hay riesgo de datos?</p>
 <p><strong>Contención táctica (preguntas que hay que responder):</strong></p>
 <ol>
 <li>¿Qué tipo de datos había? (PII, datos sensibles, claves, accesos).</li>
@@ -9727,6 +9897,9 @@
 <li><abbr title="Gestión de Acceso Privilegiado. Es un sistema de seguridad que controla y gestiona el acceso de los usuarios a los recursos privilegiados de una organización. El PAM puede autenticar a los usuarios, autorizar sus acciones, auditar sus actividades, etc.">PAM</abbr>, mínimo privilegio, auditoría de cambios y alertas de cuentas privilegiadas.</li>
 </ul>
 <h3 id="7-matriz-de-decisiones-de-contencion">7. Matriz de decisiones de contención<a class="headerlink" href="#7-matriz-de-decisiones-de-contencion" title="Permanent link">&para;</a></h3>
+<p>No existe una única forma correcta de contener. La decisión depende del impacto,
+de la criticidad del servicio y del riesgo de perder evidencia. Esta tabla
+resume las opciones más habituales:</p>
 <table>
 <thead>
 <tr>
@@ -9768,31 +9941,43 @@
 <p>Una organización madura no improvisa: tiene playbooks, segmentación razonable y un flujo de escalado claro.</p>
 </div>
 <h3 id="8-errores-frecuentes-en-contencion">8. Errores frecuentes en contención<a class="headerlink" href="#8-errores-frecuentes-en-contencion" title="Permanent link">&para;</a></h3>
-<p>Durante contención, es fácil caer en errores que empeoran el incidente. Aquí tenéis los más comunes:</p>
+<p>Durante la contención es fácil tomar decisiones rápidas que parecen lógicas,
+pero empeoran el incidente. Estos son los errores más comunes:</p>
 <ol>
 <li>
 <p><strong>Formatear o reinstalar sin investigar</strong>: destruye evidencia y no aprendéis nada.</p>
-<p>Es tentador “borrar y empezar de nuevo”, pero si no entendéis qué ha pasado, es fácil que el atacante vuelva a entrar por el mismo agujero o que haya otros sistemas afectados sin contener. Investigar no es solo para “saber quién ha sido”, sino para entender el vector de entrada, la persistencia y el movimiento lateral. Esto te ayuda a cerrar el incidente de forma completa y a mejorar la postura de seguridad para que no vuelva a pasar.</p>
+<p>Es tentador "borrar y empezar de nuevo", pero si no entendéis qué ha
+pasado, es fácil que el atacante vuelva a entrar por el mismo agujero o
+que haya otros sistemas afectados sin contener.</p>
 </li>
 <li>
 <p><strong>Aislar solo el primer sistema detectado</strong> cuando ya hay movimiento lateral.</p>
-<p>Si solo aislas el primer equipo detectado, pero el atacante ya se ha movido a otros, es como poner una venda en un brazo roto: no solucionas el problema real. Es fundamental usar los <abbr title="Indicador de Compromiso. Es una pista o evidencia que indica la presencia de un incidente de seguridad en un sistema. Los IoCs pueden incluir direcciones IP, nombres de dominio, hashes de archivos, patrones de tráfico, literales de malware, correos electrónicos, etc.">IoC</abbr> para buscar en el entorno y delimitar el alcance. De lo contrario, puedes dejar otros sistemas comprometidos sin contener, lo que puede llevar a un incidente más grande o a una recaída.</p>
+<p>Si solo aisláis el primer equipo detectado, pero el atacante ya se ha
+movido a otros, no solucionáis el problema real. Por eso es fundamental
+usar <abbr title="Indicador de Compromiso. Es una pista o evidencia que indica la presencia de un incidente de seguridad en un sistema. Los IoCs pueden incluir direcciones IP, nombres de dominio, hashes de archivos, patrones de tráfico, literales de malware, correos electrónicos, etc.">IoC</abbr> para buscar en el resto del entorno.</p>
 </li>
 <li>
 <p><strong>No cortar credenciales</strong>: el atacante vuelve.</p>
-<p>Si no revocas sesiones, bloqueas cuentas o rotas tokens, el atacante puede volver a entrar aunque hayas aislado un equipo. La identidad es la “llave maestra” del entorno. Si el atacante tiene credenciales, puede reentrar desde otro equipo o incluso desde el mismo si no lo has aislado correctamente. Por eso, en muchos incidentes, la contención real se consigue cuando se controla qué identidades pueden autenticarse y desde dónde.</p>
+<p>Si no revocáis sesiones, bloqueáis cuentas o rotáis tokens, el atacante
+puede volver a entrar aunque hayáis aislado un equipo.</p>
 </li>
 <li>
 <p><strong>Bloquear <abbr title="Indicador de Compromiso. Es una pista o evidencia que indica la presencia de un incidente de seguridad en un sistema. Los IoCs pueden incluir direcciones IP, nombres de dominio, hashes de archivos, patrones de tráfico, literales de malware, correos electrónicos, etc.">IoC</abbr> a ciegas</strong> y dejar fuera a usuarios o servicios legítimos.</p>
-<p>Si bloqueas sin confirmar, puedes tumbar servicios críticos o afectar a usuarios legítimos, lo que puede generar un incidente de disponibilidad además del de seguridad. Es importante validar los <abbr title="Indicador de Compromiso. Es una pista o evidencia que indica la presencia de un incidente de seguridad en un sistema. Los IoCs pueden incluir direcciones IP, nombres de dominio, hashes de archivos, patrones de tráfico, literales de malware, correos electrónicos, etc.">IoC</abbr> antes de bloquearlos, por ejemplo, confirmando que la URL o <abbr title="Protocolo de Internet. Es un protocolo que se utiliza para enviar y recibir datos entre dispositivos en una red. El IP asigna direcciones únicas a los dispositivos, divide los datos en paquetes, los envía a través de la red y los reensambla en el destino.">IP</abbr> es realmente maliciosa y no un falso positivo. Si bloqueas algo legítimo, puedes generar una crisis de negocio que complica aún más la gestión del incidente.</p>
+<p>Si bloqueáis sin confirmar, podéis tumbar servicios críticos o afectar a
+usuarios legítimos. La validación previa evita convertir un incidente de
+seguridad en otro de disponibilidad.</p>
 </li>
 <li>
 <p><strong>No documentar</strong>: en un incidente real y en el módulo, si no está registrado, no existe.</p>
-<p>Es fundamental documentar cada paso: qué se hizo, cuándo, por qué y quién lo hizo. Esto es clave para la investigación, para aprender y para justificar decisiones ante dirección. No hacerlo es como pelear una batalla sin dejar rastro: no sabrás qué pasó ni cómo mejorar.</p>
+<p>Es fundamental registrar qué se hizo, cuándo, por qué y quién lo hizo. Si
+no queda documentado, luego es mucho más difícil investigar, justificar
+decisiones y aprender del caso.</p>
 </li>
 </ol>
 <h3 id="9-checklist-de-contencion">9. Checklist de contención<a class="headerlink" href="#9-checklist-de-contencion" title="Permanent link">&para;</a></h3>
-<p>Durante los primeros minutos de un incidente (primeros 30–60 minutos), la presión es máxima. Para no perder el control, conviene tener un checklist claro que os guíe en la secuencia de acciones. Aquí tenéis un ejemplo genérico que podéis adaptar a cada escenario:</p>
+<p>Durante los primeros 30 a 60 minutos de un incidente, la presión suele ser
+máxima. Para no perder el control, conviene tener un checklist breve y claro.
+Este ejemplo es genérico y se puede adaptar a cada escenario:</p>
 <ol>
 <li>Identificar alcance inicial (sistemas, cuentas, servicios).</li>
 <li>Valorar evidencia volátil (si procede): ¿se pierde si apagáis/aisláis?</li>
@@ -9805,9 +9990,12 @@
 </ol>
 <p><abbr title="Agencia de Seguridad de Infraestructura y Ciberseguridad de los Estados Unidos. Es una agencia del gobierno de los Estados Unidos que se encarga de proteger la infraestructura crítica y la ciberseguridad del país. La CISA puede colaborar con otros organismos de seguridad, como el FBI, el NSA, el DHS, etc.">CISA</abbr> publica listas y guías de respuesta para <abbr title="Programa informático que cifra los archivos de un sistema y pide un rescate a cambio de la clave de cifrado. Los ransomware pueden cifrar archivos personales, documentos importantes, bases de datos, etc.">ransomware</abbr> que incluyen checklist y acciones recomendadas. (<a href="https://www.cisa.gov/stopransomware/ransomware-guide" title="StopRansomware Guide">cisa.gov</a>)</p>
 <h3 id="10-evidencia-forense-y-expectativas-de-direccion">10. Evidencia forense y expectativas de dirección<a class="headerlink" href="#10-evidencia-forense-y-expectativas-de-direccion" title="Permanent link">&para;</a></h3>
-<p>La contención no es solo técnica. Durante un incidente, el equipo de respuesta también tiene que gestionar la evidencia forense y las expectativas de dirección. Esto es clave para no perder el control del incidente y para tomar decisiones informadas.</p>
+<p>La contención no es solo técnica. Durante un incidente, el equipo también tiene
+que gestionar la evidencia forense y las expectativas de dirección.</p>
 <h4 id="101-apoyo-forense-interno-o-externo">10.1. Apoyo forense (interno o externo)<a class="headerlink" href="#101-apoyo-forense-interno-o-externo" title="Permanent link">&para;</a></h4>
-<p>Durante la respuesta, el equipo recopila evidencia digital para entender qué ocurrió. Parte de esa evidencia se usa para identificar otros sistemas comprometidos y parte para llegar a la causa raíz. Tomar imágenes de sistemas es un patrón habitual cuando se necesita investigar con rigor.</p>
+<p>Durante la respuesta, el equipo recopila evidencia digital para entender qué
+ocurrió. Parte de esa evidencia sirve para identificar otros sistemas
+comprometidos y parte para llegar a la causa raíz.</p>
 <p>Como estas habilidades no siempre existen internamente, muchas organizaciones:</p>
 <ul>
 <li>contratan una empresa de respuesta a incidentes antes de que ocurra un incidente,</li>
@@ -9828,6 +10016,8 @@
 </ul>
 <p>La especulación suele causar más daño que beneficio cuando luego hay que rectificar.</p>
 <h3 id="11-actividades-de-aula-recomendadas">11. Actividades de aula recomendadas<a class="headerlink" href="#11-actividades-de-aula-recomendadas" title="Permanent link">&para;</a></h3>
+<p>Para cerrar el tema, estas actividades ayudan a practicar la contención no como
+una lista de medidas aisladas, sino como una secuencia de decisiones justificadas.</p>
 <p>A continuación, actividades pensadas para que alumnos y alumnas practiquéis contención de forma realista:</p>
 <ol>
 <li>

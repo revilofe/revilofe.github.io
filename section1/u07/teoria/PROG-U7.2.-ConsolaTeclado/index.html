@@ -3042,6 +3042,10 @@
       
         
       
+        
+      
+        
+      
     
     
     
@@ -3575,7 +3579,67 @@
   <span class="md-ellipsis">
     
   
-    7.5.-GUI
+    7.5.-Interfaces gráficas de usuario
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PROG-U7.5.1.-JetpackComposePrimerosPasos/" class="md-nav__link">
+        
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"/></svg>
+  
+  <span class="md-ellipsis">
+    
+  
+    7.5.1.-Jetpack Compose: introducción
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PROG-U7.5.2.-JetpackComposeEstadoYEventos/" class="md-nav__link">
+        
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"/></svg>
+  
+  <span class="md-ellipsis">
+    
+  
+    7.5.2.-Jetpack Compose: estado y eventos
   
 
     
@@ -8779,14 +8843,40 @@
   <h1>7.2.-Entrada/Salida estandar</h1>
 
 <h2 id="72-lectura-y-escritura-en-consola">7.2 Lectura y escritura en consola<a class="headerlink" href="#72-lectura-y-escritura-en-consola" title="Permanent link">&para;</a></h2>
-<p>Después de comprender en <code>7.1</code> qué es la entrada/salida, ahora toca trabajar con el caso más cercano y habitual: la <strong>consola</strong>. </p>
-<blockquote>
-<p>Este apartado está directamente relacionado con el resultado de aprendizaje 5, especialmente con los criterios que piden:  <br />
-   - a) usar la consola para realizar operaciones de entrada y salida.   <br />
-   - b) aplicar formatos en la visualización de la información.  <br />
-   - c) reconocer posibilidades de E/S del lenguaje y sus librerías.    </p>
-</blockquote>
-<p>La idea es sencilla: un programa de consola <strong>muestra mensajes</strong>, <strong>pide datos</strong> y <strong>responde en función de lo que introduce la persona usuaria</strong>. Aunque parezca básico, aquí se apoyan muchas prácticas posteriores: validación de datos, mensajes claros, formato de salida y separación entre lógica y presentación.</p>
+<p>Después de comprender en <code>7.1</code> qué es la entrada/salida, ahora toca trabajar
+con el caso más cercano y habitual: la <strong>consola</strong>.</p>
+<p>La consola es el entorno más sencillo para practicar cómo un programa muestra
+información, pide datos y responde a lo que introduce la persona usuaria.
+Aunque parezca un caso básico, aquí aparecen ideas que luego se reutilizan en
+muchos programas: validación, formato y separación entre lógica y presentación.</p>
+<table>
+<thead>
+<tr>
+<th>Código</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>RA5</td>
+<td>Realiza operaciones de entrada y salida de información, utilizando procedimientos específicos del lenguaje y librerías de clases.</td>
+</tr>
+<tr>
+<td>CE a</td>
+<td>Se ha utilizado la consola para realizar operaciones de entrada y salida de información.</td>
+</tr>
+<tr>
+<td>CE b</td>
+<td>Se han aplicado formatos en la visualización de la información.</td>
+</tr>
+<tr>
+<td>CE c</td>
+<td>Se han reconocido las posibilidades de entrada / salida del lenguaje y las librerías asociadas.</td>
+</tr>
+</tbody>
+</table>
+<p>La idea es sencilla: un programa de consola <strong>muestra mensajes</strong>, <strong>pide
+datos</strong> y <strong>responde en función de lo que introduce la persona usuaria</strong>.</p>
 <div class="admonition abstract">
 <p class="admonition-title">Qué vas a aprender en este tema</p>
 <ul>
@@ -8914,7 +9004,9 @@
 </code></pre></div>
 <p>Este patrón aparece mucho en programas de consola y en actividades de clase.</p>
 <h3 id="4-formato-de-salida">4. Formato de salida<a class="headerlink" href="#4-formato-de-salida" title="Permanent link">&para;</a></h3>
-<p>Una cosa es que un programa funcione y otra que su salida sea clara. El criterio de evaluación sobre formato no consiste solo en “que imprima algo”, sino en que la información se vea bien y resulte fácil de interpretar.</p>
+<p>Una cosa es que un programa funcione y otra que su salida sea clara. No basta
+con "que imprima algo": la información debe verse bien y resultar fácil de
+interpretar.</p>
 <h4 id="41-cuando-basta-con-interpolacion">4.1. Cuándo basta con interpolación<a class="headerlink" href="#41-cuando-basta-con-interpolacion" title="Permanent link">&para;</a></h4>
 <p>Para mensajes sencillos, la interpolación suele ser suficiente:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="kd">val</span><span class="w"> </span><span class="nv">producto</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Teclado&quot;</span>
@@ -9009,7 +9101,7 @@
 <a id="__codelineno-15-24" name="__codelineno-15-24" href="#__codelineno-15-24"></a><span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Total: %.2f €&quot;</span><span class="p">.</span><span class="na">format</span><span class="p">(</span><span class="n">total</span><span class="p">))</span>
 <a id="__codelineno-15-25" name="__codelineno-15-25" href="#__codelineno-15-25"></a><span class="p">}</span>
 </code></pre></div>
-<p>Este ejemplo ya refleja una situación realista de RA5:</p>
+<p>Este ejemplo ya refleja una situación realista de trabajo con consola:</p>
 <ul>
 <li>se lee información desde teclado;</li>
 <li>se muestra información en consola;</li>
@@ -9036,7 +9128,7 @@
 <li><code>print()</code> y <code>println()</code> sirven para mostrar información;</li>
 <li><code>readln()</code> y <code>readlnOrNull()</code> permiten leer desde teclado;</li>
 <li>la validación con <code>toIntOrNull()</code> y similares evita muchos errores;</li>
-<li>el formato de salida mejora la claridad y cumple con el criterio de evaluación asociado.</li>
+<li>el formato de salida mejora la claridad del resultado.</li>
 </ul>
 <p>Con esta base ya puedes crear programas sencillos de consola que pidan datos, los validen y muestren resultados de forma clara.</p>
 <h2 id="fuentes">Fuentes<a class="headerlink" href="#fuentes" title="Permanent link">&para;</a></h2>

@@ -404,7 +404,6 @@ modelo de diamante, el análisis mejora mucho más:
 - la cuenta comprometida y el sistema afectado encajan como **víctima**;
 - y el conjunto apunta a un mismo **adversario** o a una misma forma de operar.
 
-![](./assets/IS-U3.3.2.-Investigacion008.png)
 <figure markdown="span">
 ![Uso del modelo diamante](./assets/IS-U3.3.2.-Investigacion008.png)
 <figcaption>Uso del modelo diamante</figcaption>

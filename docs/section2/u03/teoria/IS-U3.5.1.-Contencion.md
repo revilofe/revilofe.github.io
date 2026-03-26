@@ -30,8 +30,14 @@ investigando sin que el incidente se descontrole. Dicho de forma sencilla:
 si la investigación ayuda a entender el problema, la contención pone el freno
 para que el problema no siga creciendo.
 
-> Este tema está directamente alineado con el RA 3:
->    - e) Iniciar las primeras medidas de contención para limitar daños.
+En este tema, lo importante no es memorizar una lista de acciones aisladas. Lo
+que debéis entender es **cuándo conviene actuar**, **qué priorizar** y **cómo
+contener sin empeorar el incidente**.
+
+| Código | Descripción |
+| ------- | ----------- |
+| RA3 | Investiga incidentes de ciberseguridad analizando los riesgos implicados y definiendo las posibles medidas a adoptar. |
+| CEe | Se han iniciado las primeras medidas de contención de los incidentes para limitar los posibles daños causados. |
 
 !!! definition "Definición"
     La contención es el conjunto de medidas que **limitan el alcance** de un
@@ -58,6 +64,13 @@ la causa y la recuperación devuelve los servicios a la normalidad.
     2. distinguir entre **contención táctica y estratégica**;
     3. aplicar un **flujo de decisión** para saber qué hacer primero;
     4. aterrizarlo en **medidas por capas** y en **escenarios reales**.
+
+!!! info "Qué deberías saber al terminar"
+    Al acabar este tema deberías poder explicar tres ideas con claridad:
+
+    - qué diferencia hay entre **investigar**, **contener** y **recuperar**;
+    - cómo decidir si conviene **aislar ya** o **preservar antes una evidencia**;
+    - y qué medidas de contención tienen más sentido según el tipo de incidente.
 
 ### 1. Objetivos de la contención
 
@@ -99,6 +112,9 @@ En resumen, contener sirve para **limitar impacto** y, al mismo tiempo, permitir
 que el equipo trabaje con información suficiente para erradicar y recuperar con
 criterio.
 
+Dicho de forma práctica: si una investigación os dice *qué está pasando*, la
+contención os ayuda a responder a *qué hacemos ahora para que no vaya a peor*.
+
 !!! tip "Idea clave"
     Contener no es "arreglar" el incidente. Es **poner el freno** para que el
     problema no crezca mientras investigáis y preparáis la siguiente fase.
@@ -108,6 +124,10 @@ criterio.
 Una forma muy útil de entender la contención es distinguir entre lo que hacéis
 **para parar el golpe ahora mismo** y lo que hacéis **para sostener el control
 del incidente durante los días siguientes**.
+
+Esta distinción importa porque, en un incidente real, muchas decisiones parecen
+urgentes, pero no todas resuelven el mismo problema. Algunas frenan el daño
+inmediato; otras evitan que el atacante vuelva o que el mismo fallo reaparezca.
 
 - **Contención a corto plazo (táctica)**: acciones inmediatas para frenar el impacto ya.
 - **Contención a largo plazo (estratégica)**: acciones para sostener el control mientras se investiga y evitar recaídas.
@@ -195,6 +215,12 @@ Con estos principios claros, el siguiente paso es decidir **qué** contienes pri
 La pregunta clásica en un incidente es: **"¿qué hacemos primero?"**. La
 respuesta correcta es "depende", pero no depende del azar. Depende de seguir un
 flujo de decisión ordenado.
+
+Para visualizarlo mejor, imaginad este caso: el EDR alerta de actividad
+anómala en un equipo, aparecen conexiones a un dominio malicioso y el usuario
+afirma que acaba de abrir un adjunto sospechoso. A partir de ahí, el equipo de
+respuesta tiene que decidir si primero aísla, si captura algo de evidencia o si
+debe cortar también accesos e identidad.
 
 ```mermaid
 flowchart TD
@@ -369,6 +395,10 @@ La estrategia de contención no se elige en abstracto. Se elige según dos
 preguntas: **qué objetivo persigo ahora mismo** y **con qué capacidad real
 cuento**.
 
+En otras palabras: una buena estrategia no es la más sofisticada, sino la que
+realmente podéis ejecutar bien con el equipo, las herramientas y el tiempo que
+tenéis en ese momento.
+
 1. Evaluad capacidades.
 
     Muchas organizaciones pequeñas y medianas no tienen internamente todas las
@@ -435,6 +465,27 @@ La idea es que, en cada capa, distingáis entre:
 
 - **Medidas tácticas (minutos-horas)**: frenan el incidente *ya*.
 - **Medidas estratégicas (días-semanas)**: reducen reentrada y elevan la postura de seguridad.
+
+Dicho de forma práctica, cuando ya habéis identificado el incidente, la
+pregunta deja de ser "qué está pasando" y pasa a ser **dónde corto primero para
+que el daño no siga avanzando**. A veces la respuesta está en red; otras, en la
+identidad; otras, en el propio equipo o en la aplicación expuesta.
+
+!!! example "Traducción rápida a un caso real"
+    Si una cuenta robada sigue accediendo por VPN y además lanza procesos
+    sospechosos en varios equipos, la contención rara vez se resuelve con una
+    sola medida.
+
+    - En **identidad**, revocas sesiones y cambias credenciales.
+    - En **red**, cortas rutas o limitas salida si hay comunicación con el exterior.
+    - En **endpoint**, aíslas los equipos afectados.
+
+    Lo importante es entender que las capas **se combinan**: no compiten entre
+    sí, se refuerzan.
+
+Esta clasificación ayuda mucho en clase porque evita mezclar acciones con fines
+distintos. No es lo mismo aislar un equipo ahora que rediseñar una segmentación
+para que el mismo problema no vuelva a repetirse.
 
 #### 5.1. Red
 
@@ -533,6 +584,10 @@ Como mínimo, suele tener sentido disponer de playbooks para:
 - pérdida de activos,
 - robo de datos,
 - uso no autorizado o mal uso de activos.
+
+Lo importante aquí es entender que un playbook no sustituye al análisis. Sirve
+para que el equipo no parta de cero y pueda tomar las primeras decisiones con
+orden y criterio.
 
 !!! note "Nota"
     No todos los ataques requieren un playbook “a medida”. Por ejemplo, en un ataque a una aplicación web, puede no existir un procedimiento específico para esa vulnerabilidad concreta. Aun así, suele haber playbooks útiles para piezas del problema (malware, elevación de privilegios, persistencia, uso indebido de cuentas). Una investigación forense suele conducir al origen (la vulnerabilidad) y la remediación completa se termina de cerrar en recuperación.
@@ -784,10 +839,19 @@ Este ejemplo es genérico y se puede adaptar a cada escenario:
 
 CISA publica listas y guías de respuesta para ransomware que incluyen checklist y acciones recomendadas. ([cisa.gov][2])
 
+!!! tip "Cómo usar este checklist"
+    No es un guion rígido. Es una ayuda para no olvidar lo esencial cuando hay
+    prisa. En un caso real, el orden puede variar si existe daño activo,
+    servicios críticos o evidencias volátiles que se van a perder.
+
 ### 10. Evidencia forense y expectativas de dirección
 
 La contención no es solo técnica. Durante un incidente, el equipo también tiene
 que gestionar la evidencia forense y las expectativas de dirección.
+
+Esto importa porque muchas decisiones de contención se toman bajo presión. Si
+la parte técnica no comunica bien qué sabe, qué no sabe todavía y qué riesgo
+asume cada medida, la organización puede tomar decisiones precipitadas.
 
 #### 10.1. Apoyo forense (interno o externo)
 
@@ -817,7 +881,22 @@ Lo importante es:
 La especulación suele causar más daño que beneficio cuando luego hay que rectificar.
 
 
-### 11. Actividades de aula recomendadas
+### 11. Qué debes recordar
+
+Si tuvieras que quedarte con una sola idea de este tema, sería esta:
+**contener no es cerrar el incidente, sino frenar su crecimiento con el menor
+impacto posible y sin perder lo necesario para entenderlo**.
+
+En la práctica, una buena contención combina tres cosas al mismo tiempo:
+
+- rapidez para detener el daño;
+- criterio para no romper servicios ni perder evidencia;
+- y método para enlazar la respuesta inmediata con la investigación y la recuperación.
+
+Cuando estas tres piezas encajan, la organización deja de reaccionar "a golpes"
+y empieza a responder con control.
+
+### 12. Actividades de aula recomendadas
 
 Para cerrar el tema, estas actividades ayudan a practicar la contención no como
 una lista de medidas aisladas, sino como una secuencia de decisiones justificadas.

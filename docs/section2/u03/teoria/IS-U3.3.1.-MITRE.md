@@ -29,8 +29,10 @@ Ahí es donde entran dos marcos muy útiles:
 - **MITRE ATT&CK**, que ayuda a describir el comportamiento del atacante.
 - **RE&CT**, que ayuda a organizar la respuesta ante el incidente.
 
-> Este tema está directamente alineado con el RA3:     
->   - c) se ha realizado la investigación de incidentes de ciberseguridad.
+| Código | Descripción |
+| ------- | ----------- |
+| RA3 | Investiga incidentes de ciberseguridad analizando los riesgos implicados y definiendo las posibles medidas a adoptar. |
+| CEc | Se ha realizado la investigación de incidentes de ciberseguridad. |
 
 !!! definition "Idea base"
     **ATT&CK** sirve para entender y clasificar las tácticas y técnicas del

@@ -20,10 +20,10 @@ tags:
 
 ##  3.1.1 Recopilación y almacenamiento de evidencias
 
-| Código | Descripción                                                                                                                |   |
-|--------|----------------------------------------------------------------------------------------------------------------------------|---|
-| RA3    | Investiga incidentes de ciberseguridad analizando los riesgos implicados y definiendo las posibles medidas a adoptar.      |   |
-| CEa    | Se han recopilado y almacenado de forma segura evidencias de incidentes de ciberseguridad que afectan a la organización.   |   |
+| Código | Descripción                                                                                                                |
+|--------|----------------------------------------------------------------------------------------------------------------------------|
+| RA3    | Investiga incidentes de ciberseguridad analizando los riesgos implicados y definiendo las posibles medidas a adoptar.      |
+| CEa    | Se han recopilado y almacenado de forma segura evidencias de incidentes de ciberseguridad que afectan a la organización.   |
 
 Se empieza una nueva unidad relacionada con la investigación de incidentes de ciberseguridad. Se empezará por la recopilación y almacenamiento seguro de evidencias. Posteriormente, se verán técnicas y herramientas para analizar las evidencias recopiladas.
 

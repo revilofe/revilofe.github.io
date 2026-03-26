@@ -2,9 +2,11 @@
 
 __Análisis de evidencias e investigación de incidente__
 
-> Este tema está directamente alineado con el RA3:     
->     - b) Se ha realizado un análisis de evidencias.   
->     - c) Se ha realizado la investigación de incidentes de ciberseguridad.
+| Código | Descripción |
+| ------- | ----------- |
+| RA3 | Investiga incidentes de ciberseguridad analizando los riesgos implicados y definiendo las posibles medidas a adoptar. |
+| CEb | Se ha realizado un análisis de evidencias. |
+| CEc | Se ha realizado la investigación de incidentes de ciberseguridad. |
 
 #### Análisis de evidencias
 
@@ -197,4 +199,3 @@ Recopilación y análisis de evidencias sobre un incidente:
 ![](assets/IS-U321-AnalisisDeEvidenciasEInvestigacionDeIncidentes1.png)
 
 #### 
-

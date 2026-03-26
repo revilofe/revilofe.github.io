@@ -19,6 +19,11 @@ tags:
 
 ##  3.1.2 Guía y Procedimiento para la Recopilación y Almacenamiento de Evidencias Digitales
 
+| Código | Descripción |
+| ------- | ----------- |
+| RA3 | Investiga incidentes de ciberseguridad analizando los riesgos implicados y definiendo las posibles medidas a adoptar. |
+| CEa | Se han recopilado y almacenado de forma segura evidencias de incidentes de ciberseguridad que afectan a la organización. |
+
 El **procedimiento de recopilación y almacenamiento de evidencias digitales** es un proceso crítico en el ámbito de la **seguridad informática** y la **investigación forense**. El presente documento proporciona una guía general para llevar a cabo este procedimiento de manera efectiva y segura. Se ha intentado extraer los principios y prácticas comunes utilizados en la industria y en el ámbito legal.
 
 ### Objetivo

@@ -5814,6 +5814,8 @@
       
         
       
+        
+      
     
     
     
@@ -6040,6 +6042,36 @@
     
   
     2.2.4.-Evolución de SIEM
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../u02/teoria/IS-U2.2.5.-SOC-1Nivel/" class="md-nav__link">
+        
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"/></svg>
+  
+  <span class="md-ellipsis">
+    
+  
+    2.2.5.-SOC: Analista de nivel 1
   
 
     
@@ -6828,10 +6860,21 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#11-actividades-de-aula-recomendadas" class="md-nav__link">
+  <a href="#11-que-debes-recordar" class="md-nav__link">
     <span class="md-ellipsis">
       
-        11. Actividades de aula recomendadas
+        11. Qué debes recordar
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-actividades-de-aula-recomendadas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12. Actividades de aula recomendadas
       
     </span>
   </a>
@@ -9045,10 +9088,21 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#11-actividades-de-aula-recomendadas" class="md-nav__link">
+  <a href="#11-que-debes-recordar" class="md-nav__link">
     <span class="md-ellipsis">
       
-        11. Actividades de aula recomendadas
+        11. Qué debes recordar
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-actividades-de-aula-recomendadas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12. Actividades de aula recomendadas
       
     </span>
   </a>
@@ -9188,10 +9242,27 @@ entra la contención.</p>
 investigando sin que el incidente se descontrole. Dicho de forma sencilla:
 si la investigación ayuda a entender el problema, la contención pone el freno
 para que el problema no siga creciendo.</p>
-<blockquote>
-<p>Este tema está directamente alineado con el RA 3:
-   - e) Iniciar las primeras medidas de contención para limitar daños.</p>
-</blockquote>
+<p>En este tema, lo importante no es memorizar una lista de acciones aisladas. Lo
+que debéis entender es <strong>cuándo conviene actuar</strong>, <strong>qué priorizar</strong> y <strong>cómo
+contener sin empeorar el incidente</strong>.</p>
+<table>
+<thead>
+<tr>
+<th>Código</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>RA3</td>
+<td>Investiga incidentes de ciberseguridad analizando los riesgos implicados y definiendo las posibles medidas a adoptar.</td>
+</tr>
+<tr>
+<td>CEe</td>
+<td>Se han iniciado las primeras medidas de contención de los incidentes para limitar los posibles daños causados.</td>
+</tr>
+</tbody>
+</table>
 <div class="admonition definition">
 <p class="admonition-title">Definición</p>
 <p>La contención es el conjunto de medidas que <strong>limitan el alcance</strong> de un
@@ -9221,6 +9292,15 @@ la causa y la recuperación devuelve los servicios a la normalidad.</p>
 <li>aplicar un <strong>flujo de decisión</strong> para saber qué hacer primero;</li>
 <li>aterrizarlo en <strong>medidas por capas</strong> y en <strong>escenarios reales</strong>.</li>
 </ol>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Qué deberías saber al terminar</p>
+<p>Al acabar este tema deberías poder explicar tres ideas con claridad:</p>
+<ul>
+<li>qué diferencia hay entre <strong>investigar</strong>, <strong>contener</strong> y <strong>recuperar</strong>;</li>
+<li>cómo decidir si conviene <strong>aislar ya</strong> o <strong>preservar antes una evidencia</strong>;</li>
+<li>y qué medidas de contención tienen más sentido según el tipo de incidente.</li>
+</ul>
 </div>
 <h3 id="1-objetivos-de-la-contencion">1. Objetivos de la contención<a class="headerlink" href="#1-objetivos-de-la-contencion" title="Permanent link">&para;</a></h3>
 <p>Contener no significa "hacer algo rápido". Significa actuar con un propósito
@@ -9261,6 +9341,8 @@ muchos casos se captura <strong>lo mínimo viable</strong> antes de aislar.</p>
 <p>En resumen, contener sirve para <strong>limitar impacto</strong> y, al mismo tiempo, permitir
 que el equipo trabaje con información suficiente para erradicar y recuperar con
 criterio.</p>
+<p>Dicho de forma práctica: si una investigación os dice <em>qué está pasando</em>, la
+contención os ayuda a responder a <em>qué hacemos ahora para que no vaya a peor</em>.</p>
 <div class="admonition tip">
 <p class="admonition-title">Idea clave</p>
 <p>Contener no es "arreglar" el incidente. Es <strong>poner el freno</strong> para que el
@@ -9270,6 +9352,9 @@ problema no crezca mientras investigáis y preparáis la siguiente fase.</p>
 <p>Una forma muy útil de entender la contención es distinguir entre lo que hacéis
 <strong>para parar el golpe ahora mismo</strong> y lo que hacéis <strong>para sostener el control
 del incidente durante los días siguientes</strong>.</p>
+<p>Esta distinción importa porque, en un incidente real, muchas decisiones parecen
+urgentes, pero no todas resuelven el mismo problema. Algunas frenan el daño
+inmediato; otras evitan que el atacante vuelva o que el mismo fallo reaparezca.</p>
 <ul>
 <li><strong>Contención a corto plazo (táctica)</strong>: acciones inmediatas para frenar el impacto ya.</li>
 <li><strong>Contención a largo plazo (estratégica)</strong>: acciones para sostener el control mientras se investiga y evitar recaídas.</li>
@@ -9382,6 +9467,11 @@ importante es comunicar <strong>hechos y siguientes pasos</strong>, sin especula
 <p>La pregunta clásica en un incidente es: <strong>"¿qué hacemos primero?"</strong>. La
 respuesta correcta es "depende", pero no depende del azar. Depende de seguir un
 flujo de decisión ordenado.</p>
+<p>Para visualizarlo mejor, imaginad este caso: el <abbr title="Respuesta y Detección de Endpoints. Es un sistema de seguridad que monitoriza y analiza el comportamiento de los endpoints, como los ordenadores, los servidores, los dispositivos móviles, etc., en busca de actividades sospechosas o maliciosas. El EDR puede detectar y responder a los ataques en tiempo real.">EDR</abbr> alerta de actividad
+anómala en un equipo, aparecen conexiones a un dominio malicioso y el usuario
+afirma que acaba de abrir un adjunto sospechoso. A partir de ahí, el equipo de
+respuesta tiene que decidir si primero aísla, si captura algo de evidencia o si
+debe cortar también accesos e identidad.</p>
 <pre class="mermaid"><code>flowchart TD
 
     A["Detectáis comportamiento anómalo"] --&gt; B{"¿Hay daño activo? (cifrado/exfiltración/propagación)"}
@@ -9556,6 +9646,9 @@ porque el tiempo durante un incidente es oro.</p>
 <p>La estrategia de contención no se elige en abstracto. Se elige según dos
 preguntas: <strong>qué objetivo persigo ahora mismo</strong> y <strong>con qué capacidad real
 cuento</strong>.</p>
+<p>En otras palabras: una buena estrategia no es la más sofisticada, sino la que
+realmente podéis ejecutar bien con el equipo, las herramientas y el tiempo que
+tenéis en ese momento.</p>
 <ol>
 <li>
 <p>Evaluad capacidades.</p>
@@ -9618,6 +9711,26 @@ agrupamos las medidas por capas: red, identidad, endpoint y servicios.</p>
 <li><strong>Medidas tácticas (minutos-horas)</strong>: frenan el incidente <em>ya</em>.</li>
 <li><strong>Medidas estratégicas (días-semanas)</strong>: reducen reentrada y elevan la postura de seguridad.</li>
 </ul>
+<p>Dicho de forma práctica, cuando ya habéis identificado el incidente, la
+pregunta deja de ser "qué está pasando" y pasa a ser <strong>dónde corto primero para
+que el daño no siga avanzando</strong>. A veces la respuesta está en red; otras, en la
+identidad; otras, en el propio equipo o en la aplicación expuesta.</p>
+<div class="admonition example">
+<p class="admonition-title">Traducción rápida a un caso real</p>
+<p>Si una cuenta robada sigue accediendo por <abbr title="Red Privada Virtual. Es un sistema de seguridad que se utiliza para establecer una conexión segura entre un cliente y un servidor a través de una red pública. Las VPN cifran la comunicación, protegen la privacidad de los datos y permiten a los usuarios acceder a recursos de red de forma segura.">VPN</abbr> y además lanza procesos
+sospechosos en varios equipos, la contención rara vez se resuelve con una
+sola medida.</p>
+<ul>
+<li>En <strong>identidad</strong>, revocas sesiones y cambias credenciales.</li>
+<li>En <strong>red</strong>, cortas rutas o limitas salida si hay comunicación con el exterior.</li>
+<li>En <strong>endpoint</strong>, aíslas los equipos afectados.</li>
+</ul>
+<p>Lo importante es entender que las capas <strong>se combinan</strong>: no compiten entre
+sí, se refuerzan.</p>
+</div>
+<p>Esta clasificación ayuda mucho en clase porque evita mezclar acciones con fines
+distintos. No es lo mismo aislar un equipo ahora que rediseñar una segmentación
+para que el mismo problema no vuelva a repetirse.</p>
 <h4 id="51-red">5.1. Red<a class="headerlink" href="#51-red" title="Permanent link">&para;</a></h4>
 <p><strong>Táctica (minutos-horas):</strong></p>
 <ul>
@@ -9707,6 +9820,9 @@ evidencias se recogen y quién toma cada decisión.</p>
 <li>robo de datos,</li>
 <li>uso no autorizado o mal uso de activos.</li>
 </ul>
+<p>Lo importante aquí es entender que un <abbr title="Conjunto de procedimientos y acciones predefinidas que se utilizan para responder a incidentes de seguridad. Los playbooks pueden incluir pasos para identificar, contener, erradicar y recuperar de un incidente de seguridad, así como para comunicarlo a las partes interesadas.">playbook</abbr> no sustituye al análisis. Sirve
+para que el equipo no parta de cero y pueda tomar las primeras decisiones con
+orden y criterio.</p>
 <div class="admonition note">
 <p class="admonition-title">Nota</p>
 <p>No todos los ataques requieren un <abbr title="Conjunto de procedimientos y acciones predefinidas que se utilizan para responder a incidentes de seguridad. Los playbooks pueden incluir pasos para identificar, contener, erradicar y recuperar de un incidente de seguridad, así como para comunicarlo a las partes interesadas.">playbook</abbr> “a medida”. Por ejemplo, en un ataque a una aplicación web, puede no existir un procedimiento específico para esa vulnerabilidad concreta. Aun así, suele haber playbooks útiles para piezas del problema (<abbr title="Término genérico que engloba a todos los programas informáticos maliciosos, como virus, troyanos, gusanos, spyware, bots, rootkits, ransomware, etc.">malware</abbr>, elevación de privilegios, persistencia, uso indebido de cuentas). Una investigación forense suele conducir al origen (la vulnerabilidad) y la remediación completa se termina de cerrar en recuperación.</p>
@@ -9989,9 +10105,18 @@ Este ejemplo es genérico y se puede adaptar a cada escenario:</p>
 <li>Documentar: qué, cuándo, quién, por qué.</li>
 </ol>
 <p><abbr title="Agencia de Seguridad de Infraestructura y Ciberseguridad de los Estados Unidos. Es una agencia del gobierno de los Estados Unidos que se encarga de proteger la infraestructura crítica y la ciberseguridad del país. La CISA puede colaborar con otros organismos de seguridad, como el FBI, el NSA, el DHS, etc.">CISA</abbr> publica listas y guías de respuesta para <abbr title="Programa informático que cifra los archivos de un sistema y pide un rescate a cambio de la clave de cifrado. Los ransomware pueden cifrar archivos personales, documentos importantes, bases de datos, etc.">ransomware</abbr> que incluyen checklist y acciones recomendadas. (<a href="https://www.cisa.gov/stopransomware/ransomware-guide" title="StopRansomware Guide">cisa.gov</a>)</p>
+<div class="admonition tip">
+<p class="admonition-title">Cómo usar este checklist</p>
+<p>No es un guion rígido. Es una ayuda para no olvidar lo esencial cuando hay
+prisa. En un caso real, el orden puede variar si existe daño activo,
+servicios críticos o evidencias volátiles que se van a perder.</p>
+</div>
 <h3 id="10-evidencia-forense-y-expectativas-de-direccion">10. Evidencia forense y expectativas de dirección<a class="headerlink" href="#10-evidencia-forense-y-expectativas-de-direccion" title="Permanent link">&para;</a></h3>
 <p>La contención no es solo técnica. Durante un incidente, el equipo también tiene
 que gestionar la evidencia forense y las expectativas de dirección.</p>
+<p>Esto importa porque muchas decisiones de contención se toman bajo presión. Si
+la parte técnica no comunica bien qué sabe, qué no sabe todavía y qué riesgo
+asume cada medida, la organización puede tomar decisiones precipitadas.</p>
 <h4 id="101-apoyo-forense-interno-o-externo">10.1. Apoyo forense (interno o externo)<a class="headerlink" href="#101-apoyo-forense-interno-o-externo" title="Permanent link">&para;</a></h4>
 <p>Durante la respuesta, el equipo recopila evidencia digital para entender qué
 ocurrió. Parte de esa evidencia sirve para identificar otros sistemas
@@ -10015,7 +10140,19 @@ comprometidos y parte para llegar a la causa raíz.</p>
 <li>y resistir la tentación de especular para “cerrar” el tema sin información completa.</li>
 </ul>
 <p>La especulación suele causar más daño que beneficio cuando luego hay que rectificar.</p>
-<h3 id="11-actividades-de-aula-recomendadas">11. Actividades de aula recomendadas<a class="headerlink" href="#11-actividades-de-aula-recomendadas" title="Permanent link">&para;</a></h3>
+<h3 id="11-que-debes-recordar">11. Qué debes recordar<a class="headerlink" href="#11-que-debes-recordar" title="Permanent link">&para;</a></h3>
+<p>Si tuvieras que quedarte con una sola idea de este tema, sería esta:
+<strong>contener no es cerrar el incidente, sino frenar su crecimiento con el menor
+impacto posible y sin perder lo necesario para entenderlo</strong>.</p>
+<p>En la práctica, una buena contención combina tres cosas al mismo tiempo:</p>
+<ul>
+<li>rapidez para detener el daño;</li>
+<li>criterio para no romper servicios ni perder evidencia;</li>
+<li>y método para enlazar la respuesta inmediata con la investigación y la recuperación.</li>
+</ul>
+<p>Cuando estas tres piezas encajan, la organización deja de reaccionar "a golpes"
+y empieza a responder con control.</p>
+<h3 id="12-actividades-de-aula-recomendadas">12. Actividades de aula recomendadas<a class="headerlink" href="#12-actividades-de-aula-recomendadas" title="Permanent link">&para;</a></h3>
 <p>Para cerrar el tema, estas actividades ayudan a practicar la contención no como
 una lista de medidas aisladas, sino como una secuencia de decisiones justificadas.</p>
 <p>A continuación, actividades pensadas para que alumnos y alumnas practiquéis contención de forma realista:</p>

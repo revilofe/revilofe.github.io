@@ -5814,6 +5814,8 @@
       
         
       
+        
+      
     
     
     
@@ -6040,6 +6042,36 @@
     
   
     2.2.4.-Evolución de SIEM
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../u02/teoria/IS-U2.2.5.-SOC-1Nivel/" class="md-nav__link">
+        
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"/></svg>
+  
+  <span class="md-ellipsis">
+    
+  
+    2.2.5.-SOC: Analista de nivel 1
   
 
     
@@ -9272,13 +9304,30 @@
 cuando el equipo necesita responder con criterio a preguntas como estas: <strong>qué ha
 pasado, cómo ha pasado, qué alcance tiene, qué impacto ha tenido y qué hay que
 cambiar para que no vuelva a ocurrir</strong>.</p>
+<p><img alt="Metodología funcional de investigación en diez pasos" src="../assets/IS-U3.3.2.-investigacion003.png" /></p>
+<figcaption>Relación entre forense digital, investigación de incidentes y respuesta a incidentes.</figcaption>
+</figure>
 <p>En esta parte del tema vamos a centrarnos en cómo se organiza esa investigación.
 La idea principal es sencilla: <strong>no se investiga “a ver qué sale”, sino para
 confirmar o descartar una hipótesis a partir de evidencias</strong>.</p>
-<blockquote>
-<p>Este tema está directamente alineado con el RA 3:  <br />
-   - c) se ha realizado la investigación de incidentes de ciberseguridad.</p>
-</blockquote>
+<table>
+<thead>
+<tr>
+<th>Código</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>RA3</td>
+<td>Investiga incidentes de ciberseguridad analizando los riesgos implicados y definiendo las posibles medidas a adoptar.</td>
+</tr>
+<tr>
+<td>CEc</td>
+<td>Se ha realizado la investigación de incidentes de ciberseguridad.</td>
+</tr>
+</tbody>
+</table>
 <div class="admonition definition">
 <p class="admonition-title">Definición</p>
 <p>La investigación de incidentes es el proceso ordenado mediante el cual se
@@ -9422,7 +9471,7 @@ apuntan a otra vía de entrada, la hipótesis inicial debe descartarse.</p>
 <li><strong>Elaboración del informe</strong>.</li>
 </ol>
 <figure>
-<img alt="Metodología funcional de investigación en diez pasos" src="../assets/IS-U3.3.2.-investigacion003.png" />
+<img alt="Metodología funcional de investigación en diez pasos" src="../assets/IS-U3.3.2.-investigacion004.png" />
 
 <figcaption>Metodología funcional de investigación: de la detección inicial al informe final.</figcaption>
 </figure>
@@ -9514,7 +9563,7 @@ siempre explica <strong>en qué fase del ataque</strong> se encontraba el advers
 eso resulta útil la <strong>Cyber Kill Chain</strong>, un modelo que organiza la intrusión en
 siete fases.</p>
 <figure>
-<img alt="La cadena de ciberataque" src="../assets/IS-U3.3.2.-investigacion004.png" />
+<img alt="La cadena de ciberataque" src="../assets/IS-U3.3.2.-investigacion005.png" />
 
 <figcaption>La Cyber Kill Chain permite situar cada evidencia dentro de la secuencia del ataque.</figcaption>
 </figure>
@@ -9604,7 +9653,7 @@ cuatro vértices:</p>
 <li><strong>Víctima</strong>.</li>
 </ul>
 <figure>
-<img alt="Modelo de diamante del análisis de intrusiones" src="../assets/IS-U3.3.2.-investigacion005.png" />
+<img alt="Modelo de diamante del análisis de intrusiones" src="../assets/IS-U3.3.2.-investigacion006.png" />
 
 <figcaption>El modelo de diamante relaciona quién ataca, con qué recursos, contra qué víctima y usando qué infraestructura.</figcaption>
 </figure>
@@ -9629,7 +9678,7 @@ punto de vista técnico.</p>
 su relación</strong>. El adversario desarrolla o utiliza una capacidad, la despliega
 sobre una infraestructura y la dirige contra una víctima.</p>
 <figure>
-<img alt="Relación entre los vértices del modelo de diamante" src="../assets/IS-U3.3.2.-investigacion006.png" />
+<img alt="Relación entre los vértices del modelo de diamante" src="../assets/IS-U3.3.2.-Investigacion007.png" />
 
 <figcaption>Relación entre adversario, capacidad, infraestructura y víctima dentro de un mismo evento de intrusión.</figcaption>
 </figure>
@@ -9658,6 +9707,14 @@ modelo de diamante, el análisis mejora mucho más:</p>
 <li>la cuenta comprometida y el sistema afectado encajan como <strong>víctima</strong>;</li>
 <li>y el conjunto apunta a un mismo <strong>adversario</strong> o a una misma forma de operar.</li>
 </ul>
+<p><img alt="" src="../assets/IS-U3.3.2.-Investigacion008.png" /></p>
+<figure>
+<img alt="Uso del modelo diamante" src="../assets/IS-U3.3.2.-Investigacion008.png" />
+
+<figcaption>Uso del modelo diamante</figcaption>
+</figure>
+<p>En el ejemplo, el atacante se apoya en una capacidad concreta, en este caso un watering hole, la despliega mediante una infraestructura como Badsite.com, y la orienta contra una víctima concreta, Lt0769.acme.local. Así, el diagrama no solo enumera piezas, sino que muestra cómo se conectan dentro de un mismo evento de intrusión.</p>
+<p>Su valor está en que ayuda a pasar de “datos sueltos” a una visión más útil del incidente: quién ataca, con qué medios, usando qué soporte técnico y contra quién.</p>
 <div class="admonition note">
 <p class="admonition-title">Matiz importante</p>
 <p>No toda herramienta legítima es, por sí sola, una capacidad maliciosa. Por

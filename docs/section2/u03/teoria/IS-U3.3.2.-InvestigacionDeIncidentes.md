@@ -25,6 +25,11 @@ cuando el equipo necesita responder con criterio a preguntas como estas: **qué 
 pasado, cómo ha pasado, qué alcance tiene, qué impacto ha tenido y qué hay que
 cambiar para que no vuelva a ocurrir**.
 
+![Metodología funcional de investigación en diez pasos](assets/IS-U3.3.2.-investigacion003.png)
+<figcaption>Relación entre forense digital, investigación de incidentes y respuesta a incidentes.</figcaption>
+</figure>
+
+
 En esta parte del tema vamos a centrarnos en cómo se organiza esa investigación.
 La idea principal es sencilla: **no se investiga “a ver qué sale”, sino para
 confirmar o descartar una hipótesis a partir de evidencias**.
@@ -163,7 +168,7 @@ Una forma práctica de organizar la investigación es seguir estas diez fases:
 10. **Elaboración del informe**.
 
 <figure markdown="span">
-![Metodología funcional de investigación en diez pasos](assets/IS-U3.3.2.-investigacion003.png)
+![Metodología funcional de investigación en diez pasos](assets/IS-U3.3.2.-investigacion004.png)
 <figcaption>Metodología funcional de investigación: de la detección inicial al informe final.</figcaption>
 </figure>
 
@@ -271,7 +276,7 @@ eso resulta útil la **Cyber Kill Chain**, un modelo que organiza la intrusión 
 siete fases.
 
 <figure markdown="span">
-![La cadena de ciberataque](assets/IS-U3.3.2.-investigacion004.png)
+![La cadena de ciberataque](assets/IS-U3.3.2.-investigacion005.png)
 <figcaption>La Cyber Kill Chain permite situar cada evidencia dentro de la secuencia del ataque.</figcaption>
 </figure>
 
@@ -329,7 +334,7 @@ cuatro vértices:
 - **Víctima**.
 
 <figure markdown="span">
-![Modelo de diamante del análisis de intrusiones](assets/IS-U3.3.2.-investigacion005.png)
+![Modelo de diamante del análisis de intrusiones](assets/IS-U3.3.2.-investigacion006.png)
 <figcaption>El modelo de diamante relaciona quién ataca, con qué recursos, contra qué víctima y usando qué infraestructura.</figcaption>
 </figure>
 
@@ -364,8 +369,9 @@ El valor del modelo no está solo en nombrar cuatro elementos, sino en **mostrar
 su relación**. El adversario desarrolla o utiliza una capacidad, la despliega
 sobre una infraestructura y la dirige contra una víctima.
 
+
 <figure markdown="span">
-![Relación entre los vértices del modelo de diamante](assets/IS-U3.3.2.-investigacion006.png)
+![Relación entre los vértices del modelo de diamante](./assets/IS-U3.3.2.-Investigacion007.png)
 <figcaption>Relación entre adversario, capacidad, infraestructura y víctima dentro de un mismo evento de intrusión.</figcaption>
 </figure>
 
@@ -377,6 +383,7 @@ Este enfoque ayuda a transformar datos sueltos en preguntas de análisis más
 - ¿a qué víctima se ha dirigido?;
 - ¿qué relación existe entre esos elementos?;
 - ¿qué puede deducirse del objetivo perseguido?
+
 
 #### 5.3. Por qué es útil en la práctica
 
@@ -394,6 +401,17 @@ modelo de diamante, el análisis mejora mucho más:
 - la *web shell* y los comandos encajan como **capacidad**;
 - la cuenta comprometida y el sistema afectado encajan como **víctima**;
 - y el conjunto apunta a un mismo **adversario** o a una misma forma de operar.
+
+![](./assets/IS-U3.3.2.-Investigacion008.png)
+<figure markdown="span">
+![Uso del modelo diamante](./assets/IS-U3.3.2.-Investigacion008.png)
+<figcaption>Uso del modelo diamante</figcaption>
+</figure>
+
+En el ejemplo, el atacante se apoya en una capacidad concreta, en este caso un watering hole, la despliega mediante una infraestructura como Badsite.com, y la orienta contra una víctima concreta, Lt0769.acme.local. Así, el diagrama no solo enumera piezas, sino que muestra cómo se conectan dentro de un mismo evento de intrusión.
+
+Su valor está en que ayuda a pasar de “datos sueltos” a una visión más útil del incidente: quién ataca, con qué medios, usando qué soporte técnico y contra quién.
+
 
 !!! note "Matiz importante"
     No toda herramienta legítima es, por sí sola, una capacidad maliciosa. Por

@@ -27,9 +27,9 @@ La normativa del módulo conecta este contenido con la verificación del softwar
 | --- | --- |
 | RA3 | Verifica el funcionamiento de programas diseñando y realizando pruebas. |
 | CE b | Se han definido casos de prueba. |
-| CE g | Se han efectuado pruebas unitarias de clases y funciones. |
-| CE i | Se han implementado pruebas automáticas. |
-| CE k | Se han aplicado normas de calidad a los procedimientos de desarrollo de software. |
+| CE f | Se han efectuado pruebas unitarias de clases y funciones. |
+| CE g | Se han implementado pruebas automáticas. |
+| CE i | Se han utilizado dobles de prueba para aislar los componentes durante las pruebas. |
 
 !!! abstract "Qué vas a aprender en este apartado"
     - Entender qué es una prueba unitaria y qué valor aporta.

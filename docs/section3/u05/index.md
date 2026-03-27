@@ -166,5 +166,5 @@ Esta unidad puede evaluarse combinando varias evidencias:
 La unidad 5 tiene ya teoría consolidada, pero todavía puede ampliarse con:
 
 - una práctica específicamente alineada con testing y depuración;
-- más presentaciones asociadas a `5.2`, `5.2.2`, `5.3` y `5.3.1`;
+- más presentaciones asociadas a `5.2` y `5.2.2`;
 - materiales de evaluación o cuestionarios GIFT para reforzar conceptos.

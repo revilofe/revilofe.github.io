@@ -102,6 +102,8 @@ Aquí tienes acceso directo a todas las presentaciones disponibles, organizadas 
 
 * [ED-U5.1 - Pruebas](https://revilofe.github.io/slides/section3-ed/ED-U5.1.-Pruebas.html)
 * [ED-U5.2.1 - Kotest](https://revilofe.github.io/slides/section3-ed/ED-U5.2.1.-Kotest.html)
+* [ED-U5.3 - Depuración](https://revilofe.github.io/slides/section3-ed/ED-U5.3.-Depuracion.html)
+* [ED-U5.3.1 - Logging Code](https://revilofe.github.io/slides/section3-ed/ED-U5.3.1.-LoggingCode.html)
 
 ### Incidentes de Seguridad (IS)
 

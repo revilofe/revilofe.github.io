@@ -30,7 +30,13 @@ Desde el punto de vista de la programación didáctica, este documento se vincul
 | CE i | Se han implementado pruebas automáticas. |
 | CE k | Se han aplicado normas de calidad a los procedimientos de desarrollo de software. |
 
-### 2. Qué es Kotest y por qué nos interesa
+!!! abstract "Qué vas a aprender en este apartado"
+    - Identificar qué aporta Kotest en un proyecto Kotlin sobre JVM.
+    - Reconocer varios estilos de especificación y cuándo usarlos.
+    - Aplicar aserciones, hooks y pruebas basadas en datos.
+    - Comprobar excepciones y escenarios asíncronos con una sintaxis expresiva.
+
+### 1. Qué es Kotest y por qué nos interesa
 
 [Kotest](https://kotest.io/) es un framework de pruebas para Kotlin. Su principal ventaja es que permite escribir tests de forma bastante expresiva y cercana al dominio del problema, algo especialmente útil cuando queremos que los tests sirvan también como documentación.
 
@@ -45,7 +51,7 @@ Aunque soporta varias plataformas de Kotlin, en este tema nos centraremos en **J
 !!! note "Idea importante"
     Kotest no sustituye a Kotlin ni a JUnit como lenguaje o plataforma. Lo que aporta es una forma más cómoda y expresiva de definir y ejecutar pruebas sobre JVM.
 
-### 3. Configuración básica en un proyecto JVM
+### 2. Configuración básica en un proyecto JVM
 
 En un proyecto Gradle con Kotlin DSL, una configuración mínima suele incluir el motor de ejecución y el módulo de aserciones. Conviene declarar la versión en una variable para mantenerla en un único sitio.
 
@@ -68,11 +74,11 @@ Lo práctico aquí no es memorizar los artefactos, sino entender la idea:
 - otro aporta aserciones;
 - y puedes añadir extensiones o módulos específicos según tus necesidades.
 
-### 4. Estilos de prueba
+### 3. Estilos de prueba
 
 Kotest ofrece varios estilos. No se trata de que uno sea "el correcto" y el resto no, sino de elegir el que mejor comunica el comportamiento que quieres describir.
 
-#### 4.1. `BehaviorSpec`: estilo BDD
+#### 3.1. `BehaviorSpec`: estilo BDD
 
 Este estilo usa una narrativa cercana a **given / when / then**, muy útil cuando el comportamiento se entiende como una historia o escenario.
 
@@ -98,7 +104,7 @@ class CardPaymentTests : BehaviorSpec({
 
 Este estilo funciona bien cuando quieres destacar el contexto y la consecuencia.
 
-#### 4.2. `ShouldSpec`: pruebas centradas en lo esperado
+#### 3.2. `ShouldSpec`: pruebas centradas en lo esperado
 
 `ShouldSpec` resulta muy legible cuando cada test expresa algo que el sistema **debería** hacer.
 
@@ -149,7 +155,7 @@ class PaymentTests : ShouldSpec({
 })
 ```
 
-#### 4.3. `FeatureSpec`: funcionalidades y escenarios
+#### 3.3. `FeatureSpec`: funcionalidades y escenarios
 
 Si quieres representar funcionalidades con varios escenarios, `FeatureSpec` encaja bastante bien.
 
@@ -175,7 +181,7 @@ class HomePageTests : FeatureSpec({
 })
 ```
 
-#### 4.4. `DescribeSpec`: un estilo muy usado en este bloque
+#### 3.4. `DescribeSpec`: un estilo muy usado en este bloque
 
 `DescribeSpec` es especialmente popular porque recuerda al estilo usado en ecosistemas como JavaScript o Ruby y encaja muy bien con ejemplos de dominio.
 
@@ -207,11 +213,11 @@ class PaymentDescribeSpecTests : DescribeSpec({
 })
 ```
 
-### 5. Aserciones
+### 4. Aserciones
 
 Las **aserciones** son las comprobaciones que indican si el resultado del test es correcto. Kotest incorpora una biblioteca muy amplia de *matchers*.
 
-#### 5.1. Algunos matchers frecuentes
+#### 4.1. Algunos matchers frecuentes
 
 ```kotlin
 import io.kotest.core.spec.style.StringSpec
@@ -253,7 +259,7 @@ class AssertionExamples : StringSpec({
 })
 ```
 
-#### 5.2. Módulos especializados de aserciones
+#### 4.2. Módulos especializados de aserciones
 
 Además del módulo central, Kotest ofrece módulos para escenarios concretos:
 
@@ -277,7 +283,7 @@ dependencies {
 }
 ```
 
-### 6. Pruebas de excepciones
+### 5. Pruebas de excepciones
 
 Comprobar excepciones es una necesidad habitual. Kotest lo resuelve de forma bastante directa con `shouldThrow`.
 
@@ -320,7 +326,7 @@ class ExceptionTests : StringSpec({
 
 En la práctica, esto ayuda a comprobar reglas de validación sin necesidad de usar bloques `try/catch` que harían el test más ruidoso.
 
-### 7. Ganchos de ciclo de vida
+### 6. Ganchos de ciclo de vida
 
 Los *hooks* de ciclo de vida permiten preparar y limpiar el escenario antes o después de cada prueba.
 
@@ -366,7 +372,7 @@ class TransactionStatementSpec : ShouldSpec({
 
 Estos ganchos son útiles, pero conviene no abusar de ellos. Si el contexto compartido es demasiado grande, el test deja de ser fácil de leer.
 
-### 8. Pruebas basadas en datos
+### 7. Pruebas basadas en datos
 
 Cuando la lógica es la misma y lo que cambia son los valores de entrada, las pruebas basadas en datos ayudan a evitar duplicación.
 
@@ -405,7 +411,7 @@ class IncomeTaxTests : FunSpec({
 
 Lo relevante aquí es que el comportamiento se expresa una sola vez y los datos cambian de forma ordenada.
 
-### 9. Pruebas no deterministas y asíncronas
+### 8. Pruebas no deterministas y asíncronas
 
 A veces necesitamos comprobar comportamientos que no ocurren justo en el instante en el que lanzamos la acción. En esos casos, Kotest ofrece utilidades como `eventually`.
 
@@ -443,7 +449,7 @@ class TransactionTests : ShouldSpec({
 
 Esto evita estrategias poco fiables como meter `Thread.sleep()` en mitad del test y esperar que el tiempo elegido coincida con la realidad.
 
-### 10. Criterios para elegir un estilo y usar Kotest con sentido
+### 9. Criterios para elegir un estilo y usar Kotest con sentido
 
 Kotest ofrece muchas opciones, pero no conviene usarlas todas a la vez. En clase y en proyectos reales suele funcionar mejor esta idea:
 
@@ -453,7 +459,7 @@ Kotest ofrece muchas opciones, pero no conviene usarlas todas a la vez. En clase
 - usa *matchers* expresivos para que el fallo explique qué ocurrió;
 - automatiza los escenarios repetitivos con datos cuando proceda.
 
-### 11. Conclusión
+### 10. Conclusión
 
 ## Fuentes y referencias
 

@@ -31,11 +31,17 @@ La normativa del módulo conecta este contenido con la verificación del softwar
 | CE i | Se han implementado pruebas automáticas. |
 | CE k | Se han aplicado normas de calidad a los procedimientos de desarrollo de software. |
 
-### 2. Idea clave del tema
+!!! abstract "Qué vas a aprender en este apartado"
+    - Entender qué es una prueba unitaria y qué valor aporta.
+    - Diferenciar pruebas unitarias y desarrollo guiado por pruebas.
+    - Diseñar casos de prueba usando clases de equivalencia y valores límite.
+    - Escribir tests más expresivos y fáciles de mantener.
+
+### 1. Idea clave del tema
 
 Lo importante aquí es entender que una prueba unitaria no solo sirve para "comprobar si algo funciona". Bien planteada, también sirve para **documentar el comportamiento esperado**, **detectar regresiones** y **diseñar código más claro y mantenible**.
 
-### 3. Qué es una prueba unitaria
+### 2. Qué es una prueba unitaria
 
 Una **prueba unitaria** es una comprobación automatizada sobre una parte pequeña del sistema, normalmente una clase, una función o un método. Su objetivo es verificar que esa unidad se comporta como esperamos en un escenario concreto.
 
@@ -46,7 +52,7 @@ En la práctica, estas pruebas suelen ejecutarse durante el desarrollo y forman 
 !!! note "Qué significa aislar una unidad"
     Aislar una unidad no siempre implica dejarla completamente sola, pero sí evitar que el resultado del test dependa de factores externos como una base de datos, una API remota o el sistema de ficheros, salvo que eso sea precisamente lo que queremos probar.
 
-### 4. Por qué merece la pena hacer pruebas unitarias
+### 3. Por qué merece la pena hacer pruebas unitarias
 
 Existe el mito de que escribir pruebas hace perder tiempo. En realidad, lo habitual es lo contrario: **el tiempo que inviertes en probar antes lo recuperas cuando corriges menos fallos tarde**.
 
@@ -61,7 +67,7 @@ Las pruebas unitarias aportan valor porque:
 
 Cuando una batería de pruebas está bien construida, el equipo puede cambiar el diseño interno del código con más confianza, porque dispone de una red de seguridad que avisa si algo se rompe.
 
-### 5. Qué hace que un test unitario sea útil
+### 4. Qué hace que un test unitario sea útil
 
 No basta con "tener tests". Un test aporta valor cuando cumple varias condiciones:
 
@@ -73,7 +79,7 @@ No basta con "tener tests". Un test aporta valor cuando cumple varias condicione
 
 Una buena regla práctica es esta: si el nombre del test no deja claro qué pretende demostrar, probablemente el diseño del propio test necesita revisión.
 
-### 6. Desarrollo guiado por pruebas: qué es TDD
+### 5. Desarrollo guiado por pruebas: qué es TDD
 
 El **desarrollo guiado por pruebas** o **TDD** (*Test Driven Development*) propone una forma distinta de trabajar: en lugar de escribir primero la implementación y probarla después, **escribimos antes la prueba que describe el comportamiento esperado**.
 
@@ -81,7 +87,7 @@ Esto puede resultar incómodo al principio, porque obliga a pensar antes de prog
 
 > TDD no es "hacer muchos tests". TDD consiste en diseñar el comportamiento del software desde fuera, pensando primero en su uso y después en su implementación.
 
-#### 6.1. Las dos ideas de fondo
+#### 5.1. Las dos ideas de fondo
 
 Podemos resumir la técnica en dos ideas muy directas:
 
@@ -90,7 +96,7 @@ Podemos resumir la técnica en dos ideas muy directas:
 
 La consecuencia práctica es importante: **si no puedes formular qué debería pasar, aún no deberías estar programando cómo hacerlo**.
 
-#### 6.2. El ciclo RED, GREEN, REFACTOR
+#### 5.2. El ciclo RED, GREEN, REFACTOR
 
 TDD suele explicarse mediante un ciclo muy corto:
 
@@ -116,7 +122,7 @@ Cada fase tiene un objetivo distinto:
 
 Lo importante aquí es no saltarse la tercera fase. Si solo escribes pruebas y código mínimo, pero nunca refactorizas, terminarás con una solución que funciona pero que puede degradarse con rapidez.
 
-### 7. Diseñar casos de prueba con criterio
+### 6. Diseñar casos de prueba con criterio
 
 Una de las dificultades reales al empezar no es escribir la sintaxis del test, sino **decidir qué escenarios merece la pena probar**.
 
@@ -128,7 +134,7 @@ Para eso conviene pensar en términos de:
 - casos representativos;
 - errores frecuentes.
 
-#### 7.1. Dominio de ejemplo
+#### 6.1. Dominio de ejemplo
 
 Vamos a trabajar con este requisito:
 
@@ -141,7 +147,7 @@ Vamos a trabajar con este requisito:
 
 Este ejemplo es útil porque obliga a probar varias combinaciones sin ser excesivamente complejo.
 
-#### 7.2. Clases de equivalencia
+#### 6.2. Clases de equivalencia
 
 Una **clase de equivalencia** agrupa entradas que deberían producir el mismo comportamiento. Usarla nos evita escribir tests redundantes.
 
@@ -157,7 +163,7 @@ Para una constructora aparecen dos grupos por número de albañiles:
 
 Si combinamos tipo de cliente, número de albañiles y deuda, podemos definir los escenarios de prueba sin probar infinitas combinaciones.
 
-#### 7.3. Escenarios representativos
+#### 6.3. Escenarios representativos
 
 Una posible selección razonable sería esta:
 
@@ -170,7 +176,7 @@ Una posible selección razonable sería esta:
 
 Fíjate en una idea importante: para representar la frontera entre "pocos" y "muchos" elegimos valores cercanos al límite, por ejemplo **4** y **5**. Esto ayuda a detectar errores típicos en condiciones del tipo `>` frente a `>=`.
 
-### 8. Cómo agrupar y nombrar los tests
+### 7. Cómo agrupar y nombrar los tests
 
 Un error habitual es escribir pruebas correctas desde el punto de vista técnico, pero difíciles de leer. Si eso ocurre, el test funciona como comprobación automática, pero falla como documentación.
 
@@ -196,7 +202,7 @@ Esta organización mejora la cohesión porque:
 - evita mezclar fixtures innecesarios;
 - facilita leer el resultado cuando un test falla.
 
-#### 8.1. Nombres expresivos
+#### 7.1. Nombres expresivos
 
 Si llamas a una variable `constructoraHurlingham` y el test falla, el nombre aporta muy poca información sobre el escenario de negocio. En cambio, `constructoraConMuchosAlbaniles` deja claro qué representa esa instancia dentro del caso de prueba.
 
@@ -261,7 +267,7 @@ class FerreteriaTest : DescribeSpec({
 
 En la práctica esto significa que el test no solo te dice que algo ha fallado, sino también **qué regla del negocio parecía incumplirse**.
 
-### 9. Patrón AAA: Arrange, Act, Assert
+### 8. Patrón AAA: Arrange, Act, Assert
 
 Una forma muy extendida de estructurar pruebas es el patrón **AAA**:
 
@@ -288,7 +294,7 @@ describe("Un ave") {
 
 Cuando un test mezcla demasiadas cosas en cada fase, suele ser señal de que estamos probando demasiado en un único caso.
 
-### 10. Buenas prácticas al trabajar con tests unitarios
+### 9. Buenas prácticas al trabajar con tests unitarios
 
 Como cierre operativo, conviene quedarse con estas pautas:
 
@@ -302,7 +308,7 @@ Como cierre operativo, conviene quedarse con estas pautas:
 !!! tip "Lo que debería recordar el alumnado"
     Un buen test no es solo el que pasa, sino el que ayuda a entender el comportamiento del sistema y detecta con claridad cuándo algo deja de funcionar.
 
-### 11. Conclusión
+### 10. Conclusión
 
 Las pruebas unitarias son una herramienta de calidad, pero también una herramienta de diseño. TDD lleva esta idea un paso más allá: obliga a pensar primero en el comportamiento esperado y después en la implementación.
 

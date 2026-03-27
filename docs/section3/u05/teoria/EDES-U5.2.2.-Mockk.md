@@ -31,7 +31,13 @@ En la normativa de la unidad, este contenido se relaciona con el diseño y la au
 | CE i | Se han implementado pruebas automáticas. |
 | CE k | Se han aplicado normas de calidad a los procedimientos de desarrollo de software. |
 
-### 2. Qué problema resuelve MockK
+!!! abstract "Qué vas a aprender en este apartado"
+    - Entender para qué sirve una biblioteca de mocking en Kotlin.
+    - Crear mocks, spies y mocks relajados con MockK.
+    - Capturar argumentos y controlar colaboraciones entre objetos.
+    - Simular singletons y funciones con retorno `Unit`.
+
+### 1. Qué problema resuelve MockK
 
 MockK es una biblioteca de *mocking* para Kotlin. Su objetivo es permitirnos **simular colaboraciones** entre objetos durante una prueba.
 
@@ -47,7 +53,7 @@ En Kotlin esto cobra especial importancia porque muchas clases y métodos son fi
 !!! note "Qué significa mockear"
     Mockear no es "falsear por falsear". Se trata de sustituir una dependencia real por un doble de prueba controlado para centrarnos en el comportamiento de la unidad que queremos verificar.
 
-### 3. Instalación básica
+### 2. Instalación básica
 
 La configuración mínima en Gradle suele quedar así:
 
@@ -61,7 +67,7 @@ dependencies {
 
 Como criterio general, conviene consultar la documentación del proyecto para elegir una versión compatible con la versión de Kotlin y del motor de pruebas que uses.
 
-### 4. Ejemplo básico de mock
+### 3. Ejemplo básico de mock
 
 Partimos de un servicio sencillo:
 
@@ -107,7 +113,7 @@ Las piezas importantes del ejemplo son:
 - `every { ... } returns ...` define su comportamiento;
 - `verify { ... }` comprueba que la interacción ocurrió.
 
-### 5. Uso de anotaciones
+### 4. Uso de anotaciones
 
 MockK también permite declarar mocks mediante anotaciones. Esto resulta útil cuando el test tiene varias dependencias y quieres dejar más visible qué papel juega cada una.
 
@@ -144,7 +150,7 @@ class AnnotationMockKUnitTest {
 
 Aquí MockK intenta inyectar los mocks en el objeto bajo prueba, normalmente por nombre y después por tipo. Esto reduce bastante el trabajo repetitivo cuando el test tiene varias colaboraciones.
 
-### 6. Spy: mezclar comportamiento real y simulado
+### 5. Spy: mezclar comportamiento real y simulado
 
 Un **spy** crea un objeto que conserva su comportamiento real salvo en los métodos que decidimos sustituir.
 
@@ -183,7 +189,7 @@ class SpyKUnitTest {
 }
 ```
 
-### 7. Mocks relajados
+### 6. Mocks relajados
 
 Por defecto, un mock lanza una excepción si llamas a un método cuyo comportamiento no has definido. Cuando ese nivel de control no compensa, MockK permite usar **mocks relajados**.
 
@@ -217,7 +223,7 @@ class RelaxedMockKUnitTest {
 }
 ```
 
-### 8. Mockear objetos `object`
+### 7. Mockear objetos `object`
 
 Kotlin permite declarar singletons con `object`. MockK proporciona `mockkObject` para poder simular ese tipo de elementos.
 
@@ -249,7 +255,7 @@ class ObjectMockKTest {
 
 Este caso aparece menos en código bien desacoplado, pero existe, especialmente en utilidades, *helpers* o adaptadores heredados.
 
-### 9. Mockeado jerárquico
+### 8. Mockeado jerárquico
 
 Otra posibilidad es construir un mock que ya devuelva otros mocks en sus propiedades.
 
@@ -286,11 +292,11 @@ class HierarchicalMockKTest {
 
 Este enfoque es útil cuando el objeto bajo prueba navega por varias propiedades encadenadas y quieres controlar ese recorrido.
 
-### 10. Captura de argumentos
+### 9. Captura de argumentos
 
 En ocasiones no basta con comprobar que se llamó a un método. También necesitamos saber **con qué argumentos** se invocó.
 
-#### 10.1. Usando `slot`
+#### 9.1. Usando `slot`
 
 ```kotlin
 import io.mockk.capture
@@ -315,7 +321,7 @@ class CapturingSlotTest {
 }
 ```
 
-#### 10.2. Usando una lista mutable
+#### 9.2. Usando una lista mutable
 
 Si quieres almacenar varias invocaciones, una lista suele ser más cómoda:
 
@@ -344,7 +350,7 @@ class CapturingListTest {
 }
 ```
 
-### 11. Stubbing de funciones que devuelven `Unit`
+### 10. Stubbing de funciones que devuelven `Unit`
 
 En Kotlin, un método que devuelve `Unit` no devuelve un valor útil, pero sigue pudiendo tener efectos laterales. MockK permite controlar ese comportamiento.
 
@@ -359,7 +365,7 @@ class TestableServiceWithUnit {
 }
 ```
 
-#### 11.1. Hacer que no haga nada
+#### 10.1. Hacer que no haga nada
 
 Podemos omitir la ejecución real de varias formas:
 
@@ -393,7 +399,7 @@ class UnitStubTest {
 }
 ```
 
-#### 11.2. Llamar a la implementación original
+#### 10.2. Llamar a la implementación original
 
 Si en lugar de anular el comportamiento quieres ejecutar el original, puedes usar `callOriginal()`.
 
@@ -419,7 +425,7 @@ class CallOriginalTest {
 }
 ```
 
-#### 11.3. Combinar varios escenarios
+#### 10.3. Combinar varios escenarios
 
 El verdadero interés de `callOriginal()` aparece cuando no quieres el mismo comportamiento en todas las llamadas.
 
@@ -455,7 +461,7 @@ class TwoScenariosTest {
 
 En la práctica, esto te permite adaptar la simulación a distintos contextos sin renunciar al comportamiento real cuando realmente te interesa.
 
-### 12. Cuándo conviene usar MockK y cuándo no
+### 11. Cuándo conviene usar MockK y cuándo no
 
 MockK es útil, pero también es fácil abusar de él. Como regla general:
 
@@ -466,7 +472,7 @@ MockK es útil, pero también es fácil abusar de él. Como regla general:
 
 Si un test depende de demasiados mocks, muchas veces no es que falte MockK, sino que **sobra acoplamiento en el diseño**.
 
-### 13. Conclusión
+### 12. Conclusión
 
 MockK es una herramienta muy práctica para escribir pruebas unitarias en Kotlin cuando necesitamos aislar colaboraciones, controlar respuestas y verificar interacciones. Bien usado, hace que los tests sean más precisos y más fáciles de mantener.
 

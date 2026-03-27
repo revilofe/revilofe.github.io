@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Relación entre software y hardware">
+        <meta name="description" content="Introducción a las pruebas unitarias y al desarrollo guiado por pruebas en Kotlin.">
       
       
         <meta name="author" content="Eduardo Fdez">
@@ -4824,6 +4824,8 @@
               
   
   
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M16 0H8C6.9 0 6 .9 6 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V6zm4 18H8V2h7v5h5zM4 4v18h16v2H4c-1.1 0-2-.9-2-2V4zm6 6v2h8v-2zm0 4v2h5v-2z"/></svg>
+  
   <span class="md-ellipsis">
     
   
@@ -4867,8 +4869,6 @@
       <a href="../EDES-U5.1.-Pruebas/" class="md-nav__link">
         
   
-  
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"/></svg>
   
   <span class="md-ellipsis">
     
@@ -4959,31 +4959,86 @@
   <a href="#52-test-de-unidad-y-tdd" class="md-nav__link">
     <span class="md-ellipsis">
       
-        5.2. Test de unidad y TDD
+        5.2 Test de unidad y TDD
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="5.2. Test de unidad y TDD">
+    <nav class="md-nav" aria-label="5.2 Test de unidad y TDD">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#1-test-de-unidad" class="md-nav__link">
+  <a href="#1-idea-clave-del-tema" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1. Test de unidad
+        1. Idea clave del tema
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="1. Test de unidad">
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-que-es-una-prueba-unitaria" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Qué es una prueba unitaria
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-por-que-merece-la-pena-hacer-pruebas-unitarias" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Por qué merece la pena hacer pruebas unitarias
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-que-hace-que-un-test-unitario-sea-util" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Qué hace que un test unitario sea útil
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-desarrollo-guiado-por-pruebas-que-es-tdd" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Desarrollo guiado por pruebas: qué es TDD
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Desarrollo guiado por pruebas: qué es TDD">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#11-motivos-para-realizar-un-test-unitario" class="md-nav__link">
+  <a href="#51-las-dos-ideas-de-fondo" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1.1. Motivos para realizar un test unitario
+        5.1. Las dos ideas de fondo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-el-ciclo-red-green-refactor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2. El ciclo RED, GREEN, REFACTOR
       
     </span>
   </a>
@@ -4996,22 +5051,22 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#2-desarrollo-guiado-por-pruebas-tdd-test-driven-development" class="md-nav__link">
+  <a href="#6-disenar-casos-de-prueba-con-criterio" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2. Desarrollo guiado por pruebas (TDD - Test Driven Development)
+        6. Diseñar casos de prueba con criterio
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="2. Desarrollo guiado por pruebas (TDD - Test Driven Development)">
+    <nav class="md-nav" aria-label="6. Diseñar casos de prueba con criterio">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#21-reglas-de-oro-de-la-tecnica" class="md-nav__link">
+  <a href="#61-dominio-de-ejemplo" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2.1. Reglas de oro de la técnica
+        6.1. Dominio de ejemplo
       
     </span>
   </a>
@@ -5019,10 +5074,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#22-pasos-de-la-tecnica" class="md-nav__link">
+  <a href="#62-clases-de-equivalencia" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2.2. Pasos de la técnica
+        6.2. Clases de equivalencia
       
     </span>
   </a>
@@ -5030,33 +5085,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#23-diseno-de-casos-de-prueba" class="md-nav__link">
+  <a href="#63-escenarios-representativos" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2.3. Diseño de casos de prueba
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="2.3. Diseño de casos de prueba">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#231-descripcion-del-dominio" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2.3.1. Descripción del dominio
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#232-definiendo-los-escenarios" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2.3.2. Definiendo los escenarios
+        6.3. Escenarios representativos
       
     </span>
   </a>
@@ -5069,44 +5101,22 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#24-escribiendo-los-tests" class="md-nav__link">
+  <a href="#7-como-agrupar-y-nombrar-los-tests" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2.4. Escribiendo los tests
+        7. Cómo agrupar y nombrar los tests
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="2.4. Escribiendo los tests">
+    <nav class="md-nav" aria-label="7. Cómo agrupar y nombrar los tests">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#241-como-agrupar-los-escenarios" class="md-nav__link">
+  <a href="#71-nombres-expresivos" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2.4.1. ¿Cómo agrupar los escenarios?
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#242-expresividad-nombres-acorde-a-lo-que-representan" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2.4.2. Expresividad: nombres acorde a lo que representan
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#243-otra-oportunidad" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2.4.3. Otra oportunidad
+        7.1. Nombres expresivos
       
     </span>
   </a>
@@ -5119,43 +5129,32 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#25-buenas-practicas" class="md-nav__link">
+  <a href="#8-patron-aaa-arrange-act-assert" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2.5. Buenas prácticas
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="2.5. Buenas prácticas">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#251-el-patron-aaa-arrange-act-assert" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2.5.1. El patrón AAA: Arrange-Act-Assert
+        8. Patrón AAA: Arrange, Act, Assert
       
     </span>
   </a>
   
 </li>
         
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
+          <li class="md-nav__item">
+  <a href="#9-buenas-practicas-al-trabajar-con-tests-unitarios" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. Buenas prácticas al trabajar con tests unitarios
+      
+    </span>
+  </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#3-recursos" class="md-nav__link">
+  <a href="#10-conclusion" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3. Recursos
+        10. Conclusión
       
     </span>
   </a>
@@ -5168,10 +5167,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#fuente" class="md-nav__link">
+  <a href="#fuentes-y-referencias" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Fuente
+        Fuentes y referencias
       
     </span>
   </a>
@@ -5197,8 +5196,6 @@
       <a href="../EDES-U5.2.1.-Kotest/" class="md-nav__link">
         
   
-  
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"/></svg>
   
   <span class="md-ellipsis">
     
@@ -8563,31 +8560,86 @@
   <a href="#52-test-de-unidad-y-tdd" class="md-nav__link">
     <span class="md-ellipsis">
       
-        5.2. Test de unidad y TDD
+        5.2 Test de unidad y TDD
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="5.2. Test de unidad y TDD">
+    <nav class="md-nav" aria-label="5.2 Test de unidad y TDD">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#1-test-de-unidad" class="md-nav__link">
+  <a href="#1-idea-clave-del-tema" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1. Test de unidad
+        1. Idea clave del tema
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="1. Test de unidad">
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-que-es-una-prueba-unitaria" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Qué es una prueba unitaria
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-por-que-merece-la-pena-hacer-pruebas-unitarias" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Por qué merece la pena hacer pruebas unitarias
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-que-hace-que-un-test-unitario-sea-util" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Qué hace que un test unitario sea útil
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-desarrollo-guiado-por-pruebas-que-es-tdd" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Desarrollo guiado por pruebas: qué es TDD
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Desarrollo guiado por pruebas: qué es TDD">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#11-motivos-para-realizar-un-test-unitario" class="md-nav__link">
+  <a href="#51-las-dos-ideas-de-fondo" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1.1. Motivos para realizar un test unitario
+        5.1. Las dos ideas de fondo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-el-ciclo-red-green-refactor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2. El ciclo RED, GREEN, REFACTOR
       
     </span>
   </a>
@@ -8600,22 +8652,22 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#2-desarrollo-guiado-por-pruebas-tdd-test-driven-development" class="md-nav__link">
+  <a href="#6-disenar-casos-de-prueba-con-criterio" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2. Desarrollo guiado por pruebas (TDD - Test Driven Development)
+        6. Diseñar casos de prueba con criterio
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="2. Desarrollo guiado por pruebas (TDD - Test Driven Development)">
+    <nav class="md-nav" aria-label="6. Diseñar casos de prueba con criterio">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#21-reglas-de-oro-de-la-tecnica" class="md-nav__link">
+  <a href="#61-dominio-de-ejemplo" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2.1. Reglas de oro de la técnica
+        6.1. Dominio de ejemplo
       
     </span>
   </a>
@@ -8623,10 +8675,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#22-pasos-de-la-tecnica" class="md-nav__link">
+  <a href="#62-clases-de-equivalencia" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2.2. Pasos de la técnica
+        6.2. Clases de equivalencia
       
     </span>
   </a>
@@ -8634,33 +8686,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#23-diseno-de-casos-de-prueba" class="md-nav__link">
+  <a href="#63-escenarios-representativos" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2.3. Diseño de casos de prueba
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="2.3. Diseño de casos de prueba">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#231-descripcion-del-dominio" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2.3.1. Descripción del dominio
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#232-definiendo-los-escenarios" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2.3.2. Definiendo los escenarios
+        6.3. Escenarios representativos
       
     </span>
   </a>
@@ -8673,44 +8702,22 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#24-escribiendo-los-tests" class="md-nav__link">
+  <a href="#7-como-agrupar-y-nombrar-los-tests" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2.4. Escribiendo los tests
+        7. Cómo agrupar y nombrar los tests
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="2.4. Escribiendo los tests">
+    <nav class="md-nav" aria-label="7. Cómo agrupar y nombrar los tests">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#241-como-agrupar-los-escenarios" class="md-nav__link">
+  <a href="#71-nombres-expresivos" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2.4.1. ¿Cómo agrupar los escenarios?
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#242-expresividad-nombres-acorde-a-lo-que-representan" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2.4.2. Expresividad: nombres acorde a lo que representan
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#243-otra-oportunidad" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2.4.3. Otra oportunidad
+        7.1. Nombres expresivos
       
     </span>
   </a>
@@ -8723,43 +8730,32 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#25-buenas-practicas" class="md-nav__link">
+  <a href="#8-patron-aaa-arrange-act-assert" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2.5. Buenas prácticas
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="2.5. Buenas prácticas">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#251-el-patron-aaa-arrange-act-assert" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2.5.1. El patrón AAA: Arrange-Act-Assert
+        8. Patrón AAA: Arrange, Act, Assert
       
     </span>
   </a>
   
 </li>
         
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
+          <li class="md-nav__item">
+  <a href="#9-buenas-practicas-al-trabajar-con-tests-unitarios" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. Buenas prácticas al trabajar con tests unitarios
+      
+    </span>
+  </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#3-recursos" class="md-nav__link">
+  <a href="#10-conclusion" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3. Recursos
+        10. Conclusión
       
     </span>
   </a>
@@ -8772,10 +8768,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#fuente" class="md-nav__link">
+  <a href="#fuentes-y-referencias" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Fuente
+        Fuentes y referencias
       
     </span>
   </a>
@@ -8816,7 +8812,7 @@
         
       
       
-        <a href="../../../../tags/#tag:hardware" class="md-tag md-tag-icon">Hardware</a>
+        <a href="../../../../tags/#tag:kotlin" class="md-tag md-tag-icon">Kotlin</a>
       
     
       
@@ -8826,7 +8822,27 @@
         
       
       
-        <a href="../../../../tags/#tag:software" class="md-tag md-tag-icon">Software</a>
+        <a href="../../../../tags/#tag:tdd" class="md-tag md-tag-icon">TDD</a>
+      
+    
+      
+      
+      
+        
+        
+      
+      
+        <a href="../../../../tags/#tag:pruebas-unitarias" class="md-tag md-tag-icon">pruebas unitarias</a>
+      
+    
+      
+      
+      
+        
+        
+      
+      
+        <a href="../../../../tags/#tag:testing" class="md-tag md-tag-icon">testing</a>
       
     
   </nav>
@@ -8838,224 +8854,277 @@
 
   <h1>5.2.-Test unidad y TDD</h1>
 
-<h2 id="52-test-de-unidad-y-tdd">5.2. Test de unidad y <abbr title="Desarrollo Guiado por Pruebas. Práctica de desarrollo de software que se basa en escribir las pruebas antes de escribir el código. En TDD, los desarrolladores escriben pruebas automatizadas que definen el comportamiento esperado del código, y luego escriben el código para que pase las pruebas.">TDD</abbr><a class="headerlink" href="#52-test-de-unidad-y-tdd" title="Permanent link">&para;</a></h2>
-<h3 id="1-test-de-unidad">1. Test de unidad<a class="headerlink" href="#1-test-de-unidad" title="Permanent link">&para;</a></h3>
-<p>Las <strong>pruebas unitarias</strong> o <strong>unit testing</strong> son una forma de comprobar que un fragmento de código funciona correctamente. Es un procedimiento más de los que se llevan a cabo dentro de una metodología ágil de trabajo.</p>
-<p>Si nunca te has atrevido con ellas o no sabes por dónde empezar, es el momento de descubrir cómo las pruebas unitarias pueden ayudarte a <strong>mejorar el resultado final de tu aplicación</strong>.</p>
-<p>Las pruebas unitarias consisten en <strong>aislar una parte del código y comprobar que funciona a la perfección</strong>. Son pequeños <em>tests</em> que validan el comportamiento de un objeto y la lógica.</p>
-<p>El <em>unit testing</em> suele realizarse durante la fase de desarrollo de aplicaciones de software. Normalmente estos test los llevan a cabo los <strong>desarrolladores</strong>, aunque en la práctica, también pueden realizarlas los integrantes de los equipos de <strong>QA</strong>.</p>
-<p>Hay una especie de mito respecto a las pruebas unitarias. Algunos desarrolladores están convencidos de que son una pérdida de tiempo y las evitan buscando ahorrar tiempo.</p>
-<p><strong>Nada más alejado de la realidad.</strong> Nos permiten <strong>detectar con antelación errores</strong> que, sin estas pruebas unitarias, no se podrían detectar hasta fases más avanzadas como las pruebas de sistema, de integración e incluso en la beta.
-Realizar pruebas unitarias con regularidad supone, al final, un ahorro de tiempo y dinero.</p>
-<h4 id="11-motivos-para-realizar-un-test-unitario">1.1. Motivos para realizar un test unitario<a class="headerlink" href="#11-motivos-para-realizar-un-test-unitario" title="Permanent link">&para;</a></h4>
-<p>Si todavía no estás del todo seguro de por qué debes incorporar <em>unit testing</em> a tu día a día como desarrollador, te damos algunos motivos:</p>
+<h2 id="52-test-de-unidad-y-tdd">5.2 Test de unidad y <abbr title="Desarrollo Guiado por Pruebas. Práctica de desarrollo de software que se basa en escribir las pruebas antes de escribir el código. En TDD, los desarrolladores escriben pruebas automatizadas que definen el comportamiento esperado del código, y luego escriben el código para que pase las pruebas.">TDD</abbr><a class="headerlink" href="#52-test-de-unidad-y-tdd" title="Permanent link">&para;</a></h2>
+<p>En este bloque vamos a centrarnos en dos ideas que suelen ir de la mano en un entorno profesional: <strong>probar el código a nivel de unidad</strong> y <strong>usar esas pruebas para orientar el diseño</strong>. La primera nos ayuda a detectar errores pronto; la segunda nos obliga a pensar mejor qué debería hacer el software antes de lanzarnos a implementarlo.</p>
+<p>La normativa del módulo conecta este contenido con la verificación del software, el diseño de casos de prueba y la automatización de comprobaciones durante el desarrollo.</p>
+<table>
+<thead>
+<tr>
+<th>Código</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>RA3</td>
+<td>Verifica el funcionamiento de programas diseñando y realizando pruebas.</td>
+</tr>
+<tr>
+<td><abbr title="Criterio de Evaluación. Indicador concreto que detalla qué debe demostrar el alumnado dentro de un resultado de aprendizaje.">CE</abbr> b</td>
+<td>Se han definido casos de prueba.</td>
+</tr>
+<tr>
+<td><abbr title="Criterio de Evaluación. Indicador concreto que detalla qué debe demostrar el alumnado dentro de un resultado de aprendizaje.">CE</abbr> f</td>
+<td>Se han efectuado pruebas unitarias de clases y funciones.</td>
+</tr>
+<tr>
+<td><abbr title="Criterio de Evaluación. Indicador concreto que detalla qué debe demostrar el alumnado dentro de un resultado de aprendizaje.">CE</abbr> g</td>
+<td>Se han implementado pruebas automáticas.</td>
+</tr>
+<tr>
+<td><abbr title="Criterio de Evaluación. Indicador concreto que detalla qué debe demostrar el alumnado dentro de un resultado de aprendizaje.">CE</abbr> i</td>
+<td>Se han utilizado dobles de prueba para aislar los componentes durante las pruebas.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition abstract">
+<p class="admonition-title">Qué vas a aprender en este apartado</p>
 <ul>
-<li>Las pruebas unitarias demuestran que la <strong>lógica del código</strong> está en buen estado y que funcionará en todos los casos.</li>
-<li>Aumentan la <strong>legibilidad del código</strong> y ayudan a los desarrolladores a entender el código base, lo que facilita hacer cambios más rápidamente.</li>
-<li>Los test unitarios bien realizados sirven como <strong>documentación</strong> del proyecto.</li>
-<li>Se realizan en <strong>pocos milisegundos</strong>, por lo que podrás realizar cientos de ellas en muy poco tiempo.</li>
-<li>Los <em>test de unidad</em> permiten al desarrollador <strong>refactorizar el código</strong> más adelante y tener la garantía de que el módulo sigue funcionando correctamente. Para ello se escriben casos de prueba para todas las funciones y métodos, para que cada vez que un cambio provoque un error, sea posible identificarlo y repararlo rápidamente.</li>
-<li>La <strong>calidad final del código</strong> mejorará, ya que, al estar realizando pruebas de manera continua, al finalizar el código será limpio y de calidad.</li>
-<li>Como las pruebas unitarias dividen el código en pequeños fragmentos, es posible <strong>probar distintas partes del proyecto</strong> sin tener que esperar a que otras estén completadas.</li>
+<li>Entender qué es una prueba unitaria y qué valor aporta.</li>
+<li>Diferenciar pruebas unitarias y desarrollo guiado por pruebas.</li>
+<li>Diseñar casos de prueba usando clases de equivalencia y valores límite.</li>
+<li>Escribir tests más expresivos y fáciles de mantener.</li>
 </ul>
-<h3 id="2-desarrollo-guiado-por-pruebas-tdd-test-driven-development">2. Desarrollo guiado por pruebas (<abbr title="Desarrollo Guiado por Pruebas. Práctica de desarrollo de software que se basa en escribir las pruebas antes de escribir el código. En TDD, los desarrolladores escriben pruebas automatizadas que definen el comportamiento esperado del código, y luego escriben el código para que pase las pruebas.">TDD</abbr> - Test Driven Development)<a class="headerlink" href="#2-desarrollo-guiado-por-pruebas-tdd-test-driven-development" title="Permanent link">&para;</a></h3>
-<p>Probablemente, la técnica que hasta hoy conoces (y practicas) a la hora de programar consiste en escribir código y luego, con algo de suerte, probarlo para ver si efectivamente hace lo que tiene que hacer. Esta prueba puede ser manual (por ejemplo, mediante un REPL o sencillamente apretando botones) o automatizada (mediante pruebas unitarias, end-to-end, o lo que sea).</p>
-<p>En este punto proponemos algo que puede resultar disruptivo y hasta molesto (al menos al principio): <strong>comenzar por las pruebas y luego escribir el código necesario para que ellas pasen</strong>. No ahondaremos aquí en las ventajas y desventajas de la práctica (hay mucho escrito en internet) pero sí diremos que <abbr title="Desarrollo Guiado por Pruebas. Práctica de desarrollo de software que se basa en escribir las pruebas antes de escribir el código. En TDD, los desarrolladores escriben pruebas automatizadas que definen el comportamiento esperado del código, y luego escriben el código para que pase las pruebas.">TDD</abbr> es una muy buena forma de encarar un problema que no tenemos mucha idea de cómo resolver, y de poner especial atención a las pruebas automatizadas… lo cual nos interesa especialmente en este momento.</p>
-<p>Aunque el nombre pueda sugerir otra cosa, el desarrollo guiado por pruebas, test driven development o <abbr title="Desarrollo Guiado por Pruebas. Práctica de desarrollo de software que se basa en escribir las pruebas antes de escribir el código. En TDD, los desarrolladores escriben pruebas automatizadas que definen el comportamiento esperado del código, y luego escriben el código para que pase las pruebas.">TDD</abbr> es una técnica de desarrollo que nos propone escribir las pruebas antes que el código. Sin dudas, una de las consecuencias de usarla es que al finalizar contaremos con una buena batería de pruebas, aunque no es ese su objetivo principal.</p>
-<p>Es una práctica de diseño de software orientado a objetos, aunque extensible a otros paradigmas y lenguajes. 
-Plantea un flujo de trabajo claro y simple basado en la creación de test de unidad. 
-Pensar primero en el uso y luego en la implementación. Partir de las pruebas, el uso de tus unidades funcionales, interfaces, nombres, parámetros, etc, para elaborar un diseño del software que nos permita implementarlo.</p>
+</div>
+<h3 id="1-idea-clave-del-tema">1. Idea clave del tema<a class="headerlink" href="#1-idea-clave-del-tema" title="Permanent link">&para;</a></h3>
+<p>Lo importante aquí es entender que una prueba unitaria no solo sirve para "comprobar si algo funciona". Bien planteada, también sirve para <strong>documentar el comportamiento esperado</strong>, <strong>detectar regresiones</strong> y <strong>diseñar código más claro y mantenible</strong>.</p>
+<h3 id="2-que-es-una-prueba-unitaria">2. Qué es una prueba unitaria<a class="headerlink" href="#2-que-es-una-prueba-unitaria" title="Permanent link">&para;</a></h3>
+<p>Una <strong>prueba unitaria</strong> es una comprobación automatizada sobre una parte pequeña del sistema, normalmente una clase, una función o un método. Su objetivo es verificar que esa unidad se comporta como esperamos en un escenario concreto.</p>
+<p>Dicho de forma sencilla: si una pieza del programa tiene una responsabilidad clara, deberíamos poder probarla de forma aislada y comprobar si responde bien ante distintas entradas.</p>
+<p>En la práctica, estas pruebas suelen ejecutarse durante el desarrollo y forman parte del trabajo habitual del equipo técnico. Lo más frecuente es que las escriba el propio equipo de desarrollo, aunque también pueden intervenir perfiles de <abbr title="Quality Assurance. Conjunto de actividades orientadas a asegurar la calidad del software y, por extensión, perfil o equipo que trabaja en ese ámbito.">QA</abbr> cuando el proyecto lo requiere.</p>
+<div class="admonition note">
+<p class="admonition-title">Qué significa aislar una unidad</p>
+<p>Aislar una unidad no siempre implica dejarla completamente sola, pero sí evitar que el resultado del test dependa de factores externos como una base de datos, una <abbr title="Interfaz de Programación de Aplicaciones. Conjunto de definiciones y protocolos que se utilizan para desarrollar e integrar el software de las aplicaciones. Las API permiten que diferentes aplicaciones se comuniquen entre sí, compartan datos y funcionalidades.">API</abbr> remota o el sistema de ficheros, salvo que eso sea precisamente lo que queremos probar.</p>
+</div>
+<h3 id="3-por-que-merece-la-pena-hacer-pruebas-unitarias">3. Por qué merece la pena hacer pruebas unitarias<a class="headerlink" href="#3-por-que-merece-la-pena-hacer-pruebas-unitarias" title="Permanent link">&para;</a></h3>
+<p>Existe el mito de que escribir pruebas hace perder tiempo. En realidad, lo habitual es lo contrario: <strong>el tiempo que inviertes en probar antes lo recuperas cuando corriges menos fallos tarde</strong>.</p>
+<p>Las pruebas unitarias aportan valor porque:</p>
+<ul>
+<li>detectan errores en fases tempranas;</li>
+<li>facilitan refactorizaciones seguras;</li>
+<li>documentan el comportamiento esperado del código;</li>
+<li>mejoran la comprensión del proyecto por parte del equipo;</li>
+<li>reducen el coste de corregir errores descubiertos demasiado tarde;</li>
+<li>permiten automatizar comprobaciones que, de otro modo, repetiríamos manualmente.</li>
+</ul>
+<p>Cuando una batería de pruebas está bien construida, el equipo puede cambiar el diseño interno del código con más confianza, porque dispone de una red de seguridad que avisa si algo se rompe.</p>
+<h3 id="4-que-hace-que-un-test-unitario-sea-util">4. Qué hace que un test unitario sea útil<a class="headerlink" href="#4-que-hace-que-un-test-unitario-sea-util" title="Permanent link">&para;</a></h3>
+<p>No basta con "tener tests". Un test aporta valor cuando cumple varias condiciones:</p>
+<ul>
+<li>es <strong>claro</strong>: al leerlo se entiende qué comportamiento describe;</li>
+<li>es <strong>pequeño</strong>: cubre una idea concreta, no cinco a la vez;</li>
+<li>es <strong>estable</strong>: no falla a veces sí y a veces no;</li>
+<li>es <strong>automático</strong>: puede ejecutarse tantas veces como haga falta;</li>
+<li>es <strong>relevante</strong>: comprueba algo importante para el comportamiento del sistema.</li>
+</ul>
+<p>Una buena regla práctica es esta: si el nombre del test no deja claro qué pretende demostrar, probablemente el diseño del propio test necesita revisión.</p>
+<h3 id="5-desarrollo-guiado-por-pruebas-que-es-tdd">5. Desarrollo guiado por pruebas: qué es <abbr title="Desarrollo Guiado por Pruebas. Práctica de desarrollo de software que se basa en escribir las pruebas antes de escribir el código. En TDD, los desarrolladores escriben pruebas automatizadas que definen el comportamiento esperado del código, y luego escriben el código para que pase las pruebas.">TDD</abbr><a class="headerlink" href="#5-desarrollo-guiado-por-pruebas-que-es-tdd" title="Permanent link">&para;</a></h3>
+<p>El <strong>desarrollo guiado por pruebas</strong> o <strong><abbr title="Desarrollo Guiado por Pruebas. Práctica de desarrollo de software que se basa en escribir las pruebas antes de escribir el código. En TDD, los desarrolladores escriben pruebas automatizadas que definen el comportamiento esperado del código, y luego escriben el código para que pase las pruebas.">TDD</abbr></strong> (<em>Test Driven Development</em>) propone una forma distinta de trabajar: en lugar de escribir primero la implementación y probarla después, <strong>escribimos antes la prueba que describe el comportamiento esperado</strong>.</p>
+<p>Esto puede resultar incómodo al principio, porque obliga a pensar antes de programar. Precisamente por eso es útil: <abbr title="Desarrollo Guiado por Pruebas. Práctica de desarrollo de software que se basa en escribir las pruebas antes de escribir el código. En TDD, los desarrolladores escriben pruebas automatizadas que definen el comportamiento esperado del código, y luego escriben el código para que pase las pruebas.">TDD</abbr> no consiste solo en generar pruebas, sino en <strong>utilizar las pruebas como herramienta de diseño</strong>.</p>
 <blockquote>
-<p>Ojo, <abbr title="Desarrollo Guiado por Pruebas. Práctica de desarrollo de software que se basa en escribir las pruebas antes de escribir el código. En TDD, los desarrolladores escriben pruebas automatizadas que definen el comportamiento esperado del código, y luego escriben el código para que pase las pruebas.">TDD</abbr> no son pruebas, aunque el obtener las pruebas es una consecuencia. <abbr title="Desarrollo Guiado por Pruebas. Práctica de desarrollo de software que se basa en escribir las pruebas antes de escribir el código. En TDD, los desarrolladores escriben pruebas automatizadas que definen el comportamiento esperado del código, y luego escriben el código para que pase las pruebas.">TDD</abbr> nos permite <strong>diseñar nuestro código pensando en el uso que se le va a dar</strong>.</p>
+<p><abbr title="Desarrollo Guiado por Pruebas. Práctica de desarrollo de software que se basa en escribir las pruebas antes de escribir el código. En TDD, los desarrolladores escriben pruebas automatizadas que definen el comportamiento esperado del código, y luego escriben el código para que pase las pruebas.">TDD</abbr> no es "hacer muchos tests". <abbr title="Desarrollo Guiado por Pruebas. Práctica de desarrollo de software que se basa en escribir las pruebas antes de escribir el código. En TDD, los desarrolladores escriben pruebas automatizadas que definen el comportamiento esperado del código, y luego escriben el código para que pase las pruebas.">TDD</abbr> consiste en diseñar el comportamiento del software desde fuera, pensando primero en su uso y después en su implementación.</p>
 </blockquote>
-<h4 id="21-reglas-de-oro-de-la-tecnica">2.1. Reglas de oro de la técnica<a class="headerlink" href="#21-reglas-de-oro-de-la-tecnica" title="Permanent link">&para;</a></h4>
-<p>La técnica se puede resumir en dos reglas de oro:</p>
-<blockquote>
-<p>Nunca escribas funcionalidad sin una prueba que falle antes. - Kent Beck.</p>
-</blockquote>
-<p>Esto nos quiere ayudar a pensar en el uso, ya que si la prueba funciona, es porque ya existe.</p>
-<blockquote>
-<p>Si no puedes escribir una prueba para lo que vas a implementar, entonces no deberías estar pensando en la implementación. - Dave Chaplin.</p>
-</blockquote>
-<p>Si no podemos escribir una prueba es porque no está claro lo que quieres hacer, quizás falte aclarar requisitos.</p>
-<h4 id="22-pasos-de-la-tecnica">2.2. Pasos de la técnica<a class="headerlink" href="#22-pasos-de-la-tecnica" title="Permanent link">&para;</a></h4>
-<p>La técnica tiene 3 pasos:</p>
+<h4 id="51-las-dos-ideas-de-fondo">5.1. Las dos ideas de fondo<a class="headerlink" href="#51-las-dos-ideas-de-fondo" title="Permanent link">&para;</a></h4>
+<p>Podemos resumir la técnica en dos ideas muy directas:</p>
 <ol>
-<li><strong>RED</strong>: Escribe un test que falla, ver como muestra el error.</li>
-<li><strong>GREEN</strong>: Escribe el código mínimo necesario y simple para que el test no falle. Esto nos permitirá realizar un diseño simple, sin sobrediseñar.</li>
-<li><strong>REFACTOR</strong>: Refactoriza tu código y tu test. Mejorar el código sin modificar lo que hace este.</li>
+<li>No escribas funcionalidad sin una prueba que falle antes.</li>
+<li>Si no sabes cómo expresar una prueba, probablemente todavía no tienes claro el requisito.</li>
 </ol>
+<p>La consecuencia práctica es importante: <strong>si no puedes formular qué debería pasar, aún no deberías estar programando cómo hacerlo</strong>.</p>
+<h4 id="52-el-ciclo-red-green-refactor">5.2. El ciclo RED, GREEN, REFACTOR<a class="headerlink" href="#52-el-ciclo-red-green-refactor" title="Permanent link">&para;</a></h4>
+<p><abbr title="Desarrollo Guiado por Pruebas. Práctica de desarrollo de software que se basa en escribir las pruebas antes de escribir el código. En TDD, los desarrolladores escriben pruebas automatizadas que definen el comportamiento esperado del código, y luego escriben el código para que pase las pruebas.">TDD</abbr> suele explicarse mediante un ciclo muy corto:</p>
+<pre class="mermaid"><code>flowchart LR
+    A[RED&lt;br&gt;Escribe una prueba que falle] --&gt; B[GREEN&lt;br&gt;Implementa lo mínimo para pasarla]
+    B --&gt; C[REFACTOR&lt;br&gt;Mejora el diseño sin cambiar el comportamiento]
+    C --&gt; A</code></pre>
+<p>También puedes verlo en el esquema clásico del tema:</p>
 <figure>
 <p><img alt="" src="../assets/TDD.png" />
   </p>
-<figcaption>Ciclo TDD</figcaption>
+<figcaption>Ciclo TDD: prueba que falla, implementación mínima y refactorización.</figcaption>
 </figure>
-<p>Este ciclo se repite continuamente. Aunque no indica cuando parar y cuando refactorizar. Estas decisiones las tomaremos e iremos mejorando conforme vayamos tomando práctica en la técnica.</p>
-<p>En lo que a prácticas se refiere, ver a alguien hacerlo puede resultar mucho más educativo que una explicación teórica sobre en qué consiste la misma.</p>
-<p>Y, si bien cada lenguaje y framework tiene sus particularidades, esta técnica es agnóstica de la tecnología.</p>
-<h4 id="23-diseno-de-casos-de-prueba">2.3. Diseño de casos de prueba<a class="headerlink" href="#23-diseno-de-casos-de-prueba" title="Permanent link">&para;</a></h4>
-<p>Presentaremos algunas guías para desarrollar los casos de prueba, asumiendo que ya conoces el concepto de pruebas automatizadas y algún framework (veremos kotest próximamente) para implementarlas.</p>
-<h5 id="231-descripcion-del-dominio">2.3.1. Descripción del dominio<a class="headerlink" href="#231-descripcion-del-dominio" title="Permanent link">&para;</a></h5>
-<p>Todo el apunte estará elaborado en base al siguiente dominio:</p>
-<blockquote>
-<p>REQUERIMIENTO: Una ferretería tiene en cuenta ciertos aspectos para decidir si le puede fiar a un cliente o no.</p>
+<p>Cada fase tiene un objetivo distinto:</p>
 <ul>
-<li>Al cliente particular le fia solo si no adeuda nada, es decir si su deuda es de 0 €.</li>
-<li>A las constructoras les fia dependiendo de cuántos albañiles trabajen en la obra:</li>
-<li>si son 5 o más albañiles, le fía hasta 10.000 €,</li>
-<li>de lo contrario sólo hasta 5.000 €.</li>
+<li><strong>RED</strong>: obligarte a definir el comportamiento esperado.</li>
+<li><strong>GREEN</strong>: resolver solo lo necesario para cumplir esa expectativa.</li>
+<li><strong>REFACTOR</strong>: mejorar el diseño una vez que el comportamiento ya está protegido por las pruebas.</li>
+</ul>
+<p>Lo importante aquí es no saltarse la tercera fase. Si solo escribes pruebas y código mínimo, pero nunca refactorizas, terminarás con una solución que funciona pero que puede degradarse con rapidez.</p>
+<h3 id="6-disenar-casos-de-prueba-con-criterio">6. Diseñar casos de prueba con criterio<a class="headerlink" href="#6-disenar-casos-de-prueba-con-criterio" title="Permanent link">&para;</a></h3>
+<p>Una de las dificultades reales al empezar no es escribir la sintaxis del test, sino <strong>decidir qué escenarios merece la pena probar</strong>.</p>
+<p>Para eso conviene pensar en términos de:</p>
+<ul>
+<li>reglas de negocio;</li>
+<li>clases de equivalencia;</li>
+<li>valores límite;</li>
+<li>casos representativos;</li>
+<li>errores frecuentes.</li>
+</ul>
+<h4 id="61-dominio-de-ejemplo">6.1. Dominio de ejemplo<a class="headerlink" href="#61-dominio-de-ejemplo" title="Permanent link">&para;</a></h4>
+<p>Vamos a trabajar con este requisito:</p>
+<blockquote>
+<p>Una ferretería decide si puede fiar a un cliente según su tipo y su deuda.</p>
+<ul>
+<li>A un cliente particular solo le fía si no debe nada.</li>
+<li>A una constructora le fía según el número de albañiles:</li>
+<li>con 5 o más albañiles, hasta 10.000 €;</li>
+<li>con menos de 5 albañiles, hasta 5.000 €.</li>
 </ul>
 </blockquote>
-<h5 id="232-definiendo-los-escenarios">2.3.2. Definiendo los escenarios<a class="headerlink" href="#232-definiendo-los-escenarios" title="Permanent link">&para;</a></h5>
-<p>Para armar los escenarios de prueba, vamos a tomar prestado un concepto de las matemáticas llamado <strong><a href="https://es.wikipedia.org/wiki/Clase_de_equivalencia">clase de equivalencia</a></strong>. Clasificar a los distintos
-escenarios según las características que comparten nos va a permitir contemplar todas las opciones posibles sin tener que escribir infinitas pruebas.</p>
-<p>Para un <strong>cliente particular</strong> tenemos dos casos:</p>
+<p>Este ejemplo es útil porque obliga a probar varias combinaciones sin ser excesivamente complejo.</p>
+<h4 id="62-clases-de-equivalencia">6.2. Clases de equivalencia<a class="headerlink" href="#62-clases-de-equivalencia" title="Permanent link">&para;</a></h4>
+<p>Una <strong>clase de equivalencia</strong> agrupa entradas que deberían producir el mismo comportamiento. Usarla nos evita escribir tests redundantes.</p>
+<p>Para el cliente particular tenemos dos escenarios relevantes:</p>
 <ul>
-<li>Que no deba nada.</li>
-<li>Que deba algo. Si debe 1 € ó 50.000 € no nos importa, porque está en la misma clase de equivalencia (la deuda es mayor a 0 €).</li>
+<li>no debe nada;</li>
+<li>debe algo.</li>
 </ul>
-<p>Para una <strong>empresa constructora</strong>, tenemos más variantes:</p>
+<p>Para una constructora aparecen dos grupos por número de albañiles:</p>
 <ul>
-<li>Si tiene <strong>menos de 5</strong> albañiles, podemos decir que son <code>"pocos"</code> albañiles,</li>
-<li>Si tiene <strong>5 o más</strong> albañiles, podemos decir que son <code>"muchos"</code> albañiles.</li>
+<li><strong>pocos albañiles</strong>: menos de 5;</li>
+<li><strong>muchos albañiles</strong>: 5 o más.</li>
 </ul>
-<p>Combinando eso con las posibles deudas, podríamos definir los siguientes escenarios:</p>
+<p>Si combinamos tipo de cliente, número de albañiles y deuda, podemos definir los escenarios de prueba sin probar infinitas combinaciones.</p>
+<h4 id="63-escenarios-representativos">6.3. Escenarios representativos<a class="headerlink" href="#63-escenarios-representativos" title="Permanent link">&para;</a></h4>
+<p>Una posible selección razonable sería esta:</p>
 <ul>
-<li>
-<p>Dado un cliente particular:</p>
-<ul>
-<li><strong>Si debe algo:</strong> no se le puede fiar.     </li>
-<li><strong>Si no debe nada:</strong> se le puede fiar.</li>
+<li>Cliente particular sin deuda: se le puede fiar.</li>
+<li>Cliente particular con deuda: no se le puede fiar.</li>
+<li>Constructora con muchos albañiles y deuda de hasta 10.000 €: se le puede fiar.</li>
+<li>Constructora con muchos albañiles y deuda superior a 10.000 €: no se le puede fiar.</li>
+<li>Constructora con pocos albañiles y deuda de hasta 5.000 €: se le puede fiar.</li>
+<li>Constructora con pocos albañiles y deuda superior a 5.000 €: no se le puede fiar.</li>
 </ul>
-</li>
-<li>
-<p>Dada una constructora con muchos (5) albañiles:</p>
-<ul>
-<li><strong>Si la obra debe más de 10.000 €:</strong> no se le puede fiar.     </li>
-<li><strong>Si la obra debe menos o igual a 10.000 €:</strong> se le puede fiar.</li>
-</ul>
-</li>
-<li>
-<p>Dada una constructora con pocos (4) albañiles:</p>
-<ul>
-<li><strong>Si la obra debe más de 5.000 €:</strong> no se le puede fiar.        </li>
-<li><strong>Si la obra debe menos o igual a 5.000 €:</strong> se le puede fiar.        </li>
-</ul>
-</li>
-</ul>
-<p>En el caso de la constructora, elegimos la cantidad de obreros basándonos en el <strong>valor límite</strong>: como 5 es el número que distingue entre <em>pocos</em> y <em>muchos</em>, elegimos 4 para representar al caso <em>pocos</em> y 5 para el caso <em>muchos</em>.</p>
-<p>Sin dudas podríamos haber elegido otros números, pero es importante que los tests sean simples y fáciles de comprender. Por esta razón, vamos a preferir siempre utilizar valores que nos resulten fáciles de razonar para representar a cada escenario.</p>
-<h4 id="24-escribiendo-los-tests">2.4. Escribiendo los tests<a class="headerlink" href="#24-escribiendo-los-tests" title="Permanent link">&para;</a></h4>
-<p>Necesitamos:</p>
-<ul>
-<li>Un cliente particular.</li>
-<li>Una empresa constructora con 5 albañiles.</li>
-<li>Otra empresa constructora con 4 albañiles.</li>
-</ul>
-<p>A los que podemos configurar diferentes grados de deuda.</p>
-<blockquote>
-<p>ATENCIÓN: Los ejemplos de código que vienen a continuación asumen que se utiliza Kotest (en el caso de Kotlin). La agrupación que proponemos no puede imitarse fácilmente en frameworks como JUnit.</p>
-</blockquote>
-<h5 id="241-como-agrupar-los-escenarios">2.4.1. ¿Cómo agrupar los escenarios?<a class="headerlink" href="#241-como-agrupar-los-escenarios" title="Permanent link">&para;</a></h5>
-<p>En frameworks como <a href="https://jestjs.io/">Jest</a> o <a href="https://kotest.io/">Kotest</a> tenemos la posibilidad de jerarquizar
-nuestras pruebas, utilizando las funciones <code>describe</code> e <code>it</code> para crear estas agrupaciones.</p>
-<p>Podríamos también tener todo junto, sin ningún tipo de agrupamiento. Pero esto no resulta ser una buena práctica, porque:</p>
-<ul>
-<li>Dificulta diferenciar los escenarios: estarán todas las variables de los tests mezcladas,</li>
-<li>Si construimos un fixture con cada uno de los tipos de cliente, estamos penalizando a cada uno de los tests por lo que necesitan los demás: ¿tiene sentido crear una constructora con 5 albañiles si estoy testeando una que tiene 4?,</li>
-<li>Se pierde <strong>cohesión</strong>: un solo método (o función, en este caso) está cubriendo todos los casos de prueba.</li>
-</ul>
-<p>Volviendo al ejemplo, hay varias opciones posibles:</p>
-<ul>
-<li>Hacer un <code>describe</code> para clientes particulares y otro para constructoras,</li>
-<li>Hacer un <code>describe</code> para clientes particulares, otro para constructoras con pocos albañiles y otro para constructoras con muchos albañiles.</li>
-</ul>
-<p>Elegiremos la última opción y agruparemos las pruebas de la siguiente forma:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="w">    </span><span class="n">describe</span><span class="p">(</span><span class="s">&quot;Un cliente particular&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">  </span><span class="c1">// ...}</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="n">describe</span><span class="p">(</span><span class="s">&quot;Una constructora con pocos albañiles&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">  </span><span class="c1">// ...}</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="n">describe</span><span class="p">(</span><span class="s">&quot;Una constructora con muchos albañiles&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">  </span><span class="c1">// ...}</span>
+<p>Fíjate en una idea importante: para representar la frontera entre "pocos" y "muchos" elegimos valores cercanos al límite, por ejemplo <strong>4</strong> y <strong>5</strong>. Esto ayuda a detectar errores típicos en condiciones del tipo <code>&gt;</code> frente a <code>&gt;=</code>.</p>
+<h3 id="7-como-agrupar-y-nombrar-los-tests">7. Cómo agrupar y nombrar los tests<a class="headerlink" href="#7-como-agrupar-y-nombrar-los-tests" title="Permanent link">&para;</a></h3>
+<p>Un error habitual es escribir pruebas correctas desde el punto de vista técnico, pero difíciles de leer. Si eso ocurre, el test funciona como comprobación automática, pero falla como documentación.</p>
+<p>En frameworks como Kotest es habitual agrupar escenarios con bloques <code>describe</code> e <code>it</code>.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">describe</span><span class="p">(</span><span class="s">&quot;Un cliente particular&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="c1">// escenarios de cliente particular</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="p">}</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="n">describe</span><span class="p">(</span><span class="s">&quot;Una constructora con pocos albañiles&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">    </span><span class="c1">// escenarios con menos de 5 albañiles</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="p">}</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="n">describe</span><span class="p">(</span><span class="s">&quot;Una constructora con muchos albañiles&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">    </span><span class="c1">// escenarios con 5 o más albañiles</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="p">}</span>
 </code></pre></div>
-<p>Es importante que no haya demasiados detalles de implementación en los nombres: <code>Una constructora con 5 albañiles</code> o <code>Una constructora con 10 albañiles</code> están sujetos a que cualquier cambio del negocio respecto a lo que son “muchos” o “pocos” albañiles necesite modificar el nombre del test. Además, un nombre así nos obliga a ir a revisar el código (o el requerimiento, si es que está escrito en algún lado) para comprender que se trata de dos escenarios diferentes.</p>
-<h5 id="242-expresividad-nombres-acorde-a-lo-que-representan">2.4.2. Expresividad: nombres acorde a lo que representan<a class="headerlink" href="#242-expresividad-nombres-acorde-a-lo-que-representan" title="Permanent link">&para;</a></h5>
-<p>Al empezar a diseñar los casos de prueba es usual imaginar algún ejemplo más o menos realista, como <code>La Constructora Hurlingham tiene 5 albañiles y una deuda de 7000 pesos</code>.</p>
-<p>Intentando traducir esto a código, tal vez nos saldría un tests como el siguiente:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kd">class</span><span class="w"> </span><span class="nc">FerreteriaTest</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">DescribeSpec</span><span class="p">(</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">    </span><span class="p">{</span>
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">        </span><span class="n">describe</span><span class="p">(</span><span class="s">&quot;Una ferretería&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">            </span><span class="nb">it</span><span class="p">(</span><span class="s">&quot;puede fiarle a la Constructora Hurlingham&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">                </span><span class="kd">val</span><span class="w"> </span><span class="nv">constructoraHurlingham</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">EmpresaConstructora</span><span class="p">(</span><span class="n">albaniles</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">5</span><span class="p">,</span><span class="n">deuda</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">7000</span><span class="p">)</span><span class="w"> </span>
-<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">                </span><span class="n">constructoraHurlingham</span><span class="p">.</span><span class="na">puedePedirFiado</span><span class="p">().</span><span class="na">shouldBeTrue</span><span class="p">()</span>
-<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">            </span><span class="p">}</span>
-<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">        </span><span class="p">}</span>
-<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">    </span><span class="p">})</span>
-</code></pre></div>
-<p>Pero ¿qué pasa si hay un error en el código y el test falla? Supongamos esta implementación, donde la clase <code>EmpresaConstructora</code> tiene la definición de la deuda como un entero:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kd">class</span><span class="w"> </span><span class="nc">EmpresaConstructora</span><span class="p">(</span><span class="kd">val</span><span class="w"> </span><span class="nv">cantidadAlbaniles</span><span class="p">:</span><span class="w"> </span><span class="kt">Int</span><span class="p">,</span><span class="w"> </span><span class="n">deuda</span><span class="p">:</span><span class="w"> </span><span class="kt">Int</span><span class="p">)</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">Cliente</span><span class="p">(</span><span class="n">deuda</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">  </span>
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">        </span><span class="c1">// Debería ser &gt;= 5  </span>
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">        </span><span class="kd">fun</span><span class="w"> </span><span class="nf">montoMaximoDeuda</span><span class="p">()</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">cantidadAlbaniles</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="m">5</span><span class="p">)</span><span class="w"> </span><span class="m">10000</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="m">5000</span>
-<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">        </span><span class="kd">override</span><span class="w"> </span><span class="kd">fun</span><span class="w"> </span><span class="nf">puedePedirFiado</span><span class="p">()</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">deuda</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="na">montoMaximoDeuda</span><span class="p">()</span>
-<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="p">}</span>
-</code></pre></div>
-<p><img alt="" src="../assets/ErrorEnTest.png" /></p>
-<p>Cuando ejecutamos el test tenemos muy poca información relevante:</p>
+<p>Esta organización mejora la cohesión porque:</p>
 <ul>
-<li>La variable <code>constructorHurlingham</code> y literal en la descripción no está revelando que es una constructora con muchos albañiles.   </li>
-<li>Y tampoco está claro por qué no puede pedir fiado.</li>
+<li>separa contextos de negocio distintos;</li>
+<li>evita mezclar fixtures innecesarios;</li>
+<li>facilita leer el resultado cuando un test falla.</li>
 </ul>
-<p>Al fallar, tenemos que bucear en el código y extraer este dato para determinar si el error está en el test o en el código de negocio.</p>
-<h5 id="243-otra-oportunidad">2.4.3. Otra oportunidad<a class="headerlink" href="#243-otra-oportunidad" title="Permanent link">&para;</a></h5>
-<p>Vamos a mejorar la semántica del test, renombrando la variable <code>constructoraHurlingham</code> por un nombre y descripción más representativo de la clase de equivalencia que estamos modelando y cambiando el nombre o literal en la descripción del test:</p>
+<h4 id="71-nombres-expresivos">7.1. Nombres expresivos<a class="headerlink" href="#71-nombres-expresivos" title="Permanent link">&para;</a></h4>
+<p>Si llamas a una variable <code>constructoraHurlingham</code> y el test falla, el nombre aporta muy poca información sobre el escenario de negocio. En cambio, <code>constructoraConMuchosAlbaniles</code> deja claro qué representa esa instancia dentro del caso de prueba.</p>
+<p>Veamos un ejemplo con poca expresividad:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kd">class</span><span class="w"> </span><span class="nc">FerreteriaTest</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">DescribeSpec</span><span class="p">({</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">    </span><span class="n">describe</span><span class="p">(</span><span class="s">&quot;Una ferretería&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">        </span><span class="nb">it</span><span class="p">(</span><span class="s">&quot;puede fiarle a la Constructora Hurlingham&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">            </span><span class="kd">val</span><span class="w"> </span><span class="nv">constructoraHurlingham</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">EmpresaConstructora</span><span class="p">(</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">                </span><span class="n">albaniles</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">5</span><span class="p">,</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">                </span><span class="n">deuda</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">7000</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">            </span><span class="p">)</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">            </span><span class="n">constructoraHurlingham</span><span class="p">.</span><span class="na">puedePedirFiado</span><span class="p">().</span><span class="na">shouldBeTrue</span><span class="p">()</span>
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="p">})</span>
+</code></pre></div>
+<p>Si además el código de negocio tiene un error como este:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kd">class</span><span class="w"> </span><span class="nc">EmpresaConstructora</span><span class="p">(</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">cantidadAlbaniles</span><span class="p">:</span><span class="w"> </span><span class="kt">Int</span><span class="p">,</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">    </span><span class="n">deuda</span><span class="p">:</span><span class="w"> </span><span class="kt">Int</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="p">)</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">Cliente</span><span class="p">(</span><span class="n">deuda</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">    </span><span class="c1">// Error: debería ser &gt;= 5</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="w">    </span><span class="kd">fun</span><span class="w"> </span><span class="nf">montoMaximoDeuda</span><span class="p">()</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">cantidadAlbaniles</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="m">5</span><span class="p">)</span><span class="w"> </span><span class="m">10000</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="m">5000</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="w">    </span><span class="kd">override</span><span class="w"> </span><span class="kd">fun</span><span class="w"> </span><span class="nf">puedePedirFiado</span><span class="p">()</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">deuda</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">montoMaximoDeuda</span><span class="p">()</span>
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="p">}</span>
+</code></pre></div>
+<figure>
+<p><img alt="" src="../assets/ErrorEnTest.png" />
+  </p>
+<figcaption>Cuando el test no es expresivo, cuesta más entender por qué falla.</figcaption>
+</figure>
+<p>Ahora el mismo caso, pero con nombres más cercanos al dominio:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kd">class</span><span class="w"> </span><span class="nc">FerreteriaTest</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">DescribeSpec</span><span class="p">({</span>
 <a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">    </span><span class="n">describe</span><span class="p">(</span><span class="s">&quot;Una ferretería&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">        </span><span class="nb">it</span><span class="p">(</span><span class="s">&quot;puede fiarle a una constructora con muchos albañiles&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">            </span><span class="kd">val</span><span class="w"> </span><span class="nv">constructoraMuchosAlbaniles</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">EmpresaConstructora</span><span class="p">(</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">            </span><span class="kd">val</span><span class="w"> </span><span class="nv">constructoraConMuchosAlbaniles</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">EmpresaConstructora</span><span class="p">(</span>
 <a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">                </span><span class="n">albaniles</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">5</span><span class="p">,</span>
 <a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w">                </span><span class="n">deuda</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">7000</span>
-<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="w">            </span><span class="p">)</span><span class="w"> </span>
-<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="w">            </span><span class="n">constructoraMuchosAlbaniles</span><span class="p">.</span><span class="na">puedePedirFiado</span><span class="p">().</span><span class="na">shouldBeTrue</span><span class="p">()</span>
-<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="w">        </span><span class="p">}</span>
-<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="p">})</span>
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="w">            </span><span class="p">)</span>
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="w">            </span><span class="n">constructoraConMuchosAlbaniles</span><span class="p">.</span><span class="na">puedePedirFiado</span><span class="p">().</span><span class="na">shouldBeTrue</span><span class="p">()</span>
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a><span class="p">})</span>
 </code></pre></div>
-<p><img alt="" src="../assets/ErrorTest2.png" /></p>
-<p>Ahora al fallar el test sabemos más cosas:</p>
+<figure>
+<p><img alt="" src="../assets/ErrorTest2.png" />
+  </p>
+<figcaption>Un nombre más expresivo hace que el fallo del test sea más informativo.</figcaption>
+</figure>
+<p>En la práctica esto significa que el test no solo te dice que algo ha fallado, sino también <strong>qué regla del negocio parecía incumplirse</strong>.</p>
+<h3 id="8-patron-aaa-arrange-act-assert">8. Patrón <abbr title="Arrange, Act, Assert. Patrón habitual para estructurar pruebas automáticas en tres fases: preparar el escenario, ejecutar la acción y comprobar el resultado.">AAA</abbr>: Arrange, Act, Assert<a class="headerlink" href="#8-patron-aaa-arrange-act-assert" title="Permanent link">&para;</a></h3>
+<p>Una forma muy extendida de estructurar pruebas es el patrón <strong><abbr title="Arrange, Act, Assert. Patrón habitual para estructurar pruebas automáticas en tres fases: preparar el escenario, ejecutar la acción y comprobar el resultado.">AAA</abbr></strong>:</p>
 <ul>
-<li>Qué es lo que estamos testeando, tratando de no entrar en detalles para no duplicar lo que dice el código.</li>
-<li>Qué se esperaba que pasara y no pasó, en un formato <em>más o menos</em> legible para un usuario: “Una ferretería puede fiarle a una constructora con muchos albañiles”.</li>
+<li><strong>Arrange</strong>: preparar datos, objetos y contexto;</li>
+<li><strong>Act</strong>: ejecutar la operación que queremos probar;</li>
+<li><strong>Assert</strong>: comprobar el resultado esperado.</li>
 </ul>
-<h4 id="25-buenas-practicas">2.5. Buenas prácticas<a class="headerlink" href="#25-buenas-practicas" title="Permanent link">&para;</a></h4>
-<p>Más allá de lo explicado hasta aquí, compartimos también algunas buenas prácticas que pueden ser útiles a la hora de armar nuestras pruebas.</p>
-<h5 id="251-el-patron-aaa-arrange-act-assert">2.5.1. El patrón AAA: Arrange-Act-Assert<a class="headerlink" href="#251-el-patron-aaa-arrange-act-assert" title="Permanent link">&para;</a></h5>
-<p>Una de las formas más comunes de estructurar las pruebas es utilizando el patrón AAA:  <em>Arrange</em>, <em>Act</em> y <em>Assert</em>.</p>
-<p>No es necesario cumplirlo a raja tabla - y de hecho el ejemplo de este apunte no lo cumple 😅 -, pero tenerlo en mente puede ayudarnos a entender si nuestro test tiene todo lo que debería tener.</p>
-<p>Según este patrón, cada test se puede dividir en tres "momentos":</p>
-<ul>
-<li><strong>Arrange</strong>: que podría traducirse como <em>arreglar</em> o <em>gestionar</em>, en donde se instancian los objetos a testear, en este ejemplo la ferreteria y sus clientes. Cuando estos objetos son compartidos entre varios tests, los frameworks nos
-  permiten ubicarlos en algún lugar común, por ejemplo dentro de un mismo <code>describe</code>. La desventaja de esta técnica es que para tener una idea general de los elementos que participan en el test debemos mirar el test <strong>y además</strong> el código de inicialización en el que está enmarcado.</li>
-<li><strong>Act</strong>: que podría traducirse como <em>actuar</em>. Son operaciones que tienen algún efecto sobre los objetos creados, y que posteriormente vamos a querer comprobar que hicieron lo que debían. Hay tests, como los de estos apuntes, que no necesitan disparar acciones, y está bien que eso ocurra, no es incorrecto.    </li>
-<li><strong>Assert</strong>: que podría traducirse como <em>afirmar</em>. Es la parte donde escribimos lo que esperamos que pase, generalmente asociado a las respuestas que da el envío de un mensaje al objeto testeado.</li>
-</ul>
-<p>Veamos un ejemplo sencillo que puede desglosarse fácilmente en esos tres componentes:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="n">describe</span><span class="p">(</span><span class="s">&quot;Un ave&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span>
-<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">  </span><span class="nb">it</span><span class="p">(</span><span class="s">&quot;pierde energía al volar&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">    </span><span class="c1">// ARRANGE: se crea el objeto  </span>
-<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">pepita</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Ave</span><span class="p">(</span><span class="m">1000</span><span class="p">)</span>
-<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="w">    </span><span class="c1">// ACT: se realizan las acciones  </span>
-<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="w">    </span><span class="n">pepita</span><span class="p">.</span><span class="na">volar</span><span class="p">()</span>
-<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="w">    </span><span class="c1">// ASSERT: se verifica el efecto  </span>
-<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="w">    </span><span class="n">pepita</span><span class="p">.</span><span class="na">energia</span><span class="p">.</span><span class="na">shouldBe</span><span class="p">(</span><span class="m">900</span><span class="p">)</span><span class="w">  </span>
-<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="w">  </span><span class="p">}</span>
-<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="p">}</span>
+<p>No es una ley rígida, pero sí una guía útil para revisar si un test está bien enfocado.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="n">describe</span><span class="p">(</span><span class="s">&quot;Un ave&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">    </span><span class="nb">it</span><span class="p">(</span><span class="s">&quot;pierde energía al volar&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">        </span><span class="c1">// Arrange</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">        </span><span class="kd">val</span><span class="w"> </span><span class="nv">pepita</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Ave</span><span class="p">(</span><span class="m">1000</span><span class="p">)</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="w">        </span><span class="c1">// Act</span>
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="w">        </span><span class="n">pepita</span><span class="p">.</span><span class="na">volar</span><span class="p">()</span>
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>
+<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="w">        </span><span class="c1">// Assert</span>
+<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="w">        </span><span class="n">pepita</span><span class="p">.</span><span class="na">energia</span><span class="p">.</span><span class="na">shouldBe</span><span class="p">(</span><span class="m">900</span><span class="p">)</span>
+<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a><span class="p">}</span>
 </code></pre></div>
-<h3 id="3-recursos">3. Recursos<a class="headerlink" href="#3-recursos" title="Permanent link">&para;</a></h3>
+<p>Cuando un test mezcla demasiadas cosas en cada fase, suele ser señal de que estamos probando demasiado en un único caso.</p>
+<h3 id="9-buenas-practicas-al-trabajar-con-tests-unitarios">9. Buenas prácticas al trabajar con tests unitarios<a class="headerlink" href="#9-buenas-practicas-al-trabajar-con-tests-unitarios" title="Permanent link">&para;</a></h3>
+<p>Como cierre operativo, conviene quedarse con estas pautas:</p>
+<ul>
+<li>prueba comportamientos, no detalles internos irrelevantes;</li>
+<li>usa nombres que expliquen el escenario;</li>
+<li>evita fixtures innecesariamente complejos;</li>
+<li>selecciona casos representativos y valores límite;</li>
+<li>escribe tests pequeños y fáciles de leer;</li>
+<li>refactoriza también los tests cuando sea necesario.</li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Lo que debería recordar el alumnado</p>
+<p>Un buen test no es solo el que pasa, sino el que ayuda a entender el comportamiento del sistema y detecta con claridad cuándo algo deja de funcionar.</p>
+</div>
+<h3 id="10-conclusion">10. Conclusión<a class="headerlink" href="#10-conclusion" title="Permanent link">&para;</a></h3>
+<p>Las pruebas unitarias son una herramienta de calidad, pero también una herramienta de diseño. <abbr title="Desarrollo Guiado por Pruebas. Práctica de desarrollo de software que se basa en escribir las pruebas antes de escribir el código. En TDD, los desarrolladores escriben pruebas automatizadas que definen el comportamiento esperado del código, y luego escriben el código para que pase las pruebas.">TDD</abbr> lleva esta idea un paso más allá: obliga a pensar primero en el comportamiento esperado y después en la implementación.</p>
+<p>Si te quedas con una sola idea de este tema, que sea esta: <strong>cuando una prueba está bien elegida y bien escrita, no solo verifica código; también explica qué problema resuelve ese código y cómo debería comportarse</strong>.</p>
+<h2 id="fuentes-y-referencias">Fuentes y referencias<a class="headerlink" href="#fuentes-y-referencias" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="https://www.digite.com/es/agile/desarrollo-dirigido-por-pruebas-tdd/">¿Qué es <abbr title="Desarrollo Guiado por Pruebas. Práctica de desarrollo de software que se basa en escribir las pruebas antes de escribir el código. En TDD, los desarrolladores escriben pruebas automatizadas que definen el comportamiento esperado del código, y luego escriben el código para que pase las pruebas.">TDD</abbr>?</a></li>
-<li><a href="https://surprograma.github.io/libro-disenio-oop/docs/pruebas-automatizadas/elaborar-casos-prueba/">¿Cómo elaborar casos de prueba?</a></li>
+<li><a href="https://surprograma.github.io/libro-disenio-oop/docs/pruebas-automatizadas/elaborar-casos-prueba/">Cómo elaborar casos de prueba</a></li>
 <li><a href="http://wiki.uqbar.org/wiki/articles/testeo-unitario-avanzado.html">Test unitario avanzado</a></li>
-<li><a href="https://surprograma.github.io/libro-disenio-oop/docs/intro/">Diseño de Software</a></li>
-</ul>
-<h2 id="fuente">Fuente<a class="headerlink" href="#fuente" title="Permanent link">&para;</a></h2>
-<ul>
+<li><a href="https://surprograma.github.io/libro-disenio-oop/docs/intro/">Diseño de software</a></li>
 <li><a href="https://www.youtube.com/watch?v=8MGtLPFtbQ8"><abbr title="Desarrollo Guiado por Pruebas. Práctica de desarrollo de software que se basa en escribir las pruebas antes de escribir el código. En TDD, los desarrolladores escriben pruebas automatizadas que definen el comportamiento esperado del código, y luego escriben el código para que pase las pruebas.">TDD</abbr> Veloz</a></li>
 </ul>
 

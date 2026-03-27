@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Mockk">
+        <meta name="description" content="Biblioteca de mocking para Kotlin orientada a simular colaboraciones y comprobar interacciones en tests unitarios.">
       
       
         <meta name="author" content="Eduardo Fdez">
@@ -29,7 +29,7 @@
     
     
       
-        <title>UD 5 - 5.2.2 Mockk - R Z O</title>
+        <title>UD 5 - 5.2.2 MockK - R Z O</title>
       
     
     
@@ -105,7 +105,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#522-mockk-una-biblioteca-burlona-para-kotlin" class="md-skip">
+        <a href="#522-mockk" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -144,7 +144,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              UD 5 - 5.2.2 Mockk
+              UD 5 - 5.2.2 MockK
             
           </span>
         </div>
@@ -4824,6 +4824,8 @@
               
   
   
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M16 0H8C6.9 0 6 .9 6 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V6zm4 18H8V2h7v5h5zM4 4v18h16v2H4c-1.1 0-2-.9-2-2V4zm6 6v2h8v-2zm0 4v2h5v-2z"/></svg>
+  
   <span class="md-ellipsis">
     
   
@@ -4867,8 +4869,6 @@
       <a href="../EDES-U5.1.-Pruebas/" class="md-nav__link">
         
   
-  
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"/></svg>
   
   <span class="md-ellipsis">
     
@@ -4927,8 +4927,6 @@
       <a href="../EDES-U5.2.1.-Kotest/" class="md-nav__link">
         
   
-  
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"/></svg>
   
   <span class="md-ellipsis">
     
@@ -5016,22 +5014,22 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#522-mockk-una-biblioteca-burlona-para-kotlin" class="md-nav__link">
+  <a href="#522-mockk" class="md-nav__link">
     <span class="md-ellipsis">
       
-        5.2.2. MockK: una biblioteca burlona para Kotlin
+        5.2.2 MockK
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="5.2.2. MockK: una biblioteca burlona para Kotlin">
+    <nav class="md-nav" aria-label="5.2.2 MockK">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#1-informacion-general" class="md-nav__link">
+  <a href="#1-que-problema-resuelve-mockk" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1. Información general
+        1. Qué problema resuelve MockK
       
     </span>
   </a>
@@ -5039,10 +5037,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#2-mockk" class="md-nav__link">
+  <a href="#2-instalacion-basica" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2. MockK
+        2. Instalación básica
       
     </span>
   </a>
@@ -5050,10 +5048,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#3-instalacion" class="md-nav__link">
+  <a href="#3-ejemplo-basico-de-mock" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3. Instalación
+        3. Ejemplo básico de mock
       
     </span>
   </a>
@@ -5061,10 +5059,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#4-ejemplo-basico" class="md-nav__link">
+  <a href="#4-uso-de-anotaciones" class="md-nav__link">
     <span class="md-ellipsis">
       
-        4. Ejemplo básico
+        4. Uso de anotaciones
       
     </span>
   </a>
@@ -5072,10 +5070,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#5-ejemplo-de-uso-de-las-anotaciones" class="md-nav__link">
+  <a href="#5-spy-mezclar-comportamiento-real-y-simulado" class="md-nav__link">
     <span class="md-ellipsis">
       
-        5. Ejemplo de uso de las anotaciones
+        5. Spy: mezclar comportamiento real y simulado
       
     </span>
   </a>
@@ -5083,10 +5081,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#6-spy" class="md-nav__link">
+  <a href="#6-mocks-relajados" class="md-nav__link">
     <span class="md-ellipsis">
       
-        6. Spy
+        6. Mocks relajados
       
     </span>
   </a>
@@ -5094,10 +5092,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#7-mockeado-relajado" class="md-nav__link">
+  <a href="#7-mockear-objetos-object" class="md-nav__link">
     <span class="md-ellipsis">
       
-        7. Mockeado relajado
+        7. Mockear objetos object
       
     </span>
   </a>
@@ -5105,10 +5103,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#8-mockeado-de-objetos" class="md-nav__link">
+  <a href="#8-mockeado-jerarquico" class="md-nav__link">
     <span class="md-ellipsis">
       
-        8. Mockeado de objetos
+        8. Mockeado jerárquico
       
     </span>
   </a>
@@ -5116,44 +5114,22 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#9-mockeado-jerarquico" class="md-nav__link">
+  <a href="#9-captura-de-argumentos" class="md-nav__link">
     <span class="md-ellipsis">
       
-        9. Mockeado jerárquico
+        9. Captura de argumentos
       
     </span>
   </a>
   
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#10-captura-de-argumentos" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        10. Captura de argumentos
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#11-funciones-stubbing-que-retornan-unit" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        11. Funciones Stubbing que retornan Unit
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="11. Funciones Stubbing que retornan Unit">
+    <nav class="md-nav" aria-label="9. Captura de argumentos">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#111-hacer-que-la-funcion-no-haga-nada" class="md-nav__link">
+  <a href="#91-usando-slot" class="md-nav__link">
     <span class="md-ellipsis">
       
-        11.1. Hacer que la función no haga nada
+        9.1. Usando slot
       
     </span>
   </a>
@@ -5161,21 +5137,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#112-llamar-a-la-funcion-original" class="md-nav__link">
+  <a href="#92-usando-una-lista-mutable" class="md-nav__link">
     <span class="md-ellipsis">
       
-        11.2. Llamar a la función original
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#113-cuando-necesitamos-calloriginal" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        11.3. ¿Cuándo necesitamos callOriginal()?
+        9.2. Usando una lista mutable
       
     </span>
   </a>
@@ -5184,6 +5149,67 @@
         
       </ul>
     </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10-stubbing-de-funciones-que-devuelven-unit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. Stubbing de funciones que devuelven Unit
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="10. Stubbing de funciones que devuelven Unit">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#101-hacer-que-no-haga-nada" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.1. Hacer que no haga nada
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#102-llamar-a-la-implementacion-original" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.2. Llamar a la implementación original
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#103-combinar-varios-escenarios" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.3. Combinar varios escenarios
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#11-cuando-conviene-usar-mockk-y-cuando-no" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11. Cuándo conviene usar MockK y cuándo no
+      
+    </span>
+  </a>
   
 </li>
         
@@ -5198,27 +5224,16 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#13-recursos" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        13. Recursos
-      
-    </span>
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#fuentes" class="md-nav__link">
+  <a href="#fuentes-y-referencias" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Fuentes
+        Fuentes y referencias
       
     </span>
   </a>
@@ -8547,22 +8562,22 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#522-mockk-una-biblioteca-burlona-para-kotlin" class="md-nav__link">
+  <a href="#522-mockk" class="md-nav__link">
     <span class="md-ellipsis">
       
-        5.2.2. MockK: una biblioteca burlona para Kotlin
+        5.2.2 MockK
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="5.2.2. MockK: una biblioteca burlona para Kotlin">
+    <nav class="md-nav" aria-label="5.2.2 MockK">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#1-informacion-general" class="md-nav__link">
+  <a href="#1-que-problema-resuelve-mockk" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1. Información general
+        1. Qué problema resuelve MockK
       
     </span>
   </a>
@@ -8570,10 +8585,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#2-mockk" class="md-nav__link">
+  <a href="#2-instalacion-basica" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2. MockK
+        2. Instalación básica
       
     </span>
   </a>
@@ -8581,10 +8596,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#3-instalacion" class="md-nav__link">
+  <a href="#3-ejemplo-basico-de-mock" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3. Instalación
+        3. Ejemplo básico de mock
       
     </span>
   </a>
@@ -8592,10 +8607,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#4-ejemplo-basico" class="md-nav__link">
+  <a href="#4-uso-de-anotaciones" class="md-nav__link">
     <span class="md-ellipsis">
       
-        4. Ejemplo básico
+        4. Uso de anotaciones
       
     </span>
   </a>
@@ -8603,10 +8618,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#5-ejemplo-de-uso-de-las-anotaciones" class="md-nav__link">
+  <a href="#5-spy-mezclar-comportamiento-real-y-simulado" class="md-nav__link">
     <span class="md-ellipsis">
       
-        5. Ejemplo de uso de las anotaciones
+        5. Spy: mezclar comportamiento real y simulado
       
     </span>
   </a>
@@ -8614,10 +8629,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#6-spy" class="md-nav__link">
+  <a href="#6-mocks-relajados" class="md-nav__link">
     <span class="md-ellipsis">
       
-        6. Spy
+        6. Mocks relajados
       
     </span>
   </a>
@@ -8625,10 +8640,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#7-mockeado-relajado" class="md-nav__link">
+  <a href="#7-mockear-objetos-object" class="md-nav__link">
     <span class="md-ellipsis">
       
-        7. Mockeado relajado
+        7. Mockear objetos object
       
     </span>
   </a>
@@ -8636,10 +8651,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#8-mockeado-de-objetos" class="md-nav__link">
+  <a href="#8-mockeado-jerarquico" class="md-nav__link">
     <span class="md-ellipsis">
       
-        8. Mockeado de objetos
+        8. Mockeado jerárquico
       
     </span>
   </a>
@@ -8647,44 +8662,22 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#9-mockeado-jerarquico" class="md-nav__link">
+  <a href="#9-captura-de-argumentos" class="md-nav__link">
     <span class="md-ellipsis">
       
-        9. Mockeado jerárquico
+        9. Captura de argumentos
       
     </span>
   </a>
   
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#10-captura-de-argumentos" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        10. Captura de argumentos
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#11-funciones-stubbing-que-retornan-unit" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        11. Funciones Stubbing que retornan Unit
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="11. Funciones Stubbing que retornan Unit">
+    <nav class="md-nav" aria-label="9. Captura de argumentos">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#111-hacer-que-la-funcion-no-haga-nada" class="md-nav__link">
+  <a href="#91-usando-slot" class="md-nav__link">
     <span class="md-ellipsis">
       
-        11.1. Hacer que la función no haga nada
+        9.1. Usando slot
       
     </span>
   </a>
@@ -8692,21 +8685,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#112-llamar-a-la-funcion-original" class="md-nav__link">
+  <a href="#92-usando-una-lista-mutable" class="md-nav__link">
     <span class="md-ellipsis">
       
-        11.2. Llamar a la función original
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#113-cuando-necesitamos-calloriginal" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        11.3. ¿Cuándo necesitamos callOriginal()?
+        9.2. Usando una lista mutable
       
     </span>
   </a>
@@ -8715,6 +8697,67 @@
         
       </ul>
     </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10-stubbing-de-funciones-que-devuelven-unit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. Stubbing de funciones que devuelven Unit
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="10. Stubbing de funciones que devuelven Unit">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#101-hacer-que-no-haga-nada" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.1. Hacer que no haga nada
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#102-llamar-a-la-implementacion-original" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.2. Llamar a la implementación original
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#103-combinar-varios-escenarios" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.3. Combinar varios escenarios
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#11-cuando-conviene-usar-mockk-y-cuando-no" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11. Cuándo conviene usar MockK y cuándo no
+      
+    </span>
+  </a>
   
 </li>
         
@@ -8729,27 +8772,16 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#13-recursos" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        13. Recursos
-      
-    </span>
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#fuentes" class="md-nav__link">
+  <a href="#fuentes-y-referencias" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Fuentes
+        Fuentes y referencias
       
     </span>
   </a>
@@ -8790,7 +8822,7 @@
         
       
       
-        <a href="../../../../tags/#tag:mock" class="md-tag md-tag-icon">Mock</a>
+        <a href="../../../../tags/#tag:kotlin" class="md-tag md-tag-icon">Kotlin</a>
       
     
       
@@ -8800,7 +8832,27 @@
         
       
       
-        <a href="../../../../tags/#tag:software" class="md-tag md-tag-icon">Software</a>
+        <a href="../../../../tags/#tag:mockk" class="md-tag md-tag-icon">MockK</a>
+      
+    
+      
+      
+      
+        
+        
+      
+      
+        <a href="../../../../tags/#tag:mocking" class="md-tag md-tag-icon">mocking</a>
+      
+    
+      
+      
+      
+        
+        
+      
+      
+        <a href="../../../../tags/#tag:testing" class="md-tag md-tag-icon">testing</a>
       
     
   </nav>
@@ -8812,27 +8864,76 @@
 
   <h1>5.2.2.-MockK</h1>
 
-<h2 id="522-mockk-una-biblioteca-burlona-para-kotlin">5.2.2. MockK: una biblioteca burlona para Kotlin<a class="headerlink" href="#522-mockk-una-biblioteca-burlona-para-kotlin" title="Permanent link">&para;</a></h2>
-<h3 id="1-informacion-general">1. Información general<a class="headerlink" href="#1-informacion-general" title="Permanent link">&para;</a></h3>
-<p>Vamos a revisar algunas de las funciones básicas de la biblioteca  <a href="https://mockk.io/">MockK</a>.</p>
-<h3 id="2-mockk">2. MockK<a class="headerlink" href="#2-mockk" title="Permanent link">&para;</a></h3>
-<p>En Kotlin, todas las clases y métodos son finales.  Si bien esto nos ayuda a escribir código inmutable, también causa algunos problemas durante las pruebas.</p>
-<p>La mayoría de las bibliotecas que simulan objetos (mock) que se usan en <abbr title="Máquina Virtual de Java. Es una máquina virtual que ejecuta el código Java en cualquier plataforma. La JVM convierte el código Java en código de máquina nativo y gestiona la memoria, el rendimiento y la seguridad de las aplicaciones Java.">JVM</abbr> tienen problemas con las clases finales usadas para mocking or stubbing. Por supuesto, podemos agregar la palabra clave <code>open</code> a las clases y métodos que queremos "mockear" (simular). Pero cambiar el código solo para poder mockearla no parece el mejor enfoque.</p>
-<p>La biblioteca MockK ofrece compatibilidad con las características y construcciones del lenguaje Kotlin.  MockK construye proxies para las clases mockeadas. Esto provoca cierta degradación del rendimiento, pero los beneficios generales que nos brinda MockK valen la pena.</p>
-<h3 id="3-instalacion">3. Instalación<a class="headerlink" href="#3-instalacion" title="Permanent link">&para;</a></h3>
-<p>La configuración del proyecto consiste en añadir las dependencias de <a href="https://search.maven.org/search?q=g:io.mockk%20a:mockk">mockk</a> al fichero <code>build.gradle.kts</code></p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kd">var</span><span class="w"> </span><span class="nv">mockKVersion</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;1.13.4&quot;</span>
+<h2 id="522-mockk">5.2.2 MockK<a class="headerlink" href="#522-mockk" title="Permanent link">&para;</a></h2>
+<p>Cuando una unidad de código depende de otra, aparece una pregunta importante: ¿cómo probamos una clase sin tener que ejecutar siempre sus dependencias reales? Ahí es donde entra <strong>MockK</strong>.</p>
+<p>En la normativa de la unidad, este contenido se relaciona con el diseño y la automatización de pruebas, ya que MockK permite aislar dependencias, construir escenarios controlados y verificar colaboraciones dentro de un test unitario.</p>
+<table>
+<thead>
+<tr>
+<th>Código</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>RA3</td>
+<td>Verifica el funcionamiento de programas diseñando y realizando pruebas.</td>
+</tr>
+<tr>
+<td><abbr title="Criterio de Evaluación. Indicador concreto que detalla qué debe demostrar el alumnado dentro de un resultado de aprendizaje.">CE</abbr> b</td>
+<td>Se han definido casos de prueba.</td>
+</tr>
+<tr>
+<td><abbr title="Criterio de Evaluación. Indicador concreto que detalla qué debe demostrar el alumnado dentro de un resultado de aprendizaje.">CE</abbr> f</td>
+<td>Se han efectuado pruebas unitarias de clases y funciones.</td>
+</tr>
+<tr>
+<td><abbr title="Criterio de Evaluación. Indicador concreto que detalla qué debe demostrar el alumnado dentro de un resultado de aprendizaje.">CE</abbr> g</td>
+<td>Se han implementado pruebas automáticas.</td>
+</tr>
+<tr>
+<td><abbr title="Criterio de Evaluación. Indicador concreto que detalla qué debe demostrar el alumnado dentro de un resultado de aprendizaje.">CE</abbr> i</td>
+<td>Se han utilizado dobles de prueba para aislar los componentes durante las pruebas.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition abstract">
+<p class="admonition-title">Qué vas a aprender en este apartado</p>
+<ul>
+<li>Entender para qué sirve una biblioteca de mocking en Kotlin.</li>
+<li>Crear mocks, spies y mocks relajados con MockK.</li>
+<li>Capturar argumentos y controlar colaboraciones entre objetos.</li>
+<li>Simular singletons y funciones con retorno <code>Unit</code>.</li>
+</ul>
+</div>
+<h3 id="1-que-problema-resuelve-mockk">1. Qué problema resuelve MockK<a class="headerlink" href="#1-que-problema-resuelve-mockk" title="Permanent link">&para;</a></h3>
+<p>MockK es una biblioteca de <em>mocking</em> para Kotlin. Su objetivo es permitirnos <strong>simular colaboraciones</strong> entre objetos durante una prueba.</p>
+<p>En la práctica, esto sirve para:</p>
+<ul>
+<li>aislar la unidad que estamos probando;</li>
+<li>controlar la respuesta de dependencias externas;</li>
+<li>verificar que una colaboración ocurrió como esperábamos;</li>
+<li>evitar llamadas reales a bases de datos, servicios remotos o componentes costosos.</li>
+</ul>
+<p>En Kotlin esto cobra especial importancia porque muchas clases y métodos son finales por defecto, y no todas las bibliotecas de mocking manejan bien ese escenario. MockK está pensada precisamente para encajar mejor con las características del lenguaje.</p>
+<div class="admonition note">
+<p class="admonition-title">Qué significa mockear</p>
+<p>Mockear no es "falsear por falsear". Se trata de sustituir una dependencia real por un doble de prueba controlado para centrarnos en el comportamiento de la unidad que queremos verificar.</p>
+</div>
+<h3 id="2-instalacion-basica">2. Instalación básica<a class="headerlink" href="#2-instalacion-basica" title="Permanent link">&para;</a></h3>
+<p>La configuración mínima en Gradle suele quedar así:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kd">val</span><span class="w"> </span><span class="nv">mockkVersion</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;x.y.z&quot;</span>
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="n">dependencies</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="n">testImplementation</span><span class="p">(</span><span class="s">&quot;io.mockk:mockk:</span><span class="si">$</span><span class="n">mockKVersion</span><span class="s">&quot;</span><span class="p">)</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="n">testImplementation</span><span class="p">(</span><span class="s">&quot;io.mockk:mockk:</span><span class="si">$</span><span class="n">mockkVersion</span><span class="s">&quot;</span><span class="p">)</span>
 <a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="p">}</span>
 </code></pre></div>
-<p>Ten en cuenta que estamos estableciendo la version <code>1.13.4</code>, en el <a href="https://mvnrepository.com/artifact/io.mockk/mockk">repositorio Maven </a> puedes consultar cuál es la última versión.</p>
-<h3 id="4-ejemplo-basico">4. Ejemplo básico<a class="headerlink" href="#4-ejemplo-basico" title="Permanent link">&para;</a></h3>
-<p>Vamos a crear un servicio que podremos usar como ejemplo para "mockear" (simular) su funcionamiento:</p>
+<p>Como criterio general, conviene consultar la documentación del proyecto para elegir una versión compatible con la versión de Kotlin y del motor de pruebas que uses.</p>
+<h3 id="3-ejemplo-basico-de-mock">3. Ejemplo básico de <abbr title="Doble de prueba que simula el comportamiento de una dependencia y permite verificar llamadas o respuestas esperadas.">mock</abbr><a class="headerlink" href="#3-ejemplo-basico-de-mock" title="Permanent link">&para;</a></h3>
+<p>Partimos de un servicio sencillo:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kd">class</span><span class="w"> </span><span class="nc">TestableService</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">    </span><span class="kd">fun</span><span class="w"> </span><span class="nf">getDataFromDb</span><span class="p">(</span><span class="n">testParameter</span><span class="p">:</span><span class="w"> </span><span class="kt">String</span><span class="p">):</span><span class="w"> </span><span class="kt">String</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">        </span><span class="c1">// query database and return matching value</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">        </span><span class="n">error</span><span class="p">(</span><span class="s">&quot;Implementación real no disponible en este ejemplo&quot;</span><span class="p">)</span>
 <a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">    </span><span class="p">}</span>
 <a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>
 <a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">    </span><span class="kd">fun</span><span class="w"> </span><span class="nf">doSomethingElse</span><span class="p">(</span><span class="n">testParameter</span><span class="p">:</span><span class="w"> </span><span class="kt">String</span><span class="p">):</span><span class="w"> </span><span class="kt">String</span><span class="w"> </span><span class="p">{</span>
@@ -8840,328 +8941,338 @@
 <a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">    </span><span class="p">}</span>
 <a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="p">}</span>
 </code></pre></div>
-<p>Aquí hay un test de ejemplo que mockea <code>TestableService</code>:</p>
-<p><div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nd">@Test</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="kd">fun</span><span class="w"> </span><span class="nf">givenServiceMock_whenCallingMockedMethod_thenCorrectlyVerified</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">    </span><span class="c1">// given</span>
-<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">service</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mockk</span><span class="o">&lt;</span><span class="n">TestableService</span><span class="o">&gt;</span><span class="p">()</span>
-<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">    </span><span class="n">every</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">service</span><span class="p">.</span><span class="na">getDataFromDb</span><span class="p">(</span><span class="s">&quot;Expected Param&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="n">returns</span><span class="w"> </span><span class="s">&quot;Expected Output&quot;</span>
+<p>Y ahora un test que simula su comportamiento:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">import</span><span class="w"> </span><span class="nn">io.mockk.every</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="k">import</span><span class="w"> </span><span class="nn">io.mockk.mockk</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="k">import</span><span class="w"> </span><span class="nn">io.mockk.verify</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="k">import</span><span class="w"> </span><span class="nn">kotlin.test.Test</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="k">import</span><span class="w"> </span><span class="nn">kotlin.test.assertEquals</span>
 <a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>
-<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="w">    </span><span class="c1">// when</span>
-<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">service</span><span class="p">.</span><span class="na">getDataFromDb</span><span class="p">(</span><span class="s">&quot;Expected Param&quot;</span><span class="p">)</span>
-<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>
-<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="w">    </span><span class="c1">// then</span>
-<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="w">    </span><span class="n">verify</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">service</span><span class="p">.</span><span class="na">getDataFromDb</span><span class="p">(</span><span class="s">&quot;Expected Param&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">}</span>
-<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="w">    </span><span class="n">assertEquals</span><span class="p">(</span><span class="s">&quot;Expected Output&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">result</span><span class="p">)</span>
-<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="p">}</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="kd">class</span><span class="w"> </span><span class="nc">BasicMockKTest</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="w">    </span><span class="nd">@Test</span>
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="w">    </span><span class="kd">fun</span><span class="w"> </span><span class="nf">givenServiceMock_whenCallingMockedMethod_thenCorrectlyVerified</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="w">        </span><span class="kd">val</span><span class="w"> </span><span class="nv">service</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mockk</span><span class="o">&lt;</span><span class="n">TestableService</span><span class="o">&gt;</span><span class="p">()</span>
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>
+<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="w">        </span><span class="n">every</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">service</span><span class="p">.</span><span class="na">getDataFromDb</span><span class="p">(</span><span class="s">&quot;Expected Param&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="n">returns</span><span class="w"> </span><span class="s">&quot;Expected Output&quot;</span>
+<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>
+<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a><span class="w">        </span><span class="kd">val</span><span class="w"> </span><span class="nv">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">service</span><span class="p">.</span><span class="na">getDataFromDb</span><span class="p">(</span><span class="s">&quot;Expected Param&quot;</span><span class="p">)</span>
+<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>
+<a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a><span class="w">        </span><span class="n">verify</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">service</span><span class="p">.</span><span class="na">getDataFromDb</span><span class="p">(</span><span class="s">&quot;Expected Param&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">}</span>
+<a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a><span class="w">        </span><span class="n">assertEquals</span><span class="p">(</span><span class="s">&quot;Expected Output&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">result</span><span class="p">)</span>
+<a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a><span class="p">}</span>
 </code></pre></div>
-Revisando las partes mas importantes del código anterior:    </p>
+<p>Las piezas importantes del ejemplo son:</p>
 <ul>
-<li>Para definir el objeto mockeado <code>TestableService</code>, hemos usado el método <code>mockk&lt;…&gt;()</code>.    </li>
-<li>En el siguiente paso, definimos el comportamiento de nuestro objeto mockeado <code>TestableService</code>. Para este propósito, hemos creado un bloque <code>every</code> que describe qué respuesta debe devolverse <code>returns "Expected"</code> para qué llamada y con qué argumento. Es decir, el resultado que devolverá cuando se llame al método <code>service.getDataFromDb</code> y con un argumento concreto <code>("Expected Param")</code>   </li>
-<li>Finalmente, usamos el bloque de <code>verify</code> para verificar si el simulacro se invocó como esperábamos, siendo verificado si al menos se ha invocado una vez el método <code>service.getDataFromDb("Expected Param")</code>.</li>
+<li><code>mockk&lt;T&gt;()</code> crea el objeto simulado;</li>
+<li><code>every { ... } returns ...</code> define su comportamiento;</li>
+<li><code>verify { ... }</code> comprueba que la interacción ocurrió.</li>
 </ul>
-<h3 id="5-ejemplo-de-uso-de-las-anotaciones">5. Ejemplo de uso de las anotaciones<a class="headerlink" href="#5-ejemplo-de-uso-de-las-anotaciones" title="Permanent link">&para;</a></h3>
-<p>Es posible usar las anotaciones MockK <code>@MockK</code> para crear todo tipo de objetos mocks. Vamos a crear un servicio que requiera de dos instancias de nuestro <code>TestableService</code>:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kd">class</span><span class="w"> </span><span class="nc">InjectTestService</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">    </span><span class="kd">lateinit</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="nv">service1</span><span class="p">:</span><span class="w"> </span><span class="n">TestableService</span>
-<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">    </span><span class="kd">lateinit</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="nv">service2</span><span class="p">:</span><span class="w"> </span><span class="n">TestableService</span>
-<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>
-<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">    </span><span class="kd">fun</span><span class="w"> </span><span class="nf">invokeService1</span><span class="p">():</span><span class="w"> </span><span class="kt">String</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">service1</span><span class="p">.</span><span class="na">getDataFromDb</span><span class="p">(</span><span class="s">&quot;Test Param&quot;</span><span class="p">)</span>
-<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="p">}</span>
+<h3 id="4-uso-de-anotaciones">4. Uso de anotaciones<a class="headerlink" href="#4-uso-de-anotaciones" title="Permanent link">&para;</a></h3>
+<p>MockK también permite declarar mocks mediante anotaciones. Esto resulta útil cuando el test tiene varias dependencias y quieres dejar más visible qué papel juega cada una.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">import</span><span class="w"> </span><span class="nn">io.mockk.InjectMockKs</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="k">import</span><span class="w"> </span><span class="nn">io.mockk.MockK</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="k">import</span><span class="w"> </span><span class="nn">io.mockk.MockKAnnotations</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="k">import</span><span class="w"> </span><span class="nn">kotlin.test.BeforeTest</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="kd">class</span><span class="w"> </span><span class="nc">InjectTestService</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="w">    </span><span class="kd">lateinit</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="nv">service1</span><span class="p">:</span><span class="w"> </span><span class="n">TestableService</span>
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="w">    </span><span class="kd">lateinit</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="nv">service2</span><span class="p">:</span><span class="w"> </span><span class="n">TestableService</span>
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="w">    </span><span class="kd">fun</span><span class="w"> </span><span class="nf">invokeService1</span><span class="p">():</span><span class="w"> </span><span class="kt">String</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">service1</span><span class="p">.</span><span class="na">getDataFromDb</span><span class="p">(</span><span class="s">&quot;Test Param&quot;</span><span class="p">)</span>
+<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="p">}</span>
+<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>
+<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a><span class="kd">class</span><span class="w"> </span><span class="nc">AnnotationMockKUnitTest</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>
+<a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a><span class="w">    </span><span class="nd">@MockK</span>
+<a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a><span class="w">    </span><span class="kd">lateinit</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="nv">service1</span><span class="p">:</span><span class="w"> </span><span class="n">TestableService</span>
+<a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a>
+<a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a><span class="w">    </span><span class="nd">@MockK</span>
+<a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a><span class="w">    </span><span class="kd">lateinit</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="nv">service2</span><span class="p">:</span><span class="w"> </span><span class="n">TestableService</span>
+<a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a>
+<a id="__codelineno-3-21" name="__codelineno-3-21" href="#__codelineno-3-21"></a><span class="w">    </span><span class="nd">@InjectMockKs</span>
+<a id="__codelineno-3-22" name="__codelineno-3-22" href="#__codelineno-3-22"></a><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nv">objectUnderTest</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">InjectTestService</span><span class="p">()</span>
+<a id="__codelineno-3-23" name="__codelineno-3-23" href="#__codelineno-3-23"></a>
+<a id="__codelineno-3-24" name="__codelineno-3-24" href="#__codelineno-3-24"></a><span class="w">    </span><span class="nd">@BeforeTest</span>
+<a id="__codelineno-3-25" name="__codelineno-3-25" href="#__codelineno-3-25"></a><span class="w">    </span><span class="kd">fun</span><span class="w"> </span><span class="nf">setUp</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-26" name="__codelineno-3-26" href="#__codelineno-3-26"></a><span class="w">        </span><span class="n">MockKAnnotations</span><span class="p">.</span><span class="na">init</span><span class="p">(</span><span class="k">this</span><span class="p">)</span>
+<a id="__codelineno-3-27" name="__codelineno-3-27" href="#__codelineno-3-27"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-3-28" name="__codelineno-3-28" href="#__codelineno-3-28"></a><span class="p">}</span>
 </code></pre></div>
-<p>El servicio que hemos creado, <code>InjectTestService</code>, contiene dos variables de instancia del mismo tipo. Esto no será un problema para MockK, ya que MockK intenta hacer coincidir las propiedades por nombre y luego por clase o superclase. Además, tampoco <strong>tiene problema con la inyección de objetos en campos privados</strong>.</p>
-<p>Vamos a mockear el servicio <code>InjectTestService</code> en el siguiente test haciendo uso de las anotaciones:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kd">class</span><span class="w"> </span><span class="nc">AnnotationMockKUnitTest</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>
-<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">    </span><span class="nd">@MockK</span>
-<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">    </span><span class="kd">lateinit</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="nv">service1</span><span class="p">:</span><span class="w"> </span><span class="n">TestableService</span>
+<p>Aquí MockK intenta inyectar los mocks en el objeto bajo prueba, normalmente por nombre y después por tipo. Esto reduce bastante el trabajo repetitivo cuando el test tiene varias colaboraciones.</p>
+<h3 id="5-spy-mezclar-comportamiento-real-y-simulado">5. Spy: mezclar comportamiento real y simulado<a class="headerlink" href="#5-spy-mezclar-comportamiento-real-y-simulado" title="Permanent link">&para;</a></h3>
+<p>Un <strong><abbr title="Doble de prueba que parte de un objeto real y permite sustituir o vigilar solo parte de su comportamiento.">spy</abbr></strong> crea un objeto que conserva su comportamiento real salvo en los métodos que decidimos sustituir.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">import</span><span class="w"> </span><span class="nn">io.mockk.every</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="k">import</span><span class="w"> </span><span class="nn">io.mockk.spyk</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="k">import</span><span class="w"> </span><span class="nn">kotlin.test.Test</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="k">import</span><span class="w"> </span><span class="nn">kotlin.test.assertEquals</span>
 <a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>
-<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="w">    </span><span class="nd">@MockK</span>
-<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="w">    </span><span class="kd">lateinit</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="nv">service2</span><span class="p">:</span><span class="w"> </span><span class="n">TestableService</span>
-<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>
-<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="w">    </span><span class="nd">@InjectMockKs</span>
-<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nv">objectUnderTest</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">InjectTestService</span><span class="p">()</span>
-<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>
-<a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a><span class="w">    </span><span class="nd">@BeforeEach</span>
-<a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a><span class="w">    </span><span class="kd">fun</span><span class="w"> </span><span class="nf">setUp</span><span class="p">()</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">MockKAnnotations</span><span class="p">.</span><span class="na">init</span><span class="p">(</span><span class="k">this</span><span class="p">)</span>
-<a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a>
-<a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a><span class="w">    </span><span class="c1">// Tests here</span>
-<a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a><span class="w">    </span><span class="p">...</span>
-<a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a><span class="p">}</span>
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="kd">class</span><span class="w"> </span><span class="nc">SpyKExampleTest</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="w">    </span><span class="nd">@Test</span>
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="w">    </span><span class="kd">fun</span><span class="w"> </span><span class="nf">givenServiceSpy_whenMockingOnlyOneMethod_thenOtherMethodsShouldBehaveAsOriginalObject</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="w">        </span><span class="kd">val</span><span class="w"> </span><span class="nv">service</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">spyk</span><span class="o">&lt;</span><span class="n">TestableService</span><span class="o">&gt;</span><span class="p">()</span>
+<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>
+<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="w">        </span><span class="n">every</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">service</span><span class="p">.</span><span class="na">getDataFromDb</span><span class="p">(</span><span class="n">any</span><span class="p">())</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="n">returns</span><span class="w"> </span><span class="s">&quot;Mocked Output&quot;</span>
+<a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a>
+<a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a><span class="w">        </span><span class="kd">val</span><span class="w"> </span><span class="nv">firstResult</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">service</span><span class="p">.</span><span class="na">getDataFromDb</span><span class="p">(</span><span class="s">&quot;Any Param&quot;</span><span class="p">)</span>
+<a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a><span class="w">        </span><span class="kd">val</span><span class="w"> </span><span class="nv">secondResult</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">service</span><span class="p">.</span><span class="na">doSomethingElse</span><span class="p">(</span><span class="s">&quot;Any Param&quot;</span><span class="p">)</span>
+<a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a>
+<a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a><span class="w">        </span><span class="n">assertEquals</span><span class="p">(</span><span class="s">&quot;Mocked Output&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">firstResult</span><span class="p">)</span>
+<a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a><span class="w">        </span><span class="n">assertEquals</span><span class="p">(</span><span class="s">&quot;I don&#39;t want to!&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">secondResult</span><span class="p">)</span>
+<a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-4-19" name="__codelineno-4-19" href="#__codelineno-4-19"></a><span class="p">}</span>
 </code></pre></div>
-<p>Revisemos lo más importante del código anterior:   </p>
-<ul>
-<li>Con la anotación <code>@MoockK</code>, hemos definido (marcdo para crear) los objetos mocks <code>service1</code> y <code>service2</code> que vamos a inyectar en el servicio <code>objectUnderTest</code>.    </li>
-<li>Hemos usado la anotación <code>@InjectMockKs</code> para especificar el objeto <code>objectUnderTest</code> donde se deben inyectar los objetos mocks definidos.   </li>
-<li>Por defecto, los objetos mocks se inyectan en variables que aún no están asignadas. Aunque, podemos usar <code>@OverrideMockKs</code> para anular campos que ya tienen un valor.</li>
-<li>Por último, MockK requiere que se llame a <code>MockKAnnotations.init(…)</code> en el objeto que declara variables con anotaciones. Para Junit5, se puede reemplazar con <code>@ExtendWith(MockKExtension::class)</code>.</li>
-</ul>
-<h3 id="6-spy">6. Spy<a class="headerlink" href="#6-spy" title="Permanent link">&para;</a></h3>
-<p><code>Spy</code> permite en un objeto mezclar el comportamiento de objetos reales y mockeados, es decir, mockear solo una parte particular de alguna clase. Por ejemplo, se puede usar para simular un método específico del servicio  <code>TestableService</code>, el resto del servicio funcionará como se definió. Si no se define un comportamiento nuevo, el objeto entero funcionara como se definió en su clases, pero podremos usar sobre él verificaciones haciendo uso de <code>verify</code>. Veamos el ejemplo:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="nd">@Test</span>
-<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="kd">fun</span><span class="w"> </span><span class="nf">givenServiceSpy_whenMockingOnlyOneMethod_thenOtherMethodsShouldBehaveAsOriginalObject</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">    </span><span class="c1">// given</span>
-<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">service</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">spyk</span><span class="o">&lt;</span><span class="n">TestableService</span><span class="o">&gt;</span><span class="p">()</span>
-<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="w">    </span><span class="n">every</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">service</span><span class="p">.</span><span class="na">getDataFromDb</span><span class="p">(</span><span class="n">any</span><span class="p">())</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="n">returns</span><span class="w"> </span><span class="s">&quot;Mocked Output&quot;</span>
-<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>
-<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="w">    </span><span class="c1">// when checking mocked method</span>
-<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">firstResult</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">service</span><span class="p">.</span><span class="na">getDataFromDb</span><span class="p">(</span><span class="s">&quot;Any Param&quot;</span><span class="p">)</span>
-<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>
-<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a><span class="w">    </span><span class="c1">// then</span>
-<a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a><span class="w">    </span><span class="n">assertEquals</span><span class="p">(</span><span class="s">&quot;Mocked Output&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">firstResult</span><span class="p">)</span>
-<a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a>
-<a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a><span class="w">    </span><span class="c1">// when checking not mocked method</span>
-<a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">secondResult</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">service</span><span class="p">.</span><span class="na">doSomethingElse</span><span class="p">(</span><span class="s">&quot;Any Param&quot;</span><span class="p">)</span>
-<a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a>
-<a id="__codelineno-5-16" name="__codelineno-5-16" href="#__codelineno-5-16"></a><span class="w">    </span><span class="c1">// then</span>
-<a id="__codelineno-5-17" name="__codelineno-5-17" href="#__codelineno-5-17"></a><span class="w">    </span><span class="n">assertEquals</span><span class="p">(</span><span class="s">&quot;I don&#39;t want to!&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">secondResult</span><span class="p">)</span>
-<a id="__codelineno-5-18" name="__codelineno-5-18" href="#__codelineno-5-18"></a><span class="p">}</span>
+<p>Esto es útil cuando la clase real tiene mucho comportamiento válido y solo necesitas intervenir en una parte concreta.</p>
+<p>También puede declararse con anotación:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">import</span><span class="w"> </span><span class="nn">io.mockk.SpyK</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="kd">class</span><span class="w"> </span><span class="nc">SpyKUnitTest</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="w">    </span><span class="nd">@SpyK</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="w">    </span><span class="kd">lateinit</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="nv">service</span><span class="p">:</span><span class="w"> </span><span class="n">TestableService</span>
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="p">}</span>
 </code></pre></div>
-<p>Revisemos lo más importante del código anterior:   </p>
-<ul>
-<li>Hemos usado el método <code>spyk</code> para crear un objeto spyk (espía) de la clase <code>TestableService</code>.  </li>
-<li>También hemos usado <code>every</code> para definir el comportamiento del método que nos interesa, en concreto <code>service.getDataFromDb(any())</code>, como vimos en ejemplos anteriores.</li>
-</ul>
-<p>También podemos haber usado la anotación <code>@SpyK</code> para lograr lo mismo que hicimos con la anotación <code>@MockK</code>. Veamos un ejemplo:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="kd">class</span><span class="w"> </span><span class="nc">SpyKUnitTest</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>
-<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="w">    </span><span class="nd">@SpyK</span>
-<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="w">    </span><span class="kd">lateinit</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="nv">service</span><span class="p">:</span><span class="w"> </span><span class="n">TestableService</span>
-<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>
-<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="w">    </span><span class="c1">// Tests here</span>
-<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="p">}</span>
+<h3 id="6-mocks-relajados">6. Mocks relajados<a class="headerlink" href="#6-mocks-relajados" title="Permanent link">&para;</a></h3>
+<p>Por defecto, un <abbr title="Doble de prueba que simula el comportamiento de una dependencia y permite verificar llamadas o respuestas esperadas.">mock</abbr> lanza una excepción si llamas a un método cuyo comportamiento no has definido. Cuando ese nivel de control no compensa, MockK permite usar <strong>mocks relajados</strong>.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="k">import</span><span class="w"> </span><span class="nn">io.mockk.mockk</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="k">import</span><span class="w"> </span><span class="nn">kotlin.test.Test</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="k">import</span><span class="w"> </span><span class="nn">kotlin.test.assertEquals</span>
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="kd">class</span><span class="w"> </span><span class="nc">RelaxedMockKExampleTest</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="w">    </span><span class="nd">@Test</span>
+<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="w">    </span><span class="kd">fun</span><span class="w"> </span><span class="nf">givenRelaxedMock_whenCallingNotMockedMethod_thenReturnDefaultValue</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a><span class="w">        </span><span class="kd">val</span><span class="w"> </span><span class="nv">service</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mockk</span><span class="o">&lt;</span><span class="n">TestableService</span><span class="o">&gt;</span><span class="p">(</span><span class="n">relaxed</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">)</span>
+<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>
+<a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a><span class="w">        </span><span class="kd">val</span><span class="w"> </span><span class="nv">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">service</span><span class="p">.</span><span class="na">getDataFromDb</span><span class="p">(</span><span class="s">&quot;Any Param&quot;</span><span class="p">)</span>
+<a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a>
+<a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a><span class="w">        </span><span class="n">assertEquals</span><span class="p">(</span><span class="s">&quot;&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">result</span><span class="p">)</span>
+<a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-6-14" name="__codelineno-6-14" href="#__codelineno-6-14"></a><span class="p">}</span>
 </code></pre></div>
-<h3 id="7-mockeado-relajado">7. Mockeado relajado<a class="headerlink" href="#7-mockeado-relajado" title="Permanent link">&para;</a></h3>
-<p>Un objeto mock típico lanzará la excepción <code>MockKException</code> si intentamos llamar a un método donde no se ha especificado el valor de retorno, es decir, en donde no hayamos definido un comportamiento simulado.</p>
-<p>Si no queremos describir el comportamiento de cada método, podemos usar un proceso de mockeado relajado. Este tipo de mockeado proporciona valores predeterminados para cada función. Por ejemplo, el tipo de retorno <code>String</code> devolverá un <code>String</code> vacío. He aquí un breve ejemplo:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="nd">@Test</span>
-<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="kd">fun</span><span class="w"> </span><span class="nf">givenRelaxedMock_whenCallingNotMockedMethod_thenReturnDefaultValue</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="w">    </span><span class="c1">// given</span>
-<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">service</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mockk</span><span class="o">&lt;</span><span class="n">TestableService</span><span class="o">&gt;</span><span class="p">(</span><span class="n">relaxed</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">)</span>
-<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>
-<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="w">    </span><span class="c1">// when</span>
-<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">service</span><span class="p">.</span><span class="na">getDataFromDb</span><span class="p">(</span><span class="s">&quot;Any Param&quot;</span><span class="p">)</span>
-<a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>
-<a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a><span class="w">    </span><span class="c1">// then</span>
-<a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a><span class="w">    </span><span class="n">assertEquals</span><span class="p">(</span><span class="s">&quot;&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">result</span><span class="p">)</span>
-<a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a><span class="p">}</span>
+<p>En este caso, MockK devuelve valores por defecto según el tipo de retorno. Para <code>String</code>, devuelve una cadena vacía.</p>
+<p>La variante con anotación sería:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="k">import</span><span class="w"> </span><span class="nn">io.mockk.RelaxedMockK</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="kd">class</span><span class="w"> </span><span class="nc">RelaxedMockKUnitTest</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="w">    </span><span class="nd">@RelaxedMockK</span>
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="w">    </span><span class="kd">lateinit</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="nv">service</span><span class="p">:</span><span class="w"> </span><span class="n">TestableService</span>
+<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="p">}</span>
 </code></pre></div>
-<p>En el ejemplo, hemos usado el método <code>mockk</code> con el argumento <code>relaxed = True</code> para crear un objeto mockeado relajado. También podríamos haber usado la anotación <code>@RelaxedMockK</code>:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="kd">class</span><span class="w"> </span><span class="nc">RelaxedMockKUnitTest</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>
-<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="w">    </span><span class="nd">@RelaxedMockK</span>
-<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="w">    </span><span class="kd">lateinit</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="nv">service</span><span class="p">:</span><span class="w"> </span><span class="n">TestableService</span>
+<h3 id="7-mockear-objetos-object">7. Mockear objetos <code>object</code><a class="headerlink" href="#7-mockear-objetos-object" title="Permanent link">&para;</a></h3>
+<p>Kotlin permite declarar singletons con <code>object</code>. MockK proporciona <code>mockkObject</code> para poder simular ese tipo de elementos.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="k">import</span><span class="w"> </span><span class="nn">io.mockk.every</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="k">import</span><span class="w"> </span><span class="nn">io.mockk.mockkObject</span>
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="k">import</span><span class="w"> </span><span class="nn">kotlin.test.Test</span>
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="k">import</span><span class="w"> </span><span class="nn">kotlin.test.assertEquals</span>
 <a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>
-<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="w">    </span><span class="c1">// Tests here</span>
-<a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a><span class="p">}</span>
+<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="kd">object</span><span class="w"> </span><span class="nc">SingletonService</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a><span class="w">    </span><span class="kd">fun</span><span class="w"> </span><span class="nf">getDataFromDb</span><span class="p">(</span><span class="n">testParameter</span><span class="p">:</span><span class="w"> </span><span class="kt">String</span><span class="p">):</span><span class="w"> </span><span class="kt">String</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Real Output for </span><span class="si">$</span><span class="n">testParameter</span><span class="s">&quot;</span>
+<a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a><span class="p">}</span>
+<a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a>
+<a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a><span class="kd">class</span><span class="w"> </span><span class="nc">ObjectMockKTest</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a><span class="w">    </span><span class="nd">@Test</span>
+<a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a><span class="w">    </span><span class="kd">fun</span><span class="w"> </span><span class="nf">givenObject_whenMockingIt_thenMockedMethodShouldReturnProperValue</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-8-13" name="__codelineno-8-13" href="#__codelineno-8-13"></a><span class="w">        </span><span class="n">mockkObject</span><span class="p">(</span><span class="n">SingletonService</span><span class="p">)</span>
+<a id="__codelineno-8-14" name="__codelineno-8-14" href="#__codelineno-8-14"></a>
+<a id="__codelineno-8-15" name="__codelineno-8-15" href="#__codelineno-8-15"></a><span class="w">        </span><span class="kd">val</span><span class="w"> </span><span class="nv">firstResult</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">SingletonService</span><span class="p">.</span><span class="na">getDataFromDb</span><span class="p">(</span><span class="s">&quot;Any Param&quot;</span><span class="p">)</span>
+<a id="__codelineno-8-16" name="__codelineno-8-16" href="#__codelineno-8-16"></a><span class="w">        </span><span class="n">assertEquals</span><span class="p">(</span><span class="s">&quot;Real Output for Any Param&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">firstResult</span><span class="p">)</span>
+<a id="__codelineno-8-17" name="__codelineno-8-17" href="#__codelineno-8-17"></a>
+<a id="__codelineno-8-18" name="__codelineno-8-18" href="#__codelineno-8-18"></a><span class="w">        </span><span class="n">every</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">SingletonService</span><span class="p">.</span><span class="na">getDataFromDb</span><span class="p">(</span><span class="n">any</span><span class="p">())</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="n">returns</span><span class="w"> </span><span class="s">&quot;Mocked Output&quot;</span>
+<a id="__codelineno-8-19" name="__codelineno-8-19" href="#__codelineno-8-19"></a>
+<a id="__codelineno-8-20" name="__codelineno-8-20" href="#__codelineno-8-20"></a><span class="w">        </span><span class="kd">val</span><span class="w"> </span><span class="nv">secondResult</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">SingletonService</span><span class="p">.</span><span class="na">getDataFromDb</span><span class="p">(</span><span class="s">&quot;Any Param&quot;</span><span class="p">)</span>
+<a id="__codelineno-8-21" name="__codelineno-8-21" href="#__codelineno-8-21"></a><span class="w">        </span><span class="n">assertEquals</span><span class="p">(</span><span class="s">&quot;Mocked Output&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">secondResult</span><span class="p">)</span>
+<a id="__codelineno-8-22" name="__codelineno-8-22" href="#__codelineno-8-22"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-8-23" name="__codelineno-8-23" href="#__codelineno-8-23"></a><span class="p">}</span>
 </code></pre></div>
-<h3 id="8-mockeado-de-objetos">8. Mockeado de objetos<a class="headerlink" href="#8-mockeado-de-objetos" title="Permanent link">&para;</a></h3>
-<p>Kotlin proporciona una manera fácil de declarar un singleton usando la palabra clave <code>object</code>:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="kd">object</span><span class="w"> </span><span class="nc">TestableService</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="w">    </span><span class="kd">fun</span><span class="w"> </span><span class="nf">getDataFromDb</span><span class="p">(</span><span class="n">testParameter</span><span class="p">:</span><span class="w"> </span><span class="kt">String</span><span class="p">):</span><span class="w"> </span><span class="kt">String</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="w">        </span><span class="c1">// query database and return matching value</span>
-<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a><span class="p">}</span>
+<p>Este caso aparece menos en código bien desacoplado, pero existe, especialmente en utilidades, <em>helpers</em> o adaptadores heredados.</p>
+<h3 id="8-mockeado-jerarquico">8. Mockeado jerárquico<a class="headerlink" href="#8-mockeado-jerarquico" title="Permanent link">&para;</a></h3>
+<p>Otra posibilidad es construir un <abbr title="Doble de prueba que simula el comportamiento de una dependencia y permite verificar llamadas o respuestas esperadas.">mock</abbr> que ya devuelva otros mocks en sus propiedades.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="k">import</span><span class="w"> </span><span class="nn">io.mockk.every</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="k">import</span><span class="w"> </span><span class="nn">io.mockk.mockk</span>
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="k">import</span><span class="w"> </span><span class="nn">kotlin.test.Test</span>
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="k">import</span><span class="w"> </span><span class="nn">kotlin.test.assertEquals</span>
+<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>
+<a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a><span class="kd">class</span><span class="w"> </span><span class="nc">Foo</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a><span class="w">    </span><span class="kd">lateinit</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="nv">name</span><span class="p">:</span><span class="w"> </span><span class="kt">String</span>
+<a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a><span class="w">    </span><span class="kd">lateinit</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="nv">bar</span><span class="p">:</span><span class="w"> </span><span class="n">Bar</span>
+<a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a><span class="p">}</span>
+<a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a>
+<a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a><span class="kd">class</span><span class="w"> </span><span class="nc">Bar</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-9-12" name="__codelineno-9-12" href="#__codelineno-9-12"></a><span class="w">    </span><span class="kd">lateinit</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="nv">nickname</span><span class="p">:</span><span class="w"> </span><span class="kt">String</span>
+<a id="__codelineno-9-13" name="__codelineno-9-13" href="#__codelineno-9-13"></a><span class="p">}</span>
+<a id="__codelineno-9-14" name="__codelineno-9-14" href="#__codelineno-9-14"></a>
+<a id="__codelineno-9-15" name="__codelineno-9-15" href="#__codelineno-9-15"></a><span class="kd">class</span><span class="w"> </span><span class="nc">HierarchicalMockKTest</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-9-16" name="__codelineno-9-16" href="#__codelineno-9-16"></a><span class="w">    </span><span class="nd">@Test</span>
+<a id="__codelineno-9-17" name="__codelineno-9-17" href="#__codelineno-9-17"></a><span class="w">    </span><span class="kd">fun</span><span class="w"> </span><span class="nf">givenHierarchicalClass_whenMockingIt_thenReturnProperValue</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-9-18" name="__codelineno-9-18" href="#__codelineno-9-18"></a><span class="w">        </span><span class="kd">val</span><span class="w"> </span><span class="nv">foo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mockk</span><span class="o">&lt;</span><span class="n">Foo</span><span class="o">&gt;</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-9-19" name="__codelineno-9-19" href="#__codelineno-9-19"></a><span class="w">            </span><span class="n">every</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="n">returns</span><span class="w"> </span><span class="s">&quot;Karol&quot;</span>
+<a id="__codelineno-9-20" name="__codelineno-9-20" href="#__codelineno-9-20"></a><span class="w">            </span><span class="n">every</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">bar</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="n">returns</span><span class="w"> </span><span class="n">mockk</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-9-21" name="__codelineno-9-21" href="#__codelineno-9-21"></a><span class="w">                </span><span class="n">every</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">nickname</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="n">returns</span><span class="w"> </span><span class="s">&quot;Tomato&quot;</span>
+<a id="__codelineno-9-22" name="__codelineno-9-22" href="#__codelineno-9-22"></a><span class="w">            </span><span class="p">}</span>
+<a id="__codelineno-9-23" name="__codelineno-9-23" href="#__codelineno-9-23"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-9-24" name="__codelineno-9-24" href="#__codelineno-9-24"></a>
+<a id="__codelineno-9-25" name="__codelineno-9-25" href="#__codelineno-9-25"></a><span class="w">        </span><span class="n">assertEquals</span><span class="p">(</span><span class="s">&quot;Karol&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">foo</span><span class="p">.</span><span class="na">name</span><span class="p">)</span>
+<a id="__codelineno-9-26" name="__codelineno-9-26" href="#__codelineno-9-26"></a><span class="w">        </span><span class="n">assertEquals</span><span class="p">(</span><span class="s">&quot;Tomato&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">foo</span><span class="p">.</span><span class="na">bar</span><span class="p">.</span><span class="na">nickname</span><span class="p">)</span>
+<a id="__codelineno-9-27" name="__codelineno-9-27" href="#__codelineno-9-27"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-9-28" name="__codelineno-9-28" href="#__codelineno-9-28"></a><span class="p">}</span>
 </code></pre></div>
-<p>La mayoría de las bibliotecas para crear objetos mocks tienen un problema con el mockeado las instancias de objetos singleton de Kotlin. Para resolver esto, MockK proporciona el método <code>mockkObject</code>.  Un ejemplo de uso:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="nd">@Test</span>
-<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="kd">fun</span><span class="w"> </span><span class="nf">givenObject_whenMockingIt_thenMockedMethodShouldReturnProperValue</span><span class="p">(){</span>
-<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="w">    </span><span class="c1">// given</span>
-<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="w">    </span><span class="n">mockkObject</span><span class="p">(</span><span class="n">TestableService</span><span class="p">)</span>
-<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>
-<a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a><span class="w">    </span><span class="c1">// when calling not mocked method</span>
-<a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">firstResult</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">service</span><span class="p">.</span><span class="na">getDataFromDb</span><span class="p">(</span><span class="s">&quot;Any Param&quot;</span><span class="p">)</span>
-<a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a>
-<a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a><span class="w">    </span><span class="c1">// then return real response</span>
-<a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a><span class="w">    </span><span class="n">assertEquals</span><span class="p">(</span><span class="cm">/* DB result */</span><span class="p">,</span><span class="w"> </span><span class="n">firstResult</span><span class="p">)</span>
-<a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a>
-<a id="__codelineno-10-12" name="__codelineno-10-12" href="#__codelineno-10-12"></a><span class="w">    </span><span class="c1">// when calling mocked method</span>
-<a id="__codelineno-10-13" name="__codelineno-10-13" href="#__codelineno-10-13"></a><span class="w">    </span><span class="n">every</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">service</span><span class="p">.</span><span class="na">getDataFromDb</span><span class="p">(</span><span class="n">any</span><span class="p">())</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="n">returns</span><span class="w"> </span><span class="s">&quot;Mocked Output&quot;</span>
-<a id="__codelineno-10-14" name="__codelineno-10-14" href="#__codelineno-10-14"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">secondResult</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">service</span><span class="p">.</span><span class="na">getDataFromDb</span><span class="p">(</span><span class="s">&quot;Any Param&quot;</span><span class="p">)</span>
+<p>Este enfoque es útil cuando el objeto bajo prueba navega por varias propiedades encadenadas y quieres controlar ese recorrido.</p>
+<h3 id="9-captura-de-argumentos">9. Captura de argumentos<a class="headerlink" href="#9-captura-de-argumentos" title="Permanent link">&para;</a></h3>
+<p>En ocasiones no basta con comprobar que se llamó a un método. También necesitamos saber <strong>con qué argumentos</strong> se invocó.</p>
+<h4 id="91-usando-slot">9.1. Usando <code>slot</code><a class="headerlink" href="#91-usando-slot" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="k">import</span><span class="w"> </span><span class="nn">io.mockk.capture</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="k">import</span><span class="w"> </span><span class="nn">io.mockk.every</span>
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="k">import</span><span class="w"> </span><span class="nn">io.mockk.mockk</span>
+<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="k">import</span><span class="w"> </span><span class="nn">io.mockk.slot</span>
+<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="k">import</span><span class="w"> </span><span class="nn">kotlin.test.Test</span>
+<a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a><span class="k">import</span><span class="w"> </span><span class="nn">kotlin.test.assertEquals</span>
+<a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a>
+<a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a><span class="kd">class</span><span class="w"> </span><span class="nc">CapturingSlotTest</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a><span class="w">    </span><span class="nd">@Test</span>
+<a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a><span class="w">    </span><span class="kd">fun</span><span class="w"> </span><span class="nf">givenMock_whenCapturingParamValue_thenProperValueShouldBeCaptured</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a><span class="w">        </span><span class="kd">val</span><span class="w"> </span><span class="nv">service</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mockk</span><span class="o">&lt;</span><span class="n">TestableService</span><span class="o">&gt;</span><span class="p">()</span>
+<a id="__codelineno-10-12" name="__codelineno-10-12" href="#__codelineno-10-12"></a><span class="w">        </span><span class="kd">val</span><span class="w"> </span><span class="nv">slot</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">slot</span><span class="o">&lt;</span><span class="kt">String</span><span class="o">&gt;</span><span class="p">()</span>
+<a id="__codelineno-10-13" name="__codelineno-10-13" href="#__codelineno-10-13"></a>
+<a id="__codelineno-10-14" name="__codelineno-10-14" href="#__codelineno-10-14"></a><span class="w">        </span><span class="n">every</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">service</span><span class="p">.</span><span class="na">getDataFromDb</span><span class="p">(</span><span class="n">capture</span><span class="p">(</span><span class="n">slot</span><span class="p">))</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="n">returns</span><span class="w"> </span><span class="s">&quot;Expected Output&quot;</span>
 <a id="__codelineno-10-15" name="__codelineno-10-15" href="#__codelineno-10-15"></a>
-<a id="__codelineno-10-16" name="__codelineno-10-16" href="#__codelineno-10-16"></a><span class="w">    </span><span class="c1">// then return mocked response</span>
-<a id="__codelineno-10-17" name="__codelineno-10-17" href="#__codelineno-10-17"></a><span class="w">    </span><span class="n">assertEquals</span><span class="p">(</span><span class="s">&quot;Mocked Output&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">secondResult</span><span class="p">)</span>
-<a id="__codelineno-10-18" name="__codelineno-10-18" href="#__codelineno-10-18"></a><span class="p">}</span>
+<a id="__codelineno-10-16" name="__codelineno-10-16" href="#__codelineno-10-16"></a><span class="w">        </span><span class="n">service</span><span class="p">.</span><span class="na">getDataFromDb</span><span class="p">(</span><span class="s">&quot;Expected Param&quot;</span><span class="p">)</span>
+<a id="__codelineno-10-17" name="__codelineno-10-17" href="#__codelineno-10-17"></a>
+<a id="__codelineno-10-18" name="__codelineno-10-18" href="#__codelineno-10-18"></a><span class="w">        </span><span class="n">assertEquals</span><span class="p">(</span><span class="s">&quot;Expected Param&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">slot</span><span class="p">.</span><span class="na">captured</span><span class="p">)</span>
+<a id="__codelineno-10-19" name="__codelineno-10-19" href="#__codelineno-10-19"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-10-20" name="__codelineno-10-20" href="#__codelineno-10-20"></a><span class="p">}</span>
 </code></pre></div>
-<h3 id="9-mockeado-jerarquico">9. Mockeado jerárquico<a class="headerlink" href="#9-mockeado-jerarquico" title="Permanent link">&para;</a></h3>
-<p>Otra característica útil de MockK es la capacidad de mockear objetos jerárquicos. Parar entenderlo, primero, creemos una estructura de objeto jerárquica:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="kd">class</span><span class="w"> </span><span class="nc">Foo</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="w">    </span><span class="kd">lateinit</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="nv">name</span><span class="p">:</span><span class="w"> </span><span class="kt">String</span>
-<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="w">    </span><span class="kd">lateinit</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="nv">bar</span><span class="p">:</span><span class="w"> </span><span class="n">Bar</span>
-<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="p">}</span>
-<a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a>
-<a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a><span class="kd">class</span><span class="w"> </span><span class="nc">Bar</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a><span class="w">    </span><span class="kd">lateinit</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="nv">nickname</span><span class="p">:</span><span class="w"> </span><span class="kt">String</span>
-<a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a><span class="p">}</span>
+<h4 id="92-usando-una-lista-mutable">9.2. Usando una lista mutable<a class="headerlink" href="#92-usando-una-lista-mutable" title="Permanent link">&para;</a></h4>
+<p>Si quieres almacenar varias invocaciones, una lista suele ser más cómoda:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="k">import</span><span class="w"> </span><span class="nn">io.mockk.capture</span>
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="k">import</span><span class="w"> </span><span class="nn">io.mockk.every</span>
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="k">import</span><span class="w"> </span><span class="nn">io.mockk.mockk</span>
+<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="k">import</span><span class="w"> </span><span class="nn">kotlin.test.Test</span>
+<a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a><span class="k">import</span><span class="w"> </span><span class="nn">kotlin.test.assertEquals</span>
+<a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a>
+<a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a><span class="kd">class</span><span class="w"> </span><span class="nc">CapturingListTest</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a><span class="w">    </span><span class="nd">@Test</span>
+<a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a><span class="w">    </span><span class="kd">fun</span><span class="w"> </span><span class="nf">givenMock_whenCapturingParamsValues_thenProperValuesShouldBeCaptured</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a><span class="w">        </span><span class="kd">val</span><span class="w"> </span><span class="nv">service</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mockk</span><span class="o">&lt;</span><span class="n">TestableService</span><span class="o">&gt;</span><span class="p">()</span>
+<a id="__codelineno-11-11" name="__codelineno-11-11" href="#__codelineno-11-11"></a><span class="w">        </span><span class="kd">val</span><span class="w"> </span><span class="nv">calls</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mutableListOf</span><span class="o">&lt;</span><span class="kt">String</span><span class="o">&gt;</span><span class="p">()</span>
+<a id="__codelineno-11-12" name="__codelineno-11-12" href="#__codelineno-11-12"></a>
+<a id="__codelineno-11-13" name="__codelineno-11-13" href="#__codelineno-11-13"></a><span class="w">        </span><span class="n">every</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">service</span><span class="p">.</span><span class="na">getDataFromDb</span><span class="p">(</span><span class="n">capture</span><span class="p">(</span><span class="n">calls</span><span class="p">))</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="n">returns</span><span class="w"> </span><span class="s">&quot;Expected Output&quot;</span>
+<a id="__codelineno-11-14" name="__codelineno-11-14" href="#__codelineno-11-14"></a>
+<a id="__codelineno-11-15" name="__codelineno-11-15" href="#__codelineno-11-15"></a><span class="w">        </span><span class="n">service</span><span class="p">.</span><span class="na">getDataFromDb</span><span class="p">(</span><span class="s">&quot;Expected Param 1&quot;</span><span class="p">)</span>
+<a id="__codelineno-11-16" name="__codelineno-11-16" href="#__codelineno-11-16"></a><span class="w">        </span><span class="n">service</span><span class="p">.</span><span class="na">getDataFromDb</span><span class="p">(</span><span class="s">&quot;Expected Param 2&quot;</span><span class="p">)</span>
+<a id="__codelineno-11-17" name="__codelineno-11-17" href="#__codelineno-11-17"></a>
+<a id="__codelineno-11-18" name="__codelineno-11-18" href="#__codelineno-11-18"></a><span class="w">        </span><span class="n">assertEquals</span><span class="p">(</span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="n">calls</span><span class="p">.</span><span class="na">size</span><span class="p">)</span>
+<a id="__codelineno-11-19" name="__codelineno-11-19" href="#__codelineno-11-19"></a><span class="w">        </span><span class="n">assertEquals</span><span class="p">(</span><span class="s">&quot;Expected Param 1&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">calls</span><span class="o">[</span><span class="m">0</span><span class="o">]</span><span class="p">)</span>
+<a id="__codelineno-11-20" name="__codelineno-11-20" href="#__codelineno-11-20"></a><span class="w">        </span><span class="n">assertEquals</span><span class="p">(</span><span class="s">&quot;Expected Param 2&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">calls</span><span class="o">[</span><span class="m">1</span><span class="o">]</span><span class="p">)</span>
+<a id="__codelineno-11-21" name="__codelineno-11-21" href="#__codelineno-11-21"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-11-22" name="__codelineno-11-22" href="#__codelineno-11-22"></a><span class="p">}</span>
 </code></pre></div>
-<p>La clase <code>Foo</code> contiene un campo de tipo <code>Bar</code>. Ahora, podemos mockear la estructura en un solo paso. Vamos a mockear los campos <code>name</code> y <code>bar</code>:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="nd">@Test</span>
-<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="kd">fun</span><span class="w"> </span><span class="nf">givenHierarchicalClass_whenMockingIt_thenReturnProperValue</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="w">    </span><span class="c1">// given</span>
-<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">foo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mockk</span><span class="o">&lt;</span><span class="n">Foo</span><span class="o">&gt;</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a><span class="w">        </span><span class="n">every</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="n">returns</span><span class="w"> </span><span class="s">&quot;Karol&quot;</span>
-<a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a><span class="w">        </span><span class="n">every</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">bar</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="n">returns</span><span class="w"> </span><span class="n">mockk</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a><span class="w">            </span><span class="n">every</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">nickname</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="n">returns</span><span class="w"> </span><span class="s">&quot;Tomato&quot;</span>
-<a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a><span class="w">        </span><span class="p">}</span>
-<a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-12-10" name="__codelineno-12-10" href="#__codelineno-12-10"></a>
-<a id="__codelineno-12-11" name="__codelineno-12-11" href="#__codelineno-12-11"></a><span class="w">    </span><span class="c1">// when</span>
-<a id="__codelineno-12-12" name="__codelineno-12-12" href="#__codelineno-12-12"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">foo</span><span class="p">.</span><span class="na">name</span><span class="w"> </span>
-<a id="__codelineno-12-13" name="__codelineno-12-13" href="#__codelineno-12-13"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">nickname</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">foo</span><span class="p">.</span><span class="na">bar</span><span class="p">.</span><span class="na">nickname</span>
-<a id="__codelineno-12-14" name="__codelineno-12-14" href="#__codelineno-12-14"></a>
-<a id="__codelineno-12-15" name="__codelineno-12-15" href="#__codelineno-12-15"></a><span class="w">    </span><span class="c1">// then</span>
-<a id="__codelineno-12-16" name="__codelineno-12-16" href="#__codelineno-12-16"></a><span class="w">    </span><span class="n">assertEquals</span><span class="p">(</span><span class="s">&quot;Karol&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">name</span><span class="p">)</span>
-<a id="__codelineno-12-17" name="__codelineno-12-17" href="#__codelineno-12-17"></a><span class="w">    </span><span class="n">assertEquals</span><span class="p">(</span><span class="s">&quot;Tomato&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">nickname</span><span class="p">)</span>
-<a id="__codelineno-12-18" name="__codelineno-12-18" href="#__codelineno-12-18"></a><span class="p">}</span>
+<h3 id="10-stubbing-de-funciones-que-devuelven-unit">10. Stubbing de funciones que devuelven <code>Unit</code><a class="headerlink" href="#10-stubbing-de-funciones-que-devuelven-unit" title="Permanent link">&para;</a></h3>
+<p>En Kotlin, un método que devuelve <code>Unit</code> no devuelve un valor útil, pero sigue pudiendo tener efectos laterales. MockK permite controlar ese comportamiento.</p>
+<p>Partimos de este método:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="kd">class</span><span class="w"> </span><span class="nc">TestableServiceWithUnit</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="w">    </span><span class="kd">fun</span><span class="w"> </span><span class="nf">addHelloWorld</span><span class="p">(</span><span class="n">strList</span><span class="p">:</span><span class="w"> </span><span class="n">MutableList</span><span class="o">&lt;</span><span class="kt">String</span><span class="o">&gt;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="w">        </span><span class="n">println</span><span class="p">(</span><span class="s">&quot;addHelloWorld() is called&quot;</span><span class="p">)</span>
+<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="w">        </span><span class="n">strList</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="s">&quot;Hello World!&quot;</span>
+<a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a><span class="p">}</span>
 </code></pre></div>
-<h3 id="10-captura-de-argumentos">10. Captura de argumentos<a class="headerlink" href="#10-captura-de-argumentos" title="Permanent link">&para;</a></h3>
-<p>Si necesitamos capturar los valores de los parámetros pasados a un método, podemos usar <code>CapturingSlot</code> o <code>MutableList</code>. Es útil cuando queremos tener alguna lógica personalizada en un bloque <code>answers</code> o simplemente necesitamos verificar el valor de los parámetros pasados. Aquí hay un ejemplo de <code>CapturingSlot</code>:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="nd">@Test</span>
-<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="kd">fun</span><span class="w"> </span><span class="nf">givenMock_whenCapturingParamValue_thenProperValueShouldBeCaptured</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="w">    </span><span class="c1">// given</span>
-<a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">service</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mockk</span><span class="o">&lt;</span><span class="n">TestableService</span><span class="o">&gt;</span><span class="p">()</span>
-<a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">slot</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">slot</span><span class="o">&lt;</span><span class="kt">String</span><span class="o">&gt;</span><span class="p">()</span>
-<a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a><span class="w">    </span><span class="n">every</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">service</span><span class="p">.</span><span class="na">getDataFromDb</span><span class="p">(</span><span class="n">capture</span><span class="p">(</span><span class="n">slot</span><span class="p">))</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="n">returns</span><span class="w"> </span><span class="s">&quot;Expected Output&quot;</span>
-<a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a>
-<a id="__codelineno-13-8" name="__codelineno-13-8" href="#__codelineno-13-8"></a><span class="w">    </span><span class="c1">// when</span>
-<a id="__codelineno-13-9" name="__codelineno-13-9" href="#__codelineno-13-9"></a><span class="w">    </span><span class="n">service</span><span class="p">.</span><span class="na">getDataFromDb</span><span class="p">(</span><span class="s">&quot;Expected Param&quot;</span><span class="p">)</span>
-<a id="__codelineno-13-10" name="__codelineno-13-10" href="#__codelineno-13-10"></a>
-<a id="__codelineno-13-11" name="__codelineno-13-11" href="#__codelineno-13-11"></a><span class="w">    </span><span class="c1">// then</span>
-<a id="__codelineno-13-12" name="__codelineno-13-12" href="#__codelineno-13-12"></a><span class="w">    </span><span class="n">assertEquals</span><span class="p">(</span><span class="s">&quot;Expected Param&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">slot</span><span class="p">.</span><span class="na">captured</span><span class="p">)</span>
-<a id="__codelineno-13-13" name="__codelineno-13-13" href="#__codelineno-13-13"></a><span class="p">}</span><span class="n">Copiar</span>
+<h4 id="101-hacer-que-no-haga-nada">10.1. Hacer que no haga nada<a class="headerlink" href="#101-hacer-que-no-haga-nada" title="Permanent link">&para;</a></h4>
+<p>Podemos omitir la ejecución real de varias formas:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="n">every</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">service</span><span class="p">.</span><span class="na">addHelloWorld</span><span class="p">(</span><span class="n">any</span><span class="p">())</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="n">returns</span><span class="w"> </span><span class="kt">Unit</span>
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="n">every</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">service</span><span class="p">.</span><span class="na">addHelloWorld</span><span class="p">(</span><span class="n">any</span><span class="p">())</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="n">answers</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="kt">Unit</span><span class="w"> </span><span class="p">}</span>
+<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="n">every</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">service</span><span class="p">.</span><span class="na">addHelloWorld</span><span class="p">(</span><span class="n">any</span><span class="p">())</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="n">just</span><span class="w"> </span><span class="n">runs</span>
 </code></pre></div>
-<p><code>MutableList</code> se puede usar para capturar y almacenar todos los valores tomados por el parámetro en las distintas invocaciones del método:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="nd">@Test</span>
-<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="kd">fun</span><span class="w"> </span><span class="nf">givenMock_whenCapturingParamsValues_thenProperValuesShouldBeCaptured</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="w">    </span><span class="c1">// given</span>
-<a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">service</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mockk</span><span class="o">&lt;</span><span class="n">TestableService</span><span class="o">&gt;</span><span class="p">()</span>
-<a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">list</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mutableListOf</span><span class="o">&lt;</span><span class="kt">String</span><span class="o">&gt;</span><span class="p">()</span>
-<a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a><span class="w">    </span><span class="n">every</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">service</span><span class="p">.</span><span class="na">getDataFromDb</span><span class="p">(</span><span class="n">capture</span><span class="p">(</span><span class="n">list</span><span class="p">))</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="n">returns</span><span class="w"> </span><span class="s">&quot;Expected Output&quot;</span>
+<p>La forma más legible suele ser <code>just runs</code>.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="k">import</span><span class="w"> </span><span class="nn">io.mockk.every</span>
+<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="k">import</span><span class="w"> </span><span class="nn">io.mockk.just</span>
+<a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="k">import</span><span class="w"> </span><span class="nn">io.mockk.mockk</span>
+<a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a><span class="k">import</span><span class="w"> </span><span class="nn">io.mockk.runs</span>
+<a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a><span class="k">import</span><span class="w"> </span><span class="nn">kotlin.test.Test</span>
+<a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a><span class="k">import</span><span class="w"> </span><span class="nn">kotlin.test.assertTrue</span>
 <a id="__codelineno-14-7" name="__codelineno-14-7" href="#__codelineno-14-7"></a>
-<a id="__codelineno-14-8" name="__codelineno-14-8" href="#__codelineno-14-8"></a><span class="w">    </span><span class="c1">// when</span>
-<a id="__codelineno-14-9" name="__codelineno-14-9" href="#__codelineno-14-9"></a><span class="w">    </span><span class="n">service</span><span class="p">.</span><span class="na">getDataFromDb</span><span class="p">(</span><span class="s">&quot;Expected Param 1&quot;</span><span class="p">)</span>
-<a id="__codelineno-14-10" name="__codelineno-14-10" href="#__codelineno-14-10"></a><span class="w">    </span><span class="n">service</span><span class="p">.</span><span class="na">getDataFromDb</span><span class="p">(</span><span class="s">&quot;Expected Param 2&quot;</span><span class="p">)</span>
-<a id="__codelineno-14-11" name="__codelineno-14-11" href="#__codelineno-14-11"></a>
-<a id="__codelineno-14-12" name="__codelineno-14-12" href="#__codelineno-14-12"></a><span class="w">    </span><span class="c1">// then</span>
-<a id="__codelineno-14-13" name="__codelineno-14-13" href="#__codelineno-14-13"></a><span class="w">    </span><span class="n">assertEquals</span><span class="p">(</span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="n">list</span><span class="p">.</span><span class="na">size</span><span class="p">)</span>
-<a id="__codelineno-14-14" name="__codelineno-14-14" href="#__codelineno-14-14"></a><span class="w">    </span><span class="n">assertEquals</span><span class="p">(</span><span class="s">&quot;Expected Param 1&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">list</span><span class="o">[</span><span class="m">0</span><span class="o">]</span><span class="p">)</span>
-<a id="__codelineno-14-15" name="__codelineno-14-15" href="#__codelineno-14-15"></a><span class="w">    </span><span class="n">assertEquals</span><span class="p">(</span><span class="s">&quot;Expected Param 2&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">list</span><span class="o">[</span><span class="m">1</span><span class="o">]</span><span class="p">)</span>
-<a id="__codelineno-14-16" name="__codelineno-14-16" href="#__codelineno-14-16"></a><span class="p">}</span>
+<a id="__codelineno-14-8" name="__codelineno-14-8" href="#__codelineno-14-8"></a><span class="kd">class</span><span class="w"> </span><span class="nc">UnitStubTest</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-14-9" name="__codelineno-14-9" href="#__codelineno-14-9"></a><span class="w">    </span><span class="nd">@Test</span>
+<a id="__codelineno-14-10" name="__codelineno-14-10" href="#__codelineno-14-10"></a><span class="w">    </span><span class="kd">fun</span><span class="w"> </span><span class="nf">givenServiceMock_whenCallingMethodReturnsUnit_thenCorrectlyVerified</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-14-11" name="__codelineno-14-11" href="#__codelineno-14-11"></a><span class="w">        </span><span class="kd">val</span><span class="w"> </span><span class="nv">service</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mockk</span><span class="o">&lt;</span><span class="n">TestableServiceWithUnit</span><span class="o">&gt;</span><span class="p">()</span>
+<a id="__codelineno-14-12" name="__codelineno-14-12" href="#__codelineno-14-12"></a><span class="w">        </span><span class="kd">val</span><span class="w"> </span><span class="nv">myList</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mutableListOf</span><span class="o">&lt;</span><span class="kt">String</span><span class="o">&gt;</span><span class="p">()</span>
+<a id="__codelineno-14-13" name="__codelineno-14-13" href="#__codelineno-14-13"></a>
+<a id="__codelineno-14-14" name="__codelineno-14-14" href="#__codelineno-14-14"></a><span class="w">        </span><span class="n">every</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">service</span><span class="p">.</span><span class="na">addHelloWorld</span><span class="p">(</span><span class="n">any</span><span class="p">())</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="n">just</span><span class="w"> </span><span class="n">runs</span>
+<a id="__codelineno-14-15" name="__codelineno-14-15" href="#__codelineno-14-15"></a><span class="w">        </span><span class="n">service</span><span class="p">.</span><span class="na">addHelloWorld</span><span class="p">(</span><span class="n">myList</span><span class="p">)</span>
+<a id="__codelineno-14-16" name="__codelineno-14-16" href="#__codelineno-14-16"></a>
+<a id="__codelineno-14-17" name="__codelineno-14-17" href="#__codelineno-14-17"></a><span class="w">        </span><span class="n">assertTrue</span><span class="p">(</span><span class="n">myList</span><span class="p">.</span><span class="na">isEmpty</span><span class="p">())</span>
+<a id="__codelineno-14-18" name="__codelineno-14-18" href="#__codelineno-14-18"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-14-19" name="__codelineno-14-19" href="#__codelineno-14-19"></a><span class="p">}</span>
 </code></pre></div>
-<h3 id="11-funciones-stubbing-que-retornan-unit">11. Funciones Stubbing que retornan Unit<a class="headerlink" href="#11-funciones-stubbing-que-retornan-unit" title="Permanent link">&para;</a></h3>
-<p>Un stub es, en el contexto del testeo del software, un trozo de código usado como sustituto de alguna otra funcionalidad. Un stub puede simular el comportamiento de código existente (tal como un procedimiento en una máquina remota) o ser el sustituto temporal para un código aún no desarrollado. Los stubs son, por tanto, muy útiles para porting, computación distribuida así como en el desarrollo y pruebas de software en general.</p>
-<p>En Kotlin, si el tipo de retorno de una función es <code>Unit</code>, significa que la función no devuelve nada. Es bastante similar al método <code>void</code> de Java.</p>
-<p>Para ejemplificarlo, agreguemos una función que retorna <code>Unit</code> a la clase <code>TestableService</code>:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="kd">fun</span><span class="w"> </span><span class="nf">addHelloWorld</span><span class="p">(</span><span class="n">strList</span><span class="p">:</span><span class="w"> </span><span class="n">MutableList</span><span class="o">&lt;</span><span class="kt">String</span><span class="o">&gt;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="s">&quot;addHelloWorld() is called&quot;</span><span class="p">)</span>
-<a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a><span class="w">    </span><span class="n">strList</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="s">&quot;Hello World!&quot;</span>
-<a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a><span class="p">}</span>
+<h4 id="102-llamar-a-la-implementacion-original">10.2. Llamar a la implementación original<a class="headerlink" href="#102-llamar-a-la-implementacion-original" title="Permanent link">&para;</a></h4>
+<p>Si en lugar de anular el comportamiento quieres ejecutar el original, puedes usar <code>callOriginal()</code>.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="k">import</span><span class="w"> </span><span class="nn">io.mockk.answers</span>
+<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="k">import</span><span class="w"> </span><span class="nn">io.mockk.every</span>
+<a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a><span class="k">import</span><span class="w"> </span><span class="nn">io.mockk.mockk</span>
+<a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a><span class="k">import</span><span class="w"> </span><span class="nn">kotlin.test.Test</span>
+<a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a><span class="k">import</span><span class="w"> </span><span class="nn">kotlin.test.assertEquals</span>
+<a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a>
+<a id="__codelineno-15-7" name="__codelineno-15-7" href="#__codelineno-15-7"></a><span class="kd">class</span><span class="w"> </span><span class="nc">CallOriginalTest</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-15-8" name="__codelineno-15-8" href="#__codelineno-15-8"></a><span class="w">    </span><span class="nd">@Test</span>
+<a id="__codelineno-15-9" name="__codelineno-15-9" href="#__codelineno-15-9"></a><span class="w">    </span><span class="kd">fun</span><span class="w"> </span><span class="nf">givenServiceMock_whenCallingOriginalMethod_thenCorrectlyVerified</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-15-10" name="__codelineno-15-10" href="#__codelineno-15-10"></a><span class="w">        </span><span class="kd">val</span><span class="w"> </span><span class="nv">service</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mockk</span><span class="o">&lt;</span><span class="n">TestableServiceWithUnit</span><span class="o">&gt;</span><span class="p">()</span>
+<a id="__codelineno-15-11" name="__codelineno-15-11" href="#__codelineno-15-11"></a><span class="w">        </span><span class="kd">val</span><span class="w"> </span><span class="nv">myList</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mutableListOf</span><span class="o">&lt;</span><span class="kt">String</span><span class="o">&gt;</span><span class="p">()</span>
+<a id="__codelineno-15-12" name="__codelineno-15-12" href="#__codelineno-15-12"></a>
+<a id="__codelineno-15-13" name="__codelineno-15-13" href="#__codelineno-15-13"></a><span class="w">        </span><span class="n">every</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">service</span><span class="p">.</span><span class="na">addHelloWorld</span><span class="p">(</span><span class="n">any</span><span class="p">())</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="n">answers</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">callOriginal</span><span class="p">()</span><span class="w"> </span><span class="p">}</span>
+<a id="__codelineno-15-14" name="__codelineno-15-14" href="#__codelineno-15-14"></a><span class="w">        </span><span class="n">service</span><span class="p">.</span><span class="na">addHelloWorld</span><span class="p">(</span><span class="n">myList</span><span class="p">)</span>
+<a id="__codelineno-15-15" name="__codelineno-15-15" href="#__codelineno-15-15"></a>
+<a id="__codelineno-15-16" name="__codelineno-15-16" href="#__codelineno-15-16"></a><span class="w">        </span><span class="n">assertEquals</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="n">myList</span><span class="p">.</span><span class="na">size</span><span class="p">)</span>
+<a id="__codelineno-15-17" name="__codelineno-15-17" href="#__codelineno-15-17"></a><span class="w">        </span><span class="n">assertEquals</span><span class="p">(</span><span class="s">&quot;Hello World!&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">myList</span><span class="p">.</span><span class="na">first</span><span class="p">())</span>
+<a id="__codelineno-15-18" name="__codelineno-15-18" href="#__codelineno-15-18"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-15-19" name="__codelineno-15-19" href="#__codelineno-15-19"></a><span class="p">}</span>
 </code></pre></div>
-<p>Como muestra el código anterior, cuando se llama a la función <code>addHelloWorld()</code>, imprime una línea en la consola.  Luego, el <code>String</code> <code>"Hello World"</code> se agrega al objeto <code>MutableList&lt;String&gt;</code> recibido por parámetro.</p>
-<p>En esta sección, vamos a ver cómo hacer un <a href="https://es.wikipedia.org/wiki/Stub">stub</a> de una función que devuelve <code>Unit</code>. Por lo general, dependiendo de diferentes circunstancias, queremos controlar un stub de una función que retorna <code>Unit</code> de dos maneras:</p>
+<h4 id="103-combinar-varios-escenarios">10.3. Combinar varios escenarios<a class="headerlink" href="#103-combinar-varios-escenarios" title="Permanent link">&para;</a></h4>
+<p>El verdadero interés de <code>callOriginal()</code> aparece cuando no quieres el mismo comportamiento en todas las llamadas.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="k">import</span><span class="w"> </span><span class="nn">io.mockk.answers</span>
+<a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a><span class="k">import</span><span class="w"> </span><span class="nn">io.mockk.every</span>
+<a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a><span class="k">import</span><span class="w"> </span><span class="nn">io.mockk.just</span>
+<a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a><span class="k">import</span><span class="w"> </span><span class="nn">io.mockk.match</span>
+<a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a><span class="k">import</span><span class="w"> </span><span class="nn">io.mockk.mockk</span>
+<a id="__codelineno-16-6" name="__codelineno-16-6" href="#__codelineno-16-6"></a><span class="k">import</span><span class="w"> </span><span class="nn">io.mockk.runs</span>
+<a id="__codelineno-16-7" name="__codelineno-16-7" href="#__codelineno-16-7"></a><span class="k">import</span><span class="w"> </span><span class="nn">kotlin.test.Test</span>
+<a id="__codelineno-16-8" name="__codelineno-16-8" href="#__codelineno-16-8"></a><span class="k">import</span><span class="w"> </span><span class="nn">kotlin.test.assertEquals</span>
+<a id="__codelineno-16-9" name="__codelineno-16-9" href="#__codelineno-16-9"></a><span class="k">import</span><span class="w"> </span><span class="nn">kotlin.test.assertTrue</span>
+<a id="__codelineno-16-10" name="__codelineno-16-10" href="#__codelineno-16-10"></a>
+<a id="__codelineno-16-11" name="__codelineno-16-11" href="#__codelineno-16-11"></a><span class="kd">class</span><span class="w"> </span><span class="nc">TwoScenariosTest</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-16-12" name="__codelineno-16-12" href="#__codelineno-16-12"></a><span class="w">    </span><span class="nd">@Test</span>
+<a id="__codelineno-16-13" name="__codelineno-16-13" href="#__codelineno-16-13"></a><span class="w">    </span><span class="kd">fun</span><span class="w"> </span><span class="nf">givenServiceMock_whenStubbingTwoScenarios_thenCorrectlyVerified</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-16-14" name="__codelineno-16-14" href="#__codelineno-16-14"></a><span class="w">        </span><span class="kd">val</span><span class="w"> </span><span class="nv">service</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mockk</span><span class="o">&lt;</span><span class="n">TestableServiceWithUnit</span><span class="o">&gt;</span><span class="p">()</span>
+<a id="__codelineno-16-15" name="__codelineno-16-15" href="#__codelineno-16-15"></a><span class="w">        </span><span class="kd">val</span><span class="w"> </span><span class="nv">kaiList</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mutableListOf</span><span class="p">(</span><span class="s">&quot;Kai&quot;</span><span class="p">)</span>
+<a id="__codelineno-16-16" name="__codelineno-16-16" href="#__codelineno-16-16"></a><span class="w">        </span><span class="kd">val</span><span class="w"> </span><span class="nv">emptyList</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mutableListOf</span><span class="o">&lt;</span><span class="kt">String</span><span class="o">&gt;</span><span class="p">()</span>
+<a id="__codelineno-16-17" name="__codelineno-16-17" href="#__codelineno-16-17"></a>
+<a id="__codelineno-16-18" name="__codelineno-16-18" href="#__codelineno-16-18"></a><span class="w">        </span><span class="n">every</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">service</span><span class="p">.</span><span class="na">addHelloWorld</span><span class="p">(</span><span class="n">any</span><span class="p">())</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="n">just</span><span class="w"> </span><span class="n">runs</span>
+<a id="__codelineno-16-19" name="__codelineno-16-19" href="#__codelineno-16-19"></a><span class="w">        </span><span class="n">every</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">service</span><span class="p">.</span><span class="na">addHelloWorld</span><span class="p">(</span><span class="n">match</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="s">&quot;Kai&quot;</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="nb">it</span><span class="w"> </span><span class="p">})</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="n">answers</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">callOriginal</span><span class="p">()</span><span class="w"> </span><span class="p">}</span>
+<a id="__codelineno-16-20" name="__codelineno-16-20" href="#__codelineno-16-20"></a>
+<a id="__codelineno-16-21" name="__codelineno-16-21" href="#__codelineno-16-21"></a><span class="w">        </span><span class="n">service</span><span class="p">.</span><span class="na">addHelloWorld</span><span class="p">(</span><span class="n">kaiList</span><span class="p">)</span>
+<a id="__codelineno-16-22" name="__codelineno-16-22" href="#__codelineno-16-22"></a><span class="w">        </span><span class="n">service</span><span class="p">.</span><span class="na">addHelloWorld</span><span class="p">(</span><span class="n">emptyList</span><span class="p">)</span>
+<a id="__codelineno-16-23" name="__codelineno-16-23" href="#__codelineno-16-23"></a>
+<a id="__codelineno-16-24" name="__codelineno-16-24" href="#__codelineno-16-24"></a><span class="w">        </span><span class="n">assertEquals</span><span class="p">(</span><span class="n">listOf</span><span class="p">(</span><span class="s">&quot;Kai&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Hello World!&quot;</span><span class="p">),</span><span class="w"> </span><span class="n">kaiList</span><span class="p">)</span>
+<a id="__codelineno-16-25" name="__codelineno-16-25" href="#__codelineno-16-25"></a><span class="w">        </span><span class="n">assertTrue</span><span class="p">(</span><span class="n">emptyList</span><span class="p">.</span><span class="na">isEmpty</span><span class="p">())</span>
+<a id="__codelineno-16-26" name="__codelineno-16-26" href="#__codelineno-16-26"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-16-27" name="__codelineno-16-27" href="#__codelineno-16-27"></a><span class="p">}</span>
+</code></pre></div>
+<p>En la práctica, esto te permite adaptar la simulación a distintos contextos sin renunciar al comportamiento real cuando realmente te interesa.</p>
+<h3 id="11-cuando-conviene-usar-mockk-y-cuando-no">11. Cuándo conviene usar MockK y cuándo no<a class="headerlink" href="#11-cuando-conviene-usar-mockk-y-cuando-no" title="Permanent link">&para;</a></h3>
+<p>MockK es útil, pero también es fácil abusar de él. Como regla general:</p>
 <ul>
-<li>hacer que la llamada a la función no haga nada, o en otras palabras, omitir la ejecución de la función</li>
-<li>llamando a la función real</li>
+<li>úsalo cuando una dependencia hace costosa o inestable la prueba;</li>
+<li>úsalo cuando necesitas verificar una interacción concreta;</li>
+<li>evita mockear clases triviales que podrías sustituir por objetos reales simples;</li>
+<li>no conviertas el test en una copia exacta de la implementación interna.</li>
 </ul>
-<p>A continuación, usaremos la función <code>addHelloWorld()</code> como ejemplo y veremos cómo lograrlo usando MockK.</p>
-<h4 id="111-hacer-que-la-funcion-no-haga-nada">11.1. Hacer que la función no haga nada<a class="headerlink" href="#111-hacer-que-la-funcion-no-haga-nada" title="Permanent link">&para;</a></h4>
-<p>Hay varias formas de omitir la ejecución de una función que retorna <code>Unit</code> usando MockK:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="n">every</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">addHelloWorld</span><span class="p">(</span><span class="n">any</span><span class="p">())</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="n">returns</span><span class="w"> </span><span class="kt">Unit</span>
-<a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a><span class="n">every</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">addHelloWorld</span><span class="p">(</span><span class="n">any</span><span class="p">())</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="n">answers</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="kt">Unit</span><span class="w"> </span><span class="p">}</span>
-<a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a><span class="n">every</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">addHelloWorld</span><span class="p">(</span><span class="n">any</span><span class="p">())</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="n">just</span><span class="w"> </span><span class="n">runs</span>
-</code></pre></div>
-<p>Algunas de ellas no son nuevas para nosotros
-- <code>returns …</code> 
-- <code>answers {…}</code>, 
-- y el último, <code>every {... } just runs</code> es fácil de entender.</p>
-<p>Entonces, primero probemos si se puede omitir la ejecución de la función original y luego entendamos cómo funciona <code>just runs</code>:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="nd">@Test</span>
-<a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a><span class="kd">fun</span><span class="w"> </span><span class="nf">givenServiceMock_whenCallingMethodReturnsUnit_thenCorrectlyVerified</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a><span class="w">    </span><span class="c1">// given</span>
-<a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">service</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mockk</span><span class="o">&lt;</span><span class="n">TestableService</span><span class="o">&gt;</span><span class="p">()</span>
-<a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">myList</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mutableListOf</span><span class="o">&lt;</span><span class="kt">String</span><span class="o">&gt;</span><span class="p">()</span>
-<a id="__codelineno-17-6" name="__codelineno-17-6" href="#__codelineno-17-6"></a>
-<a id="__codelineno-17-7" name="__codelineno-17-7" href="#__codelineno-17-7"></a><span class="w">    </span><span class="c1">// when</span>
-<a id="__codelineno-17-8" name="__codelineno-17-8" href="#__codelineno-17-8"></a><span class="w">    </span><span class="n">every</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">service</span><span class="p">.</span><span class="na">addHelloWorld</span><span class="p">(</span><span class="n">any</span><span class="p">())</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="n">just</span><span class="w"> </span><span class="n">runs</span>
-<a id="__codelineno-17-9" name="__codelineno-17-9" href="#__codelineno-17-9"></a><span class="w">    </span><span class="n">service</span><span class="p">.</span><span class="na">addHelloWorld</span><span class="p">(</span><span class="n">myList</span><span class="p">)</span>
-<a id="__codelineno-17-10" name="__codelineno-17-10" href="#__codelineno-17-10"></a>
-<a id="__codelineno-17-11" name="__codelineno-17-11" href="#__codelineno-17-11"></a><span class="w">    </span><span class="c1">// then</span>
-<a id="__codelineno-17-12" name="__codelineno-17-12" href="#__codelineno-17-12"></a><span class="w">    </span><span class="n">assertTrue</span><span class="p">(</span><span class="n">myList</span><span class="p">.</span><span class="na">isEmpty</span><span class="p">())</span>
-<a id="__codelineno-17-13" name="__codelineno-17-13" href="#__codelineno-17-13"></a><span class="p">}</span>
-</code></pre></div>
-<p>Como muestra el código anterior:   </p>
-<ul>
-<li>Agregamos la función <code>addHelloWorld()</code> usando <code>just runs</code>.  </li>
-<li>Luego, llamamos a la función y le pasamos una <code>MutableList</code> vacía.  </li>
-<li>Por último, si hemos conseguido omitir la ejecución de la función con éxito, después de la invocación de la función, la cadena <code>“Hello World!”</code> no debe aparecer en la lista pasada como parámetro a la función, y por tanto el test deberá dar ok.  </li>
-</ul>
-<p>Ahora entendamos cómo <code>just runs</code> omite la llamada de la función real. Primero, echemos un vistazo a la implementación de la función <code>just()</code>:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="kd">infix</span><span class="w"> </span><span class="kd">fun</span><span class="w"> </span><span class="nf">MockKStubScope</span><span class="o">&lt;</span><span class="kt">Unit</span><span class="p">,</span><span class="w"> </span><span class="kt">Unit</span><span class="o">&gt;</span><span class="p">.</span><span class="na">just</span><span class="p">(</span><span class="n">runs</span><span class="p">:</span><span class="w"> </span><span class="n">Runs</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">answers</span><span class="p">(</span><span class="n">ConstantAnswer</span><span class="p">(</span><span class="kt">Unit</span><span class="p">))</span>
-</code></pre></div>
-<p>Como podemos ver, <code>just</code> es una función <code>infix</code> (infija). Por lo tanto, podemos escribir <code>just(runs)</code> como una forma mas fácil de leer:<code>just runs</code>. Además, <code>Runs</code> es un objeto dummy, y <code>runs</code> es simplemente un <code>typealias</code> de <code>Runs</code>:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="kd">object</span><span class="w"> </span><span class="nc">Runs</span>
-<a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a><span class="k">typealias</span><span class="w"> </span><span class="n">runs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Runs</span>
-</code></pre></div>
-<p>Por último, si creamos un stub de una función que retorna <code>Unit</code> como  <code>just runs</code>, se llama a la función <code>answers()</code>  y retorna una constante: <code>Unit</code>.</p>
-<h4 id="112-llamar-a-la-funcion-original">11.2. Llamar a la función original<a class="headerlink" href="#112-llamar-a-la-funcion-original" title="Permanent link">&para;</a></h4>
-<p>Ahora, veamos cómo crear un stub de una función que retorna <code>Unit</code> para hacer que llame a la función real.  Para llamar a la función original, podemos usar este enfoque:  <code>every { … } answers { callOriginal() }</code></p>
-<p>A continuación, veamos cómo se usa en una prueba real:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="nd">@Test</span>
-<a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a><span class="kd">fun</span><span class="w"> </span><span class="nf">givenServiceMock_whenCallingOriginalMethod_thenCorrectlyVerified</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a><span class="w">    </span><span class="c1">// given</span>
-<a id="__codelineno-20-4" name="__codelineno-20-4" href="#__codelineno-20-4"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">service</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mockk</span><span class="o">&lt;</span><span class="n">TestableService</span><span class="o">&gt;</span><span class="p">()</span>
-<a id="__codelineno-20-5" name="__codelineno-20-5" href="#__codelineno-20-5"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">myList</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mutableListOf</span><span class="o">&lt;</span><span class="kt">String</span><span class="o">&gt;</span><span class="p">()</span>
-<a id="__codelineno-20-6" name="__codelineno-20-6" href="#__codelineno-20-6"></a>
-<a id="__codelineno-20-7" name="__codelineno-20-7" href="#__codelineno-20-7"></a><span class="w">    </span><span class="c1">// when</span>
-<a id="__codelineno-20-8" name="__codelineno-20-8" href="#__codelineno-20-8"></a><span class="w">    </span><span class="n">every</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">service</span><span class="p">.</span><span class="na">addHelloWorld</span><span class="p">(</span><span class="n">any</span><span class="p">())</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="n">answers</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">callOriginal</span><span class="p">()</span><span class="w"> </span><span class="p">}</span>
-<a id="__codelineno-20-9" name="__codelineno-20-9" href="#__codelineno-20-9"></a><span class="w">    </span><span class="n">service</span><span class="p">.</span><span class="na">addHelloWorld</span><span class="p">(</span><span class="n">myList</span><span class="p">)</span>
-<a id="__codelineno-20-10" name="__codelineno-20-10" href="#__codelineno-20-10"></a>
-<a id="__codelineno-20-11" name="__codelineno-20-11" href="#__codelineno-20-11"></a><span class="w">    </span><span class="c1">// then</span>
-<a id="__codelineno-20-12" name="__codelineno-20-12" href="#__codelineno-20-12"></a><span class="w">    </span><span class="n">assertEquals</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="n">myList</span><span class="p">.</span><span class="na">size</span><span class="p">)</span>
-<a id="__codelineno-20-13" name="__codelineno-20-13" href="#__codelineno-20-13"></a><span class="w">    </span><span class="n">assertEquals</span><span class="p">(</span><span class="s">&quot;Hello World!&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">myList</span><span class="p">.</span><span class="na">first</span><span class="p">())</span>
-<a id="__codelineno-20-14" name="__codelineno-20-14" href="#__codelineno-20-14"></a><span class="p">}</span>
-</code></pre></div>
-<p>El test es ok tras de ejecutarlo. Entonces, <code>“Hello World!”</code>  se agrega a <code>myList</code> después de llamar a la función.  Sin embargo, podemos preguntarnos: si creamos un stub de una función y le pedimos que llame a la implementación original, ¿por qué nos molestamos en crear el stub?</p>
-<p>A continuación, veamos un ejemplo de cuándo es útil.</p>
-<h4 id="113-cuando-necesitamos-calloriginal">11.3. ¿Cuándo necesitamos <code>callOriginal()</code>?<a class="headerlink" href="#113-cuando-necesitamos-calloriginal" title="Permanent link">&para;</a></h4>
-<p>Digamos que en nuestra prueba, queremos llamar a la función <code>addHelloWorld()</code> con diferentes parámetros. Si la lista que se le pasa a la función contiene la cadena <code>"Kai"</code>, queremos llamar a la función real.  De lo contrario, nos gustaría omitir la llamada a la función:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="nd">@Test</span>
-<a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a><span class="kd">fun</span><span class="w"> </span><span class="nf">givenServiceMock_whenStubbingTwoScenarios_thenCorrectlyVerified</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a><span class="w">    </span><span class="c1">// given</span>
-<a id="__codelineno-21-4" name="__codelineno-21-4" href="#__codelineno-21-4"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">service</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mockk</span><span class="o">&lt;</span><span class="n">TestableService</span><span class="o">&gt;</span><span class="p">()</span>
-<a id="__codelineno-21-5" name="__codelineno-21-5" href="#__codelineno-21-5"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">kaiList</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mutableListOf</span><span class="p">(</span><span class="s">&quot;Kai&quot;</span><span class="p">)</span>
-<a id="__codelineno-21-6" name="__codelineno-21-6" href="#__codelineno-21-6"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">emptyList</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mutableListOf</span><span class="o">&lt;</span><span class="kt">String</span><span class="o">&gt;</span><span class="p">()</span>
-<a id="__codelineno-21-7" name="__codelineno-21-7" href="#__codelineno-21-7"></a>
-<a id="__codelineno-21-8" name="__codelineno-21-8" href="#__codelineno-21-8"></a><span class="w">    </span><span class="c1">// when</span>
-<a id="__codelineno-21-9" name="__codelineno-21-9" href="#__codelineno-21-9"></a><span class="w">    </span><span class="n">every</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">service</span><span class="p">.</span><span class="na">addHelloWorld</span><span class="p">(</span><span class="n">any</span><span class="p">())</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="n">just</span><span class="w"> </span><span class="n">runs</span>
-<a id="__codelineno-21-10" name="__codelineno-21-10" href="#__codelineno-21-10"></a><span class="w">    </span><span class="n">every</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">service</span><span class="p">.</span><span class="na">addHelloWorld</span><span class="p">(</span><span class="n">match</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="s">&quot;Kai&quot;</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="nb">it</span><span class="w"> </span><span class="p">})</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="n">answers</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">callOriginal</span><span class="p">()</span><span class="w"> </span><span class="p">}</span>
-<a id="__codelineno-21-11" name="__codelineno-21-11" href="#__codelineno-21-11"></a>
-<a id="__codelineno-21-12" name="__codelineno-21-12" href="#__codelineno-21-12"></a><span class="w">    </span><span class="n">service</span><span class="p">.</span><span class="na">addHelloWorld</span><span class="p">(</span><span class="n">kaiList</span><span class="p">)</span>
-<a id="__codelineno-21-13" name="__codelineno-21-13" href="#__codelineno-21-13"></a><span class="w">    </span><span class="n">service</span><span class="p">.</span><span class="na">addHelloWorld</span><span class="p">(</span><span class="n">emptyList</span><span class="p">)</span>
-<a id="__codelineno-21-14" name="__codelineno-21-14" href="#__codelineno-21-14"></a>
-<a id="__codelineno-21-15" name="__codelineno-21-15" href="#__codelineno-21-15"></a><span class="w">    </span><span class="c1">// then</span>
-<a id="__codelineno-21-16" name="__codelineno-21-16" href="#__codelineno-21-16"></a><span class="w">    </span><span class="n">assertEquals</span><span class="p">(</span><span class="n">listOf</span><span class="p">(</span><span class="s">&quot;Kai&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Hello World!&quot;</span><span class="p">),</span><span class="w"> </span><span class="n">kaiList</span><span class="p">)</span>
-<a id="__codelineno-21-17" name="__codelineno-21-17" href="#__codelineno-21-17"></a><span class="w">    </span><span class="n">assertTrue</span><span class="p">(</span><span class="n">emptyList</span><span class="p">.</span><span class="na">isEmpty</span><span class="p">())</span>
-<a id="__codelineno-21-18" name="__codelineno-21-18" href="#__codelineno-21-18"></a><span class="p">}</span>
-</code></pre></div>
-<p>Como podemos ver en el código anterior, agregamos la función <code>addHelloWorld()</code> dos veces, según nuestros requisitos.  Por lo tanto, <code>callOriginal()</code> nos permite decidir el comportamiento de los stubings de forma flexible.</p>
+<p>Si un test depende de demasiados mocks, muchas veces no es que falte MockK, sino que <strong>sobra acoplamiento en el diseño</strong>.</p>
 <h3 id="12-conclusion">12. Conclusión<a class="headerlink" href="#12-conclusion" title="Permanent link">&para;</a></h3>
-<p>Se han visto algunas de las características más importantes de MockK. MockK es una poderosa biblioteca para el lenguaje Kotlin y proporciona muchas características útiles. Para más información sobre MockK, podemos consultar la  <a href="https://mockk.io/">documentación en la web de MockK</a>.</p>
-<h3 id="13-recursos">13. Recursos<a class="headerlink" href="#13-recursos" title="Permanent link">&para;</a></h3>
+<p>MockK es una herramienta muy práctica para escribir pruebas unitarias en Kotlin cuando necesitamos aislar colaboraciones, controlar respuestas y verificar interacciones. Bien usado, hace que los tests sean más precisos y más fáciles de mantener.</p>
+<p>La idea clave con la que conviene quedarse es esta: <strong>mockear no consiste en falsear todo, sino en sustituir solo aquellas dependencias que impiden probar con claridad la unidad que te interesa</strong>.</p>
+<h2 id="fuentes-y-referencias">Fuentes y referencias<a class="headerlink" href="#fuentes-y-referencias" title="Permanent link">&para;</a></h2>
 <ul>
-<li><a href="https://es.wikipedia.org/wiki/Stub">¿Que es un Stub?</a></li>
-<li><a href="https://en.wikipedia.org/wiki/Mock_object">Mock Object</a></li>
-<li><a href="https://gabimoreno.soy/que-diferencias-hay-entre-un-stub-un-spy-y-un-mock">Stub, Spy, Mock</a></li>
-<li><a href="https://www.digite.com/es/agile/desarrollo-dirigido-por-pruebas-tdd/">¿Qué es <abbr title="Desarrollo Guiado por Pruebas. Práctica de desarrollo de software que se basa en escribir las pruebas antes de escribir el código. En TDD, los desarrolladores escriben pruebas automatizadas que definen el comportamiento esperado del código, y luego escriben el código para que pase las pruebas.">TDD</abbr>?</a></li>
-<li><a href="https://surprograma.github.io/libro-disenio-oop/docs/pruebas-automatizadas/elaborar-casos-prueba/">¿Cómo elaborar casos de prueba?</a></li>
-<li><a href="http://wiki.uqbar.org/wiki/articles/testeo-unitario-avanzado.html">Test unitario avanzado</a></li>
-<li><a href="https://surprograma.github.io/libro-disenio-oop/docs/intro/">Diseño de Software</a></li>
-</ul>
-<h2 id="fuentes">Fuentes<a class="headerlink" href="#fuentes" title="Permanent link">&para;</a></h2>
-<ul>
+<li><a href="https://es.wikipedia.org/wiki/Stub">Qué es un <abbr title="Doble de prueba que devuelve respuestas prefijadas para que una prueba pueda ejecutarse en un escenario controlado.">stub</abbr></a></li>
+<li><a href="https://en.wikipedia.org/wiki/Mock_object">Mock object</a></li>
+<li><a href="https://gabimoreno.soy/que-diferencias-hay-entre-un-stub-un-spy-y-un-mock">Diferencias entre <abbr title="Doble de prueba que devuelve respuestas prefijadas para que una prueba pueda ejecutarse en un escenario controlado.">stub</abbr>, <abbr title="Doble de prueba que parte de un objeto real y permite sustituir o vigilar solo parte de su comportamiento.">spy</abbr> y <abbr title="Doble de prueba que simula el comportamiento de una dependencia y permite verificar llamadas o respuestas esperadas.">mock</abbr></a></li>
+<li><a href="https://mockk.io/">Documentación oficial de MockK</a></li>
 <li><a href="https://www.baeldung.com/kotlin/mockk">MockK: A Mocking Library for Kotlin</a></li>
 <li><a href="https://notwoods.github.io/mockk-guidebook/">MockK Guidebook</a></li>
 </ul>

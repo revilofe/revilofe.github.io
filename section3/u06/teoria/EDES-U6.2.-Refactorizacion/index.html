@@ -4824,6 +4824,8 @@
               
   
   
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M16 0H8C6.9 0 6 .9 6 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V6zm4 18H8V2h7v5h5zM4 4v18h16v2H4c-1.1 0-2-.9-2-2V4zm6 6v2h8v-2zm0 4v2h5v-2z"/></svg>
+  
   <span class="md-ellipsis">
     
   
@@ -4867,8 +4869,6 @@
       <a href="../../../u05/teoria/EDES-U5.1.-Pruebas/" class="md-nav__link">
         
   
-  
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"/></svg>
   
   <span class="md-ellipsis">
     
@@ -4927,8 +4927,6 @@
       <a href="../../../u05/teoria/EDES-U5.2.1.-Kotest/" class="md-nav__link">
         
   
-  
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"/></svg>
   
   <span class="md-ellipsis">
     
@@ -8798,9 +8796,9 @@ Sucede cuando un cambio en una clase requiere cambios en muchas otras clases. Es
 </code></pre></div>
 <p>En este ejemplo, el código para calcular el salario base y la bonificación está duplicado en ambos métodos <code>calcularSalarioMensual</code> y <code>calcularSalarioSemanal</code>. Aunque estos métodos podrían ser utilizados en diferentes contextos (uno para calcular salarios mensuales y otro para semanales), la lógica de cálculo del salario base y la bonificación es idéntica, lo que representa una duplicación innecesaria.</p>
 <h4 id="32-test-de-la-clase-calculadorasalario">3.2. Test de la Clase CalculadoraSalario<a class="headerlink" href="#32-test-de-la-clase-calculadorasalario" title="Permanent link">&para;</a></h4>
-<p>Los test nos garantizan que la refactorización no afecte la funcionalidad de los métodos <code>calcularSalarioMensual</code> y <code>calcularSalarioSemanal</code>. Vamos a utilizar JUnit, una de las bibliotecas más comunes para pruebas en el ecosistema de Kotlin y Java. </p>
+<p>Los test nos garantizan que la refactorización no afecte la funcionalidad de los métodos <code>calcularSalarioMensual</code> y <code>calcularSalarioSemanal</code>. Vamos a utilizar <abbr title="Framework de pruebas para la plataforma Java y Kotlin sobre JVM. En muchos proyectos actúa como motor de ejecución de las pruebas automáticas.">JUnit</abbr>, una de las bibliotecas más comunes para pruebas en el ecosistema de Kotlin y Java. </p>
 <p>Un ejemplo muy básico consistiría en:</p>
-<p>Primero, asegúrate de tener JUnit agregado a tu proyecto. Si estás utilizando Gradle, puedes añadir la siguiente dependencia en tu archivo <code>build.gradle</code>:</p>
+<p>Primero, asegúrate de tener <abbr title="Framework de pruebas para la plataforma Java y Kotlin sobre JVM. En muchos proyectos actúa como motor de ejecución de las pruebas automáticas.">JUnit</abbr> agregado a tu proyecto. Si estás utilizando Gradle, puedes añadir la siguiente dependencia en tu archivo <code>build.gradle</code>:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">testImplementation</span><span class="w"> </span><span class="p">(</span><span class="s">&quot;org.junit.jupiter:junit-jupiter:5.7.0&quot;</span><span class="p">)</span>
 </code></pre></div>
 <p>A continuación, se muestra cómo podrían ser los tests para los métodos <code>calcularSalarioMensual</code> y <code>calcularSalarioSemanal</code> de la clase <code>CalculadoraSalario</code>:</p>

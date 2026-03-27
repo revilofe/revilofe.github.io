@@ -4806,6 +4806,8 @@
               
   
   
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M16 0H8C6.9 0 6 .9 6 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V6zm4 18H8V2h7v5h5zM4 4v18h16v2H4c-1.1 0-2-.9-2-2V4zm6 6v2h8v-2zm0 4v2h5v-2z"/></svg>
+  
   <span class="md-ellipsis">
     
   
@@ -4849,8 +4851,6 @@
       <a href="../../../../section3/u05/teoria/EDES-U5.1.-Pruebas/" class="md-nav__link">
         
   
-  
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"/></svg>
   
   <span class="md-ellipsis">
     
@@ -4909,8 +4909,6 @@
       <a href="../../../../section3/u05/teoria/EDES-U5.2.1.-Kotest/" class="md-nav__link">
         
   
-  
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"/></svg>
   
   <span class="md-ellipsis">
     
@@ -9595,7 +9593,7 @@ temario sea más fácil de seguir.</p>
 <h3 id="2-recopilacion-de-registros">2. Recopilación de registros<a class="headerlink" href="#2-recopilacion-de-registros" title="Permanent link">&para;</a></h3>
 <p>En primer lugar, necesitamos datos para que la solución <abbr title="Sistema de Gestión de Eventos e Información de Seguridad. Es un sistema de seguridad que recopila, correlaciona y analiza los eventos de seguridad de una red para detectar y responder a las amenazas de seguridad. Los SIEM pueden integrar información de múltiples fuentes, como firewalls, IDS, IPS, antivirus, etc.">SIEM</abbr> detecte amenazas. Es por eso que el proceso de recopilación de registros es una de las partes más importantes de la arquitectura <abbr title="Sistema de Gestión de Eventos e Información de Seguridad. Es un sistema de seguridad que recopila, correlaciona y analiza los eventos de seguridad de una red para detectar y responder a las amenazas de seguridad. Los SIEM pueden integrar información de múltiples fuentes, como firewalls, IDS, IPS, antivirus, etc.">SIEM</abbr>, porque sin el registro, <abbr title="Sistema de Gestión de Eventos e Información de Seguridad. Es un sistema de seguridad que recopila, correlaciona y analiza los eventos de seguridad de una red para detectar y responder a las amenazas de seguridad. Los SIEM pueden integrar información de múltiples fuentes, como firewalls, IDS, IPS, antivirus, etc.">SIEM</abbr> sería inútil.</p>
 <h4 id="21-conceptos-log-y-logging">2.1. Conceptos: log y logging<a class="headerlink" href="#21-conceptos-log-y-logging" title="Permanent link">&para;</a></h4>
-<p>En informática, un archivo de Log es un archivo que registra eventos que ocurren en un sistema operativo u otras ejecuciones de software, o mensajes entre diferentes usuarios de un software de comunicación. Logging es el acto de mantener un log (registro). En el caso más simple, los mensajes se escriben en un solo archivo de log. <em>definición: wikipedia.org</em></p>
+<p>En informática, un archivo de Log es un archivo que registra eventos que ocurren en un sistema operativo u otras ejecuciones de software, o mensajes entre diferentes usuarios de un software de comunicación. <abbr title="Registro estructurado de eventos que ocurren durante la ejecución de una aplicación. Se utiliza para observabilidad, diagnóstico, depuración y análisis de incidencias.">Logging</abbr> es el acto de mantener un log (registro). En el caso más simple, los mensajes se escriben en un solo archivo de log. <em>definición: wikipedia.org</em></p>
 <p>Contiene un registro básico, hora, sistema fuente y un mensaje. Por ejemplo, cuando observamos el contenido del archivo "/var/log/auth.log" en un servidor Ubuntu, podemos ver la fuente, la hora y la información del mensaje.</p>
 <p>Nuestro objetivo en este punto es transferir registros desde varios lugares (hosts, <abbr title="Dispositivo de seguridad que se utiliza para proteger una red de comunicaciones. El firewall controla el tráfico de red y decide qué paquetes de datos pueden entrar o salir de la red.">firewall</abbr>, registro del servidor, proxy, etc.) a <abbr title="Sistema de Gestión de Eventos e Información de Seguridad. Es un sistema de seguridad que recopila, correlaciona y analiza los eventos de seguridad de una red para detectar y responder a las amenazas de seguridad. Los SIEM pueden integrar información de múltiples fuentes, como firewalls, IDS, IPS, antivirus, etc.">SIEM</abbr>. Así, podemos procesar todos los datos y detectar amenazas en un punto central.</p>
 <h4 id="22-metodos-de-recopilacion">2.2. Métodos de recopilación<a class="headerlink" href="#22-metodos-de-recopilacion" title="Permanent link">&para;</a></h4>

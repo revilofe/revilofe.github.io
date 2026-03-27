@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Logging Code">
+        <meta name="description" content="Registro de eventos en aplicaciones Kotlin/JVM con enfoque práctico y profesional.">
       
       
         <meta name="author" content="Eduardo Fdez">
@@ -4824,6 +4824,8 @@
               
   
   
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M16 0H8C6.9 0 6 .9 6 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V6zm4 18H8V2h7v5h5zM4 4v18h16v2H4c-1.1 0-2-.9-2-2V4zm6 6v2h8v-2zm0 4v2h5v-2z"/></svg>
+  
   <span class="md-ellipsis">
     
   
@@ -4867,8 +4869,6 @@
       <a href="../EDES-U5.1.-Pruebas/" class="md-nav__link">
         
   
-  
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"/></svg>
   
   <span class="md-ellipsis">
     
@@ -4927,8 +4927,6 @@
       <a href="../EDES-U5.2.1.-Kotest/" class="md-nav__link">
         
   
-  
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"/></svg>
   
   <span class="md-ellipsis">
     
@@ -5079,31 +5077,97 @@
   <a href="#531-logging" class="md-nav__link">
     <span class="md-ellipsis">
       
-        5.3.1. Logging
+        5.3.1 Logging
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="5.3.1. Logging">
+    <nav class="md-nav" aria-label="5.3.1 Logging">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#1-introduccion-al-registro-de-eventos-logging" class="md-nav__link">
+  <a href="#1-que-es-el-logging" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1. Introducción al registro de eventos (logging)
+        1. Qué es el logging
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="1. Introducción al registro de eventos (logging)">
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-por-que-println-se-queda-corto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Por qué println() se queda corto
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-como-funciona-un-sistema-de-logging" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Cómo funciona un sistema de logging
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Cómo funciona un sistema de logging">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#11-que-es-un-sistema-de-logging" class="md-nav__link">
+  <a href="#31-logger" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1.1. ¿Qué es un sistema de logging?
+        3.1. Logger
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-niveles-de-log" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2. Niveles de log
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-appenders" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3. Appenders
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-filtros-y-configuracion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.4. Filtros y configuración
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#35-formato-del-mensaje" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.5. Formato del mensaje
       
     </span>
   </a>
@@ -5116,10 +5180,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#2-caracteristicas-comunes-de-los-sistemas-de-logging" class="md-nav__link">
+  <a href="#4-herramientas-habituales-en-kotlinjvm" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2. Características comunes de los sistemas de logging
+        4. Herramientas habituales en Kotlin/JVM
       
     </span>
   </a>
@@ -5127,55 +5191,22 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#3-herramientas-de-logging-mas-comunes" class="md-nav__link">
+  <a href="#5-configuracion-basica-con-slf4j-y-logback" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3. Herramientas de logging más comunes
+        5. Configuración básica con SLF4J y Logback
       
     </span>
   </a>
   
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#4-ventajas-del-uso-de-un-sistema-de-logging" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        4. Ventajas del uso de un sistema de logging
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#5-logback-sistema-de-logging-recomendado" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        5. Logback: sistema de logging recomendado
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#6-guia-configuracion-de-logback" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        6. Guía configuración de Logback
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="6. Guía configuración de Logback">
+    <nav class="md-nav" aria-label="5. Configuración básica con SLF4J y Logback">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#61-anadir-las-dependencias-al-proyecto" class="md-nav__link">
+  <a href="#51-dependencias-en-gradle" class="md-nav__link">
     <span class="md-ellipsis">
       
-        6.1. Añadir las dependencias al proyecto
+        5.1. Dependencias en Gradle
       
     </span>
   </a>
@@ -5183,33 +5214,49 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#62-crear-el-archivo-de-configuracion-logbackxml" class="md-nav__link">
+  <a href="#52-archivo-logbackxml" class="md-nav__link">
     <span class="md-ellipsis">
       
-        6.2. Crear el archivo de configuración logback.xml
+        5.2. Archivo logback.xml
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="6.2. Crear el archivo de configuración logback.xml">
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-uso-desde-el-codigo-kotlin" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Uso desde el código Kotlin
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-que-aporta-cada-nivel-en-la-practica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Qué aporta cada nivel en la práctica
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. Qué aporta cada nivel en la práctica">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#621-ejemplo-de-configuracion-basica" class="md-nav__link">
+  <a href="#71-ejemplo-razonable" class="md-nav__link">
     <span class="md-ellipsis">
       
-        6.2.1. Ejemplo de configuración básica:
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#622-explicacion-de-elementos-clave" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        6.2.2. Explicación de elementos clave:
+        7.1. Ejemplo razonable
       
     </span>
   </a>
@@ -5222,22 +5269,33 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#63-uso-del-sistema-de-logging-en-el-codigo" class="md-nav__link">
+  <a href="#8-buenas-practicas" class="md-nav__link">
     <span class="md-ellipsis">
       
-        6.3. Uso del sistema de logging en el código
+        8. Buenas prácticas
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="6.3. Uso del sistema de logging en el código">
+    <nav class="md-nav" aria-label="8. Buenas prácticas">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#631-niveles-de-log-de-menor-a-mayor-gravedad" class="md-nav__link">
+  <a href="#81-que-conviene-hacer" class="md-nav__link">
     <span class="md-ellipsis">
       
-        6.3.1. Niveles de log (de menor a mayor gravedad):
+        8.1. Qué conviene hacer
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#82-que-conviene-evitar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.2. Qué conviene evitar
       
     </span>
   </a>
@@ -5250,21 +5308,22 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#64-verificar-que-el-sistema-de-logs-funciona" class="md-nav__link">
+  <a href="#9-comprobacion-y-problemas-tipicos" class="md-nav__link">
     <span class="md-ellipsis">
       
-        6.4. Verificar que el sistema de logs funciona
+        9. Comprobación y problemas típicos
       
     </span>
   </a>
   
-</li>
+    <nav class="md-nav" aria-label="9. Comprobación y problemas típicos">
+      <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#65-buenas-practicas-al-utilizar-logging" class="md-nav__link">
+  <a href="#91-calculos-costosos-y-comprobacion-previa" class="md-nav__link">
     <span class="md-ellipsis">
       
-        6.5. Buenas prácticas al utilizar logging
+        9.1. Cálculos costosos y comprobación previa
       
     </span>
   </a>
@@ -5277,10 +5336,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#7-recursos-y-fuentes" class="md-nav__link">
+  <a href="#10-relacion-entre-logging-y-depuracion" class="md-nav__link">
     <span class="md-ellipsis">
       
-        7. Recursos y fuentes
+        10. Relación entre logging y depuración
       
     </span>
   </a>
@@ -5289,6 +5348,39 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Conclusión
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#presentacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Presentación
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fuentes-y-referencias" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fuentes y referencias
+      
+    </span>
+  </a>
   
 </li>
       
@@ -8557,31 +8649,97 @@
   <a href="#531-logging" class="md-nav__link">
     <span class="md-ellipsis">
       
-        5.3.1. Logging
+        5.3.1 Logging
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="5.3.1. Logging">
+    <nav class="md-nav" aria-label="5.3.1 Logging">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#1-introduccion-al-registro-de-eventos-logging" class="md-nav__link">
+  <a href="#1-que-es-el-logging" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1. Introducción al registro de eventos (logging)
+        1. Qué es el logging
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="1. Introducción al registro de eventos (logging)">
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-por-que-println-se-queda-corto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Por qué println() se queda corto
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-como-funciona-un-sistema-de-logging" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Cómo funciona un sistema de logging
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Cómo funciona un sistema de logging">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#11-que-es-un-sistema-de-logging" class="md-nav__link">
+  <a href="#31-logger" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1.1. ¿Qué es un sistema de logging?
+        3.1. Logger
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-niveles-de-log" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2. Niveles de log
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-appenders" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3. Appenders
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-filtros-y-configuracion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.4. Filtros y configuración
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#35-formato-del-mensaje" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.5. Formato del mensaje
       
     </span>
   </a>
@@ -8594,10 +8752,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#2-caracteristicas-comunes-de-los-sistemas-de-logging" class="md-nav__link">
+  <a href="#4-herramientas-habituales-en-kotlinjvm" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2. Características comunes de los sistemas de logging
+        4. Herramientas habituales en Kotlin/JVM
       
     </span>
   </a>
@@ -8605,55 +8763,22 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#3-herramientas-de-logging-mas-comunes" class="md-nav__link">
+  <a href="#5-configuracion-basica-con-slf4j-y-logback" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3. Herramientas de logging más comunes
+        5. Configuración básica con SLF4J y Logback
       
     </span>
   </a>
   
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#4-ventajas-del-uso-de-un-sistema-de-logging" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        4. Ventajas del uso de un sistema de logging
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#5-logback-sistema-de-logging-recomendado" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        5. Logback: sistema de logging recomendado
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#6-guia-configuracion-de-logback" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        6. Guía configuración de Logback
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="6. Guía configuración de Logback">
+    <nav class="md-nav" aria-label="5. Configuración básica con SLF4J y Logback">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#61-anadir-las-dependencias-al-proyecto" class="md-nav__link">
+  <a href="#51-dependencias-en-gradle" class="md-nav__link">
     <span class="md-ellipsis">
       
-        6.1. Añadir las dependencias al proyecto
+        5.1. Dependencias en Gradle
       
     </span>
   </a>
@@ -8661,33 +8786,49 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#62-crear-el-archivo-de-configuracion-logbackxml" class="md-nav__link">
+  <a href="#52-archivo-logbackxml" class="md-nav__link">
     <span class="md-ellipsis">
       
-        6.2. Crear el archivo de configuración logback.xml
+        5.2. Archivo logback.xml
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="6.2. Crear el archivo de configuración logback.xml">
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-uso-desde-el-codigo-kotlin" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Uso desde el código Kotlin
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-que-aporta-cada-nivel-en-la-practica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Qué aporta cada nivel en la práctica
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. Qué aporta cada nivel en la práctica">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#621-ejemplo-de-configuracion-basica" class="md-nav__link">
+  <a href="#71-ejemplo-razonable" class="md-nav__link">
     <span class="md-ellipsis">
       
-        6.2.1. Ejemplo de configuración básica:
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#622-explicacion-de-elementos-clave" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        6.2.2. Explicación de elementos clave:
+        7.1. Ejemplo razonable
       
     </span>
   </a>
@@ -8700,22 +8841,33 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#63-uso-del-sistema-de-logging-en-el-codigo" class="md-nav__link">
+  <a href="#8-buenas-practicas" class="md-nav__link">
     <span class="md-ellipsis">
       
-        6.3. Uso del sistema de logging en el código
+        8. Buenas prácticas
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="6.3. Uso del sistema de logging en el código">
+    <nav class="md-nav" aria-label="8. Buenas prácticas">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#631-niveles-de-log-de-menor-a-mayor-gravedad" class="md-nav__link">
+  <a href="#81-que-conviene-hacer" class="md-nav__link">
     <span class="md-ellipsis">
       
-        6.3.1. Niveles de log (de menor a mayor gravedad):
+        8.1. Qué conviene hacer
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#82-que-conviene-evitar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.2. Qué conviene evitar
       
     </span>
   </a>
@@ -8728,21 +8880,22 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#64-verificar-que-el-sistema-de-logs-funciona" class="md-nav__link">
+  <a href="#9-comprobacion-y-problemas-tipicos" class="md-nav__link">
     <span class="md-ellipsis">
       
-        6.4. Verificar que el sistema de logs funciona
+        9. Comprobación y problemas típicos
       
     </span>
   </a>
   
-</li>
+    <nav class="md-nav" aria-label="9. Comprobación y problemas típicos">
+      <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#65-buenas-practicas-al-utilizar-logging" class="md-nav__link">
+  <a href="#91-calculos-costosos-y-comprobacion-previa" class="md-nav__link">
     <span class="md-ellipsis">
       
-        6.5. Buenas prácticas al utilizar logging
+        9.1. Cálculos costosos y comprobación previa
       
     </span>
   </a>
@@ -8755,10 +8908,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#7-recursos-y-fuentes" class="md-nav__link">
+  <a href="#10-relacion-entre-logging-y-depuracion" class="md-nav__link">
     <span class="md-ellipsis">
       
-        7. Recursos y fuentes
+        10. Relación entre logging y depuración
       
     </span>
   </a>
@@ -8767,6 +8920,39 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Conclusión
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#presentacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Presentación
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fuentes-y-referencias" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fuentes y referencias
+      
+    </span>
+  </a>
   
 </li>
       
@@ -8794,16 +8980,6 @@
         
       
       
-        <a href="../../../../tags/#tag:debug" class="md-tag md-tag-icon">Debug</a>
-      
-    
-      
-      
-      
-        
-        
-      
-      
         <a href="../../../../tags/#tag:edes" class="md-tag md-tag-icon">EDES</a>
       
     
@@ -8814,7 +8990,37 @@
         
       
       
-        <a href="../../../../tags/#tag:logging" class="md-tag md-tag-icon">Logging</a>
+        <a href="../../../../tags/#tag:kotlin" class="md-tag md-tag-icon">Kotlin</a>
+      
+    
+      
+      
+      
+        
+        
+      
+      
+        <a href="../../../../tags/#tag:logback" class="md-tag md-tag-icon">Logback</a>
+      
+    
+      
+      
+      
+        
+        
+      
+      
+        <a href="../../../../tags/#tag:debugging" class="md-tag md-tag-icon">debugging</a>
+      
+    
+      
+      
+      
+        
+        
+      
+      
+        <a href="../../../../tags/#tag:logging" class="md-tag md-tag-icon">logging</a>
       
     
   </nav>
@@ -8826,165 +9032,181 @@
 
   <h1>5.3.1.-Logging</h1>
 
-<h2 id="531-logging">5.3.1. Logging<a class="headerlink" href="#531-logging" title="Permanent link">&para;</a></h2>
-<h3 id="1-introduccion-al-registro-de-eventos-logging">1. Introducción al registro de eventos (logging)<a class="headerlink" href="#1-introduccion-al-registro-de-eventos-logging" title="Permanent link">&para;</a></h3>
-<p>El registro de eventos o <em>logging</em> es una práctica fundamental en el desarrollo de software profesional. Consiste en registrar mensajes que informan sobre el estado de ejecución de una aplicación, permitiendo a los desarrolladores y administradores obtener información sobre el comportamiento interno del sistema sin necesidad de interactuar directamente con él.</p>
-<p>El logging cumple varias funciones: permite conocer qué está haciendo el programa en cada momento, detectar errores, analizar patrones de uso, rastrear fallos en producción y realizar auditorías. Es especialmente útil en aplicaciones complejas o en aquellas que deben mantenerse a largo plazo.</p>
-<p>A diferencia de otras técnicas de depuración como los mensajes <code>println</code>, el logging está diseñado para ofrecer información estructurada, configurable y filtrable, adecuada tanto para la fase de desarrollo como para la fase de despliegue.</p>
-<h4 id="11-que-es-un-sistema-de-logging">1.1. ¿Qué es un sistema de logging?<a class="headerlink" href="#11-que-es-un-sistema-de-logging" title="Permanent link">&para;</a></h4>
-<p>Un sistema de logging es una herramienta que gestiona la creación, filtrado, formato y destino de los mensajes de registro generados por una aplicación. Permite capturar información útil durante la ejecución del programa y enviarla a distintos lugares, como la consola, un archivo de texto, un servidor remoto o una base de datos.</p>
-<p>La mayoría de los lenguajes de programación modernos cuentan con bibliotecas o marcos de trabajo que permiten realizar logging de forma estructurada y configurable. Estas herramientas permiten definir distintos niveles de importancia para los mensajes, configurar qué información se registra y establecer cómo y dónde se almacena esa información.</p>
-<h3 id="2-caracteristicas-comunes-de-los-sistemas-de-logging">2. Características comunes de los sistemas de logging<a class="headerlink" href="#2-caracteristicas-comunes-de-los-sistemas-de-logging" title="Permanent link">&para;</a></h3>
-<p>Aunque existen diversas implementaciones, los sistemas de logging modernos comparten una serie de características esenciales que permiten una gestión eficaz de los mensajes de registro:</p>
+<h2 id="531-logging">5.3.1 <abbr title="Registro estructurado de eventos que ocurren durante la ejecución de una aplicación. Se utiliza para observabilidad, diagnóstico, depuración y análisis de incidencias.">Logging</abbr><a class="headerlink" href="#531-logging" title="Permanent link">&para;</a></h2>
+<p>Cuando un programa crece, imprimir mensajes con <code>println()</code> deja de ser suficiente. Puede servir para una prueba rápida, pero no para analizar una aplicación real con varias clases, distintos entornos y errores que aparecen cuando nadie está mirando la pantalla.</p>
+<p>Por eso existe el <strong>logging</strong>: un sistema de registro que permite saber qué está ocurriendo en la aplicación, con qué nivel de detalle y en qué contexto.</p>
+<table>
+<thead>
+<tr>
+<th>Código</th>
+<th>Descripción literal</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><abbr title="Resultado de Aprendizaje. Capacidad o logro que el alumnado debe alcanzar en un módulo según la programación y la normativa.">RA</abbr> 3</td>
+<td>Verifica el funcionamiento de programas diseñando y realizando pruebas.</td>
+</tr>
+<tr>
+<td><abbr title="Criterio de Evaluación. Indicador concreto que detalla qué debe demostrar el alumnado dentro de un resultado de aprendizaje.">CE</abbr> c</td>
+<td>Se han identificado las herramientas de depuración y prueba de aplicaciones ofrecidas por el entorno de desarrollo.</td>
+</tr>
+<tr>
+<td><abbr title="Criterio de Evaluación. Indicador concreto que detalla qué debe demostrar el alumnado dentro de un resultado de aprendizaje.">CE</abbr> e</td>
+<td>Se han utilizado las herramientas de depuración para examinar y modificar el comportamiento de un programa en tiempo de ejecución.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition abstract">
+<p class="admonition-title">Qué debes entender al terminar este tema</p>
 <ul>
-<li>
-<p><strong>Niveles de log:</strong> Los niveles permiten clasificar los mensajes según su gravedad o importancia. Los niveles más comunes, de menor a mayor detalle, son:</p>
-</li>
-<li>
-<p><code>TRACE</code>: mensajes muy detallados, útiles para el análisis minucioso de la ejecución.</p>
-</li>
-<li><code>DEBUG</code>: mensajes de depuración, utilizados durante el desarrollo para comprender el flujo del programa.</li>
-<li><code>INFO</code>: mensajes informativos que describen acciones normales del sistema.</li>
-<li><code>WARN</code>: advertencias que indican condiciones no críticas pero potencialmente problemáticas.</li>
-<li><code>ERROR</code>: errores que afectan al funcionamiento del sistema pero no provocan su parada inmediata.</li>
-<li><code>FATAL</code> (en algunas herramientas): errores graves que provocan la detención de la aplicación.</li>
+<li>Qué problema resuelve un sistema de logging y por qué es mejor que <code>println()</code> para un proyecto real.</li>
+<li>Qué elementos forman un sistema de logging moderno.</li>
+<li>Cómo se configuran niveles, destinos y formato de mensajes.</li>
+<li>Cómo usar <abbr title="Simple Logging Facade for Java. Fachada o API común para escribir logs desacoplados de una implementación concreta, como Logback o Log4j.">SLF4J</abbr> y Logback en un proyecto Kotlin/<abbr title="Máquina Virtual de Java. Es una máquina virtual que ejecuta el código Java en cualquier plataforma. La JVM convierte el código Java en código de máquina nativo y gestiona la memoria, el rendimiento y la seguridad de las aplicaciones Java.">JVM</abbr>.</li>
 </ul>
-<p>El uso de niveles permite filtrar qué mensajes se muestran o almacenan según el entorno (desarrollo, pruebas, producción).</p>
+</div>
+<h3 id="1-que-es-el-logging">1. Qué es el logging<a class="headerlink" href="#1-que-es-el-logging" title="Permanent link">&para;</a></h3>
+<p>El <em>logging</em> es el registro estructurado de eventos que ocurren durante la ejecución de un programa. Esos eventos pueden describir acciones normales, advertencias, errores o detalles internos útiles para diagnóstico.</p>
+<p>Dicho de forma sencilla: un sistema de logging permite dejar "pistas ordenadas" sobre lo que hace la aplicación.</p>
+<p>Eso sirve para:</p>
 <ul>
-<li>
-<p><strong>Appenders:</strong> Un <em>appender</em> es el componente que define el destino del mensaje de log. Puede ser la consola, un archivo, un flujo de red, una base de datos, entre otros. Un sistema de logging puede tener múltiples appenders activos al mismo tiempo.</p>
-</li>
-<li>
-<p><strong>Filtros:</strong> Los filtros permiten definir reglas para aceptar o rechazar mensajes antes de ser enviados a un appender. Esto permite, por ejemplo, registrar en consola solo los mensajes de nivel <code>INFO</code> y superiores, pero guardar en fichero también los de nivel <code>DEBUG</code>.</p>
-</li>
-<li>
-<p><strong>Formato de mensajes:</strong> Los sistemas de logging permiten personalizar el formato en el que se presentan los mensajes. Esto puede incluir la fecha y hora, el hilo de ejecución, el nivel de log, el nombre del logger, el mensaje, e incluso información contextual adicional.</p>
-</li>
-<li>
-<p><strong>Jerarquía de loggers:</strong> En muchos frameworks, como Logback, los loggers se organizan jerárquicamente por nombre, generalmente siguiendo el paquete de clases. Esto permite aplicar configuraciones específicas a partes concretas de la aplicación.</p>
-</li>
-<li>
-<p><strong>Configuración externa:</strong> Es habitual que la configuración del logging se gestione desde archivos externos (como <code>logback.xml</code>), lo que permite cambiar el comportamiento del sistema sin modificar el código fuente.</p>
-</li>
+<li>entender el flujo de ejecución;</li>
+<li>detectar errores;</li>
+<li>analizar fallos en producción;</li>
+<li>revisar qué ocurrió antes de una incidencia;</li>
+<li>sustituir trazas improvisadas por un sistema configurable.</li>
 </ul>
-<h3 id="3-herramientas-de-logging-mas-comunes">3. Herramientas de logging más comunes<a class="headerlink" href="#3-herramientas-de-logging-mas-comunes" title="Permanent link">&para;</a></h3>
-<p>En el ecosistema Java y Kotlin, existen varias bibliotecas ampliamente utilizadas para la gestión de logs. Algunas de las más destacadas son:</p>
+<blockquote>
+<p>Lo importante aquí es entender que el logging no es solo para cuando algo falla. También sirve para observar el comportamiento normal del sistema.</p>
+</blockquote>
+<h3 id="2-por-que-println-se-queda-corto">2. Por qué <code>println()</code> se queda corto<a class="headerlink" href="#2-por-que-println-se-queda-corto" title="Permanent link">&para;</a></h3>
+<p>Imprimir mensajes por consola puede ayudar al principio, pero en proyectos reales presenta problemas:</p>
 <ul>
-<li>
-<p><strong>SLF4J (Simple Logging Facade for Java):</strong> No es un sistema de logging en sí, sino una fachada que permite utilizar distintas implementaciones (como Logback o Log4j) a través de una misma <abbr title="Interfaz de Programación de Aplicaciones. Conjunto de definiciones y protocolos que se utilizan para desarrollar e integrar el software de las aplicaciones. Las API permiten que diferentes aplicaciones se comuniquen entre sí, compartan datos y funcionalidades.">API</abbr>. Esto facilita el desacoplamiento del código respecto a la herramienta concreta utilizada.</p>
-</li>
-<li>
-<p><strong>Logback:</strong> Es una implementación moderna y potente compatible con SLF4J. Ofrece alto rendimiento, amplia capacidad de configuración, múltiples tipos de appenders, soporte para rotación de logs y filtros sofisticados. Está diseñada como sucesora natural de Log4j y es ampliamente usada en entornos profesionales. Es la herramienta que se utilizará en este curso.</p>
-</li>
-<li>
-<p><strong>Log4j:</strong> Fue durante muchos años el sistema de logging más extendido en el ecosistema Java. Aunque sigue siendo usado, ha sido reemplazado progresivamente por Logback debido a mejoras en rendimiento y configuración.</p>
-</li>
-<li>
-<p><strong>Java Util Logging (JUL):</strong> Es la implementación estándar incluida en Java. Aunque funcional, ofrece menos flexibilidad que las bibliotecas anteriores y es menos utilizada en aplicaciones modernas.</p>
-</li>
-<li>
-<p><strong>Kotlin Logging:</strong> Biblioteca ligera que permite usar SLF4J en Kotlin con una sintaxis más idiomática.</p>
-</li>
+<li>no clasifica mensajes por gravedad;</li>
+<li>no permite filtrar fácilmente;</li>
+<li>mezcla depuración puntual con ejecución normal;</li>
+<li>obliga a modificar código para activar o desactivar mensajes;</li>
+<li>no suele dejar rastro persistente si solo escribe en consola.</li>
 </ul>
-<h3 id="4-ventajas-del-uso-de-un-sistema-de-logging">4. Ventajas del uso de un sistema de logging<a class="headerlink" href="#4-ventajas-del-uso-de-un-sistema-de-logging" title="Permanent link">&para;</a></h3>
-<p>El uso de un sistema de logging estructurado aporta múltiples beneficios en el desarrollo y mantenimiento de software:</p>
+<p>Con logging, en cambio, puedes decidir:</p>
 <ul>
-<li>Permite detectar errores sin necesidad de detener la aplicación.</li>
-<li>Facilita el diagnóstico de problemas en entornos de producción.</li>
-<li>Mejora la trazabilidad de acciones realizadas por los usuarios o el sistema.</li>
-<li>Proporciona una herramienta poderosa para el análisis retrospectivo de fallos.</li>
-<li>Reduce la dependencia de técnicas poco escalables como la impresión directa por consola.</li>
+<li>qué mensajes quieres ver;</li>
+<li>en qué entorno quieres verlos;</li>
+<li>dónde se guardan;</li>
+<li>con qué formato aparecen.</li>
 </ul>
-<h3 id="5-logback-sistema-de-logging-recomendado">5. Logback: sistema de logging recomendado<a class="headerlink" href="#5-logback-sistema-de-logging-recomendado" title="Permanent link">&para;</a></h3>
-<p>Logback es el sistema de logging que se utilizará como referencia a lo largo del módulo. Es una herramienta madura, compatible con SLF4J, que permite:</p>
+<h3 id="3-como-funciona-un-sistema-de-logging">3. Cómo funciona un sistema de logging<a class="headerlink" href="#3-como-funciona-un-sistema-de-logging" title="Permanent link">&para;</a></h3>
+<p>Un sistema de logging moderno suele apoyarse en varios elementos que trabajan juntos:</p>
+<pre class="mermaid"><code>flowchart LR
+    A[Codigo de la aplicacion] --&gt; B[Logger]
+    B --&gt; C[Filtro por nivel]
+    C --&gt; D[Appender]
+    D --&gt; E[Consola]
+    D --&gt; F[Archivo]</code></pre>
+<h4 id="31-logger">3.1. <abbr title="Componente de una aplicación que emite mensajes de registro. Normalmente se define por clase o por contexto y se utiliza para dejar trazabilidad del comportamiento del sistema.">Logger</abbr><a class="headerlink" href="#31-logger" title="Permanent link">&para;</a></h4>
+<p>Es el objeto que emite mensajes desde el código. Lo habitual es que cada clase tenga su propio logger.</p>
+<h4 id="32-niveles-de-log">3.2. Niveles de log<a class="headerlink" href="#32-niveles-de-log" title="Permanent link">&para;</a></h4>
+<p>Sirven para clasificar mensajes por importancia. Los más comunes son:</p>
+<table>
+<thead>
+<tr>
+<th>Nivel</th>
+<th>Uso habitual</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>TRACE</code></td>
+<td>Información extremadamente detallada</td>
+</tr>
+<tr>
+<td><code>DEBUG</code></td>
+<td>Datos útiles durante el desarrollo</td>
+</tr>
+<tr>
+<td><code>INFO</code></td>
+<td>Eventos normales del sistema</td>
+</tr>
+<tr>
+<td><code>WARN</code></td>
+<td>Situaciones anómalas no críticas</td>
+</tr>
+<tr>
+<td><code>ERROR</code></td>
+<td>Problemas que afectan al funcionamiento</td>
+</tr>
+</tbody>
+</table>
+<p>En algunas herramientas aparecen también <code>FATAL</code>, <code>OFF</code> o <code>ALL</code>, pero los anteriores son los más frecuentes en clase y en muchos proyectos <abbr title="Máquina Virtual de Java. Es una máquina virtual que ejecuta el código Java en cualquier plataforma. La JVM convierte el código Java en código de máquina nativo y gestiona la memoria, el rendimiento y la seguridad de las aplicaciones Java.">JVM</abbr>.</p>
+<h4 id="33-appenders">3.3. Appenders<a class="headerlink" href="#33-appenders" title="Permanent link">&para;</a></h4>
+<p>Un <em>appender</em> define el destino del mensaje:</p>
 <ul>
-<li>Definir múltiples niveles de log. Ej: <code>TRACE</code>, <code>DEBUG</code>, <code>INFO</code>, <code>WARN</code>, <code>ERROR</code>.</li>
-<li>Personalizar el formato de los mensajes. Ej: <code>%d{HH:mm:ss.SSS} [%thread] %-5level %logger - %msg%n</code></li>
-<li>Registrar mensajes en distintos destinos (consola, archivo, red). Ej: <code>&lt;appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender"&gt;</code> y <code>&lt;appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender"&gt;</code></li>
-<li>Filtrar mensajes según criterios definidos. Ej: Si quiero filtrar haciendo uso de filter los logs de nivel <code>DEBUG</code> y superiores, puedo usar <code>&lt;filter class="ch.qos.logback.classic.filter.LevelFilter"&gt;</code> y <code>&lt;level&gt;DEBUG&lt;/level&gt;</code>.</li>
-<li>Gestionar la rotación y archivo de logs antiguos. Ej: <code>&lt;rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy"&gt;</code> y <code>&lt;maxHistory&gt;7&lt;/maxHistory&gt;</code>. Se abre un nuevo archivo de log por día y se han mantenido los logs de los últimos 7 días.</li>
-<li>Activar o desactivar logs sin modificar el código fuente. Ej: <code>&lt;root level="DEBUG"&gt;</code> y <code>&lt;appender-ref ref="CONSOLE" /&gt;</code>. Se aplicará a toda la aplicación.</li>
+<li>consola;</li>
+<li>archivo;</li>
+<li>servidor remoto;</li>
+<li>base de datos;</li>
+<li>herramientas de monitorización.</li>
 </ul>
-<p>La configuración de logback se realiza mediante un archivo externo (<code>logback.xml</code>), lo que permite mantener separados el código de negocio y las decisiones de registro.</p>
-<p>En los siguientes apartados se explicará paso a paso cómo integrar logback en un proyecto y cómo utilizarlo para mejorar la observabilidad y mantenibilidad del software desarrollado.</p>
-<h3 id="6-guia-configuracion-de-logback">6. Guía configuración de Logback<a class="headerlink" href="#6-guia-configuracion-de-logback" title="Permanent link">&para;</a></h3>
-<p>El registro o <em>logging</em> es una herramienta fundamental en el desarrollo de software. Permite registrar información sobre el funcionamiento de un programa, lo cual es muy útil para:</p>
+<h4 id="34-filtros-y-configuracion">3.4. Filtros y configuración<a class="headerlink" href="#34-filtros-y-configuracion" title="Permanent link">&para;</a></h4>
+<p>La configuración permite aceptar o rechazar mensajes según nivel, paquete, clase u otras reglas. Esto evita saturar el sistema con información irrelevante.</p>
+<h4 id="35-formato-del-mensaje">3.5. Formato del mensaje<a class="headerlink" href="#35-formato-del-mensaje" title="Permanent link">&para;</a></h4>
+<p>Un buen sistema de logging suele incluir:</p>
 <ul>
-<li>Detectar errores.</li>
-<li>Analizar el comportamiento de la aplicación.</li>
-<li>Realizar un seguimiento del uso en producción.</li>
-<li>Sustituir las típicas sentencias <code>println()</code> de depuración por un sistema más potente, configurable y profesional.</li>
+<li>fecha y hora;</li>
+<li>nivel;</li>
+<li>nombre del logger;</li>
+<li>hilo de ejecución;</li>
+<li>mensaje;</li>
+<li>contexto adicional cuando haga falta.</li>
 </ul>
-<p>En esta guía aprenderás a configurar <strong>logback</strong>, una de las bibliotecas más utilizadas para la gestión de logs en entornos que utilizan la <abbr title="Máquina Virtual de Java. Es una máquina virtual que ejecuta el código Java en cualquier plataforma. La JVM convierte el código Java en código de máquina nativo y gestiona la memoria, el rendimiento y la seguridad de las aplicaciones Java.">JVM</abbr>, como Kotlin o Java.</p>
-<h4 id="61-anadir-las-dependencias-al-proyecto">6.1. Añadir las dependencias al proyecto<a class="headerlink" href="#61-anadir-las-dependencias-al-proyecto" title="Permanent link">&para;</a></h4>
-<p>Para utilizar logback en tu proyecto, necesitas incluir las siguientes dependencias:</p>
-<p>Si estás utilizando <strong>Gradle con Kotlin DSL (<code>build.gradle.kts</code>)</strong>, añade lo siguiente dentro del bloque <code>dependencies</code>:</p>
+<h3 id="4-herramientas-habituales-en-kotlinjvm">4. Herramientas habituales en Kotlin/<abbr title="Máquina Virtual de Java. Es una máquina virtual que ejecuta el código Java en cualquier plataforma. La JVM convierte el código Java en código de máquina nativo y gestiona la memoria, el rendimiento y la seguridad de las aplicaciones Java.">JVM</abbr><a class="headerlink" href="#4-herramientas-habituales-en-kotlinjvm" title="Permanent link">&para;</a></h3>
+<p>En el ecosistema Java y Kotlin es habitual encontrar estas piezas:</p>
+<ul>
+<li><strong><abbr title="Simple Logging Facade for Java. Fachada o API común para escribir logs desacoplados de una implementación concreta, como Logback o Log4j.">SLF4J</abbr></strong>: una fachada común para no acoplar el código a una implementación concreta;</li>
+<li><strong>Logback</strong>: una implementación muy extendida, flexible y cómoda de configurar;</li>
+<li><strong>Log4j</strong>: otra implementación conocida, aunque en muchos proyectos actuales Logback ha ganado terreno;</li>
+<li><strong>Kotlin <abbr title="Registro estructurado de eventos que ocurren durante la ejecución de una aplicación. Se utiliza para observabilidad, diagnóstico, depuración y análisis de incidencias.">Logging</abbr></strong>: una capa más idiomática para usar logging desde Kotlin.</li>
+</ul>
+<p>En esta unidad tomaremos como referencia <strong><abbr title="Simple Logging Facade for Java. Fachada o API común para escribir logs desacoplados de una implementación concreta, como Logback o Log4j.">SLF4J</abbr> + Logback</strong>, porque es una combinación muy habitual y suficientemente profesional para aprender bien el concepto.</p>
+<h3 id="5-configuracion-basica-con-slf4j-y-logback">5. Configuración básica con <abbr title="Simple Logging Facade for Java. Fachada o API común para escribir logs desacoplados de una implementación concreta, como Logback o Log4j.">SLF4J</abbr> y Logback<a class="headerlink" href="#5-configuracion-basica-con-slf4j-y-logback" title="Permanent link">&para;</a></h3>
+<h4 id="51-dependencias-en-gradle">5.1. Dependencias en Gradle<a class="headerlink" href="#51-dependencias-en-gradle" title="Permanent link">&para;</a></h4>
+<p>En un proyecto con <code>build.gradle.kts</code>, una configuración básica podría ser esta:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">dependencies</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="n">implementation</span><span class="p">(</span><span class="s">&quot;org.slf4j:slf4j-api:2.0.9&quot;</span><span class="p">)</span>
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="n">implementation</span><span class="p">(</span><span class="s">&quot;ch.qos.logback:logback-classic:1.4.11&quot;</span><span class="p">)</span>
 <a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="p">}</span>
 </code></pre></div>
-<blockquote>
-<p>💡 Estas bibliotecas proporcionan la interfaz estándar de logging (<code>slf4j</code>) y su implementación mediante logback.</p>
-</blockquote>
-<p>Tras añadir las dependencias, sincroniza tu proyecto para que estén disponibles.</p>
-<h4 id="62-crear-el-archivo-de-configuracion-logbackxml">6.2. Crear el archivo de configuración <code>logback.xml</code><a class="headerlink" href="#62-crear-el-archivo-de-configuracion-logbackxml" title="Permanent link">&para;</a></h4>
-<p>Logback se configura mediante un archivo XML llamado <code>logback.xml</code>. Este archivo define los siguientes elementos:</p>
+<p>La idea de fondo es simple:</p>
 <ul>
-<li><strong>Appenders</strong>: los destinos donde se escriben los logs (por ejemplo, consola o fichero).</li>
-<li><strong>Loggers</strong>: qué partes de la aplicación generan logs.</li>
-<li><strong>Root Logger</strong>: la configuración por defecto que se aplica si no se especifica otra.</li>
+<li><abbr title="Simple Logging Facade for Java. Fachada o API común para escribir logs desacoplados de una implementación concreta, como Logback o Log4j.">SLF4J</abbr> ofrece la <abbr title="Interfaz de Programación de Aplicaciones. Conjunto de definiciones y protocolos que se utilizan para desarrollar e integrar el software de las aplicaciones. Las API permiten que diferentes aplicaciones se comuniquen entre sí, compartan datos y funcionalidades.">API</abbr>;</li>
+<li>Logback ofrece la implementación real.</li>
 </ul>
-<p><strong>Ubicación del archivo:</strong> Debe colocarse en la ruta <code>src/main/resources/logback.xml</code></p>
-<h5 id="621-ejemplo-de-configuracion-basica">6.2.1. Ejemplo de configuración básica:<a class="headerlink" href="#621-ejemplo-de-configuracion-basica" title="Permanent link">&para;</a></h5>
-<p>Este ejemplo define dos appenders (consola y fichero) y un logger raíz con nivel de log <code>DEBUG</code>:</p>
+<h4 id="52-archivo-logbackxml">5.2. Archivo <code>logback.xml</code><a class="headerlink" href="#52-archivo-logbackxml" title="Permanent link">&para;</a></h4>
+<p>Logback suele configurarse con un archivo <code>logback.xml</code> dentro de <code>src/main/resources</code>.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nt">&lt;configuration&gt;</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="cm">&lt;!-- Appender que muestra los logs en la consola --&gt;</span>
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">    </span><span class="nt">&lt;appender</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;CONSOLE&quot;</span><span class="w"> </span><span class="na">class=</span><span class="s">&quot;ch.qos.logback.core.ConsoleAppender&quot;</span><span class="nt">&gt;</span>
-<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">        </span><span class="nt">&lt;encoder&gt;</span>
-<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">            </span><span class="nt">&lt;pattern&gt;</span>%d{HH:mm:ss.SSS}<span class="w"> </span>[%thread]<span class="w"> </span>%-5level<span class="w"> </span>%logger<span class="w"> </span>-<span class="w"> </span>%msg%n<span class="nt">&lt;/pattern&gt;</span>
-<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">        </span><span class="nt">&lt;/encoder&gt;</span>
-<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">    </span><span class="nt">&lt;/appender&gt;</span>
-<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>
-<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="w">    </span><span class="cm">&lt;!-- Appender que guarda los logs en un archivo con rotación diaria --&gt;</span>
-<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="w">    </span><span class="nt">&lt;appender</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;FILE&quot;</span><span class="w"> </span><span class="na">class=</span><span class="s">&quot;ch.qos.logback.core.rolling.RollingFileAppender&quot;</span><span class="nt">&gt;</span>
-<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="w">        </span><span class="nt">&lt;file&gt;</span>logs/app.log<span class="nt">&lt;/file&gt;</span>
-<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>
-<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="w">        </span><span class="nt">&lt;rollingPolicy</span><span class="w"> </span><span class="na">class=</span><span class="s">&quot;ch.qos.logback.core.rolling.TimeBasedRollingPolicy&quot;</span><span class="nt">&gt;</span>
-<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="w">            </span><span class="nt">&lt;fileNamePattern&gt;</span>logs/app.%d{yyyy-MM-dd}.log<span class="nt">&lt;/fileNamePattern&gt;</span>
-<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="w">            </span><span class="nt">&lt;maxHistory&gt;</span>7<span class="nt">&lt;/maxHistory&gt;</span>
-<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a><span class="w">        </span><span class="nt">&lt;/rollingPolicy&gt;</span>
-<a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a>
-<a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a><span class="w">        </span><span class="nt">&lt;encoder&gt;</span>
-<a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a><span class="w">            </span><span class="nt">&lt;pattern&gt;</span>%d{yyyy-MM-dd<span class="w"> </span>HH:mm:ss}<span class="w"> </span>%-5level<span class="w"> </span>%logger<span class="w"> </span>-<span class="w"> </span>%msg%n<span class="nt">&lt;/pattern&gt;</span>
-<a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a><span class="w">        </span><span class="nt">&lt;/encoder&gt;</span>
-<a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a><span class="w">    </span><span class="nt">&lt;/appender&gt;</span>
-<a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a>
-<a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a><span class="w">    </span><span class="cm">&lt;!-- Logger raíz: se aplicará a toda la aplicación --&gt;</span>
-<a id="__codelineno-1-25" name="__codelineno-1-25" href="#__codelineno-1-25"></a><span class="w">    </span><span class="nt">&lt;root</span><span class="w"> </span><span class="na">level=</span><span class="s">&quot;DEBUG&quot;</span><span class="nt">&gt;</span>
-<a id="__codelineno-1-26" name="__codelineno-1-26" href="#__codelineno-1-26"></a><span class="w">        </span><span class="nt">&lt;appender-ref</span><span class="w"> </span><span class="na">ref=</span><span class="s">&quot;CONSOLE&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
-<a id="__codelineno-1-27" name="__codelineno-1-27" href="#__codelineno-1-27"></a><span class="w">        </span><span class="nt">&lt;appender-ref</span><span class="w"> </span><span class="na">ref=</span><span class="s">&quot;FILE&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
-<a id="__codelineno-1-28" name="__codelineno-1-28" href="#__codelineno-1-28"></a><span class="w">    </span><span class="nt">&lt;/root&gt;</span>
-<a id="__codelineno-1-29" name="__codelineno-1-29" href="#__codelineno-1-29"></a>
-<a id="__codelineno-1-30" name="__codelineno-1-30" href="#__codelineno-1-30"></a><span class="nt">&lt;/configuration&gt;</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">    </span><span class="nt">&lt;appender</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;CONSOLE&quot;</span><span class="w"> </span><span class="na">class=</span><span class="s">&quot;ch.qos.logback.core.ConsoleAppender&quot;</span><span class="nt">&gt;</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">        </span><span class="nt">&lt;encoder&gt;</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">            </span><span class="nt">&lt;pattern&gt;</span>%d{HH:mm:ss.SSS}<span class="w"> </span>[%thread]<span class="w"> </span>%-5level<span class="w"> </span>%logger<span class="w"> </span>-<span class="w"> </span>%msg%n<span class="nt">&lt;/pattern&gt;</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">        </span><span class="nt">&lt;/encoder&gt;</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">    </span><span class="nt">&lt;/appender&gt;</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">    </span><span class="nt">&lt;root</span><span class="w"> </span><span class="na">level=</span><span class="s">&quot;DEBUG&quot;</span><span class="nt">&gt;</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">        </span><span class="nt">&lt;appender-ref</span><span class="w"> </span><span class="na">ref=</span><span class="s">&quot;CONSOLE&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="w">    </span><span class="nt">&lt;/root&gt;</span>
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="nt">&lt;/configuration&gt;</span>
 </code></pre></div>
-<h5 id="622-explicacion-de-elementos-clave">6.2.2. Explicación de elementos clave:<a class="headerlink" href="#622-explicacion-de-elementos-clave" title="Permanent link">&para;</a></h5>
+<p>Este ejemplo indica:</p>
 <ul>
-<li><code>&lt;appender name="CONSOLE" ...&gt;</code>: envía los mensajes a la consola.</li>
-<li><code>&lt;appender name="FILE" ....&gt;</code>: envía los mensajes a un archivo.</li>
-<li><code>&lt;file&gt;logs/app.log&lt;/file&gt;</code>: define el archivo de salida para los logs.</li>
-<li><code>&lt;fileNamePattern&gt;</code>: crea un nuevo archivo de log por día.</li>
-<li><code>&lt;maxHistory&gt;</code>: mantiene los logs de los últimos 7 días. </li>
-<li><code>&lt;root level="DEBUG"&gt;</code>: indica que se registrarán mensajes de nivel DEBUG o superior.</li>
-<li><code>&lt;appender-ref ref="CONSOLE" /&gt;</code>: asocia el appender de consola al logger raíz. Desde este punto, todos los mensajes de log generados por la aplicación se enviarán a la consola.</li>
-<li><code>&lt;appender-ref ref="FILE" /&gt;</code>: asocia el appender de archivo al logger raíz. Desde este punto, todos los mensajes de log generados por la aplicación se guardarán en el archivo <code>logs/app.log</code>.</li>
+<li>que los mensajes se mostrarán por consola;</li>
+<li>que el nivel mínimo será <code>DEBUG</code>;</li>
+<li>que el formato incluirá hora, hilo, nivel, logger y mensaje.</li>
 </ul>
-<h4 id="63-uso-del-sistema-de-logging-en-el-codigo">6.3. Uso del sistema de logging en el código<a class="headerlink" href="#63-uso-del-sistema-de-logging-en-el-codigo" title="Permanent link">&para;</a></h4>
-<p>Para registrar mensajes en la aplicación, se utiliza una instancia del logger. A continuación se muestra cómo hacerlo:</p>
+<h3 id="6-uso-desde-el-codigo-kotlin">6. Uso desde el código Kotlin<a class="headerlink" href="#6-uso-desde-el-codigo-kotlin" title="Permanent link">&para;</a></h3>
+<p>Una vez configurado el sistema, el uso en código suele ser directo:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">import</span><span class="w"> </span><span class="nn">org.slf4j.LoggerFactory</span>
 <a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="kd">val</span><span class="w"> </span><span class="nv">logger</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">LoggerFactory</span><span class="p">.</span><span class="na">getLogger</span><span class="p">(</span><span class="s">&quot;MiAplicacion&quot;</span><span class="p">)</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="kd">private</span><span class="w"> </span><span class="kd">val</span><span class="w"> </span><span class="nv">logger</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">LoggerFactory</span><span class="p">.</span><span class="na">getLogger</span><span class="p">(</span><span class="s">&quot;MiAplicacion&quot;</span><span class="p">)</span>
 <a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>
 <a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="kd">fun</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">    </span><span class="n">logger</span><span class="p">.</span><span class="na">trace</span><span class="p">(</span><span class="s">&quot;Mensaje TRACE&quot;</span><span class="p">)</span>
@@ -8994,80 +9216,91 @@
 <a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="w">    </span><span class="n">logger</span><span class="p">.</span><span class="na">error</span><span class="p">(</span><span class="s">&quot;Mensaje ERROR&quot;</span><span class="p">)</span>
 <a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="p">}</span>
 </code></pre></div>
-<p>En este ejemplo, se crea un logger con el nombre "MiAplicacion". Luego, se registran mensajes de distintos niveles. Dependiendo de la configuración del archivo <code>logback.xml</code>, algunos de estos mensajes pueden no aparecer en la consola o en el archivo.</p>
-<h5 id="631-niveles-de-log-de-menor-a-mayor-gravedad">6.3.1. Niveles de log (de menor a mayor gravedad):<a class="headerlink" href="#631-niveles-de-log-de-menor-a-mayor-gravedad" title="Permanent link">&para;</a></h5>
-<table>
-<thead>
-<tr>
-<th>Nivel</th>
-<th>Uso principal</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>TRACE</td>
-<td>Información extremadamente detallada.</td>
-</tr>
-<tr>
-<td>DEBUG</td>
-<td>Información útil para depurar durante el desarrollo.</td>
-</tr>
-<tr>
-<td>INFO</td>
-<td>Mensajes informativos sobre el funcionamiento normal del programa.</td>
-</tr>
-<tr>
-<td>WARN</td>
-<td>Advertencias que no detienen el programa, pero requieren atención.</td>
-</tr>
-<tr>
-<td>ERROR</td>
-<td>Errores que afectan el funcionamiento y deben ser corregidos.</td>
-</tr>
-</tbody>
-</table>
-<blockquote>
-<p>📌 El nivel configurado en el archivo XML determina qué mensajes se mostrarán. Si el nivel es <code>DEBUG</code>, no se mostrarán mensajes <code>TRACE</code>.</p>
-</blockquote>
-<p>Hay que tener en cuenta que el uso de niveles de log adecuados es fundamental para evitar la saturación de información y facilitar la identificación de problemas. Por ejemplo, en producción es recomendable usar <code>INFO</code> o <code>WARN</code>, mientras que en desarrollo se puede utilizar <code>DEBUG</code> o <code>TRACE</code>.</p>
-<h4 id="64-verificar-que-el-sistema-de-logs-funciona">6.4. Verificar que el sistema de logs funciona<a class="headerlink" href="#64-verificar-que-el-sistema-de-logs-funciona" title="Permanent link">&para;</a></h4>
-<p>Una vez configurado el archivo <code>logback.xml</code> y añadido el código de logging:</p>
+<p>Si el nivel configurado es <code>DEBUG</code>, el mensaje <code>TRACE</code> no aparecerá. Esto no es un error: es exactamente el comportamiento esperado.</p>
+<h3 id="7-que-aporta-cada-nivel-en-la-practica">7. Qué aporta cada nivel en la práctica<a class="headerlink" href="#7-que-aporta-cada-nivel-en-la-practica" title="Permanent link">&para;</a></h3>
+<p>No se trata solo de memorizar nombres. Cada nivel tiene una intención distinta:</p>
 <ul>
-<li>Ejecuta el programa.    </li>
-<li>Deberías ver los mensajes en la <strong>consola</strong> con formato personalizado.    </li>
-<li>Se creará un archivo <code>logs/app.log</code> con los mismos mensajes.    </li>
-<li>Si ejecutas el programa varios días, se generará un archivo nuevo por día.    </li>
-<li>Si el programa se ejecuta durante más de 7 días, los archivos más antiguos se eliminarán automáticamente.</li>
-<li>Si no ves los mensajes esperados, revisa la configuración del archivo <code>logback.xml</code> y asegúrate de que está en la ruta correcta (<code>src/main/resources/</code>).</li>
-<li>Asegúrate de que las dependencias de <code>logback</code> y <code>slf4j</code> están correctamente añadidas al proyecto y sincronizadas.</li>
-<li>Verifica que el logger se inicializa correctamente y que no hay errores en la consola al iniciar la aplicación.</li>
-<li>Comprueba que el nivel de log configurado en <code>logback.xml</code> es compatible con los mensajes que intentas registrar. Por ejemplo, si el nivel es <code>INFO</code>, no se mostrarán los mensajes de nivel <code>DEBUG</code> o <code>TRACE</code>.</li>
+<li>usa <code>TRACE</code> cuando necesites ver detalle extremo del flujo;</li>
+<li>usa <code>DEBUG</code> para información de desarrollo útil al depurar;</li>
+<li>usa <code>INFO</code> para eventos normales importantes;</li>
+<li>usa <code>WARN</code> para algo anómalo que no rompe el proceso;</li>
+<li>usa <code>ERROR</code> cuando hay un fallo real que requiere atención.</li>
 </ul>
-<h4 id="65-buenas-practicas-al-utilizar-logging">6.5. Buenas prácticas al utilizar logging<a class="headerlink" href="#65-buenas-practicas-al-utilizar-logging" title="Permanent link">&para;</a></h4>
-<p>A continuación se presentan algunas buenas prácticas a seguir al implementar un sistema de logging en tu aplicación:    </p>
-<ul>
-<li><strong>Usa siempre un logger por clase</strong>. No uses un logger global para toda la aplicación.</li>
-<li><strong>Evita imprimir directamente con <code>println()</code></strong>. Usa siempre el sistema de logs.</li>
-<li><strong>No abuses del nivel <code>DEBUG</code> o <code>TRACE</code></strong> en producción. Usa niveles adecuados.</li>
-<li><strong>No incluyas datos sensibles</strong> (contraseñas, datos personales) en los logs.</li>
-<li><strong>Organiza los logs por paquetes o clases</strong>, si tu aplicación es grande.</li>
-<li><strong>No olvides limpiar los logs antiguos</strong>. Configura la rotación y eliminación automática de logs viejos.</li>
-<li><strong>Usa un formato claro y legible</strong> para los mensajes de log. Incluye información relevante como la fecha, el nivel de log y el mensaje.</li>
-<li><strong>No uses logs para controlar el flujo del programa</strong>. Los logs son para registrar información, no para tomar decisiones en el código.</li>
-<li><strong>No olvides documentar el uso de logs</strong> en tu código. Explica qué información se registra y por qué es relevante.</li>
-<li><strong>Revisa los logs regularmente</strong>. No esperes a que ocurra un problema para mirar los logs. Mantén un seguimiento activo de la información registrada.</li>
-<li><strong>Configura alertas</strong> para ciertos niveles de log (como <code>ERROR</code> o <code>FATAL</code>) para recibir notificaciones inmediatas en caso de problemas críticos.</li>
-<li><strong>Utiliza herramientas de análisis de logs</strong> para facilitar la búsqueda y el análisis de grandes volúmenes de datos. Herramientas como ELK Stack (Elasticsearch, Logstash, Kibana) o Splunk pueden ser muy útiles.</li>
-<li>Puedes usar condiciones como <code>if (logger.isDebugEnabled)</code> para evitar cálculos innecesarios en producción. Por ejemplo: </li>
-</ul>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">logger</span><span class="p">.</span><span class="na">isDebugEnabled</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">    </span><span class="n">logger</span><span class="p">.</span><span class="na">debug</span><span class="p">(</span><span class="s">&quot;El resultado es: </span><span class="si">${</span><span class="n">calculoLargo</span><span class="p">()</span><span class="si">}</span><span class="s">&quot;</span><span class="p">)</span>
-<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="p">}</span>
+<h4 id="71-ejemplo-razonable">7.1. Ejemplo razonable<a class="headerlink" href="#71-ejemplo-razonable" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kd">fun</span><span class="w"> </span><span class="nf">autenticar</span><span class="p">(</span><span class="n">usuario</span><span class="p">:</span><span class="w"> </span><span class="kt">String</span><span class="p">,</span><span class="w"> </span><span class="n">password</span><span class="p">:</span><span class="w"> </span><span class="kt">String</span><span class="p">):</span><span class="w"> </span><span class="kt">Boolean</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">    </span><span class="n">logger</span><span class="p">.</span><span class="na">debug</span><span class="p">(</span><span class="s">&quot;Intentando autenticar al usuario {}&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">usuario</span><span class="p">)</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">usuario</span><span class="p">.</span><span class="na">isBlank</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">        </span><span class="n">logger</span><span class="p">.</span><span class="na">warn</span><span class="p">(</span><span class="s">&quot;Se ha intentado autenticar con un nombre de usuario vacio&quot;</span><span class="p">)</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="kc">false</span>
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">autenticado</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">password</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s">&quot;1234&quot;</span>
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>
+<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">autenticado</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a><span class="w">        </span><span class="n">logger</span><span class="p">.</span><span class="na">error</span><span class="p">(</span><span class="s">&quot;Autenticacion fallida para el usuario {}&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">usuario</span><span class="p">)</span>
+<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>
+<a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">autenticado</span>
+<a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a><span class="p">}</span>
 </code></pre></div>
-<p>Desde de lo que hemos visto, podemos concluir que implementar un sistema de logs desde el inicio del desarrollo mejora la trazabilidad del código, facilita la resolución de errores y prepara la aplicación para un entorno profesional. <strong>Logback</strong>, junto con <strong>SLF4J</strong>, ofrece una solución flexible y potente para la gestión de mensajes de log.</p>
-<h3 id="7-recursos-y-fuentes">7. Recursos y fuentes<a class="headerlink" href="#7-recursos-y-fuentes" title="Permanent link">&para;</a></h3>
+<p>Aquí se ve bien una idea importante: el log no sustituye a la lógica del programa, pero sí ayuda a interpretarla cuando algo falla o cuando necesitamos revisar qué ocurrió.</p>
+<h3 id="8-buenas-practicas">8. Buenas prácticas<a class="headerlink" href="#8-buenas-practicas" title="Permanent link">&para;</a></h3>
+<h4 id="81-que-conviene-hacer">8.1. Qué conviene hacer<a class="headerlink" href="#81-que-conviene-hacer" title="Permanent link">&para;</a></h4>
 <ul>
-<li><a href="https://logback.qos.ch/manual/">Logback</a></li>
+<li>usar un logger por clase o por contexto;</li>
+<li>elegir bien el nivel del mensaje;</li>
+<li>registrar información que ayude a diagnosticar;</li>
+<li>configurar destinos y rotación de archivos si el proyecto lo necesita;</li>
+<li>revisar logs de forma periódica.</li>
+</ul>
+<h4 id="82-que-conviene-evitar">8.2. Qué conviene evitar<a class="headerlink" href="#82-que-conviene-evitar" title="Permanent link">&para;</a></h4>
+<ul>
+<li>abusar de <code>DEBUG</code> o <code>TRACE</code> en producción;</li>
+<li>usar logs para controlar el flujo del programa;</li>
+<li>repetir información irrelevante;</li>
+<li>registrar contraseñas, tokens o datos sensibles;</li>
+<li>dejar mensajes ambiguos del tipo "ha fallado algo".</li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Error habitual</p>
+<p>Un mal sistema de logging genera ruido en lugar de información. Si todo se registra sin criterio, luego no se encuentra nada útil cuando aparece el problema real.</p>
+</div>
+<h3 id="9-comprobacion-y-problemas-tipicos">9. Comprobación y problemas típicos<a class="headerlink" href="#9-comprobacion-y-problemas-tipicos" title="Permanent link">&para;</a></h3>
+<p>Si configuras logging y no ves mensajes, conviene revisar:</p>
+<ul>
+<li>que las dependencias estén bien añadidas;</li>
+<li>que <code>logback.xml</code> esté en la ruta correcta;</li>
+<li>que el nivel configurado permita mostrar ese mensaje;</li>
+<li>que el logger se esté creando correctamente;</li>
+<li>que no haya varias configuraciones de logging compitiendo entre sí.</li>
+</ul>
+<h4 id="91-calculos-costosos-y-comprobacion-previa">9.1. Cálculos costosos y comprobación previa<a class="headerlink" href="#91-calculos-costosos-y-comprobacion-previa" title="Permanent link">&para;</a></h4>
+<p>Cuando generar el mensaje implica trabajo costoso, puede ser útil comprobar si ese nivel está habilitado:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">logger</span><span class="p">.</span><span class="na">isDebugEnabled</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">    </span><span class="n">logger</span><span class="p">.</span><span class="na">debug</span><span class="p">(</span><span class="s">&quot;El resultado del calculo es {}&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">calculoLargo</span><span class="p">())</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="p">}</span>
+</code></pre></div>
+<p>Así evitas hacer cálculos innecesarios cuando ese mensaje ni siquiera se va a mostrar.</p>
+<h3 id="10-relacion-entre-logging-y-depuracion">10. Relación entre logging y depuración<a class="headerlink" href="#10-relacion-entre-logging-y-depuracion" title="Permanent link">&para;</a></h3>
+<p>El logging no sustituye al depurador, pero sí lo complementa muy bien.</p>
+<ul>
+<li>El <strong>depurador</strong> sirve para detener y observar el estado actual.</li>
+<li>El <strong>logging</strong> sirve para dejar rastro de lo que ha ido ocurriendo, incluso cuando ya no puedes pausar la ejecución.</li>
+</ul>
+<p>En desarrollo, ambos pueden convivir. En producción, normalmente el logging es la herramienta más realista para entender incidencias.</p>
+<h2 id="conclusion">Conclusión<a class="headerlink" href="#conclusion" title="Permanent link">&para;</a></h2>
+<p>La idea principal de este tema es que <strong>el logging convierte la observación del programa en algo estructurado, configurable y útil para diagnóstico profesional</strong>. Frente a <code>println()</code>, ofrece contexto, filtrado, persistencia y una forma mucho más sólida de analizar qué está pasando en una aplicación real.</p>
+<h2 id="presentacion">Presentación<a class="headerlink" href="#presentacion" title="Permanent link">&para;</a></h2>
+<p>Puedes utilizar la presentación asociada a este tema en:</p>
+<ul>
+<li><a href="https://revilofe.github.io/slides/section3-ed/ED-U5.3.1.-LoggingCode.html">https://revilofe.github.io/slides/section3-ed/ED-U5.3.1.-LoggingCode.html</a></li>
+</ul>
+<h2 id="fuentes-y-referencias">Fuentes y referencias<a class="headerlink" href="#fuentes-y-referencias" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Manual oficial de Logback: <a href="https://logback.qos.ch/manual/">https://logback.qos.ch/manual/</a></li>
+<li>Documentación de <abbr title="Simple Logging Facade for Java. Fachada o API común para escribir logs desacoplados de una implementación concreta, como Logback o Log4j.">SLF4J</abbr>: <a href="https://www.slf4j.org/">https://www.slf4j.org/</a></li>
+<li>Ayuda de IntelliJ IDEA sobre depuración: <a href="https://www.jetbrains.com/help/idea/debugging-code.html">https://www.jetbrains.com/help/idea/debugging-code.html</a></li>
 </ul>
 
 

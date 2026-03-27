@@ -238,6 +238,15 @@
 *[aws]: Amazon Web Services. Plataforma de servicios en la nube que ofrece una amplia gama de servicios, como almacenamiento, bases de datos, computación, análisis, inteligencia artificial, etc. AWS permite a las empresas escalar sus aplicaciones y servicios de forma flexible y eficiente.
 *[GCP]: Google Cloud Platform. Plataforma de servicios en la nube que ofrece una amplia gama de servicios, como almacenamiento, bases de datos, computación, análisis, inteligencia artificial, etc. GCP permite a las empresas escalar sus aplicaciones y servicios de forma flexible y eficiente.
 *[Azure]: Microsoft Azure. Plataforma de servicios en la nube que ofrece una amplia gama de servicios, como almacenamiento, bases de datos, computación, análisis, inteligencia artificial, etc. Azure permite a las empresas escalar sus aplicaciones y servicios de forma flexible y eficiente.
+*[AAA]: Arrange, Act, Assert. Patrón habitual para estructurar pruebas automáticas en tres fases: preparar el escenario, ejecutar la acción y comprobar el resultado.
+*[CE]: Criterio de Evaluación. Indicador concreto que detalla qué debe demostrar el alumnado dentro de un resultado de aprendizaje.
+*[JaCoCo]: Java Code Coverage. Herramienta usada para medir cobertura de pruebas en proyectos de la JVM.
+*[JUnit]: Framework de pruebas para la plataforma Java y Kotlin sobre JVM. En muchos proyectos actúa como motor de ejecución de las pruebas automáticas.
+*[QA]: Quality Assurance. Conjunto de actividades orientadas a asegurar la calidad del software y, por extensión, perfil o equipo que trabaja en ese ámbito.
+*[RA]: Resultado de Aprendizaje. Capacidad o logro que el alumnado debe alcanzar en un módulo según la programación y la normativa.
+*[mock]: Doble de prueba que simula el comportamiento de una dependencia y permite verificar llamadas o respuestas esperadas.
+*[spy]: Doble de prueba que parte de un objeto real y permite sustituir o vigilar solo parte de su comportamiento.
+*[stub]: Doble de prueba que devuelve respuestas prefijadas para que una prueba pueda ejecutarse en un escenario controlado.
 *[Terraform]: Herramienta de infraestructura como código que permite a los administradores de sistemas gestionar y desplegar infraestructuras de forma declarativa. En Terraform, los administradores pueden definir la infraestructura en archivos HCL y desplegarla de forma automática.
 *[Ansible]: Herramienta de automatización de TI que permite a los administradores de sistemas gestionar y configurar sistemas de forma automática. Ansible utiliza archivos YAML para definir las tareas y los playbooks, y se conecta a los sistemas a través de SSH.
 *[Jenkins]: Herramienta de integración continua que permite a los desarrolladores automatizar la construcción, las pruebas y el despliegue de aplicaciones. Jenkins se integra con una amplia variedad de herramientas y servicios, y permite crear pipelines de CI/CD personalizados.

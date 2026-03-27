@@ -1,58 +1,74 @@
 ---
-title: "UD 5 - 5.2.2 Mockk"
-description: Mockk
-summary: Mockk
+title: "UD 5 - 5.2.2 MockK"
+description: Biblioteca de mocking para Kotlin orientada a simular colaboraciones y comprobar interacciones en tests unitarios.
+summary: Uso práctico de MockK para crear mocks, espías, capturar argumentos, simular singletons y controlar funciones con retorno Unit.
 authors:
   - Eduardo Fdez
-date: 2023-01-30
+date: 2026-03-27
 icon: "material/file-document-outline"
-permalink: /edes/unidad3/3.4
+permalink: /edes/unidad3/3.2.2
 categories:
   - EDES
 tags:
   - EDES
-  - Software
-  - Mock
+  - Kotlin
+  - MockK
+  - mocking
+  - testing
 ---
 
-## 5.2.2. MockK: una biblioteca burlona para Kotlin
+## 5.2.2 MockK
 
-### 1. Información general
+Cuando una unidad de código depende de otra, aparece una pregunta importante: ¿cómo probamos una clase sin tener que ejecutar siempre sus dependencias reales? Ahí es donde entra **MockK**.
 
-Vamos a revisar algunas de las funciones básicas de la biblioteca  [MockK](https://mockk.io/).
+En la normativa de la unidad, este contenido se relaciona con el diseño y la automatización de pruebas, ya que MockK permite aislar dependencias, construir escenarios controlados y verificar colaboraciones dentro de un test unitario.
 
-### 2. MockK
+| Código | Descripción |
+| --- | --- |
+| RA3 | Verifica el funcionamiento de programas diseñando y realizando pruebas. |
+| CE b | Se han definido casos de prueba. |
+| CE g | Se han efectuado pruebas unitarias de clases y funciones. |
+| CE i | Se han implementado pruebas automáticas. |
+| CE k | Se han aplicado normas de calidad a los procedimientos de desarrollo de software. |
 
-En Kotlin, todas las clases y métodos son finales.  Si bien esto nos ayuda a escribir código inmutable, también causa algunos problemas durante las pruebas.
+### 2. Qué problema resuelve MockK
 
-La mayoría de las bibliotecas que simulan objetos (mock) que se usan en JVM tienen problemas con las clases finales usadas para mocking or stubbing. Por supuesto, podemos agregar la palabra clave `open` a las clases y métodos que queremos "mockear" (simular). Pero cambiar el código solo para poder mockearla no parece el mejor enfoque.
+MockK es una biblioteca de *mocking* para Kotlin. Su objetivo es permitirnos **simular colaboraciones** entre objetos durante una prueba.
 
-La biblioteca MockK ofrece compatibilidad con las características y construcciones del lenguaje Kotlin.  MockK construye proxies para las clases mockeadas. Esto provoca cierta degradación del rendimiento, pero los beneficios generales que nos brinda MockK valen la pena.
+En la práctica, esto sirve para:
 
-### 3. Instalación
+- aislar la unidad que estamos probando;
+- controlar la respuesta de dependencias externas;
+- verificar que una colaboración ocurrió como esperábamos;
+- evitar llamadas reales a bases de datos, servicios remotos o componentes costosos.
 
-La configuración del proyecto consiste en añadir las dependencias de [mockk](https://search.maven.org/search?q=g:io.mockk%20a:mockk) al fichero `build.gradle.kts`
+En Kotlin esto cobra especial importancia porque muchas clases y métodos son finales por defecto, y no todas las bibliotecas de mocking manejan bien ese escenario. MockK está pensada precisamente para encajar mejor con las características del lenguaje.
 
+!!! note "Qué significa mockear"
+    Mockear no es "falsear por falsear". Se trata de sustituir una dependencia real por un doble de prueba controlado para centrarnos en el comportamiento de la unidad que queremos verificar.
+
+### 3. Instalación básica
+
+La configuración mínima en Gradle suele quedar así:
 
 ```kotlin
-var mockKVersion = "1.13.4"
+val mockkVersion = "x.y.z"
 
 dependencies {
-    testImplementation("io.mockk:mockk:$mockKVersion")
+    testImplementation("io.mockk:mockk:$mockkVersion")
 }
 ```
 
-Ten en cuenta que estamos estableciendo la version `1.13.4`, en el [repositorio Maven ](https://mvnrepository.com/artifact/io.mockk/mockk) puedes consultar cuál es la última versión.
+Como criterio general, conviene consultar la documentación del proyecto para elegir una versión compatible con la versión de Kotlin y del motor de pruebas que uses.
 
+### 4. Ejemplo básico de mock
 
-### 4. Ejemplo básico
+Partimos de un servicio sencillo:
 
-Vamos a crear un servicio que podremos usar como ejemplo para "mockear" (simular) su funcionamiento:
-
-```Kotlin
+```kotlin
 class TestableService {
     fun getDataFromDb(testParameter: String): String {
-        // query database and return matching value
+        error("Implementación real no disponible en este ejemplo")
     }
 
     fun doSomethingElse(testParameter: String): String {
@@ -61,50 +77,53 @@ class TestableService {
 }
 ```
 
-Aquí hay un test de ejemplo que mockea `TestableService`:
+Y ahora un test que simula su comportamiento:
 
 ```kotlin
-@Test
-fun givenServiceMock_whenCallingMockedMethod_thenCorrectlyVerified() {
-    // given
-    val service = mockk<TestableService>()
-    every { service.getDataFromDb("Expected Param") } returns "Expected Output"
- 
-    // when
-    val result = service.getDataFromDb("Expected Param")
- 
-    // then
-    verify { service.getDataFromDb("Expected Param") }
-    assertEquals("Expected Output", result)
-}
-```
-Revisando las partes mas importantes del código anterior:    
+import io.mockk.every
+import io.mockk.mockk
+import io.mockk.verify
+import kotlin.test.Test
+import kotlin.test.assertEquals
 
-- Para definir el objeto mockeado `TestableService`, hemos usado el método `mockk<…>()`.    
-- En el siguiente paso, definimos el comportamiento de nuestro objeto mockeado `TestableService`. Para este propósito, hemos creado un bloque `every` que describe qué respuesta debe devolverse `returns "Expected"` para qué llamada y con qué argumento. Es decir, el resultado que devolverá cuando se llame al método `service.getDataFromDb` y con un argumento concreto `("Expected Param")`   
-- Finalmente, usamos el bloque de `verify` para verificar si el simulacro se invocó como esperábamos, siendo verificado si al menos se ha invocado una vez el método `service.getDataFromDb("Expected Param")`.
-  
+class BasicMockKTest {
+    @Test
+    fun givenServiceMock_whenCallingMockedMethod_thenCorrectlyVerified() {
+        val service = mockk<TestableService>()
 
-### 5. Ejemplo de uso de las anotaciones
+        every { service.getDataFromDb("Expected Param") } returns "Expected Output"
 
-Es posible usar las anotaciones MockK `@MockK` para crear todo tipo de objetos mocks. Vamos a crear un servicio que requiera de dos instancias de nuestro `TestableService`:
+        val result = service.getDataFromDb("Expected Param")
 
-```kotlin
-class InjectTestService {
-    lateinit var service1: TestableService
-    lateinit var service2: TestableService
-
-    fun invokeService1(): String {
-        return service1.getDataFromDb("Test Param")
+        verify { service.getDataFromDb("Expected Param") }
+        assertEquals("Expected Output", result)
     }
 }
 ```
 
-El servicio que hemos creado, `InjectTestService`, contiene dos variables de instancia del mismo tipo. Esto no será un problema para MockK, ya que MockK intenta hacer coincidir las propiedades por nombre y luego por clase o superclase. Además, tampoco **tiene problema con la inyección de objetos en campos privados**.
+Las piezas importantes del ejemplo son:
 
-Vamos a mockear el servicio `InjectTestService` en el siguiente test haciendo uso de las anotaciones:
+- `mockk<T>()` crea el objeto simulado;
+- `every { ... } returns ...` define su comportamiento;
+- `verify { ... }` comprueba que la interacción ocurrió.
+
+### 5. Uso de anotaciones
+
+MockK también permite declarar mocks mediante anotaciones. Esto resulta útil cuando el test tiene varias dependencias y quieres dejar más visible qué papel juega cada una.
 
 ```kotlin
+import io.mockk.InjectMockKs
+import io.mockk.MockK
+import io.mockk.MockKAnnotations
+import kotlin.test.BeforeTest
+
+class InjectTestService {
+    lateinit var service1: TestableService
+    lateinit var service2: TestableService
+
+    fun invokeService1(): String = service1.getDataFromDb("Test Param")
+}
+
 class AnnotationMockKUnitTest {
 
     @MockK
@@ -116,138 +135,130 @@ class AnnotationMockKUnitTest {
     @InjectMockKs
     var objectUnderTest = InjectTestService()
 
-    @BeforeEach
-    fun setUp() = MockKAnnotations.init(this)
-
-    // Tests here
-    ...
-}
-```
-
-Revisemos lo más importante del código anterior:   
-
-   - Con la anotación `@MoockK`, hemos definido (marcdo para crear) los objetos mocks `service1` y `service2` que vamos a inyectar en el servicio `objectUnderTest`.    
-   - Hemos usado la anotación `@InjectMockKs` para especificar el objeto `objectUnderTest` donde se deben inyectar los objetos mocks definidos.   
-   - Por defecto, los objetos mocks se inyectan en variables que aún no están asignadas. Aunque, podemos usar `@OverrideMockKs` para anular campos que ya tienen un valor.
-   - Por último, MockK requiere que se llame a `MockKAnnotations.init(…)` en el objeto que declara variables con anotaciones. Para Junit5, se puede reemplazar con `@ExtendWith(MockKExtension::class)`.
-
-
-
-### 6. Spy
-
-`Spy` permite en un objeto mezclar el comportamiento de objetos reales y mockeados, es decir, mockear solo una parte particular de alguna clase. Por ejemplo, se puede usar para simular un método específico del servicio  `TestableService`, el resto del servicio funcionará como se definió. Si no se define un comportamiento nuevo, el objeto entero funcionara como se definió en su clases, pero podremos usar sobre él verificaciones haciendo uso de `verify`. Veamos el ejemplo:
-
-```kotlin
-@Test
-fun givenServiceSpy_whenMockingOnlyOneMethod_thenOtherMethodsShouldBehaveAsOriginalObject() {
-    // given
-    val service = spyk<TestableService>()
-    every { service.getDataFromDb(any()) } returns "Mocked Output"
- 
-    // when checking mocked method
-    val firstResult = service.getDataFromDb("Any Param")
- 
-    // then
-    assertEquals("Mocked Output", firstResult)
- 
-    // when checking not mocked method
-    val secondResult = service.doSomethingElse("Any Param")
- 
-    // then
-    assertEquals("I don't want to!", secondResult)
-}
-```
-
-Revisemos lo más importante del código anterior:   
-
-   - Hemos usado el método `spyk` para crear un objeto spyk (espía) de la clase `TestableService`.  
-   - También hemos usado `every` para definir el comportamiento del método que nos interesa, en concreto `service.getDataFromDb(any())`, como vimos en ejemplos anteriores.
-
-
-También podemos haber usado la anotación `@SpyK` para lograr lo mismo que hicimos con la anotación `@MockK`. Veamos un ejemplo:
-
-```Kotlin
-class SpyKUnitTest {
-
-    @SpyK
-    lateinit var service: TestableService
-
-    // Tests here
-}
-```
-
-### 7. Mockeado relajado
-
-Un objeto mock típico lanzará la excepción `MockKException` si intentamos llamar a un método donde no se ha especificado el valor de retorno, es decir, en donde no hayamos definido un comportamiento simulado.
- 
-Si no queremos describir el comportamiento de cada método, podemos usar un proceso de mockeado relajado. Este tipo de mockeado proporciona valores predeterminados para cada función. Por ejemplo, el tipo de retorno `String` devolverá un `String` vacío. He aquí un breve ejemplo:
-
-```Kotlin
-@Test
-fun givenRelaxedMock_whenCallingNotMockedMethod_thenReturnDefaultValue() {
-    // given
-    val service = mockk<TestableService>(relaxed = true)
- 
-    // when
-    val result = service.getDataFromDb("Any Param")
- 
-    // then
-    assertEquals("", result)
-}
-```
-
-En el ejemplo, hemos usado el método `mockk` con el argumento `relaxed = True` para crear un objeto mockeado relajado. También podríamos haber usado la anotación `@RelaxedMockK`:
-
-```kotlin
-class RelaxedMockKUnitTest {
-
-    @RelaxedMockK
-    lateinit var service: TestableService
-
-    // Tests here
-}
-```
-
-### 8. Mockeado de objetos
-
-Kotlin proporciona una manera fácil de declarar un singleton usando la palabra clave `object`:
-
-```Kotlin
-object TestableService {
-    fun getDataFromDb(testParameter: String): String {
-        // query database and return matching value
+    @BeforeTest
+    fun setUp() {
+        MockKAnnotations.init(this)
     }
 }
 ```
 
-La mayoría de las bibliotecas para crear objetos mocks tienen un problema con el mockeado las instancias de objetos singleton de Kotlin. Para resolver esto, MockK proporciona el método `mockkObject`.  Un ejemplo de uso:
+Aquí MockK intenta inyectar los mocks en el objeto bajo prueba, normalmente por nombre y después por tipo. Esto reduce bastante el trabajo repetitivo cuando el test tiene varias colaboraciones.
 
-```Kotlin
-@Test
-fun givenObject_whenMockingIt_thenMockedMethodShouldReturnProperValue(){
-    // given
-    mockkObject(TestableService)
- 
-    // when calling not mocked method
-    val firstResult = service.getDataFromDb("Any Param")
- 
-    // then return real response
-    assertEquals(/* DB result */, firstResult)
+### 6. Spy: mezclar comportamiento real y simulado
 
-    // when calling mocked method
-    every { service.getDataFromDb(any()) } returns "Mocked Output"
-    val secondResult = service.getDataFromDb("Any Param")
- 
-    // then return mocked response
-    assertEquals("Mocked Output", secondResult)
+Un **spy** crea un objeto que conserva su comportamiento real salvo en los métodos que decidimos sustituir.
+
+```kotlin
+import io.mockk.every
+import io.mockk.spyk
+import kotlin.test.Test
+import kotlin.test.assertEquals
+
+class SpyKExampleTest {
+    @Test
+    fun givenServiceSpy_whenMockingOnlyOneMethod_thenOtherMethodsShouldBehaveAsOriginalObject() {
+        val service = spyk<TestableService>()
+
+        every { service.getDataFromDb(any()) } returns "Mocked Output"
+
+        val firstResult = service.getDataFromDb("Any Param")
+        val secondResult = service.doSomethingElse("Any Param")
+
+        assertEquals("Mocked Output", firstResult)
+        assertEquals("I don't want to!", secondResult)
+    }
 }
 ```
 
+Esto es útil cuando la clase real tiene mucho comportamiento válido y solo necesitas intervenir en una parte concreta.
+
+También puede declararse con anotación:
+
+```kotlin
+import io.mockk.SpyK
+
+class SpyKUnitTest {
+    @SpyK
+    lateinit var service: TestableService
+}
+```
+
+### 7. Mocks relajados
+
+Por defecto, un mock lanza una excepción si llamas a un método cuyo comportamiento no has definido. Cuando ese nivel de control no compensa, MockK permite usar **mocks relajados**.
+
+```kotlin
+import io.mockk.mockk
+import kotlin.test.Test
+import kotlin.test.assertEquals
+
+class RelaxedMockKExampleTest {
+    @Test
+    fun givenRelaxedMock_whenCallingNotMockedMethod_thenReturnDefaultValue() {
+        val service = mockk<TestableService>(relaxed = true)
+
+        val result = service.getDataFromDb("Any Param")
+
+        assertEquals("", result)
+    }
+}
+```
+
+En este caso, MockK devuelve valores por defecto según el tipo de retorno. Para `String`, devuelve una cadena vacía.
+
+La variante con anotación sería:
+
+```kotlin
+import io.mockk.RelaxedMockK
+
+class RelaxedMockKUnitTest {
+    @RelaxedMockK
+    lateinit var service: TestableService
+}
+```
+
+### 8. Mockear objetos `object`
+
+Kotlin permite declarar singletons con `object`. MockK proporciona `mockkObject` para poder simular ese tipo de elementos.
+
+```kotlin
+import io.mockk.every
+import io.mockk.mockkObject
+import kotlin.test.Test
+import kotlin.test.assertEquals
+
+object SingletonService {
+    fun getDataFromDb(testParameter: String): String = "Real Output for $testParameter"
+}
+
+class ObjectMockKTest {
+    @Test
+    fun givenObject_whenMockingIt_thenMockedMethodShouldReturnProperValue() {
+        mockkObject(SingletonService)
+
+        val firstResult = SingletonService.getDataFromDb("Any Param")
+        assertEquals("Real Output for Any Param", firstResult)
+
+        every { SingletonService.getDataFromDb(any()) } returns "Mocked Output"
+
+        val secondResult = SingletonService.getDataFromDb("Any Param")
+        assertEquals("Mocked Output", secondResult)
+    }
+}
+```
+
+Este caso aparece menos en código bien desacoplado, pero existe, especialmente en utilidades, *helpers* o adaptadores heredados.
+
 ### 9. Mockeado jerárquico
 
-Otra característica útil de MockK es la capacidad de mockear objetos jerárquicos. Parar entenderlo, primero, creemos una estructura de objeto jerárquica:
+Otra posibilidad es construir un mock que ya devuelva otros mocks en sus propiedades.
 
-```Kotlin
+```kotlin
+import io.mockk.every
+import io.mockk.mockk
+import kotlin.test.Test
+import kotlin.test.assertEquals
+
 class Foo {
     lateinit var name: String
     lateinit var bar: Bar
@@ -256,220 +267,216 @@ class Foo {
 class Bar {
     lateinit var nickname: String
 }
-```
 
-La clase `Foo` contiene un campo de tipo `Bar`. Ahora, podemos mockear la estructura en un solo paso. Vamos a mockear los campos `name` y `bar`:
-
-```Kotlin
-@Test
-fun givenHierarchicalClass_whenMockingIt_thenReturnProperValue() {
-    // given
-    val foo = mockk<Foo> {
-        every { name } returns "Karol"
-        every { bar } returns mockk {
-            every { nickname } returns "Tomato"
+class HierarchicalMockKTest {
+    @Test
+    fun givenHierarchicalClass_whenMockingIt_thenReturnProperValue() {
+        val foo = mockk<Foo> {
+            every { name } returns "Karol"
+            every { bar } returns mockk {
+                every { nickname } returns "Tomato"
+            }
         }
+
+        assertEquals("Karol", foo.name)
+        assertEquals("Tomato", foo.bar.nickname)
     }
- 
-    // when
-    val name = foo.name 
-    val nickname = foo.bar.nickname
- 
-    // then
-    assertEquals("Karol", name)
-    assertEquals("Tomato", nickname)
 }
 ```
+
+Este enfoque es útil cuando el objeto bajo prueba navega por varias propiedades encadenadas y quieres controlar ese recorrido.
 
 ### 10. Captura de argumentos
 
-Si necesitamos capturar los valores de los parámetros pasados a un método, podemos usar `CapturingSlot` o `MutableList`. Es útil cuando queremos tener alguna lógica personalizada en un bloque `answers` o simplemente necesitamos verificar el valor de los parámetros pasados. Aquí hay un ejemplo de `CapturingSlot`:
+En ocasiones no basta con comprobar que se llamó a un método. También necesitamos saber **con qué argumentos** se invocó.
 
-```Kotlin
-@Test
-fun givenMock_whenCapturingParamValue_thenProperValueShouldBeCaptured() {
-    // given
-    val service = mockk<TestableService>()
-    val slot = slot<String>()
-    every { service.getDataFromDb(capture(slot)) } returns "Expected Output"
- 
-    // when
-    service.getDataFromDb("Expected Param")
- 
-    // then
-    assertEquals("Expected Param", slot.captured)
-}Copiar
-```
+#### 10.1. Usando `slot`
 
-`MutableList` se puede usar para capturar y almacenar todos los valores tomados por el parámetro en las distintas invocaciones del método:
+```kotlin
+import io.mockk.capture
+import io.mockk.every
+import io.mockk.mockk
+import io.mockk.slot
+import kotlin.test.Test
+import kotlin.test.assertEquals
 
-```Kotlin
-@Test
-fun givenMock_whenCapturingParamsValues_thenProperValuesShouldBeCaptured() {
-    // given
-    val service = mockk<TestableService>()
-    val list = mutableListOf<String>()
-    every { service.getDataFromDb(capture(list)) } returns "Expected Output"
- 
-    // when
-    service.getDataFromDb("Expected Param 1")
-    service.getDataFromDb("Expected Param 2")
- 
-    // then
-    assertEquals(2, list.size)
-    assertEquals("Expected Param 1", list[0])
-    assertEquals("Expected Param 2", list[1])
+class CapturingSlotTest {
+    @Test
+    fun givenMock_whenCapturingParamValue_thenProperValueShouldBeCaptured() {
+        val service = mockk<TestableService>()
+        val slot = slot<String>()
+
+        every { service.getDataFromDb(capture(slot)) } returns "Expected Output"
+
+        service.getDataFromDb("Expected Param")
+
+        assertEquals("Expected Param", slot.captured)
+    }
 }
 ```
 
-### 11. Funciones Stubbing que retornan Unit
-Un stub es, en el contexto del testeo del software, un trozo de código usado como sustituto de alguna otra funcionalidad. Un stub puede simular el comportamiento de código existente (tal como un procedimiento en una máquina remota) o ser el sustituto temporal para un código aún no desarrollado. Los stubs son, por tanto, muy útiles para porting, computación distribuida así como en el desarrollo y pruebas de software en general.
+#### 10.2. Usando una lista mutable
 
-En Kotlin, si el tipo de retorno de una función es `Unit`, significa que la función no devuelve nada. Es bastante similar al método `void` de Java.
-
-Para ejemplificarlo, agreguemos una función que retorna `Unit` a la clase `TestableService`:
+Si quieres almacenar varias invocaciones, una lista suele ser más cómoda:
 
 ```kotlin
-fun addHelloWorld(strList: MutableList<String>) {
-    println("addHelloWorld() is called")
-    strList += "Hello World!"
+import io.mockk.capture
+import io.mockk.every
+import io.mockk.mockk
+import kotlin.test.Test
+import kotlin.test.assertEquals
+
+class CapturingListTest {
+    @Test
+    fun givenMock_whenCapturingParamsValues_thenProperValuesShouldBeCaptured() {
+        val service = mockk<TestableService>()
+        val calls = mutableListOf<String>()
+
+        every { service.getDataFromDb(capture(calls)) } returns "Expected Output"
+
+        service.getDataFromDb("Expected Param 1")
+        service.getDataFromDb("Expected Param 2")
+
+        assertEquals(2, calls.size)
+        assertEquals("Expected Param 1", calls[0])
+        assertEquals("Expected Param 2", calls[1])
+    }
 }
 ```
 
-Como muestra el código anterior, cuando se llama a la función `addHelloWorld()`, imprime una línea en la consola.  Luego, el `String` `"Hello World"` se agrega al objeto `MutableList<String>` recibido por parámetro.
+### 11. Stubbing de funciones que devuelven `Unit`
 
-En esta sección, vamos a ver cómo hacer un [stub](https://es.wikipedia.org/wiki/Stub) de una función que devuelve `Unit`. Por lo general, dependiendo de diferentes circunstancias, queremos controlar un stub de una función que retorna `Unit` de dos maneras:
+En Kotlin, un método que devuelve `Unit` no devuelve un valor útil, pero sigue pudiendo tener efectos laterales. MockK permite controlar ese comportamiento.
 
-* hacer que la llamada a la función no haga nada, o en otras palabras, omitir la ejecución de la función
-* llamando a la función real
-
-A continuación, usaremos la función `addHelloWorld()` como ejemplo y veremos cómo lograrlo usando MockK.
-
-#### 11.1. Hacer que la función no haga nada
-
-Hay varias formas de omitir la ejecución de una función que retorna `Unit` usando MockK:
+Partimos de este método:
 
 ```kotlin
-every { addHelloWorld(any()) } returns Unit
-every { addHelloWorld(any()) } answers { Unit }
-every { addHelloWorld(any()) } just runs
-```
-
-Algunas de ellas no son nuevas para nosotros
-- `returns …` 
-- `answers {…}`, 
-- y el último, `every {... } just runs` es fácil de entender.
-
-Entonces, primero probemos si se puede omitir la ejecución de la función original y luego entendamos cómo funciona `just runs`:
-
-```kotlin
-@Test
-fun givenServiceMock_whenCallingMethodReturnsUnit_thenCorrectlyVerified() {
-    // given
-    val service = mockk<TestableService>()
-    val myList = mutableListOf<String>()
-                                                                         
-    // when
-    every { service.addHelloWorld(any()) } just runs
-    service.addHelloWorld(myList)
-                                                                         
-    // then
-    assertTrue(myList.isEmpty())
+class TestableServiceWithUnit {
+    fun addHelloWorld(strList: MutableList<String>) {
+        println("addHelloWorld() is called")
+        strList += "Hello World!"
+    }
 }
 ```
 
-Como muestra el código anterior:   
+#### 11.1. Hacer que no haga nada
 
-   - Agregamos la función `addHelloWorld()` usando `just runs`.  
-   - Luego, llamamos a la función y le pasamos una `MutableList` vacía.  
-   - Por último, si hemos conseguido omitir la ejecución de la función con éxito, después de la invocación de la función, la cadena `“Hello World!”` no debe aparecer en la lista pasada como parámetro a la función, y por tanto el test deberá dar ok.  
-
-Ahora entendamos cómo `just runs` omite la llamada de la función real. Primero, echemos un vistazo a la implementación de la función `just()`:
+Podemos omitir la ejecución real de varias formas:
 
 ```kotlin
-infix fun MockKStubScope<Unit, Unit>.just(runs: Runs) = answers(ConstantAnswer(Unit))
+every { service.addHelloWorld(any()) } returns Unit
+every { service.addHelloWorld(any()) } answers { Unit }
+every { service.addHelloWorld(any()) } just runs
 ```
 
-Como podemos ver, `just` es una función `infix` (infija). Por lo tanto, podemos escribir `just(runs)` como una forma mas fácil de leer:`just runs`. Además, `Runs` es un objeto dummy, y `runs` es simplemente un `typealias` de `Runs`:
+La forma más legible suele ser `just runs`.
 
 ```kotlin
-object Runs
-typealias runs = Runs
-```
+import io.mockk.every
+import io.mockk.just
+import io.mockk.mockk
+import io.mockk.runs
+import kotlin.test.Test
+import kotlin.test.assertTrue
 
-Por último, si creamos un stub de una función que retorna `Unit` como  `just runs`, se llama a la función `answers()`  y retorna una constante: `Unit`.
+class UnitStubTest {
+    @Test
+    fun givenServiceMock_whenCallingMethodReturnsUnit_thenCorrectlyVerified() {
+        val service = mockk<TestableServiceWithUnit>()
+        val myList = mutableListOf<String>()
 
-#### 11.2. Llamar a la función original
+        every { service.addHelloWorld(any()) } just runs
+        service.addHelloWorld(myList)
 
-Ahora, veamos cómo crear un stub de una función que retorna `Unit` para hacer que llame a la función real.  Para llamar a la función original, podemos usar este enfoque:  `every { … } answers { callOriginal() }`
-
-A continuación, veamos cómo se usa en una prueba real:
-
-```kotlin
-@Test
-fun givenServiceMock_whenCallingOriginalMethod_thenCorrectlyVerified() {
-    // given
-    val service = mockk<TestableService>()
-    val myList = mutableListOf<String>()
-                                                                      
-    // when
-    every { service.addHelloWorld(any()) } answers { callOriginal() }
-    service.addHelloWorld(myList)
-                                                                      
-    // then
-    assertEquals(1, myList.size)
-    assertEquals("Hello World!", myList.first())
+        assertTrue(myList.isEmpty())
+    }
 }
 ```
 
-El test es ok tras de ejecutarlo. Entonces, `“Hello World!”`  se agrega a `myList` después de llamar a la función.  Sin embargo, podemos preguntarnos: si creamos un stub de una función y le pedimos que llame a la implementación original, ¿por qué nos molestamos en crear el stub?
+#### 11.2. Llamar a la implementación original
 
-A continuación, veamos un ejemplo de cuándo es útil.
-
-#### 11.3. ¿Cuándo necesitamos `callOriginal()`?
-
-Digamos que en nuestra prueba, queremos llamar a la función `addHelloWorld()` con diferentes parámetros. Si la lista que se le pasa a la función contiene la cadena `"Kai"`, queremos llamar a la función real.  De lo contrario, nos gustaría omitir la llamada a la función:
+Si en lugar de anular el comportamiento quieres ejecutar el original, puedes usar `callOriginal()`.
 
 ```kotlin
-@Test
-fun givenServiceMock_whenStubbingTwoScenarios_thenCorrectlyVerified() {
-    // given
-    val service = mockk<TestableService>()
-    val kaiList = mutableListOf("Kai")
-    val emptyList = mutableListOf<String>()
-                                                                                   
-    // when
-    every { service.addHelloWorld(any()) } just runs
-    every { service.addHelloWorld(match { "Kai" in it }) } answers { callOriginal() }
-                                                                                   
-    service.addHelloWorld(kaiList)
-    service.addHelloWorld(emptyList)
-                                                                                   
-    // then
-    assertEquals(listOf("Kai", "Hello World!"), kaiList)
-    assertTrue(emptyList.isEmpty())
+import io.mockk.answers
+import io.mockk.every
+import io.mockk.mockk
+import kotlin.test.Test
+import kotlin.test.assertEquals
+
+class CallOriginalTest {
+    @Test
+    fun givenServiceMock_whenCallingOriginalMethod_thenCorrectlyVerified() {
+        val service = mockk<TestableServiceWithUnit>()
+        val myList = mutableListOf<String>()
+
+        every { service.addHelloWorld(any()) } answers { callOriginal() }
+        service.addHelloWorld(myList)
+
+        assertEquals(1, myList.size)
+        assertEquals("Hello World!", myList.first())
+    }
 }
 ```
 
-Como podemos ver en el código anterior, agregamos la función `addHelloWorld()` dos veces, según nuestros requisitos.  Por lo tanto, `callOriginal()` nos permite decidir el comportamiento de los stubings de forma flexible.
+#### 11.3. Combinar varios escenarios
 
+El verdadero interés de `callOriginal()` aparece cuando no quieres el mismo comportamiento en todas las llamadas.
 
-### 12. Conclusión
+```kotlin
+import io.mockk.answers
+import io.mockk.every
+import io.mockk.just
+import io.mockk.match
+import io.mockk.mockk
+import io.mockk.runs
+import kotlin.test.Test
+import kotlin.test.assertEquals
+import kotlin.test.assertTrue
 
-Se han visto algunas de las características más importantes de MockK. MockK es una poderosa biblioteca para el lenguaje Kotlin y proporciona muchas características útiles. Para más información sobre MockK, podemos consultar la  [documentación en la web de MockK](https://mockk.io/).
+class TwoScenariosTest {
+    @Test
+    fun givenServiceMock_whenStubbingTwoScenarios_thenCorrectlyVerified() {
+        val service = mockk<TestableServiceWithUnit>()
+        val kaiList = mutableListOf("Kai")
+        val emptyList = mutableListOf<String>()
 
+        every { service.addHelloWorld(any()) } just runs
+        every { service.addHelloWorld(match { "Kai" in it }) } answers { callOriginal() }
 
-### 13. Recursos
+        service.addHelloWorld(kaiList)
+        service.addHelloWorld(emptyList)
 
-* [¿Que es un Stub?](https://es.wikipedia.org/wiki/Stub)
-* [Mock Object](https://en.wikipedia.org/wiki/Mock_object)
-* [Stub, Spy, Mock](https://gabimoreno.soy/que-diferencias-hay-entre-un-stub-un-spy-y-un-mock)
-* [¿Qué es TDD?](https://www.digite.com/es/agile/desarrollo-dirigido-por-pruebas-tdd/)
-* [¿Cómo elaborar casos de prueba?](https://surprograma.github.io/libro-disenio-oop/docs/pruebas-automatizadas/elaborar-casos-prueba/)
-* [Test unitario avanzado](http://wiki.uqbar.org/wiki/articles/testeo-unitario-avanzado.html)
-* [Diseño de Software](https://surprograma.github.io/libro-disenio-oop/docs/intro/)
+        assertEquals(listOf("Kai", "Hello World!"), kaiList)
+        assertTrue(emptyList.isEmpty())
+    }
+}
+```
 
-## Fuentes
+En la práctica, esto te permite adaptar la simulación a distintos contextos sin renunciar al comportamiento real cuando realmente te interesa.
 
-* [MockK: A Mocking Library for Kotlin](https://www.baeldung.com/kotlin/mockk)
-* [MockK Guidebook](https://notwoods.github.io/mockk-guidebook/)
+### 12. Cuándo conviene usar MockK y cuándo no
+
+MockK es útil, pero también es fácil abusar de él. Como regla general:
+
+- úsalo cuando una dependencia hace costosa o inestable la prueba;
+- úsalo cuando necesitas verificar una interacción concreta;
+- evita mockear clases triviales que podrías sustituir por objetos reales simples;
+- no conviertas el test en una copia exacta de la implementación interna.
+
+Si un test depende de demasiados mocks, muchas veces no es que falte MockK, sino que **sobra acoplamiento en el diseño**.
+
+### 13. Conclusión
+
+MockK es una herramienta muy práctica para escribir pruebas unitarias en Kotlin cuando necesitamos aislar colaboraciones, controlar respuestas y verificar interacciones. Bien usado, hace que los tests sean más precisos y más fáciles de mantener.
+
+La idea clave con la que conviene quedarse es esta: **mockear no consiste en falsear todo, sino en sustituir solo aquellas dependencias que impiden probar con claridad la unidad que te interesa**.
+
+## Fuentes y referencias
+
+- [Qué es un stub](https://es.wikipedia.org/wiki/Stub)
+- [Mock object](https://en.wikipedia.org/wiki/Mock_object)
+- [Diferencias entre stub, spy y mock](https://gabimoreno.soy/que-diferencias-hay-entre-un-stub-un-spy-y-un-mock)
+- [Documentación oficial de MockK](https://mockk.io/)
+- [MockK: A Mocking Library for Kotlin](https://www.baeldung.com/kotlin/mockk)
+- [MockK Guidebook](https://notwoods.github.io/mockk-guidebook/)
